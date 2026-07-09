@@ -1,0 +1,79 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "src/assets/images"
+public_folder: "/assets/images"
+
+collections:
+  - name: "pages"
+    label: "Simple Pages"
+    files:
+      - file: "src/index.njk"
+        label: "Homepage"
+        name: "home"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Meta Description", name: "description", widget: "text" }
+          - { label: "Layout", name: "layout", widget: "hidden", default: "solution.njk" }
+          - { label: "URL Path", name: "permalink", widget: "hidden", default: "/" }
+          - { label: "Page Content (HTML)", name: "body", widget: "code", default_language: "html", output_code_only: true }
+      - file: "src/about.njk"
+        label: "About"
+        name: "about"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Meta Description", name: "description", widget: "text" }
+          - { label: "Layout", name: "layout", widget: "hidden", default: "solution.njk" }
+          - { label: "URL Path", name: "permalink", widget: "hidden", default: "/about/" }
+          - { label: "Page Content (HTML)", name: "body", widget: "code", default_language: "html", output_code_only: true }
+      - file: "src/contact.njk"
+        label: "Contact"
+        name: "contact"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Meta Description", name: "description", widget: "text" }
+          - { label: "Layout", name: "layout", widget: "hidden", default: "solution.njk" }
+          - { label: "URL Path", name: "permalink", widget: "hidden", default: "/contact/" }
+          - { label: "Page Content (HTML)", name: "body", widget: "code", default_language: "html", output_code_only: true }
+      - file: "src/careers.njk"
+        label: "Careers"
+        name: "careers"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Meta Description", name: "description", widget: "text" }
+          - { label: "Layout", name: "layout", widget: "hidden", default: "solution.njk" }
+          - { label: "URL Path", name: "permalink", widget: "hidden", default: "/careers/" }
+          - { label: "Page Content (HTML)", name: "body", widget: "code", default_language: "html", output_code_only: true }
+
+  - name: "platform"
+    label: "Platform Pages"
+    folder: "src/platform"
+    create: true
+    extension: "njk"
+    format: "frontmatter"
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Meta Description", name: "description", widget: "text" }
+      - { label: "Nav / Footer Label", name: "navLabel", widget: "string" }
+      - { label: "URL Path", name: "permalink", widget: "string", hint: "e.g. /platform/new-page-name/ — must start and end with /" }
+      - { label: "Layout", name: "layout", widget: "hidden", default: "solution.njk" }
+      - { label: "Tags", name: "tags", widget: "hidden", default: "platform" }
+      - { label: "Page Content (HTML)", name: "body", widget: "code", default_language: "html", output_code_only: true }
+
+  - name: "solutions"
+    label: "Solution / Industry Pages"
+    folder: "src/solutions"
+    create: true
+    extension: "njk"
+    format: "frontmatter"
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Meta Description", name: "description", widget: "text" }
+      - { label: "Nav / Footer Label", name: "navLabel", widget: "string" }
+      - { label: "URL Path", name: "permalink", widget: "string", hint: "e.g. /solutions/new-industry/ — must start and end with /" }
+      - { label: "Layout", name: "layout", widget: "hidden", default: "solution.njk" }
+      - { label: "Tags", name: "tags", widget: "hidden", default: "solutions" }
+      - { label: "Page Content (HTML)", name: "body", widget: "code", default_language: "html", output_code_only: true }

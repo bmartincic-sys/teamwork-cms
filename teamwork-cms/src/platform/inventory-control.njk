@@ -1,0 +1,409 @@
+---
+layout: "solution.njk"
+title: "RFID Inventory Control for Retail"
+description: "RFID-powered inventory with 99.9% accuracy. AI allocation, real-time visibility, cycle counts in minutes. iOS-native across 40+ countries."
+navLabel: "Inventory Control"
+tags: "platform"
+permalink: "/platform/inventory-control/"
+---
+<!-- Breadcrumb -->
+<div class="container">
+  <nav class="breadcrumb" aria-label="Breadcrumb" style="padding: 16px 0; font-size: 12px; color: var(--text-faint);">
+    <a href="/" style="color: var(--text-muted);">Home</a> <span style="margin: 0 6px;">/</span>
+    <a href="/platform/" style="color: var(--text-muted);">Platform</a> <span style="margin: 0 6px;">/</span>
+    Inventory Control
+  </nav>
+</div>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-glow"></div>
+  <div class="container hero-inner fade-up">
+    <span class="eyebrow"><span class="eyebrow-dot"></span> Inventory Control</span>
+    <h1>Master inventory <span class="accent">flow,</span> not just levels.</h1>
+    <p class="hero-sub">
+      While others sync data, Teamwork Commerce orchestrates it. A cloud-native, iOS-first inventory solution that eliminates the Frankenstack and gives you 100% visibility from the warehouse to the fitting room.
+    </p>
+    <div class="hero-cta">
+      <a href="/contact/" class="btn btn-primary btn-lg">Book a demo <i class="ti ti-arrow-right"></i></a>
+      <button class="btn btn-ghost btn-lg">Explore platform</button>
+    </div>
+  </div>
+
+  <!-- HERO MOCKUP: Real-time inventory dashboard -->
+  <div class="hero-product fade-up" style="animation-delay: 0.2s;">
+    <div class="product-frame">
+      <div class="product-frame-bar">
+        <div class="frame-dot"></div><div class="frame-dot"></div><div class="frame-dot"></div>
+        <div class="frame-label">teamwork.app — Cloud HQ · Inventory Control · Global View</div>
+      </div>
+      <div class="product-body">
+        <!-- Left: Stock health overview -->
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px;">
+            <div style="padding: 14px; background: var(--bg-deep); border: 1px solid var(--border); border-radius: 10px;">
+              <div style="font-size: 10px; color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 6px; font-weight: 600;">Total SKUs</div>
+              <div style="font-size: 22px; font-weight: 900; color: var(--text);">147,320</div>
+            </div>
+            <div style="padding: 14px; background: var(--bg-deep); border: 1px solid var(--border); border-radius: 10px;">
+              <div style="font-size: 10px; color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 6px; font-weight: 600;">Accuracy (RFID)</div>
+              <div style="font-size: 22px; font-weight: 900; background: var(--gradient); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">99.9%</div>
+            </div>
+          </div>
+          <div style="padding: 16px; background: var(--bg-deep); border: 1px solid var(--border); border-radius: 10px; flex: 1;">
+            <div style="font-size: 11px; color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 14px; font-weight: 600;">Stock by Location Type</div>
+            <div style="margin-bottom: 10px;">
+              <div style="display: flex; justify-content: space-between; font-size: 11px; margin-bottom: 4px;"><span style="color: var(--text); font-weight: 600;">Retail Stores (RFID verified)</span><span style="color: var(--text-muted);">84,230 units</span></div>
+              <div style="height: 6px; background: var(--border); border-radius: 3px; overflow: hidden;"><div style="width: 57%; height: 100%; background: var(--gradient); border-radius: 3px;"></div></div>
+            </div>
+            <div style="margin-bottom: 10px;">
+              <div style="display: flex; justify-content: space-between; font-size: 11px; margin-bottom: 4px;"><span style="color: var(--text); font-weight: 600;">Warehouses / DCs</span><span style="color: var(--text-muted);">41,800 units</span></div>
+              <div style="height: 6px; background: var(--border); border-radius: 3px; overflow: hidden;"><div style="width: 28%; height: 100%; background: var(--brand-blue); border-radius: 3px;"></div></div>
+            </div>
+            <div style="margin-bottom: 10px;">
+              <div style="display: flex; justify-content: space-between; font-size: 11px; margin-bottom: 4px;"><span style="color: var(--text); font-weight: 600;">In-Transit (RFID tagged)</span><span style="color: var(--text-muted);">12,450 units</span></div>
+              <div style="height: 6px; background: var(--border); border-radius: 3px; overflow: hidden;"><div style="width: 8%; height: 100%; background: var(--brand-purple); border-radius: 3px;"></div></div>
+            </div>
+            <div>
+              <div style="display: flex; justify-content: space-between; font-size: 11px; margin-bottom: 4px;"><span style="color: var(--text); font-weight: 600;">On Order (supplier)</span><span style="color: var(--text-muted);">8,840 units</span></div>
+              <div style="height: 6px; background: var(--border); border-radius: 3px; overflow: hidden;"><div style="width: 6%; height: 100%; background: var(--brand-magenta); border-radius: 3px;"></div></div>
+            </div>
+          </div>
+        </div>
+        <!-- Right: Live activity feed + alerts -->
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <div style="padding: 14px; background: var(--brand-soft); border-radius: 10px; border-left: 3px solid var(--brand-blue);">
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;"><i class="ti ti-sparkles" style="color: var(--brand-blue); font-size: 16px;"></i><span style="font-size: 11px; font-weight: 700; color: var(--brand-text); text-transform: uppercase; letter-spacing: 0.06em;">AI Alert · Predictive</span></div>
+            <div style="font-size: 12px; line-height: 1.5; color: var(--text);">SKU <strong>NKE-AF1-WHT-10</strong> velocity suggests stock-out at Store #042 within 48hrs. Auto-transfer from DC Houston queued for approval.</div>
+          </div>
+          <div style="padding: 16px; background: var(--bg-deep); border: 1px solid var(--border); border-radius: 10px; flex: 1;">
+            <div style="font-size: 11px; color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 12px; font-weight: 600;">Live Activity</div>
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 12px;"><span style="color: var(--text); font-weight: 600;">RFID cycle count · Store #018</span><span style="font-size: 10px; padding: 3px 10px; border-radius: 100px; font-weight: 700; background: rgba(16, 185, 129, 0.12); color: #059669;">Complete</span></div>
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 12px;"><span style="color: var(--text); font-weight: 600;">Receiving · PO #8847 · 240 units</span><span style="font-size: 10px; padding: 3px 10px; border-radius: 100px; font-weight: 700; background: rgba(245, 158, 11, 0.12); color: #d97706;">In progress</span></div>
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 12px;"><span style="color: var(--text); font-weight: 600;">Transfer · Store #042 → #071</span><span style="font-size: 10px; padding: 3px 10px; border-radius: 100px; font-weight: 700; background: var(--brand-soft); color: var(--brand-text);">Shipped</span></div>
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 8px 0; font-size: 12px;"><span style="color: var(--text); font-weight: 600;">Adjustment · Store #033 · +3 units</span><span style="font-size: 10px; padding: 3px 10px; border-radius: 100px; font-weight: 700; background: rgba(16, 185, 129, 0.12); color: #059669;">Applied</span></div>
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px;">
+            <div style="padding: 12px; background: var(--bg-deep); border: 1px solid var(--border); border-radius: 8px; text-align: center;">
+              <div style="font-size: 18px; font-weight: 900; color: #059669;">0</div>
+              <div style="font-size: 10px; color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 4px; font-weight: 600;">Ghost SKUs</div>
+            </div>
+            <div style="padding: 12px; background: var(--bg-deep); border: 1px solid var(--border); border-radius: 8px; text-align: center;">
+              <div style="font-size: 18px; font-weight: 900; color: var(--text);">247</div>
+              <div style="font-size: 10px; color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 4px; font-weight: 600;">Stores live</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STAT TICKER ============ -->
+<section class="ticker">
+  <div class="container">
+    <div class="ticker-inner">
+      <div class="ticker-item">
+        <div class="ticker-value gradient-text">99.9<span style="font-size: 22px;">%</span></div>
+        <div class="ticker-label">Accuracy with RFID</div>
+      </div>
+      <div class="ticker-item">
+        <div class="ticker-value gradient-text">$300<span style="font-size: 22px;">K</span></div>
+        <div class="ticker-label">Lost stock recovered / yr</div>
+      </div>
+      <div class="ticker-item">
+        <div class="ticker-value gradient-text">0</div>
+        <div class="ticker-label">Doors closed for counts</div>
+      </div>
+      <div class="ticker-item">
+        <div class="ticker-value gradient-text">150<span style="font-size: 22px;">+</span></div>
+        <div class="ticker-label">Pre-configured reports</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION 1: RFID CYCLE COUNTING ============ -->
+<section class="section">
+  <div class="container">
+    <div class="feature-row">
+      <div class="feature-text">
+        <span class="section-eyebrow">RFID-Powered Counting</span>
+        <h2>Full-store counts in minutes. Doors stay <span class="gradient-text">open.</span></h2>
+        <p>Don't shut your doors for a count. Use the iOS app with RFID or barcode scanning to perform rolling cycle counts during business hours. As soon as a count is finished, global stock levels update instantly — no batch sync, no overnight jobs.</p>
+        <ul class="feature-bullets">
+          <li>RFID cycle counts in minutes: scan an entire store without pulling a single item off the rack</li>
+          <li>Real-time reconciliation: global stock levels update the moment a count completes</li>
+          <li>Rolling counts during business hours — no store closures, no lost revenue</li>
+          <li>10-store chains recover $150K–$300K in "lost" stock within the first 12 months</li>
+        </ul>
+        <a href="/contact/" class="btn btn-primary">Book a demo <i class="ti ti-arrow-right"></i></a>
+      </div>
+      <!-- Mockup: RFID cycle count in progress -->
+      <div class="feature-visual">
+        <div class="mockup-panel" style="padding: 24px;">
+          <div style="display: flex; align-items: center; justify-content: space-between; padding-bottom: 16px; margin-bottom: 16px; border-bottom: 1px solid var(--border);">
+            <span style="display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 700; color: #fff; padding: 5px 11px; background: var(--gradient); border-radius: 100px;"><i class="ti ti-scan" style="font-size:11px"></i> RFID Cycle Count</span>
+            <span style="font-size: 11px; color: var(--text-faint); font-family: var(--font-mono);">Store #018 · Live</span>
+          </div>
+          <div style="text-align: center; padding: 28px 0; margin-bottom: 16px; background: var(--bg-deep); border-radius: 10px; border: 1px solid var(--border);">
+            <div style="font-size: 48px; font-weight: 900; background: var(--gradient); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: -0.035em;">4,247</div>
+            <div style="font-size: 12px; color: var(--text-muted); margin-top: 4px; font-weight: 500;">items scanned in <strong style="color: var(--text);">8 minutes 12 seconds</strong></div>
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 14px;">
+            <div style="padding: 12px; background: var(--bg-deep); border: 1px solid var(--border); border-radius: 8px; text-align: center;">
+              <div style="font-size: 18px; font-weight: 900; color: #059669;">4,241</div>
+              <div style="font-size: 10px; color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 4px; font-weight: 600;">Matched</div>
+            </div>
+            <div style="padding: 12px; background: var(--bg-deep); border: 1px solid var(--border); border-radius: 8px; text-align: center;">
+              <div style="font-size: 18px; font-weight: 900; color: #d97706;">6</div>
+              <div style="font-size: 10px; color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 4px; font-weight: 600;">Variance</div>
+            </div>
+            <div style="padding: 12px; background: var(--bg-deep); border: 1px solid var(--border); border-radius: 8px; text-align: center;">
+              <div style="font-size: 18px; font-weight: 900; color: var(--text);">99.86%</div>
+              <div style="font-size: 10px; color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 4px; font-weight: 600;">Accuracy</div>
+            </div>
+          </div>
+          <div style="padding: 12px 14px; background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.2); border-radius: 8px; font-size: 12px; color: #059669; font-weight: 700; display: flex; align-items: center; gap: 8px;"><i class="ti ti-circle-check-filled" style="font-size: 16px;"></i> Count complete · Global stock updated · 6 items flagged for review</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION 2: INTELLIGENT ALLOCATION ============ -->
+<section class="section" style="padding-top: 0;">
+  <div class="container">
+    <div class="feature-row reverse">
+      <div class="feature-text">
+        <span class="section-eyebrow">Intelligent Allocation</span>
+        <h2>Right product, right store, before they <span class="gradient-text">ask.</span></h2>
+        <p>Move away from gut feel. Use Visual Allocation to see where stock is performing best and move it there before the trend fades. Teamwork focuses on merchandising intelligence — getting product where it will sell, not just where it sits.</p>
+        <ul class="feature-bullets">
+          <li>Visual Allocation: see performance by location and reallocate stock to match demand in real time</li>
+          <li>AI-powered stock-out prevention: monitors tag velocity and auto-triggers transfers before a SKU hits zero</li>
+          <li>Anomaly detection: identifies unusual inventory movement — 10 tags heading for the exit without a POS transaction triggers a loss prevention alert</li>
+          <li>Predictive forecasting: demand by SKU and location with up to 95% accuracy</li>
+        </ul>
+        <button class="btn btn-primary">Explore analytics <i class="ti ti-arrow-right"></i></button>
+      </div>
+      <!-- Mockup: Allocation intelligence -->
+      <div class="feature-visual">
+        <div class="mockup-panel" style="padding: 24px;">
+          <div style="display: flex; align-items: center; justify-content: space-between; padding-bottom: 16px; margin-bottom: 16px; border-bottom: 1px solid var(--border);">
+            <span style="display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 700; color: #fff; padding: 5px 11px; background: var(--gradient); border-radius: 100px;"><i class="ti ti-sparkles" style="font-size:11px"></i> AI Allocation</span>
+            <span style="font-size: 11px; color: var(--text-faint); font-family: var(--font-mono);">Predictive</span>
+          </div>
+          <div style="padding: 14px; background: rgba(245, 158, 11, 0.08); border: 1px solid rgba(245, 158, 11, 0.2); border-radius: 10px; margin-bottom: 14px;">
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;"><i class="ti ti-alert-triangle" style="color: #d97706; font-size: 16px;"></i><span style="font-size: 11px; font-weight: 700; color: #d97706; text-transform: uppercase; letter-spacing: 0.06em;">Stock-out prediction</span></div>
+            <div style="font-size: 12px; line-height: 1.55; color: var(--text);"><strong>NKE-AF1-WHT-10</strong> at Store #042 (Austin) will hit zero in ~48 hrs at current velocity. DC Houston has 34 units.</div>
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 14px;">
+            <div style="padding: 12px; background: var(--bg-deep); border: 1px solid var(--border); border-radius: 8px;">
+              <div style="font-size: 11px; color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px; font-weight: 600;">Store #042</div>
+              <div style="font-size: 20px; font-weight: 900; color: #d97706;">3 left</div>
+              <div style="font-size: 10px; color: var(--text-muted); margin-top: 4px;">Selling 1.5/day</div>
+            </div>
+            <div style="padding: 12px; background: var(--bg-deep); border: 1px solid var(--border); border-radius: 8px;">
+              <div style="font-size: 11px; color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px; font-weight: 600;">DC Houston</div>
+              <div style="font-size: 20px; font-weight: 900; color: #059669;">34 avail</div>
+              <div style="font-size: 10px; color: var(--text-muted); margin-top: 4px;">Next-day delivery</div>
+            </div>
+          </div>
+          <div style="display: flex; gap: 8px;">
+            <div style="padding: 11px 14px; border-radius: 8px; font-size: 12px; font-weight: 700; text-align: center; border: 1px solid var(--border); background: var(--panel); color: var(--text); flex: 1;">Dismiss</div>
+            <div style="padding: 11px 14px; border-radius: 8px; font-size: 12px; font-weight: 700; text-align: center; background: var(--gradient); color: #fff; border: none; flex: 1;">Approve transfer (12 units)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION 3: COMPLETE INVENTORY OPERATIONS ============ -->
+<section class="section" style="padding-top: 0;">
+  <div class="container">
+    <div class="feature-row">
+      <div class="feature-text">
+        <span class="section-eyebrow">Day-to-Day Operations</span>
+        <h2>Receiving, transfers, adjustments — all from <span class="gradient-text">one device.</span></h2>
+        <p>Every inventory workflow your stockroom needs, running natively on iOS. RFID or barcode — your choice. No separate systems, no desktop-only tools, no paper.</p>
+        <ul class="feature-bullets">
+          <li>Receiving: scan inbound shipments by RFID or barcode, auto-reconcile against POs, flag discrepancies instantly</li>
+          <li>Store-to-store transfers: initiate, track, and confirm with full chain-of-custody visibility</li>
+          <li>Adjustments & write-offs: document reasons, attach photos, maintain audit trail for compliance</li>
+          <li>Tag printing & commissioning: print and encode RFID tags directly from the iOS device</li>
+          <li>Unified global catalog: one catalog for 10 stores or 1,000 — launch new locations in hours, not weeks</li>
+        </ul>
+        <button class="btn btn-ghost">See all features <i class="ti ti-arrow-right"></i></button>
+      </div>
+      <!-- Mockup: Receiving workflow -->
+      <div class="feature-visual">
+        <div class="mockup-panel" style="padding: 24px;">
+          <div style="display: flex; align-items: center; justify-content: space-between; padding-bottom: 16px; margin-bottom: 16px; border-bottom: 1px solid var(--border);">
+            <span style="display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 700; color: #fff; padding: 5px 11px; background: var(--gradient); border-radius: 100px;"><i class="ti ti-package" style="font-size:11px"></i> Receiving</span>
+            <span style="font-size: 11px; color: var(--text-faint); font-family: var(--font-mono);">PO #8847</span>
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 14px;">
+            <div style="padding: 12px; background: var(--bg-deep); border: 1px solid var(--border); border-radius: 8px; text-align: center;">
+              <div style="font-size: 18px; font-weight: 900; color: var(--text);">240</div>
+              <div style="font-size: 10px; color: var(--text-faint); text-transform: uppercase; font-weight: 600; margin-top: 4px;">Expected</div>
+            </div>
+            <div style="padding: 12px; background: var(--bg-deep); border: 1px solid var(--border); border-radius: 8px; text-align: center;">
+              <div style="font-size: 18px; font-weight: 900; color: #059669;">237</div>
+              <div style="font-size: 10px; color: var(--text-faint); text-transform: uppercase; font-weight: 600; margin-top: 4px;">Scanned</div>
+            </div>
+            <div style="padding: 12px; background: var(--bg-deep); border: 1px solid var(--border); border-radius: 8px; text-align: center;">
+              <div style="font-size: 18px; font-weight: 900; color: #d97706;">3</div>
+              <div style="font-size: 10px; color: var(--text-faint); text-transform: uppercase; font-weight: 600; margin-top: 4px;">Missing</div>
+            </div>
+          </div>
+          <div style="background: var(--bg-deep); border: 1px solid var(--border); border-radius: 10px; padding: 14px; margin-bottom: 14px;">
+            <div style="font-size: 11px; color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 10px; font-weight: 600;">Scanned Items</div>
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 12px;"><span style="color: var(--text); font-weight: 600;">Wool Overcoat · 24 units</span><span style="font-size: 10px; padding: 3px 10px; border-radius: 100px; font-weight: 700; background: rgba(16, 185, 129, 0.12); color: #059669;">Match</span></div>
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 12px;"><span style="color: var(--text); font-weight: 600;">Cashmere Scarf · 48 units</span><span style="font-size: 10px; padding: 3px 10px; border-radius: 100px; font-weight: 700; background: rgba(16, 185, 129, 0.12); color: #059669;">Match</span></div>
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 8px 0; font-size: 12px;"><span style="color: var(--text); font-weight: 600;">Leather Belt · 12 of 15</span><span style="font-size: 10px; padding: 3px 10px; border-radius: 100px; font-weight: 700; background: rgba(245, 158, 11, 0.12); color: #d97706;">-3 short</span></div>
+          </div>
+          <div style="padding: 11px 14px; border-radius: 8px; font-size: 12px; font-weight: 700; text-align: center; background: var(--gradient); color: #fff; border: none;">Confirm receipt & flag discrepancy</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MID-PAGE CTA ============ -->
+<section style="padding: 64px 0; background: var(--bg-deep); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+  <div class="container" style="display: flex; align-items: center; justify-content: space-between; gap: 40px; flex-wrap: wrap;">
+    <div>
+      <div style="font-size: clamp(24px, 3vw, 36px); font-weight: 900; letter-spacing: -0.025em; line-height: 1.1; margin-bottom: 8px;">Stop guessing. Start scaling.</div>
+      <div style="font-size: 16px; color: var(--text-muted);">See why leading brands are ditching spreadsheets and legacy Frankenstacks for Teamwork Commerce.</div>
+    </div>
+    <a href="/contact/" class="btn btn-primary btn-lg">Book a demo <i class="ti ti-arrow-right"></i></a>
+  </div>
+</section>
+
+<!-- ============ WHY WE WIN ============ -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">The Competitive Edge</div>
+      <h2 class="section-title">Why enterprise retailers choose <span class="gradient-text">Teamwork.</span></h2>
+    </div>
+    <div class="pillars-grid" style="grid-template-columns: repeat(2, 1fr);">
+      <div class="pillar-card">
+        <div class="pillar-icon"><i class="ti ti-brand-apple"></i></div>
+        <h3 class="pillar-title">Native iOS ecosystem</h3>
+        <p class="pillar-desc">Built specifically for iPad and iPhone — not a web wrapper. Intuitive, sleek, zero training required. Co-designed with Apple's retail teams for hardware durability, security (SOC 2), and a premium employee experience that matches the brands you serve.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon"><i class="ti ti-wifi-off"></i></div>
+        <h3 class="pillar-title">Offline resilience</h3>
+        <p class="pillar-desc">Store-and-Forward keeps inventory operations running during outages. Update stock, process receiving, and complete counts even when Wi-Fi dies. Everything syncs automatically when connectivity returns. Zero data gaps.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon"><i class="ti ti-scan"></i></div>
+        <h3 class="pillar-title">Native RFID — no middleware</h3>
+        <p class="pillar-desc">The industry's only native end-to-end RFID stack. 99.9% cycle count accuracy in minutes. New Black and NewStore offer unified commerce but require third-party middleware for deep RFID workflows. Teamwork doesn't.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon"><i class="ti ti-plug-connected"></i></div>
+        <h3 class="pillar-title">No Frankenstack</h3>
+        <p class="pillar-desc">POS, OMS, Inventory, and RFID in one unified native platform. No data silos, no sync lag, no integration errors. Unlike competitors who stitch together modular components, Teamwork is unified by design — one codebase, one data model.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECURITY BADGES ============ -->
+<section style="padding: 72px 0;">
+  <div class="container" style="text-align: center;">
+    <div style="font-size: 11px; color: var(--text-faint); font-weight: 600; text-transform: uppercase; letter-spacing: 0.14em; margin-bottom: 32px;">Enterprise-grade security & compliance</div>
+    <div style="display: flex; justify-content: center; gap: 44px; flex-wrap: wrap;">
+      <span style="display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--text-muted); font-weight: 600;"><i class="ti ti-shield-check" style="background: var(--gradient); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; font-size: 18px;"></i> SOC 2 Type 2</span>
+      <span style="display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--text-muted); font-weight: 600;"><i class="ti ti-shield-check" style="background: var(--gradient); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; font-size: 18px;"></i> GDPR</span>
+      <span style="display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--text-muted); font-weight: 600;"><i class="ti ti-shield-check" style="background: var(--gradient); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; font-size: 18px;"></i> PCI DSS</span>
+      <span style="display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--text-muted); font-weight: 600;"><i class="ti ti-brand-apple" style="background: var(--gradient); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; font-size: 18px;"></i> Native iOS</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- Trusted By -->
+<section style="padding: 48px 0; border-top: 1px solid var(--border);">
+  <div class="container" style="text-align: center;">
+    <div style="font-size: 11px; color: var(--text-faint); font-weight: 600; text-transform: uppercase; letter-spacing: 0.14em; margin-bottom: 24px;">Trusted by leading retailers worldwide</div>
+    <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; align-items: center;">
+      <span style="font-size: 17px; font-weight: 700; color: var(--text-muted); opacity: 0.5;">ASICS</span>
+      <span style="font-size: 17px; font-weight: 700; color: var(--text-muted); opacity: 0.5;">Acne Studios</span>
+      <span style="font-size: 17px; font-weight: 700; color: var(--text-muted); opacity: 0.5; font-style: italic;">Petco</span>
+      <span style="font-size: 17px; font-weight: 700; color: var(--text-muted); opacity: 0.5;">City Beach</span>
+      <span style="font-size: 17px; font-weight: 700; color: var(--text-muted); opacity: 0.5;">Colorado Rockies</span>
+      <span style="font-size: 17px; font-weight: 700; color: var(--text-muted); opacity: 0.5; font-style: italic;">Lucchese</span>
+      <span style="font-size: 17px; font-weight: 700; color: var(--text-muted); opacity: 0.5;">The Broad</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section" style="padding-bottom: 80px;">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">Frequently Asked Questions</div>
+      <h2 class="section-title">Everything you need to <span class="gradient-text">know.</span></h2>
+    </div>
+    <div style="max-width: 800px; margin: 0 auto;">
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          How does Teamwork Commerce achieve 99.9% inventory accuracy?
+          <span class="faq-icon"><i class="ti ti-plus"></i></span>
+        </button>
+        <div class="faq-answer"><p>Through the industry's only native end-to-end RFID stack. RFID-powered cycle counts scan thousands of items in minutes without pulling product off racks. Real-time reconciliation updates global stock levels instantly. Combined with AI anomaly detection that flags suspicious inventory movement, this eliminates ghost SKUs and delivers 99.9% accuracy across all locations.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          Can cycle counts be done without closing the store?
+          <span class="faq-icon"><i class="ti ti-plus"></i></span>
+        </button>
+        <div class="faq-answer"><p>Yes. Rolling RFID cycle counts run during business hours without disrupting operations. Associates scan with the iOS device while customers shop. A typical 10-store chain recovers $150,000–$300,000 in previously "lost" stock within the first 12 months of switching to weekly RFID counts.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          How does the AI predict stock-outs before they happen?
+          <span class="faq-icon"><i class="ti ti-plus"></i></span>
+        </button>
+        <div class="faq-answer"><p>The AI monitors the velocity of RFID tags moving through the sales floor. When it detects a SKU approaching zero at a location, it automatically queues a transfer from the nearest warehouse or store with surplus stock. It can also trigger vendor re-orders. Demand forecasting operates at the SKU-and-location level with up to 95% accuracy.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          How does Teamwork Commerce inventory compare to New Black EVA and NewStore?
+          <span class="faq-icon"><i class="ti ti-plus"></i></span>
+        </button>
+        <div class="faq-answer"><p>New Black and NewStore offer unified commerce inventory but require third-party middleware for deep RFID workflows. Teamwork Commerce is the only platform with native end-to-end RFID — from source tagging through checkout. This means cycle counts, receiving, loss prevention, and real-time tracking all run on one system with no integration points to break. The result: 99.9% accuracy vs. the industry average of 70–80%.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          Does the system work offline?
+          <span class="faq-icon"><i class="ti ti-plus"></i></span>
+        </button>
+        <div class="faq-answer"><p>Yes. Store-and-Forward technology keeps all inventory operations running during network outages. Receiving, counts, adjustments, and transfers continue on the iOS device. Data is encrypted locally and syncs automatically when connectivity returns — zero data gaps, zero downtime.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="final-cta">
+  <div class="container final-cta-inner">
+    <h2>Stop guessing. Start <span class="gradient-text">scaling.</span></h2>
+    <p>See why the world's leading brands are ditching spreadsheets and legacy Frankenstacks for Teamwork Commerce.</p>
+    <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+      <a href="/contact/" class="btn btn-primary btn-lg">Book a demo <i class="ti ti-arrow-right"></i></a>
+      <button class="btn btn-ghost btn-lg" style="border-color: var(--border); color: var(--text-muted);">Speak with an architect</button>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ============ FOOTER ============ -->

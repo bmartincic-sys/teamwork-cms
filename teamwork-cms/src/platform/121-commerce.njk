@@ -1,0 +1,393 @@
+---
+layout: "solution.njk"
+title: "121 Commerce — AI for Retail Associates"
+description: "121 Commerce is an AI Agent for the retail sales floor. PXP product intelligence, CXP customer intelligence, real-time associate guidance. Natively integrated with POS."
+navLabel: "121 Commerce"
+tags: "platform"
+permalink: "/platform/121-commerce/"
+---
+<!-- Breadcrumb -->
+<div class="container">
+  <nav class="breadcrumb" aria-label="Breadcrumb" style="padding: 16px 0; font-size: 12px; color: var(--text-faint);">
+    <a href="/" style="color: var(--text-muted);">Home</a> <span style="margin: 0 6px;">/</span>
+    <a href="/platform/" style="color: var(--text-muted);">Platform</a> <span style="margin: 0 6px;">/</span>
+    121 Commerce
+  </nav>
+</div>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-glow"></div>
+  <div class="container hero-inner fade-up">
+    <span class="eyebrow"><span class="eyebrow-dot"></span> 121 Commerce · AI for Retail</span>
+    <h1>AI to supercharge product & customer <span class="accent">experiences.</span></h1>
+    <p class="hero-sub">
+      An AI Agent that works alongside your team — empowering associates with real-time product knowledge, customer intelligence, and brand-consistent guidance at every touchpoint. Not a chatbot. A co-pilot for the sales floor.
+    </p>
+    <div class="hero-cta">
+      <a href="/contact/" class="btn btn-primary btn-lg">Book a demo <i class="ti ti-arrow-right"></i></a>
+      <button class="btn btn-ghost btn-lg">Explore how it works</button>
+    </div>
+  </div>
+
+  <!-- HERO MOCKUP: 121 Commerce in action -->
+  <div class="hero-product fade-up" style="animation-delay: 0.2s;">
+    <div class="product-frame">
+      <div class="product-frame-bar">
+        <div class="frame-dot"></div><div class="frame-dot"></div><div class="frame-dot"></div>
+        <div class="frame-label">teamwork.app — 121 Commerce · AI Agent · In-Store Session</div>
+      </div>
+      <div class="product-body">
+        <!-- Left: The AI conversation / selling ceremony -->
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <div style="font-size: 11px; color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; margin-bottom: 2px;">Selling Ceremony · Session #4,821</div>
+          <!-- Customer card -->
+          <div style="display: flex; align-items: center; gap: 12px; padding: 14px; background: var(--bg-deep); border-radius: 10px; border: 1px solid var(--border);">
+            <div style="width: 44px; height: 44px; border-radius: 50%; background: var(--gradient); display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 700; font-size: 14px; flex-shrink: 0;">SC</div>
+            <div style="flex: 1;">
+              <div style="font-size: 14px; font-weight: 700; color: var(--text);">Sarah Chen</div>
+              <div style="font-size: 11px; color: var(--brand-blue); font-weight: 700; margin-top: 2px; text-transform: uppercase; letter-spacing: 0.03em;">Returning · 12 visits · VIP</div>
+            </div>
+            <div style="text-align: right;">
+              <strong style="color: var(--text); font-size: 16px; font-weight: 900; display: block;">$8,420</strong>
+              <span style="font-size: 10px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em;">LTV</span>
+            </div>
+          </div>
+          <!-- AI suggestion -->
+          <div style="padding: 16px; background: var(--brand-soft); border-radius: 10px; border-left: 3px solid var(--brand-blue);">
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;"><i class="ti ti-sparkles" style="color: var(--brand-blue); font-size: 16px;"></i><span style="font-size: 11px; font-weight: 700; color: var(--brand-text); text-transform: uppercase; letter-spacing: 0.06em;">AI Agent · PXP + CXP</span></div>
+            <div style="font-size: 12px; line-height: 1.6; color: var(--text);">Sarah prefers <strong style="color: var(--brand-text);">Italian cashmere, neutral tones, size S</strong>. She browsed the new fall collection online last night. The camel overcoat she viewed is in stock — pair with the cream scarf she wishlisted 2 weeks ago.</div>
+          </div>
+          <!-- Product recs -->
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+            <div style="padding: 10px; background: var(--bg-deep); border: 1px solid var(--border); border-radius: 8px;">
+              <div style="font-size: 11px; font-weight: 700; color: var(--text);">Camel Overcoat</div>
+              <div style="font-size: 10px; color: var(--text-muted);">$1,290 · Sz S · In stock</div>
+              <div style="font-size: 10px; color: var(--brand-blue); font-weight: 700; margin-top: 4px;">92% match</div>
+            </div>
+            <div style="padding: 10px; background: var(--bg-deep); border: 1px solid var(--border); border-radius: 8px;">
+              <div style="font-size: 11px; font-weight: 700; color: var(--text);">Cream Scarf</div>
+              <div style="font-size: 10px; color: var(--text-muted);">$245 · Wishlisted</div>
+              <div style="font-size: 10px; color: var(--brand-blue); font-weight: 700; margin-top: 4px;">Cross-sell</div>
+            </div>
+          </div>
+          <!-- Associate feedback -->
+          <div style="padding: 10px 14px; background: var(--bg-deep); border: 1px solid var(--border); border-radius: 8px; display: flex; align-items: center; gap: 8px; font-size: 11px; color: var(--text-muted);">
+            <i class="ti ti-message-circle" style="color: var(--brand-blue); font-size: 14px;"></i>
+            <span>After this session, provide feedback to improve the AI Agent's recommendations →</span>
+          </div>
+        </div>
+        <!-- Right: Three-platform overview -->
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <div style="padding: 16px; background: var(--bg-deep); border: 1px solid var(--border); border-radius: 10px;">
+            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+              <div style="width: 32px; height: 32px; border-radius: 8px; background: var(--gradient); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 900;">P</div>
+              <div><div style="font-size: 13px; font-weight: 900; color: var(--text);">PXP</div><div style="font-size: 10px; color: var(--text-muted);">Product Experience Platform</div></div>
+            </div>
+            <div style="font-size: 11px; color: var(--text-muted); line-height: 1.5;">Unifies all product knowledge. Smart profiles, multi-language content, AI imagery, pre-scheduling. Makes every associate a 10-year veteran.</div>
+          </div>
+          <div style="padding: 16px; background: var(--bg-deep); border: 1px solid var(--border); border-radius: 10px;">
+            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+              <div style="width: 32px; height: 32px; border-radius: 8px; background: var(--gradient); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 900;">C</div>
+              <div><div style="font-size: 13px; font-weight: 900; color: var(--text);">CXP</div><div style="font-size: 10px; color: var(--text-muted);">Customer Experience Platform</div></div>
+            </div>
+            <div style="font-size: 11px; color: var(--text-muted); line-height: 1.5;">Captures every selling ceremony. Associate feedback refines the AI. Customer intelligence deepens over time. Each session makes the next one smarter.</div>
+          </div>
+          <div style="padding: 16px; background: var(--brand-soft); border: 1px solid color-mix(in srgb, var(--brand-blue) 20%, transparent); border-radius: 10px;">
+            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+              <div style="width: 32px; height: 32px; border-radius: 8px; background: var(--gradient); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 900;">121</div>
+              <div><div style="font-size: 13px; font-weight: 900; color: var(--text);">121 POS</div><div style="font-size: 10px; color: var(--brand-text);">The Unified Experience</div></div>
+            </div>
+            <div style="font-size: 11px; color: var(--text); line-height: 1.5;">PXP + CXP converge at the point of sale. The AI Agent guides the associate through the selling ceremony with real-time recommendations, then carries the session forward if the customer continues online.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION 1: PXP ============ -->
+<section class="section">
+  <div class="container">
+    <div class="feature-row">
+      <div class="feature-text">
+        <span class="section-eyebrow">PXP · Product Experience Platform</span>
+        <h2>Make every associate as knowledgeable as a <span class="gradient-text">ten-year veteran.</span></h2>
+        <p>PXP is the foundation — unifying all product knowledge and enrichment into a single AI-powered layer. Associates get instant access to everything about every product, in every language, with content that stays on-brand and up to date automatically.</p>
+        <ul class="feature-bullets">
+          <li>Smart, enriched product profiles: unified customer and product data with AI-generated detail</li>
+          <li>Content elevation and localization: automatic grammar correction, instant multi-language translation, regional refinement</li>
+          <li>Pre-scheduling and versioning: seasonal updates in minutes, automated launch scheduling, effortless product versioning</li>
+          <li>AI-generated imagery and assets: instant content expansion from a single photo, consistent on-brand asset generation</li>
+        </ul>
+        <a href="/contact/" class="btn btn-primary">Book a demo <i class="ti ti-arrow-right"></i></a>
+      </div>
+      <!-- Mockup: PXP product enrichment -->
+      <div class="feature-visual">
+        <div class="mockup-panel" style="padding: 24px;">
+          <div style="display: flex; align-items: center; justify-content: space-between; padding-bottom: 16px; margin-bottom: 16px; border-bottom: 1px solid var(--border);">
+            <span style="display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 700; color: #fff; padding: 5px 11px; background: var(--gradient); border-radius: 100px;"><i class="ti ti-sparkles" style="font-size:11px"></i> PXP</span>
+            <span style="font-size: 11px; color: var(--text-faint); font-family: var(--font-mono);">Product Intelligence</span>
+          </div>
+          <div style="padding: 14px; background: var(--bg-deep); border: 1px solid var(--border); border-radius: 10px; margin-bottom: 12px;">
+            <div style="font-size: 14px; font-weight: 900; color: var(--text); margin-bottom: 4px;">Camel Wool Overcoat</div>
+            <div style="font-size: 11px; color: var(--text-muted); margin-bottom: 10px;">SKU: CML-OC-2026-W · $1,290</div>
+            <div style="font-size: 10px; color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px; font-weight: 600;">AI-Enriched Profile</div>
+            <div style="font-size: 12px; color: var(--text); line-height: 1.6; padding: 10px; background: var(--panel); border: 1px solid var(--border); border-radius: 6px;">Italian double-face cashmere-wool blend, 80/20. Notch lapel, single-breasted, horn buttons. Dry clean only. Pairs with cream/ivory accessories. Best-selling in stores with avg. temp below 50°F.</div>
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-bottom: 12px;">
+            <div style="padding: 10px; background: var(--bg-deep); border: 1px solid var(--border); border-radius: 8px;">
+              <div style="font-size: 10px; color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px; font-weight: 600;">Languages</div>
+              <div style="font-size: 12px; font-weight: 700; color: var(--text);">EN · ES · FR · JP · ZH</div>
+              <div style="font-size: 10px; color: #059669; margin-top: 4px;">Auto-translated ✓</div>
+            </div>
+            <div style="padding: 10px; background: var(--bg-deep); border: 1px solid var(--border); border-radius: 8px;">
+              <div style="font-size: 10px; color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px; font-weight: 600;">Assets</div>
+              <div style="font-size: 12px; font-weight: 700; color: var(--text);">12 images</div>
+              <div style="font-size: 10px; color: #059669; margin-top: 4px;">6 AI-generated ✓</div>
+            </div>
+          </div>
+          <div style="padding: 10px 14px; background: var(--brand-soft); border-radius: 8px; font-size: 11px; color: var(--brand-text); font-weight: 600; display: flex; align-items: center; gap: 8px;"><i class="ti ti-clock" style="font-size: 14px;"></i> Scheduled: Fall launch · Nov 1 · Auto-versioned from Summer</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION 2: CXP ============ -->
+<section class="section" style="padding-top: 0;">
+  <div class="container">
+    <div class="feature-row reverse">
+      <div class="feature-text">
+        <span class="section-eyebrow">CXP · Customer Experience Platform</span>
+        <h2>Every session makes the AI <span class="gradient-text">smarter.</span></h2>
+        <p>CXP builds on the PXP foundation. Every customer interaction is captured as a selling ceremony — a session that's stored, analyzed, and used to continuously refine the AI Agent's expertise. Associates provide real-world feedback after each session, deepening customer intelligence over time.</p>
+        <ul class="feature-bullets">
+          <li>Selling ceremony capture: every individual customer session recorded and stored in CXP</li>
+          <li>Associate feedback loop: corrections and notes after each session strengthen the AI Agent's learning</li>
+          <li>Deepening intelligence: the AI's understanding of your customer improves with every interaction — preferences, patterns, purchase intent</li>
+          <li>Self-improving agent: the more sessions it processes, the more accurate its recommendations become</li>
+        </ul>
+        <button class="btn btn-primary">See CXP in action <i class="ti ti-arrow-right"></i></button>
+      </div>
+      <!-- Mockup: Learning loop -->
+      <div class="feature-visual">
+        <div class="mockup-panel" style="padding: 24px;">
+          <div style="display: flex; align-items: center; justify-content: space-between; padding-bottom: 16px; margin-bottom: 16px; border-bottom: 1px solid var(--border);">
+            <span style="display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 700; color: #fff; padding: 5px 11px; background: var(--gradient); border-radius: 100px;"><i class="ti ti-brain" style="font-size:11px"></i> CXP</span>
+            <span style="font-size: 11px; color: var(--text-faint); font-family: var(--font-mono);">Learning Loop</span>
+          </div>
+          <div style="font-size: 11px; color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 10px; font-weight: 600;">AI Learning Cycle</div>
+          <div style="display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px;">
+            <div style="padding: 10px 14px; border-radius: 8px; background: var(--brand-soft); border-left: 3px solid var(--brand-blue); font-size: 12px; color: var(--text);"><strong style="color: var(--brand-text);">Session captured:</strong> Sarah browsed overcoat, tried on, purchased with scarf pairing</div>
+            <div style="text-align: center; font-size: 14px; color: var(--text-faint);">↓</div>
+            <div style="padding: 10px 14px; border-radius: 8px; background: var(--bg-deep); border: 1px solid var(--border); font-size: 12px; color: var(--text);"><strong>Associate feedback:</strong> "Sarah mentioned she's looking for boots next visit — Italian leather, ankle height"</div>
+            <div style="text-align: center; font-size: 14px; color: var(--text-faint);">↓</div>
+            <div style="padding: 10px 14px; border-radius: 8px; background: var(--bg-deep); border: 1px solid var(--border); font-size: 12px; color: var(--text);"><strong>AI learns:</strong> Updated Sarah's profile with boot preference, ankle style, Italian leather</div>
+            <div style="text-align: center; font-size: 14px; color: var(--text-faint);">↓</div>
+            <div style="padding: 10px 14px; border-radius: 8px; background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.2); font-size: 12px; color: #059669; font-weight: 600;"><i class="ti ti-circle-check-filled" style="font-size: 14px; margin-right: 4px;"></i> Next visit: AI will recommend Italian leather ankle boots before Sarah asks</div>
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px;">
+            <div style="padding: 12px; background: var(--bg-deep); border: 1px solid var(--border); border-radius: 8px; text-align: center;">
+              <div style="font-size: 18px; font-weight: 900; color: var(--text);">4,821</div>
+              <div style="font-size: 10px; color: var(--text-faint); text-transform: uppercase; font-weight: 600; margin-top: 4px;">Sessions learned</div>
+            </div>
+            <div style="padding: 12px; background: var(--bg-deep); border: 1px solid var(--border); border-radius: 8px; text-align: center;">
+              <div style="font-size: 18px; font-weight: 900; color: #059669;">+34%</div>
+              <div style="font-size: 10px; color: var(--text-faint); text-transform: uppercase; font-weight: 600; margin-top: 4px;">Recommendation accuracy</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION 3: 121 POS — THE CONVERGENCE ============ -->
+<section class="section" style="padding-top: 0;">
+  <div class="container">
+    <div class="feature-row">
+      <div class="feature-text">
+        <span class="section-eyebrow">121 POS · The Convergence</span>
+        <h2>Where PXP and CXP meet the <span class="gradient-text">sales floor.</span></h2>
+        <p>The ultimate goal: transform the in-store POS into 121 Commerce. PXP delivers product intelligence. CXP delivers customer intelligence. At the point of sale, they converge — giving associates real-time AI guidance during the selling ceremony, then seamlessly handing the session to the customer if they continue online.</p>
+        <ul class="feature-bullets">
+          <li>AI-powered associate support: real-time guidance for answering questions, recommending products, closing sales</li>
+          <li>Seamless omnichannel handoff: the selling session can be continued by the customer at home — the AI carries the interaction forward</li>
+          <li>Consistent brand communication: every associate in every store in every country delivers the same quality of product knowledge</li>
+          <li>Capturing every ceremony: each interaction builds the knowledge base, making the next session better</li>
+        </ul>
+        <a href="/contact/" class="btn btn-primary">Book a demo <i class="ti ti-arrow-right"></i></a>
+      </div>
+      <!-- Mockup: Omnichannel handoff -->
+      <div class="feature-visual">
+        <div class="mockup-panel" style="padding: 24px;">
+          <div style="display: flex; align-items: center; justify-content: space-between; padding-bottom: 16px; margin-bottom: 16px; border-bottom: 1px solid var(--border);">
+            <span style="display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 700; color: #fff; padding: 5px 11px; background: var(--gradient); border-radius: 100px;"><i class="ti ti-arrows-exchange" style="font-size:11px"></i> 121 POS</span>
+            <span style="font-size: 11px; color: var(--text-faint); font-family: var(--font-mono);">Session Handoff</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 14px;">
+            <div style="padding: 14px; background: var(--brand-soft); border: 1px solid color-mix(in srgb, var(--brand-blue) 20%, transparent); border-radius: 10px;">
+              <div style="font-size: 10px; color: var(--brand-text); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px; font-weight: 700;">In-Store · 2:34 PM</div>
+              <div style="font-size: 12px; font-weight: 700; color: var(--text); margin-bottom: 4px;">Associate-guided</div>
+              <div style="font-size: 11px; color: var(--text-muted); line-height: 1.5;">Tried camel overcoat ✓<br>Paired with scarf ✓<br>Purchased overcoat<br>Considering boots</div>
+            </div>
+            <div style="padding: 14px; background: var(--bg-deep); border: 1px solid var(--border); border-radius: 10px;">
+              <div style="font-size: 10px; color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px; font-weight: 700;">At Home · 8:12 PM</div>
+              <div style="font-size: 12px; font-weight: 700; color: var(--text); margin-bottom: 4px;">AI-continued</div>
+              <div style="font-size: 11px; color: var(--text-muted); line-height: 1.5;">AI shows Italian ankle boots<br>Based on associate feedback<br>Same session context<br>Ready to purchase</div>
+            </div>
+          </div>
+          <div style="padding: 12px 14px; background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.2); border-radius: 8px; font-size: 12px; color: #059669; font-weight: 700; display: flex; align-items: center; gap: 8px;"><i class="ti ti-circle-check-filled" style="font-size: 16px;"></i> One session, two touchpoints. Same AI, same context, same brand experience.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MID-PAGE CTA ============ -->
+<section style="padding: 64px 0; background: var(--bg-deep); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+  <div class="container" style="display: flex; align-items: center; justify-content: space-between; gap: 40px; flex-wrap: wrap;">
+    <div>
+      <div style="font-size: clamp(24px, 3vw, 36px); font-weight: 900; letter-spacing: -0.025em; line-height: 1.1; margin-bottom: 8px;">Start building your AI advantage now.</div>
+      <div style="font-size: 16px; color: var(--text-muted);">The sooner you implement PXP, the faster your AI Agent accumulates the knowledge it needs.</div>
+    </div>
+    <a href="/contact/" class="btn btn-primary btn-lg">Book a demo <i class="ti ti-arrow-right"></i></a>
+  </div>
+</section>
+
+<!-- ============ COMPLETE 121 CAPABILITIES ============ -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">Complete 121 Commerce Capabilities</div>
+      <h2 class="section-title">Intelligence designed to help teams sell better, faster, and more <span class="gradient-text">confidently.</span></h2>
+    </div>
+    <div class="pillars-grid" style="grid-template-columns: repeat(3, 1fr);">
+      <div class="pillar-card">
+        <div class="pillar-icon"><i class="ti ti-database"></i></div>
+        <h3 class="pillar-title">Unified product data</h3>
+        <p class="pillar-desc">Every product detail — materials, care instructions, sizing, origin story, styling notes — unified in one AI-enriched profile. Launch products in minutes, not days.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon"><i class="ti ti-language"></i></div>
+        <h3 class="pillar-title">Instant localization</h3>
+        <p class="pillar-desc">Multi-language translation with regional refinement. The AI adapts product descriptions, sizing guides, and care labels for every market automatically. Full customization retained.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon"><i class="ti ti-photo-ai"></i></div>
+        <h3 class="pillar-title">AI-generated imagery</h3>
+        <p class="pillar-desc">Expand content from a single product photo. Generate consistent, on-brand assets for every channel — e-commerce, social, print, in-store displays. Unified media management.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon"><i class="ti ti-user-heart"></i></div>
+        <h3 class="pillar-title">360° customer intelligence</h3>
+        <p class="pillar-desc">Purchase history, preferences, wishlists, browsing behavior, and associate notes — across every channel. The AI knows your customer before the associate does.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon"><i class="ti ti-message-chatbot"></i></div>
+        <h3 class="pillar-title">Real-time AI guidance</h3>
+        <p class="pillar-desc">During the selling ceremony, the AI surfaces recommendations, product pairings, and customer preferences in real time. Not a chatbot — a co-pilot that makes associates experts.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon"><i class="ti ti-refresh"></i></div>
+        <h3 class="pillar-title">Self-improving loop</h3>
+        <p class="pillar-desc">Every session is captured. Every piece of associate feedback strengthens the model. The AI deepens its understanding of your customers and products with every interaction. Start now — the knowledge compounds.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECURITY BADGES ============ -->
+<section style="padding: 72px 0;">
+  <div class="container" style="text-align: center;">
+    <div style="font-size: 11px; color: var(--text-faint); font-weight: 600; text-transform: uppercase; letter-spacing: 0.14em; margin-bottom: 32px;">Enterprise-grade security & compliance</div>
+    <div style="display: flex; justify-content: center; gap: 44px; flex-wrap: wrap;">
+      <span style="display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--text-muted); font-weight: 600;"><i class="ti ti-shield-check" style="background: var(--gradient); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; font-size: 18px;"></i> SOC 2 Type 2</span>
+      <span style="display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--text-muted); font-weight: 600;"><i class="ti ti-shield-check" style="background: var(--gradient); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; font-size: 18px;"></i> GDPR</span>
+      <span style="display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--text-muted); font-weight: 600;"><i class="ti ti-shield-check" style="background: var(--gradient); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; font-size: 18px;"></i> PCI DSS</span>
+      <span style="display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--text-muted); font-weight: 600;"><i class="ti ti-sparkles" style="background: var(--gradient); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; font-size: 18px;"></i> AI-Native</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- Trusted By -->
+<section style="padding: 48px 0; border-top: 1px solid var(--border);">
+  <div class="container" style="text-align: center;">
+    <div style="font-size: 11px; color: var(--text-faint); font-weight: 600; text-transform: uppercase; letter-spacing: 0.14em; margin-bottom: 24px;">Trusted by leading retailers worldwide</div>
+    <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; align-items: center;">
+      <span style="font-size: 17px; font-weight: 700; color: var(--text-muted); opacity: 0.5;">ASICS</span>
+      <span style="font-size: 17px; font-weight: 700; color: var(--text-muted); opacity: 0.5;">Acne Studios</span>
+      <span style="font-size: 17px; font-weight: 700; color: var(--text-muted); opacity: 0.5; font-style: italic;">Petco</span>
+      <span style="font-size: 17px; font-weight: 700; color: var(--text-muted); opacity: 0.5;">City Beach</span>
+      <span style="font-size: 17px; font-weight: 700; color: var(--text-muted); opacity: 0.5;">Colorado Rockies</span>
+      <span style="font-size: 17px; font-weight: 700; color: var(--text-muted); opacity: 0.5; font-style: italic;">Lucchese</span>
+      <span style="font-size: 17px; font-weight: 700; color: var(--text-muted); opacity: 0.5;">The Broad</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section" style="padding-bottom: 80px;">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">Frequently Asked Questions</div>
+      <h2 class="section-title">Everything you need to <span class="gradient-text">know.</span></h2>
+    </div>
+    <div style="max-width: 800px; margin: 0 auto;">
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          What is 121 Commerce?
+          <span class="faq-icon"><i class="ti ti-plus"></i></span>
+        </button>
+        <div class="faq-answer"><p>121 Commerce is an AI Agent built for the retail sales floor. It combines a Product Experience Platform (PXP) for product intelligence with a Customer Experience Platform (CXP) for customer intelligence. Together they power 121 POS — giving associates real-time AI guidance during selling ceremonies, then carrying the session forward if the customer continues online. It's not a chatbot. It's a co-pilot that makes every associate as knowledgeable as your best.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          What is the difference between PXP and CXP?
+          <span class="faq-icon"><i class="ti ti-plus"></i></span>
+        </button>
+        <div class="faq-answer"><p>PXP (Product Experience Platform) is the foundation — it unifies all product knowledge including descriptions, materials, care instructions, imagery, and translations. CXP (Customer Experience Platform) builds on PXP by capturing every customer interaction as a selling ceremony, storing associate feedback, and using that data to continuously refine the AI Agent's recommendations. Together they create a self-improving intelligence loop.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          How does the AI learn and improve over time?
+          <span class="faq-icon"><i class="ti ti-plus"></i></span>
+        </button>
+        <div class="faq-answer"><p>Every customer interaction is captured as a session in CXP. After each session, associates can provide feedback and corrections — strengthening the AI's understanding of your customers and products. This feedback loop means the AI gets more accurate with every interaction. The sooner you implement PXP, the faster the AI accumulates the knowledge it needs.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          Can the selling session continue after the customer leaves the store?
+          <span class="faq-icon"><i class="ti ti-plus"></i></span>
+        </button>
+        <div class="faq-answer"><p>Yes. When a customer leaves the store, the AI Agent carries the interaction forward. If the customer browses your website at home that evening, the AI can surface recommendations based on what they tried in-store, what the associate noted, and what's been wishlisted — maintaining a seamless, personalized experience across channels.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          How is 121 Commerce different from other retail AI solutions?
+          <span class="faq-icon"><i class="ti ti-plus"></i></span>
+        </button>
+        <div class="faq-answer"><p>Most retail AI focuses on e-commerce recommendations or customer-facing chatbots. 121 Commerce is built for the associate — it's a co-pilot for the physical sales floor. It's natively integrated with Teamwork's POS, OMS, RFID, and inventory systems, so recommendations are backed by real-time stock data, customer history, and product intelligence. No other platform offers this depth of AI natively integrated with the full retail stack.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="final-cta">
+  <div class="container final-cta-inner">
+    <h2>The future of retail is <span class="gradient-text">121.</span></h2>
+    <p>Start building your AI advantage today. The sooner you implement, the smarter your agent becomes.</p>
+    <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+      <a href="/contact/" class="btn btn-primary btn-lg">Book a demo <i class="ti ti-arrow-right"></i></a>
+      <button class="btn btn-ghost btn-lg" style="border-color: var(--border); color: var(--text-muted);">Explore how it works</button>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ============ FOOTER ============ -->

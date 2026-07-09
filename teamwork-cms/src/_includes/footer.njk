@@ -1,0 +1,49 @@
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo">
+          <img class="logo-light" src="/assets/images/teamwork-logo-color.png" alt="Teamwork Commerce">
+          <img class="logo-dark" src="/assets/images/teamwork-logo-white.png" alt="Teamwork Commerce">
+        </div>
+        <p>Frictionless commerce for the next generation of retail. Powering 30,000+ terminals across 40+ countries.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Platform</h4>
+        {% for p in collections.platform %}<a href="{{ p.url }}">{{ p.data.navLabel or p.data.title }}</a>
+        {% endfor %}
+      </div>
+      <div class="footer-col">
+        <h4>Solutions</h4>
+        {% for s in collections.solutions %}<a href="{{ s.url }}">{{ s.data.navLabel or s.data.title }}</a>
+        {% endfor %}
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="/about/">About</a>
+        <a href="#">Teamwork Cares</a>
+        <a href="#">Partners</a>
+        <a href="/careers/">Careers</a>
+        <a href="#">Customers</a>
+        <a href="#">Press</a>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a href="#">Blog</a>
+        <a href="#">Case Studies</a>
+        <a href="#">Trust Center</a>
+        <a href="#">Documentation</a>
+        <a href="/contact/">Contact</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Teamwork Commerce. All rights reserved.</span>
+      <div style="display:flex; gap: 20px; align-items: center; flex-wrap: wrap;">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Cookies</a>
+        <div class="footer-locale"><i class="ti ti-world" style="font-size:14px"></i> English (US)</div>
+      </div>
+    </div>
+  </div>
+</footer>

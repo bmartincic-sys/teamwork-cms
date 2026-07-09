@@ -1,0 +1,364 @@
+---
+layout: "solution.njk"
+title: "POS for Stadiums & Venues"
+description: "Offline-resilient stadium POS. Store-and-Forward, RFID self-checkout in 32s, staff on registers in 5 min. Colorado Rockies, Milwaukee Bucks."
+navLabel: "Stadiums & Venues"
+tags: "solutions"
+permalink: "/solutions/stadiums-venues/"
+---
+<!-- Breadcrumb -->
+<div class="container">
+  <nav class="breadcrumb" aria-label="Breadcrumb" style="padding: 16px 0; font-size: 12px; color: var(--text-faint);">
+    <a href="/" style="color: var(--text-muted);">Home</a> <span style="margin: 0 6px;">/</span>
+    <a href="/solutions/" style="color: var(--text-muted);">Solutions</a> <span style="margin: 0 6px;">/</span>
+    Stadiums & Venues
+  </nav>
+</div>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-glow"></div>
+  <div class="container hero-inner fade-up">
+    <span class="eyebrow"><span class="eyebrow-dot"></span> Stadiums & Venues</span>
+    <h1>Halftime rush. Network down. Sales <span class="accent">never stop.</span></h1>
+    <p class="hero-sub">
+      53% of fans wait 15+ minutes at concession stands. 80% have given up on a purchase because of long lines. Teamwork Commerce is built for the chaos of live events — offline-resilient, RFID-fast, and deployable in minutes with seasonal staff who train in under five.
+    </p>
+    <div class="hero-cta">
+      <a href="/contact/" class="btn btn-primary btn-lg">Book a demo <i class="ti ti-arrow-right"></i></a>
+      <button class="btn btn-ghost btn-lg">See stadium case studies</button>
+    </div>
+  </div>
+
+  <!-- HERO MOCKUP: Stadium POS during a game -->
+  <div class="hero-product fade-up" style="animation-delay: 0.2s;">
+    <div class="product-frame">
+      <div class="product-frame-bar">
+        <div class="frame-dot"></div><div class="frame-dot"></div><div class="frame-dot"></div>
+        <div class="frame-label">teamwork.app — Stadium Retail · Halftime Rush · Store-and-Forward Active</div>
+      </div>
+      <div class="product-body">
+        <!-- Left: Live POS transaction -->
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <div style="display: flex; align-items: center; justify-content: space-between;">
+            <div style="font-size: 11px; color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600;">Current Sale · USD</div>
+            <div style="display: flex; align-items: center; gap: 6px; font-size: 10px; font-weight: 700; padding: 3px 10px; border-radius: 100px; background: rgba(245,158,11,0.12); color: #d97706;">
+              <span style="width: 6px; height: 6px; border-radius: 50%; background: #d97706;"></span> Offline · S&F Active
+            </div>
+          </div>
+          <div style="padding: 10px; border-radius: 8px; background: var(--panel); border: 1px solid var(--border); display: flex; align-items: center; gap: 10px;">
+            <div style="width: 32px; height: 32px; border-radius: 6px; background: var(--brand-soft); color: var(--brand-blue); display: flex; align-items: center; justify-content: center; font-size: 14px;"><i class="ti ti-shirt-sport"></i></div>
+            <div style="flex: 1; font-size: 12px;"><div style="font-weight: 600; color: var(--text);">Home Jersey #24</div><div style="color: var(--text-muted); font-size: 11px;">$149.99 · Sz L · RFID ✓</div></div>
+            <div style="font-size: 12px; color: var(--text-muted); font-weight: 600;">×1</div>
+          </div>
+          <div style="padding: 10px; border-radius: 8px; background: var(--panel); border: 1px solid var(--border); display: flex; align-items: center; gap: 10px;">
+            <div style="width: 32px; height: 32px; border-radius: 6px; background: var(--brand-soft); color: var(--brand-blue); display: flex; align-items: center; justify-content: center; font-size: 14px;"><i class="ti ti-cap"></i></div>
+            <div style="flex: 1; font-size: 12px;"><div style="font-weight: 600; color: var(--text);">Fitted Cap — Championship</div><div style="color: var(--text-muted); font-size: 11px;">$39.99 · RFID ✓</div></div>
+            <div style="font-size: 12px; color: var(--text-muted); font-weight: 600;">×1</div>
+          </div>
+          <div style="margin-top: 4px; padding-top: 12px; border-top: 1px dashed var(--border); display: flex; justify-content: space-between; align-items: baseline;">
+            <span style="font-size: 11px; color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600;">Total</span>
+            <span style="font-size: 24px; font-weight: 900; letter-spacing: -0.02em; color: var(--text);">$189.98</span>
+          </div>
+          <div style="display: flex; gap: 6px;">
+            <div style="flex: 1; padding: 11px; border-radius: 8px; font-size: 12px; font-weight: 700; text-align: center; background: var(--gradient); color: #fff;">Tap to Pay</div>
+            <div style="flex: 1; padding: 11px; border-radius: 8px; font-size: 12px; font-weight: 700; text-align: center; border: 1px solid var(--border); background: var(--panel); color: var(--text-muted);">Card</div>
+          </div>
+          <div style="padding: 10px 14px; background: rgba(16,185,129,0.08); border: 1px solid rgba(16,185,129,0.2); border-radius: 8px; font-size: 11px; color: #059669; font-weight: 700; display: flex; align-items: center; gap: 8px;">
+            <i class="ti ti-wifi-off" style="font-size: 14px;"></i> Network down — transaction encrypted locally · Will auto-sync at reconnect
+          </div>
+        </div>
+        <!-- Right: Game day dashboard -->
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px;">
+            <div style="padding: 14px; background: var(--bg-deep); border: 1px solid var(--border); border-radius: 10px;">
+              <div style="font-size: 10px; color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 6px; font-weight: 600;">Today's GMV</div>
+              <div style="font-size: 22px; font-weight: 900; color: var(--text);">$247K</div>
+              <div style="font-size: 10px; color: #059669; font-weight: 700; margin-top: 4px;">↑ 19% vs last game</div>
+            </div>
+            <div style="padding: 14px; background: var(--bg-deep); border: 1px solid var(--border); border-radius: 10px;">
+              <div style="font-size: 10px; color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 6px; font-weight: 600;">Transactions</div>
+              <div style="font-size: 22px; font-weight: 900; color: var(--text);">3,412</div>
+              <div style="font-size: 10px; color: var(--text-muted); font-weight: 600; margin-top: 4px;">Avg: $72.34 / fan</div>
+            </div>
+          </div>
+          <div style="padding: 14px; background: var(--bg-deep); border: 1px solid var(--border); border-radius: 10px;">
+            <div style="font-size: 11px; color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 10px; font-weight: 600;">POS Terminals · Status</div>
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px; font-size: 11px;">
+              <div style="display: flex; align-items: center; gap: 6px;"><span style="width: 8px; height: 8px; border-radius: 50%; background: #059669;"></span><span style="color: var(--text); font-weight: 600;">12 Online</span></div>
+              <div style="display: flex; align-items: center; gap: 6px;"><span style="width: 8px; height: 8px; border-radius: 50%; background: #d97706;"></span><span style="color: var(--text); font-weight: 600;">4 Store-and-Forward</span></div>
+              <div style="display: flex; align-items: center; gap: 6px;"><span style="width: 8px; height: 8px; border-radius: 50%; background: var(--brand-blue);"></span><span style="color: var(--text); font-weight: 600;">2 Self-Checkout</span></div>
+              <div style="display: flex; align-items: center; gap: 6px;"><span style="width: 8px; height: 8px; border-radius: 50%; background: var(--text-faint);"></span><span style="color: var(--text); font-weight: 600;">0 Down</span></div>
+            </div>
+          </div>
+          <div style="padding: 14px; background: var(--bg-deep); border: 1px solid var(--border); border-radius: 10px; flex: 1;">
+            <div style="font-size: 11px; color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 10px; font-weight: 600;">Sales by Period</div>
+            <div style="display: flex; justify-content: space-between; padding: 7px 0; border-bottom: 1px solid var(--border); font-size: 12px;"><span style="color: var(--text); font-weight: 600;">Pre-game (gates open)</span><span style="color: var(--text-muted);">$68K</span></div>
+            <div style="display: flex; justify-content: space-between; padding: 7px 0; border-bottom: 1px solid var(--border); font-size: 12px;"><span style="color: var(--text); font-weight: 600;">1st Half</span><span style="color: var(--text-muted);">$52K</span></div>
+            <div style="display: flex; justify-content: space-between; padding: 7px 0; border-bottom: 1px solid var(--border); font-size: 12px;"><span style="color: var(--text); font-weight: 700;">Halftime Rush 🔥</span><span style="font-weight: 700; color: var(--text);">$89K</span></div>
+            <div style="display: flex; justify-content: space-between; padding: 7px 0; font-size: 12px;"><span style="color: var(--text); font-weight: 600;">2nd Half (live)</span><span style="color: var(--text-muted);">$38K…</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STAT TICKER ============ -->
+<section class="ticker">
+  <div class="container">
+    <div class="ticker-inner">
+      <div class="ticker-item">
+        <div class="ticker-value gradient-text">80<span style="font-size: 22px;">%</span></div>
+        <div class="ticker-label">Of fans give up on purchases due to lines</div>
+      </div>
+      <div class="ticker-item">
+        <div class="ticker-value gradient-text">$72.64</div>
+        <div class="ticker-label">Avg spend per fan per event</div>
+      </div>
+      <div class="ticker-item">
+        <div class="ticker-value gradient-text">15<span style="font-size: 22px;">%</span></div>
+        <div class="ticker-label">Sales lift with mobile ordering</div>
+      </div>
+      <div class="ticker-item">
+        <div class="ticker-value gradient-text">&lt;5<span style="font-size: 22px;">m</span></div>
+        <div class="ticker-label">Seasonal staff on registers</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION 1: OFFLINE RESILIENCE ============ -->
+<section class="section">
+  <div class="container">
+    <div class="feature-row">
+      <div class="feature-text">
+        <span class="section-eyebrow">Offline Resilience</span>
+        <h2>50,000 fans. One network. Zero lost <span class="gradient-text">sales.</span></h2>
+        <p>High-density burst traffic overwhelms stadium Wi-Fi. Cell towers saturate. That's when competitors fail. Teamwork's Store-and-Forward technology keeps every POS terminal fully operational during outages — encrypting transactions locally and auto-syncing when connectivity returns.</p>
+        <ul class="feature-bullets">
+          <li>Store-and-Forward: full POS functionality during network outages — no lost sales, no data gaps</li>
+          <li>Transactions encrypted locally on the iOS device, auto-synced to Cloud HQ at reconnect</li>
+          <li>No dependence on cloud connectivity for core selling — the halftime rush doesn't wait for Wi-Fi</li>
+          <li>Handles large bursts of sales volume with ease — built for the 15-minute intermission sprint</li>
+        </ul>
+        <a href="/contact/" class="btn btn-primary">Book a demo <i class="ti ti-arrow-right"></i></a>
+      </div>
+      <div class="feature-visual">
+        <div class="mockup-panel" style="padding: 24px;">
+          <div style="display: flex; align-items: center; justify-content: space-between; padding-bottom: 16px; margin-bottom: 16px; border-bottom: 1px solid var(--border);">
+            <span style="display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 700; color: #fff; padding: 5px 11px; background: var(--gradient); border-radius: 100px;"><i class="ti ti-wifi-off" style="font-size:11px"></i> Store-and-Forward</span>
+            <span style="font-size: 11px; color: var(--text-faint); font-family: var(--font-mono);">Active</span>
+          </div>
+          <div style="text-align: center; padding: 20px 0; margin-bottom: 14px; background: rgba(245,158,11,0.06); border: 1px solid rgba(245,158,11,0.15); border-radius: 10px;">
+            <div style="font-size: 13px; font-weight: 700; color: #d97706; margin-bottom: 4px;">Network Status: Offline</div>
+            <div style="font-size: 11px; color: var(--text-muted);">Stadium Wi-Fi saturated · 48,000 devices on network</div>
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-bottom: 14px;">
+            <div style="padding: 14px; background: rgba(16,185,129,0.06); border: 1px solid rgba(16,185,129,0.15); border-radius: 8px; text-align: center;">
+              <div style="font-size: 20px; font-weight: 900; color: #059669;">142</div>
+              <div style="font-size: 10px; color: var(--text-faint); text-transform: uppercase; font-weight: 600; margin-top: 4px;">Transactions queued</div>
+            </div>
+            <div style="padding: 14px; background: rgba(16,185,129,0.06); border: 1px solid rgba(16,185,129,0.15); border-radius: 8px; text-align: center;">
+              <div style="font-size: 20px; font-weight: 900; color: #059669;">$0</div>
+              <div style="font-size: 10px; color: var(--text-faint); text-transform: uppercase; font-weight: 600; margin-top: 4px;">Revenue lost</div>
+            </div>
+          </div>
+          <div style="padding: 12px 14px; background: rgba(16,185,129,0.08); border: 1px solid rgba(16,185,129,0.2); border-radius: 8px; font-size: 12px; color: #059669; font-weight: 700; display: flex; align-items: center; gap: 8px;"><i class="ti ti-circle-check-filled" style="font-size: 16px;"></i> All 18 terminals selling · 142 transactions will auto-sync at reconnect</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION 2: RAPID DEPLOYMENT ============ -->
+<section class="section" style="padding-top: 0;">
+  <div class="container">
+    <div class="feature-row reverse">
+      <div class="feature-text">
+        <span class="section-eyebrow">Rapid Deployment</span>
+        <h2>Seasonal staff on registers in <span class="gradient-text">five minutes.</span></h2>
+        <p>Stadium retail runs on seasonal hires. You can't spend a week training someone who works 20 games a year. Teamwork's iOS interface follows Apple design patterns your staff already knows — the Colorado Rockies put new associates on registers in five minutes after they start.</p>
+        <ul class="feature-bullets">
+          <li>Intuitive Apple iOS interface — virtually zero learning curve for seasonal hires</li>
+          <li>POS units deploy rapidly: add or remove terminals as event schedules change</li>
+          <li>Scalable from a single pop-up kiosk to 20+ terminals across multiple concourse locations</li>
+          <li>Self-checkout and RFID checkout options reduce staffing requirements during peak events</li>
+        </ul>
+        <button class="btn btn-primary">See how the Rockies did it <i class="ti ti-arrow-right"></i></button>
+      </div>
+      <div class="feature-visual">
+        <div class="mockup-panel" style="padding: 24px;">
+          <div style="display: flex; align-items: center; justify-content: space-between; padding-bottom: 16px; margin-bottom: 16px; border-bottom: 1px solid var(--border);">
+            <span style="display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 700; color: #fff; padding: 5px 11px; background: var(--gradient); border-radius: 100px;"><i class="ti ti-rocket" style="font-size:11px"></i> Deployment</span>
+            <span style="font-size: 11px; color: var(--text-faint); font-family: var(--font-mono);">Event Mode</span>
+          </div>
+          <div style="padding: 14px; background: var(--brand-soft); border-radius: 10px; border-left: 3px solid var(--brand-blue); margin-bottom: 14px;">
+            <div style="font-size: 12px; line-height: 1.6; color: var(--text);"><strong style="color: var(--brand-text);">"We can put associates on registers five minutes after they start."</strong><br><span style="font-size: 11px; color: var(--text-muted);">— Colorado Rockies</span></div>
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 14px;">
+            <div style="padding: 12px; background: var(--bg-deep); border: 1px solid var(--border); border-radius: 8px; text-align: center;">
+              <div style="font-size: 18px; font-weight: 900; color: var(--text);">&lt;5m</div>
+              <div style="font-size: 10px; color: var(--text-faint); text-transform: uppercase; font-weight: 600; margin-top: 4px;">Training</div>
+            </div>
+            <div style="padding: 12px; background: var(--bg-deep); border: 1px solid var(--border); border-radius: 8px; text-align: center;">
+              <div style="font-size: 18px; font-weight: 900; color: var(--text);">18</div>
+              <div style="font-size: 10px; color: var(--text-faint); text-transform: uppercase; font-weight: 600; margin-top: 4px;">Terminals live</div>
+            </div>
+            <div style="padding: 12px; background: var(--bg-deep); border: 1px solid var(--border); border-radius: 8px; text-align: center;">
+              <div style="font-size: 18px; font-weight: 900; color: var(--text);">iOS</div>
+              <div style="font-size: 10px; color: var(--text-faint); text-transform: uppercase; font-weight: 600; margin-top: 4px;">Native</div>
+            </div>
+          </div>
+          <div style="background: var(--bg-deep); border: 1px solid var(--border); border-radius: 10px; padding: 14px;">
+            <div style="font-size: 11px; color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 10px; font-weight: 600;">Scalability</div>
+            <div style="display: flex; justify-content: space-between; padding: 7px 0; border-bottom: 1px solid var(--border); font-size: 12px;"><span style="color: var(--text); font-weight: 600;">Regular season game</span><span style="color: var(--text-muted);">12 terminals</span></div>
+            <div style="display: flex; justify-content: space-between; padding: 7px 0; border-bottom: 1px solid var(--border); font-size: 12px;"><span style="color: var(--text); font-weight: 600;">Playoff game</span><span style="color: var(--text-muted);">18 terminals</span></div>
+            <div style="display: flex; justify-content: space-between; padding: 7px 0; font-size: 12px;"><span style="color: var(--text); font-weight: 700;">Championship event</span><span style="font-weight: 700; color: var(--text);">24+ terminals</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MID-PAGE CTA ============ -->
+<section style="padding: 64px 0; background: var(--bg-deep); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+  <div class="container" style="display: flex; align-items: center; justify-content: space-between; gap: 40px; flex-wrap: wrap;">
+    <div>
+      <div style="font-size: clamp(24px, 3vw, 36px); font-weight: 900; letter-spacing: -0.025em; line-height: 1.1; margin-bottom: 8px;">Don't let the halftime rush leave money on the table.</div>
+      <div style="font-size: 16px; color: var(--text-muted);">See why the Colorado Rockies and InnovaSport trust Teamwork Commerce.</div>
+    </div>
+    <a href="/contact/" class="btn btn-primary btn-lg">Book a demo <i class="ti ti-arrow-right"></i></a>
+  </div>
+</section>
+
+<!-- ============ COMPLETE CAPABILITIES ============ -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">Stadium & Venue Capabilities</div>
+      <h2 class="section-title">Everything game day <span class="gradient-text">demands.</span></h2>
+    </div>
+    <div class="pillars-grid" style="grid-template-columns: repeat(3, 1fr);">
+      <div class="pillar-card">
+        <div class="pillar-icon"><i class="ti ti-scan"></i></div>
+        <h3 class="pillar-title">RFID self-checkout</h3>
+        <p class="pillar-desc">Fans don't want to wait in line during the game. RFID self-checkout processes transactions in 32 seconds — no barcode scanning, no queue. Get fans back to their seats.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon"><i class="ti ti-device-mobile"></i></div>
+        <h3 class="pillar-title">Mobile POS anywhere</h3>
+        <p class="pillar-desc">Sell from the concourse, the luxury suites, pop-up kiosks, or roving associates with iOS devices. Bring the register to the fan — don't make them come to you.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon"><i class="ti ti-infinity"></i></div>
+        <h3 class="pillar-title">Endless Aisle</h3>
+        <p class="pillar-desc">Out of the championship jersey in their size? Ship from the warehouse or another venue location. Never turn a fan away — 77% say they'd buy more if queues were shorter.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon"><i class="ti ti-heart-handshake"></i></div>
+        <h3 class="pillar-title">LAVA real-time fan loyalty</h3>
+        <p class="pillar-desc">Integrated with LAVA's AI platform for real-time loyalty recognition at the POS. Season ticket holder ID lookup, instant member discounts, and surprise-and-delight campaigns — all redeemed seamlessly during checkout. Already live with NFL teams.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon"><i class="ti ti-arrows-exchange"></i></div>
+        <h3 class="pillar-title">Omnichannel (BOPIS, BORIS)</h3>
+        <p class="pillar-desc">InnovaSport's 250-store implementation proves it: real-time inventory, loyalty integration, virtual gift cards, referenced payments. Start a purchase online, finish at the venue.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon"><i class="ti ti-chart-bar"></i></div>
+        <h3 class="pillar-title">Event analytics</h3>
+        <p class="pillar-desc">Sales by period (pre-game, halftime, post-game), per-fan spend, terminal performance, and inventory velocity. Know exactly what sells and when — optimize for the next event.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECURITY BADGES ============ -->
+<section style="padding: 48px 0; border-top: 1px solid var(--border);">
+  <div class="container" style="text-align: center;">
+    <div style="font-size: 11px; color: var(--text-faint); font-weight: 600; text-transform: uppercase; letter-spacing: 0.14em; margin-bottom: 24px;">Trusted by stadiums & venues worldwide</div>
+    <div style="display: flex; justify-content: center; gap: 48px; flex-wrap: wrap; align-items: center; margin-bottom: 32px;">
+      <span style="font-size: 18px; font-weight: 700; color: var(--text-muted); opacity: 0.5;">Colorado Rockies</span>
+      <span style="font-size: 18px; font-weight: 700; color: var(--text-muted); opacity: 0.5;">Milwaukee Bucks</span>
+      <span style="font-size: 18px; font-weight: 700; color: var(--text-muted); opacity: 0.5;">InnovaSport</span>
+      <span style="font-size: 18px; font-weight: 700; color: var(--text-muted); opacity: 0.5;">Sports Basement</span>
+    </div>
+    <div style="display: flex; justify-content: center; gap: 44px; flex-wrap: wrap;">
+      <span style="display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--text-muted); font-weight: 600;"><i class="ti ti-wifi-off" style="background: var(--gradient); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; font-size: 18px;"></i> Store-and-Forward</span>
+      <span style="display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--text-muted); font-weight: 600;"><i class="ti ti-scan" style="background: var(--gradient); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; font-size: 18px;"></i> RFID Self-Checkout</span>
+      <span style="display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--text-muted); font-weight: 600;"><i class="ti ti-brand-apple" style="background: var(--gradient); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; font-size: 18px;"></i> iOS Native</span>
+      <span style="display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--text-muted); font-weight: 600;"><i class="ti ti-shield-check" style="background: var(--gradient); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; font-size: 18px;"></i> SOC 2 Type 2</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section" style="padding-bottom: 80px;">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">Frequently Asked Questions</div>
+      <h2 class="section-title">Everything you need to <span class="gradient-text">know.</span></h2>
+    </div>
+    <div style="max-width: 800px; margin: 0 auto;">
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          How does the POS work when stadium Wi-Fi goes down?
+          <span class="faq-icon"><i class="ti ti-plus"></i></span>
+        </button>
+        <div class="faq-answer"><p>Store-and-Forward technology keeps every terminal fully operational during network outages. Transactions are encrypted and stored locally on the iOS device, then automatically synced to Cloud HQ once connectivity is restored. During the halftime rush at a sold-out game, this means zero lost sales even when 50,000 fans saturate the network.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          Does Teamwork Commerce handle food & beverage or merchandise?
+          <span class="faq-icon"><i class="ti ti-plus"></i></span>
+        </button>
+        <div class="faq-answer"><p>Teamwork Commerce specializes in merchandise retail — team jerseys, hats, memorabilia, and fan gear. For F&B operations, Teamwork integrates with your existing concession POS or F&B vendor via open APIs. The ultimate dream is unifying food and merchandise under one platform, and Teamwork's open architecture makes that integration seamless.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          How quickly can seasonal staff learn the system?
+          <span class="faq-icon"><i class="ti ti-plus"></i></span>
+        </button>
+        <div class="faq-answer"><p>The Colorado Rockies put new associates on registers in five minutes after they start. The iOS interface follows Apple design patterns that most people already know. For stadium retail where staff might work 20 games a year, this virtually eliminates training overhead.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          How does Teamwork Commerce compare to retailcloud for stadium merchandise?
+          <span class="faq-icon"><i class="ti ti-plus"></i></span>
+        </button>
+        <div class="faq-answer"><p>retailcloud focuses primarily on stadium merchandise with 70+ venue deployments. Teamwork Commerce offers a broader platform: native end-to-end RFID (not third-party), Store-and-Forward offline resilience (critical for network-saturated venues), integrated OMS with Endless Aisle and ship-from-store, real-time AI fan loyalty via the LAVA partnership, and the full omnichannel stack (BOPIS, BORIS, cross-channel inventory). For venues that also operate standalone retail stores — like InnovaSport's 250 locations — Teamwork scales from the stadium to the entire retail fleet on one platform.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          What fan spending data is available?
+          <span class="faq-icon"><i class="ti ti-plus"></i></span>
+        </button>
+        <div class="faq-answer"><p>Cloud HQ provides sales analytics by game period (pre-game, halftime, post-game), per-fan average spend, terminal performance, product velocity, and inventory turnover. Industry data shows fans spend $72.64 per event on average, 77% say they'd buy more if queues were shorter, and venues with mobile ordering see average order values increase 12% and gross sales per event rise 15%.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          Which stadiums and venues use Teamwork Commerce?
+          <span class="faq-icon"><i class="ti ti-plus"></i></span>
+        </button>
+        <div class="faq-answer"><p>Teamwork Commerce powers stadium and venue retail for the Colorado Rockies, Milwaukee Bucks, InnovaSport (250 stores across Mexico), and Sports Basement. The LAVA loyalty integration is live with NFL teams. The platform handles large bursts of sales volume with offline resilience, RFID self-checkout, and rapid seasonal staff deployment.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="final-cta">
+  <div class="container final-cta-inner">
+    <h2>Game on. Lines <span class="gradient-text">gone.</span></h2>
+    <p>See how Teamwork Commerce keeps stadium retail selling when the network can't keep up.</p>
+    <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+      <a href="/contact/" class="btn btn-primary btn-lg">Book a demo <i class="ti ti-arrow-right"></i></a>
+      <button class="btn btn-ghost btn-lg" style="border-color: var(--border); color: var(--text-muted);">See stadium case studies</button>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ============ FOOTER ============ -->

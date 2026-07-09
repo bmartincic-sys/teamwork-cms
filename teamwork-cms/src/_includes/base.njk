@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ title }} | Teamwork Commerce</title>
+<meta name="description" content="{{ description }}">
+<link rel="canonical" href="https://www.teamworkcommerce.com{{ page.url }}">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ title }} | Teamwork Commerce">
+<meta property="og:description" content="{{ description }}">
+<meta property="og:url" content="https://www.teamworkcommerce.com{{ page.url }}">
+<meta property="og:image" content="https://www.teamworkcommerce.com/assets/og-image.jpg">
+<meta property="og:site_name" content="Teamwork Commerce">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ title }} | Teamwork Commerce">
+<meta name="twitter:description" content="{{ description }}">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.4.0/dist/tabler-icons.min.css">
+<link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+{% include "nav.njk" %}
+
+<main>
+{{ content | safe }}
+</main>
+
+{% include "footer.njk" %}
+
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+if (window.netlifyIdentity) {
+  window.netlifyIdentity.on("init", user => {
+    if (!user) {
+      window.netlifyIdentity.on("login", () => { document.location.href = "/admin/"; });
+    }
+  });
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <img class="logo-light" src="/assets/images/teamwork-logo-color.png" alt="Teamwork Commerce">
+      <img class="logo-dark" src="/assets/images/teamwork-logo-white.png" alt="Teamwork Commerce">
+    </a>
+    <div class="nav-links">
+      <span class="nav-link">Platform <i class="ti ti-chevron-down" style="font-size:14px"></i></span>
+      <span class="nav-link">Solutions <i class="ti ti-chevron-down" style="font-size:14px"></i></span>
+      <span class="nav-link">121 Commerce</span>
+      <span class="nav-link">Customers</span>
+      <span class="nav-link">Resources</span>
+      <span class="nav-link">Company</span>
+    </div>
+    <button class="nav-hamburger" id="navHamburger" aria-label="Menu"><i class="ti ti-menu-2"></i></button>
+      <div class="nav-cta">
+      <button class="btn-icon" id="themeToggle" aria-label="Toggle theme">
+        <i class="ti ti-sun" id="themeIcon"></i>
+      </button>
+      <button class="btn-icon" aria-label="Change language">
+        <i class="ti ti-world"></i>
+      </button>
+      <button class="btn btn-primary" onclick="window.location.href='/contact/'">Book a demo</button>
+    </div>
+  </div>
+
+  <div class="nav-mobile-menu" id="navMobileMenu">
+    <a href="/">Home</a>
+    {% for p in collections.platform %}<a href="{{ p.url }}">{{ p.data.navLabel or p.data.title }}</a>
+    {% endfor %}
+    {% for s in collections.solutions %}<a href="{{ s.url }}">{{ s.data.navLabel or s.data.title }}</a>
+    {% endfor %}
+    <a href="/about/">About</a>
+    <a href="/careers/">Careers</a>
+    <a href="/contact/">Contact</a>
+    <button class="btn btn-primary" onclick="window.location.href='/contact/'">Book a demo</button>
+  </div>
+</nav>

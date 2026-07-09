@@ -1,0 +1,433 @@
+---
+layout: "solution.njk"
+title: "Order Management System (OMS)"
+description: "AI-powered order management for retail. Dynamic fulfillment routing, RFID-verified inventory, ship-from-store, BOPIS, endless aisle. 40+ countries."
+navLabel: "Order Management"
+tags: "platform"
+permalink: "/platform/oms/"
+---
+<!-- Breadcrumb -->
+<div class="container">
+  <nav class="breadcrumb" aria-label="Breadcrumb" style="padding: 16px 0; font-size: 12px; color: var(--text-faint);">
+    <a href="/" style="color: var(--text-muted);">Home</a> <span style="margin: 0 6px;">/</span>
+    <a href="/platform/" style="color: var(--text-muted);">Platform</a> <span style="margin: 0 6px;">/</span>
+    Order Management
+  </nav>
+</div>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-glow"></div>
+  <div class="container hero-inner fade-up">
+    <span class="eyebrow"><span class="eyebrow-dot"></span> Intelligent OMS</span>
+    <h1>Orchestrate complexity.<br>Automate <span class="accent">profitability.</span></h1>
+    <p class="hero-sub">
+      An OMS should do more than move orders — it should protect your margins. Teamwork's distributed order management acts as the traffic controller for your global supply chain, routing every order to the optimal fulfillment node in real time.
+    </p>
+    <div class="hero-cta">
+      <a href="/contact/" class="btn btn-primary btn-lg">Book a demo <i class="ti ti-arrow-right"></i></a>
+      <button class="btn btn-ghost btn-lg">Explore platform</button>
+    </div>
+  </div>
+
+  <!-- HERO MOCKUP: Order routing dashboard -->
+  <div class="hero-product fade-up" style="animation-delay: 0.2s;">
+    <div class="product-frame">
+      <div class="product-frame-bar">
+        <div class="frame-dot"></div><div class="frame-dot"></div><div class="frame-dot"></div>
+        <div class="frame-label">teamwork.app — Cloud HQ · Order Orchestration · Live</div>
+      </div>
+      <div class="product-body">
+        <!-- Left: Active order routing -->
+        <div style="background: var(--bg-deep); border: 1px solid var(--border); border-radius: 12px; padding: 18px;">
+          <div style="font-size: 11px; color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 14px; font-weight: 600;">Order #TW-29847 · Routing</div>
+          <div style="padding: 12px; border-radius: 8px; background: var(--panel); border: 1px solid var(--border); margin-bottom: 8px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+              <span style="font-size: 13px; font-weight: 700; color: var(--text);">3 items · Dallas, TX</span>
+              <span style="font-size: 10px; padding: 3px 10px; border-radius: 100px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; background: rgba(245, 158, 11, 0.12); color: #d97706;">Routing</span>
+            </div>
+            <div style="font-size: 11px; color: var(--text-muted); line-height: 1.6;">AI evaluating 4 nodes: shipping cost, store labor, proximity, stock depth…</div>
+          </div>
+          <div style="font-size: 10px; color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.1em; margin: 14px 0 8px; font-weight: 600;">Fulfillment Candidates (scored)</div>
+          <div style="padding: 10px; border-radius: 8px; background: var(--brand-soft); border: 1px solid color-mix(in srgb, var(--brand-blue) 25%, transparent); margin-bottom: 6px; display: flex; justify-content: space-between; align-items: center;">
+            <div><div style="font-size: 12px; font-weight: 700; color: var(--text);">Store #114 · Austin</div><div style="font-size: 10px; color: var(--brand-blue); font-weight: 600; margin-top: 2px;">32 mi · All 3 in stock · Low labor load</div></div>
+            <div style="font-size: 16px; font-weight: 900; color: var(--brand-blue);">94</div>
+          </div>
+          <div style="padding: 10px; border-radius: 8px; background: var(--panel); border: 1px solid var(--border); margin-bottom: 6px; display: flex; justify-content: space-between; align-items: center;">
+            <div><div style="font-size: 12px; font-weight: 600; color: var(--text);">DC Houston</div><div style="font-size: 10px; color: var(--text-muted); margin-top: 2px;">248 mi · All 3 in stock · Higher ship cost</div></div>
+            <div style="font-size: 16px; font-weight: 900; color: var(--text-muted);">71</div>
+          </div>
+          <div style="padding: 10px; border-radius: 8px; background: var(--panel); border: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center;">
+            <div><div style="font-size: 12px; font-weight: 600; color: var(--text);">Store #092 · Dallas</div><div style="font-size: 10px; color: var(--text-muted); margin-top: 2px;">4 mi · 2 of 3 in stock · Split required</div></div>
+            <div style="font-size: 16px; font-weight: 900; color: var(--text-muted);">58</div>
+          </div>
+        </div>
+        <!-- Right: Order metrics + fulfillment status -->
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px;">
+            <div style="padding: 14px; background: var(--bg-deep); border: 1px solid var(--border); border-radius: 10px;">
+              <div style="font-size: 10px; color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 6px; font-weight: 600;">Orders Today</div>
+              <div style="font-size: 22px; font-weight: 900; color: var(--text);">2,847</div>
+            </div>
+            <div style="padding: 14px; background: var(--bg-deep); border: 1px solid var(--border); border-radius: 10px;">
+              <div style="font-size: 10px; color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 6px; font-weight: 600;">Fill Rate</div>
+              <div style="font-size: 22px; font-weight: 900; color: var(--text);">98.4%</div>
+            </div>
+          </div>
+          <div style="padding: 16px; background: var(--bg-deep); border: 1px solid var(--border); border-radius: 10px; flex: 1;">
+            <div style="font-size: 11px; color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 12px; font-weight: 600;">Fulfillment Mix (Today)</div>
+            <div style="margin-bottom: 10px;">
+              <div style="display: flex; justify-content: space-between; font-size: 11px; margin-bottom: 4px;"><span style="color: var(--text); font-weight: 600;">Ship-from-Store</span><span style="color: var(--text-muted);">42%</span></div>
+              <div style="height: 6px; background: var(--border); border-radius: 3px; overflow: hidden;"><div style="width: 42%; height: 100%; background: var(--gradient); border-radius: 3px;"></div></div>
+            </div>
+            <div style="margin-bottom: 10px;">
+              <div style="display: flex; justify-content: space-between; font-size: 11px; margin-bottom: 4px;"><span style="color: var(--text); font-weight: 600;">Warehouse</span><span style="color: var(--text-muted);">31%</span></div>
+              <div style="height: 6px; background: var(--border); border-radius: 3px; overflow: hidden;"><div style="width: 31%; height: 100%; background: var(--brand-blue); border-radius: 3px;"></div></div>
+            </div>
+            <div style="margin-bottom: 10px;">
+              <div style="display: flex; justify-content: space-between; font-size: 11px; margin-bottom: 4px;"><span style="color: var(--text); font-weight: 600;">BOPIS / Click & Collect</span><span style="color: var(--text-muted);">18%</span></div>
+              <div style="height: 6px; background: var(--border); border-radius: 3px; overflow: hidden;"><div style="width: 18%; height: 100%; background: var(--brand-purple); border-radius: 3px;"></div></div>
+            </div>
+            <div>
+              <div style="display: flex; justify-content: space-between; font-size: 11px; margin-bottom: 4px;"><span style="color: var(--text); font-weight: 600;">Endless Aisle</span><span style="color: var(--text-muted);">9%</span></div>
+              <div style="height: 6px; background: var(--border); border-radius: 3px; overflow: hidden;"><div style="width: 9%; height: 100%; background: var(--brand-magenta); border-radius: 3px;"></div></div>
+            </div>
+          </div>
+          <div style="padding: 12px 14px; background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.2); border-radius: 8px; font-size: 12px; color: #059669; font-weight: 700; display: flex; align-items: center; gap: 8px;"><i class="ti ti-circle-check-filled" style="font-size: 16px;"></i> Order #TW-29847 routed to Store #114 · Est. delivery: Tomorrow</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STAT TICKER ============ -->
+<section class="ticker">
+  <div class="container">
+    <div class="ticker-inner">
+      <div class="ticker-item">
+        <div class="ticker-value gradient-text">99.9<span style="font-size: 22px;">%</span></div>
+        <div class="ticker-label">Inventory accuracy (RFID)</div>
+      </div>
+      <div class="ticker-item">
+        <div class="ticker-value gradient-text">98<span style="font-size: 22px;">%+</span></div>
+        <div class="ticker-label">Order fill rate</div>
+      </div>
+      <div class="ticker-item">
+        <div class="ticker-value gradient-text">40<span style="font-size: 22px;">+</span></div>
+        <div class="ticker-label">Countries · multi-currency</div>
+      </div>
+      <div class="ticker-item">
+        <div class="ticker-value gradient-text">0</div>
+        <div class="ticker-label">Ghost inventory with RFID</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION 1: AI ROUTING ENGINE ============ -->
+<section class="section">
+  <div class="container">
+    <div class="feature-row">
+      <div class="feature-text">
+        <span class="section-eyebrow">AI Routing Engine</span>
+        <h2>Every order, routed for <span class="gradient-text">maximum margin.</span></h2>
+        <p>Our AI analyzes thousands of variables per second — shipping rates, store labor availability, regional tax, stock depth, and proximity — to choose the optimal fulfillment node. Not just the closest. The most profitable.</p>
+        <ul class="feature-bullets">
+          <li>Dynamic fulfillment scoring: AI ranks every possible node by cost, speed, capacity, and stock depth</li>
+          <li>Split shipment intelligence: automatically divide orders across stores and warehouses when optimal</li>
+          <li>Carbon-neutral routing: toggle to prioritize the greenest route, consolidating shipments to reduce footprint</li>
+          <li>Margin protection: Order Fill Logic selects the location with lowest shipping cost or highest stock to prevent selling last units</li>
+        </ul>
+        <a href="/contact/" class="btn btn-primary">Book a demo <i class="ti ti-arrow-right"></i></a>
+      </div>
+      <!-- Mockup: Routing comparison -->
+      <div class="feature-visual">
+        <div class="mockup-panel" style="padding: 24px;">
+          <div style="display: flex; align-items: center; justify-content: space-between; padding-bottom: 16px; margin-bottom: 16px; border-bottom: 1px solid var(--border);">
+            <span style="display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 700; color: #fff; padding: 5px 11px; background: var(--gradient); border-radius: 100px;"><i class="ti ti-route" style="font-size:11px"></i> Order Fill Logic</span>
+            <span style="font-size: 11px; color: var(--text-faint); font-family: var(--font-mono);">AI · Real-time</span>
+          </div>
+          <div style="font-size: 11px; color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 12px; font-weight: 600;">Routing Decision: Order #TW-30112</div>
+          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-bottom: 16px;">
+            <div style="padding: 16px; background: var(--brand-soft); border: 1px solid color-mix(in srgb, var(--brand-blue) 25%, transparent); border-radius: 10px;">
+              <div style="font-size: 10px; color: var(--brand-text); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px; font-weight: 700;">AI Selected</div>
+              <div style="font-size: 15px; font-weight: 900; color: var(--text);">Ship-from-Store</div>
+              <div style="font-size: 11px; color: var(--text-muted); margin-top: 6px; line-height: 1.5;">Store #114 Austin · $4.20 ship · 1 day delivery · All items in stock</div>
+              <div style="margin-top: 8px; font-size: 18px; font-weight: 900; color: var(--brand-blue);">$8.40 saved</div>
+            </div>
+            <div style="padding: 16px; background: var(--bg-deep); border: 1px solid var(--border); border-radius: 10px; opacity: 0.65;">
+              <div style="font-size: 10px; color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px; font-weight: 700;">Alternative</div>
+              <div style="font-size: 15px; font-weight: 700; color: var(--text-muted);">DC Houston</div>
+              <div style="font-size: 11px; color: var(--text-faint); margin-top: 6px; line-height: 1.5;">248 mi · $12.60 ship · 2–3 day delivery</div>
+              <div style="margin-top: 8px; font-size: 12px; color: var(--text-faint);">Higher cost, slower</div>
+            </div>
+          </div>
+          <div style="padding: 14px; background: var(--bg-deep); border: 1px solid var(--border); border-radius: 10px;">
+            <div style="font-size: 11px; color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 10px; font-weight: 600;">Factors Evaluated</div>
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px; font-size: 11px;">
+              <div style="display: flex; align-items: center; gap: 6px;"><i class="ti ti-circle-check-filled" style="color: #059669; font-size: 14px;"></i><span style="color: var(--text);">Shipping cost</span></div>
+              <div style="display: flex; align-items: center; gap: 6px;"><i class="ti ti-circle-check-filled" style="color: #059669; font-size: 14px;"></i><span style="color: var(--text);">Store labor load</span></div>
+              <div style="display: flex; align-items: center; gap: 6px;"><i class="ti ti-circle-check-filled" style="color: #059669; font-size: 14px;"></i><span style="color: var(--text);">Stock depth</span></div>
+              <div style="display: flex; align-items: center; gap: 6px;"><i class="ti ti-circle-check-filled" style="color: #059669; font-size: 14px;"></i><span style="color: var(--text);">Regional tax impact</span></div>
+              <div style="display: flex; align-items: center; gap: 6px;"><i class="ti ti-circle-check-filled" style="color: #059669; font-size: 14px;"></i><span style="color: var(--text);">Customer proximity</span></div>
+              <div style="display: flex; align-items: center; gap: 6px;"><i class="ti ti-circle-check-filled" style="color: #059669; font-size: 14px;"></i><span style="color: var(--text);">Carbon footprint</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION 2: RFID SINGLE SOURCE OF TRUTH ============ -->
+<section class="section" style="padding-top: 0;">
+  <div class="container">
+    <div class="feature-row reverse">
+      <div class="feature-text">
+        <span class="section-eyebrow">RFID-Led Accuracy</span>
+        <h2>Kill ghost inventory. Fulfill with <span class="gradient-text">certainty.</span></h2>
+        <p>60% of BOPIS orders fail because the item isn't actually on the shelf. Our RFID-led OMS ensures 99.9% inventory accuracy — so you never sell a ghost SKU, never disappoint a customer at pickup, and never lose margin to phantom stock.</p>
+        <ul class="feature-bullets">
+          <li>Eliminating ghost inventory: RFID-verified stock means every order promise is backed by real, on-shelf product</li>
+          <li>In-transit visibility: see inventory the moment it leaves the factory — what's on the water, in customs, arriving at the dock</li>
+          <li>Real-time stock across every node: stores, warehouses, in-transit, and supplier — one unified view</li>
+          <li>RFID cycle counts in minutes, not days — keeping your OMS data clean without disrupting operations</li>
+        </ul>
+        <button class="btn btn-primary">Explore RFID <i class="ti ti-arrow-right"></i></button>
+      </div>
+      <!-- Mockup: Inventory accuracy -->
+      <div class="feature-visual">
+        <div class="mockup-panel" style="padding: 24px;">
+          <div style="display: flex; align-items: center; justify-content: space-between; padding-bottom: 16px; margin-bottom: 16px; border-bottom: 1px solid var(--border);">
+            <span style="display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 700; color: #fff; padding: 5px 11px; background: var(--gradient); border-radius: 100px;"><i class="ti ti-scan" style="font-size:11px"></i> RFID Inventory</span>
+            <span style="font-size: 11px; color: var(--text-faint); font-family: var(--font-mono);">Global · Real-time</span>
+          </div>
+          <div style="text-align: center; padding: 24px 0; margin-bottom: 16px; background: var(--bg-deep); border-radius: 10px; border: 1px solid var(--border);">
+            <div style="font-size: 48px; font-weight: 900; background: var(--gradient); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: -0.035em;">99.9%</div>
+            <div style="font-size: 12px; color: var(--text-muted); margin-top: 4px; font-weight: 600;">Inventory accuracy across all locations</div>
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-bottom: 12px;">
+            <div style="padding: 12px; background: var(--bg-deep); border: 1px solid var(--border); border-radius: 8px; text-align: center;">
+              <div style="font-size: 18px; font-weight: 900; color: var(--text);">147K</div>
+              <div style="font-size: 10px; color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 4px; font-weight: 600;">SKUs tracked</div>
+            </div>
+            <div style="padding: 12px; background: var(--bg-deep); border: 1px solid var(--border); border-radius: 8px; text-align: center;">
+              <div style="font-size: 18px; font-weight: 900; color: #059669;">0</div>
+              <div style="font-size: 10px; color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 4px; font-weight: 600;">Ghost SKUs sold</div>
+            </div>
+          </div>
+          <div style="background: var(--bg-deep); border: 1px solid var(--border); border-radius: 10px; padding: 14px;">
+            <div style="font-size: 11px; color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 10px; font-weight: 600;">Stock Pipeline</div>
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 12px;"><span style="color: var(--text); font-weight: 600;">📦 In-store (RFID verified)</span><span style="font-weight: 700; color: var(--text);">84,230</span></div>
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 12px;"><span style="color: var(--text); font-weight: 600;">🏭 Warehouse</span><span style="font-weight: 700; color: var(--text);">41,800</span></div>
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 12px;"><span style="color: var(--text); font-weight: 600;">🚢 In-transit (RFID tagged)</span><span style="font-weight: 700; color: var(--text);">12,450</span></div>
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 8px 0; font-size: 12px;"><span style="color: var(--text); font-weight: 600;">📋 On order (supplier)</span><span style="font-weight: 700; color: var(--text);">8,920</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MID-PAGE CTA ============ -->
+<section style="padding: 64px 0; background: var(--bg-deep); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+  <div class="container" style="display: flex; align-items: center; justify-content: space-between; gap: 40px; flex-wrap: wrap;">
+    <div>
+      <div style="font-size: clamp(24px, 3vw, 36px); font-weight: 900; letter-spacing: -0.025em; line-height: 1.1; margin-bottom: 8px;">See the routing engine live.</div>
+      <div style="font-size: 16px; color: var(--text-muted);">Walk through a real order scenario with a solutions architect.</div>
+    </div>
+    <a href="/contact/" class="btn btn-primary btn-lg">Book a demo <i class="ti ti-arrow-right"></i></a>
+  </div>
+</section>
+
+<!-- ============ COMPLETE OMS CAPABILITIES ============ -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">Complete OMS Capabilities</div>
+      <h2 class="section-title">Every fulfillment workflow. One <span class="gradient-text">platform.</span></h2>
+      <p class="section-sub">From click-to-ship to cross-channel returns — every order scenario your operation needs, natively integrated with POS, inventory, and RFID.</p>
+    </div>
+
+    <div style="margin-bottom: 16px;">
+      <div style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--brand-text); margin-bottom: 16px; padding-left: 4px;">Fulfillment Modes</div>
+      <div class="pillars-grid" style="grid-template-columns: repeat(3, 1fr);">
+        <div class="pillar-card">
+          <div class="pillar-icon"><i class="ti ti-building-store"></i></div>
+          <h3 class="pillar-title">Ship-from-Store</h3>
+          <p class="pillar-desc">Turn every store into a fulfillment node. AI generates pick-and-pack tasks, assigns them to store teams, and integrates with carriers — all from the associate's iOS device.</p>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-icon"><i class="ti ti-shopping-bag"></i></div>
+          <h3 class="pillar-title">BOPIS & Click-and-Collect</h3>
+          <p class="pillar-desc">Buy online, pick up in store — with RFID-verified stock so 60% failure rates become a thing of the past. Guided pickup workflows for associates. Curbside supported.</p>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-icon"><i class="ti ti-infinity"></i></div>
+          <h3 class="pillar-title">Endless Aisle</h3>
+          <p class="pillar-desc">Out of stock in-store? Ship from another location in 3 taps. Enterprise-wide inventory access ensures you never lose a sale. Footwear brands see 15–22% revenue lift.</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-bottom: 16px;">
+      <div style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--brand-text); margin-bottom: 16px; padding-left: 4px;">Order Lifecycle</div>
+      <div class="pillars-grid" style="grid-template-columns: repeat(3, 1fr);">
+        <div class="pillar-card">
+          <div class="pillar-icon"><i class="ti ti-arrows-split-2"></i></div>
+          <h3 class="pillar-title">Split shipments & partial fulfillment</h3>
+          <p class="pillar-desc">Intelligently split orders across multiple nodes when optimal. One order can ship from a store, a warehouse, and a supplier — all tracked under a single order ID.</p>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-icon"><i class="ti ti-arrows-exchange"></i></div>
+          <h3 class="pillar-title">Cross-channel returns (BORIS)</h3>
+          <p class="pillar-desc">Buy online, return in store — with immediate inventory restock. No sync lag, no manual reconciliation. The returned item is available for the next walk-in shopper instantly.</p>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-icon"><i class="ti ti-world"></i></div>
+          <h3 class="pillar-title">Global compliance</h3>
+          <p class="pillar-desc">Multi-currency, multi-language, multi-entity. Automated VAT, GST, and sales tax calculations. Cross-border shipping without compliance nightmares. NF525, TSE built in.</p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--brand-text); margin-bottom: 16px; padding-left: 4px;">Industry Intelligence</div>
+      <div class="pillars-grid" style="grid-template-columns: repeat(3, 1fr);">
+        <div class="pillar-card">
+          <div class="pillar-icon"><i class="ti ti-shoe"></i></div>
+          <h3 class="pillar-title">Footwear size/width matrices</h3>
+          <p class="pillar-desc">Manage complex size/width grids with ease. The OMS intelligently balances stock across the fleet — no more Size 14 stuck in one city while Size 6 sells out in another.</p>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-icon"><i class="ti ti-building-bank"></i></div>
+          <h3 class="pillar-title">Museums & non-profits</h3>
+          <p class="pillar-desc">Handle Gift Aid (UK), membership-based tax exemptions, and multi-location inventory for gift shops and traveling exhibits — all in one unified view.</p>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-icon"><i class="ti ti-chart-dots"></i></div>
+          <h3 class="pillar-title">Merchandising intelligence</h3>
+          <p class="pillar-desc">Unlike competitors who focus on fulfillment, Teamwork focuses on getting the right product to the right store before the customer asks. Predictive stock allocation across the fleet.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PLATFORM INTEGRATION STRIP ============ -->
+<section style="padding: 64px 0; background: var(--bg-deep); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+  <div class="container">
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; text-align: center;">
+      <div>
+        <div style="font-size: 32px; font-weight: 900; letter-spacing: -0.025em; color: var(--text); margin-bottom: 6px;">Native POS</div>
+        <div style="font-size: 13px; color: var(--text-muted); line-height: 1.5;">OMS is natively integrated with POS. No middleware, no sync delays. Order from the sales floor or fulfill from it — same system.</div>
+      </div>
+      <div>
+        <div style="font-size: 32px; font-weight: 900; letter-spacing: -0.025em; color: var(--text); margin-bottom: 6px;">Native RFID</div>
+        <div style="font-size: 13px; color: var(--text-muted); line-height: 1.5;">RFID-verified inventory feeds every routing decision. No ghost SKUs, no failed BOPIS, no margin leakage from phantom stock.</div>
+      </div>
+      <div>
+        <div style="font-size: 32px; font-weight: 900; letter-spacing: -0.025em; color: var(--text); margin-bottom: 6px;">Open APIs</div>
+        <div style="font-size: 13px; color: var(--text-muted); line-height: 1.5;">Works with any e-commerce (Salesforce, Adobe, BigCommerce) and any ERP. Orders placed online flow instantly into your OMS.</div>
+      </div>
+      <div>
+        <div style="font-size: 32px; font-weight: 900; letter-spacing: -0.025em; color: var(--text); margin-bottom: 6px;">150+</div>
+        <div style="font-size: 13px; color: var(--text-muted); line-height: 1.5;">Reports in Cloud HQ. Fulfillment speed, fill rates, node performance, and shipping cost analytics — all in real time.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECURITY BADGES ============ -->
+<section style="padding: 72px 0;">
+  <div class="container" style="text-align: center;">
+    <div style="font-size: 11px; color: var(--text-faint); font-weight: 600; text-transform: uppercase; letter-spacing: 0.14em; margin-bottom: 32px;">Enterprise-grade security & compliance</div>
+    <div style="display: flex; justify-content: center; gap: 44px; flex-wrap: wrap;">
+      <span style="display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--text-muted); font-weight: 600;"><i class="ti ti-shield-check" style="background: var(--gradient); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; font-size: 18px;"></i> SOC 2 Type 2</span>
+      <span style="display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--text-muted); font-weight: 600;"><i class="ti ti-shield-check" style="background: var(--gradient); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; font-size: 18px;"></i> GDPR</span>
+      <span style="display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--text-muted); font-weight: 600;"><i class="ti ti-shield-check" style="background: var(--gradient); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; font-size: 18px;"></i> PCI DSS</span>
+      <span style="display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--text-muted); font-weight: 600;"><i class="ti ti-shield-check" style="background: var(--gradient); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; font-size: 18px;"></i> NF525 / TSE</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- Trusted By -->
+<section style="padding: 48px 0; border-top: 1px solid var(--border);">
+  <div class="container" style="text-align: center;">
+    <div style="font-size: 11px; color: var(--text-faint); font-weight: 600; text-transform: uppercase; letter-spacing: 0.14em; margin-bottom: 24px;">Trusted by leading retailers worldwide</div>
+    <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; align-items: center;">
+      <span style="font-size: 17px; font-weight: 700; color: var(--text-muted); opacity: 0.5;">ASICS</span>
+      <span style="font-size: 17px; font-weight: 700; color: var(--text-muted); opacity: 0.5;">Acne Studios</span>
+      <span style="font-size: 17px; font-weight: 700; color: var(--text-muted); opacity: 0.5; font-style: italic;">Petco</span>
+      <span style="font-size: 17px; font-weight: 700; color: var(--text-muted); opacity: 0.5;">City Beach</span>
+      <span style="font-size: 17px; font-weight: 700; color: var(--text-muted); opacity: 0.5;">Colorado Rockies</span>
+      <span style="font-size: 17px; font-weight: 700; color: var(--text-muted); opacity: 0.5; font-style: italic;">Lucchese</span>
+      <span style="font-size: 17px; font-weight: 700; color: var(--text-muted); opacity: 0.5;">The Broad</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section" style="padding-bottom: 80px;">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">Frequently Asked Questions</div>
+      <h2 class="section-title">Everything you need to <span class="gradient-text">know.</span></h2>
+    </div>
+    <div style="max-width: 800px; margin: 0 auto;">
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          What makes Teamwork Commerce OMS different from standalone order management systems?
+          <span class="faq-icon"><i class="ti ti-plus"></i></span>
+        </button>
+        <div class="faq-answer"><p>Teamwork's OMS is natively integrated with POS, Inventory, RFID, and 121 Commerce AI — not bolted on through middleware. This means order routing decisions are based on RFID-verified real-time stock (99.9% accuracy), not stale batch-synced data. The AI routing engine evaluates shipping cost, store labor, proximity, tax impact, stock depth, and carbon footprint simultaneously to optimize every fulfillment decision for margin, not just speed.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          How does the AI routing engine decide where to fulfill an order?
+          <span class="faq-icon"><i class="ti ti-plus"></i></span>
+        </button>
+        <div class="faq-answer"><p>The Order Fill Logic scores every available fulfillment node across thousands of variables per second — including shipping rates, store labor availability, regional tax implications, stock depth (to avoid selling last units), customer proximity, and even carbon footprint. Each node receives a score, and the AI selects the optimal one. It can also intelligently split orders across multiple nodes when that produces a better outcome.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          Can Teamwork Commerce OMS handle ship-from-store and BOPIS?
+          <span class="faq-icon"><i class="ti ti-plus"></i></span>
+        </button>
+        <div class="faq-answer"><p>Yes. Ship-from-store turns every retail location into a fulfillment node with AI-generated pick-and-pack tasks for store associates. BOPIS (Buy Online Pick Up In Store) is backed by RFID-verified stock — eliminating the 60% failure rate that plagues retailers relying on barcode-based inventory. Curbside pickup and Buy Online Return In Store (BORIS) are also natively supported.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          How does Teamwork Commerce OMS compare to New Black EVA and NewStore?
+          <span class="faq-icon"><i class="ti ti-plus"></i></span>
+        </button>
+        <div class="faq-answer"><p>New Black EVA offers scoring-based order orchestration but requires third-party middleware for RFID and lacks a native AI agent. NewStore focuses heavily on fulfillment but doesn't offer native RFID or merchandising intelligence. Teamwork Commerce uniquely combines AI-powered Order Fill Logic, the industry's only native end-to-end RFID stack (ensuring routing decisions are based on 99.9% accurate inventory), and 30+ years of retail expertise — all in one system with no middleware required.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          Does the OMS support multi-currency and multi-entity operations?
+          <span class="faq-icon"><i class="ti ti-plus"></i></span>
+        </button>
+        <div class="faq-answer"><p>Yes. The OMS operates across multiple legal entities, currencies, and tax jurisdictions. A US-based HQ can manage global operations while regional teams see dashboards in their local currency and language. Automated VAT, GST, and sales tax calculations ensure cross-border fulfillment is always compliant.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="final-cta">
+  <div class="container final-cta-inner">
+    <h2>Stop routing orders <span class="gradient-text">blind.</span></h2>
+    <p>See how AI-powered order routing with RFID-verified inventory can protect your margins and delight your customers.</p>
+    <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+      <a href="/contact/" class="btn btn-primary btn-lg">Book a demo <i class="ti ti-arrow-right"></i></a>
+      <button class="btn btn-ghost btn-lg" style="border-color: var(--border); color: var(--text-muted);">Speak with an architect</button>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ============ FOOTER ============ -->
