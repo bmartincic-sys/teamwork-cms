@@ -42,7 +42,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Sans:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.4.0/dist/tabler-icons.min.css">
-<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/style.css?v={{ buildVersion }}">
 
 <!-- Organization Schema (AEO: entity identity) -->
 <script type="application/ld+json">
@@ -176,6 +176,52 @@ if (window.netlifyIdentity) {
     navHamburger.addEventListener("click", function () {
       navMobileMenu.classList.toggle("open");
     });
+  }
+
+  var reduceMotionReveal = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (!reduceMotionReveal && "IntersectionObserver" in window) {
+    var revealSelector = [
+      ".section-header", ".feature-row", ".pillar-card", ".quote-card", ".metric-card",
+      ".rollout-step", ".capcol", ".edge-card", ".intg-card", ".blog-card", ".vs-panel",
+      ".sp-wrap", ".svc-card", ".innov-card", ".worldmap-wrap", ".rfid-shot", ".omni-split",
+      ".ticker-item", ".captabs-nav", ".captab-panel.active", ".midcta-inner", ".metrics-text"
+    ].join(", ");
+    var revealEls = document.querySelectorAll(revealSelector);
+    var lastParent = null, siblingIndex = 0;
+    revealEls.forEach(function (el) {
+      if (el.parentElement === lastParent) { siblingIndex++; } else { lastParent = el.parentElement; siblingIndex = 0; }
+      el.style.setProperty("--reveal-delay", Math.min(siblingIndex * 0.07, 0.42) + "s");
+      el.classList.add("reveal");
+    });
+    var revealObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in-view");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -6% 0px" });
+    revealEls.forEach(function (el) { revealObserver.observe(el); });
+
+    // Fail-open fallback: rect-based check so content can never stay hidden
+    // if IntersectionObserver misbehaves in an embedded/odd environment.
+    var revealTick = false;
+    function revealSweep() {
+      revealTick = false;
+      var vh = window.innerHeight || document.documentElement.clientHeight;
+      revealEls.forEach(function (el) {
+        if (el.classList.contains("in-view")) return;
+        var r = el.getBoundingClientRect();
+        if (r.top < vh * 0.94 && r.bottom > 0) el.classList.add("in-view");
+      });
+    }
+    function queueSweep() {
+      if (!revealTick) { revealTick = true; requestAnimationFrame(revealSweep); }
+    }
+    window.addEventListener("scroll", queueSweep, { passive: true });
+    window.addEventListener("resize", queueSweep, { passive: true });
+    window.addEventListener("load", revealSweep);
+    revealSweep();
   }
 
   var captabs = document.querySelectorAll(".captab");
