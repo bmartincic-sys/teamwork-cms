@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-5 13 142 132">
+  <defs>
+    <linearGradient id="fg1" x1="29.05" y1="102.8" x2="78.81" y2="16.63" gradientTransform="translate(-12.62 -3.34) rotate(-.37)" gradientUnits="userSpaceOnUse">
+      <stop offset=".26" stop-color="#003dff"/>
+      <stop offset=".6" stop-color="#7c50f5"/>
+      <stop offset=".72" stop-color="#7f4cf3"/>
+      <stop offset=".84" stop-color="#8941ed"/>
+      <stop offset=".95" stop-color="#9b2ee3"/>
+      <stop offset="1" stop-color="#a623dd"/>
+    </linearGradient>
+    <linearGradient id="fg2" x1="77.24" y1="138.04" x2="145.2" y2="70.07" gradientTransform="translate(-12.62 -3.34) rotate(-.37)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#a623dd"/>
+      <stop offset=".01" stop-color="#a325de"/>
+      <stop offset=".2" stop-color="#8644ee"/>
+      <stop offset=".31" stop-color="#7c50f5"/>
+      <stop offset=".51" stop-color="#4948f9"/>
+      <stop offset=".78" stop-color="#003dff"/>
+    </linearGradient>
+    <linearGradient id="fg3" x1="145.21" y1="98.67" x2="68.47" y2="21.93" gradientTransform="translate(-12.62 -3.34) rotate(-.37)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#7c50f5"/>
+      <stop offset=".44" stop-color="#56b8f7"/>
+      <stop offset="1" stop-color="#003dff"/>
+    </linearGradient>
+    <linearGradient id="fg4" x1="86.5" y1="150.24" x2="32.36" y2="56.47" gradientTransform="translate(-12.62 -3.34) rotate(-.37)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#003dff"/>
+      <stop offset=".51" stop-color="#56b8f7"/>
+      <stop offset="1" stop-color="#7c50f5"/>
+    </linearGradient>
+  </defs>
+  <g>
+    <path fill="url(#fg1)" d="M27.82,112.93L77.01,26.43l-29.38.19c-4.78.03-9.18,2.61-11.54,6.77l-23.21,40.81c-2.36,4.16-2.33,9.26.09,13.38l14.85,25.35Z"/>
+    <path fill="url(#fg3)" d="M129.95,73.44l-14.88-25.39-49.19,86.5h.6s28.8-.19,28.8-.19c4.46-.03,8.59-2.24,11.04-5.92l24.15-42.46c1.91-3.99,1.73-8.69-.53-12.54Z"/>
+    <path fill="url(#fg2)" d="M47.63,26.62h0s17.18-.65,24.02,10.99c6.84,11.64,43.88,74.71,43.88,74.71l14.51-25.51c2.36-4.16,2.33-9.26-.09-13.38l-23.74-40.5c-2.42-4.12-6.85-6.65-11.63-6.62l-46.95.31Z"/>
+    <path fill="url(#fg4)" d="M95.28,134.36h0s-17.18.65-24.02-10.99c-6.84-11.64-43.88-74.71-43.88-74.71l-14.51,25.51c-2.36,4.16-2.33,9.26.09,13.38l23.74,40.5c2.42,4.12,6.85,6.65,11.63,6.62l46.95-.31Z"/>
+  </g>
+</svg>

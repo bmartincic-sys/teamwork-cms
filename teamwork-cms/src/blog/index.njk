@@ -1,0 +1,95 @@
+---
+layout: "solution.njk"
+title: "Blog"
+navLabel: "Blog"
+description: "Insights, research, and news on retail technology from Teamwork Commerce — POS, unified commerce, RFID, and mobile retail."
+tags: "resources"
+permalink: "/blog/"
+---
+<!-- Breadcrumb -->
+<div class="container">
+  <nav class="breadcrumb" aria-label="Breadcrumb" style="padding: 16px 0; font-size: 12px; color: var(--text-faint);">
+    <a href="/" style="color: var(--text-muted);">Home</a> <span style="margin: 0 6px;">/</span>
+    Blog
+  </nav>
+</div>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-glow"></div>
+  <div class="container hero-inner fade-up">
+    <span class="eyebrow"><span class="eyebrow-dot"></span> Blog</span>
+    <h1>Insights, research, & news about <span class="accent">commerce.</span></h1>
+    <p class="hero-sub">
+      Perspectives on point of sale, unified commerce, RFID, and mobile retail — informed by 30+ years of retail experience and the retailers we work with every day.
+    </p>
+  </div>
+</section>
+
+<!-- ============ CATEGORY FILTER ============ -->
+<section class="section" style="padding-bottom: 0;">
+  <div class="container">
+    <div class="blog-filter-bar" id="blogFilterBar">
+      <button class="filter-pill active" data-filter="all">All ({{ collections.blogpost.length }})</button>
+      {% set categories = collections.blogpost | uniqueCategories %}
+      {% for cat in categories %}
+      <button class="filter-pill" data-filter="{{ cat | slugify }}">{{ cat }}</button>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ============ POST GRID ============ -->
+<section class="section">
+  <div class="container">
+    <div class="pillars-grid" id="blogGrid" style="grid-template-columns: repeat(3, 1fr);">
+      {% for post in collections.blogpost %}
+      <a href="{{ post.url }}" class="pillar-card" data-category="{{ (post.data.category or 'Blog') | slugify }}" style="display: block; text-decoration: none;">
+        <div style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--brand-text); margin-bottom: 10px;">{{ post.data.category or "Blog" }}</div>
+        <h3 class="pillar-title">{{ post.data.title }}</h3>
+        <p class="pillar-desc">{{ post.data.dek or post.data.description }}</p>
+        <div style="font-size: 12px; color: var(--text-faint); margin-top: 10px; margin-bottom: 4px;">{{ post.data.date | formatDate }} · {{ post.templateContent | readingTime }}</div>
+        <span class="pillar-link">Read article <i class="ti ti-arrow-right"></i></span>
+      </a>
+      {% endfor %}
+    </div>
+    <p id="blogEmptyState" style="display: none; text-align: center; color: var(--text-muted); padding: 40px 0;">No posts in this category yet.</p>
+  </div>
+</section>
+
+<script>
+(function () {
+  var bar = document.getElementById("blogFilterBar");
+  var grid = document.getElementById("blogGrid");
+  var empty = document.getElementById("blogEmptyState");
+  if (!bar || !grid) return;
+  var buttons = bar.querySelectorAll(".filter-pill");
+  var cards = grid.querySelectorAll("[data-category]");
+  buttons.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      buttons.forEach(function (b) { b.classList.remove("active"); });
+      btn.classList.add("active");
+      var filter = btn.getAttribute("data-filter");
+      var visibleCount = 0;
+      cards.forEach(function (card) {
+        var match = filter === "all" || card.getAttribute("data-category") === filter;
+        card.style.display = match ? "" : "none";
+        if (match) visibleCount++;
+      });
+      empty.style.display = visibleCount === 0 ? "block" : "none";
+    });
+  });
+})();
+</script>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="final-cta">
+  <div class="container final-cta-inner">
+    <h2>Ready to see it running on your <span class="gradient-text">floor?</span></h2>
+    <p>Talk to our team about what a unified commerce platform looks like for your business.</p>
+    <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+      <a href="/contact/" class="btn btn-primary btn-lg">Book a demo <i class="ti ti-arrow-right"></i></a>
+    </div>
+  </div>
+</section>

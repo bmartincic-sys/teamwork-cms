@@ -1,0 +1,4 @@
+[build]
+  base = "teamwork-cms"
+  command = "npm install && npx @11ty/eleventy"
+  publish = "_site"

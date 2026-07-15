@@ -1,0 +1,69 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#247DFF"/>
+      <stop offset="60%" stop-color="#7C50F5"/>
+      <stop offset="100%" stop-color="#8A0ADD"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="12%" cy="50%" r="85%">
+      <stop offset="0%" stop-color="#7C50F5" stop-opacity="0.24"/>
+      <stop offset="55%" stop-color="#247DFF" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#247DFF" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#07091A" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="800" height="450" fill="#F8F7FD"/>
+  <rect width="800" height="450" fill="url(#grid)"/>
+  <rect width="800" height="450" fill="url(#glow)"/>
+
+  <!-- bold RFID scan waves, sweeping the full canvas -->
+  <path d="M -80 520 A 340 340 0 0 1 260 160" fill="none" stroke="url(#g1)" stroke-width="14" stroke-linecap="round" opacity="0.16"/>
+  <path d="M -80 520 A 460 460 0 0 1 400 40" fill="none" stroke="url(#g1)" stroke-width="14" stroke-linecap="round" opacity="0.28"/>
+  <path d="M -80 520 A 580 580 0 0 1 540 -80" fill="none" stroke="url(#g1)" stroke-width="14" stroke-linecap="round" opacity="0.42"/>
+
+  <!-- reader panel -->
+  <g transform="translate(70,225)">
+    <rect x="-52" y="-70" width="104" height="140" rx="24" fill="#0B1020"/>
+    <rect x="-38" y="-56" width="76" height="112" rx="14" fill="url(#g1)"/>
+    <circle cx="0" cy="0" r="16" fill="#F8F7FD"/>
+    <circle cx="0" cy="0" r="6" fill="url(#g1)"/>
+  </g>
+
+  <!-- fast-scan motion streaks -->
+  <g stroke="url(#g1)" stroke-width="8" stroke-linecap="round">
+    <path d="M180 160 h90" opacity="0.85"/>
+    <path d="M195 200 h130" opacity="0.65"/>
+    <path d="M180 320 h90" opacity="0.85"/>
+    <path d="M195 280 h130" opacity="0.65"/>
+  </g>
+
+  <!-- shopping basket receiving scanned tags -->
+  <g transform="translate(560,225)">
+    <path d="M-90 -20 L-60 -80 H60 L90 -20 Z" fill="none" stroke="url(#g1)" stroke-width="10" stroke-linejoin="round"/>
+    <path d="M-90 -20 H90 L74 100 Q70 118 50 118 H-50 Q-70 118 -74 100 Z" fill="url(#g1)"/>
+    <path d="M-30 -20 V-64" stroke="#0B1020" stroke-width="8" stroke-linecap="round" opacity="0.35"/>
+    <path d="M30 -20 V-64" stroke="#0B1020" stroke-width="8" stroke-linecap="round" opacity="0.35"/>
+  </g>
+
+  <!-- flying RFID tags trailing into the basket -->
+  <g transform="translate(300,120) rotate(-10)">
+    <rect x="0" y="0" width="70" height="46" rx="10" fill="url(#g1)"/>
+    <circle cx="18" cy="23" r="7" fill="#F8F7FD" opacity="0.9"/>
+  </g>
+  <g transform="translate(340,300) rotate(8)">
+    <rect x="0" y="0" width="56" height="38" rx="9" fill="url(#g1)" opacity="0.75"/>
+    <circle cx="15" cy="19" r="6" fill="#F8F7FD" opacity="0.9"/>
+  </g>
+
+  <!-- stopwatch: the "speed study" signal -->
+  <g transform="translate(700,90)">
+    <rect x="-8" y="-30" width="16" height="10" rx="4" fill="#0B1020"/>
+    <circle r="36" fill="#FFFFFF" stroke="url(#g1)" stroke-width="7"/>
+    <path d="M0 0 L0 -22" stroke="#0B1020" stroke-width="5" stroke-linecap="round"/>
+    <path d="M0 0 L16 6" stroke="#0B1020" stroke-width="5" stroke-linecap="round"/>
+    <circle r="4.5" fill="#0B1020"/>
+  </g>
+</svg>

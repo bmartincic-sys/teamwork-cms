@@ -3,34 +3,39 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <div class="nav-logo">
-          <img class="logo-light" src="/assets/images/teamwork-logo-color.png" alt="Teamwork Commerce">
-          <img class="logo-dark" src="/assets/images/teamwork-logo-white.png" alt="Teamwork Commerce">
+          <img class="logo-light" src="/assets/images/teamwork-logo-color.svg" alt="Teamwork Commerce">
+          <img class="logo-dark" src="/assets/images/teamwork-logo-white.svg" alt="Teamwork Commerce">
         </div>
         <p>Frictionless commerce for the next generation of retail. Powering 30,000+ terminals across 40+ countries.</p>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/company/teamwork-commerce/" target="_blank" rel="noopener" aria-label="Teamwork Commerce on LinkedIn"><i class="ti ti-brand-linkedin"></i></a>
+          <a href="https://www.youtube.com/@teamworkcommerce6746" target="_blank" rel="noopener" aria-label="Teamwork Commerce on YouTube"><i class="ti ti-brand-youtube"></i></a>
+          <a href="https://www.instagram.com/teamworkcommerce/" target="_blank" rel="noopener" aria-label="Teamwork Commerce on Instagram"><i class="ti ti-brand-instagram"></i></a>
+        </div>
       </div>
       <div class="footer-col">
         <h4>Platform</h4>
-        {% for p in collections.platform %}<a href="{{ p.url }}">{{ p.data.navLabel or p.data.title }}</a>
+        {% for p in collections.platform | sortByNavOrder %}<a href="{{ p.url }}">{{ p.data.navLabel or p.data.title }}</a>
         {% endfor %}
       </div>
       <div class="footer-col">
         <h4>Solutions</h4>
-        {% for s in collections.solutions %}<a href="{{ s.url }}">{{ s.data.navLabel or s.data.title }}</a>
+        {% for s in collections.solutions | sortByNavOrder %}<a href="{{ s.url }}">{{ s.data.navLabel or s.data.title }}</a>
         {% endfor %}
       </div>
       <div class="footer-col">
         <h4>Company</h4>
         <a href="/about/">About</a>
-        <a href="#">Teamwork Cares</a>
-        <a href="#">Partners</a>
+        <a href="/teamwork-cares/">Teamwork Cares</a>
+        <a href="/partners/">Partners</a>
         <a href="/careers/">Careers</a>
         <a href="#">Customers</a>
-        <a href="#">Press</a>
+        <a href="/press-room/">Press</a>
       </div>
       <div class="footer-col">
         <h4>Resources</h4>
-        <a href="#">Blog</a>
-        <a href="#">Case Studies</a>
+        {% for r in collections.resources %}<a href="{{ r.url }}">{{ r.data.navLabel or r.data.title }}</a>
+        {% endfor %}
         <a href="#">Trust Center</a>
         <a href="#">Documentation</a>
         <a href="/contact/">Contact</a>
@@ -39,9 +44,10 @@
     <div class="footer-bottom">
       <span>© 2026 Teamwork Commerce. All rights reserved.</span>
       <div style="display:flex; gap: 20px; align-items: center; flex-wrap: wrap;">
-        <a href="#">Privacy</a>
-        <a href="#">Terms</a>
-        <a href="#">Cookies</a>
+        <a href="/privacy-policy/">Privacy</a>
+        <a href="/terms-and-conditions/">Terms</a>
+        <a href="/data-processing-agreement/">DPA</a>
+        <a href="/privacy-policy/">Cookies</a>
         <div class="footer-locale"><i class="ti ti-world" style="font-size:14px"></i> English (US)</div>
       </div>
     </div>

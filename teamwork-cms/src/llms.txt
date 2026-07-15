@@ -1,0 +1,33 @@
+# Teamwork Commerce
+
+> Point of sale is what Teamwork Commerce does best — everything else (OMS, Inventory, RFID, Analytics, AI) exists to make it stronger. Teamwork Commerce Services (TCS) is a connected set of applications and shared services powering 30,000+ terminals across 40+ countries with 99.99% uptime, natively integrated with 121 Commerce AI and end-to-end RFID (99.9% accuracy). Founded 1994, SOC 2 Type 2 / GDPR / PCI DSS compliant.
+
+## Platform
+
+- [Mobile POS](https://www.teamworkcommerce.com/platform/mobile-pos/): The core product — iOS-native enterprise POS, 40+ countries localized, 30s average transaction, 99.99% uptime.
+- [Teamwork Commerce Services (TCS)](https://www.teamworkcommerce.com/platform/tcs/): How POS runs — the connected platform of shared services and apps.
+- [121 Commerce](https://www.teamworkcommerce.com/platform/121-commerce/): AI Agent for the retail sales floor, built on PXP and CXP.
+- [RFID Solution](https://www.teamworkcommerce.com/platform/rfid/): Native end-to-end RFID — source tagging through EAS loss prevention, no middleware.
+- [Inventory Control](https://www.teamworkcommerce.com/platform/inventory-control/): RFID-powered inventory with 99.9% accuracy and cycle counts in minutes.
+- [Order Management (OMS)](https://www.teamworkcommerce.com/platform/oms/): Distributed order management with AI routing.
+- [Analytics](https://www.teamworkcommerce.com/platform/analytics/): 150+ pre-configured reports and AI-powered insights.
+- [PXP (Product Experience Platform)](https://www.teamworkcommerce.com/platform/pxp/): Centralized product information that keeps POS accurate.
+- [CXP (Customer Experience Platform)](https://www.teamworkcommerce.com/platform/cxp/): Customer data and self-registration, the system of record for customer relationships.
+- [TAP (Teamwork Administration Platform)](https://www.teamworkcommerce.com/platform/tap/): Secure identity, access, and workforce management behind POS.
+- [TEAMMATE](https://www.teamworkcommerce.com/platform/teammate/): Associate-facing mobile app that extends POS to the sales floor.
+
+## Solutions by Industry
+
+- [Fashion & Apparel](https://www.teamworkcommerce.com/solutions/fashion-apparel/)
+- [Footwear & Apparel](https://www.teamworkcommerce.com/solutions/footwear-apparel/)
+- [Jewelry & Watches](https://www.teamworkcommerce.com/solutions/jewelry-watches/)
+- [Luxury Apparel](https://www.teamworkcommerce.com/solutions/luxury-apparel/)
+- [Museums & Cultural Institutions](https://www.teamworkcommerce.com/solutions/museums-cultural/)
+- [Pet Goods](https://www.teamworkcommerce.com/solutions/pet-goods/)
+- [Stadiums & Venues](https://www.teamworkcommerce.com/solutions/stadiums-venues/)
+
+## Company
+
+- [About](https://www.teamworkcommerce.com/about/): Founded 1994 by Michael Mauerer, 30+ years of retail-specific expertise, offices across 4 continents.
+- [Careers](https://www.teamworkcommerce.com/careers/)
+- [Contact / Book a Demo](https://www.teamworkcommerce.com/contact/)

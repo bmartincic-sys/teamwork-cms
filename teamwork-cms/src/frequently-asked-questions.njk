@@ -1,0 +1,44 @@
+---
+layout: "solution.njk"
+title: "Frequently Asked Questions"
+description: "Answers on Teamwork Commerce POS, RFID, inventory, order management, analytics, 121 Commerce AI, and industry-specific questions for fashion, footwear, jewelry, museums, pet goods, and stadiums."
+navLabel: "FAQ"
+tags: "resources"
+permalink: "/frequently-asked-questions/"
+---
+<!-- Breadcrumb -->
+<div class="container">
+  <nav class="breadcrumb" aria-label="Breadcrumb" style="padding: 16px 0; font-size: 12px; color: var(--text-faint);">
+    <a href="/" style="color: var(--text-muted);">Home</a> <span style="margin: 0 6px;">/</span>
+    Frequently Asked Questions
+  </nav>
+</div>
+
+<!-- ============ HERO ============ -->
+<section class="hero" style="padding-bottom: 0;">
+  <div class="hero-bg"></div>
+  <div class="hero-glow"></div>
+  <div class="container hero-inner fade-up" style="padding-bottom: 40px;">
+    <span class="eyebrow"><span class="eyebrow-dot"></span> Frequently Asked Questions</span>
+    <h1>Everything in one <span class="accent">place.</span></h1>
+    <p class="hero-sub">
+      Every answer here also lives on its product or industry page — this is just the consolidated view. Jump to a topic below.
+    </p>
+    <div style="display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; max-width: 760px; margin: 0 auto;">
+      {% include "faq-nav-pills.njk" %}
+    </div>
+  </div>
+</section>
+
+{% include "faq-sections.njk" %}
+
+<!-- ============ FINAL CTA ============ -->
+<section class="final-cta">
+  <div class="container final-cta-inner">
+    <h2>Still have <span class="gradient-text">questions?</span></h2>
+    <p>Talk to a solutions architect about your specific stores, systems, and rollout.</p>
+    <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+      <a href="/contact/" class="btn btn-primary btn-lg">Book a demo <i class="ti ti-arrow-right"></i></a>
+    </div>
+  </div>
+</section>

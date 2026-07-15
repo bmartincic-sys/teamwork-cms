@@ -1,0 +1,145 @@
+---
+layout: "base.njk"
+---
+<!-- Breadcrumb -->
+<div class="container">
+  <nav class="breadcrumb" aria-label="Breadcrumb" style="padding: 16px 0; font-size: 12px; color: var(--text-faint);">
+    <a href="/" style="color: var(--text-muted);">Home</a> <span style="margin: 0 6px;">/</span>
+    <a href="/blog/" style="color: var(--text-muted);">Blog</a> <span style="margin: 0 6px;">/</span>
+    {{ navLabel or title }}
+  </nav>
+</div>
+
+<!-- Article header -->
+<section style="padding: 24px 0 40px;">
+  <div class="container" style="max-width: 760px;">
+    <span class="eyebrow"><span class="eyebrow-dot"></span> {{ category or "Blog" }}</span>
+    <h1 style="margin-top: 12px;">{{ title }}</h1>
+    {% if dek %}<p class="hero-sub" style="margin-top: 12px; margin-left: 0; margin-right: 0; max-width: none;">{{ dek }}</p>{% endif %}
+    <div class="blog-meta-row">
+      <span>Teamwork Commerce Team</span>
+      {% if date %}<span class="dot"></span><span>{{ date | formatDate }}</span>{% endif %}
+      <span class="dot"></span><span>{{ content | readingTime }}</span>
+    </div>
+  </div>
+</section>
+
+{% if video %}
+<section style="padding-bottom: 40px;">
+  <div class="container" style="max-width: 760px;">
+    <div class="blog-video-wrap">
+      <iframe src="{{ video }}" title="{{ title }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<!-- Article body + sidebar -->
+<section style="padding-bottom: 40px;">
+  <div class="container">
+    <div class="blog-post-layout">
+      <div class="blog-post-main">
+        <div class="blog-article-body" id="articleBody">
+          {{ content | safe }}
+        </div>
+      </div>
+
+      <aside class="blog-sidebar">
+        <div class="blog-sidebar-card" id="tocCard" style="display: none;">
+          <h4>On This Page</h4>
+          <ul class="toc-list" id="tocList"></ul>
+        </div>
+
+        {% if relatedProduct %}
+        <div class="blog-product-card">
+          <div class="bp-label">See it in the platform</div>
+          <div class="bp-title">{{ relatedProduct.title }}</div>
+          <a href="{{ relatedProduct.url }}" class="btn btn-primary" style="width: 100%; justify-content: center; font-size: 13px; padding: 10px 16px;">Explore <i class="ti ti-arrow-right"></i></a>
+        </div>
+        {% endif %}
+
+        <div class="blog-sidebar-card">
+          <h4>More From the Blog</h4>
+          {% set related = collections.blogpost | relatedPosts(page.url, category, 4) %}
+          {% for post in related %}
+            <a href="{{ post.url }}" class="related-post-link">
+              <div class="rp-cat">{{ post.data.category or "Blog" }}</div>
+              <div class="rp-title">{{ post.data.title }}</div>
+            </a>
+          {% endfor %}
+        </div>
+
+        <div class="blog-sidebar-card" style="text-align: center;">
+          <h4 style="margin-bottom: 10px;">Ready to see it live?</h4>
+          <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 14px; line-height: 1.5;">Talk to a solutions architect about your stores.</p>
+          <a href="/contact/" class="btn btn-primary" style="width: 100%; justify-content: center; font-size: 13px; padding: 10px 16px;">Book a demo <i class="ti ti-arrow-right"></i></a>
+        </div>
+      </aside>
+    </div>
+
+    <!-- Prev / Next -->
+    <div style="max-width: 1040px; margin: 0 auto;">
+      <div class="blog-prevnext">
+        {% set posts = collections.blogpost %}
+        {% set prevPost = null %}
+        {% set nextPost = null %}
+        {% for post in posts %}
+          {% if post.url == page.url %}
+            {% if not loop.first %}{% set prevPost = posts[loop.index0 - 1] %}{% endif %}
+            {% if not loop.last %}{% set nextPost = posts[loop.index0 + 1] %}{% endif %}
+          {% endif %}
+        {% endfor %}
+        {% if prevPost %}
+        <a href="{{ prevPost.url }}">
+          <div class="pn-label">← Previous</div>
+          <div class="pn-title">{{ prevPost.data.title }}</div>
+        </a>
+        {% else %}<div></div>{% endif %}
+        {% if nextPost %}
+        <a href="{{ nextPost.url }}" class="next">
+          <div class="pn-label">Next →</div>
+          <div class="pn-title">{{ nextPost.data.title }}</div>
+        </a>
+        {% else %}<div></div>{% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="final-cta">
+  <div class="container final-cta-inner">
+    <h2>{{ ctaTitle or "See it running on your" }} <span class="gradient-text">{{ ctaAccent or "floor." }}</span></h2>
+    <p>{{ ctaSub or "Talk to our team about what a unified commerce platform looks like for your business." }}</p>
+    <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+      <a href="/contact/" class="btn btn-primary btn-lg">Book a demo <i class="ti ti-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<script>
+(function () {
+  var body = document.getElementById("articleBody");
+  var tocList = document.getElementById("tocList");
+  var tocCard = document.getElementById("tocCard");
+  if (!body || !tocList) return;
+  var headings = body.querySelectorAll("h2");
+  if (!headings.length) return;
+  var used = {};
+  headings.forEach(function (h) {
+    var base = h.textContent.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+    var slug = base;
+    var n = 1;
+    while (used[slug]) { slug = base + "-" + (++n); }
+    used[slug] = true;
+    h.id = slug;
+    var li = document.createElement("li");
+    var a = document.createElement("a");
+    a.href = "#" + slug;
+    a.textContent = h.textContent;
+    li.appendChild(a);
+    tocList.appendChild(li);
+  });
+  tocCard.style.display = "block";
+})();
+</script>

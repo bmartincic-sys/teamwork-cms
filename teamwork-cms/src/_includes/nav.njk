@@ -1,16 +1,41 @@
 <nav class="nav">
   <div class="nav-inner">
     <a href="/" class="nav-logo">
-      <img class="logo-light" src="/assets/images/teamwork-logo-color.png" alt="Teamwork Commerce">
-      <img class="logo-dark" src="/assets/images/teamwork-logo-white.png" alt="Teamwork Commerce">
+      <img class="logo-light" src="/assets/images/teamwork-logo-color.svg" alt="Teamwork Commerce">
+      <img class="logo-dark" src="/assets/images/teamwork-logo-white.svg" alt="Teamwork Commerce">
     </a>
     <div class="nav-links">
-      <span class="nav-link">Platform <i class="ti ti-chevron-down" style="font-size:14px"></i></span>
-      <span class="nav-link">Solutions <i class="ti ti-chevron-down" style="font-size:14px"></i></span>
-      <span class="nav-link">121 Commerce</span>
-      <span class="nav-link">Customers</span>
-      <span class="nav-link">Resources</span>
-      <span class="nav-link">Company</span>
+      <div class="nav-item">
+        <span class="nav-link">Platform <i class="ti ti-chevron-down" style="font-size:14px"></i></span>
+        <div class="nav-dropdown">
+          {% for p in collections.platform | sortByNavOrder %}<a href="{{ p.url }}">{{ p.data.navLabel or p.data.title }}</a>{% endfor %}
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="/solutions/" class="nav-link">Solutions <i class="ti ti-chevron-down" style="font-size:14px"></i></a>
+        <div class="nav-dropdown">
+          {% for s in collections.solutions | sortByNavOrder %}<a href="{{ s.url }}">{{ s.data.navLabel or s.data.title }}</a>{% endfor %}
+        </div>
+      </div>
+      {% if collections.resources.length %}
+      <div class="nav-item">
+        <span class="nav-link">Resources <i class="ti ti-chevron-down" style="font-size:14px"></i></span>
+        <div class="nav-dropdown">
+          {% for r in collections.resources %}<a href="{{ r.url }}">{{ r.data.navLabel or r.data.title }}</a>{% endfor %}
+        </div>
+      </div>
+      {% endif %}
+      <div class="nav-item">
+        <a href="/about/" class="nav-link">Company <i class="ti ti-chevron-down" style="font-size:14px"></i></a>
+        <div class="nav-dropdown">
+          <a href="/about/">About</a>
+          <a href="/careers/">Careers</a>
+          <a href="/teamwork-cares/">Teamwork Cares</a>
+          <a href="/partners/">Partners</a>
+          <a href="/press-room/">Press Room</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
     </div>
     <button class="nav-hamburger" id="navHamburger" aria-label="Menu"><i class="ti ti-menu-2"></i></button>
       <div class="nav-cta">
@@ -26,12 +51,18 @@
 
   <div class="nav-mobile-menu" id="navMobileMenu">
     <a href="/">Home</a>
-    {% for p in collections.platform %}<a href="{{ p.url }}">{{ p.data.navLabel or p.data.title }}</a>
+    {% for p in collections.platform | sortByNavOrder %}<a href="{{ p.url }}">{{ p.data.navLabel or p.data.title }}</a>
     {% endfor %}
-    {% for s in collections.solutions %}<a href="{{ s.url }}">{{ s.data.navLabel or s.data.title }}</a>
+    <a href="/solutions/">Solutions</a>
+    {% for s in collections.solutions | sortByNavOrder %}<a href="{{ s.url }}">{{ s.data.navLabel or s.data.title }}</a>
+    {% endfor %}
+    {% for r in collections.resources %}<a href="{{ r.url }}">{{ r.data.navLabel or r.data.title }}</a>
     {% endfor %}
     <a href="/about/">About</a>
     <a href="/careers/">Careers</a>
+    <a href="/teamwork-cares/">Teamwork Cares</a>
+    <a href="/partners/">Partners</a>
+    <a href="/press-room/">Press Room</a>
     <a href="/contact/">Contact</a>
     <button class="btn btn-primary" onclick="window.location.href='/contact/'">Book a demo</button>
   </div>
