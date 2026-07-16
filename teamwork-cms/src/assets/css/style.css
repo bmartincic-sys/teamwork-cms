@@ -3218,29 +3218,29 @@ main > .hero:first-child { margin-top: -85px; padding-top: 230px; }
 
 /* --- Wide centered fan (reference layout, iPads kept) --- */
 .fanw-stage { position: relative; margin-top: 48px; }
-.fanw { position: relative; height: clamp(190px, 24vw, 340px); }
+.fanw { position: relative; height: clamp(230px, 30vw, 430px); }
 .fanw-card {
   position: absolute; left: 50%; top: 0;
-  width: clamp(200px, 26vw, 360px);
+  width: clamp(240px, 33vw, 470px);
   filter: drop-shadow(0 26px 50px rgba(0,0,0,0.45));
   transition: transform 0.75s cubic-bezier(0.2, 0.7, 0.3, 1);
 }
 .fanw-card:nth-child(1), .fanw-card:nth-child(7) { transition-delay: 0.10s; }
 .fanw-card:nth-child(2), .fanw-card:nth-child(6) { transition-delay: 0.06s; }
 .fanw-card:nth-child(3), .fanw-card:nth-child(5) { transition-delay: 0.03s; }
-.fanw-card:nth-child(1) { transform: translateX(-50%) translateX(-135%) translateY(13%) rotate(-14deg); z-index: 1; }
-.fanw-card:nth-child(2) { transform: translateX(-50%) translateX(-90%)  translateY(6%)  rotate(-9deg);  z-index: 2; }
-.fanw-card:nth-child(3) { transform: translateX(-50%) translateX(-45%)  translateY(1.5%) rotate(-4deg); z-index: 3; }
+.fanw-card:nth-child(1) { transform: translateX(-50%) translateX(-118%) translateY(13%) rotate(-14deg); z-index: 1; }
+.fanw-card:nth-child(2) { transform: translateX(-50%) translateX(-79%)  translateY(6%)  rotate(-9deg);  z-index: 2; }
+.fanw-card:nth-child(3) { transform: translateX(-50%) translateX(-40%)  translateY(1.5%) rotate(-4deg); z-index: 3; }
 .fanw-card:nth-child(4) { transform: translateX(-50%) rotate(0deg); z-index: 4; }
-.fanw-card:nth-child(5) { transform: translateX(-50%) translateX(45%)   translateY(1.5%) rotate(4deg);  z-index: 3; }
-.fanw-card:nth-child(6) { transform: translateX(-50%) translateX(90%)   translateY(6%)  rotate(9deg);  z-index: 2; }
-.fanw-card:nth-child(7) { transform: translateX(-50%) translateX(135%)  translateY(13%) rotate(14deg); z-index: 1; }
-.fanw-stage:hover .fanw-card:nth-child(1) { transform: translateX(-50%) translateX(-145%) translateY(15%) rotate(-16deg); }
-.fanw-stage:hover .fanw-card:nth-child(2) { transform: translateX(-50%) translateX(-97%)  translateY(7%)  rotate(-10deg); }
-.fanw-stage:hover .fanw-card:nth-child(3) { transform: translateX(-50%) translateX(-48%)  translateY(2%)  rotate(-4.5deg); }
-.fanw-stage:hover .fanw-card:nth-child(5) { transform: translateX(-50%) translateX(48%)   translateY(2%)  rotate(4.5deg); }
-.fanw-stage:hover .fanw-card:nth-child(6) { transform: translateX(-50%) translateX(97%)   translateY(7%)  rotate(10deg); }
-.fanw-stage:hover .fanw-card:nth-child(7) { transform: translateX(-50%) translateX(145%)  translateY(15%) rotate(16deg); }
+.fanw-card:nth-child(5) { transform: translateX(-50%) translateX(40%)   translateY(1.5%) rotate(4deg);  z-index: 3; }
+.fanw-card:nth-child(6) { transform: translateX(-50%) translateX(79%)   translateY(6%)  rotate(9deg);  z-index: 2; }
+.fanw-card:nth-child(7) { transform: translateX(-50%) translateX(118%)  translateY(13%) rotate(14deg); z-index: 1; }
+.fanw-stage:hover .fanw-card:nth-child(1) { transform: translateX(-50%) translateX(-127%) translateY(15%) rotate(-16deg); }
+.fanw-stage:hover .fanw-card:nth-child(2) { transform: translateX(-50%) translateX(-85%)  translateY(7%)  rotate(-10deg); }
+.fanw-stage:hover .fanw-card:nth-child(3) { transform: translateX(-50%) translateX(-43%)  translateY(2%)  rotate(-4.5deg); }
+.fanw-stage:hover .fanw-card:nth-child(5) { transform: translateX(-50%) translateX(43%)   translateY(2%)  rotate(4.5deg); }
+.fanw-stage:hover .fanw-card:nth-child(6) { transform: translateX(-50%) translateX(85%)   translateY(7%)  rotate(10deg); }
+.fanw-stage:hover .fanw-card:nth-child(7) { transform: translateX(-50%) translateX(127%)  translateY(15%) rotate(16deg); }
 
 .fan-bubble {
   position: absolute; z-index: 8;
