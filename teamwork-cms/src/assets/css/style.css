@@ -3357,3 +3357,19 @@ main > .hero:first-child { margin-top: -85px; padding-top: 230px; }
   .bento-accent { grid-column: 1 / -1; grid-row: auto; min-height: 300px; }
 }
 @media (max-width: 560px) { .bento-grid { grid-template-columns: 1fr; } }
+
+/* --- 3-card fan variant --- */
+.fanw-3 .fanw-card { width: clamp(280px, 38vw, 540px); }
+.fanw-3 .fanw-card:nth-child(1) { transform: translateX(-50%) translateX(-62%) translateY(7%) rotate(-9deg); z-index: 1; }
+.fanw-3 .fanw-card:nth-child(2) { transform: translateX(-50%) rotate(0deg); z-index: 3; }
+.fanw-3 .fanw-card:nth-child(3) { transform: translateX(-50%) translateX(62%) translateY(7%) rotate(9deg); z-index: 2; }
+.fanw-stage:hover .fanw-3 .fanw-card:nth-child(1) { transform: translateX(-50%) translateX(-68%) translateY(8%) rotate(-11deg); }
+.fanw-stage:hover .fanw-3 .fanw-card:nth-child(2) { transform: translateX(-50%) rotate(0deg); }
+.fanw-stage:hover .fanw-3 .fanw-card:nth-child(3) { transform: translateX(-50%) translateX(68%) translateY(8%) rotate(11deg); }
+.fanw-3.reveal:not(.in-view) .fanw-card { transform: translateX(-50%) translateY(4%) rotate(0deg); }
+.fanw-3 { height: clamp(240px, 32vw, 460px); }
+@media (max-width: 760px) {
+  .fanw-3 .fanw-card:nth-child(1), .fanw-3 .fanw-card:nth-child(3) { display: block; }
+  .fanw-3 .fanw-card { width: 52vw; }
+  .fanw-3 { height: 48vw; }
+}
