@@ -3215,3 +3215,56 @@ main > .hero:first-child { margin-top: -85px; padding-top: 150px; }
   .pos-fan-card, .pos-fan-stage:hover .pos-fan-card { transition: none; }
   .fan-chip .pulse-dot { animation: none; }
 }
+
+/* --- Wide centered fan (reference layout, iPads kept) --- */
+.fanw-stage { position: relative; margin-top: 48px; }
+.fanw { position: relative; height: clamp(240px, 34vw, 470px); }
+.fanw-card {
+  position: absolute; left: 50%; top: 0;
+  width: clamp(200px, 26vw, 360px);
+  filter: drop-shadow(0 26px 50px rgba(0,0,0,0.45));
+  transition: transform 0.55s cubic-bezier(0.2, 0.7, 0.3, 1);
+}
+.fanw-card:nth-child(1) { transform: translateX(-50%) translateX(-135%) translateY(13%) rotate(-14deg); z-index: 1; }
+.fanw-card:nth-child(2) { transform: translateX(-50%) translateX(-90%)  translateY(6%)  rotate(-9deg);  z-index: 2; }
+.fanw-card:nth-child(3) { transform: translateX(-50%) translateX(-45%)  translateY(1.5%) rotate(-4deg); z-index: 3; }
+.fanw-card:nth-child(4) { transform: translateX(-50%) rotate(0deg); z-index: 4; }
+.fanw-card:nth-child(5) { transform: translateX(-50%) translateX(45%)   translateY(1.5%) rotate(4deg);  z-index: 3; }
+.fanw-card:nth-child(6) { transform: translateX(-50%) translateX(90%)   translateY(6%)  rotate(9deg);  z-index: 2; }
+.fanw-card:nth-child(7) { transform: translateX(-50%) translateX(135%)  translateY(13%) rotate(14deg); z-index: 1; }
+.fanw-stage:hover .fanw-card:nth-child(1) { transform: translateX(-50%) translateX(-145%) translateY(15%) rotate(-16deg); }
+.fanw-stage:hover .fanw-card:nth-child(2) { transform: translateX(-50%) translateX(-97%)  translateY(7%)  rotate(-10deg); }
+.fanw-stage:hover .fanw-card:nth-child(3) { transform: translateX(-50%) translateX(-48%)  translateY(2%)  rotate(-4.5deg); }
+.fanw-stage:hover .fanw-card:nth-child(5) { transform: translateX(-50%) translateX(48%)   translateY(2%)  rotate(4.5deg); }
+.fanw-stage:hover .fanw-card:nth-child(6) { transform: translateX(-50%) translateX(97%)   translateY(7%)  rotate(10deg); }
+.fanw-stage:hover .fanw-card:nth-child(7) { transform: translateX(-50%) translateX(145%)  translateY(15%) rotate(16deg); }
+
+.fan-bubble {
+  position: absolute; z-index: 8;
+  display: inline-flex; align-items: center; gap: 7px;
+  font-size: 13px; font-weight: 700; letter-spacing: -0.01em;
+  padding: 9px 16px; border-radius: 100px;
+  color: #ffffff;
+  box-shadow: 0 14px 34px -10px rgba(0,0,0,0.5);
+}
+.fan-bubble::after {
+  content: ''; position: absolute; bottom: -5px; left: 22px;
+  width: 12px; height: 12px; transform: rotate(45deg);
+  background: inherit; border-radius: 2px;
+}
+.fan-bubble-left { top: -20px; left: 16%; background: var(--brand-blue); transform: rotate(-4deg); }
+.fan-bubble-right { top: -26px; right: 15%; background: var(--brand-purple); transform: rotate(4deg); }
+.fan-bubble-right::after { left: auto; right: 22px; }
+.fan-bubble .pulse-dot {
+  width: 7px; height: 7px; border-radius: 50%; background: #6ff0c0;
+  box-shadow: 0 0 0 0 rgba(111,240,192,0.5); animation: wmPulse 2.2s infinite;
+}
+@media (max-width: 760px) {
+  .fanw-card:nth-child(1), .fanw-card:nth-child(7) { display: none; }
+  .fanw { height: 44vw; }
+  .fanw-card { width: 38vw; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .fanw-card { transition: none; }
+  .fan-bubble .pulse-dot { animation: none; }
+}
