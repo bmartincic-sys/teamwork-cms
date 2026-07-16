@@ -441,8 +441,8 @@ a { color: inherit; text-decoration: none; }
 
 
 /* ============ SECTIONS ============ */
-.section { padding: 148px 0; position: relative; }
-.section-tight { padding: 116px 0; }
+.section { padding: 104px 0; position: relative; }
+.section-tight { padding: 76px 0; }
 .section-header { max-width: 780px; margin: 0 auto 76px; text-align: center; }
 .section-eyebrow {
   display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: 0.12em;
