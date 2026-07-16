@@ -16,24 +16,45 @@ navOrder: 5
   </nav>
 </div>
 
-<!-- ============ HERO ============ -->
-<section class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-glow"></div>
-  <div class="container hero-inner fade-up">
-    <span class="eyebrow"><span class="eyebrow-dot"></span> Part of Teamwork Commerce Services</span>
-    <h1>From factory to front-line. Total <span class="accent">visibility.</span></h1>
-    <p class="hero-sub">
-      Retailers lose millions every year to inventory inaccuracy — phantom stock, shrink, units that should be on the floor but aren't. RFID hardware promises to solve it, but hardware alone is just data with nowhere to go. Teamwork Commerce runs RFID natively across the entire lifecycle — source tagging through checkout, loss prevention through analytics — turning every tag read into a real operational decision, end-to-end, no middleware, no third parties. RFID Solution is part of Teamwork Commerce Services, extending the same Mobile POS you already run — it's simply included, no separate purchase or upgrade tier.
-    </p>
-    <div class="hero-cta">
-      <a href="/contact/" class="btn btn-primary btn-lg">Book a demo <i class="ti ti-arrow-right"></i></a>
-      <button class="btn btn-ghost btn-lg">See RFID ROI calculator</button>
+<!-- ============ HERO (photo) ============ -->
+<section class="hero hero-photo">
+  <img class="hero-photo-bg" src="/assets/images/homepage/rfid-self-checkout.jpg" alt="A shopper using Teamwork Commerce RFID self-checkout in a retail store" style="object-position: 70% 45%;">
+  <div class="hero-photo-scrim"></div>
+
+  <div class="container hero-photo-inner">
+    <div class="hero-photo-head fade-up">
+      <span class="eyebrow"><span class="eyebrow-dot"></span> Part of Teamwork Commerce Services</span>
+      <h1 class="hero-photo-title">From factory to front-line.<br>Total visibility.</h1>
+    </div>
+
+    <aside class="glass-card fade-up" style="animation-delay: 0.15s;" aria-label="A simulated live RFID self-checkout">
+      <div class="glass-head">
+        <span class="lf-live"><span class="pulse-dot"></span> LIVE · SELF-CHECKOUT</span>
+        <span class="lf-clock" data-live-clock></span>
+      </div>
+      <div class="glass-row"><span>Basket scanned</span><strong>8 items</strong></div>
+      <div class="glass-row"><span>Scan time</span><strong>2.4s</strong></div>
+      <div class="glass-row glass-total"><span>Accuracy</span><strong>99.9%</strong></div>
+      <div class="glass-approved"><i class="ti ti-circle-check-filled"></i> EAS verified · All items sold</div>
+      <div class="glass-feed" data-live-line></div>
+    </aside>
+
+    <div class="hero-photo-foot fade-up" style="animation-delay: 0.25s;">
+      {% include "live-strip.njk" %}
+      <div class="hero-photo-note">
+        <p>Hardware alone is just data with nowhere to go. Teamwork runs RFID natively across the entire lifecycle — source tagging through checkout — no middleware, no third parties, simply included.</p>
+        <div class="hero-cta">
+          <a href="/contact/" class="btn btn-primary btn-lg">Book a demo <i class="ti ti-arrow-right"></i></a>
+        </div>
+      </div>
     </div>
   </div>
 
-  <!-- HERO MOCKUP: RFID tag lifecycle -->
-  <div class="hero-product fade-up" style="animation-delay: 0.2s;">
+</section>
+
+<!-- ============ RFID COMMAND CENTER ============ -->
+<section class="section-tight" style="padding-top: 72px; padding-bottom: 0;">
+  <div class="hero-product fade-up">
     <div class="product-frame">
       <div class="product-frame-bar">
         <div class="frame-dot"></div><div class="frame-dot"></div><div class="frame-dot"></div>
