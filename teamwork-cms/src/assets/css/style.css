@@ -2863,3 +2863,9 @@ main > .hero:first-child { margin-top: -84px; padding-top: 150px; }
   .day-stop { grid-template-columns: 48px 38px 1fr; }
   .day-stop::after { left: 58px; }
 }
+
+/* --- Stat band (replaces boxed ticker) --- */
+.statband { padding: 84px 0 72px; }
+.specs-row-5 { grid-template-columns: repeat(5, 1fr); max-width: none; margin-top: 0; gap: 24px; }
+.specs-row-5 .spec-big { font-size: clamp(30px, 3.4vw, 52px); }
+@media (max-width: 960px) { .specs-row-5 { grid-template-columns: repeat(2, 1fr); gap: 32px 20px; } }
