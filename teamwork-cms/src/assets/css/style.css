@@ -2590,7 +2590,7 @@ details[open] summary { color: var(--brand-text); }
     #06070f;
   color: #eef1fb;
 }
-main > .hero:first-child { margin-top: -85px; padding-top: 190px; }
+main > .hero:first-child { margin-top: -85px; padding-top: 230px; }
 .hero .hero-bg { opacity: 0.35; }
 .hero h1 { color: #ffffff; }
 .hero h1 .accent, .hero h1 .friction {
