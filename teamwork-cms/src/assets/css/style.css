@@ -2978,7 +2978,7 @@ main > .hero:first-child { margin-top: -85px; padding-top: 150px; }
 .cs-rail::-webkit-scrollbar { display: none; }
 .cs-card {
   position: relative; flex: 0 0 auto;
-  width: min(360px, 78vw); aspect-ratio: 3 / 4.1;
+  width: min(404px, 82vw); aspect-ratio: 3 / 4.1;
   border-radius: 22px; overflow: hidden;
   scroll-snap-align: start;
   background: var(--bg-elevated);
