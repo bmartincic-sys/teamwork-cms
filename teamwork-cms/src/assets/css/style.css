@@ -3390,3 +3390,21 @@ main > .hero:first-child { margin-top: -85px; padding-top: 230px; }
   border-radius: var(--radius-lg);
   border: 1px solid var(--border);
 }
+
+/* --- Also Included: text left, tile grid right --- */
+.inc-split {
+  display: grid; grid-template-columns: 0.75fr 1.3fr; gap: 64px; align-items: center;
+}
+.inc-copy h2 {
+  font-size: clamp(32px, 3.8vw, 50px); font-weight: 900; letter-spacing: -0.035em; line-height: 1.02;
+  margin: 14px 0 18px;
+}
+.inc-copy > p { font-size: 15.5px; color: var(--text-muted); line-height: 1.6; margin: 0 0 18px; max-width: 400px; }
+.inc-see { font-size: 14px !important; }
+.inc-see a { color: var(--brand-text); font-weight: 700; }
+.inc-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+.inc-grid .inc-tile:last-child { grid-column: 1 / -1; }
+.inc-grid .inc-tile:last-child .inc-visual { aspect-ratio: 2.35 / 1; }
+@media (max-width: 960px) {
+  .inc-split { grid-template-columns: 1fr; gap: 36px; }
+}
