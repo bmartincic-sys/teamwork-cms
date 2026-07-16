@@ -5,25 +5,25 @@ description: "Teamwork Commerce powers 30,000+ terminals across 40+ countries wi
 permalink: "/"
 ---
 <!-- ============ HERO ============ -->
-<section class="hero hero-split">
+<section class="hero scene-ink hero-cinema">
   <div class="hero-bg"></div>
   <div class="hero-glow"></div>
 
-  <div class="container hero-split-inner">
-    <div class="hero-copy fade-up">
-      <span class="eyebrow"><span class="eyebrow-dot"></span> Built for enterprise retail</span>
-      <h1>Retail without the <span class="friction">friction.</span></h1>
-      <p class="hero-sub">
-        Point of Sale is our core — and everything we build around it exists to make commerce frictionless. Built by retailers, for retailers: one system across every store and country, with no data silos and no reconciliations.
-      </p>
-      <div class="hero-cta">
-        <a href="/contact/" class="btn btn-primary btn-lg">Book a demo <i class="ti ti-arrow-right"></i></a>
-        <a href="/platform/tcs/" class="btn btn-ghost btn-lg">Explore the platform</a>
-      </div>
+  <div class="container hero-cin-inner fade-up">
+    <span class="ch-eyebrow">Teamwork Commerce</span>
+    <h1 class="hero-cin-title">Retail. <span class="grad">Without friction.</span></h1>
+    <p class="hero-cin-sub">
+      One Point of Sale at the core. Every store, every channel, every country — built by retailers, for retailers.
+    </p>
+    <div class="hero-cta">
+      <a href="/contact/" class="btn btn-primary btn-lg">Book a demo <i class="ti ti-arrow-right"></i></a>
+      <a href="/platform/tcs/" class="btn btn-ghost btn-lg">Explore the platform</a>
     </div>
+  </div>
 
-    <!-- HERO PRODUCT MOCKUP -->
-    <div class="hero-visual fade-up" style="animation-delay: 0.15s;">
+  <!-- HERO COMMAND DECK: product + live global ops feed -->
+  <div class="cmd-deck fade-up" style="animation-delay: 0.15s;">
+    <div class="hero-visual">
       <div class="hero-devices-glow"></div>
       <div class="hero-devices-stage">
         <div class="hero-devices">
@@ -32,18 +32,29 @@ permalink: "/"
           <img src="/assets/images/homepage/hero-iphone.webp" alt="Teamwork Commerce 121 Commerce AI product discovery on iPhone" class="hero-device-iphone">
         </div>
       </div>
+      <div class="hero-annot hero-annot-1"><span class="pulse-dot"></span> REG 04 · OPEN</div>
     </div>
+
+    <aside class="lf-panel" aria-label="A simulated feed of live Teamwork Commerce activity worldwide">
+      <div class="lf-head">
+        <span class="lf-live"><span class="pulse-dot"></span> LIVE · GLOBAL OPERATIONS</span>
+        <span class="lf-clock" data-live-clock></span>
+      </div>
+      <div class="lf-rows" id="heroFeed"></div>
+      <div class="lf-foot">
+        <span><strong data-live-tx>—</strong> transactions today</span>
+        <span><strong data-live-reg>30,412</strong> registers reporting</span>
+      </div>
+    </aside>
   </div>
 </section>
 
 <!-- ============ THE PROBLEM ============ -->
 <section class="section-tight" style="padding-bottom: 0;">
   <div class="container">
-    <div style="max-width: 720px; margin: 0 auto; text-align: center;">
-      <div class="section-eyebrow">The problem</div>
-      <h2 class="section-title">Fragmented systems create a <span class="gradient-text">fragmented experience.</span></h2>
-      <p class="section-sub">A different system at checkout, in the stockroom, on the app, and at HQ — stitched together with integrations that break under load. The result is a customer experience that changes depending on which store, or which channel, someone walks into.</p>
-    </div>
+    <span class="ch-eyebrow">The problem</span>
+    <h2 class="ch-title ch-title-sm">Fragmented systems create a <span class="grad">fragmented experience.</span></h2>
+    <p class="ch-para">A different system at checkout, in the stockroom, on the app, and at HQ — stitched together with integrations that break under load. The result is a customer experience that changes depending on which store, or which channel, someone walks into.</p>
   </div>
 </section>
 
@@ -113,9 +124,42 @@ permalink: "/"
   </div>
 </section>
 
-<!-- ============ WHY TEAMWORK / QUOTES ============ -->
-<section class="section section-wash">
+<!-- ============ KINETIC MARQUEE ============ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span class="marquee-item">Point of Sale <span class="marquee-dot"></span></span>
+    <span class="marquee-item ghost">Native RFID <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Order Management <span class="marquee-dot"></span></span>
+    <span class="marquee-item ghost">121 Commerce AI <span class="marquee-dot"></span></span>
+    <span class="marquee-item">40+ Countries <span class="marquee-dot"></span></span>
+    <span class="marquee-item ghost">One Codebase <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Point of Sale <span class="marquee-dot"></span></span>
+    <span class="marquee-item ghost">Native RFID <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Order Management <span class="marquee-dot"></span></span>
+    <span class="marquee-item ghost">121 Commerce AI <span class="marquee-dot"></span></span>
+    <span class="marquee-item">40+ Countries <span class="marquee-dot"></span></span>
+    <span class="marquee-item ghost">One Codebase <span class="marquee-dot"></span></span>
+  </div>
+</div>
+
+<!-- ============ LIVE WORLD MAP ============ -->
+<section class="scene-ink" style="padding: 128px 0 110px;">
   <div class="container">
+    <span class="ch-eyebrow">Global Operations · Live</span>
+    <h2 class="ch-title">Right now, in <span class="grad">40+ countries.</span></h2>
+    <p class="ch-para">One localized platform running the world's stores — fiscal compliance, currencies, and languages included. Every pulse is a market where Teamwork is live today.</p>
+
+    <div class="livemap-wrap">
+      {% include "world-map-live.njk" %}
+    </div>
+    <div class="livemap-feed" id="mapFeed" aria-label="A simulated feed of live activity by region"></div>
+  </div>
+</section>
+
+<!-- ============ WHY TEAMWORK / QUOTES ============ -->
+<section class="section section-wash" style="position: relative; overflow: hidden;">
+  <div class="wm-word" aria-hidden="true">PROOF</div>
+  <div class="container" style="position: relative; z-index: 1;">
     <div class="section-header">
       <div class="section-eyebrow">Why Teamwork</div>
       <h2 class="section-title">Retailers choose Teamwork <br>because it <span class="gradient-text">works.</span></h2>
@@ -326,53 +370,50 @@ permalink: "/"
   </div>
 </section>
 
-<!-- ============ FEATURE: 121 COMMERCE ============ -->
-<section class="section-tight">
+<!-- ============ CHAPTER: 121 COMMERCE (ink cinema) ============ -->
+<section class="scene-ink" style="padding: 132px 0 120px;">
   <div class="container">
-    <div class="feature-row reverse">
-      <div class="feature-text">
-        <span class="section-eyebrow">121 Commerce · Included with Plus</span>
-        <h2>Every associate, suddenly an <span class="gradient-text">expert.</span></h2>
-        <p>121 Commerce is what Plus unlocks at the point of sale on <a href="/platform/pxp/" style="color: var(--brand-text); font-weight: 600;">PXP</a> (our Product Experience Platform) and <a href="/platform/cxp/" style="color: var(--brand-text); font-weight: 600;">CXP</a> (our Customer Experience Platform) — surfacing the right product knowledge, the right customer history, and the right next action at every touchpoint.</p>
-        <ul class="feature-bullets">
-          <li>Real-time guidance for associates on the sales floor</li>
-          <li>Unified customer history across every store and channel</li>
-          <li>Multi-language localization, instant and on-brand</li>
-          <li>AI-driven product recommendations based on customer history and preferences</li>
-        </ul>
-        <a href="/platform/121-commerce/" class="btn btn-primary">Explore 121 Commerce <i class="ti ti-arrow-right"></i></a>
-      </div>
+    <span class="ch-eyebrow">121 Commerce · Included with Plus</span>
+    <h2 class="ch-title">Every associate, <span class="grad">suddenly an expert.</span></h2>
+    <p class="ch-para">Plus unlocks 121 Commerce at the point of sale on <a href="/platform/pxp/" style="color: #fff; font-weight: 600; text-decoration: underline; text-underline-offset: 3px;">PXP</a> and <a href="/platform/cxp/" style="color: #fff; font-weight: 600; text-decoration: underline; text-underline-offset: 3px;">CXP</a> — surfacing the right product knowledge, the right customer history, and the right next action at every touchpoint.</p>
+    <div class="ch-center">
+      <a href="/platform/121-commerce/" class="ch-link" style="color: #8ab8ff;">Explore 121 Commerce <i class="ti ti-arrow-right"></i></a>
+    </div>
 
-      <div class="feature-visual">
-        <img src="/assets/images/homepage/feature-121-commerce.webp" alt="121 Commerce on two iPhones — AI-powered product browsing and product detail with voice search" class="feature-shot">
-      </div>
+    <div style="max-width: 860px; margin: 56px auto 0;">
+      <img src="/assets/images/homepage/feature-121-commerce.webp" alt="121 Commerce on two iPhones — AI-powered product browsing and product detail with voice search" style="width: 100%; height: auto; display: block; filter: drop-shadow(0 40px 80px rgba(0,0,0,0.55));">
+    </div>
+
+    <div class="ink-highlights">
+      <div class="ink-highlight"><i class="ti ti-message-chatbot"></i> Real-time guidance for associates on the sales floor</div>
+      <div class="ink-highlight"><i class="ti ti-users"></i> Unified customer history across every store and channel</div>
+      <div class="ink-highlight"><i class="ti ti-language"></i> Multi-language localization, instant and on-brand</div>
+      <div class="ink-highlight"><i class="ti ti-sparkles"></i> AI product recommendations from customer history and preferences</div>
     </div>
   </div>
 </section>
 
-<!-- ============ FEATURE: RFID ============ -->
-<section class="section-tight" style="padding-top: 0;">
+<!-- ============ CHAPTER: RFID ============ -->
+<section class="section-tight">
   <div class="container">
-    <div class="feature-row">
-      <div class="feature-text">
-        <span class="section-eyebrow">Complete RFID Solution</span>
-        <h2>Most platforms treat RFID like an add-on. <br>We built it into the <span class="gradient-text">core.</span></h2>
-        <p>From source tagging to self-checkout, our native end-to-end RFID stack eliminates middleware, reduces shrink, and turns every store into a real-time inventory engine.</p>
-        <ul class="feature-bullets">
-          <li>RFID-enabled checkout: scan an entire basket in one tap</li>
-          <li>Real-time item-level tracking across all locations</li>
-          <li>Smart loss prevention with EAS integration — automatically distinguishing sold from unsold at every exit</li>
-          <li>Full-store cycle counts in minutes, not hours</li>
-        </ul>
-        <a href="/platform/rfid/" class="btn btn-primary">See RFID in action <i class="ti ti-arrow-right"></i></a>
-      </div>
+    <span class="ch-eyebrow">Native RFID</span>
+    <h2 class="ch-title">Not an add-on. <span class="grad">Built into the core.</span></h2>
+    <p class="ch-para">From source tagging to self-checkout, our native end-to-end RFID stack eliminates middleware, reduces shrink, and turns every store into a real-time inventory engine — with loss prevention at every exit.</p>
+    <div class="ch-center">
+      <a href="/platform/rfid/" class="ch-link">See RFID in action <i class="ti ti-arrow-right"></i></a>
+    </div>
 
-      <div class="feature-visual">
-        <div class="feature-photo">
-          <img src="/assets/images/homepage/rfid-self-checkout.jpg" alt="Teamwork Commerce's RFID-powered self-checkout in a retail store">
-          <div class="feature-photo-caption">RFID-powered self-checkout — scan a full basket in one tap, no barcodes required.</div>
-        </div>
+    <div style="max-width: 1040px; margin: 56px auto 0;">
+      <div class="feature-photo">
+        <img src="/assets/images/homepage/rfid-self-checkout.jpg" alt="Teamwork Commerce's RFID-powered self-checkout in a retail store">
+        <div class="feature-photo-caption">RFID-powered self-checkout — scan a full basket in one tap, no barcodes required.</div>
       </div>
+    </div>
+
+    <div class="specs-row">
+      <div><div class="spec-big">99.9%</div><div class="spec-cap">inventory accuracy, verified at item level</div></div>
+      <div><div class="spec-big">Minutes</div><div class="spec-cap">full-store cycle counts — not hours</div></div>
+      <div><div class="spec-big">Zero</div><div class="spec-cap">third-party middleware in the stack</div></div>
     </div>
   </div>
 </section>
@@ -475,22 +516,20 @@ permalink: "/"
         <h2>The numbers your <br>CFO wants to <span class="gradient-text">see.</span></h2>
         <p>Our customers don't just buy software — they unlock measurable change across operations, conversion, and customer experience.</p>
       </div>
-      <div class="metrics-cards">
-        <div class="metric-card">
-          <div class="metric-value">80<span class="unit">%</span></div>
-          <div class="metric-label">Transaction time reduction</div>
-        </div>
-        <div class="metric-card">
-          <div class="metric-value">26<span class="unit">%</span></div>
-          <div class="metric-label">Revenue increase vs. previous POS</div>
-        </div>
-        <div class="metric-card">
-          <div class="metric-value">&lt;30<span class="unit">m</span></div>
-          <div class="metric-label">New associate training</div>
-        </div>
-        <div class="metric-card">
-          <div class="metric-value">$3.1<span class="unit">M</span></div>
-          <div class="metric-label">Annual ROI unlocked</div>
+      <div class="rcpt-wrap">
+        <div class="rcpt" role="figure" aria-label="Customer results, printed as a receipt">
+          <div class="rcpt-stamp">VERIFIED RESULTS</div>
+          <div class="rcpt-head">TEAMWORK COMMERCE</div>
+          <div class="rcpt-sub">EVERY STORE · EVERY CHANNEL · ONE SYSTEM</div>
+          <hr class="rcpt-div">
+          <div class="rcpt-line"><span class="lbl">Transaction time</span><span class="dots"></span><span class="val">−80%</span></div>
+          <div class="rcpt-line"><span class="lbl">Revenue vs. previous POS</span><span class="dots"></span><span class="val">+26%</span></div>
+          <div class="rcpt-line"><span class="lbl">Associate training</span><span class="dots"></span><span class="val">&lt;30 min</span></div>
+          <div class="rcpt-line"><span class="lbl">Uptime</span><span class="dots"></span><span class="val">99.99%</span></div>
+          <hr class="rcpt-div">
+          <div class="rcpt-total"><span class="lbl">ANNUAL ROI</span><span class="val">$3.1M</span></div>
+          <div class="rcpt-barcode" aria-hidden="true"></div>
+          <div class="rcpt-foot">*** THANK YOU FOR SHOPPING SMARTER ***</div>
         </div>
       </div>
     </div>

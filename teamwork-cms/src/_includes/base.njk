@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
 <head>
 <script>
 (function () {
   var saved = localStorage.getItem("theme");
-  var theme = saved || (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+  var theme = saved || "dark";
   document.documentElement.setAttribute("data-theme", theme);
 })();
 </script>
@@ -184,7 +184,7 @@ if (window.netlifyIdentity) {
       ".section-header", ".feature-row", ".pillar-card", ".quote-card", ".metric-card",
       ".rollout-step", ".capcol", ".edge-card", ".intg-card", ".blog-card", ".vs-panel",
       ".sp-wrap", ".svc-card", ".innov-card", ".worldmap-wrap", ".rfid-shot", ".omni-split",
-      ".ticker-item", ".captabs-nav", ".captab-panel.active", ".midcta-inner", ".metrics-text"
+      ".ticker-item", ".captabs-nav", ".captab-panel.active", ".midcta-inner", ".metrics-text", ".rcpt-wrap"
     ].join(", ");
     var revealEls = document.querySelectorAll(revealSelector);
     var lastParent = null, siblingIndex = 0;
@@ -222,6 +222,111 @@ if (window.netlifyIdentity) {
     window.addEventListener("resize", queueSweep, { passive: true });
     window.addEventListener("load", revealSweep);
     revealSweep();
+  }
+
+  // ---- The Live Store: simulated global ops feed ----
+  var heroFeed = document.getElementById("heroFeed");
+  var mapFeed = document.getElementById("mapFeed");
+  {
+    var LF_EVENTS = [
+      ["pos", "Tap to Pay approved — <strong>Melbourne Central</strong>"],
+      ["fiscal", "NF525 receipt signed — <strong>Paris Le Marais</strong>"],
+      ["rfid", "RFID cycle count: 4,208 items in 2m 11s — <strong>Tokyo Ginza</strong>"],
+      ["omni", "BOPIS order picked up — <strong>Store #114, Austin</strong>"],
+      ["pos", "121 Commerce recommendation accepted — <strong>NYC SoHo</strong>"],
+      ["fiscal", "TSE transaction logged — <strong>Berlin Mitte</strong>"],
+      ["omni", "Endless Aisle: size 11 shipped from <strong>Dallas DC</strong>"],
+      ["rfid", "Self-checkout: 8 items in 2.4s — <strong>Osaka Umeda</strong>"],
+      ["pos", "Store-and-Forward sync complete — <strong>Zermatt</strong> (offline 14m)"],
+      ["omni", "Return restocked in real time — <strong>London Regent St</strong>"],
+      ["fiscal", "CFDI invoice issued — <strong>Mexico City Polanco</strong>"],
+      ["pos", "Loyalty sign-up via QR — <strong>Singapore Orchard</strong>"],
+      ["omni", "Ship-from-store label printed — <strong>Toronto Eaton Centre</strong>"],
+      ["rfid", "EAS gate verified 3 items sold — <strong>Stockholm City</strong>"]
+    ];
+    var LF_TAGS = { pos: "POS", rfid: "RFID", omni: "OMNI", fiscal: "FISCAL" };
+    var lfIdx = Math.floor(Math.random() * LF_EVENTS.length);
+    var reduceLf = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    function lfTime() {
+      var d = new Date();
+      function p(n) { return (n < 10 ? "0" : "") + n; }
+      return p(d.getHours()) + ":" + p(d.getMinutes()) + ":" + p(d.getSeconds());
+    }
+    function lfRow(ev) {
+      var row = document.createElement("div");
+      row.className = "lf-row";
+      row.innerHTML = '<span class="lf-time">' + lfTime() + '</span><span class="lf-text">' + ev[1] + '</span><span class="lf-tag lf-tag-' + ev[0] + '">' + LF_TAGS[ev[0]] + '</span>';
+      return row;
+    }
+    function lfNext() { lfIdx = (lfIdx + 1) % LF_EVENTS.length; return LF_EVENTS[lfIdx]; }
+
+    if (heroFeed) {
+      for (var i = 0; i < 5; i++) heroFeed.appendChild(lfRow(lfNext()));
+      if (!reduceLf) {
+        setInterval(function () {
+          heroFeed.insertBefore(lfRow(lfNext()), heroFeed.firstChild);
+          while (heroFeed.children.length > 5) heroFeed.removeChild(heroFeed.lastChild);
+        }, 3400);
+      }
+    }
+    if (mapFeed) {
+      function mapTick() {
+        var ev = lfNext();
+        mapFeed.innerHTML = '<span class="lf-time">' + lfTime() + '</span>' + ev[1];
+      }
+      mapTick();
+      if (!reduceLf) setInterval(mapTick, 3000);
+    }
+
+    // Shared live counters/clocks (any page): [data-live-tx] [data-live-reg] [data-live-clock]
+    var txEls = document.querySelectorAll("[data-live-tx]");
+    var regEls = document.querySelectorAll("[data-live-reg]");
+    var clockEls = document.querySelectorAll("[data-live-clock]");
+    function setAll(els, text) { els.forEach(function (el) { el.textContent = text; }); }
+    var d0 = new Date();
+    var txCount = Math.floor((d0.getHours() * 3600 + d0.getMinutes() * 60 + d0.getSeconds()) * 26.3);
+    setAll(txEls, txCount.toLocaleString("en-US"));
+    setAll(clockEls, lfTime());
+    if (!reduceLf && (txEls.length || regEls.length || clockEls.length)) {
+      setInterval(function () { setAll(clockEls, lfTime()); }, 1000);
+      setInterval(function () {
+        txCount += 18 + Math.floor(Math.random() * 35);
+        setAll(txEls, txCount.toLocaleString("en-US"));
+        if (Math.random() < 0.3) setAll(regEls, (30408 + Math.floor(Math.random() * 9)).toLocaleString("en-US"));
+      }, 1400);
+    }
+
+    // Live RFID scan counter: [data-live-scan] counts items up per zone, then moves on
+    document.querySelectorAll("[data-live-scan]").forEach(function (el) {
+      var zoneEl = el.parentElement.querySelector("[data-live-zone]");
+      if (reduceLf) { el.textContent = "4,208"; return; }
+      var count = 0, target = 3400 + Math.floor(Math.random() * 1600), zone = 1;
+      setInterval(function () {
+        if (count < target) {
+          count = Math.min(target, count + 40 + Math.floor(Math.random() * 90));
+        } else {
+          zone = (zone % 6) + 1; count = 0; target = 3400 + Math.floor(Math.random() * 1600);
+          if (zoneEl) zoneEl.textContent = zone;
+        }
+        el.textContent = count.toLocaleString("en-US");
+      }, 90);
+    });
+
+    // "A day in your store": highlight the stop matching the visitor's local time
+    var dayStops = document.querySelectorAll("[data-day-time]");
+    if (dayStops.length) {
+      var now = new Date();
+      var nowMin = now.getHours() * 60 + now.getMinutes();
+      var current = null;
+      dayStops.forEach(function (el) {
+        var t = el.getAttribute("data-day-time").split(":");
+        var m = parseInt(t[0], 10) * 60 + parseInt(t[1], 10);
+        if (m <= nowMin) current = el;
+      });
+      if (!current) current = dayStops[dayStops.length - 1];
+      current.classList.add("day-now");
+    }
   }
 
   var captabs = document.querySelectorAll(".captab");
