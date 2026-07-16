@@ -2590,7 +2590,7 @@ details[open] summary { color: var(--brand-text); }
     #06070f;
   color: #eef1fb;
 }
-main > .hero:first-child { margin-top: -72px; padding-top: 140px; }
+main > .hero:first-child { margin-top: -85px; padding-top: 150px; }
 .hero .hero-bg { opacity: 0.35; }
 .hero h1 { color: #ffffff; }
 .hero h1 .accent, .hero h1 .friction {
@@ -2867,7 +2867,7 @@ main > .hero:first-child { margin-top: -72px; padding-top: 140px; }
   background:
     linear-gradient(92deg, rgba(6,7,15,0.86) 0%, rgba(6,7,15,0.45) 46%, rgba(6,7,15,0.12) 72%),
     linear-gradient(to top, rgba(6,7,15,0.92) 0%, rgba(6,7,15,0.25) 34%, transparent 55%),
-    linear-gradient(to bottom, rgba(6,7,15,0.6) 0%, transparent 22%);
+    linear-gradient(to bottom, rgba(6,7,15,0.85) 0px, rgba(6,7,15,0.55) 110px, rgba(6,7,15,0.28) 210px, rgba(6,7,15,0.1) 300px, transparent 400px);
 }
 .hero-photo-inner {
   position: relative; z-index: 2;
@@ -2950,7 +2950,7 @@ main > .hero:first-child { margin-top: -72px; padding-top: 140px; }
 
 /* --- Nav blends into hero, solidifies on scroll --- */
 .nav {
-  background: linear-gradient(to bottom, rgba(6,7,15,0.82) 0%, rgba(6,7,15,0.45) 60%, rgba(6,7,15,0) 100%);
+  background: transparent;
   border-bottom: 1px solid transparent;
   backdrop-filter: none; -webkit-backdrop-filter: none;
   transition: background 0.35s ease, border-color 0.35s ease;
