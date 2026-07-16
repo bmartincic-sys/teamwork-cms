@@ -349,6 +349,15 @@ if (window.netlifyIdentity) {
     }
   }
 
+  document.querySelectorAll("[data-rail]").forEach(function (rail) {
+    var wrap = rail.parentElement;
+    var step = function () { var card = rail.querySelector(".cs-card"); return card ? card.getBoundingClientRect().width + 18 : 380; };
+    var prev = wrap.querySelector("[data-rail-prev]");
+    var next = wrap.querySelector("[data-rail-next]");
+    if (prev) prev.addEventListener("click", function () { rail.scrollBy({ left: -step(), behavior: "smooth" }); });
+    if (next) next.addEventListener("click", function () { rail.scrollBy({ left: step(), behavior: "smooth" }); });
+  });
+
   var captabs = document.querySelectorAll(".captab");
   var capPanels = document.querySelectorAll(".captab-panel");
   captabs.forEach(function (tab) {

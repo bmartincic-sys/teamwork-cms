@@ -2963,3 +2963,96 @@ main > .hero:first-child { margin-top: -85px; padding-top: 150px; }
   backdrop-filter: saturate(180%) blur(24px);
   -webkit-backdrop-filter: saturate(180%) blur(24px);
 }
+
+/* =====================================================
+   CASE STUDY RAIL — photo cards with logos, hover reveal
+   ===================================================== */
+.cs-section { padding-bottom: 128px; }
+.cs-rail-wrap { position: relative; margin-top: 64px; }
+.cs-rail {
+  display: flex; gap: 18px;
+  overflow-x: auto; scroll-snap-type: x mandatory;
+  padding: 4px max(32px, calc((100vw - var(--max-w)) / 2 + 32px)) 28px;
+  scrollbar-width: none;
+}
+.cs-rail::-webkit-scrollbar { display: none; }
+.cs-card {
+  position: relative; flex: 0 0 auto;
+  width: min(360px, 78vw); aspect-ratio: 3 / 4.1;
+  border-radius: 22px; overflow: hidden;
+  scroll-snap-align: start;
+  background: var(--bg-elevated);
+  box-shadow: 0 24px 60px -18px rgba(0,0,0,0.45);
+  transition: transform 0.35s cubic-bezier(0.2, 0.7, 0.3, 1);
+}
+.cs-card:hover { transform: translateY(-8px); }
+.cs-card > img:first-child {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.2, 0.7, 0.3, 1);
+}
+.cs-card:hover > img:first-child { transform: scale(1.05); }
+.cs-scrim {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(5,6,14,0.88) 0%, rgba(5,6,14,0.35) 34%, rgba(5,6,14,0.05) 60%);
+  transition: background 0.35s ease;
+}
+.cs-card:hover .cs-scrim {
+  background: linear-gradient(to top, rgba(5,6,14,0.94) 0%, rgba(5,6,14,0.72) 55%, rgba(5,6,14,0.3) 100%);
+}
+.cs-logo {
+  position: absolute; left: 22px; bottom: 20px; z-index: 2;
+  max-width: 46%; max-height: 44px; width: auto; height: auto;
+  filter: brightness(0) invert(1) drop-shadow(0 2px 8px rgba(0,0,0,0.4));
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.cs-card:hover .cs-logo { transform: translateY(-8px); }
+.cs-hover {
+  position: absolute; inset: auto 0 0 0; z-index: 3;
+  padding: 22px 22px 64px;
+  opacity: 0; transform: translateY(16px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+  color: #fff;
+}
+.cs-card:hover .cs-hover { opacity: 1; transform: none; }
+.cs-hover p { font-size: 14.5px; line-height: 1.5; font-weight: 500; color: rgba(255,255,255,0.95); margin: 0 0 12px; }
+.cs-result {
+  display: inline-flex; align-items: center; gap: 7px;
+  font-size: 12px; font-weight: 700;
+  padding: 6px 12px; border-radius: 100px; margin-bottom: 10px;
+  background: rgba(255,255,255,0.14); border: 1px solid rgba(255,255,255,0.22);
+}
+.cs-person { font-size: 11.5px; color: rgba(255,255,255,0.65); margin-bottom: 4px; }
+.cs-read {
+  display: inline-flex; align-items: center; gap: 7px;
+  font-size: 13px; font-weight: 700; color: #8ab8ff; margin-top: 8px;
+}
+.cs-card-more {
+  background:
+    radial-gradient(120% 120% at 20% 0%, rgba(36,125,255,0.35), transparent 60%),
+    linear-gradient(150deg, #101430, #06070f);
+  border: 1px solid rgba(255,255,255,0.12);
+  display: flex; align-items: flex-end;
+}
+.cs-more-inner { padding: 26px; }
+.cs-more-count {
+  font-family: var(--font-display); font-size: 64px; font-weight: 900; letter-spacing: -0.04em;
+  background: linear-gradient(90deg, #6aa8ff, #b48cff);
+  -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+}
+.cs-more-label { font-size: 15px; color: rgba(238,241,251,0.8); font-weight: 600; margin: 6px 0 10px; max-width: 200px; }
+.cs-arrow {
+  position: absolute; top: 50%; transform: translateY(-50%); z-index: 4;
+  width: 52px; height: 52px; border-radius: 50%;
+  background: color-mix(in srgb, var(--bg-elevated) 92%, transparent);
+  border: 1px solid var(--border-strong);
+  color: var(--text); font-size: 20px;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; backdrop-filter: blur(10px);
+  box-shadow: 0 14px 34px -8px rgba(0,0,0,0.5);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+.cs-arrow:hover { transform: translateY(-50%) scale(1.08); }
+.cs-arrow-prev { left: 18px; }
+.cs-arrow-next { right: 18px; }
+@media (max-width: 700px) { .cs-arrow { display: none; } }
