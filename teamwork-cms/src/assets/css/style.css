@@ -3152,3 +3152,66 @@ main > .hero:first-child { margin-top: -85px; padding-top: 150px; }
   .duo-grid { grid-template-columns: 1fr; }
   .duo-card-flip { flex-direction: column-reverse; }
 }
+
+/* =====================================================
+   POS FAN — screens fanned like a hand of cards
+   ===================================================== */
+.pos-fan-grid {
+  display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 48px; align-items: center;
+}
+.pos-fan-copy h2 {
+  font-size: clamp(36px, 4.6vw, 60px); font-weight: 900; letter-spacing: -0.04em; line-height: 0.98;
+  margin: 14px 0 18px;
+}
+.pos-fan-copy p { font-size: 16px; color: var(--text-muted); line-height: 1.6; margin: 0 0 28px; max-width: 460px; }
+.ch-eyebrow-left { text-align: left; display: inline-block; }
+
+.pos-fan-stage { position: relative; padding: 40px 0 30px; }
+.pos-fan { position: relative; height: 400px; }
+.pos-fan-card {
+  position: absolute; left: 50%; bottom: 0;
+  width: 58%; border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.14);
+  box-shadow: 0 30px 70px -18px rgba(0,0,0,0.55);
+  transform-origin: 50% 120%;
+  transition: transform 0.5s cubic-bezier(0.2, 0.7, 0.3, 1);
+  background: #fff;
+}
+.pos-fan-card:nth-child(1) { transform: translateX(-50%) rotate(-18deg) translateY(6px); z-index: 1; }
+.pos-fan-card:nth-child(2) { transform: translateX(-50%) rotate(-9deg) translateY(1px); z-index: 2; }
+.pos-fan-card:nth-child(3) { transform: translateX(-50%) rotate(0deg); z-index: 3; }
+.pos-fan-card:nth-child(4) { transform: translateX(-50%) rotate(9deg) translateY(1px); z-index: 4; }
+.pos-fan-card:nth-child(5) { transform: translateX(-50%) rotate(18deg) translateY(6px); z-index: 5; }
+.pos-fan-stage:hover .pos-fan-card:nth-child(1) { transform: translateX(-50%) rotate(-24deg) translateY(10px); }
+.pos-fan-stage:hover .pos-fan-card:nth-child(2) { transform: translateX(-50%) rotate(-12deg) translateY(2px); }
+.pos-fan-stage:hover .pos-fan-card:nth-child(4) { transform: translateX(-50%) rotate(12deg) translateY(2px); }
+.pos-fan-stage:hover .pos-fan-card:nth-child(5) { transform: translateX(-50%) rotate(24deg) translateY(10px); }
+
+.fan-chip {
+  position: absolute; z-index: 6;
+  display: inline-flex; align-items: center; gap: 7px;
+  font-family: var(--font-mono); font-size: 11px; font-weight: 700; letter-spacing: 0.05em;
+  padding: 8px 14px; border-radius: 100px;
+  background: rgba(13, 16, 32, 0.8); color: #eef1fb;
+  border: 1px solid rgba(255,255,255,0.22);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 12px 30px -8px rgba(0,0,0,0.5);
+}
+.fan-chip .pulse-dot {
+  width: 7px; height: 7px; border-radius: 50%; background: #10b981;
+  box-shadow: 0 0 0 0 rgba(16,185,129,0.5); animation: wmPulse 2.2s infinite;
+}
+.fan-chip-1 { top: 8%; left: 12%; transform: rotate(-5deg); }
+.fan-chip-2 { top: 2%; right: 14%; transform: rotate(4deg); }
+.fan-chip-3 { bottom: 12%; left: 4%; transform: rotate(3deg); }
+.fan-chip-4 { bottom: 6%; right: 6%; transform: rotate(-4deg); }
+
+@media (max-width: 960px) {
+  .pos-fan-grid { grid-template-columns: 1fr; gap: 24px; }
+  .pos-fan { height: 300px; }
+  .pos-fan-card { width: 74%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pos-fan-card, .pos-fan-stage:hover .pos-fan-card { transition: none; }
+  .fan-chip .pulse-dot { animation: none; }
+}
