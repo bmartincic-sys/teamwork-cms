@@ -2590,7 +2590,7 @@ details[open] summary { color: var(--brand-text); }
     #06070f;
   color: #eef1fb;
 }
-main > .hero:first-child { margin-top: -85px; padding-top: 150px; }
+main > .hero:first-child { margin-top: -85px; padding-top: 190px; }
 .hero .hero-bg { opacity: 0.35; }
 .hero h1 { color: #ffffff; }
 .hero h1 .accent, .hero h1 .friction {
@@ -2854,7 +2854,7 @@ main > .hero:first-child { margin-top: -85px; padding-top: 150px; }
    PHOTO HERO — full-bleed photography with glass overlay
    ===================================================== */
 .hero-photo {
-  min-height: max(720px, 92vh);
+  min-height: max(760px, 96vh);
   display: flex; align-items: stretch;
 }
 .hero-photo-bg {
@@ -2878,12 +2878,12 @@ main > .hero:first-child { margin-top: -85px; padding-top: 150px; }
 .hero-photo-title {
   font-size: clamp(52px, 7.5vw, 108px);
   font-weight: 900; letter-spacing: -0.045em; line-height: 0.94;
-  color: #ffffff; margin: 22px 0 0;
+  color: #ffffff; margin: 30px 0 0;
   text-shadow: 0 4px 40px rgba(0,0,0,0.35);
 }
 .hero-photo-foot {
   display: flex; justify-content: space-between; align-items: flex-end;
-  gap: 40px; flex-wrap: wrap; margin-top: 48px;
+  gap: 40px; flex-wrap: wrap; margin-top: 84px;
 }
 .hero-photo-foot .live-strip { margin-top: 0; }
 .hero-photo-note { max-width: 430px; }
