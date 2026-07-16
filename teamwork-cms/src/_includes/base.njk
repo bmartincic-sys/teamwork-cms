@@ -170,6 +170,15 @@ if (window.netlifyIdentity) {
     });
   }
 
+  var navEl = document.querySelector(".nav");
+  if (navEl) {
+    function navScrollState() {
+      navEl.classList.toggle("nav-scrolled", (window.scrollY || document.documentElement.scrollTop) > 8);
+    }
+    window.addEventListener("scroll", navScrollState, { passive: true });
+    navScrollState();
+  }
+
   var navHamburger = document.getElementById("navHamburger");
   var navMobileMenu = document.getElementById("navMobileMenu");
   if (navHamburger && navMobileMenu) {
