@@ -279,6 +279,17 @@ if (window.netlifyIdentity) {
       if (!reduceLf) setInterval(mapTick, 3000);
     }
 
+    // Single-line rotating event feeds: [data-live-line]
+    document.querySelectorAll("[data-live-line]").forEach(function (el) {
+      var idx = Math.floor(Math.random() * LF_EVENTS.length);
+      function lineTick() {
+        idx = (idx + 1) % LF_EVENTS.length;
+        el.innerHTML = '<span class="lf-time">' + lfTime() + '</span> ' + LF_EVENTS[idx][1];
+      }
+      lineTick();
+      if (!reduceLf) setInterval(lineTick, 3200);
+    });
+
     // Shared live counters/clocks (any page): [data-live-tx] [data-live-reg] [data-live-clock]
     var txEls = document.querySelectorAll("[data-live-tx]");
     var regEls = document.querySelectorAll("[data-live-reg]");

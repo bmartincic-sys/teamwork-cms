@@ -2869,3 +2869,93 @@ main > .hero:first-child { margin-top: -84px; padding-top: 150px; }
 .specs-row-5 { grid-template-columns: repeat(5, 1fr); max-width: none; margin-top: 0; gap: 24px; }
 .specs-row-5 .spec-big { font-size: clamp(30px, 3.4vw, 52px); }
 @media (max-width: 960px) { .specs-row-5 { grid-template-columns: repeat(2, 1fr); gap: 32px 20px; } }
+
+/* =====================================================
+   PHOTO HERO — full-bleed photography with glass overlay
+   ===================================================== */
+.hero-photo {
+  min-height: max(720px, 92vh);
+  display: flex; align-items: stretch;
+}
+.hero-photo-bg {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; object-position: 62% 38%;
+  z-index: 0;
+}
+.hero-photo-scrim {
+  position: absolute; inset: 0; z-index: 0;
+  background:
+    linear-gradient(92deg, rgba(6,7,15,0.86) 0%, rgba(6,7,15,0.45) 46%, rgba(6,7,15,0.12) 72%),
+    linear-gradient(to top, rgba(6,7,15,0.92) 0%, rgba(6,7,15,0.25) 34%, transparent 55%),
+    linear-gradient(to bottom, rgba(6,7,15,0.6) 0%, transparent 22%);
+}
+.hero-photo-inner {
+  position: relative; z-index: 2;
+  display: flex; flex-direction: column; justify-content: space-between;
+  width: 100%; padding-bottom: 56px;
+}
+.hero-photo-head { max-width: 720px; }
+.hero-photo-title {
+  font-size: clamp(52px, 7.5vw, 108px);
+  font-weight: 900; letter-spacing: -0.045em; line-height: 0.94;
+  color: #ffffff; margin: 22px 0 0;
+  text-shadow: 0 4px 40px rgba(0,0,0,0.35);
+}
+.hero-photo-foot {
+  display: flex; justify-content: space-between; align-items: flex-end;
+  gap: 40px; flex-wrap: wrap; margin-top: 48px;
+}
+.hero-photo-foot .live-strip { margin-top: 0; }
+.hero-photo-note { max-width: 430px; }
+.hero-photo-note p {
+  font-size: 15.5px; line-height: 1.55; color: rgba(238,241,251,0.82);
+  margin: 0 0 20px;
+}
+.hero-photo-note .hero-cta { justify-content: flex-start; margin-bottom: 0; }
+
+/* Frosted glass transaction card */
+.glass-card {
+  position: absolute; right: 5%; top: 13%;
+  width: 320px; z-index: 3;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.10);
+  border: 1px solid rgba(255,255,255,0.25);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  box-shadow: 0 34px 90px -20px rgba(0,0,0,0.55), inset 0 1px 0 rgba(255,255,255,0.25);
+  padding: 18px 20px 14px;
+  color: #ffffff;
+}
+.glass-head {
+  display: flex; justify-content: space-between; align-items: center;
+  padding-bottom: 12px; margin-bottom: 4px;
+  border-bottom: 1px solid rgba(255,255,255,0.18);
+  font-family: var(--font-mono);
+}
+.glass-row {
+  display: flex; justify-content: space-between; align-items: baseline;
+  padding: 8px 0; font-size: 13.5px;
+  color: rgba(255,255,255,0.85);
+}
+.glass-row strong { font-weight: 700; color: #fff; font-variant-numeric: tabular-nums; }
+.glass-total { border-top: 1px solid rgba(255,255,255,0.18); margin-top: 2px; padding-top: 12px; font-size: 15px; }
+.glass-total strong { font-size: 21px; letter-spacing: -0.02em; }
+.glass-approved {
+  display: flex; align-items: center; gap: 8px;
+  margin: 10px 0 4px; padding: 10px 12px;
+  border-radius: 10px; font-size: 12.5px; font-weight: 700;
+  background: rgba(16,185,129,0.18); color: #6ff0c0;
+  border: 1px solid rgba(16,185,129,0.35);
+}
+.glass-approved i { font-size: 16px; }
+.glass-feed {
+  margin-top: 10px; padding-top: 10px;
+  border-top: 1px dashed rgba(255,255,255,0.15);
+  font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.04em;
+  color: rgba(255,255,255,0.55); min-height: 15px;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+@media (max-width: 1020px) {
+  .glass-card { position: static; width: 100%; max-width: 380px; margin: 36px 0 0; }
+  .hero-photo { min-height: 0; }
+}

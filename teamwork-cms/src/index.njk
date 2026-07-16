@@ -5,47 +5,41 @@ description: "Teamwork Commerce powers 30,000+ terminals across 40+ countries wi
 permalink: "/"
 ---
 <!-- ============ HERO ============ -->
-<section class="hero scene-ink hero-cinema">
+<section class="hero hero-photo">
   <div class="hero-bg"></div>
   <div class="hero-glow"></div>
 
-  <div class="container hero-cin-inner fade-up">
-    <span class="ch-eyebrow">Teamwork Commerce</span>
-    <h1 class="hero-cin-title">Retail. <span class="grad">Without friction.</span></h1>
-    <p class="hero-cin-sub">
-      One Point of Sale at the core. Every store, every channel, every country — built by retailers, for retailers.
-    </p>
-    <div class="hero-cta">
-      <a href="/contact/" class="btn btn-primary btn-lg">Book a demo <i class="ti ti-arrow-right"></i></a>
-      <a href="/platform/tcs/" class="btn btn-ghost btn-lg">Explore the platform</a>
-    </div>
-  </div>
+  <img class="hero-photo-bg" src="/assets/images/homepage/hero-store.jpg" alt="A Teamwork Commerce checkout at a jewelry counter — associate ringing up a customer with the customer-facing display">
+  <div class="hero-photo-scrim"></div>
 
-  <!-- HERO COMMAND DECK: product + live global ops feed -->
-  <div class="cmd-deck fade-up" style="animation-delay: 0.15s;">
-    <div class="hero-visual">
-      <div class="hero-devices-glow"></div>
-      <div class="hero-devices-stage">
-        <div class="hero-devices">
-          <div class="hero-device-shadow"></div>
-          <img src="/assets/images/homepage/hero-ipad.webp" alt="Teamwork Commerce Mobile POS on iPad — live checkout and cart" class="hero-device-ipad">
-          <img src="/assets/images/homepage/hero-iphone.webp" alt="Teamwork Commerce 121 Commerce AI product discovery on iPhone" class="hero-device-iphone">
-        </div>
-      </div>
-      <div class="hero-annot hero-annot-1"><span class="pulse-dot"></span> REG 04 · OPEN</div>
+  <div class="container hero-photo-inner">
+    <div class="hero-photo-head fade-up">
+      <span class="eyebrow"><span class="eyebrow-dot"></span> Built for enterprise retail</span>
+      <h1 class="hero-photo-title">Retail.<br>Without friction.</h1>
     </div>
 
-    <aside class="lf-panel" aria-label="A simulated feed of live Teamwork Commerce activity worldwide">
-      <div class="lf-head">
-        <span class="lf-live"><span class="pulse-dot"></span> LIVE · GLOBAL OPERATIONS</span>
+    <aside class="glass-card fade-up" style="animation-delay: 0.15s;" aria-label="A simulated live checkout on Teamwork POS">
+      <div class="glass-head">
+        <span class="lf-live"><span class="pulse-dot"></span> LIVE · REG 04</span>
         <span class="lf-clock" data-live-clock></span>
       </div>
-      <div class="lf-rows" id="heroFeed"></div>
-      <div class="lf-foot">
-        <span><strong data-live-tx>—</strong> transactions today</span>
-        <span><strong data-live-reg>30,412</strong> registers reporting</span>
-      </div>
+      <div class="glass-row"><span>Sale Items (3)</span><strong>$104.39</strong></div>
+      <div class="glass-row"><span>Taxes</span><strong>$15.11</strong></div>
+      <div class="glass-row glass-total"><span>Total</span><strong>$119.50</strong></div>
+      <div class="glass-approved"><i class="ti ti-circle-check-filled"></i> Tap to Pay · Approved</div>
+      <div class="glass-feed" data-live-line></div>
     </aside>
+
+    <div class="hero-photo-foot fade-up" style="animation-delay: 0.25s;">
+      {% include "live-strip.njk" %}
+      <div class="hero-photo-note">
+        <p>One Point of Sale at the core. Every store, every channel, every country — built by retailers, for retailers.</p>
+        <div class="hero-cta">
+          <a href="/contact/" class="btn btn-primary btn-lg">Book a demo <i class="ti ti-arrow-right"></i></a>
+          <a href="/platform/tcs/" class="btn btn-ghost btn-lg">Explore the platform</a>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
