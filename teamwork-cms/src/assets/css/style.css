@@ -2950,11 +2950,13 @@ main > .hero:first-child { margin-top: -72px; padding-top: 140px; }
 
 /* --- Nav blends into hero, solidifies on scroll --- */
 .nav {
-  background: transparent;
+  background: linear-gradient(to bottom, rgba(6,7,15,0.82) 0%, rgba(6,7,15,0.45) 60%, rgba(6,7,15,0) 100%);
   border-bottom: 1px solid transparent;
   backdrop-filter: none; -webkit-backdrop-filter: none;
   transition: background 0.35s ease, border-color 0.35s ease;
 }
+.nav .nav-inner { height: 84px; }
+.nav .nav-links { gap: 8px; }
 .nav.nav-scrolled {
   background: color-mix(in srgb, var(--bg) 82%, transparent);
   border-bottom: 1px solid var(--border);
