@@ -45,12 +45,15 @@ permalink: "/blog/"
   <div class="container">
     <div class="pillars-grid" id="blogGrid" style="grid-template-columns: repeat(3, 1fr);">
       {% for post in collections.blogpost %}
-      <a href="{{ post.url }}" class="pillar-card" data-category="{{ (post.data.category or 'Blog') | slugify }}" style="display: block; text-decoration: none;">
-        <div style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--brand-text); margin-bottom: 10px;">{{ post.data.category or "Blog" }}</div>
-        <h3 class="pillar-title">{{ post.data.title }}</h3>
-        <p class="pillar-desc">{{ post.data.dek or post.data.description }}</p>
-        <div style="font-size: 12px; color: var(--text-faint); margin-top: 10px; margin-bottom: 4px;">{{ post.data.date | formatDate }} · {{ post.templateContent | readingTime }}</div>
-        <span class="pillar-link">Read article <i class="ti ti-arrow-right"></i></span>
+      <a href="{{ post.url }}" class="pillar-card blog-idx-card" data-category="{{ (post.data.category or 'Blog') | slugify }}" style="display: block; text-decoration: none;">
+        <div class="blog-idx-img"><img src="/assets/images/blog/real/{{ post.fileSlug }}.jpg" alt="" loading="lazy"></div>
+        <div class="blog-idx-body">
+          <div style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--brand-text); margin-bottom: 10px;">{{ post.data.category or "Blog" }}</div>
+          <h3 class="pillar-title">{{ post.data.title }}</h3>
+          <p class="pillar-desc">{{ post.data.dek or post.data.description }}</p>
+          <div style="font-size: 12px; color: var(--text-faint); margin-top: 10px; margin-bottom: 4px;">{{ post.data.date | formatDate }} · {{ post.templateContent | readingTime }}</div>
+          <span class="pillar-link">Read article <i class="ti ti-arrow-right"></i></span>
+        </div>
       </a>
       {% endfor %}
     </div>
