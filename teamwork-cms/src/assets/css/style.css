@@ -3218,13 +3218,16 @@ main > .hero:first-child { margin-top: -85px; padding-top: 150px; }
 
 /* --- Wide centered fan (reference layout, iPads kept) --- */
 .fanw-stage { position: relative; margin-top: 48px; }
-.fanw { position: relative; height: clamp(240px, 34vw, 470px); }
+.fanw { position: relative; height: clamp(190px, 24vw, 340px); }
 .fanw-card {
   position: absolute; left: 50%; top: 0;
   width: clamp(200px, 26vw, 360px);
   filter: drop-shadow(0 26px 50px rgba(0,0,0,0.45));
-  transition: transform 0.55s cubic-bezier(0.2, 0.7, 0.3, 1);
+  transition: transform 0.75s cubic-bezier(0.2, 0.7, 0.3, 1);
 }
+.fanw-card:nth-child(1), .fanw-card:nth-child(7) { transition-delay: 0.10s; }
+.fanw-card:nth-child(2), .fanw-card:nth-child(6) { transition-delay: 0.06s; }
+.fanw-card:nth-child(3), .fanw-card:nth-child(5) { transition-delay: 0.03s; }
 .fanw-card:nth-child(1) { transform: translateX(-50%) translateX(-135%) translateY(13%) rotate(-14deg); z-index: 1; }
 .fanw-card:nth-child(2) { transform: translateX(-50%) translateX(-90%)  translateY(6%)  rotate(-9deg);  z-index: 2; }
 .fanw-card:nth-child(3) { transform: translateX(-50%) translateX(-45%)  translateY(1.5%) rotate(-4deg); z-index: 3; }
@@ -3268,3 +3271,11 @@ main > .hero:first-child { margin-top: -85px; padding-top: 150px; }
   .fanw-card { transition: none; }
   .fan-bubble .pulse-dot { animation: none; }
 }
+
+/* Fan opens from a stacked deck when scrolled into view (video reference).
+   Keyed to the reveal system: no-JS / reduced-motion users see the open fan. */
+.fanw.reveal .fanw-card { opacity: 1; }
+.fanw.reveal:not(.in-view) .fanw-card {
+  transform: translateX(-50%) translateY(4%) rotate(0deg);
+}
+.fanw.reveal { opacity: 1; transform: none; }
