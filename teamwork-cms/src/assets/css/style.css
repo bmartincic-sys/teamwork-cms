@@ -3056,3 +3056,47 @@ main > .hero:first-child { margin-top: -85px; padding-top: 150px; }
 .cs-arrow-prev { left: 18px; }
 .cs-arrow-next { right: 18px; }
 @media (max-width: 700px) { .cs-arrow { display: none; } }
+
+/* =====================================================
+   INCLUDED TILES — visual tile + pill label, one row
+   ===================================================== */
+.inc-row {
+  display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px;
+  margin-top: 64px;
+}
+.inc-tile { display: flex; flex-direction: column; gap: 12px; text-decoration: none; color: inherit; }
+.inc-visual {
+  aspect-ratio: 1 / 1.06;
+  border-radius: 20px;
+  background:
+    radial-gradient(120% 100% at 50% 0%, var(--brand-soft), transparent 70%),
+    var(--bg-elevated);
+  border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  transition: transform 0.3s cubic-bezier(0.2, 0.7, 0.3, 1), box-shadow 0.3s ease;
+}
+.inc-visual i {
+  font-size: 58px; line-height: 1;
+  background: var(--gradient);
+  -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+}
+.inc-tile:hover .inc-visual {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 50px -16px rgba(36, 60, 220, 0.35);
+}
+.inc-pill {
+  display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  padding: 13px 18px; border-radius: 100px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-strong);
+  font-size: 13.5px; font-weight: 700; letter-spacing: -0.01em;
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+  white-space: nowrap; overflow: hidden;
+}
+.inc-pill span { overflow: hidden; text-overflow: ellipsis; }
+.inc-pill i { flex: none; font-size: 15px; }
+.inc-tile:hover .inc-pill {
+  background: var(--gradient); color: #ffffff; border-color: transparent;
+}
+@media (max-width: 1020px) { .inc-row { grid-template-columns: repeat(2, 1fr); } .inc-row .inc-tile:last-child { grid-column: 1 / -1; } }
+@media (max-width: 560px) { .inc-row { grid-template-columns: 1fr; } }
