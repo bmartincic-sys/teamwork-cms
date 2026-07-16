@@ -3100,3 +3100,55 @@ main > .hero:first-child { margin-top: -85px; padding-top: 150px; }
 }
 @media (max-width: 1020px) { .inc-row { grid-template-columns: repeat(2, 1fr); } .inc-row .inc-tile:last-child { grid-column: 1 / -1; } }
 @media (max-width: 560px) { .inc-row { grid-template-columns: 1fr; } }
+
+/* =====================================================
+   DUO CARDS — editorial two-up (121 + RFID)
+   ===================================================== */
+.duo-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px;
+  max-width: 1080px; margin: 64px auto 0;
+}
+.duo-card {
+  display: flex; flex-direction: column;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 22px; overflow: hidden;
+  text-decoration: none; color: inherit;
+  transition: transform 0.3s cubic-bezier(0.2, 0.7, 0.3, 1), box-shadow 0.3s ease;
+}
+.duo-card:hover { transform: translateY(-6px); box-shadow: 0 30px 70px -20px rgba(36, 60, 220, 0.35); }
+.duo-img {
+  aspect-ratio: 16 / 10.5; overflow: hidden;
+  display: flex; align-items: center; justify-content: center;
+}
+.duo-img-tile {
+  background:
+    radial-gradient(120% 110% at 50% 0%, var(--brand-soft), transparent 65%),
+    var(--bg-deep);
+  padding: 26px 30px 0;
+}
+.duo-img img { width: 100%; height: 100%; object-fit: contain; object-position: bottom; }
+.duo-body { padding: 26px 28px 28px; }
+.duo-kicker {
+  font-family: var(--font-mono); font-size: 11px; font-weight: 600;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--text-faint); margin-bottom: 12px;
+}
+.duo-body h3 {
+  font-size: clamp(20px, 2vw, 25px); font-weight: 900; letter-spacing: -0.025em; line-height: 1.1;
+  margin: 0 0 10px; color: var(--text);
+}
+.duo-body p { font-size: 14px; color: var(--text-muted); line-height: 1.6; margin: 0 0 18px; }
+.duo-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+.duo-tags span {
+  font-size: 11.5px; font-weight: 700; padding: 5px 12px; border-radius: 100px;
+}
+.duo-tags .t-ai { background: rgba(36,125,255,0.16); color: #8ab8ff; border: 1px solid rgba(36,125,255,0.3); }
+.duo-tags .t-plus { background: rgba(138,10,221,0.16); color: #d9a5ff; border: 1px solid rgba(138,10,221,0.3); }
+.duo-tags .t-core { background: rgba(16,185,129,0.14); color: #5fe0b0; border: 1px solid rgba(16,185,129,0.3); }
+.duo-card-flip .duo-img-tile { padding: 0 30px 26px; }
+.duo-card-flip .duo-img img { object-position: top; }
+@media (max-width: 860px) {
+  .duo-grid { grid-template-columns: 1fr; }
+  .duo-card-flip { flex-direction: column-reverse; }
+}
