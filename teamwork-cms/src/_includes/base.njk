@@ -358,6 +358,63 @@ if (window.netlifyIdentity) {
     if (next) next.addEventListener("click", function () { rail.scrollBy({ left: step(), behavior: "smooth" }); });
   });
 
+  // Case study cards: play the story's video as the card background on hover.
+  // The photo only crossfades to the video once playback has actually started.
+  if (window.matchMedia("(hover: hover)").matches && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    var csPlayers = [];
+    window.addEventListener("message", function (e) {
+      if (e.origin.indexOf("youtube") === -1) return;
+      var data;
+      try { data = JSON.parse(e.data); } catch (err) { return; }
+      if (!data || !data.info || data.info.playerState === undefined) return;
+      csPlayers.forEach(function (p) {
+        if (p.iframe && p.iframe.contentWindow === e.source && data.info.playerState === 1) {
+          if (p.card.matches(":hover")) p.iframe.classList.add("cs-video-on");
+        }
+      });
+    });
+    document.querySelectorAll(".cs-card[data-video]").forEach(function (card) {
+      var id = card.getAttribute("data-video");
+      var entry = { card: card, iframe: null };
+      csPlayers.push(entry);
+      var hoverTimer = null;
+      function command(func) {
+        if (entry.iframe && entry.iframe.contentWindow) {
+          entry.iframe.contentWindow.postMessage(JSON.stringify({ event: "command", func: func, args: [] }), "*");
+        }
+      }
+      card.addEventListener("mouseenter", function () {
+        hoverTimer = setTimeout(function () {
+          if (!entry.iframe) {
+            var iframe = document.createElement("iframe");
+            iframe.className = "cs-video";
+            iframe.setAttribute("tabindex", "-1");
+            iframe.setAttribute("aria-hidden", "true");
+            iframe.allow = "autoplay";
+            iframe.src = "https://www.youtube-nocookie.com/embed/" + id +
+              "?autoplay=1&mute=1&controls=0&loop=1&playlist=" + id +
+              "&playsinline=1&rel=0&iv_load_policy=3&enablejsapi=1";
+            iframe.addEventListener("load", function () {
+              iframe.contentWindow.postMessage(JSON.stringify({ event: "listening", id: id }), "*");
+            });
+            entry.iframe = iframe;
+            card.insertBefore(iframe, card.querySelector(".cs-scrim"));
+          } else {
+            command("mute");
+            command("playVideo");
+          }
+        }, 180);
+      });
+      card.addEventListener("mouseleave", function () {
+        clearTimeout(hoverTimer);
+        if (entry.iframe) {
+          entry.iframe.classList.remove("cs-video-on");
+          command("pauseVideo");
+        }
+      });
+    });
+  }
+
   var captabs = document.querySelectorAll(".captab");
   var capPanels = document.querySelectorAll(".captab-panel");
   captabs.forEach(function (tab) {
