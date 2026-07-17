@@ -30,7 +30,6 @@ navOrder: 1.5
       <a href="/contact/" class="btn btn-primary btn-lg">Book a demo <i class="ti ti-arrow-right"></i></a>
       <a href="#global-operations" class="btn btn-ghost btn-lg">View compliance map</a>
     </div>
-    {% include "live-strip.njk" %}
   </div>
 
   <!-- HERO PRODUCT MOCKUP: real device screenshot -->
@@ -52,19 +51,19 @@ navOrder: 1.5
   <div class="container">
     <div class="ticker-inner">
       <div class="ticker-item">
-        <div class="ticker-value gradient-text">30<span style="font-size: 22px;">s</span></div>
+        <div class="ticker-value">30<span style="font-size: 22px;">s</span></div>
         <div class="ticker-label">Avg transaction</div>
       </div>
       <div class="ticker-item">
-        <div class="ticker-value gradient-text">99.99<span style="font-size: 22px;">%</span></div>
+        <div class="ticker-value">99.99<span style="font-size: 22px;">%</span></div>
         <div class="ticker-label">Uptime</div>
       </div>
       <div class="ticker-item">
-        <div class="ticker-value gradient-text">40<span style="font-size: 22px;">+</span></div>
+        <div class="ticker-value">40<span style="font-size: 22px;">+</span></div>
         <div class="ticker-label">Countries localized</div>
       </div>
       <div class="ticker-item">
-        <div class="ticker-value gradient-text">&lt;5<span style="font-size: 22px;">min</span></div>
+        <div class="ticker-value">&lt;5<span style="font-size: 22px;">min</span></div>
         <div class="ticker-label">Associate on registers</div>
       </div>
     </div>
@@ -148,7 +147,7 @@ navOrder: 1.5
       </div>
       <div class="feature-visual">
         <div class="worldmap-wrap">
-          {% include "world-map.njk" %}
+          {% include "world-map-live.njk" %}
         </div>
       </div>
     </div>
@@ -174,9 +173,6 @@ navOrder: 1.5
       <!-- Real RFID hardware: Bluebird sled + Teamwork RFID app -->
       <div class="feature-visual">
         <div class="rfid-shot">
-          <div class="rfid-live" aria-label="A simulated live RFID count">
-            <span class="pulse-dot"></span> LIVE COUNT · <strong data-live-scan>0</strong> items · zone <span data-live-zone>1</span>
-          </div>
           <img src="/assets/images/homepage/rfid-sled.webp" alt="Bluebird RFID sled readers with iPhones running the Teamwork Commerce RFID app — live scanning and Daily Count zones">
           <div class="rfid-shot-caption">The real thing — Teamwork RFID running on iPhone-mounted sled readers.</div>
         </div>
@@ -375,7 +371,7 @@ navOrder: 1.5
     <div class="feature-row">
       <div class="feature-text">
         <span class="section-eyebrow">With Plus</span>
-        <h2>Where AI extends <span class="gradient-text">Mobile POS.</span></h2>
+        <h2>Where AI extends <span class="callout">Mobile POS.</span></h2>
         <p>Everything above is included with Standard at no extra cost. Plus is a paid upgrade that layers AI on top of the same POS — nothing new to install, nothing new to learn.</p>
         <ul class="feature-bullets">
           <li>AI Empowerment</li>

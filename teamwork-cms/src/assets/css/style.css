@@ -2593,10 +2593,9 @@ details[open] summary { color: var(--brand-text); }
 main > .hero:first-child { margin-top: -85px; padding-top: 230px; }
 .hero .hero-bg { opacity: 0.35; }
 .hero h1 { color: #ffffff; }
-.hero h1 .accent, .hero h1 .friction {
-  background: linear-gradient(90deg, #6aa8ff 0%, #b48cff 55%, #ff8ae0 100%);
-  -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
-}
+.hero h1 .accent, .hero h1 .friction { color: #6aa8ff; }
+.callout { color: #6aa8ff; }
+[data-theme="light"] .callout { color: var(--brand-text); }
 .hero .hero-sub { color: rgba(238,241,251,0.75); }
 .hero .eyebrow {
   color: #cdd9ff; background: rgba(255,255,255,0.07);
