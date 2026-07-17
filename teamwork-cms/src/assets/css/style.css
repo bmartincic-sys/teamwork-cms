@@ -2845,7 +2845,18 @@ main > .hero:first-child { margin-top: -85px; padding-top: 230px; }
 }
 
 /* --- Stat band (replaces boxed ticker) --- */
-.statband { padding: 84px 0 72px; }
+.statband { padding: 0; }
+.statband .container > .specs-row {
+  position: relative; overflow: hidden;
+  padding: 64px 48px 58px;
+  border-radius: 26px;
+  background:
+    radial-gradient(120% 160% at 12% 0%, rgba(36,125,255,0.14), transparent 55%),
+    radial-gradient(120% 160% at 88% 100%, rgba(138,10,221,0.12), transparent 55%),
+    var(--bg-elevated);
+  border: 1px solid var(--border);
+  box-shadow: 0 30px 70px -28px rgba(0,0,0,0.5);
+}
 .specs-row-5 { grid-template-columns: repeat(5, 1fr); max-width: none; margin-top: 0; gap: 24px; }
 .specs-row-5 .spec-big { font-size: clamp(30px, 3.4vw, 52px); }
 @media (max-width: 960px) { .specs-row-5 { grid-template-columns: repeat(2, 1fr); gap: 32px 20px; } }
