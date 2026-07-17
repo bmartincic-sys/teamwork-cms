@@ -368,13 +368,20 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* ============ STAT TICKER ============ */
-.ticker { padding: 72px 0 88px; position: relative; }
+.ticker { padding: 64px 0 72px; position: relative; }
 .ticker-inner {
-  display: grid; grid-template-columns: repeat(5, 1fr);
-  border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+  display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr);
+  position: relative; overflow: hidden;
+  padding: 56px 40px; border-radius: 26px;
+  background:
+    radial-gradient(120% 160% at 12% 0%, rgba(36,125,255,0.14), transparent 55%),
+    radial-gradient(120% 160% at 88% 100%, rgba(138,10,221,0.12), transparent 55%),
+    var(--bg-elevated);
+  border: 1px solid var(--border);
+  box-shadow: 0 30px 70px -28px rgba(0,0,0,0.5);
 }
 .ticker-item {
-  padding: 32px 24px; text-align: left;
+  padding: 8px 28px; text-align: left;
   border-right: 1px solid var(--border); position: relative;
 }
 .ticker-item:last-child { border-right: none; }
@@ -389,9 +396,9 @@ a { color: inherit; text-decoration: none; }
   text-transform: uppercase; letter-spacing: 0.1em;
 }
 @media (max-width: 900px) {
-  .ticker-inner { grid-template-columns: repeat(2, 1fr); }
+  .ticker-inner { grid-auto-flow: row; grid-auto-columns: auto; grid-template-columns: repeat(2, 1fr); padding: 36px 24px; gap: 20px 0; }
+  .ticker-item { border-right: none; padding: 8px 16px; }
   .ticker-item:nth-child(2n) { border-right: none; }
-  .ticker-item { border-bottom: 1px solid var(--border); }
   .ticker-value { font-size: 36px; }
 }
 
