@@ -1274,6 +1274,12 @@ a { color: inherit; text-decoration: none; }
 .svc-body { padding: 22px 22px 20px; display: flex; flex-direction: column; flex: 1; }
 .svc-title { font-size: 16px; font-weight: 900; letter-spacing: -0.01em; color: var(--text); margin-bottom: 8px; }
 .svc-desc { font-size: 13px; line-height: 1.55; color: var(--text-muted); margin: 0 0 16px; flex: 1; }
+.svc-list { list-style: none; margin: 0 0 16px; padding: 0; flex: 1; display: flex; flex-direction: column; gap: 8px; }
+.svc-list li { position: relative; padding-left: 22px; font-size: 13px; line-height: 1.45; color: var(--text-muted); }
+.svc-list li::before {
+  content: ''; position: absolute; left: 4px; top: 6px; width: 6px; height: 6px;
+  border-radius: 50%; background: var(--brand-blue);
+}
 .svc-plus {
   border-radius: 12px; padding: 13px 15px;
   background: var(--gradient-soft); border: 1px solid color-mix(in srgb, var(--brand-purple) 28%, transparent);
