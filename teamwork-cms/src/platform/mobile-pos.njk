@@ -408,25 +408,33 @@ navOrder: 1.5
 
 {% include "roi-bento.njk" %}
 
-<!-- ============ PLATFORM HIGHLIGHTS (horizontal) ============ -->
-<section style="padding: 64px 0; background: var(--bg-deep); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+<!-- ============ PLATFORM HIGHLIGHTS (aggressive callouts) ============ -->
+<section class="section pfh-section">
   <div class="container">
-    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; text-align: center;">
-      <div>
-        <div style="font-size: 32px; font-weight: 900; letter-spacing: -0.025em; color: var(--text); margin-bottom: 6px;">iOS Native</div>
-        <div style="font-size: 13px; color: var(--text-muted); line-height: 1.5;">Not a web wrapper — 100% native iOS for speed, security, and the UX your brand deserves.</div>
+    <div class="section-header">
+      <div class="section-eyebrow">Built Right</div>
+      <h2 class="section-title">Enterprise-grade, by <span class="callout">design.</span></h2>
+    </div>
+    <div class="pfh-grid">
+      <div class="pfh-card">
+        <div class="pfh-icon"><i class="ti ti-brand-apple"></i></div>
+        <div class="pfh-value">100% iOS-native</div>
+        <p>Not a web wrapper. Built for the speed, security, and UX your brand deserves.</p>
       </div>
-      <div>
-        <div style="font-size: 32px; font-weight: 900; letter-spacing: -0.025em; color: var(--text); margin-bottom: 6px;">Open APIs</div>
-        <div style="font-size: 13px; color: var(--text-muted); line-height: 1.5;">Platform-agnostic. Any e-commerce (Salesforce, Adobe, BigCommerce), any payment processor, any ERP. No lock-in.</div>
+      <div class="pfh-card">
+        <div class="pfh-icon"><i class="ti ti-plug-connected"></i></div>
+        <div class="pfh-value">Zero lock-in</div>
+        <p>Open APIs, platform-agnostic. Any e-commerce, any payment processor, any ERP.</p>
       </div>
-      <div>
-        <div style="font-size: 32px; font-weight: 900; letter-spacing: -0.025em; color: var(--text); margin-bottom: 6px;"><5 min</div>
-        <div style="font-size: 13px; color: var(--text-muted); line-height: 1.5;">Associate training. The UI follows familiar iOS design patterns your team already knows. Virtually zero learning curve.</div>
+      <div class="pfh-card">
+        <div class="pfh-icon"><i class="ti ti-bolt"></i></div>
+        <div class="pfh-value">&lt;5 min to trained</div>
+        <p>The iOS interface your associates already know. Virtually zero learning curve.</p>
       </div>
-      <div>
-        <div style="font-size: 32px; font-weight: 900; letter-spacing: -0.025em; color: var(--text); margin-bottom: 6px;">150+</div>
-        <div style="font-size: 13px; color: var(--text-muted); line-height: 1.5;">Pre-configured reports in <a href="/platform/analytics/" style="color: var(--brand-text);">Analytics</a>. Live multi-store monitoring, custom KPIs, and unified inventory health.</div>
+      <div class="pfh-card">
+        <div class="pfh-icon"><i class="ti ti-chart-bar"></i></div>
+        <div class="pfh-value">150+ reports built in</div>
+        <p>Live multi-store monitoring, custom KPIs, and unified inventory health in <a href="/platform/analytics/">Analytics</a>.</p>
       </div>
     </div>
   </div>
