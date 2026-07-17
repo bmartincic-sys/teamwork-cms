@@ -1307,11 +1307,8 @@ a { color: inherit; text-decoration: none; }
 .svc-tab-panel.active { display: grid; animation: capFade .25s ease; }
 .svc-viewer { grid-template-columns: 1.35fr 1fr; gap: 44px; align-items: center; }
 .svc-viewer-media {
-  border-radius: 18px; overflow: hidden; padding: 28px;
   min-height: 440px;
   display: flex; align-items: center; justify-content: center;
-  background: radial-gradient(120% 120% at 18% 0%, var(--brand-soft), transparent 60%), var(--bg-deep);
-  border: 1px solid var(--border);
 }
 .svc-viewer-media img {
   display: block; height: 384px; width: auto; max-width: 100%; object-fit: contain;
