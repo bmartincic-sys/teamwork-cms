@@ -3475,3 +3475,6 @@ main > .hero:first-child { margin-top: -85px; padding-top: 230px; }
 @media (prefers-reduced-motion: reduce) {
   .frag-lines line, .frag-breaks text { animation: none; }
 }
+
+/* Hero foot: CTA bottom-left when no live strip */
+.hero-foot-left { justify-content: flex-start; }
