@@ -1267,6 +1267,10 @@ a { color: inherit; text-decoration: none; }
 .svc-shot-device { height: 190px; align-items: flex-end; }
 .svc-shot-device img { width: 88%; height: 108%; object-fit: contain; object-position: bottom center; }
 .svc-shot-device img.svc-shot-portrait { width: auto; height: 116%; }
+/* Flat UI screenshot — bigger, edge-to-edge, anchored to top */
+.svc-shot-flat { height: 240px; padding: 0; background: #f4f5f8; }
+.svc-shot-flat::after { display: none; }
+.svc-shot-flat img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
 .svc-body { padding: 22px 22px 20px; display: flex; flex-direction: column; flex: 1; }
 .svc-title { font-size: 16px; font-weight: 900; letter-spacing: -0.01em; color: var(--text); margin-bottom: 8px; }
 .svc-desc { font-size: 13px; line-height: 1.55; color: var(--text-muted); margin: 0 0 16px; flex: 1; }
