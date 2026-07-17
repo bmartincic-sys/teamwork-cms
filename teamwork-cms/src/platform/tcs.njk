@@ -115,13 +115,13 @@ navOrder: 1
         <p class="layer-desc">Shared services that manage product information, customer accounts, identity, and security — and power the mobile and web front ends your team uses.</p>
       </div>
       <div class="svc-viewer-wrap">
-        <div class="captabs-nav" role="tablist" aria-label="Platform Services">
-          <button class="captab active" data-captab="tab-pxp" role="tab" aria-selected="true"><i class="ti ti-box"></i> PXP — Products</button>
-          <button class="captab" data-captab="tab-cxp" role="tab" aria-selected="false"><i class="ti ti-users"></i> CXP — Customers</button>
-          <button class="captab" data-captab="tab-tap" role="tab" aria-selected="false"><i class="ti ti-shield-lock"></i> TAP — Admin</button>
+        <div class="svc-tabs" role="tablist" aria-label="Platform Services">
+          <button class="svc-tab active" data-target="tab-pxp" role="tab" aria-selected="true"><i class="ti ti-box"></i> PXP — Products</button>
+          <button class="svc-tab" data-target="tab-cxp" role="tab" aria-selected="false"><i class="ti ti-users"></i> CXP — Customers</button>
+          <button class="svc-tab" data-target="tab-tap" role="tab" aria-selected="false"><i class="ti ti-shield-lock"></i> TAP — Admin</button>
         </div>
 
-        <div id="tab-pxp" class="captab-panel svc-viewer active" role="tabpanel">
+        <div id="tab-pxp" class="svc-tab-panel svc-viewer active" role="tabpanel">
           <div class="svc-viewer-media"><img src="/assets/images/homepage/tcs-svc-pxp.webp" alt="PXP New Product screen — AI auto-generating product descriptions and enrichments"></div>
           <div class="svc-viewer-text">
             <div class="svc-row-eyebrow">Platform Service</div>
@@ -139,7 +139,7 @@ navOrder: 1
           </div>
         </div>
 
-        <div id="tab-cxp" class="captab-panel svc-viewer" role="tabpanel">
+        <div id="tab-cxp" class="svc-tab-panel svc-viewer" role="tabpanel">
           <div class="svc-viewer-media"><img src="/assets/images/homepage/tcs-svc-cxp.webp" alt="CXP customer self-registration form — Tell us a little about you"></div>
           <div class="svc-viewer-text">
             <div class="svc-row-eyebrow">Platform Service</div>
@@ -157,7 +157,7 @@ navOrder: 1
           </div>
         </div>
 
-        <div id="tab-tap" class="captab-panel svc-viewer" role="tabpanel">
+        <div id="tab-tap" class="svc-tab-panel svc-viewer" role="tabpanel">
           <div class="svc-viewer-media"><img src="/assets/images/homepage/tcs-svc-tap.webp" alt="TAP administration — device record with users, roles, and TAP privileges"></div>
           <div class="svc-viewer-text">
             <div class="svc-row-eyebrow">Platform Service</div>
@@ -184,11 +184,17 @@ navOrder: 1
         <h3 class="layer-title">Mobile Applications</h3>
         <p class="layer-desc">The day-to-day tools of the store — TEAMMATE and POS, both running on the same platform services so every screen agrees on products, customers, and identity.</p>
       </div>
-      <div class="svc-grid-2">
-        <a href="/platform/teammate/" class="svc-card">
-          <div class="svc-shot svc-shot-device"><img class="svc-shot-portrait" src="/assets/images/homepage/teammate-card.webp" alt="The TEAMMATE app on iPhone — biometric sign-in for store associates"></div>
-          <div class="svc-body">
-            <h3 class="svc-title">TEAMMATE</h3>
+      <div class="svc-viewer-wrap">
+        <div class="svc-tabs" role="tablist" aria-label="Mobile Applications">
+          <button class="svc-tab active" data-target="tab-teammate" role="tab" aria-selected="true"><i class="ti ti-id-badge-2"></i> TEAMMATE</button>
+          <button class="svc-tab" data-target="tab-pos" role="tab" aria-selected="false"><i class="ti ti-device-tablet"></i> POS</button>
+        </div>
+
+        <div id="tab-teammate" class="svc-tab-panel svc-viewer active" role="tabpanel">
+          <div class="svc-viewer-media"><img src="/assets/images/homepage/teammate-card.webp" alt="The TEAMMATE app on iPhone — biometric sign-in for store associates"></div>
+          <div class="svc-viewer-text">
+            <div class="svc-row-eyebrow">Mobile Application</div>
+            <h3>TEAMMATE — The associate app</h3>
             <ul class="svc-list">
               <li>Secure mobile access to daily associate tools</li>
               <li>Rotating QR-code login — no shared passwords</li>
@@ -198,12 +204,15 @@ navOrder: 1
               <div class="svc-plus-head"><span class="svc-plus-badge">PLUS</span><span class="svc-plus-lbl">Adds</span></div>
               <div class="svc-plus-list">AI Empowerment · Product Discovery · Product Training · Operational Training</div>
             </div>
+            <a href="/platform/teammate/" class="pillar-link" style="margin-top:16px;">Explore TEAMMATE <i class="ti ti-arrow-right"></i></a>
           </div>
-        </a>
-        <a href="/platform/mobile-pos/" class="svc-card">
-          <div class="svc-shot svc-shot-device"><img src="/assets/images/homepage/tcs-svc-pos.webp" alt="Teamwork POS on iPad — a sales receipt with cart items and one-tap pay"></div>
-          <div class="svc-body">
-            <h3 class="svc-title">POS</h3>
+        </div>
+
+        <div id="tab-pos" class="svc-tab-panel svc-viewer" role="tabpanel">
+          <div class="svc-viewer-media"><img src="/assets/images/homepage/tcs-svc-pos.webp" alt="Teamwork POS on iPad — a sales receipt with cart items and one-tap pay"></div>
+          <div class="svc-viewer-text">
+            <div class="svc-row-eyebrow">Mobile Application</div>
+            <h3>POS — Point of sale</h3>
             <ul class="svc-list">
               <li>Modern point of sale, built on TCS</li>
               <li>Handles every retail transaction</li>
@@ -213,8 +222,9 @@ navOrder: 1
               <div class="svc-plus-head"><span class="svc-plus-badge">PLUS</span><span class="svc-plus-lbl">Adds</span></div>
               <div class="svc-plus-list">AI Empowerment · Product Discovery · 121 Clienteling</div>
             </div>
+            <a href="/platform/mobile-pos/" class="pillar-link" style="margin-top:16px;">Explore POS <i class="ti ti-arrow-right"></i></a>
           </div>
-        </a>
+        </div>
       </div>
     </div>
   </div>
@@ -296,6 +306,25 @@ navOrder: 1
     </div>
   </div>
 </section>
+
+<script>
+(function () {
+  document.querySelectorAll(".svc-tabs").forEach(function (tabs) {
+    var wrap = tabs.closest(".svc-viewer-wrap");
+    var buttons = tabs.querySelectorAll(".svc-tab");
+    buttons.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        buttons.forEach(function (b) { b.classList.remove("active"); b.setAttribute("aria-selected", "false"); });
+        wrap.querySelectorAll(":scope > .svc-tab-panel").forEach(function (p) { p.classList.remove("active"); });
+        btn.classList.add("active");
+        btn.setAttribute("aria-selected", "true");
+        var target = document.getElementById(btn.getAttribute("data-target"));
+        if (target) target.classList.add("active");
+      });
+    });
+  });
+})();
+</script>
 
 <!-- ============ FINAL CTA ============ -->
 <section class="final-cta">
