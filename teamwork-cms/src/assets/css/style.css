@@ -3427,13 +3427,13 @@ main > .hero:first-child { margin-top: -85px; padding-top: 230px; }
 .frag-art { position: relative; width: 520px; height: 380px; margin-left: auto; }
 .frag-shard {
   position: absolute;
-  background-image: url('/assets/images/homepage/fan/pos-fan-1.webp');
+  background-image: url('/assets/images/homepage/frag-art.jpg');
   background-size: 520px 356px;
-  background-color: #fff;
+  background-color: #10131f;
   border-radius: 10px;
   border: 1px solid rgba(255,255,255,0.14);
   box-shadow: 0 20px 44px -14px rgba(0,0,0,0.55);
-  filter: saturate(0.72) brightness(0.92);
+  filter: saturate(0.9) brightness(0.96);
 }
 /* six shards of one interface, drifted apart */
 .fs-1 { width: 168px; height: 172px; left: 0;    top: 6px;   background-position: 0 0;          transform: rotate(-3.5deg) translate(-6px, 0); animation: fragDrift1 7s ease-in-out infinite alternate; }
