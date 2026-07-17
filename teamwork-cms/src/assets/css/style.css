@@ -2129,30 +2129,44 @@ details[open] summary { color: var(--brand-text); }
 }
 
 /* ============ PARTNER ADVANTAGE (editorial numbered panel) ============ */
-/* Platform Highlights — aggressive callout cards */
-.pfh-section { background: var(--bg-deep); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-.pfh-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 40px; }
-.pfh-card {
+/* Platform Highlights — flashy horizontal band */
+.pfh-band {
   position: relative; overflow: hidden;
-  padding: 32px 28px; border-radius: 20px;
-  background:
-    radial-gradient(120% 130% at 0% 0%, var(--brand-soft), transparent 60%),
-    var(--bg-elevated);
-  border: 1px solid var(--border);
-  transition: transform .3s cubic-bezier(.2,.7,.3,1), border-color .3s ease, box-shadow .3s ease;
+  padding: 84px 0;
+  background: var(--bg-deep);
+  border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
 }
-.pfh-card:hover { transform: translateY(-6px); border-color: var(--brand-blue); box-shadow: 0 28px 56px -26px rgba(36,125,255,0.55); }
-.pfh-icon {
-  width: 52px; height: 52px; border-radius: 14px; margin-bottom: 20px;
-  display: flex; align-items: center; justify-content: center; font-size: 24px; color: #fff;
-  background: var(--brand-blue);
-  box-shadow: 0 14px 30px -12px rgba(36,125,255,0.6);
+.pfh-band-glow {
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+  width: 900px; height: 320px; pointer-events: none;
+  background: radial-gradient(60% 100% at 50% 50%, rgba(36,125,255,0.18), rgba(138,10,221,0.10) 45%, transparent 72%);
+  filter: blur(30px);
 }
-.pfh-value { font-size: clamp(24px, 2.4vw, 30px); font-weight: 900; letter-spacing: -0.03em; line-height: 1.05; color: var(--text); margin-bottom: 12px; }
-.pfh-card p { font-size: 13.5px; line-height: 1.55; color: var(--text-muted); margin: 0; }
-.pfh-card a { color: var(--brand-text); font-weight: 700; }
-@media (max-width: 900px) { .pfh-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 520px) { .pfh-grid { grid-template-columns: 1fr; } }
+.pfh-row { position: relative; z-index: 1; display: grid; grid-template-columns: repeat(4, 1fr); }
+.pfh-col { position: relative; text-align: center; padding: 6px 30px; }
+.pfh-col::before {
+  content: ''; position: absolute; left: 0; top: 8px; bottom: 8px; width: 1px;
+  background: linear-gradient(180deg, transparent, rgba(124,80,245,0.5), transparent);
+}
+.pfh-col:first-child::before { display: none; }
+.pfh-big {
+  font-size: clamp(38px, 4.6vw, 60px); font-weight: 900; letter-spacing: -0.04em; line-height: 1;
+  margin-bottom: 14px;
+  background: linear-gradient(180deg, #ffffff 30%, #b9c4e8);
+  -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 40px rgba(36,125,255,0.25);
+}
+.pfh-desc { font-size: 13px; color: var(--text-muted); line-height: 1.55; max-width: 260px; margin: 0 auto; }
+.pfh-desc a { color: var(--brand-text); font-weight: 700; }
+@media (max-width: 900px) {
+  .pfh-row { grid-template-columns: repeat(2, 1fr); gap: 40px 0; }
+  .pfh-col:nth-child(-n+2)::before { display: var(--_x, block); }
+  .pfh-col:nth-child(odd)::before { display: none; }
+}
+@media (max-width: 520px) {
+  .pfh-row { grid-template-columns: 1fr; gap: 32px; }
+  .pfh-col::before { display: none; }
+}
 
 /* Partner Advantage — bold dark showcase moment */
 .padv-showcase {
