@@ -3160,8 +3160,7 @@ main > .hero:first-child { margin-top: -85px; padding-top: 230px; }
 .duo-tags .t-ai { background: rgba(36,125,255,0.16); color: #8ab8ff; border: 1px solid rgba(36,125,255,0.3); }
 .duo-tags .t-plus { background: rgba(138,10,221,0.16); color: #d9a5ff; border: 1px solid rgba(138,10,221,0.3); }
 .duo-tags .t-core { background: rgba(16,185,129,0.14); color: #5fe0b0; border: 1px solid rgba(16,185,129,0.3); }
-.duo-card-flip .duo-img-tile { padding: 0 30px 26px; }
-.duo-card-flip .duo-img img { object-position: top; }
+.duo-card-flip .duo-img-tile { padding: 0 30px; }
 @media (max-width: 1020px) {
   .duo-grid { grid-template-columns: 1fr; max-width: 560px; }
   .duo-card-flip { flex-direction: column-reverse; }
