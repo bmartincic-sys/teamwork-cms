@@ -3052,6 +3052,7 @@ main > .hero:first-child { margin-top: -85px; padding-top: 230px; }
   -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
 }
 .cs-more-label { font-size: 15px; color: rgba(238,241,251,0.8); font-weight: 600; margin: 6px 0 10px; max-width: 200px; }
+.cs-more-count.cs-more-phrase { font-size: 32px; line-height: 1.15; max-width: 240px; }
 .cs-arrow {
   position: absolute; top: 50%; transform: translateY(-50%); z-index: 4;
   width: 52px; height: 52px; border-radius: 50%;

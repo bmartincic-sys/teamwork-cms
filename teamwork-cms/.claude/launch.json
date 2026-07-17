@@ -4,8 +4,23 @@
     {
       "name": "Eleventy dev server",
       "runtimeExecutable": "npm",
-      "runtimeArgs": ["run", "start"],
+      "runtimeArgs": [
+        "run",
+        "start"
+      ],
       "port": 8080
+    },
+    {
+      "name": "static site",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8083",
+        "--directory",
+        "_site"
+      ],
+      "port": 8083
     }
   ]
 }
