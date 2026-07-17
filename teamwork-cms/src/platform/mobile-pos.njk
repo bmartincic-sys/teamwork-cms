@@ -66,25 +66,21 @@ navOrder: 1.5
   </div>
 </section>
 
-<!-- ============ CASE STUDIES ============ -->
-<section class="section cs-section" style="padding-top: 0;">
-  <div class="container">
-    <span class="ch-eyebrow">Case Studies</span>
-    <h2 class="ch-title ch-title-sm">Real stores, running this POS today.</h2>
-    <p class="ch-para">Not renders, not demos — the actual point of sale running in these stores.</p>
-  </div>
-
-  {% include "case-study-rail.njk" %}
-</section>
-
 <!-- ============ COMPLETE POS CAPABILITIES ============ -->
-<section class="section-tight">
+<section class="section caps-section">
   <div class="container">
-    <div class="section-header" style="margin-bottom: 40px;">
+   <div class="caps-highlight">
+   <div class="caps-top">
+    <div class="section-header caps-header">
       <div class="section-eyebrow">Complete POS Capabilities</div>
       <h2 class="section-title">Not just a terminal. A complete commerce engine.</h2>
       <p class="section-sub">Every workflow a modern store needs — transactions, inventory, fulfillment, clienteling, and operations — in one iOS-native interface, backed by native <a href="/platform/rfid/" style="color: var(--brand-text);">RFID</a> and real-time <a href="/platform/inventory-control/" style="color: var(--brand-text);">Inventory Control</a>.</p>
     </div>
+    <div class="caps-media">
+      <div class="caps-media-glow"></div>
+      <img src="/assets/images/homepage/tcs-svc-pos.webp" alt="Teamwork POS on iPhone and iPad — the associate home and a sales receipt with cart items and one-tap pay">
+    </div>
+   </div><!-- /caps-top -->
 
     <div class="captabs-nav" role="tablist" aria-label="POS capability groups">
       <button class="captab active" role="tab" aria-selected="true" data-captab="cap-selling"><i class="ti ti-credit-card"></i> Selling &amp; Transactions</button>
@@ -176,6 +172,7 @@ navOrder: 1.5
         </div>
       </div>
     </div>
+   </div><!-- /caps-highlight -->
   </div>
 </section>
 
@@ -472,6 +469,17 @@ navOrder: 1.5
       <span><i class="ti ti-point-filled"></i> One team, end to end</span>
     </div>
   </div>
+</section>
+
+<!-- ============ CASE STUDIES ============ -->
+<section class="section cs-section" style="padding-top: 0;">
+  <div class="container">
+    <span class="ch-eyebrow">Case Studies</span>
+    <h2 class="ch-title ch-title-sm">Real stores, running this POS today.</h2>
+    <p class="ch-para">Not renders, not demos — the actual point of sale running in these stores.</p>
+  </div>
+
+  {% include "case-study-rail.njk" %}
 </section>
 
 <!-- ============ SECURITY ============ -->
