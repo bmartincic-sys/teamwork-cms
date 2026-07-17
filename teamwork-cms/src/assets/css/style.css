@@ -3478,3 +3478,7 @@ main > .hero:first-child { margin-top: -85px; padding-top: 230px; }
 
 /* Hero foot: CTA bottom-left when no live strip */
 .hero-foot-left { justify-content: flex-start; }
+
+/* Hero: real pull-out screenshot in the glass frame */
+.glass-shot { padding: 12px; width: 300px; top: 9%; }
+.glass-shot img { width: 100%; height: auto; display: block; border-radius: 13px; }
