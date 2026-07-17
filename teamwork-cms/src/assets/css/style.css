@@ -3479,15 +3479,24 @@ main > .hero:first-child { margin-top: -85px; padding-top: 230px; }
 /* Hero foot: CTA bottom-left when no live strip */
 .hero-foot-left { justify-content: flex-start; }
 
-/* Hero: real pull-out screenshot as translucent glass */
+/* Hero: real pull-out screenshot as translucent glass, slight 3D */
 .glass-shot {
-  padding: 12px; width: 300px; top: 9%;
-  background: rgba(255,255,255,0.14);
+  padding: 0; width: 300px; top: 9%;
+  background: transparent;
+  border: none;
+  border-radius: 18px;
   backdrop-filter: blur(26px) saturate(170%);
   -webkit-backdrop-filter: blur(26px) saturate(170%);
+  transform: perspective(1300px) rotateY(-8deg) rotateX(2.5deg);
+  box-shadow:
+    0 40px 90px -24px rgba(0,0,0,0.65),
+    0 14px 34px -12px rgba(0,0,0,0.45),
+    -18px 0 44px -22px rgba(36,125,255,0.25);
+  transition: transform 0.6s cubic-bezier(0.2, 0.7, 0.3, 1);
 }
+.glass-shot:hover { transform: perspective(1300px) rotateY(-3deg) rotateX(1deg); }
 .glass-shot img {
-  width: 100%; height: auto; display: block; border-radius: 13px;
+  width: 100%; height: auto; display: block; border-radius: 18px;
 }
 .glass-shot::after {
   content: ''; position: absolute; inset: 0; border-radius: inherit; pointer-events: none;
