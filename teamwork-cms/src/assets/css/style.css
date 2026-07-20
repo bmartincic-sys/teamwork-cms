@@ -2263,11 +2263,15 @@ details[open] summary { color: var(--brand-text); }
 /* ============ CAPABILITY COLUMNS (grouped, all visible) ============ */
 .capcol-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 .capcol {
-  background: var(--bg-elevated);
+  background:
+    radial-gradient(120% 90% at 0% 0%, var(--brand-soft), transparent 55%),
+    var(--bg-elevated);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 22px 22px 8px;
+  transition: transform .3s cubic-bezier(.2,.7,.3,1), border-color .3s ease, box-shadow .3s ease;
 }
+.capcol:hover { transform: translateY(-5px); border-color: var(--brand-blue); box-shadow: 0 26px 52px -26px rgba(36,125,255,0.5); }
 .capcol-head {
   display: flex; align-items: center; gap: 8px;
   font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.09em;
@@ -2285,7 +2289,11 @@ details[open] summary { color: var(--brand-text); }
   font-size: 15px; font-weight: 800; letter-spacing: -0.015em; margin: 0 0 6px;
 }
 .capcol-item h3 i {
-  font-size: 16px; color: var(--brand-blue); flex: none;
+  font-size: 15px; color: #fff; flex: none;
+  width: 30px; height: 30px; border-radius: 9px;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: linear-gradient(150deg, var(--brand-blue), #8A0ADD);
+  box-shadow: 0 8px 18px -8px rgba(36,125,255,0.6);
 }
 .capcol-item p { font-size: 13px; color: var(--text-muted); line-height: 1.55; margin: 0; }
 @media (max-width: 900px) { .capcol-grid { grid-template-columns: 1fr; } }
