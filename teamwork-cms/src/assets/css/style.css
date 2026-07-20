@@ -1949,6 +1949,7 @@ details[open] summary { color: var(--brand-text); }
 .nav-dropdown a {
   display: block; padding: 8px 10px; border-radius: 8px;
   font-size: 14px; font-weight: 500; color: var(--text-muted);
+  white-space: nowrap;
 }
 .nav-dropdown a:hover { background: var(--bg-deep); color: var(--text); }
 
