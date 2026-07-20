@@ -58,6 +58,10 @@ permalink: "/platform/tap/"
         <p class="pillar-desc">Secure employee login through TEAMMATE.</p>
       </div>
     </div>
+    <div class="shot" style="max-width: 860px; margin: 34px auto 0;">
+      <div class="shot-glow"></div>
+      <img class="shot-img" src="/assets/images/homepage/tcs-svc-tap.webp" alt="TAP administration — a device record with users, roles, and TAP privileges in the left navigation">
+    </div>
   </div>
 </section>
 
@@ -79,6 +83,50 @@ permalink: "/platform/tap/"
   </div>
 </section>
 
+{% include "security.njk" %}
+
+{% include "tcs-family.njk" %}
+
+<!-- ============ FAQ (AEO: visible content matches FAQ schema) ============ -->
+<section class="section" style="padding-bottom: 80px;">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">Frequently Asked Questions</div>
+      <h2 class="section-title">Everything you need to know.</h2>
+    </div>
+    <div style="max-width: 800px; margin: 0 auto;">
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          What is TAP (Teamwork Administration Platform)?
+          <span class="faq-icon"><i class="ti ti-plus"></i></span>
+        </button>
+        <div class="faq-answer"><p>TAP is the secure administrative layer of Teamwork Commerce Services. It manages authentication and authorization, employee account access, and workforce management — controlling who can do what, safely.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          What's included with TAP Standard?
+          <span class="faq-icon"><i class="ti ti-plus"></i></span>
+        </button>
+        <div class="faq-answer"><p>User & role management, QR-code authentication, and single sign-on through TEAMMATE — included with every Teamwork Commerce Services deployment at no extra cost.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          What does Plus add to TAP?
+          <span class="faq-icon"><i class="ti ti-plus"></i></span>
+        </button>
+        <div class="faq-answer"><p>Plus is a paid upgrade that adds AI Empowerment, Product Training, and Operational Training — instant, AI-powered access to policies, procedures, and manuals.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          How does TAP work with TEAMMATE and POS?
+          <span class="faq-icon"><i class="ti ti-plus"></i></span>
+        </button>
+        <div class="faq-answer"><p>Associates sign in through TEAMMATE using TAP's rotating QR-code authentication. TAP's roles and permissions then control what each associate can do in POS and across the platform.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============ FINAL CTA ============ -->
 <section class="final-cta">
   <div class="container final-cta-inner">
@@ -90,3 +138,44 @@ permalink: "/platform/tap/"
     </div>
   </div>
 </section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is TAP (Teamwork Administration Platform)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TAP is the secure administrative layer of Teamwork Commerce Services. It manages authentication and authorization, employee account access, and workforce management — controlling who can do what, safely."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's included with TAP Standard?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "User & role management, QR-code authentication, and single sign-on through TEAMMATE — included with every Teamwork Commerce Services deployment at no extra cost."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does Plus add to TAP?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Plus is a paid upgrade that adds AI Empowerment, Product Training, and Operational Training — instant, AI-powered access to policies, procedures, and manuals."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does TAP work with TEAMMATE and POS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Associates sign in through TEAMMATE using TAP's rotating QR-code authentication. TAP's roles and permissions then control what each associate can do in POS and across the platform."
+      }
+    }
+  ]
+}
+</script>

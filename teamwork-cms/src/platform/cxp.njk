@@ -84,6 +84,48 @@ permalink: "/platform/cxp/"
   </div>
 </section>
 
+{% include "tcs-family.njk" %}
+
+<!-- ============ FAQ (AEO: visible content matches FAQ schema) ============ -->
+<section class="section" style="padding-bottom: 80px;">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">Frequently Asked Questions</div>
+      <h2 class="section-title">Everything you need to know.</h2>
+    </div>
+    <div style="max-width: 800px; margin: 0 auto;">
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          What is CXP (Customer Experience Platform)?
+          <span class="faq-icon"><i class="ti ti-plus"></i></span>
+        </button>
+        <div class="faq-answer"><p>CXP is the system of record for customer relationships within Teamwork Commerce Services — a complete upgrade to Secure CRM. It centralizes customer data with self-registration, multinational support, and cleansed customer data.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          What's included with CXP Standard?
+          <span class="faq-icon"><i class="ti ti-plus"></i></span>
+        </button>
+        <div class="faq-answer"><p>Customer self-registration and unified customer profiles — included with every Teamwork Commerce Services deployment at no extra cost.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          What does Plus add to CXP?
+          <span class="faq-icon"><i class="ti ti-plus"></i></span>
+        </button>
+        <div class="faq-answer"><p>Plus is a paid upgrade that adds AI Empowerment, Discovery Session History, and 121 Clienteling — personalized customer engagement through targeted recommendations and follow-up.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          What is 121 Clienteling?
+          <span class="faq-icon"><i class="ti ti-plus"></i></span>
+        </button>
+        <div class="faq-answer"><p>The Plus capability that turns CXP's customer intelligence into action: targeted recommendations and follow-up, delivered to associates at the point of sale as part of 121 Commerce.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============ FINAL CTA ============ -->
 <section class="final-cta">
   <div class="container final-cta-inner">
@@ -95,3 +137,44 @@ permalink: "/platform/cxp/"
     </div>
   </div>
 </section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is CXP (Customer Experience Platform)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "CXP is the system of record for customer relationships within Teamwork Commerce Services — a complete upgrade to Secure CRM. It centralizes customer data with self-registration, multinational support, and cleansed customer data."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's included with CXP Standard?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Customer self-registration and unified customer profiles — included with every Teamwork Commerce Services deployment at no extra cost."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does Plus add to CXP?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Plus is a paid upgrade that adds AI Empowerment, Discovery Session History, and 121 Clienteling — personalized customer engagement through targeted recommendations and follow-up."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is 121 Clienteling?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Plus capability that turns CXP's customer intelligence into action: targeted recommendations and follow-up, delivered to associates at the point of sale as part of 121 Commerce."
+      }
+    }
+  ]
+}
+</script>

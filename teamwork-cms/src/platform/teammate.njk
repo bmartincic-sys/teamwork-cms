@@ -81,6 +81,48 @@ permalink: "/platform/teammate/"
   </div>
 </section>
 
+{% include "tcs-family.njk" %}
+
+<!-- ============ FAQ (AEO: visible content matches FAQ schema) ============ -->
+<section class="section" style="padding-bottom: 80px;">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">Frequently Asked Questions</div>
+      <h2 class="section-title">Everything you need to know.</h2>
+    </div>
+    <div style="max-width: 800px; margin: 0 auto;">
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          What is TEAMMATE?
+          <span class="faq-icon"><i class="ti ti-plus"></i></span>
+        </button>
+        <div class="faq-answer"><p>TEAMMATE is the Teamwork Commerce app for store associates — secure mobile access to the tools they use throughout the day, on iOS and Android.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          How do associates log in to TEAMMATE?
+          <span class="faq-icon"><i class="ti ti-plus"></i></span>
+        </button>
+        <div class="faq-answer"><p>With rotating QR codes managed by TAP — no shared passwords — plus biometric sign-in on supported devices. Every action is attributable to the signed-in associate.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          What does Plus add to TEAMMATE?
+          <span class="faq-icon"><i class="ti ti-plus"></i></span>
+        </button>
+        <div class="faq-answer"><p>Plus is a paid upgrade that adds AI Empowerment, Product Discovery, Product Training, and Operational Training — AI tools that build associate product knowledge and answer operational questions instantly.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          Is TEAMMATE included with Teamwork Commerce Services?
+          <span class="faq-icon"><i class="ti ti-plus"></i></span>
+        </button>
+        <div class="faq-answer"><p>Yes. TEAMMATE ships with every Teamwork Commerce Services deployment — Standard includes rotating QR-code login on iOS and Android at no extra cost.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============ FINAL CTA ============ -->
 <section class="final-cta">
   <div class="container final-cta-inner">
@@ -92,3 +134,44 @@ permalink: "/platform/teammate/"
     </div>
   </div>
 </section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is TEAMMATE?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TEAMMATE is the Teamwork Commerce app for store associates — secure mobile access to the tools they use throughout the day, on iOS and Android."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do associates log in to TEAMMATE?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "With rotating QR codes managed by TAP — no shared passwords — plus biometric sign-in on supported devices. Every action is attributable to the signed-in associate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does Plus add to TEAMMATE?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Plus is a paid upgrade that adds AI Empowerment, Product Discovery, Product Training, and Operational Training — AI tools that build associate product knowledge and answer operational questions instantly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is TEAMMATE included with Teamwork Commerce Services?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. TEAMMATE ships with every Teamwork Commerce Services deployment — Standard includes rotating QR-code login on iOS and Android at no extra cost."
+      }
+    }
+  ]
+}
+</script>

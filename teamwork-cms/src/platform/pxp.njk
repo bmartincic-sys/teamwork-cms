@@ -84,6 +84,48 @@ permalink: "/platform/pxp/"
   </div>
 </section>
 
+{% include "tcs-family.njk" %}
+
+<!-- ============ FAQ (AEO: visible content matches FAQ schema) ============ -->
+<section class="section" style="padding-bottom: 80px;">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">Frequently Asked Questions</div>
+      <h2 class="section-title">Everything you need to know.</h2>
+    </div>
+    <div style="max-width: 800px; margin: 0 auto;">
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          What is PXP (Product Experience Platform)?
+          <span class="faq-icon"><i class="ti ti-plus"></i></span>
+        </button>
+        <div class="faq-answer"><p>PXP is the platform service within Teamwork Commerce Services where product information lives — one central place for product details, variants, and enrichments, so accurate, consistent product data flows across every store, channel, and market.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          What's included with PXP Standard?
+          <span class="faq-icon"><i class="ti ti-plus"></i></span>
+        </button>
+        <div class="faq-answer"><p>Product management, product variants, and product enrichment tools — included with every Teamwork Commerce Services deployment at no extra cost.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          What does Plus add to PXP?
+          <span class="faq-icon"><i class="ti ti-plus"></i></span>
+        </button>
+        <div class="faq-answer"><p>Plus is a paid upgrade that adds AI Empowerment (AI-generated descriptions, translation, image and media support), Product Discovery (natural-language product search), and Product Training (AI-assisted learning, quizzes, and roleplay).</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          How does PXP relate to the POS?
+          <span class="faq-icon"><i class="ti ti-plus"></i></span>
+        </button>
+        <div class="faq-answer"><p>The POS reads the same product data PXP manages, so every transaction is backed by accurate product information. At the point of sale, PXP and CXP's Plus capabilities converge into 121 Commerce — real-time product knowledge for associates.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============ FINAL CTA ============ -->
 <section class="final-cta">
   <div class="container final-cta-inner">
@@ -95,3 +137,44 @@ permalink: "/platform/pxp/"
     </div>
   </div>
 </section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is PXP (Product Experience Platform)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "PXP is the platform service within Teamwork Commerce Services where product information lives — one central place for product details, variants, and enrichments, so accurate, consistent product data flows across every store, channel, and market."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's included with PXP Standard?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Product management, product variants, and product enrichment tools — included with every Teamwork Commerce Services deployment at no extra cost."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does Plus add to PXP?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Plus is a paid upgrade that adds AI Empowerment (AI-generated descriptions, translation, image and media support), Product Discovery (natural-language product search), and Product Training (AI-assisted learning, quizzes, and roleplay)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does PXP relate to the POS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The POS reads the same product data PXP manages, so every transaction is backed by accurate product information. At the point of sale, PXP and CXP's Plus capabilities converge into 121 Commerce — real-time product knowledge for associates."
+      }
+    }
+  ]
+}
+</script>
