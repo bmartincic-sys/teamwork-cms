@@ -2,3 +2,8 @@
   base = "teamwork-cms"
   command = "npm install && npx @11ty/eleventy"
   publish = "_site"
+
+[[redirects]]
+  from = "/platform/121-commerce/"
+  to = "/platform/cxp/"
+  status = 301

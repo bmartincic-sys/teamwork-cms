@@ -6,7 +6,7 @@
 
 - [Mobile POS](https://www.teamworkcommerce.com/platform/mobile-pos/): The core product — iOS-native enterprise POS, 40+ countries localized, 30s average transaction, 99.99% uptime.
 - [Teamwork Commerce Services (TCS)](https://www.teamworkcommerce.com/platform/tcs/): How POS runs — the connected platform of shared services and apps.
-- [121 Commerce](https://www.teamworkcommerce.com/platform/121-commerce/): AI Agent for the retail sales floor, built on PXP and CXP.
+- [CXP — Customer Experience Platform](https://www.teamworkcommerce.com/platform/cxp/): Customer data and clienteling; Plus unlocks 121 Commerce AI at the point of sale.
 - [RFID Solution](https://www.teamworkcommerce.com/platform/rfid/): Native end-to-end RFID — source tagging through EAS loss prevention, no middleware.
 - [Inventory Control](https://www.teamworkcommerce.com/platform/inventory-control/): RFID-powered inventory with 99.9% accuracy and cycle counts in minutes.
 - [Order Management (OMS)](https://www.teamworkcommerce.com/platform/oms/): Distributed order management with AI routing.
