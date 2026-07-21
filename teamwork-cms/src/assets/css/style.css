@@ -663,7 +663,7 @@ a { color: inherit; text-decoration: none; }
   padding: 9px 20px; border-radius: 100px; margin-bottom: 18px;
 }
 .tier-badge i { font-size: 16px; }
-.tier-badge-std { background: rgba(16,185,129,0.12); color: #34d399; border: 1px solid rgba(16,185,129,0.35); }
+.tier-badge-std { background: rgba(255,255,255,0.06); color: var(--text); border: 1px solid var(--border-strong); }
 .tier-badge-plus {
   background: linear-gradient(90deg, var(--brand-blue), #8A0ADD); color: #fff;
   box-shadow: 0 12px 30px -10px rgba(36,125,255,0.6);
@@ -726,9 +726,9 @@ a { color: inherit; text-decoration: none; }
 }
 .sp-col { padding: 24px 26px; border-radius: 18px; border: 1px solid var(--border); background: var(--bg-elevated); }
 .sp-col-standard {
-  border-color: rgba(16,185,129,0.45);
-  background: radial-gradient(130% 130% at 0% 0%, rgba(16,185,129,0.12), transparent 60%), var(--bg-elevated);
-  box-shadow: 0 20px 44px -26px rgba(16,185,129,0.4);
+  border-color: rgba(255,255,255,0.28);
+  background: radial-gradient(130% 130% at 0% 0%, rgba(255,255,255,0.06), transparent 60%), var(--bg-elevated);
+  box-shadow: 0 20px 44px -28px rgba(255,255,255,0.25);
 }
 .sp-col-plus {
   border: 1.5px solid transparent;
@@ -738,8 +738,8 @@ a { color: inherit; text-decoration: none; }
   box-shadow: 0 20px 48px -24px rgba(124,80,245,0.55);
 }
 .sp-tag { display: inline-flex; align-items: center; gap: 7px; font-size: 11.5px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 10px; }
-.sp-col-standard .sp-tag { color: #34d399; }
-.sp-col-standard .sp-tag i { color: #34d399; font-size: 15px; }
+.sp-col-standard .sp-tag { color: var(--text); }
+.sp-col-standard .sp-tag i { color: var(--text); font-size: 15px; }
 .sp-tag-plus { color: #fff; background: linear-gradient(90deg, var(--brand-blue), #8A0ADD); padding: 5px 12px; border-radius: 100px; box-shadow: 0 8px 20px -8px rgba(36,125,255,0.6); }
 .sp-col p { margin: 0; font-size: 14px; line-height: 1.55; color: var(--text); }
 @media (max-width: 520px) { .sp-split { grid-template-columns: 1fr; } .sp-split::after { display: none; } }
