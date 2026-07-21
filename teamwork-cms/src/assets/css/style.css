@@ -655,6 +655,31 @@ a { color: inherit; text-decoration: none; }
 }
 .pillar-photo img { width: 100%; height: 100%; object-fit: cover; object-position: top left; display: block; }
 
+/* Tier banners — sell Standard, call out Plus */
+.tier-badge {
+  display: inline-flex; align-items: center; gap: 9px;
+  font-size: 13px; font-weight: 900; letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 9px 20px; border-radius: 100px; margin-bottom: 18px;
+}
+.tier-badge i { font-size: 16px; }
+.tier-badge-std { background: rgba(16,185,129,0.12); color: #34d399; border: 1px solid rgba(16,185,129,0.35); }
+.tier-badge-plus {
+  background: linear-gradient(90deg, var(--brand-blue), #8A0ADD); color: #fff;
+  box-shadow: 0 12px 30px -10px rgba(36,125,255,0.6);
+}
+.plus-band {
+  position: relative; overflow: hidden;
+  background: var(--bg-deep);
+  padding: 96px 0;
+}
+.plus-band::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, var(--brand-blue), #8A0ADD);
+}
+.plus-band-top { border-top: 1px solid var(--border); padding-bottom: 44px; }
+.plus-band-bottom { padding-top: 0; border-bottom: 1px solid var(--border); }
+.plus-band-bottom::before { display: none; }
+
 /* Standard vs Plus split callout (per section) */
 .sp-split { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 4px 0 22px; }
 .sp-col { padding: 13px 15px; border-radius: 12px; border: 1px solid var(--border); background: var(--bg-elevated); }
