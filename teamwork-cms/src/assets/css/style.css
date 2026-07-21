@@ -667,30 +667,26 @@ a { color: inherit; text-decoration: none; }
   background: linear-gradient(90deg, var(--brand-blue), #8A0ADD); color: #fff;
   box-shadow: 0 12px 30px -10px rgba(36,125,255,0.6);
 }
-.plus-band {
+/* PLUS — pulled-out flagship callout */
+.plus-callout {
+  position: relative; border-radius: 30px; padding: 3px;
+  background: linear-gradient(120deg, #247DFF, #8A0ADD, #7C50F5, #247DFF);
+  background-size: 300% 300%;
+  animation: plusBorder 6s linear infinite;
+  box-shadow:
+    0 0 90px -12px rgba(36,125,255,0.5),
+    0 0 150px -20px rgba(138,10,221,0.45),
+    0 40px 90px -30px rgba(0,0,0,0.8);
+}
+@keyframes plusBorder { 0% { background-position: 0% 50%; } 100% { background-position: 300% 50%; } }
+.plus-callout-inner {
   position: relative; overflow: hidden;
-  background: #060814;
-  padding: 100px 0;
+  border-radius: 27px; background: #05060f;
+  padding: 76px clamp(22px, 5vw, 64px) 64px;
 }
-.plus-band::before {
-  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
-  background: linear-gradient(90deg, #247DFF, #8A0ADD, #247DFF);
-  background-size: 200% 100%;
-  animation: plusSheen 4s linear infinite;
-}
-.plus-band-top { padding-bottom: 44px; }
-.plus-band-bottom { padding-top: 0; }
-.plus-band-bottom::before { display: none; }
-.plus-band-bottom::after {
-  content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px;
-  background: linear-gradient(90deg, #8A0ADD, #247DFF, #8A0ADD);
-  background-size: 200% 100%;
-  animation: plusSheen 4s linear infinite reverse;
-}
-@keyframes plusSheen { 0% { background-position: 0% 0; } 100% { background-position: 200% 0; } }
-.plus-band .innov-glow-1 { background: radial-gradient(circle, rgba(36,125,255,0.34), transparent 68%); }
-.plus-band .innov-glow-2 { background: radial-gradient(circle, rgba(138,10,221,0.32), transparent 68%); }
-.plus-band .tier-badge-plus {
+.plus-callout .innov-glow-1 { background: radial-gradient(circle, rgba(36,125,255,0.32), transparent 68%); }
+.plus-callout .innov-glow-2 { background: radial-gradient(circle, rgba(138,10,221,0.30), transparent 68%); }
+.plus-callout .tier-badge-plus {
   font-size: 15px; padding: 12px 28px;
   animation: plusPulse 2.8s ease-in-out infinite;
 }
@@ -698,20 +694,21 @@ a { color: inherit; text-decoration: none; }
   0%, 100% { box-shadow: 0 12px 32px -10px rgba(36,125,255,0.65); transform: scale(1); }
   50% { box-shadow: 0 16px 52px -6px rgba(138,10,221,0.9); transform: scale(1.03); }
 }
-.plus-band .section-title { font-size: clamp(34px, 4.4vw, 60px); }
-.plus-band .pillar-card {
+.plus-callout .section-title { font-size: clamp(32px, 4.2vw, 56px); }
+.plus-callout .pillar-card {
   background:
     linear-gradient(var(--bg-elevated), var(--bg-elevated)) padding-box,
     linear-gradient(135deg, rgba(36,125,255,0.65), rgba(124,80,245,0.4), rgba(138,10,221,0.65)) border-box;
   border: 1.5px solid transparent;
 }
-.plus-band .pillar-card:hover { transform: translateY(-6px); box-shadow: 0 32px 64px -26px rgba(124,80,245,0.65); }
-.plus-band .pillar-icon {
+.plus-callout .pillar-card:hover { transform: translateY(-6px); box-shadow: 0 32px 64px -26px rgba(124,80,245,0.65); }
+.plus-callout .pillar-icon {
   background: linear-gradient(150deg, var(--brand-blue), #8A0ADD); color: #fff;
   box-shadow: 0 14px 30px -10px rgba(36,125,255,0.6);
 }
+.plus-callout .feature-row { margin-bottom: 34px; }
 @media (prefers-reduced-motion: reduce) {
-  .plus-band::before, .plus-band-bottom::after, .plus-band .tier-badge-plus { animation: none; }
+  .plus-callout, .plus-callout .tier-badge-plus { animation: none; }
 }
 
 /* Standard vs Plus split callout (per section) */
