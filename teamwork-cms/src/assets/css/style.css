@@ -669,16 +669,50 @@ a { color: inherit; text-decoration: none; }
 }
 .plus-band {
   position: relative; overflow: hidden;
-  background: var(--bg-deep);
-  padding: 96px 0;
+  background: #060814;
+  padding: 100px 0;
 }
 .plus-band::before {
-  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
-  background: linear-gradient(90deg, var(--brand-blue), #8A0ADD);
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, #247DFF, #8A0ADD, #247DFF);
+  background-size: 200% 100%;
+  animation: plusSheen 4s linear infinite;
 }
-.plus-band-top { border-top: 1px solid var(--border); padding-bottom: 44px; }
-.plus-band-bottom { padding-top: 0; border-bottom: 1px solid var(--border); }
+.plus-band-top { padding-bottom: 44px; }
+.plus-band-bottom { padding-top: 0; }
 .plus-band-bottom::before { display: none; }
+.plus-band-bottom::after {
+  content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, #8A0ADD, #247DFF, #8A0ADD);
+  background-size: 200% 100%;
+  animation: plusSheen 4s linear infinite reverse;
+}
+@keyframes plusSheen { 0% { background-position: 0% 0; } 100% { background-position: 200% 0; } }
+.plus-band .innov-glow-1 { background: radial-gradient(circle, rgba(36,125,255,0.34), transparent 68%); }
+.plus-band .innov-glow-2 { background: radial-gradient(circle, rgba(138,10,221,0.32), transparent 68%); }
+.plus-band .tier-badge-plus {
+  font-size: 15px; padding: 12px 28px;
+  animation: plusPulse 2.8s ease-in-out infinite;
+}
+@keyframes plusPulse {
+  0%, 100% { box-shadow: 0 12px 32px -10px rgba(36,125,255,0.65); transform: scale(1); }
+  50% { box-shadow: 0 16px 52px -6px rgba(138,10,221,0.9); transform: scale(1.03); }
+}
+.plus-band .section-title { font-size: clamp(34px, 4.4vw, 60px); }
+.plus-band .pillar-card {
+  background:
+    linear-gradient(var(--bg-elevated), var(--bg-elevated)) padding-box,
+    linear-gradient(135deg, rgba(36,125,255,0.65), rgba(124,80,245,0.4), rgba(138,10,221,0.65)) border-box;
+  border: 1.5px solid transparent;
+}
+.plus-band .pillar-card:hover { transform: translateY(-6px); box-shadow: 0 32px 64px -26px rgba(124,80,245,0.65); }
+.plus-band .pillar-icon {
+  background: linear-gradient(150deg, var(--brand-blue), #8A0ADD); color: #fff;
+  box-shadow: 0 14px 30px -10px rgba(36,125,255,0.6);
+}
+@media (prefers-reduced-motion: reduce) {
+  .plus-band::before, .plus-band-bottom::after, .plus-band .tier-badge-plus { animation: none; }
+}
 
 /* Standard vs Plus split callout (per section) */
 .sp-split { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 4px 0 22px; }
