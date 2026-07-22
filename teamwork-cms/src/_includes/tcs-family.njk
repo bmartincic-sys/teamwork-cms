@@ -1,16 +1,45 @@
-<!-- ============ PART OF TCS (shared family strip) ============ -->
+<!-- ============ PART OF TCS (shared ecosystem strip) ============ -->
 <section class="section-tight" style="border-top: 1px solid var(--border);">
-  <div class="container" style="text-align: center;">
-    <div class="section-eyebrow">Part of Teamwork Commerce Services</div>
-    <h2 class="section-title" style="font-size: clamp(24px, 3vw, 36px);">Platform services power the apps your team uses.</h2>
-    <p class="section-sub">PXP, CXP, and TAP are the engine and brains. TEAMMATE and POS are the tools in your team's hands. Standard is included with every deployment; Plus adds the AI layer.</p>
-    <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 26px;">
-      <a href="/platform/tcs/" class="btn btn-ghost" style="padding: 9px 16px; font-size: 13px;">TCS Overview</a>
-      <a href="/platform/mobile-pos/" class="btn btn-ghost" style="padding: 9px 16px; font-size: 13px;">Mobile POS</a>
-      <a href="/platform/pxp/" class="btn btn-ghost" style="padding: 9px 16px; font-size: 13px;">PXP</a>
-      <a href="/platform/cxp/" class="btn btn-ghost" style="padding: 9px 16px; font-size: 13px;">CXP</a>
-      <a href="/platform/tap/" class="btn btn-ghost" style="padding: 9px 16px; font-size: 13px;">TAP</a>
-      <a href="/platform/teammate/" class="btn btn-ghost" style="padding: 9px 16px; font-size: 13px;">TEAMMATE</a>
+  <div class="container">
+    <div class="section-header" style="text-align: center;">
+      <div class="section-eyebrow">Part of Teamwork Commerce Services</div>
+      <h2 class="section-title" style="font-size: clamp(24px, 3vw, 36px);">One ecosystem. Every service connected.</h2>
+      <p class="section-sub">PXP, CXP, and TAP are the engine and brains. TEAMMATE and POS are the tools in your team's hands. Standard is included with every deployment; Plus adds the AI layer.</p>
+    </div>
+    <div class="eco">
+      <a href="/platform/tcs/" class="eco-hub">
+        <span class="eco-hub-icon"><i class="ti ti-topology-star-3"></i></span>
+        <span class="eco-hub-name">Teamwork Commerce Services</span>
+        <span class="eco-hub-desc">The platform behind it all</span>
+      </a>
+      <div class="eco-trunk"><span class="eco-pulse"></span></div>
+      <div class="eco-nodes">
+        <a href="/platform/mobile-pos/" class="eco-node{% if page.url == '/platform/mobile-pos/' %} is-current{% endif %}">
+          <span class="eco-node-icon"><i class="ti ti-device-ipad"></i></span>
+          <span class="eco-node-name">POS</span>
+          <span class="eco-node-desc">Point of Sale</span>
+        </a>
+        <a href="/platform/pxp/" class="eco-node{% if page.url == '/platform/pxp/' %} is-current{% endif %}">
+          <span class="eco-node-icon"><i class="ti ti-packages"></i></span>
+          <span class="eco-node-name">PXP</span>
+          <span class="eco-node-desc">Product data</span>
+        </a>
+        <a href="/platform/cxp/" class="eco-node{% if page.url == '/platform/cxp/' %} is-current{% endif %}">
+          <span class="eco-node-icon"><i class="ti ti-users"></i></span>
+          <span class="eco-node-name">CXP</span>
+          <span class="eco-node-desc">Customer data</span>
+        </a>
+        <a href="/platform/tap/" class="eco-node{% if page.url == '/platform/tap/' %} is-current{% endif %}">
+          <span class="eco-node-icon"><i class="ti ti-shield-lock"></i></span>
+          <span class="eco-node-name">TAP</span>
+          <span class="eco-node-desc">Identity &amp; access</span>
+        </a>
+        <a href="/platform/teammate/" class="eco-node{% if page.url == '/platform/teammate/' %} is-current{% endif %}">
+          <span class="eco-node-icon"><i class="ti ti-device-mobile"></i></span>
+          <span class="eco-node-name">TEAMMATE</span>
+          <span class="eco-node-desc">Associate app</span>
+        </a>
+      </div>
     </div>
   </div>
 </section>
