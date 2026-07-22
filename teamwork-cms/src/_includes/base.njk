@@ -472,5 +472,38 @@ if (window.netlifyIdentity) {
   }
 })();
 </script>
+<script>
+(function () {
+  var vids = document.querySelectorAll("video[data-scroll-autoplay]");
+  if (!vids.length || !("IntersectionObserver" in window)) return;
+  if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  var managed = new WeakSet();
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      var v = entry.target;
+      if (!managed.has(v)) return;
+      if (entry.isIntersecting) {
+        var p = v.play();
+        if (p && p.catch) p.catch(function () {});
+      } else if (!v.paused) {
+        v._autoPaused = true;
+        v.pause();
+      }
+    });
+  }, { threshold: 0.5 });
+  vids.forEach(function (v) {
+    managed.add(v);
+    v.muted = true;
+    // A manual pause while the video is on screen means the viewer opted out — stop managing it.
+    v.addEventListener("pause", function () {
+      if (v._autoPaused) { v._autoPaused = false; return; }
+      if (v.ended) return;
+      managed.delete(v);
+      io.unobserve(v);
+    });
+    io.observe(v);
+  });
+})();
+</script>
 </body>
 </html>
