@@ -2563,7 +2563,7 @@ details[open] summary { color: var(--brand-text); }
 .edge-no { color: var(--text-faint); }
 .edge-no i { color: #e11d48; font-size: 14px; flex: none; }
 .edge-yes { color: var(--text); }
-.edge-yes i { color: #059669; font-size: 14px; flex: none; }
+.edge-yes i { color: var(--text); font-size: 14px; flex: none; }
 @media (max-width: 1020px) {
   .edge-grid { grid-template-columns: repeat(2, 1fr); }
 }
@@ -2718,8 +2718,8 @@ details[open] summary { color: var(--brand-text); }
   box-shadow: 0 12px 30px -10px rgba(7,9,26,0.25);
 }
 .hero-annot .pulse-dot {
-  width: 7px; height: 7px; border-radius: 50%; background: #10b981;
-  box-shadow: 0 0 0 0 rgba(16,185,129,0.5); animation: wmPulse 2.2s infinite;
+  width: 7px; height: 7px; border-radius: 50%; background: #ffffff;
+  box-shadow: 0 0 0 0 rgba(255,255,255,0.5); animation: wmPulse 2.2s infinite;
 }
 .hero-annot-1 { top: 7%; left: 2%; }
 .hero-annot-2 { bottom: 9%; left: 30%; }
@@ -3025,8 +3025,8 @@ main > .hero:first-child { margin-top: -85px; padding-top: 230px; }
   font-size: 10.5px; font-weight: 700; letter-spacing: 0.12em; color: #dfe6ff;
 }
 .lf-live .pulse-dot {
-  width: 7px; height: 7px; border-radius: 50%; background: #10b981;
-  box-shadow: 0 0 0 0 rgba(16,185,129,0.5); animation: wmPulse 2.2s infinite;
+  width: 7px; height: 7px; border-radius: 50%; background: #ffffff;
+  box-shadow: 0 0 0 0 rgba(255,255,255,0.5); animation: wmPulse 2.2s infinite;
 }
 .lf-clock { font-size: 10.5px; color: rgba(223,230,255,0.5); letter-spacing: 0.08em; }
 .lf-rows { display: flex; flex-direction: column; min-height: 190px; }
@@ -3047,7 +3047,7 @@ main > .hero:first-child { margin-top: -85px; padding-top: 230px; }
 }
 .lf-tag-pos { background: rgba(36,125,255,0.22); color: #8ab8ff; }
 .lf-tag-rfid { background: rgba(138,10,221,0.25); color: #d9a5ff; }
-.lf-tag-omni { background: rgba(16,185,129,0.18); color: #5fe0b0; }
+.lf-tag-omni { background: rgba(255,255,255,0.1); color: #e6ebfa; }
 .lf-tag-fiscal { background: rgba(255,255,255,0.10); color: rgba(238,241,251,0.7); }
 .lf-foot {
   display: flex; justify-content: space-between; gap: 12px;
@@ -3107,8 +3107,8 @@ main > .hero:first-child { margin-top: -85px; padding-top: 230px; }
   font-weight: 700; letter-spacing: 0.12em; color: #dfe6ff; font-size: 10.5px;
 }
 .ls-live .pulse-dot {
-  width: 7px; height: 7px; border-radius: 50%; background: #10b981;
-  box-shadow: 0 0 0 0 rgba(16,185,129,0.5); animation: wmPulse 2.2s infinite;
+  width: 7px; height: 7px; border-radius: 50%; background: #ffffff;
+  box-shadow: 0 0 0 0 rgba(255,255,255,0.5); animation: wmPulse 2.2s infinite;
 }
 .live-strip strong { color: #ffffff; font-weight: 700; font-variant-numeric: tabular-nums; }
 .ls-clock { color: rgba(238,241,251,0.4); }
@@ -3127,8 +3127,8 @@ main > .hero:first-child { margin-top: -85px; padding-top: 230px; }
 }
 .rfid-live strong { font-variant-numeric: tabular-nums; min-width: 4ch; text-align: right; }
 .rfid-live .pulse-dot {
-  width: 7px; height: 7px; border-radius: 50%; background: #10b981;
-  box-shadow: 0 0 0 0 rgba(16,185,129,0.5); animation: wmPulse 2.2s infinite;
+  width: 7px; height: 7px; border-radius: 50%; background: #ffffff;
+  box-shadow: 0 0 0 0 rgba(255,255,255,0.5); animation: wmPulse 2.2s infinite;
 }
 
 /* --- A day in your store --- */
@@ -3289,8 +3289,8 @@ main > .hero:first-child { margin-top: -85px; padding-top: 230px; }
   display: flex; align-items: center; gap: 8px;
   margin: 10px 0 4px; padding: 10px 12px;
   border-radius: 10px; font-size: 12.5px; font-weight: 700;
-  background: rgba(16,185,129,0.18); color: #6ff0c0;
-  border: 1px solid rgba(16,185,129,0.35);
+  background: rgba(255,255,255,0.1); color: #e6ebfa;
+  border: 1px solid rgba(255,255,255,0.28);
 }
 .glass-approved i { font-size: 16px; }
 .glass-feed {
@@ -3521,7 +3521,7 @@ main > .hero:first-child { margin-top: -85px; padding-top: 230px; }
 }
 .duo-tags .t-ai { background: rgba(36,125,255,0.16); color: #8ab8ff; border: 1px solid rgba(36,125,255,0.3); }
 .duo-tags .t-plus { background: rgba(138,10,221,0.16); color: #d9a5ff; border: 1px solid rgba(138,10,221,0.3); }
-.duo-tags .t-core { background: rgba(16,185,129,0.14); color: #5fe0b0; border: 1px solid rgba(16,185,129,0.3); }
+.duo-tags .t-core { background: rgba(255,255,255,0.08); color: #e6ebfa; border: 1px solid rgba(255,255,255,0.22); }
 .duo-card-flip .duo-img-tile { padding: 0 30px; }
 @media (max-width: 1020px) {
   .duo-grid { grid-template-columns: 1fr; max-width: 560px; }
@@ -3573,8 +3573,8 @@ main > .hero:first-child { margin-top: -85px; padding-top: 230px; }
   box-shadow: 0 12px 30px -8px rgba(0,0,0,0.5);
 }
 .fan-chip .pulse-dot {
-  width: 7px; height: 7px; border-radius: 50%; background: #10b981;
-  box-shadow: 0 0 0 0 rgba(16,185,129,0.5); animation: wmPulse 2.2s infinite;
+  width: 7px; height: 7px; border-radius: 50%; background: #ffffff;
+  box-shadow: 0 0 0 0 rgba(255,255,255,0.5); animation: wmPulse 2.2s infinite;
 }
 .fan-chip-1 { top: 8%; left: 12%; transform: rotate(-5deg); }
 .fan-chip-2 { top: 2%; right: 14%; transform: rotate(4deg); }
@@ -3634,7 +3634,7 @@ main > .hero:first-child { margin-top: -85px; padding-top: 230px; }
 .fan-bubble-right { top: -26px; right: 15%; background: var(--brand-purple); transform: rotate(4deg); }
 .fan-bubble-right::after { left: auto; right: 22px; }
 .fan-bubble .pulse-dot {
-  width: 7px; height: 7px; border-radius: 50%; background: #6ff0c0;
+  width: 7px; height: 7px; border-radius: 50%; background: #e6ebfa;
   box-shadow: 0 0 0 0 rgba(111,240,192,0.5); animation: wmPulse 2.2s infinite;
 }
 @media (max-width: 760px) {
