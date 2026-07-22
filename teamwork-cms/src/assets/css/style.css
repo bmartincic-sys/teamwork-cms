@@ -688,6 +688,14 @@ a { color: inherit; text-decoration: none; }
     #060814;
   padding: 76px clamp(22px, 5vw, 64px) 64px;
 }
+/* The Plus callout interior is dark in both themes — re-apply dark-theme tokens in light mode */
+[data-theme="light"] .plus-callout-inner {
+  --bg: #07091a; --bg-deep: #050717; --bg-elevated: #0f1228; --panel: #0f1228;
+  --text: #ffffff; --text-muted: #9ba8c0; --text-faint: #6b7589; --text-inverse: #07091a;
+  --border: rgba(255, 255, 255, 0.08); --border-strong: rgba(255, 255, 255, 0.16);
+  --brand-blue: #4D94FF; --brand-text: #80B0FF; --brand-soft: rgba(77, 148, 255, 0.12);
+  color: var(--text);
+}
 .plus-callout .video-embed { max-width: 920px; margin: 0 auto 44px; }
 .plus-callout .innov-glow-1 { background: radial-gradient(circle, rgba(36,125,255,0.32), transparent 68%); }
 .plus-callout .innov-glow-2 { background: radial-gradient(circle, rgba(138,10,221,0.30), transparent 68%); }
@@ -2381,6 +2389,11 @@ details[open] summary { color: var(--brand-text); }
   -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
   text-shadow: 0 0 40px rgba(36,125,255,0.25);
 }
+[data-theme="light"] .pfh-big {
+  background: linear-gradient(180deg, #14224a 25%, #4a63a3);
+  -webkit-background-clip: text; background-clip: text;
+  text-shadow: none;
+}
 .pfh-desc { font-size: 13px; color: var(--text-muted); line-height: 1.55; max-width: 260px; margin: 0 auto; }
 .pfh-desc a { color: var(--brand-text); font-weight: 700; }
 @media (max-width: 900px) {
@@ -3050,6 +3063,15 @@ main > .hero:first-child { margin-top: -85px; padding-top: 230px; }
   -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
 }
 .ticker-label { color: rgba(238,241,251,0.6); }
+/* The ticker band is ink-dark in both themes — keep its inner card dark in light mode too */
+[data-theme="light"] .ticker-inner {
+  background:
+    radial-gradient(120% 160% at 12% 0%, rgba(36,125,255,0.14), transparent 55%),
+    radial-gradient(120% 160% at 88% 100%, rgba(138,10,221,0.12), transparent 55%),
+    #0f1228;
+  border-color: rgba(255,255,255,0.10);
+}
+[data-theme="light"] .ticker-item { border-right-color: rgba(255,255,255,0.10); }
 
 /* Clean gradient eyebrows for all remaining section headers */
 .section-header .section-eyebrow {
