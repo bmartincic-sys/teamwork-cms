@@ -2493,6 +2493,23 @@ details[open] summary { color: var(--brand-text); }
 [data-theme="dark"] .statcard-purple .statcard-value, [data-theme="dark"] .statcard-purple .statcard-value span { color: #a78bfa; }
 .statcard-label { font-size: 13px; color: var(--text-muted); font-weight: 600; }
 
+/* ATS stats — hero stat + supporting cards */
+.ats-grid { display: grid; grid-template-columns: 1.25fr 1fr; gap: 14px; align-items: stretch; }
+.ats-hero { display: flex; flex-direction: column; justify-content: center; padding: 44px 40px; }
+.ats-hero-value {
+  font-size: clamp(72px, 8.5vw, 128px); font-weight: 900;
+  letter-spacing: -0.045em; line-height: 0.95; color: var(--brand-blue);
+}
+.ats-hero-label { font-size: 16px; font-weight: 800; color: var(--text); margin-top: 12px; }
+.ats-hero-sub { font-size: 14px; color: var(--text-muted); line-height: 1.55; margin: 10px 0 0; max-width: 380px; }
+.ats-side { display: grid; grid-template-rows: repeat(3, 1fr); gap: 14px; }
+.ats-side .statcard { display: flex; flex-direction: column; justify-content: center; padding: 20px 26px; }
+.ats-side .statcard-value { font-size: 34px; margin-bottom: 4px; }
+@media (max-width: 860px) {
+  .ats-grid { grid-template-columns: 1fr; }
+  .ats-side { grid-template-rows: none; }
+}
+
 /* Ticker stat accents (sitewide) */
 .ticker-item::before {
   content: ''; display: block; width: 34px; height: 4px; border-radius: 2px;
