@@ -132,10 +132,10 @@ navOrder: 5
         <h2>Every unit gets a license plate. Every movement tracked.</h2>
         <p>Each tag carries an Electronic Product Code (EPC) — a UPC plus a unique serial. Ten identical shirts share one UPC but ten distinct EPCs, so they're ten trackable units, not a count of "10." That's why our stock counts are accurate and our loss prevention actually works.</p>
         <ul class="feature-bullets">
-          <li>Source tagging: integrate with manufacturers to commission EPCs at the point of creation</li>
-          <li>In-transit visibility: see RFID-tagged containers on the water, in customs, arriving at the dock</li>
-          <li>Receiving and commissioning: tag, encode, and scan inbound shipments in one step via the purchase receipt workflow — low-power mode prevents reading surrounding inventory</li>
-          <li>Unit control ledger: full transactional history for every EPC — where it was received, counted, transferred, sold, and whitelisted</li>
+          <li>Source tagging: EPCs commissioned at the manufacturer, at the point of creation</li>
+          <li>In-transit visibility: tagged containers tracked on the water, through customs, to the dock</li>
+          <li>Receiving: tag, encode, and scan inbound shipments in one step — low-power reads capture only the shipment</li>
+          <li>Unit control ledger: where every EPC was received, counted, transferred, sold, and whitelisted</li>
         </ul>
         <a href="/contact/" class="btn btn-primary">Book a demo <i class="ti ti-arrow-right"></i></a>
       </div>
@@ -180,10 +180,10 @@ navOrder: 5
         <h2>Smart enough to know what it should read.</h2>
         <p>Receiving needs tight, low-power reads that capture only what's in front of you — not the 500 items on the racks behind. Stock counting needs the opposite: maximum range to sweep a whole store in minutes. The system switches automatically.</p>
         <ul class="feature-bullets">
-          <li>Low-power mode for transactions: receiving, transfers, selling — reads only items within inches of the device</li>
-          <li>High-power mode for counting: full-store sweeps that capture thousands of EPCs in minutes</li>
-          <li>Confirmation logic: a tag must be read consistently (multiple reads per second) before it's counted — no phantom reads from items passing by</li>
-          <li>Anti-bleed technology: tags respond only to the specific antenna that energized them, preventing cross-contamination between checkout zones</li>
+          <li>Low-power for transactions: receiving, transfers, selling — reads only items within inches</li>
+          <li>High-power for counting: full-store sweeps capture thousands of EPCs in minutes</li>
+          <li>Confirmation logic: multiple reads per second before a tag counts — no phantom reads</li>
+          <li>Anti-bleed: tags respond only to the antenna that energized them — no cross-reads between zones</li>
         </ul>
       </div>
       <!-- Mockup: Power mode comparison -->
@@ -195,13 +195,13 @@ navOrder: 5
           </div>
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px;">
             <div style="padding: 16px; background: var(--bg-deep); border: 1px solid var(--border); border-radius: 10px;">
-              <div style="font-size: 24px; margin-bottom: 8px;">🔋</div>
+              <div style="font-size: 22px; margin-bottom: 8px; color: var(--brand-blue);"><i class="ti ti-battery-2"></i></div>
               <div style="font-size: 14px; font-weight: 900; color: var(--text); margin-bottom: 4px;">Low Power</div>
               <div style="font-size: 11px; color: var(--text-muted); line-height: 1.5;">Range: ~6 inches</div>
               <div style="font-size: 10px; color: var(--text-faint); margin-top: 8px; line-height: 1.5; border-top: 1px solid var(--border); padding-top: 8px;">Receiving · Transfers · Sales · Commissioning</div>
             </div>
             <div style="padding: 16px; background: var(--bg-deep); border: 1px solid var(--border); border-radius: 10px;">
-              <div style="font-size: 24px; margin-bottom: 8px;">⚡</div>
+              <div style="font-size: 22px; margin-bottom: 8px; color: var(--brand-blue);"><i class="ti ti-bolt"></i></div>
               <div style="font-size: 14px; font-weight: 900; color: var(--text); margin-bottom: 4px;">High Power</div>
               <div style="font-size: 11px; color: var(--text-muted); line-height: 1.5;">Range: full store sweep</div>
               <div style="font-size: 10px; color: var(--text-faint); margin-top: 8px; line-height: 1.5; border-top: 1px solid var(--border); padding-top: 8px;">Stock counts · Cycle counts · Item locate</div>
@@ -226,11 +226,11 @@ navOrder: 5
         <h2>Blacklist every unit in the store. Whitelist it the instant it sells.</h2>
         <p>The unit control ledger is the foundation for real loss prevention. Every EPC in the store is on the blacklist. When a unit is sold at POS, it's instantly whitelisted — the signal reaches the EAS gate before the customer does. No false alarms. No ambiguity about who triggered it.</p>
         <ul class="feature-bullets">
-          <li>Blacklist/whitelist powered by the unit control ledger — every EPC's status is always known</li>
-          <li>Instant POS-to-gate communication via local server holding a copy of the ledger, pushed from cloud</li>
-          <li>EAS gate integration with Checkpoint, Sensormatic, and other providers via API</li>
-          <li>Anomaly detection: AI flags when tags move toward an exit without a matching POS transaction</li>
-          <li>Bag Check: next-gen alternative where customers scan their bag before leaving — isolates discrepancies with certainty</li>
+          <li>Every EPC's status always known — blacklist/whitelist runs on the unit control ledger</li>
+          <li>Instant POS-to-gate signal via a local server holding the ledger, pushed from cloud</li>
+          <li>EAS gate integration with Checkpoint, Sensormatic, and others via API</li>
+          <li>AI anomaly detection: tags moving toward an exit without a POS transaction trigger alerts</li>
+          <li>Bag Check: customers scan their bag on the way out — discrepancies isolated with certainty</li>
         </ul>
         <a href="/contact/" class="btn btn-primary">Book a demo <i class="ti ti-arrow-right"></i></a>
       </div>
@@ -294,17 +294,17 @@ navOrder: 5
         <div class="pillar-card">
           <div class="pillar-icon"><i class="ti ti-scan"></i></div>
           <h3 class="pillar-title">RFID-enabled checkout</h3>
-          <p class="pillar-desc">Process entire baskets in seconds. No line-of-sight scanning — just place items near the antenna. Anti-bleed technology ensures only intended items register on the receipt.</p>
+          <p class="pillar-desc">Entire baskets in seconds — no line-of-sight scanning, just place items near the antenna. Anti-bleed ensures only intended items hit the receipt.</p>
         </div>
         <div class="pillar-card">
           <div class="pillar-icon"><i class="ti ti-user-scan"></i></div>
           <h3 class="pillar-title">Next-gen self-checkout</h3>
-          <p class="pillar-desc">Customers place items in a bin; readers inside energize every tag at once and the cart builds itself on screen. Confirmation logic requires 3 continuous seconds of reading to ensure the item is actually in the bin. Faster and more accurate than barcode scanning.</p>
+          <p class="pillar-desc">Items go in a bin, readers energize every tag at once, and the cart builds itself on screen — faster and more accurate than barcode scanning.</p>
         </div>
         <div class="pillar-card">
           <div class="pillar-icon"><i class="ti ti-search"></i></div>
           <h3 class="pillar-title">Geiger Counter item locate</h3>
-          <p class="pillar-desc">60% of footwear "out-of-stocks" are actually in the building — just in the wrong box. Associates use RFID handhelds to locate exact items in the backroom in seconds. 80% search time reduction.</p>
+          <p class="pillar-desc">60% of footwear "out-of-stocks" are actually in the building — just in the wrong box. Handhelds locate the exact unit in seconds, cutting search time 80%.</p>
         </div>
       </div>
     </div>
@@ -315,17 +315,17 @@ navOrder: 5
         <div class="pillar-card">
           <div class="pillar-icon"><i class="ti ti-clipboard-check"></i></div>
           <h3 class="pillar-title">Full-store counts in minutes</h3>
-          <p class="pillar-desc">What used to take hours with a large team now takes minutes with a single person. High-power RFID sweeps capture thousands of EPCs without pulling items off racks, so inventory can be continuously verified instead of relying on counts that get skipped — recover $150K–$300K in "lost" stock in year one.</p>
+          <p class="pillar-desc">Hours with a large team becomes minutes with one person — thousands of EPCs captured without pulling items off racks. Recover $150K–$300K in "lost" stock in year one.</p>
         </div>
         <div class="pillar-card">
           <div class="pillar-icon"><i class="ti ti-package"></i></div>
           <h3 class="pillar-title">Receiving & commissioning</h3>
-          <p class="pillar-desc">Vendor pre-tags or you commission on arrival. Tag, encode, and scan via the purchase receipt workflow. Low-power mode ensures you only capture the shipment in front of you — not the racks behind you.</p>
+          <p class="pillar-desc">Vendor pre-tags or you commission on arrival — tag, encode, and scan inside the purchase receipt workflow. Low-power reads capture only the shipment in front of you.</p>
         </div>
         <div class="pillar-card">
           <div class="pillar-icon"><i class="ti ti-arrows-exchange"></i></div>
           <h3 class="pillar-title">Transfers & adjustments by EPC</h3>
-          <p class="pillar-desc">Every transfer, adjustment, and write-off is tracked at the individual unit level. Full chain-of-custody visibility. The unit control ledger shows exactly where every EPC has been, where it is now, and where it's headed.</p>
+          <p class="pillar-desc">Every transfer, adjustment, and write-off tracked at the unit level — the ledger shows where each EPC has been, where it is, and where it's headed.</p>
         </div>
       </div>
     </div>
@@ -336,17 +336,17 @@ navOrder: 5
         <div class="pillar-card">
           <div class="pillar-icon"><i class="ti ti-shield-lock"></i></div>
           <h3 class="pillar-title">EAS blacklist / whitelist</h3>
-          <p class="pillar-desc">Every in-store EPC is blacklisted. Sale at POS triggers instant whitelisting. Signal reaches the EAS gate via local server before the customer does. Integrates with Checkpoint, Sensormatic, and others via API.</p>
+          <p class="pillar-desc">Every in-store EPC is blacklisted; a sale whitelists it instantly, and the signal beats the customer to the gate. Works with Checkpoint, Sensormatic, and others via API.</p>
         </div>
         <div class="pillar-card">
           <div class="pillar-icon"><i class="ti ti-shopping-bag-check"></i></div>
           <h3 class="pillar-title">Bag Check</h3>
-          <p class="pillar-desc">Next-gen alternative to traditional EAS gates, built for high-traffic environments. Customer scans their bag on the way out — the system cross-references every EPC inside against their receipt and can print a fresh receipt right at the exit, freeing up the checkout machine for the next customer. Isolates discrepancies with certainty. No ambiguity about who triggered an alarm.</p>
+          <p class="pillar-desc">Built for high-traffic exits: the customer scans their bag, every EPC inside is checked against the receipt, and a fresh receipt can print right there. No ambiguity about who triggered an alarm.</p>
         </div>
         <div class="pillar-card">
           <div class="pillar-icon"><i class="ti ti-sparkles"></i></div>
           <h3 class="pillar-title">AI anomaly detection</h3>
-          <p class="pillar-desc">Monitors tag velocity in real time. Detects anomalous movement patterns — tags heading toward exits without corresponding POS transactions trigger instant loss prevention alerts. Predicts stock-outs and auto-queues replenishment.</p>
+          <p class="pillar-desc">Real-time tag velocity monitoring — movement toward an exit without a POS transaction triggers an instant alert. Predicts stock-outs and auto-queues replenishment.</p>
         </div>
       </div>
     </div>
@@ -389,28 +389,28 @@ navOrder: 5
     <div class="section-header">
       <div class="section-eyebrow">Certified Hardware</div>
       <h2 class="section-title">Only proven equipment. Zero risk.</h2>
-      <p class="section-sub">We only certify and promote hardware that has been tested and proven to work. The penalty for bad RFID tags or unreliable equipment is enormous — years of labor investment lost. We standardize on trusted, tested brands.</p>
+      <p class="section-sub">We only certify hardware that's been tested and proven to work — the penalty for bad tags or unreliable equipment is years of labor lost.</p>
     </div>
     <div class="pillars-grid" style="grid-template-columns: repeat(2, 1fr);">
       <div class="pillar-card">
         <div class="pillar-icon"><i class="ti ti-device-mobile"></i></div>
         <h3 class="pillar-title">Bluebird RFID handhelds</h3>
-        <p class="pillar-desc">Certified mobile RFID guns for stock counting, receiving, transfers, and item locate. Built directly into the iOS app workflow. Low-power and high-power modes built in.</p>
+        <p class="pillar-desc">Certified RFID guns for counting, receiving, transfers, and item locate — built into the iOS app workflow, with both power modes.</p>
       </div>
       <div class="pillar-card">
         <div class="pillar-icon"><i class="ti ti-cpu"></i></div>
         <h3 class="pillar-title">Zebra, Impinj & Honeywell</h3>
-        <p class="pillar-desc">Hardware-agnostic across global leaders. Fixed readers, handhelds, and antenna systems — all certified, tested, and supported across 40+ countries, with regional support built in for international deployments.</p>
+        <p class="pillar-desc">Hardware-agnostic across the global leaders — fixed readers, handhelds, and antennas, certified and supported in 40+ countries.</p>
       </div>
       <div class="pillar-card">
         <div class="pillar-icon"><i class="ti ti-tag"></i></div>
         <h3 class="pillar-title">Certified tag quality</h3>
-        <p class="pillar-desc">Tags must come from trustworthy sources. We verify vendor RFID tag quality to ensure proper function — because a bad tag means re-tagging an entire inventory. The cost of failure is measured in years of labor, not dollars.</p>
+        <p class="pillar-desc">We verify vendor tag quality before it reaches your inventory — a bad tag means re-tagging everything, a cost measured in years of labor, not dollars.</p>
       </div>
       <div class="pillar-card">
         <div class="pillar-icon"><i class="ti ti-printer"></i></div>
         <h3 class="pillar-title">Epson tag printers</h3>
-        <p class="pillar-desc">For in-house commissioning when vendors don't pre-tag. Print and encode RFID tags directly from the iOS device during the receiving workflow. Commission EPCs inside the purchase receipt document — one step.</p>
+        <p class="pillar-desc">Print and encode tags from the iOS device during receiving — EPCs commissioned inside the purchase receipt document, one step.</p>
       </div>
     </div>
   </div>
@@ -421,6 +421,8 @@ navOrder: 5
 
 
 {% include "logos.njk" %}
+
+{% include "tcs-family.njk" %}
 
 <!-- ============ FAQ ============ -->
 <section class="section" style="padding-bottom: 80px;">
