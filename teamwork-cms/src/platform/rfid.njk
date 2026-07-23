@@ -168,29 +168,15 @@ navOrder: 5
         <h2>Sold in seconds.</h2>
         <p>Associate-led or self-checkout — either way, the whole basket reads at once, no line-of-sight scanning. The moment the sale completes, the EPC flips to whitelisted in the ledger.</p>
         <ul class="feature-bullets">
-          <li>Confirmation logic: multiple reads per second before an item counts</li>
-          <li>Anti-bleed keeps neighboring items off the receipt</li>
+          <li>Associate-led: the basket goes near the antenna — the receipt builds itself</li>
+          <li>Self-checkout: items go in the bin — the cart appears on screen</li>
+          <li>Confirmation logic and anti-bleed keep neighboring items off the receipt</li>
         </ul>
       </div>
       <div class="feature-visual">
-        <div class="mockup-panel" style="padding: 24px;">
-          <div style="font-size: 11px; color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 14px; font-weight: 600;">Two ways to check out</div>
-          <div style="display: flex; flex-direction: column; gap: 12px;">
-            <div style="padding: 18px; background: var(--bg-deep); border: 1px solid var(--border); border-radius: 12px; display: flex; gap: 14px; align-items: flex-start;">
-              <div style="width: 40px; height: 40px; border-radius: 11px; background: var(--brand-soft); color: var(--brand-blue); display: flex; align-items: center; justify-content: center; font-size: 19px; flex-shrink: 0;"><i class="ti ti-user"></i></div>
-              <div>
-                <div style="font-size: 14px; font-weight: 900; color: var(--text); margin-bottom: 3px;">Associate-led RFID checkout</div>
-                <div style="font-size: 12.5px; color: var(--text-muted); line-height: 1.5;">Place the basket near the antenna — the receipt builds itself.</div>
-              </div>
-            </div>
-            <div style="padding: 18px; background: var(--bg-deep); border: 1px solid var(--border); border-radius: 12px; display: flex; gap: 14px; align-items: flex-start;">
-              <div style="width: 40px; height: 40px; border-radius: 11px; background: var(--brand-soft); color: var(--brand-blue); display: flex; align-items: center; justify-content: center; font-size: 19px; flex-shrink: 0;"><i class="ti ti-user-scan"></i></div>
-              <div>
-                <div style="font-size: 14px; font-weight: 900; color: var(--text); margin-bottom: 3px;">Next-gen self-checkout</div>
-                <div style="font-size: 12.5px; color: var(--text-muted); line-height: 1.5;">Items go in the bin — the cart appears on screen.</div>
-              </div>
-            </div>
-          </div>
+        <div class="shot">
+          <div class="shot-glow"></div>
+          <img class="shot-img" src="/assets/images/homepage/rfid-self-checkout.jpg" alt="A shopper using Teamwork Commerce RFID self-checkout — items in the bin, cart on screen">
         </div>
       </div>
     </div>
@@ -267,21 +253,21 @@ navOrder: 5
       <p class="section-sub">Every retailer has two e-commerce missions: never offer a product you can't fulfill, and never fail to offer a product you have. RFID delivers the accurate Available-to-Sell data that makes both possible.</p>
     </div>
     <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px;">
-      <div style="padding: 28px; background: var(--bg-elevated); border: 1px solid var(--border); border-radius: var(--radius);">
-        <div style="font-size: 46px; font-weight: 900; letter-spacing: -0.035em; line-height: 1; margin-bottom: 10px; color: var(--text);">99.9<span style="font-size: 22px; background: var(--gradient); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">%</span></div>
-        <div style="font-size: 13px; color: var(--text-muted); font-weight: 600;">ATS accuracy with RFID</div>
+      <div class="statcard statcard-blue">
+        <div class="statcard-value">99.9<span>%</span></div>
+        <div class="statcard-label">ATS accuracy with RFID</div>
       </div>
-      <div style="padding: 28px; background: var(--bg-elevated); border: 1px solid var(--border); border-radius: var(--radius);">
-        <div style="font-size: 46px; font-weight: 900; letter-spacing: -0.035em; line-height: 1; margin-bottom: 10px; color: var(--text);">0</div>
-        <div style="font-size: 13px; color: var(--text-muted); font-weight: 600;">Ghost SKUs sold online</div>
+      <div class="statcard statcard-purple">
+        <div class="statcard-value">0</div>
+        <div class="statcard-label">Ghost SKUs sold online</div>
       </div>
-      <div style="padding: 28px; background: var(--bg-elevated); border: 1px solid var(--border); border-radius: var(--radius);">
-        <div style="font-size: 46px; font-weight: 900; letter-spacing: -0.035em; line-height: 1; margin-bottom: 10px; color: var(--text);">15–22<span style="font-size: 22px; background: var(--gradient); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">%</span></div>
-        <div style="font-size: 13px; color: var(--text-muted); font-weight: 600;">Revenue lift (Endless Aisle)</div>
+      <div class="statcard statcard-blue">
+        <div class="statcard-value">15–22<span>%</span></div>
+        <div class="statcard-label">Revenue lift (Endless Aisle)</div>
       </div>
-      <div style="padding: 28px; background: var(--bg-elevated); border: 1px solid var(--border); border-radius: var(--radius);">
-        <div style="font-size: 32px; font-weight: 900; letter-spacing: -0.025em; line-height: 1; margin-bottom: 10px; color: var(--text);">20 min</div>
-        <div style="font-size: 13px; color: var(--text-muted); font-weight: 600;">Full store count (was 24–48 hrs)</div>
+      <div class="statcard statcard-purple">
+        <div class="statcard-value" style="font-size: 32px;">20 min</div>
+        <div class="statcard-label">Full store count (was 24–48 hrs)</div>
       </div>
     </div>
   </div>

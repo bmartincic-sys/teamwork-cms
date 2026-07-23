@@ -2471,6 +2471,37 @@ details[open] summary { color: var(--brand-text); }
 .hw-visual-icon i { font-size: 54px; color: var(--brand-blue); }
 @media (max-width: 760px) { .hw-grid { grid-template-columns: 1fr; } }
 
+/* Stat callout cards — colored accents (blue/purple, no gradient) */
+.statcard {
+  position: relative; overflow: hidden;
+  padding: 28px; border-radius: var(--radius);
+  background: var(--bg-elevated); border: 1px solid var(--border);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.statcard::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; }
+.statcard-blue::before { background: var(--brand-blue); }
+.statcard-purple::before { background: var(--brand-purple); }
+.statcard-blue { box-shadow: inset 0 44px 60px -58px rgba(36,125,255,0.55); }
+.statcard-purple { box-shadow: inset 0 44px 60px -58px rgba(124,80,245,0.55); }
+.statcard:hover { transform: translateY(-4px); }
+.statcard-blue:hover { box-shadow: inset 0 44px 60px -58px rgba(36,125,255,0.55), 0 22px 44px -24px rgba(36,125,255,0.5); }
+.statcard-purple:hover { box-shadow: inset 0 44px 60px -58px rgba(124,80,245,0.55), 0 22px 44px -24px rgba(124,80,245,0.5); }
+.statcard-value { font-size: 46px; font-weight: 900; letter-spacing: -0.035em; line-height: 1; margin-bottom: 10px; color: var(--text); }
+.statcard-value span { font-size: 22px; }
+.statcard-blue .statcard-value, .statcard-blue .statcard-value span { color: var(--brand-blue); }
+.statcard-purple .statcard-value, .statcard-purple .statcard-value span { color: var(--brand-purple); }
+[data-theme="dark"] .statcard-purple .statcard-value, [data-theme="dark"] .statcard-purple .statcard-value span { color: #a78bfa; }
+.statcard-label { font-size: 13px; color: var(--text-muted); font-weight: 600; }
+
+/* Ticker stat accents (sitewide) */
+.ticker-item::before {
+  content: ''; display: block; width: 34px; height: 4px; border-radius: 2px;
+  margin-bottom: 14px; background: var(--brand-blue);
+}
+.ticker-item:nth-child(2n)::before { background: #a78bfa; }
+.ticker-item:nth-child(odd) .ticker-value { color: #6aa8ff; }
+.ticker-item:nth-child(2n) .ticker-value { color: #a78bfa; }
+
 /* RFID journey connectors between chapters */
 .journey-link {
   position: relative; width: 2px; height: 108px; margin: -96px auto -12px;
