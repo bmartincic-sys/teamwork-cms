@@ -2492,9 +2492,11 @@ details[open] summary { color: var(--brand-text); }
   position: absolute; inset: 0; z-index: 1;
   display: flex; flex-direction: column; justify-content: flex-end; align-items: flex-start; gap: 12px;
   padding: 26px 28px;
-  background: linear-gradient(to top, rgba(5,6,17,0.92) 0%, rgba(5,6,17,0.55) 45%, rgba(5,6,17,0.08) 75%, transparent 100%);
+  background: linear-gradient(to top, rgba(5,6,17,0.95) 0%, rgba(5,6,17,0.72) 40%, rgba(5,6,17,0.30) 68%, rgba(5,6,17,0.06) 88%, transparent 100%);
 }
 .rfb-tile h3 { font-size: clamp(21px, 2.2vw, 28px); font-weight: 900; letter-spacing: -0.02em; line-height: 1.1; margin: 0; color: #fff; }
+.rfb-photo h3 { text-shadow: 0 2px 18px rgba(0,0,0,0.6); }
+.rfb-photo .rfb-rows li { text-shadow: 0 1px 12px rgba(0,0,0,0.7); }
 .rfb-rows { list-style: none; margin: 2px 0 0; padding: 0; display: flex; flex-direction: column; gap: 9px; }
 .rfb-rows li { display: flex; gap: 10px; align-items: flex-start; font-size: 13.5px; line-height: 1.45; color: rgba(238,241,251,0.85); }
 .rfb-rows li i { color: #8ab8ff; font-size: 16px; flex: none; margin-top: 1px; }
