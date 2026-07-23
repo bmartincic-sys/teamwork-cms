@@ -134,6 +134,19 @@ navOrder: 6
         <div class="frame-label">Cloud HQ — Reports</div>
         <span class="dash-live"><i></i> Live</span>
       </div>
+      <div class="dash-toolbar">
+        <div class="dash-tabs">
+          <span class="dash-tab active">All reports</span>
+          <span class="dash-tab">Sales</span>
+          <span class="dash-tab">Inventory</span>
+          <span class="dash-tab">Customers</span>
+          <span class="dash-tab">Finance</span>
+        </div>
+        <div class="dash-tools">
+          <span class="dash-source"><i class="ti ti-chart-dots-3"></i> Powered by Looker</span>
+          <span class="dash-chip"><i class="ti ti-calendar"></i> Last 30 days</span>
+        </div>
+      </div>
       <div class="dashw-grid">
         <div class="dashw-ghead dashw-rt"><i class="ti ti-activity"></i> Real-Time Operations</div>
         <div class="dashw dashw-rt">
@@ -202,6 +215,20 @@ navOrder: 6
       </div>
     </div>
   </section>
+
+<script>
+(function () {
+  var grid = document.querySelector('.dashw-grid');
+  if (!grid) return;
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  grid.classList.add('dash-armed');
+  if (!('IntersectionObserver' in window)) { grid.classList.add('dash-run'); return; }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) { if (e.isIntersecting) { grid.classList.add('dash-run'); io.disconnect(); } });
+  }, { threshold: 0.25 });
+  io.observe(grid);
+})();
+</script>
 
 <!-- ============ SECURITY ============ -->
 {% include "security.njk" %}
