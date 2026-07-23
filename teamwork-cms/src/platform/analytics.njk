@@ -151,7 +151,7 @@ navOrder: 6
         <div class="dashw-ghead dashw-rt"><i class="ti ti-activity"></i> Real-Time Operations</div>
         <div class="dashw dashw-rt">
           <div class="dashw-head"><i class="ti ti-chart-line"></i><span>Live multi-store monitoring</span><span class="dashw-livechip"><i></i>Live</span></div>
-          <div class="dashw-viz"><svg viewBox="0 0 120 34" preserveAspectRatio="none"><polyline points="0,26 15,22 30,24 45,14 60,18 75,9 90,13 105,5 120,8" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="dashw-viz"><svg viewBox="0 0 120 34" preserveAspectRatio="none"><polyline class="dashw-spark-base" points="0,26 15,22 30,24 45,14 60,18 75,9 90,13 105,5 120,8" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><polyline class="dashw-spark-run" points="0,26 15,22 30,24 45,14 60,18 75,9 90,13 105,5 120,8" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
           <p>Global sales, transactions, and associate performance in real time — every store's pulse on one dashboard.</p>
         </div>
         <div class="dashw dashw-rt">
@@ -220,12 +220,10 @@ navOrder: 6
 (function () {
   var grid = document.querySelector('.dashw-grid');
   if (!grid) return;
-  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  grid.classList.add('dash-armed');
   if (!('IntersectionObserver' in window)) { grid.classList.add('dash-run'); return; }
   var io = new IntersectionObserver(function (entries) {
-    entries.forEach(function (e) { if (e.isIntersecting) { grid.classList.add('dash-run'); io.disconnect(); } });
-  }, { threshold: 0.25 });
+    entries.forEach(function (e) { grid.classList.toggle('dash-run', e.isIntersecting); });
+  }, { threshold: 0.12 });
   io.observe(grid);
 })();
 </script>
