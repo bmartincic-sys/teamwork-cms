@@ -216,7 +216,7 @@ navOrder: 5
   </div>
 </section>
 
-<!-- ============ COMPLETE RFID CAPABILITIES (showcase) ============ -->
+<!-- ============ COMPLETE RFID CAPABILITIES (photo bento) ============ -->
 <section class="padv-showcase">
   <div class="padv-glow padv-glow-1"></div>
   <div class="padv-glow padv-glow-2"></div>
@@ -226,61 +226,43 @@ navOrder: 5
       <h2 class="padv-h2">RFID as a system — <span class="padv-accent">not a project.</span></h2>
       <p class="padv-sub">Every RFID workflow native to one platform. No middleware to maintain, no third-party integrations to break — the same accuracy that powers <a href="/platform/mobile-pos/" style="color: var(--brand-text);">Mobile POS</a> checkout and <a href="/platform/inventory-control/" style="color: var(--brand-text);">Inventory Control</a> cycle counts.</p>
     </div>
-
-    <div class="rfcap-group"><span class="rfcap-chip"><i class="ti ti-shopping-cart"></i> Checkout & Selling</span></div>
-    <div class="padv-cards">
-      <div class="padv-card">
-        <div class="padv-badge"><i class="ti ti-scan"></i></div>
-        <h3>RFID-enabled checkout</h3>
-        <p>Entire baskets in seconds — no line-of-sight scanning, just place items near the antenna. Anti-bleed ensures only intended items hit the receipt.</p>
+    <div class="rfb-grid">
+      <div class="rfb-tile rfb-photo rfb-tall">
+        <img src="/assets/images/homepage/rfid-counter.jpg" alt="An associate with a customer at the counter — RFID selling on the store floor" loading="lazy">
+        <div class="rfb-overlay">
+          <span class="rfcap-chip"><i class="ti ti-shopping-cart"></i> Checkout &amp; Selling</span>
+          <h3>Baskets in seconds,<br>not scans.</h3>
+          <ul class="rfb-rows">
+            <li><i class="ti ti-scan"></i><span><strong>RFID checkout</strong> — whole baskets at once, no line-of-sight scanning</span></li>
+            <li><i class="ti ti-user-scan"></i><span><strong>Self-checkout</strong> — items in a bin, the cart builds itself on screen</span></li>
+            <li><i class="ti ti-search"></i><span><strong>Geiger Counter locate</strong> — find the exact unit in seconds, 80% less search time</span></li>
+          </ul>
+        </div>
       </div>
-      <div class="padv-card">
-        <div class="padv-badge"><i class="ti ti-user-scan"></i></div>
-        <h3>Next-gen self-checkout</h3>
-        <p>Items go in a bin, readers energize every tag at once, and the cart builds itself on screen — faster and more accurate than barcode scanning.</p>
+      <div class="rfb-tile rfb-photo rfb-wide">
+        <img src="/assets/images/homepage/inventory-rfid-count.jpg" alt="An associate counting apparel with a Bluebird RFID handheld" loading="lazy">
+        <div class="rfb-overlay">
+          <span class="rfcap-chip"><i class="ti ti-stack-2"></i> Inventory Operations</span>
+          <h3>The whole store, counted in minutes.</h3>
+          <ul class="rfb-rows">
+            <li><i class="ti ti-clipboard-check"></i><span><strong>Full-store counts</strong> — recover $150K–$300K in "lost" stock in year one</span></li>
+            <li><i class="ti ti-package"></i><span><strong>Receiving &amp; commissioning</strong> — tag, encode, and scan in the purchase receipt workflow</span></li>
+            <li><i class="ti ti-arrows-exchange"></i><span><strong>Transfers &amp; adjustments by EPC</strong> — full chain of custody, unit by unit</span></li>
+          </ul>
+        </div>
       </div>
-      <div class="padv-card">
-        <div class="padv-badge"><i class="ti ti-search"></i></div>
-        <h3>Geiger Counter item locate</h3>
-        <p>60% of footwear "out-of-stocks" are actually in the building — just in the wrong box. Handhelds locate the exact unit in seconds, cutting search time 80%.</p>
+      <div class="rfb-tile rfb-dark">
+        <span class="rfcap-chip"><i class="ti ti-shield-lock"></i> Security</span>
+        <h3>The gate already knows.</h3>
+        <ul class="rfb-rows">
+          <li><i class="ti ti-shield-check"></i><span><strong>Blacklist / whitelist</strong> — the sale signal beats the customer to the EAS gate</span></li>
+          <li><i class="ti ti-shopping-bag-check"></i><span><strong>Bag Check</strong> — every EPC checked against the receipt at the exit</span></li>
+        </ul>
       </div>
-    </div>
-
-    <div class="rfcap-group"><span class="rfcap-chip"><i class="ti ti-stack-2"></i> Inventory Operations</span></div>
-    <div class="padv-cards">
-      <div class="padv-card">
-        <div class="padv-badge"><i class="ti ti-clipboard-check"></i></div>
-        <h3>Full-store counts in minutes</h3>
-        <p>Hours with a large team becomes minutes with one person — thousands of EPCs captured without pulling items off racks. Recover $150K–$300K in "lost" stock in year one.</p>
-      </div>
-      <div class="padv-card">
-        <div class="padv-badge"><i class="ti ti-package"></i></div>
-        <h3>Receiving & commissioning</h3>
-        <p>Vendor pre-tags or you commission on arrival — tag, encode, and scan inside the purchase receipt workflow. Low-power reads capture only the shipment in front of you.</p>
-      </div>
-      <div class="padv-card">
-        <div class="padv-badge"><i class="ti ti-arrows-exchange"></i></div>
-        <h3>Transfers & adjustments by EPC</h3>
-        <p>Every transfer, adjustment, and write-off tracked at the unit level — the ledger shows where each EPC has been, where it is, and where it's headed.</p>
-      </div>
-    </div>
-
-    <div class="rfcap-group"><span class="rfcap-chip"><i class="ti ti-shield-lock"></i> Security & Intelligence</span></div>
-    <div class="padv-cards">
-      <div class="padv-card">
-        <div class="padv-badge"><i class="ti ti-shield-lock"></i></div>
-        <h3>EAS blacklist / whitelist</h3>
-        <p>Every in-store EPC is blacklisted; a sale whitelists it instantly, and the signal beats the customer to the gate. Works with Checkpoint, Sensormatic, and others via API.</p>
-      </div>
-      <div class="padv-card">
-        <div class="padv-badge"><i class="ti ti-shopping-bag-check"></i></div>
-        <h3>Bag Check</h3>
-        <p>Built for high-traffic exits: the customer scans their bag, every EPC inside is checked against the receipt, and a fresh receipt can print right there. No ambiguity about who triggered an alarm.</p>
-      </div>
-      <div class="padv-card">
-        <div class="padv-badge"><i class="ti ti-sparkles"></i></div>
-        <h3>AI anomaly detection</h3>
-        <p>Real-time tag velocity monitoring — movement toward an exit without a POS transaction triggers an instant alert. Predicts stock-outs and auto-queues replenishment.</p>
+      <div class="rfb-tile rfb-ai">
+        <span class="tier-badge tier-badge-plus" style="font-size: 12px; padding: 8px 16px;"><i class="ti ti-sparkles"></i> AI</span>
+        <h3>Anomaly detection, live.</h3>
+        <p>Tags moving toward an exit without a POS transaction trigger instant alerts. Predicts stock-outs and auto-queues replenishment.</p>
       </div>
     </div>
   </div>
@@ -347,37 +329,6 @@ navOrder: 5
       </div>
     </div>
 
-    <div class="rfcap-group" style="margin-top: 44px;"><span class="rfcap-chip"><i class="ti ti-certificate"></i> The Certified Lineup</span></div>
-    <div class="hw-lineup">
-      <div class="hw-item">
-        <div class="hw-item-visual"><img src="/assets/images/hardware/bluebird-rfr900.jpg" alt="Bluebird RFR900 RFID sled" loading="lazy"></div>
-        <div class="hw-item-name">RFR900 sled</div>
-      </div>
-      <div class="hw-item">
-        <div class="hw-item-visual"><img src="/assets/images/hardware/exo-self-checkout.jpg" alt="Teamwork RFID self-checkout station" loading="lazy"></div>
-        <div class="hw-item-name">Self-checkout station</div>
-      </div>
-      <div class="hw-item">
-        <div class="hw-item-visual"><img src="/assets/images/hardware/eas-pedestals.jpg" alt="RFID EAS gate pedestals" loading="lazy"></div>
-        <div class="hw-item-name">EAS pedestals</div>
-      </div>
-      <div class="hw-item">
-        <div class="hw-item-visual"><img src="/assets/images/hardware/checkout-antenna.jpg" alt="RFID checkout antenna pad and reader" loading="lazy"></div>
-        <div class="hw-item-name">Checkout antenna</div>
-      </div>
-      <div class="hw-item">
-        <div class="hw-item-visual"><img src="/assets/images/hardware/fixed-reader.jpg" alt="Fixed RFID reader for overhead and backroom coverage" loading="lazy"></div>
-        <div class="hw-item-name">Fixed reader</div>
-      </div>
-      <div class="hw-item">
-        <div class="hw-item-visual"><img src="/assets/images/hardware/zebra-zd621.jpg" alt="Zebra ZD621 tag printer" loading="lazy"></div>
-        <div class="hw-item-name">Zebra ZD621</div>
-      </div>
-      <div class="hw-item">
-        <div class="hw-item-visual"><img src="/assets/images/hardware/epson-tmp80.jpg" alt="Epson TM-P80 mobile printer" loading="lazy"></div>
-        <div class="hw-item-name">Epson TM-P80</div>
-      </div>
-    </div>
   </div>
 </section>
 
