@@ -2452,6 +2452,24 @@ details[open] summary { color: var(--brand-text); }
   .padv-cards { grid-template-columns: 1fr; gap: 16px; }
 }
 
+/* Certified hardware — device cutout cards */
+.hw-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.hw-card {
+  padding: 26px 26px 30px; border-radius: 20px;
+  background: var(--panel); border: 1px solid var(--border);
+  transition: transform .3s cubic-bezier(.2,.7,.3,1), border-color .3s ease, box-shadow .3s ease;
+}
+.hw-card:hover { transform: translateY(-5px); border-color: rgba(36,125,255,0.5); box-shadow: 0 26px 54px -26px rgba(36,125,255,0.5); }
+.hw-visual {
+  display: flex; align-items: center; justify-content: center;
+  height: 190px; margin-bottom: 22px; border-radius: 14px;
+  background: radial-gradient(110% 130% at 50% 100%, var(--brand-soft), transparent 65%), var(--bg-deep);
+  border: 1px solid var(--border);
+}
+.hw-visual img { max-height: 160px; max-width: 70%; object-fit: contain; filter: drop-shadow(0 14px 24px rgba(0,0,0,0.35)); }
+.hw-visual-icon i { font-size: 54px; color: var(--brand-blue); }
+@media (max-width: 760px) { .hw-grid { grid-template-columns: 1fr; } }
+
 /* RFID capabilities showcase — group header chips */
 .rfcap-group { display: flex; align-items: center; gap: 16px; margin: 40px 0 18px; }
 .rfcap-group:first-of-type { margin-top: 0; }
