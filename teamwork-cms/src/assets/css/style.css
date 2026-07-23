@@ -2453,7 +2453,8 @@ details[open] summary { color: var(--brand-text); }
 }
 
 /* Certified hardware — device cutout cards */
-.hw-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.hw-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+@media (max-width: 1080px) { .hw-grid { grid-template-columns: repeat(2, 1fr); } }
 .hw-card {
   padding: 26px 26px 30px; border-radius: 20px;
   background: var(--panel); border: 1px solid var(--border);
