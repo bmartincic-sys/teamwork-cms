@@ -2475,6 +2475,7 @@ details[open] summary { color: var(--brand-text); }
 .dashw-rt { --_c: var(--brand-blue); }
 .dashw-gl { --_c: var(--brand-purple); }
 .dashw-in { --_c: var(--brand-magenta); }
+.dashw-ss { --_c: #94a3b8; }
 .dash-live {
   margin-left: auto; display: inline-flex; align-items: center; gap: 7px;
   font-size: 11px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--brand-blue);
