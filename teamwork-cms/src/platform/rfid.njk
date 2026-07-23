@@ -131,6 +131,8 @@ navOrder: 5
   </div>
 </section>
 
+<div class="journey-link" aria-hidden="true"><span class="journey-pulse"></span></div>
+
 <!-- ============ CHAPTER 2: ON THE FLOOR ============ -->
 <section class="section" style="padding-top: 0;">
   <div class="container">
@@ -155,20 +157,60 @@ navOrder: 5
   </div>
 </section>
 
-<!-- ============ CHAPTER 3: OUT THE DOOR ============ -->
+<div class="journey-link" aria-hidden="true"><span class="journey-pulse"></span></div>
+
+<!-- ============ CHAPTER 3: AT CHECKOUT ============ -->
 <section class="section" style="padding-top: 0;">
   <div class="container">
     <div class="feature-row reverse">
       <div class="feature-text">
-        <span class="story-chip"><span class="story-num">03</span> Out the door</span>
-        <h2>Sold in seconds. The gate already knows.</h2>
-        <p>Associate-led RFID checkout or next-gen self-checkout — either way, the whole basket reads at once, no line-of-sight scanning. The sale whitelists the EPC in the ledger, and the signal beats the customer to the EAS gate. No false alarms, no ambiguity about who triggered one.</p>
+        <span class="story-chip"><span class="story-num">03</span> At checkout</span>
+        <h2>Sold in seconds.</h2>
+        <p>Associate-led or self-checkout — either way, the whole basket reads at once, no line-of-sight scanning. The moment the sale completes, the EPC flips to whitelisted in the ledger.</p>
         <ul class="feature-bullets">
-          <li>Associate-led: place the basket near the antenna and the receipt builds itself</li>
-          <li>Self-checkout: items go in the bin and the cart appears on screen</li>
-          <li>Confirmation logic and anti-bleed keep neighboring items off the receipt</li>
+          <li>Confirmation logic: multiple reads per second before an item counts</li>
+          <li>Anti-bleed keeps neighboring items off the receipt</li>
+        </ul>
+      </div>
+      <div class="feature-visual">
+        <div class="mockup-panel" style="padding: 24px;">
+          <div style="font-size: 11px; color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 14px; font-weight: 600;">Two ways to check out</div>
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <div style="padding: 18px; background: var(--bg-deep); border: 1px solid var(--border); border-radius: 12px; display: flex; gap: 14px; align-items: flex-start;">
+              <div style="width: 40px; height: 40px; border-radius: 11px; background: var(--brand-soft); color: var(--brand-blue); display: flex; align-items: center; justify-content: center; font-size: 19px; flex-shrink: 0;"><i class="ti ti-user"></i></div>
+              <div>
+                <div style="font-size: 14px; font-weight: 900; color: var(--text); margin-bottom: 3px;">Associate-led RFID checkout</div>
+                <div style="font-size: 12.5px; color: var(--text-muted); line-height: 1.5;">Place the basket near the antenna — the receipt builds itself.</div>
+              </div>
+            </div>
+            <div style="padding: 18px; background: var(--bg-deep); border: 1px solid var(--border); border-radius: 12px; display: flex; gap: 14px; align-items: flex-start;">
+              <div style="width: 40px; height: 40px; border-radius: 11px; background: var(--brand-soft); color: var(--brand-blue); display: flex; align-items: center; justify-content: center; font-size: 19px; flex-shrink: 0;"><i class="ti ti-user-scan"></i></div>
+              <div>
+                <div style="font-size: 14px; font-weight: 900; color: var(--text); margin-bottom: 3px;">Next-gen self-checkout</div>
+                <div style="font-size: 12.5px; color: var(--text-muted); line-height: 1.5;">Items go in the bin — the cart appears on screen.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="journey-link" aria-hidden="true"><span class="journey-pulse"></span></div>
+
+<!-- ============ CHAPTER 4: AT THE GATES ============ -->
+<section class="section" style="padding-top: 0;">
+  <div class="container">
+    <div class="feature-row">
+      <div class="feature-text">
+        <span class="story-chip"><span class="story-num">04</span> At the gates</span>
+        <h2>The gate already knows.</h2>
+        <p>The whitelist signal beats the customer to the EAS gate. No false alarms, no ambiguity about who triggered one — and anything that heads for the door without a sale gets flagged on the way.</p>
+        <ul class="feature-bullets">
+          <li>Works with Checkpoint, Sensormatic, and other gate providers via API</li>
           <li>Bag Check: every EPC verified against the receipt at the exit</li>
-          <li>AI anomaly detection flags tags that head for the door without a sale</li>
+          <li>AI anomaly detection flags tags that move toward the door without a sale</li>
         </ul>
         <a href="/contact/" class="btn btn-primary">Book a demo <i class="ti ti-arrow-right"></i></a>
       </div>

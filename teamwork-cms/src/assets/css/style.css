@@ -2471,6 +2471,19 @@ details[open] summary { color: var(--brand-text); }
 .hw-visual-icon i { font-size: 54px; color: var(--brand-blue); }
 @media (max-width: 760px) { .hw-grid { grid-template-columns: 1fr; } }
 
+/* RFID journey connectors between chapters */
+.journey-link {
+  position: relative; width: 2px; height: 108px; margin: -96px auto -12px;
+  background: linear-gradient(180deg, transparent, var(--border-strong) 22%, var(--border-strong) 78%, transparent);
+  overflow: hidden; z-index: 1;
+}
+.journey-pulse {
+  position: absolute; left: -2px; top: -14px; width: 6px; height: 14px; border-radius: 3px;
+  background: var(--brand-blue);
+  animation: journeyPulse 2.4s ease-in-out infinite;
+}
+@keyframes journeyPulse { 0% { top: -14px; opacity: 0; } 25% { opacity: 1; } 100% { top: 108px; opacity: 0; } }
+
 /* RFID story chapter chips */
 .story-chip {
   display: inline-flex; align-items: center; gap: 10px;
