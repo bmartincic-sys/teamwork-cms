@@ -2471,6 +2471,22 @@ details[open] summary { color: var(--brand-text); }
 .hw-visual-icon i { font-size: 54px; color: var(--brand-blue); }
 @media (max-width: 760px) { .hw-grid { grid-template-columns: 1fr; } }
 
+/* Certified lineup — device rail */
+.hw-lineup { display: grid; grid-template-columns: repeat(7, 1fr); gap: 12px; margin-top: 22px; }
+.hw-item { text-align: center; }
+.hw-item-visual {
+  display: flex; align-items: center; justify-content: center;
+  height: 116px; padding: 12px; border-radius: 12px; margin-bottom: 10px;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  transition: transform .25s ease, border-color .25s ease;
+}
+.hw-item:hover .hw-item-visual { transform: translateY(-3px); border-color: rgba(36,125,255,0.45); }
+.hw-item-visual img { max-height: 92px; max-width: 100%; object-fit: contain; }
+.hw-item-name { font-size: 11.5px; font-weight: 700; color: var(--text-muted); letter-spacing: 0.02em; }
+@media (max-width: 1080px) { .hw-lineup { grid-template-columns: repeat(4, 1fr); } }
+@media (max-width: 640px) { .hw-lineup { grid-template-columns: repeat(2, 1fr); } }
+
 /* RFID capabilities showcase — group header chips */
 .rfcap-group { display: flex; align-items: center; gap: 16px; margin: 40px 0 18px; }
 .rfcap-group:first-of-type { margin-top: 0; }
