@@ -46,8 +46,9 @@ navOrder: 5
   <div class="innov-glow innov-glow-2"></div>
   <div class="container" style="position: relative; z-index: 1;">
     <div class="section-header">
-      <div class="section-eyebrow">The RFID Lifecycle</div>
-      <h2 class="section-title">End-to-end. Native at every step.</h2>
+      <div class="section-eyebrow">The RFID Story</div>
+      <h2 class="section-title">One unit. One record. The whole journey.</h2>
+      <p class="section-sub">Every product gets an EPC at birth and a ledger entry for life. Follow one unit from the factory to the front door.</p>
     </div>
     <div class="innov-track">
       <div class="innov-rail"><span class="innov-pulse"></span></div>
@@ -106,19 +107,73 @@ navOrder: 5
   </div>
 </section>
 
-<!-- ============ SECTION 1: THE FULL LIFECYCLE ============ -->
+<!-- ============ CHAPTER 1: AT THE FACTORY ============ -->
 <section class="section">
   <div class="container">
     <div class="feature-row">
       <div class="feature-text">
-        <span class="section-eyebrow">Full-Lifecycle RFID</span>
-        <h2>Every unit gets a license plate. Every movement tracked.</h2>
-        <p>Each tag carries an Electronic Product Code (EPC) — a UPC plus a unique serial. Ten identical shirts share one UPC but ten distinct EPCs: ten trackable units, not a count of "10."</p>
+        <span class="story-chip"><span class="story-num">01</span> At the factory</span>
+        <h2>Born with a license plate.</h2>
+        <p>Before the unit ever ships, its tag is commissioned with an Electronic Product Code — a UPC plus a unique serial. Ten identical jackets: one UPC, ten EPCs, ten trackable units. The unit control ledger opens its history from day one.</p>
         <ul class="feature-bullets">
-          <li>Receiving: tag, encode, and scan inbound shipments in one step</li>
-          <li>Unit control ledger: where every EPC was received, counted, transferred, sold, and whitelisted</li>
+          <li>Source tagging with manufacturers, at the point of creation</li>
+          <li>In-transit visibility: the tagged container tracked on the water, through customs, to the dock</li>
         </ul>
-        <a href="/contact/" class="btn btn-primary">Book a demo <i class="ti ti-arrow-right"></i></a>
+      </div>
+      <div class="feature-visual">
+        <div class="mockup-panel" style="padding: 24px;">
+          <div style="font-size: 11px; color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 10px; font-weight: 600;">One UPC — the style</div>
+          <div style="padding: 13px 16px; background: var(--bg-deep); border: 1px solid var(--border); border-radius: 8px; font-family: var(--font-mono); font-size: 13px; color: var(--text); margin-bottom: 18px;">UPC 0 14800 23200 7</div>
+          <div style="font-size: 11px; color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 10px; font-weight: 600;">Ten EPCs — every single unit</div>
+          <div style="padding: 13px 16px; background: rgba(36,125,255,0.08); border: 1px solid rgba(36,125,255,0.35); border-radius: 8px; font-family: var(--font-mono); font-size: 12.5px; color: var(--text); line-height: 2;">
+            EPC 3024.0784.1192.<strong>0041</strong><br>
+            EPC 3024.0784.1192.<strong>0042</strong><br>
+            EPC 3024.0784.1192.<strong>0043</strong> <span style="color: var(--text-faint);">…</span>
+          </div>
+          <div style="margin-top: 16px; padding: 11px 14px; background: var(--bg-deep); border: 1px solid var(--border); border-radius: 8px; font-size: 11.5px; color: var(--text-muted); line-height: 1.5;">A UPC counts a style. An EPC tracks a unit — that difference is the entire system.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CHAPTER 2: AT RECEIVING ============ -->
+<section class="section" style="padding-top: 0;">
+  <div class="container">
+    <div class="feature-row reverse">
+      <div class="feature-text">
+        <span class="story-chip"><span class="story-num">02</span> At receiving</span>
+        <h2>Received in one step.</h2>
+        <p>The shipment lands. Tag, encode, and scan happen inside the purchase receipt workflow — and low-power reads capture only the boxes in front of you, never the racks behind.</p>
+        <ul class="feature-bullets">
+          <li>Vendor pre-tagged? Scan straight into the receipt</li>
+          <li>No tags? Print and encode from the iOS device during receiving</li>
+          <li>Every EPC auto-reconciled against the purchase order</li>
+        </ul>
+      </div>
+      <div class="feature-visual">
+        <div class="shot">
+          <div class="shot-glow"></div>
+          <img class="shot-img" src="/assets/images/homepage/rfid-sled.webp" alt="Bluebird RFID sled readers with iPhones running the Teamwork Commerce RFID app">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CHAPTER 3: ON THE FLOOR ============ -->
+<section class="section" style="padding-top: 0;">
+  <div class="container">
+    <div class="feature-row">
+      <div class="feature-text">
+        <span class="story-chip"><span class="story-num">03</span> On the floor</span>
+        <h2>Counted in minutes. Found in seconds.</h2>
+        <p>Now the unit lives in the store — and never disappears. High-power sweeps read thousands of EPCs without touching a rack; when something hides in the backroom, Geiger Counter locate walks you straight to it.</p>
+        <ul class="feature-bullets">
+          <li>Full-store counts in minutes, not days — inventory verified continuously</li>
+          <li>80% less search time on "missing" items</li>
+          <li>Transfers and adjustments tracked by EPC — full chain of custody</li>
+        </ul>
       </div>
       <div class="feature-visual">
         <div class="shot">
@@ -130,65 +185,38 @@ navOrder: 5
   </div>
 </section>
 
-<!-- ============ SECTION 2: SMART READING — POWER MODES ============ -->
+<!-- ============ CHAPTER 4: OUT THE DOOR ============ -->
 <section class="section" style="padding-top: 0;">
   <div class="container">
     <div class="feature-row reverse">
       <div class="feature-text">
-        <span class="section-eyebrow">Intelligent Reading</span>
-        <h2>Smart enough to know what it should read.</h2>
-        <p>Receiving needs tight, low-power reads that capture only what's in front of you — not the 500 items on the racks behind. Stock counting needs the opposite: maximum range to sweep a whole store in minutes. The system switches automatically.</p>
+        <span class="story-chip"><span class="story-num">04</span> Out the door</span>
+        <h2>Sold in seconds. The gate already knows.</h2>
+        <p>The whole basket reads at once — no line-of-sight scanning. The sale whitelists the EPC in the ledger, and the signal beats the customer to the EAS gate. No false alarms, no ambiguity about who triggered one.</p>
         <ul class="feature-bullets">
-          <li>Low-power for transactions: receiving, transfers, selling — reads only items within inches</li>
-          <li>High-power for counting: full-store sweeps capture thousands of EPCs in minutes</li>
-          <li>Confirmation logic: multiple reads per second before a tag counts — no phantom reads</li>
-          <li>Anti-bleed: tags respond only to the antenna that energized them — no cross-reads between zones</li>
-        </ul>
-      </div>
-      <div class="feature-visual">
-        <div class="shot">
-          <div class="shot-glow"></div>
-          <img class="shot-img" src="/assets/images/homepage/rfid-sled.webp" alt="Bluebird RFID sled readers with iPhones running the Teamwork Commerce RFID app — live scanning and Daily Count zones">
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ SECTION 3: LOSS PREVENTION & EAS ============ -->
-<section class="section" style="padding-top: 0;">
-  <div class="container">
-    <div class="feature-row">
-      <div class="feature-text">
-        <span class="section-eyebrow">Loss Prevention & EAS</span>
-        <h2>Blacklist every unit in the store. Whitelist it the instant it sells.</h2>
-        <p>Every EPC in the store is on the blacklist; sold at POS, it's whitelisted before the customer reaches the gate. No false alarms, no ambiguity about who triggered one.</p>
-        <ul class="feature-bullets">
-          <li>POS-to-gate signal via a local server holding the ledger, pushed from cloud</li>
-          <li>EAS gate integration with Checkpoint, Sensormatic, and others via API</li>
-          <li>AI anomaly detection: tags moving toward an exit without a POS transaction trigger alerts</li>
-          <li>Bag Check: customers scan their bag on the way out — discrepancies isolated with certainty</li>
+          <li>Confirmation logic and anti-bleed keep neighboring items off the receipt</li>
+          <li>Bag Check: every EPC verified against the receipt at the exit</li>
+          <li>AI anomaly detection flags tags that head for the door without a sale</li>
         </ul>
         <a href="/contact/" class="btn btn-primary">Book a demo <i class="ti ti-arrow-right"></i></a>
       </div>
-      <!-- Mockup: Blacklist/whitelist flow -->
+      <!-- Diagram: Blacklist/whitelist flow -->
       <div class="feature-visual">
         <div class="mockup-panel" style="padding: 24px;">
           <div style="display: flex; align-items: center; justify-content: space-between; padding-bottom: 16px; margin-bottom: 16px; border-bottom: 1px solid var(--border);">
             <span style="display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 700; color: #fff; padding: 5px 11px; background: var(--gradient); border-radius: 100px;"><i class="ti ti-shield-check" style="font-size:11px"></i> EAS Control</span>
             <span style="font-size: 11px; color: var(--text-faint); font-family: var(--font-mono);">Real-time</span>
           </div>
-          <div style="font-size: 11px; color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 10px; font-weight: 600;">Transaction → Whitelist Flow</div>
-          <div style="display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px;">
+          <div style="display: flex; flex-direction: column; gap: 6px;">
             <div style="padding: 10px 14px; border-radius: 8px; background: var(--bg-deep); border: 1px solid var(--border); display: flex; align-items: center; gap: 10px; font-size: 12px;">
               <span style="width: 8px; height: 8px; border-radius: 50%; background: #ef4444; flex-shrink: 0;"></span>
-              <span style="color: var(--text); font-weight: 600; flex: 1;">EPC ...1192.0047</span>
+              <span style="color: var(--text); font-weight: 600; flex: 1;">EPC ...1192.0041</span>
               <span style="font-size: 10px; color: #ef4444; font-weight: 700; padding: 2px 8px; background: rgba(239, 68, 68, 0.1); border-radius: 100px;">BLACKLISTED</span>
             </div>
             <div style="text-align: center; font-size: 16px; color: var(--text-faint);">↓ <span style="font-size: 10px; font-weight: 700; letter-spacing: 0.06em;">POS SALE COMPLETED</span> ↓</div>
             <div style="padding: 10px 14px; border-radius: 8px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.2); display: flex; align-items: center; gap: 10px; font-size: 12px;">
               <span style="width: 8px; height: 8px; border-radius: 50%; background: #ffffff; flex-shrink: 0;"></span>
-              <span style="color: var(--text); font-weight: 600; flex: 1;">EPC ...1192.0047</span>
+              <span style="color: var(--text); font-weight: 600; flex: 1;">EPC ...1192.0041</span>
               <span style="font-size: 10px; color: var(--text); font-weight: 700; padding: 2px 8px; background: rgba(255,255,255,0.08); border-radius: 100px;">WHITELISTED</span>
             </div>
             <div style="text-align: center; font-size: 16px; color: var(--text-faint);">↓ <span style="font-size: 10px; font-weight: 700; letter-spacing: 0.06em;">INSTANT API → LOCAL SERVER → EAS GATE</span> ↓</div>
@@ -197,7 +225,6 @@ navOrder: 5
               <span style="color: var(--text); font-weight: 700;">Customer exits — gate clear ✓</span>
             </div>
           </div>
-          <div style="padding: 12px 14px; background: rgba(245, 158, 11, 0.06); border: 1px solid rgba(245, 158, 11, 0.2); border-radius: 8px; font-size: 11px; color: #d97706; line-height: 1.55;"><strong>Anomaly alert:</strong> 3 EPCs moving toward exit without POS transaction → Loss Prevention notification triggered</div>
         </div>
       </div>
     </div>
