@@ -2452,6 +2452,19 @@ details[open] summary { color: var(--brand-text); }
   .padv-cards { grid-template-columns: 1fr; gap: 16px; }
 }
 
+/* RFID capabilities showcase — group header chips */
+.rfcap-group { display: flex; align-items: center; gap: 16px; margin: 40px 0 18px; }
+.rfcap-group:first-of-type { margin-top: 0; }
+.rfcap-group::after { content: ''; flex: 1; height: 1px; background: var(--border-strong); }
+.rfcap-chip {
+  display: inline-flex; align-items: center; gap: 9px;
+  font-size: 13px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--text); padding: 10px 20px; border-radius: 100px;
+  background: var(--bg-elevated); border: 1px solid rgba(36, 125, 255, 0.45);
+  box-shadow: 0 10px 26px -14px rgba(36, 125, 255, 0.55);
+}
+.rfcap-chip i { color: var(--brand-blue); font-size: 16px; }
+
 /* ============ RFID DEVICE SHOT (Mobile POS) ============ */
 .rfid-shot {
   position: relative;
