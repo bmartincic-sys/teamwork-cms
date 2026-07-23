@@ -39,60 +39,43 @@ navOrder: 5
 
 </section>
 
-<!-- ============ RFID COMMAND CENTER ============ -->
-<section class="section-tight" style="padding-top: 72px; padding-bottom: 0;">
-  <div class="hero-product fade-up">
-    <div class="product-frame">
-      <div class="product-frame-bar">
-        <div class="frame-dot"></div><div class="frame-dot"></div><div class="frame-dot"></div>
-        <div class="frame-label">teamwork.app — RFID Command Center · Unit Control Ledger</div>
-      </div>
-      <div class="product-body">
-        <!-- Left: Tag lifecycle stages -->
-        <div style="display: flex; flex-direction: column; gap: 8px;">
-          <div style="font-size: 11px; color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; margin-bottom: 2px;">RFID Tag Lifecycle · End-to-End Native</div>
-          <div style="padding: 11px 14px; border-radius: 8px; background: var(--brand-soft); border-left: 3px solid var(--brand-blue); display: flex; align-items: center; gap: 10px;">
-            <span style="width: 26px; height: 26px; border-radius: 6px; background: var(--gradient); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 900; flex-shrink: 0;">1</span>
-            <div><div style="font-size: 12px; font-weight: 700; color: var(--text);">Source Tagging</div><div style="font-size: 10px; color: var(--text-muted);">EPC commissioned at manufacturer · 24K units/week</div></div>
-          </div>
-          <div style="padding: 11px 14px; border-radius: 8px; background: var(--bg-deep); border: 1px solid var(--border); display: flex; align-items: center; gap: 10px;">
-            <span style="width: 26px; height: 26px; border-radius: 6px; background: var(--gradient); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 900; flex-shrink: 0;">2</span>
-            <div><div style="font-size: 12px; font-weight: 700; color: var(--text);">In-Transit Tracking</div><div style="font-size: 10px; color: var(--text-muted);">RFID containers on the water · ETA customs: 3 days</div></div>
-          </div>
-          <div style="padding: 11px 14px; border-radius: 8px; background: var(--bg-deep); border: 1px solid var(--border); display: flex; align-items: center; gap: 10px;">
-            <span style="width: 26px; height: 26px; border-radius: 6px; background: var(--gradient); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 900; flex-shrink: 0;">3</span>
-            <div><div style="font-size: 12px; font-weight: 700; color: var(--text);">Receiving & Commissioning</div><div style="font-size: 10px; color: var(--text-muted);">Low-power scan · Auto-reconcile against PO · Tag + encode</div></div>
-          </div>
-          <div style="padding: 11px 14px; border-radius: 8px; background: var(--bg-deep); border: 1px solid var(--border); display: flex; align-items: center; gap: 10px;">
-            <span style="width: 26px; height: 26px; border-radius: 6px; background: var(--gradient); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 900; flex-shrink: 0;">4</span>
-            <div><div style="font-size: 12px; font-weight: 700; color: var(--text);">Store Operations</div><div style="font-size: 10px; color: var(--text-muted);">Counts, transfers, adjustments — all by EPC unit</div></div>
-          </div>
-          <div style="padding: 11px 14px; border-radius: 8px; background: var(--bg-deep); border: 1px solid var(--border); display: flex; align-items: center; gap: 10px;">
-            <span style="width: 26px; height: 26px; border-radius: 6px; background: var(--gradient); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 900; flex-shrink: 0;">5</span>
-            <div><div style="font-size: 12px; font-weight: 700; color: var(--text);">Checkout & EAS</div><div style="font-size: 10px; color: var(--text-muted);">RFID sale → instant whitelist → gates clear customer</div></div>
-          </div>
+<!-- ============ THE RFID LIFECYCLE (flow) ============ -->
+<section class="section innov-section">
+  <div class="innov-bg"></div>
+  <div class="innov-glow innov-glow-1"></div>
+  <div class="innov-glow innov-glow-2"></div>
+  <div class="container" style="position: relative; z-index: 1;">
+    <div class="section-header">
+      <div class="section-eyebrow">The RFID Lifecycle</div>
+      <h2 class="section-title">End-to-end. Native at every step.</h2>
+    </div>
+    <div class="innov-track">
+      <div class="innov-rail"><span class="innov-pulse"></span></div>
+      <div class="innov-nodes">
+        <div class="innov-node">
+          <div class="innov-node-dot"><i class="ti ti-tag"></i></div>
+          <div class="innov-node-title">Source Tagging</div>
+          <div class="innov-node-sub">EPCs commissioned at the manufacturer, at the point of creation</div>
         </div>
-        <!-- Right: Unit control ledger + stats -->
-        <div style="display: flex; flex-direction: column; gap: 10px;">
-          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px;">
-            <div style="padding: 14px; background: var(--bg-deep); border: 1px solid var(--border); border-radius: 10px;">
-              <div style="font-size: 10px; color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 6px; font-weight: 600;">Accuracy</div>
-              <div style="font-size: 22px; font-weight: 900; background: var(--gradient); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">99.9%</div>
-            </div>
-            <div style="padding: 14px; background: var(--bg-deep); border: 1px solid var(--border); border-radius: 10px;">
-              <div style="font-size: 10px; color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 6px; font-weight: 600;">EPC Units Tracked</div>
-              <div style="font-size: 22px; font-weight: 900; color: var(--text);">147K</div>
-            </div>
-          </div>
-          <div style="padding: 14px; background: var(--bg-deep); border: 1px solid var(--border); border-radius: 10px; flex: 1;">
-            <div style="font-size: 11px; color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 10px; font-weight: 600;">Unit Control Ledger · EPC: 3024.0784.1192.0047</div>
-            <div style="display: flex; justify-content: space-between; padding: 7px 0; border-bottom: 1px solid var(--border); font-size: 11px;"><span style="color: var(--text); font-weight: 600;">Commissioned</span><span style="color: var(--text-muted); font-family: var(--font-mono);">PO #8847 · Mar 12</span></div>
-            <div style="display: flex; justify-content: space-between; padding: 7px 0; border-bottom: 1px solid var(--border); font-size: 11px;"><span style="color: var(--text); font-weight: 600;">Received → Store #042</span><span style="color: var(--text-muted); font-family: var(--font-mono);">Mar 15</span></div>
-            <div style="display: flex; justify-content: space-between; padding: 7px 0; border-bottom: 1px solid var(--border); font-size: 11px;"><span style="color: var(--text); font-weight: 600;">Counted (cycle count)</span><span style="color: var(--text-muted); font-family: var(--font-mono);">Mar 18</span></div>
-            <div style="display: flex; justify-content: space-between; padding: 7px 0; border-bottom: 1px solid var(--border); font-size: 11px;"><span style="color: var(--text); font-weight: 600;">Transfer → Store #071</span><span style="color: var(--text-muted); font-family: var(--font-mono);">Mar 22</span></div>
-            <div style="display: flex; justify-content: space-between; padding: 7px 0; font-size: 11px;"><span style="color: var(--text); font-weight: 700;">Sold → Whitelisted</span><span style="color: var(--text); font-family: var(--font-mono); font-weight: 700;">Mar 24 ✓</span></div>
-          </div>
-          <div style="padding: 10px 14px; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.2); border-radius: 8px; font-size: 11px; color: var(--text); font-weight: 700; display: flex; align-items: center; gap: 8px;"><i class="ti ti-circle-check-filled" style="font-size: 14px;"></i> Every unit has a license plate. Every movement tracked. Full chain of custody.</div>
+        <div class="innov-node">
+          <div class="innov-node-dot"><i class="ti ti-ship"></i></div>
+          <div class="innov-node-title">In-Transit</div>
+          <div class="innov-node-sub">Tagged containers tracked on the water, through customs, to the dock</div>
+        </div>
+        <div class="innov-node">
+          <div class="innov-node-dot"><i class="ti ti-package"></i></div>
+          <div class="innov-node-title">Receiving</div>
+          <div class="innov-node-sub">Tag, encode, and scan inbound shipments in one step</div>
+        </div>
+        <div class="innov-node">
+          <div class="innov-node-dot"><i class="ti ti-building-store"></i></div>
+          <div class="innov-node-title">Store Operations</div>
+          <div class="innov-node-sub">Counts, transfers, and adjustments — all by EPC unit</div>
+        </div>
+        <div class="innov-node">
+          <div class="innov-node-dot"><i class="ti ti-shield-check"></i></div>
+          <div class="innov-node-title">Checkout &amp; EAS</div>
+          <div class="innov-node-sub">A sale whitelists the unit instantly — gates clear the customer</div>
         </div>
       </div>
     </div>
@@ -139,32 +122,10 @@ navOrder: 5
         </ul>
         <a href="/contact/" class="btn btn-primary">Book a demo <i class="ti ti-arrow-right"></i></a>
       </div>
-      <!-- Mockup: EPC vs UPC explainer -->
       <div class="feature-visual">
-        <div class="mockup-panel" style="padding: 24px;">
-          <div style="display: flex; align-items: center; justify-content: space-between; padding-bottom: 16px; margin-bottom: 16px; border-bottom: 1px solid var(--border);">
-            <span style="display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 700; color: #fff; padding: 5px 11px; background: var(--gradient); border-radius: 100px;"><i class="ti ti-scan" style="font-size:11px"></i> Unit Identity</span>
-            <span style="font-size: 11px; color: var(--text-faint); font-family: var(--font-mono);">EPC Standard</span>
-          </div>
-          <div style="margin-bottom: 16px;">
-            <div style="font-size: 11px; color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 10px; font-weight: 600;">The Problem: UPC alone</div>
-            <div style="padding: 14px; background: rgba(245, 158, 11, 0.06); border: 1px solid rgba(245, 158, 11, 0.2); border-radius: 8px;">
-              <div style="font-family: var(--font-mono); font-size: 13px; color: var(--text); margin-bottom: 6px;">UPC: 0 14800 23200 7</div>
-              <div style="font-size: 11px; color: #d97706;">Scan 10 identical items → system sees <strong>1 SKU, qty unknown</strong></div>
-            </div>
-          </div>
-          <div style="margin-bottom: 16px;">
-            <div style="font-size: 11px; color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 10px; font-weight: 600;">The Solution: EPC (UPC + unique serial)</div>
-            <div style="padding: 14px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.2); border-radius: 8px;">
-              <div style="font-family: var(--font-mono); font-size: 11px; color: var(--text); line-height: 2;">
-                EPC: 3024.0784.1192.<strong style="color: var(--text);">0041</strong><br>
-                EPC: 3024.0784.1192.<strong style="color: var(--text);">0042</strong><br>
-                EPC: 3024.0784.1192.<strong style="color: var(--text);">0043</strong>
-              </div>
-              <div style="font-size: 11px; color: var(--text); margin-top: 8px;">Scan 10 items → system sees <strong>10 unique units, individually tracked</strong></div>
-            </div>
-          </div>
-          <div style="padding: 10px 14px; background: var(--bg-deep); border: 1px solid var(--border); border-radius: 8px; font-size: 11px; color: var(--text-muted); line-height: 1.5;">Every unit has its own "license plate." This is why our counts are accurate, our loss prevention works, and our Available-to-Sell is trustworthy.</div>
+        <div class="shot">
+          <div class="shot-glow"></div>
+          <img class="shot-img" src="/assets/images/homepage/rfid-scanning.jpg" alt="An associate sweeping a rack of jackets with an RFID handheld — every unit read by EPC in seconds">
         </div>
       </div>
     </div>
@@ -186,31 +147,10 @@ navOrder: 5
           <li>Anti-bleed: tags respond only to the antenna that energized them — no cross-reads between zones</li>
         </ul>
       </div>
-      <!-- Mockup: Power mode comparison -->
       <div class="feature-visual">
-        <div class="mockup-panel" style="padding: 24px;">
-          <div style="display: flex; align-items: center; justify-content: space-between; padding-bottom: 16px; margin-bottom: 16px; border-bottom: 1px solid var(--border);">
-            <span style="display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 700; color: #fff; padding: 5px 11px; background: var(--gradient); border-radius: 100px;"><i class="ti ti-adjustments" style="font-size:11px"></i> Power Modes</span>
-            <span style="font-size: 11px; color: var(--text-faint); font-family: var(--font-mono);">Adaptive</span>
-          </div>
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px;">
-            <div style="padding: 16px; background: var(--bg-deep); border: 1px solid var(--border); border-radius: 10px;">
-              <div style="font-size: 22px; margin-bottom: 8px; color: var(--brand-blue);"><i class="ti ti-battery-2"></i></div>
-              <div style="font-size: 14px; font-weight: 900; color: var(--text); margin-bottom: 4px;">Low Power</div>
-              <div style="font-size: 11px; color: var(--text-muted); line-height: 1.5;">Range: ~6 inches</div>
-              <div style="font-size: 10px; color: var(--text-faint); margin-top: 8px; line-height: 1.5; border-top: 1px solid var(--border); padding-top: 8px;">Receiving · Transfers · Sales · Commissioning</div>
-            </div>
-            <div style="padding: 16px; background: var(--bg-deep); border: 1px solid var(--border); border-radius: 10px;">
-              <div style="font-size: 22px; margin-bottom: 8px; color: var(--brand-blue);"><i class="ti ti-bolt"></i></div>
-              <div style="font-size: 14px; font-weight: 900; color: var(--text); margin-bottom: 4px;">High Power</div>
-              <div style="font-size: 11px; color: var(--text-muted); line-height: 1.5;">Range: full store sweep</div>
-              <div style="font-size: 10px; color: var(--text-faint); margin-top: 8px; line-height: 1.5; border-top: 1px solid var(--border); padding-top: 8px;">Stock counts · Cycle counts · Item locate</div>
-            </div>
-          </div>
-          <div style="padding: 14px; background: var(--bg-deep); border: 1px solid var(--border); border-radius: 10px;">
-            <div style="font-size: 11px; color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 10px; font-weight: 600;">Confirmation Logic</div>
-            <div style="font-size: 12px; color: var(--text); line-height: 1.6;">Tag must be read <strong>3+ times within 1 second</strong> before it's confirmed. For self-checkout: <strong>3 continuous seconds</strong> in the bin. Prevents phantom reads, ensures only intended items are captured.</div>
-          </div>
+        <div class="shot">
+          <div class="shot-glow"></div>
+          <img class="shot-img" src="/assets/images/homepage/rfid-sled.webp" alt="Bluebird RFID sled readers with iPhones running the Teamwork Commerce RFID app — live scanning and Daily Count zones">
         </div>
       </div>
     </div>
