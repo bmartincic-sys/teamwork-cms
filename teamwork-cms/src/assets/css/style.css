@@ -2506,6 +2506,14 @@ details[open] summary { color: var(--brand-text); }
 .tm-stat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
 .tm-stat { padding: 28px 24px; border-radius: 18px; background: var(--bg-elevated); border: 1px solid var(--border); }
 .tm-stat-num { font-size: clamp(42px, 5vw, 64px); font-weight: 900; letter-spacing: -0.04em; line-height: 1; color: var(--text); }
+/* Upgrade-case stats carry the gradient (Plus/AI treatment) */
+.tm-band .tm-stat-num {
+  background: var(--gradient);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent; color: transparent;
+}
+.tm-band .tm-stat { border-color: rgba(124, 80, 245, 0.28); }
+.tm-band .tm-stat:hover { border-color: rgba(124, 80, 245, 0.5); }
 .tm-stat-num .u { font-size: 0.5em; font-weight: 900; }
 .tm-stat-cap { font-size: 14px; color: var(--text-muted); font-weight: 600; margin-top: 12px; line-height: 1.45; }
 .tm-stat-src { font-size: 10.5px; color: var(--text-faint); margin-top: 12px; letter-spacing: 0.02em; text-transform: uppercase; }
