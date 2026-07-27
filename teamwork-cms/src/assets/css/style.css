@@ -2576,6 +2576,48 @@ main[data-vertical] .tm-band-glow {
               radial-gradient(50% 70% at 8% 100%, color-mix(in srgb, var(--v-accent) 16%, transparent), transparent 60%);
 }
 
+/* Fashion vertical: editorial spread grid (magazine vibe, minimal copy) */
+.fx-spread {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--border-strong);
+}
+.fx-cell {
+  position: relative; padding: 38px 34px 40px;
+  border-bottom: 1px solid var(--border-strong); border-right: 1px solid var(--border-strong);
+  transition: background .3s ease;
+}
+.fx-cell:nth-child(3n) { border-right: none; }
+.fx-cell:hover { background: var(--bg-deep); }
+.fx-num {
+  font-family: var(--font-mono); font-size: 11px; font-weight: 700;
+  letter-spacing: 0.16em; color: var(--text-faint); display: block; margin-bottom: 22px;
+}
+.fx-cell h3 {
+  font-size: clamp(21px, 2.1vw, 27px); font-weight: 900; letter-spacing: -0.03em;
+  line-height: 1.05; margin: 0 0 12px; color: var(--text);
+}
+.fx-cell p { font-size: 14px; line-height: 1.55; color: var(--text-muted); margin: 0; }
+.fx-cell p a { color: var(--brand-text); font-weight: 700; }
+.fx-stat {
+  display: block; font-size: clamp(40px, 4.6vw, 62px); font-weight: 900;
+  letter-spacing: -0.045em; line-height: 1; margin: 0 0 10px;
+  background: var(--gradient); -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.fx-lead { grid-column: span 2; background: var(--bg-deep); }
+.fx-lead h3 { font-size: clamp(26px, 2.8vw, 38px); }
+@media (max-width: 900px) {
+  .fx-spread { grid-template-columns: repeat(2, 1fr); }
+  .fx-cell:nth-child(3n) { border-right: 1px solid var(--border-strong); }
+  .fx-cell:nth-child(2n) { border-right: none; }
+  .fx-lead { grid-column: span 2; }
+}
+@media (max-width: 600px) {
+  .fx-spread { grid-template-columns: 1fr; }
+  .fx-cell, .fx-cell:nth-child(3n) { border-right: none; }
+  .fx-lead { grid-column: span 1; }
+}
+
 /* Solutions: proof band (real clients, ICP-facing) */
 .proof-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 38px; }
 .proof-card {
@@ -3896,12 +3938,13 @@ main > .hero:first-child { margin-top: -85px; padding-top: 230px; }
   gap: 40px; flex-wrap: wrap; margin-top: 84px;
 }
 .hero-photo-foot .live-strip { margin-top: 0; }
-.hero-photo-note { max-width: 430px; }
+.hero-photo-note { max-width: 500px; }
 .hero-photo-note p {
   font-size: 15.5px; line-height: 1.55; color: rgba(238,241,251,0.82);
   margin: 0 0 20px;
 }
-.hero-photo-note .hero-cta { justify-content: flex-start; margin-bottom: 0; }
+.hero-photo-note .hero-cta { justify-content: flex-start; margin-bottom: 0; flex-wrap: nowrap; }
+@media (max-width: 560px) { .hero-photo-note .hero-cta { flex-wrap: wrap; } }
 
 /* Frosted glass transaction card */
 .glass-card {
