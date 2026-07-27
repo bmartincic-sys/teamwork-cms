@@ -2459,6 +2459,21 @@ details[open] summary { color: var(--brand-text); }
 .tm-hero-visual .shot { max-width: 420px; margin-left: auto; }
 @media (max-width: 900px) { .tm-hero-grid { grid-template-columns: 1fr; gap: 32px; } .tm-hero-visual .shot { margin: 0 auto; } }
 
+/* Solutions: clickable platform module cards */
+.sol-mod { display: block; text-decoration: none; color: inherit; }
+.sol-mod h3 { color: var(--text); }
+.sol-mod-link {
+  display: inline-flex; align-items: center; gap: 6px; margin-top: 14px;
+  font-size: 12.5px; font-weight: 800; letter-spacing: 0.02em; color: var(--brand-text);
+}
+.sol-mod:hover .sol-mod-link i { transform: translateX(3px); }
+.sol-mod-link i { transition: transform .25s ease; }
+/* journey step tag becomes a link on solutions pages */
+a.tm-day-win { text-decoration: none; }
+a.tm-day-win:hover { background: color-mix(in srgb, var(--brand-blue) 22%, transparent); }
+a.tm-day-win i { transition: transform .25s ease; }
+a.tm-day-win:hover i { transform: translateX(2px); }
+
 /* day-on-the-floor timeline */
 .tm-day { position: relative; margin-top: 40px; padding-left: 96px; }
 .tm-day::before { content: ''; position: absolute; left: 116px; top: 10px; bottom: 10px; width: 2px; background: linear-gradient(180deg, transparent, var(--border-strong) 6%, var(--border-strong) 94%, transparent); }
