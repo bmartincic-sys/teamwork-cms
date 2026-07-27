@@ -2459,6 +2459,35 @@ details[open] summary { color: var(--brand-text); }
 .tm-hero-visual .shot { max-width: 420px; margin-left: auto; }
 @media (max-width: 900px) { .tm-hero-grid { grid-template-columns: 1fr; gap: 32px; } .tm-hero-visual .shot { margin: 0 auto; } }
 
+/* Solutions: proof band (real clients, ICP-facing) */
+.proof-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 38px; }
+.proof-card {
+  padding: 30px 28px; border-radius: 18px;
+  background: var(--bg-elevated); border: 1px solid var(--border);
+  transition: transform .25s ease, border-color .25s ease;
+}
+.proof-card:hover { transform: translateY(-4px); border-color: rgba(36,125,255,0.45); }
+.proof-client {
+  font-size: 19px; font-weight: 900; letter-spacing: -0.02em; color: var(--text); margin: 0 0 4px;
+}
+.proof-tag {
+  display: inline-block; font-family: var(--font-mono); font-size: 10.5px; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase; color: var(--brand-text);
+  padding: 4px 10px; border-radius: 100px; background: var(--brand-soft); margin-bottom: 14px;
+}
+.proof-card p { font-size: 14px; line-height: 1.6; color: var(--text-muted); margin: 0; }
+.proof-icp {
+  display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 34px;
+}
+.proof-icp span {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 13px; font-weight: 700; color: var(--text-muted);
+  padding: 10px 18px; border-radius: 100px;
+  background: var(--panel); border: 1px solid var(--border);
+}
+.proof-icp i { color: var(--brand-blue); font-size: 15px; }
+@media (max-width: 900px) { .proof-grid { grid-template-columns: 1fr; } }
+
 /* Solutions: clickable platform module cards */
 .sol-mod { display: block; text-decoration: none; color: inherit; }
 .sol-mod h3 { color: var(--text); }
