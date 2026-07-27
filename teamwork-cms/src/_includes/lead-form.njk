@@ -1,0 +1,77 @@
+<!-- ============ LEAD FORM (HubSpot) ============ -->
+<section class="lead-band" id="get-in-touch">
+  <div class="lead-glow"></div>
+  <div class="container lead-inner">
+    <div class="lead-copy">
+      <div class="section-eyebrow">{{ leadEyebrow | default("Talk to us") }}</div>
+      <h2 class="lead-h2">{{ leadTitle | default("See it on your own numbers.") }}</h2>
+      <p class="lead-sub">{{ leadSub | default("Tell us about your estate and a solutions architect will walk you through the platform against your actual operation — no generic demo.") }}</p>
+      <ul class="lead-points">
+        <li><i class="ti ti-clock"></i> A working session, not a slide deck</li>
+        <li><i class="ti ti-user-check"></i> Straight to a solutions architect who knows retail</li>
+        <li><i class="ti ti-lock"></i> Your details stay with us — no list sharing</li>
+      </ul>
+    </div>
+    <div class="lead-formwrap">
+      {% if hubspot.portalId and hubspot.formId %}
+      <div class="hs-form-frame" id="hs-form-{{ vertical | default('general') }}"></div>
+      <script src="https://js.hsforms.net/forms/embed/v2.js" defer></script>
+      <script>
+        window.addEventListener("load", function () {
+          if (!window.hbspt) return;
+          window.hbspt.forms.create({
+            region: "{{ hubspot.region }}",
+            portalId: "{{ hubspot.portalId }}",
+            formId: "{{ hubspot.formId }}",
+            target: "#hs-form-{{ vertical | default('general') }}"{% if vertical %},
+            onFormReady: function ($form) {
+              var f = $form[0] || $form;
+              var hidden = f.querySelector('input[name="vertical_interest"]');
+              if (hidden) hidden.value = "{{ vertical }}";
+            }{% endif %}
+          });
+        });
+      </script>
+      {% else %}
+      <div class="lead-fallback">
+        <div class="lead-fallback-title">Request a working session</div>
+        <p>A solutions architect will get back to you within one business day.</p>
+        <a href="/contact/" class="btn btn-primary btn-lg" style="width: 100%; justify-content: center;">Book a demo <i class="ti ti-arrow-right"></i></a>
+        <a href="mailto:sales@teamworkcommerce.com" class="lead-fallback-alt">Or email sales@teamworkcommerce.com</a>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<!-- Sticky CTA bar -->
+<div class="stickycta" id="stickycta" aria-hidden="true">
+  <div class="container stickycta-inner">
+    <div class="stickycta-copy">{{ stickyText | default("See the platform on your own numbers.") }}</div>
+    <div class="stickycta-actions">
+      <a href="#get-in-touch" class="btn btn-primary">{{ stickyCta | default("Request a session") }} <i class="ti ti-arrow-right"></i></a>
+      <button class="stickycta-close" type="button" aria-label="Dismiss">&times;</button>
+    </div>
+  </div>
+</div>
+<script>
+(function () {
+  var bar = document.getElementById("stickycta");
+  var target = document.getElementById("get-in-touch");
+  if (!bar || !target) return;
+  if (sessionStorage.getItem("tw-sticky-dismissed") === "1") return;
+  bar.querySelector(".stickycta-close").addEventListener("click", function () {
+    bar.classList.remove("show");
+    sessionStorage.setItem("tw-sticky-dismissed", "1");
+  });
+  function update() {
+    var scrolled = (window.scrollY || document.documentElement.scrollTop) > 900;
+    var formRect = target.getBoundingClientRect();
+    var formVisible = formRect.top < window.innerHeight && formRect.bottom > 0;
+    bar.classList.toggle("show", scrolled && !formVisible);
+  }
+  window.addEventListener("scroll", update, { passive: true });
+  window.addEventListener("resize", update, { passive: true });
+  update();
+})();
+</script>

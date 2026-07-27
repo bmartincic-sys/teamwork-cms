@@ -132,7 +132,7 @@
 
 {% include "nav.njk" %}
 
-<main>
+<main{% if vertical %} class="v-{{ vertical }}" data-vertical="{{ vertical }}"{% endif %}>
 {{ content | safe }}
 </main>
 
