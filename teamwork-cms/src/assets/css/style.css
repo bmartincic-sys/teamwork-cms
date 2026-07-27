@@ -2679,6 +2679,41 @@ main[data-vertical] .tm-band-glow {
   .fx-overlay { padding: 90px 26px 30px; }
 }
 
+/* Four-up statcard row */
+.stat-row-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+@media (max-width: 1000px) { .stat-row-4 { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .stat-row-4 { grid-template-columns: 1fr; } }
+
+/* Footwear: size-run rack (shoebox label cards) */
+.fw-rack { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.fw-box {
+  background: var(--bg-elevated); border: 1px solid var(--border); border-radius: var(--radius);
+  overflow: hidden; display: flex; flex-direction: column;
+  transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+}
+.fw-box:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); border-color: var(--border-strong); }
+.fw-label {
+  display: flex; align-items: center; gap: 12px; padding: 13px 18px;
+  border-bottom: 1px dashed var(--border-strong);
+  font-family: var(--font-mono); font-size: 11px; font-weight: 700;
+  letter-spacing: 0.14em; text-transform: uppercase;
+}
+.fw-blue .fw-label { color: var(--brand-blue); }
+.fw-purple .fw-label { color: var(--brand-purple); }
+.fw-size { padding: 3px 9px; border: 1.5px solid currentColor; border-radius: 6px; white-space: nowrap; }
+.fw-bars { flex: 1; height: 14px; background: repeating-linear-gradient(90deg, currentColor 0 2px, transparent 2px 6px); opacity: 0.22; }
+.fw-body { padding: 20px 20px 22px; display: flex; flex-direction: column; flex: 1; }
+.fw-body h3 { font-size: 19px; font-weight: 800; letter-spacing: -0.02em; margin: 0 0 8px; color: var(--text); }
+.fw-body p { font-size: 13.5px; line-height: 1.6; color: var(--text-muted); margin: 0 0 16px; flex: 1; }
+.fw-go {
+  display: inline-flex; align-items: center; gap: 6px; align-self: flex-start;
+  font-size: 12.5px; font-weight: 700; color: var(--brand-text);
+}
+.fw-go i { transition: transform .25s ease; }
+.fw-box:hover .fw-go i { transform: translateX(3px); }
+@media (max-width: 1000px) { .fw-rack { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .fw-rack { grid-template-columns: 1fr; } }
+
 /* Solutions: proof band (real clients, ICP-facing) */
 .proof-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 38px; }
 .proof-card {
