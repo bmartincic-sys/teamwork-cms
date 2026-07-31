@@ -2720,6 +2720,26 @@ main[data-vertical] .tm-band-glow {
   .jw-plate img { height: 260px; }
 }
 
+/* Museums: gallery placards (matted double frame + exhibit tag) */
+.mu-wall { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
+.mu-placard {
+  background: var(--bg-elevated); border: 1px solid var(--border-strong);
+  outline: 1px solid var(--border); outline-offset: 5px;
+  border-radius: 3px; padding: 28px 26px 30px; margin: 6px;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.mu-placard:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+.mu-tag {
+  display: inline-block; font-family: var(--font-mono); font-size: 10.5px; font-weight: 700;
+  letter-spacing: 0.16em; text-transform: uppercase; color: var(--brand-text);
+  border-bottom: 1px solid var(--border-strong); padding-bottom: 8px; margin-bottom: 16px;
+}
+.mu-placard h3 { font-size: 19px; font-weight: 800; letter-spacing: -0.02em; margin: 0 0 8px; color: var(--text); }
+.mu-placard p { font-size: 13.5px; line-height: 1.65; color: var(--text-muted); margin: 0; }
+.mu-placard p a { color: var(--brand-text); font-weight: 700; }
+@media (max-width: 1000px) { .mu-wall { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .mu-wall { grid-template-columns: 1fr; } }
+
 /* Luxury: typographic vitrine (no cards, hairlines + roman numerals) */
 .lx-vitrine {
   display: grid; grid-template-columns: repeat(3, 1fr);
