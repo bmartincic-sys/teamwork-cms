@@ -14,9 +14,25 @@
         </div>
       </div>
       <div class="footer-col">
-        <h4>Platform</h4>
-        {% for p in collections.platform | sortByNavOrder %}<a href="{{ p.url }}">{{ p.data.navLabel or p.data.title }}</a>
-        {% endfor %}
+        <h4>Commerce Apps</h4>
+        <a href="/platform/mobile-pos/">POS</a>
+        <a href="/platform/teammate/">TEAMMATE</a>
+        <h4 style="margin-top: 22px;">Commerce Engine</h4>
+        <a href="/platform/pxp/">PXP · Product</a>
+        <a href="/platform/cxp/">CXP · Customer</a>
+        <a href="/platform/tap/">TAP · Identity</a>
+        <a href="/platform/lms/">LMS · Training</a>
+      </div>
+      <div class="footer-col">
+        <h4>Operations</h4>
+        <a href="/platform/oms/">Order Management</a>
+        <a href="/platform/inventory-control/">Inventory Control</a>
+        <a href="/platform/rfid/">RFID Solution</a>
+        <a href="/platform/analytics/">Analytics</a>
+        <a href="/platform/shopper-services/">Shopper Services</a>
+        <a href="/platform/integrations/">Integrations &amp; APIs</a>
+        <h4 style="margin-top: 22px;">Platform</h4>
+        <a href="/platform/tcs/">Teamwork Commerce Services</a>
       </div>
       <div class="footer-col">
         <h4>Solutions</h4>
@@ -29,16 +45,12 @@
         <a href="/teamwork-cares/">Teamwork Cares</a>
         <a href="/partners/">Partners</a>
         <a href="/careers/">Careers</a>
-        <a href="#">Customers</a>
         <a href="/press-room/">Press</a>
-      </div>
-      <div class="footer-col">
-        <h4>Resources</h4>
-        {% for r in collections.resources %}<a href="{{ r.url }}">{{ r.data.navLabel or r.data.title }}</a>
-        {% endfor %}
-        <a href="#">Trust Center</a>
-        <a href="#">Documentation</a>
+        <a href="/case-studies/">Case Studies</a>
         <a href="/contact/">Contact</a>
+        <h4 style="margin-top: 22px;">Resources</h4>
+        {% for r in collections.resources %}{% if r.url != "/case-studies/" %}<a href="{{ r.url }}">{{ r.data.navLabel or r.data.title }}</a>
+        {% endif %}{% endfor %}
       </div>
     </div>
     <div class="footer-bottom">
