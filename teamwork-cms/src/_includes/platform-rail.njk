@@ -1,0 +1,37 @@
+{% if platformRail %}
+{% set railMeta = {
+  "mobile-pos": { "label": "Mobile POS", "icon": "ti-device-mobile" },
+  "rfid": { "label": "Native RFID", "icon": "ti-scan" },
+  "oms": { "label": "Order Management", "icon": "ti-truck-delivery" },
+  "inventory-control": { "label": "Inventory Control", "icon": "ti-packages" },
+  "cxp": { "label": "CXP · Customer", "icon": "ti-user-heart" },
+  "pxp": { "label": "PXP · Product", "icon": "ti-tag" },
+  "tap": { "label": "TAP · Identity", "icon": "ti-shield-lock" },
+  "teammate": { "label": "TEAMMATE", "icon": "ti-id-badge-2" },
+  "analytics": { "label": "Analytics · Cloud HQ", "icon": "ti-chart-bar" },
+  "shopper-services": { "label": "Shopper Services", "icon": "ti-ad-2" },
+  "integrations": { "label": "Integrations & APIs", "icon": "ti-plug-connected" },
+  "tcs": { "label": "The Full Platform", "icon": "ti-layers-subtract" }
+} %}
+<section class="section" style="padding-top: 0;">
+  <div class="container">
+    <div class="prail">
+      <div class="prail-head">
+        <span class="section-eyebrow">Explore the Platform</span>
+        <h2 class="prail-title">Everything behind this page.</h2>
+        <p class="prail-sub">{{ platformRailNote or "Each capability referenced above runs on the same platform — one codebase, one version of the truth." }}</p>
+      </div>
+      <div class="prail-grid">
+        {% for slug in platformRail %}
+        {% set m = railMeta[slug] %}
+        <a class="prail-chip" href="/platform/{{ slug }}/">
+          <i class="ti {{ m.icon }}"></i>
+          <span>{{ m.label }}</span>
+          <i class="ti ti-arrow-right prail-arrow"></i>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}

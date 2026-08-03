@@ -12,6 +12,8 @@ leadSub: "Bring your worst size-break scenario. We will show how stock is found,
 stickyText: "Test it on your size matrix."
 stickyCta: "Request a session"
 navOrder: 3
+platformRail: ["rfid", "inventory-control", "mobile-pos", "oms", "cxp", "analytics", "teammate", "integrations"]
+platformRailNote: "Size-level accuracy depends on the whole stack, not one module."
 ---
 <!-- Breadcrumb -->
 <div class="container">
@@ -50,7 +52,7 @@ navOrder: 3
   <div class="container">
     <div class="ticker-inner">
       <div class="ticker-item">
-        <div class="ticker-value">$113.7<span style="font-size: 22px;">B</span></div>
+        <div class="ticker-value">$97.7<span style="font-size: 22px;">B</span></div>
         <div class="ticker-label">U.S. footwear market (2024)</div>
       </div>
       <div class="ticker-item">
@@ -421,6 +423,8 @@ navOrder: 3
     </div>
   </div>
 </section>
+
+{% include "platform-rail.njk" %}
 
 {% include "lead-form.njk" %}
 

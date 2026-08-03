@@ -12,6 +12,8 @@ leadSub: "If you run dozens or hundreds of stores, we will walk through the Petc
 stickyText: "See what your rollout looks like."
 stickyCta: "Request a session"
 navOrder: 6
+platformRail: ["mobile-pos", "oms", "analytics", "shopper-services", "cxp", "pxp", "teammate", "integrations"]
+platformRailNote: "Retail, services, loyalty, and retail media on a single iOS platform."
 ---
 <!-- Breadcrumb -->
 <div class="container">
@@ -50,12 +52,12 @@ navOrder: 6
   <div class="container">
     <div class="ticker-inner">
       <div class="ticker-item">
-        <div class="ticker-value">$157<span style="font-size: 22px;">B</span></div>
-        <div class="ticker-label">U.S. pet spending (2026 proj.)</div>
+        <div class="ticker-value">$165<span style="font-size: 22px;">B</span></div>
+        <div class="ticker-label">U.S. pet spending (2026 proj., APPA)</div>
       </div>
       <div class="ticker-item">
-        <div class="ticker-value">71<span style="font-size: 22px;">M</span></div>
-        <div class="ticker-label">U.S. pet-owning households</div>
+        <div class="ticker-value">95<span style="font-size: 22px;">M</span></div>
+        <div class="ticker-label">U.S. pet-owning households (APPA)</div>
       </div>
       <div class="ticker-item">
         <div class="ticker-value">118</div>
@@ -358,6 +360,8 @@ navOrder: 6
     </div>
   </div>
 </section>
+
+{% include "platform-rail.njk" %}
 
 {% include "lead-form.njk" %}
 
