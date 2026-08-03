@@ -1,8 +1,8 @@
 ---
 layout: "solution.njk"
-title: "Teamwork Administration Platform (TAP)"
-description: "TAP is the secure administrative layer behind POS — user and role management, rotating QR authentication, and single sign-on through TEAMMATE. Included with every deployment."
-navLabel: "Teamwork Administration Platform"
+title: "Team Administration Platform (TAP)"
+description: "TAP is the identity layer behind POS — Active Directory/SSO/MFA integration, rotating QR store logins, device management, and team member sync. Included with every deployment."
+navLabel: "Team Administration Platform"
 tags: "platform"
 navOrder: 3.3
 permalink: "/platform/tap/"
@@ -32,7 +32,7 @@ permalink: "/platform/tap/"
 
     <div class="hero-photo-foot hero-foot-left fade-up" style="animation-delay: 0.25s;">
       <div class="hero-photo-note">
-        <p>The administrative layer behind every deployment — authentication, authorization, and employee account access. TAP controls who can reach POS and what they can do there.</p>
+        <p>The identity layer behind every deployment — centralized authentication, roles, and device access across every Teamwork application, running on the identity provider you already own.</p>
         <div class="hero-cta">
           <a href="/contact/" class="btn btn-primary btn-lg">Book a demo <i class="ti ti-arrow-right"></i></a>
           <a href="/platform/tcs/" class="btn btn-ghost btn-lg">See the full platform</a>
@@ -46,7 +46,7 @@ permalink: "/platform/tap/"
 <section class="section-tight" style="padding-top: 44px; padding-bottom: 28px;">
   <div class="container" style="max-width: 940px;">
     <div class="sp-split">
-      <div class="sp-col sp-col-standard"><span class="sp-tag"><i class="ti ti-circle-check-filled"></i> Standard · included</span><p>User & role management, QR-code authentication, and single sign-on through TEAMMATE.</p></div>
+      <div class="sp-col sp-col-standard"><span class="sp-tag"><i class="ti ti-circle-check-filled"></i> Standard · included</span><p>Identity management, store logins, device management, and team member management.</p></div>
       <div class="sp-col sp-col-plus"><span class="sp-tag sp-tag-plus">Plus · upgrade</span><p>AI Empowerment · Product Training · Operational Training.</p></div>
     </div>
   </div>
@@ -63,13 +63,13 @@ permalink: "/platform/tap/"
     </div>
         <div class="feature-row" style="margin-top: 16px;">
       <div class="feature-text">
-        <span class="section-eyebrow">User & Role Management</span>
+        <span class="section-eyebrow">Identity Management</span>
         <h2>Every user, every role, governed.</h2>
-        <p>Users, roles, and privileges in one place — down to individual device records.</p>
+        <p>Centralized authentication, user roles, and device access across every Teamwork Commerce application — running on the identity provider you already own.</p>
         <ul class="feature-bullets">
-          <li>Define who can access what, across the organization</li>
-          <li>TAP privileges scoped per role</li>
-          <li>Device records tied to locations</li>
+          <li>Integrates with Active Directory, SSO, and MFA — no separate user database to maintain</li>
+          <li>Associate identities and permissions managed in one place, scoped per role</li>
+          <li>Device access governed alongside user access, tied to locations</li>
         </ul>
       </div>
       <div class="feature-visual">
@@ -82,12 +82,12 @@ permalink: "/platform/tap/"
 
     <div class="feature-row reverse" style="margin-top: 56px;">
       <div class="feature-text">
-        <span class="section-eyebrow">Authentication & SSO</span>
+        <span class="section-eyebrow">Store Logins</span>
         <h2>Sign-in without shared passwords.</h2>
-        <p>Rotating QR codes and one sign-in through TEAMMATE — every action attributable to a person.</p>
+        <p>Secure, rotating QR-code logins for POS terminals and every Teamwork application — shared credentials gone, every action attributable to a person.</p>
         <ul class="feature-bullets">
-          <li>Rotating QR-code authentication</li>
-          <li>Single sign-on through TEAMMATE</li>
+          <li>Rotating QR-code authentication for POS and Teamwork apps</li>
+          <li>Single sign-on through <a href="/platform/teammate/" style="color: var(--brand-text);">TEAMMATE</a></li>
           <li>Biometric sign-in on supported devices</li>
         </ul>
       </div>
@@ -96,6 +96,45 @@ permalink: "/platform/tap/"
           <div class="shot-glow"></div>
           <img class="shot-img shot-devices" src="/assets/images/homepage/teammate-card.webp" alt="The TEAMMATE sign-in on iPhone — biometric authentication prompt">
         </div>
+      </div>
+    </div>
+
+    <div class="mini-grid mini-grid-2">
+      <div class="mini-card">
+        <div class="mini-ico"><i class="ti ti-devices"></i></div>
+        <h3>Device Management</h3>
+        <p>Register and manage company-owned and personal devices side by side, with application access and security policies controlled per device type.</p>
+      </div>
+      <div class="mini-card">
+        <div class="mini-ico"><i class="ti ti-users-group"></i></div>
+        <h3>Team Member Management</h3>
+        <p>Associate records, roles, and training assignments stay synchronized across TAP, <a href="/platform/pxp/">PXP</a>, <a href="/platform/lms/">LMS</a>, and <a href="/platform/teammate/">TEAMMATE</a> — onboard once, and every app knows who they are.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY IT MATTERS (internal shrink) ============ -->
+<section class="tm-band">
+  <div class="tm-band-glow"></div>
+  <div class="container">
+    <div class="section-header" style="text-align: center;">
+      <div class="section-eyebrow">Why Identity Matters</div>
+      <h2 class="section-title">Shared logins are a shrink problem.</h2>
+      <p class="section-sub">When several associates share one credential, nothing is attributable — and internal theft is a material share of total shrink.</p>
+    </div>
+    <div class="stat-row-4" style="grid-template-columns: repeat(3, 1fr);">
+      <div class="statcard statcard-blue">
+        <div class="statcard-value"><span class="counter" data-target="29" data-suffix="%">29%</span></div>
+        <div class="statcard-label">Of retail shrink is internal theft</div>
+      </div>
+      <div class="statcard statcard-purple">
+        <div class="statcard-value">$26<span style="font-size: 22px;">B</span></div>
+        <div class="statcard-label">Annual cost of employee theft to retailers</div>
+      </div>
+      <div class="statcard statcard-blue">
+        <div class="statcard-value">$1,890</div>
+        <div class="statcard-label">Average cost of one internal theft incident</div>
       </div>
     </div>
   </div>
@@ -209,17 +248,17 @@ permalink: "/platform/tap/"
     <div style="max-width: 800px; margin: 0 auto;">
       <div class="faq-item">
         <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-          What is TAP (Teamwork Administration Platform)?
+          What is TAP (Team Administration Platform)?
           <span class="faq-icon"><i class="ti ti-plus"></i></span>
         </button>
-        <div class="faq-answer"><p>TAP is the secure administrative layer of Teamwork Commerce Services. It manages authentication and authorization, employee account access, and workforce management — controlling who can do what, safely.</p></div>
+        <div class="faq-answer"><p>TAP is the identity layer of Teamwork Commerce Services. It centralizes authentication, user roles, and device access across every Teamwork application — integrating with Active Directory, SSO, and MFA rather than requiring a separate user database.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
           What's included with TAP Standard?
           <span class="faq-icon"><i class="ti ti-plus"></i></span>
         </button>
-        <div class="faq-answer"><p>User & role management, QR-code authentication, and single sign-on through TEAMMATE — included with every Teamwork Commerce Services deployment at no extra cost.</p></div>
+        <div class="faq-answer"><p>Identity management, secure rotating QR store logins, device management for company-owned and personal devices, and team member management that syncs associate records, roles, and training assignments across PXP, LMS, and TEAMMATE — included with every deployment at no extra cost.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
@@ -258,10 +297,10 @@ permalink: "/platform/tap/"
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "What is TAP (Teamwork Administration Platform)?",
+      "name": "What is TAP (Team Administration Platform)?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "TAP is the secure administrative layer of Teamwork Commerce Services. It manages authentication and authorization, employee account access, and workforce management — controlling who can do what, safely."
+        "text": "TAP is the identity layer of Teamwork Commerce Services. It centralizes authentication, user roles, and device access across every Teamwork application — integrating with Active Directory, SSO, and MFA rather than requiring a separate user database."
       }
     },
     {
@@ -269,7 +308,7 @@ permalink: "/platform/tap/"
       "name": "What's included with TAP Standard?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "User & role management, QR-code authentication, and single sign-on through TEAMMATE — included with every Teamwork Commerce Services deployment at no extra cost."
+        "text": "Identity management, secure rotating QR store logins, device management for company-owned and personal devices, and team member management that syncs associate records, roles, and training assignments across PXP, LMS, and TEAMMATE — included with every deployment at no extra cost."
       }
     },
     {
