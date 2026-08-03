@@ -504,6 +504,53 @@ if (window.netlifyIdentity) {
     io.observe(v);
   });
 })();
+
+// Journey timelines: highlight the step in view and walk the product token down the rail
+(function () {
+  var journeys = Array.prototype.slice.call(document.querySelectorAll(".tm-day[data-journey]"));
+  if (!journeys.length) return;
+
+  var queued = false;
+  function update() {
+    queued = false;
+    journeys.forEach(function (j) {
+      var steps = Array.prototype.slice.call(j.querySelectorAll(".tm-day-step"));
+      if (!steps.length) return;
+      var traveler = j.querySelector(".tm-traveler");
+      var fill = j.querySelector(".tm-rail-fill");
+      var anchor = window.innerHeight * 0.45;
+
+      var best = null, bestDist = Infinity;
+      steps.forEach(function (s) {
+        var r = s.getBoundingClientRect();
+        var d = Math.abs((r.top + r.height / 2) - anchor);
+        if (d < bestDist) { bestDist = d; best = s; }
+      });
+
+      steps.forEach(function (s) { s.classList.toggle("is-active", s === best); });
+
+      if (best) {
+        var jr = j.getBoundingClientRect();
+        var br = best.getBoundingClientRect();
+        // Sit on the step's rail dot rather than the card's midpoint
+        var dot = window.matchMedia("(max-width: 760px)").matches ? 14 : 38;
+        var y = (br.top - jr.top) + dot;
+        if (traveler) traveler.style.transform = "translateY(" + y + "px)";
+        if (fill) fill.style.height = Math.max(0, y - 10) + "px";
+      }
+    });
+  }
+
+  function onScroll() {
+    if (queued) return;
+    queued = true;
+    window.requestAnimationFrame(update);
+  }
+
+  update();
+  window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("resize", onScroll);
+})();
 </script>
 </body>
 </html>

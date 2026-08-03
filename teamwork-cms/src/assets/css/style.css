@@ -3028,6 +3028,58 @@ a.tm-day-win:hover i { transform: translateX(2px); }
   .tm-day-card { margin-left: 26px; }
 }
 
+/* Journey: scroll-following product token + active-step highlight */
+.tm-journey { --rail-x: 117px; }
+.tm-rail-fill {
+  position: absolute; left: 116px; top: 10px; width: 2px; height: 0;
+  background: linear-gradient(180deg, var(--brand-blue), var(--brand-purple));
+  box-shadow: 0 0 12px rgba(36,125,255,0.55);
+  transition: height .45s cubic-bezier(.2,.7,.3,1); z-index: 1;
+}
+.tm-traveler {
+  position: absolute; left: calc(var(--rail-x) - 21px); top: 0;
+  width: 42px; height: 42px; margin-top: -21px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px; color: #fff;
+  background: linear-gradient(140deg, var(--brand-blue), var(--brand-purple));
+  box-shadow: 0 0 0 6px var(--bg), 0 10px 30px -6px rgba(36,125,255,0.75);
+  transition: transform .5s cubic-bezier(.2,.7,.3,1);
+  z-index: 3; pointer-events: none;
+}
+.tm-traveler::after {
+  content: ''; position: absolute; inset: -6px; border-radius: 50%;
+  border: 1.5px solid rgba(124,80,245,0.5);
+  animation: travPulse 2.6s ease-in-out infinite;
+}
+@keyframes travPulse {
+  0%, 100% { transform: scale(1); opacity: 0.85; }
+  50% { transform: scale(1.18); opacity: 0.15; }
+}
+/* Steps dim until they are the one in view */
+.tm-journey .tm-day-step { transition: opacity .4s ease; }
+.tm-journey .tm-day-step:not(.is-active) { opacity: 0.62; }
+.tm-journey .tm-day-step.is-active .tm-day-card {
+  border-color: rgba(36,125,255,0.55);
+  box-shadow: 0 26px 55px -28px rgba(36,125,255,0.6);
+  transform: translateX(6px);
+}
+.tm-journey .tm-day-step.is-active .tm-day-time { color: var(--brand-purple); }
+.tm-journey .tm-day-step.is-active::before {
+  background: var(--brand-purple);
+  box-shadow: 0 0 0 5px var(--bg), 0 0 22px rgba(124,80,245,0.95);
+}
+@media (prefers-reduced-motion: reduce) {
+  .tm-traveler, .tm-rail-fill { transition: none; }
+  .tm-traveler::after { animation: none; }
+  .tm-journey .tm-day-step:not(.is-active) { opacity: 1; }
+}
+@media (max-width: 760px) {
+  .tm-journey { --rail-x: 6px; }
+  .tm-rail-fill { left: 5px; }
+  .tm-traveler { width: 34px; height: 34px; margin-top: -17px; font-size: 16px; left: calc(var(--rail-x) - 17px); }
+  .tm-journey .tm-day-step:not(.is-active) { opacity: 1; }
+}
+
 /* problem / impact stat band */
 .tm-band { position: relative; overflow: hidden; padding: 88px 0; background: var(--bg-deep); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
 .tm-band-glow { position: absolute; inset: 0; pointer-events: none; background: radial-gradient(55% 80% at 82% 8%, rgba(138,10,221,0.16), transparent 62%), radial-gradient(50% 70% at 8% 100%, rgba(36,125,255,0.14), transparent 60%); }
