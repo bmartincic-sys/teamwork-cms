@@ -1,7 +1,7 @@
 ---
 layout: "solution.njk"
 title: "Case Studies | Teamwork Commerce"
-description: "How Turnbull & Asser and Hat Club use Teamwork Commerce to run their stores, manage inventory, and grow."
+description: "Every Teamwork Commerce customer story — ASICS, Petco, FAO Schwarz, Moose Knuckles, Sports Basement, the Carolina Hurricanes, Colorado Rockies, Prada Shoes, Paul Stuart and more."
 navLabel: "Case Studies"
 tags: "resources"
 permalink: "/case-studies/"
@@ -20,18 +20,85 @@ permalink: "/case-studies/"
   <div class="hero-glow"></div>
   <div class="container hero-inner fade-up">
     <span class="eyebrow"><span class="eyebrow-dot"></span> Case Studies</span>
-    <h1>Retailers running on <span class="accent">Teamwork.</span></h1>
+    <h1>The proof is on the <span class="accent">sales floor.</span></h1>
     <p class="hero-sub">
-      From heritage menswear to sneaker retail, these are the businesses that trusted Teamwork Commerce with their stores, their inventory, and their customers.
+      {{ caseStudies.length }} stories from the brands that run their stores on Teamwork Commerce — global athletic labels, luxury houses, pro sports franchises, and multi-hundred-store fleets.
     </p>
+    <div class="csx-hero-stats">
+      <div><strong>{{ caseStudies.length }}</strong><span>Published stories</span></div>
+      <div><strong>30K+</strong><span>Terminals live</span></div>
+      <div><strong>40+</strong><span>Countries</span></div>
+      <div><strong>99.99%</strong><span>Uptime</span></div>
+    </div>
     <div class="hero-cta">
       <a href="/contact/" class="btn btn-primary btn-lg">Book a demo <i class="ti ti-arrow-right"></i></a>
+      <a href="#all-stories" class="btn btn-ghost btn-lg">Browse every story</a>
     </div>
   </div>
 </section>
 
+<!-- ============ FEATURED ============ -->
+<section class="section" style="padding-bottom: 0;">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">Featured</div>
+      <h2 class="section-title">Start with these.</h2>
+    </div>
+    <div class="csx-feature-grid">
+      {% for cs in caseStudies %}{% if cs.featured %}
+      <a class="csx-feature" href="{{ cs.url }}"{% if cs.external %} target="_blank" rel="noopener"{% endif %}>
+        <div class="csx-feature-top">
+          <span class="csx-sector">{{ cs.sector }}</span>
+          {% if cs.external %}<i class="ti ti-external-link csx-ext"></i>{% else %}<i class="ti ti-arrow-right csx-ext"></i>{% endif %}
+        </div>
+        <div class="csx-client">{{ cs.client }}</div>
+        <h3>{{ cs.title }}</h3>
+        <p>{{ cs.blurb }}</p>
+        <span class="csx-read">Read the story <i class="ti ti-arrow-right"></i></span>
+      </a>
+      {% endif %}{% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ============ ALL STORIES (filterable) ============ -->
+<section class="section" id="all-stories">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">Every Story</div>
+      <h2 class="section-title">All {{ caseStudies.length }} case studies.</h2>
+      <p class="section-sub">Filter by sector, or read straight through.</p>
+    </div>
+
+    {% set sectors = [] %}
+    {% for cs in caseStudies %}{% if cs.sector not in sectors %}{% set sectors = (sectors.push(cs.sector), sectors) %}{% endif %}{% endfor %}
+
+    <div class="csx-filters" role="tablist" aria-label="Filter case studies by sector">
+      <button class="csx-filter is-active" data-filter="all" role="tab" aria-selected="true">All <span>{{ caseStudies.length }}</span></button>
+      {% for sec in sectors %}
+      <button class="csx-filter" data-filter="{{ sec | slugify }}" role="tab" aria-selected="false">{{ sec }}</button>
+      {% endfor %}
+    </div>
+
+    <div class="csx-grid" id="csGrid">
+      {% for cs in caseStudies %}
+      <a class="csx-card" href="{{ cs.url }}"{% if cs.external %} target="_blank" rel="noopener"{% endif %} data-sector="{{ cs.sector | slugify }}">
+        <div class="csx-card-head">
+          <span class="csx-sector">{{ cs.sector }}</span>
+          {% if cs.external %}<i class="ti ti-external-link csx-ext"></i>{% else %}<i class="ti ti-arrow-right csx-ext"></i>{% endif %}
+        </div>
+        <div class="csx-client">{{ cs.client }}</div>
+        <h3>{{ cs.title }}</h3>
+        <p>{{ cs.blurb }}</p>
+      </a>
+      {% endfor %}
+    </div>
+    <p class="csx-empty" id="csEmpty" hidden>No stories in that sector yet.</p>
+  </div>
+</section>
+
 <!-- ============ TESTIMONIALS ============ -->
-<section class="section">
+<section class="section" style="padding-top: 0;">
   <div class="container">
     <div class="section-header">
       <div class="section-eyebrow">In Their Words</div>
@@ -62,3 +129,30 @@ permalink: "/case-studies/"
     </div>
   </div>
 </section>
+
+<script>
+(function () {
+  var filters = document.querySelectorAll(".csx-filter");
+  var cards = document.querySelectorAll("#csGrid .csx-card");
+  var empty = document.getElementById("csEmpty");
+  if (!filters.length || !cards.length) return;
+
+  filters.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var want = btn.getAttribute("data-filter");
+      filters.forEach(function (b) {
+        var on = b === btn;
+        b.classList.toggle("is-active", on);
+        b.setAttribute("aria-selected", on ? "true" : "false");
+      });
+      var shown = 0;
+      cards.forEach(function (c) {
+        var match = want === "all" || c.getAttribute("data-sector") === want;
+        c.hidden = !match;
+        if (match) shown++;
+      });
+      if (empty) empty.hidden = shown > 0;
+    });
+  });
+})();
+</script>

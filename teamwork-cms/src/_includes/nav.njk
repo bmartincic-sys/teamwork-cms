@@ -46,23 +46,26 @@
           </div>
         </div>
       </div>
+      <div class="nav-item">
+        <a href="/case-studies/" class="nav-link{% if page.url == "/case-studies/" %} nav-link-active{% endif %}">Case Studies</a>
+      </div>
+      <div class="nav-item">
+        <a href="https://partners.teamworkcommerce.com/integrations" class="nav-link" target="_blank" rel="noopener">Partners <i class="ti ti-external-link" style="font-size:13px"></i></a>
+      </div>
       {% if collections.resources.length %}
       <div class="nav-item">
-        <span class="nav-link{% if "/blog/" in page.url or "/case-studies/" in page.url or "/glossary/" in page.url or "/frequently-asked-questions/" in page.url %} nav-link-active{% endif %}">Resources <i class="ti ti-chevron-down" style="font-size:14px"></i></span>
+        <span class="nav-link{% if "/blog/" in page.url or "/glossary/" in page.url or "/frequently-asked-questions/" in page.url %} nav-link-active{% endif %}">Resources <i class="ti ti-chevron-down" style="font-size:14px"></i></span>
         <div class="nav-dropdown">
           {% for r in collections.resources %}{% if r.url != "/case-studies/" %}<a href="{{ r.url }}"{% if page.url == r.url %} class="is-current" aria-current="page"{% endif %}>{{ r.data.navLabel or r.data.title }}</a>{% endif %}{% endfor %}
         </div>
       </div>
       {% endif %}
       <div class="nav-item">
-        {% set companyUrls = ["/about/", "/careers/", "/teamwork-cares/", "/partners/", "/press-room/"] %}
+        {% set companyUrls = ["/about/", "/careers/", "/teamwork-cares/", "/press-room/"] %}
         <a href="/about/" class="nav-link{% if page.url in companyUrls %} nav-link-active{% endif %}">Company <i class="ti ti-chevron-down" style="font-size:14px"></i></a>
         <div class="nav-dropdown">
-          {% for c in companyUrls %}<a href="{{ c }}"{% if page.url == c %} class="is-current" aria-current="page"{% endif %}>{{ {"/about/":"About","/careers/":"Careers","/teamwork-cares/":"Teamwork Cares","/partners/":"Partners","/press-room/":"Press Room","/contact/":"Contact"}[c] }}</a>{% endfor %}
+          {% for c in companyUrls %}<a href="{{ c }}"{% if page.url == c %} class="is-current" aria-current="page"{% endif %}>{{ {"/about/":"About","/careers/":"Careers","/teamwork-cares/":"Teamwork Cares","/press-room/":"Press Room","/contact/":"Contact"}[c] }}</a>{% endfor %}
         </div>
-      </div>
-      <div class="nav-item">
-        <a href="/case-studies/" class="nav-link{% if page.url == "/case-studies/" %} nav-link-active{% endif %}">Case Studies</a>
       </div>
       <div class="nav-item">
         <a href="/contact/" class="nav-link{% if page.url == "/contact/" %} nav-link-active{% endif %}">Contact</a>
@@ -98,6 +101,9 @@
     <a href="/platform/analytics/"{% if page.url == "/platform/analytics/" %} class="is-current" aria-current="page"{% endif %}>Analytics</a>
     <a href="/platform/shopper-services/"{% if page.url == "/platform/shopper-services/" %} class="is-current" aria-current="page"{% endif %}>Shopper Services</a>
     <a href="/platform/integrations/"{% if page.url == "/platform/integrations/" %} class="is-current" aria-current="page"{% endif %}>Integrations &amp; APIs</a>
+    <a href="/case-studies/"{% if page.url == "/case-studies/" %} class="is-current" aria-current="page"{% endif %}>Case Studies</a>
+    <a href="https://partners.teamworkcommerce.com/integrations" target="_blank" rel="noopener">Partners</a>
+    <a href="/case-studies/"{% if page.url == "/case-studies/" %} class="is-current" aria-current="page"{% endif %}>Case Studies</a>
     <div class="nav-mob-head">Solutions</div>
     {% for s in collections.solutions | sortByNavOrder %}<a href="{{ s.url }}"{% if page.url == s.url %} class="is-current" aria-current="page"{% endif %}>{{ s.data.navLabel or s.data.title }}</a>
     {% endfor %}
@@ -106,7 +112,7 @@
     <a href="/about/"{% if page.url == "/about/" %} class="is-current" aria-current="page"{% endif %}>About</a>
     <a href="/careers/"{% if page.url == "/careers/" %} class="is-current" aria-current="page"{% endif %}>Careers</a>
     <a href="/teamwork-cares/"{% if page.url == "/teamwork-cares/" %} class="is-current" aria-current="page"{% endif %}>Teamwork Cares</a>
-    <a href="/partners/"{% if page.url == "/partners/" %} class="is-current" aria-current="page"{% endif %}>Partners</a>
+    <a href="/partners/"{% if page.url == "/partners/" %} class="is-current" aria-current="page"{% endif %}>Partner Program</a>
     <a href="/press-room/"{% if page.url == "/press-room/" %} class="is-current" aria-current="page"{% endif %}>Press Room</a>
     <a href="/contact/"{% if page.url == "/contact/" %} class="is-current" aria-current="page"{% endif %}>Contact</a>
     <button class="btn btn-primary" onclick="window.location.href='/contact/'">Book a demo</button>
