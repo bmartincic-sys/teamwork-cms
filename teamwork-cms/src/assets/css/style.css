@@ -4154,10 +4154,10 @@ main > .hero:first-child { margin-top: -85px; padding-top: 230px; }
 .hero-photo-compact .hero-photo-title { font-size: clamp(42px, 5.4vw, 76px); }
 
 /* Homepage OS headline: uniform title-case lockup with gradient callout */
-.hero-head-wide { max-width: 1080px; }
+.hero-photo-head.hero-head-wide { max-width: 1160px; }
 .hero-photo-title.hero-title-os {
-  font-size: clamp(36px, 4.1vw, 59px);
-  font-weight: 700; letter-spacing: -0.03em; line-height: 1.1;
+  font-size: clamp(38px, 4.85vw, 70px);
+  font-weight: 700; letter-spacing: -0.032em; line-height: 1.08;
 }
 .os-grad {
   background: var(--gradient);
