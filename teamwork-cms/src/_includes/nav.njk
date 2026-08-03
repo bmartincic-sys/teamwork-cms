@@ -6,9 +6,39 @@
     </a>
     <div class="nav-links">
       <div class="nav-item">
-        <span class="nav-link{% if "/platform/" in page.url %} nav-link-active{% endif %}">Platform <i class="ti ti-chevron-down" style="font-size:14px"></i></span>
-        <div class="nav-dropdown">
-          {% for p in collections.platform | sortByNavOrder %}<a href="{{ p.url }}"{% if page.url == p.url %} class="is-current" aria-current="page"{% endif %}>{{ p.data.navLabel or p.data.title }}</a>{% endfor %}
+        <a href="/platform/tcs/" class="nav-link{% if "/platform/" in page.url %} nav-link-active{% endif %}">Teamwork Commerce Services <i class="ti ti-chevron-down" style="font-size:14px"></i></a>
+        <div class="nav-dropdown nav-mega">
+          <a href="/platform/tcs/" class="mega-overview{% if page.url == '/platform/tcs/' %} is-current{% endif %}"{% if page.url == '/platform/tcs/' %} aria-current="page"{% endif %}>
+            <span class="mega-ov-icon"><i class="ti ti-topology-star-3"></i></span>
+            <span class="mega-ov-text">
+              <strong>Teamwork Commerce Services</strong>
+              <em>The whole platform, one connected system</em>
+            </span>
+            <i class="ti ti-arrow-right mega-ov-arrow"></i>
+          </a>
+          <div class="mega-cols">
+            <div class="mega-col">
+              <div class="mega-head"><i class="ti ti-device-mobile"></i> Commerce Apps</div>
+              <a href="/platform/mobile-pos/"{% if page.url == '/platform/mobile-pos/' %} class="is-current" aria-current="page"{% endif %}>POS</a>
+              <a href="/platform/teammate/"{% if page.url == '/platform/teammate/' %} class="is-current" aria-current="page"{% endif %}>TEAMMATE</a>
+            </div>
+            <div class="mega-col">
+              <div class="mega-head"><i class="ti ti-cpu"></i> Commerce Engine</div>
+              <a href="/platform/pxp/"{% if page.url == '/platform/pxp/' %} class="is-current" aria-current="page"{% endif %}>PXP · Product</a>
+              <a href="/platform/cxp/"{% if page.url == '/platform/cxp/' %} class="is-current" aria-current="page"{% endif %}>CXP · Customer</a>
+              <a href="/platform/tap/"{% if page.url == '/platform/tap/' %} class="is-current" aria-current="page"{% endif %}>TAP · Identity</a>
+              <a href="/platform/lms/"{% if page.url == '/platform/lms/' %} class="is-current" aria-current="page"{% endif %}>LMS · Training</a>
+            </div>
+            <div class="mega-col">
+              <div class="mega-head"><i class="ti ti-settings-cog"></i> Operations</div>
+              <a href="/platform/oms/"{% if page.url == '/platform/oms/' %} class="is-current" aria-current="page"{% endif %}>Order Management</a>
+              <a href="/platform/inventory-control/"{% if page.url == '/platform/inventory-control/' %} class="is-current" aria-current="page"{% endif %}>Inventory Control</a>
+              <a href="/platform/rfid/"{% if page.url == '/platform/rfid/' %} class="is-current" aria-current="page"{% endif %}>RFID Solution</a>
+              <a href="/platform/analytics/"{% if page.url == '/platform/analytics/' %} class="is-current" aria-current="page"{% endif %}>Analytics</a>
+              <a href="/platform/shopper-services/"{% if page.url == '/platform/shopper-services/' %} class="is-current" aria-current="page"{% endif %}>Shopper Services</a>
+              <a href="/platform/integrations/"{% if page.url == '/platform/integrations/' %} class="is-current" aria-current="page"{% endif %}>Integrations &amp; APIs</a>
+            </div>
+          </div>
         </div>
       </div>
       <div class="nav-item">
@@ -47,8 +77,22 @@
 
   <div class="nav-mobile-menu" id="navMobileMenu">
     <a href="/"{% if page.url == "/" %} class="is-current" aria-current="page"{% endif %}>Home</a>
-    {% for p in collections.platform | sortByNavOrder %}<a href="{{ p.url }}"{% if page.url == p.url %} class="is-current" aria-current="page"{% endif %}>{{ p.data.navLabel or p.data.title }}</a>
-    {% endfor %}
+    <a href="/platform/tcs/"{% if page.url == "/platform/tcs/" %} class="is-current" aria-current="page"{% endif %}>Teamwork Commerce Services</a>
+    <div class="nav-mob-head">Commerce Apps</div>
+    <a href="/platform/mobile-pos/"{% if page.url == "/platform/mobile-pos/" %} class="is-current" aria-current="page"{% endif %}>POS</a>
+    <a href="/platform/teammate/"{% if page.url == "/platform/teammate/" %} class="is-current" aria-current="page"{% endif %}>TEAMMATE</a>
+    <div class="nav-mob-head">Commerce Engine</div>
+    <a href="/platform/pxp/"{% if page.url == "/platform/pxp/" %} class="is-current" aria-current="page"{% endif %}>PXP · Product</a>
+    <a href="/platform/cxp/"{% if page.url == "/platform/cxp/" %} class="is-current" aria-current="page"{% endif %}>CXP · Customer</a>
+    <a href="/platform/tap/"{% if page.url == "/platform/tap/" %} class="is-current" aria-current="page"{% endif %}>TAP · Identity</a>
+    <a href="/platform/lms/"{% if page.url == "/platform/lms/" %} class="is-current" aria-current="page"{% endif %}>LMS · Training</a>
+    <div class="nav-mob-head">Operations</div>
+    <a href="/platform/oms/"{% if page.url == "/platform/oms/" %} class="is-current" aria-current="page"{% endif %}>Order Management</a>
+    <a href="/platform/inventory-control/"{% if page.url == "/platform/inventory-control/" %} class="is-current" aria-current="page"{% endif %}>Inventory Control</a>
+    <a href="/platform/rfid/"{% if page.url == "/platform/rfid/" %} class="is-current" aria-current="page"{% endif %}>RFID Solution</a>
+    <a href="/platform/analytics/"{% if page.url == "/platform/analytics/" %} class="is-current" aria-current="page"{% endif %}>Analytics</a>
+    <a href="/platform/shopper-services/"{% if page.url == "/platform/shopper-services/" %} class="is-current" aria-current="page"{% endif %}>Shopper Services</a>
+    <a href="/platform/integrations/"{% if page.url == "/platform/integrations/" %} class="is-current" aria-current="page"{% endif %}>Integrations &amp; APIs</a>
     <a href="/solutions/"{% if page.url == "/solutions/" %} class="is-current" aria-current="page"{% endif %}>Solutions</a>
     {% for s in collections.solutions | sortByNavOrder %}<a href="{{ s.url }}"{% if page.url == s.url %} class="is-current" aria-current="page"{% endif %}>{{ s.data.navLabel or s.data.title }}</a>
     {% endfor %}

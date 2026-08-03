@@ -2125,6 +2125,43 @@ details[open] summary { color: var(--brand-text); }
 }
 .nav-dropdown a:hover { background: var(--bg-deep); color: var(--text); }
 
+/* ---- Platform mega menu (TCS overview + grouped categories) ---- */
+.nav-mega { min-width: 660px; padding: 14px; left: 50%; transform: translate(-50%, -4px); }
+.nav-item:hover .nav-mega, .nav-item:focus-within .nav-mega { transform: translate(-50%, 0); }
+.mega-overview {
+  display: flex !important; align-items: center; gap: 13px;
+  padding: 14px 16px !important; margin-bottom: 12px;
+  border-radius: 10px; background: var(--bg-deep); border: 1px solid var(--border);
+}
+.mega-overview:hover { border-color: rgba(36,125,255,0.45); }
+.mega-ov-icon {
+  width: 36px; height: 36px; flex-shrink: 0; border-radius: 9px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px; color: #fff; background: var(--gradient);
+}
+.mega-ov-text { display: flex; flex-direction: column; gap: 2px; flex: 1; }
+.mega-ov-text strong { font-size: 13.5px; font-weight: 800; color: var(--text); }
+.mega-ov-text em { font-size: 12px; font-style: normal; color: var(--text-muted); }
+.mega-ov-arrow { font-size: 15px; color: var(--text-faint); transition: transform .2s ease; }
+.mega-overview:hover .mega-ov-arrow { transform: translateX(3px); color: var(--brand-text); }
+.mega-cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.mega-col { display: flex; flex-direction: column; }
+.mega-col + .mega-col { border-left: 1px solid var(--border); padding-left: 10px; }
+.mega-head {
+  display: flex; align-items: center; gap: 7px;
+  padding: 6px 10px 8px;
+  font-family: var(--font-mono); font-size: 10.5px; font-weight: 700;
+  letter-spacing: 0.14em; text-transform: uppercase; color: var(--brand-text);
+}
+.mega-head i { font-size: 14px; }
+.mega-col:nth-child(2) .mega-head { color: var(--brand-purple); }
+.mega-col:nth-child(3) .mega-head { color: var(--text-faint); }
+.nav-mob-head {
+  padding: 14px 10px 6px;
+  font-family: var(--font-mono); font-size: 10.5px; font-weight: 700;
+  letter-spacing: 0.14em; text-transform: uppercase; color: var(--brand-text);
+}
+
 /* ============ MOBILE NAV ============ */
 .nav-hamburger {
   display: none; width: 38px; height: 38px; border-radius: 8px;
