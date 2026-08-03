@@ -62,6 +62,7 @@ module.exports = [
     blurb: "Luxury outerwear connecting clienteling and checkout across markets.",
     sector: "Luxury Apparel",
     url: "/blog/moose-knuckles-x-teamwork-commerce-enhancing-the-customer-journey/",
+    photo: "/assets/images/customers/moose-knuckles.jpg",
     logo: "/assets/images/logos/moose-knuckles-logo.png"
   },
   {
@@ -73,11 +74,22 @@ module.exports = [
     logo: "/assets/images/logos/moose-knuckles-logo.png"
   },
   {
+    client: "Moose Knuckles Canada",
+    title: "Moose Knuckles Canada furthers their omnichannel presence",
+    blurb: "Extending one platform across the Canadian fleet, store by store.",
+    sector: "Luxury Apparel",
+    url: "https://www.teamworkcommerce.com/moose-knuckles-canada-furthers-their-omnichannel-presence-with-teamwork-commerce/",
+    photo: "/assets/images/customers/moose-knuckles.jpg",
+    logo: "/assets/images/logos/moose-knuckles-logo.png",
+    external: true
+  },
+  {
     client: "Petco",
     title: "Omnichannel transformation: Petco's success with Teamwork Commerce",
     blurb: "118 stores and 2,000+ terminals consolidated onto POS, loyalty, and CRM in one system.",
     sector: "Pet Retail",
     url: "https://www.teamworkcommerce.com/petco-omnichannel-transformation/",
+    photo: "/assets/images/customers/petco.jpg",
     external: true
   },
   {
@@ -86,6 +98,7 @@ module.exports = [
     blurb: "Retail, grooming, and veterinary services running on a single platform.",
     sector: "Pet Retail",
     url: "https://www.teamworkcommerce.com/royal-pets-simplifies-their-store-operations/",
+    photo: "/assets/images/customers/royal-pets.jpg",
     external: true
   },
   {
@@ -94,6 +107,7 @@ module.exports = [
     blurb: "Heritage menswear bringing stores and online onto one inventory truth.",
     sector: "Luxury Apparel",
     url: "https://www.teamworkcommerce.com/paul-stuart-adopts-omnichannel-retail-strategy-with-teamwork-commerce/",
+    photo: "/assets/images/customers/paul-stuart.jpg",
     external: true
   },
   {
@@ -102,6 +116,7 @@ module.exports = [
     blurb: "Seasonal staff live on registers in minutes for the league's biggest week.",
     sector: "Stadiums & Venues",
     url: "https://www.teamworkcommerce.com/mlb-all-star-host-2021-colorado-rockies-elevate-omnichannel-experience-for-fans/",
+    photo: "/assets/images/customers/colorado-rockies.jpg",
     external: true
   },
   {
@@ -110,6 +125,7 @@ module.exports = [
     blurb: "Elevating the in-store experience on the Teamwork omnichannel platform.",
     sector: "Luxury Apparel",
     url: "https://www.teamworkcommerce.com/prada-shoes-improves-customer-experience-teamwork-commerce-omnichannel-platform/",
+    photo: "/assets/images/customers/prada-shoes.jpg",
     external: true
   },
   {
@@ -118,6 +134,7 @@ module.exports = [
     blurb: "Two French fashion brands operating on one platform across their fleet.",
     sector: "Fashion & Apparel",
     url: "https://www.teamworkcommerce.com/princesse-tam-tam-and-comptoir-des-cotonniers-ptt-cdc/",
+    photo: "/assets/images/customers/ptt-cdc.jpg",
     external: true
   },
   {
@@ -126,6 +143,7 @@ module.exports = [
     blurb: "Pop-up event retail deployed fast, then packed down just as fast.",
     sector: "Footwear",
     url: "https://www.teamworkcommerce.com/asics-outperforms-itself-with-teamwork-in-the-36th-edition-of-fathers-day-race/",
+    photo: "/assets/images/customers/asics-race.jpg",
     logo: "/assets/images/logos/asics-logo.png",
     external: true
   },
@@ -144,6 +162,7 @@ module.exports = [
     blurb: "A modern newsstand concept selling anywhere its customers happen to be.",
     sector: "Specialty Retail",
     url: "https://www.teamworkcommerce.com/the-new-stand-improves-days-and-mobility/",
+    photo: "/assets/images/customers/the-new-stand.jpg",
     external: true
   },
   {
