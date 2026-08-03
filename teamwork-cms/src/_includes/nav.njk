@@ -40,7 +40,6 @@
             </div>
             <div class="mega-col">
               <div class="mega-head"><i class="ti ti-building-store"></i> Solutions</div>
-              <a href="/solutions/"{% if page.url == '/solutions/' %} class="is-current" aria-current="page"{% endif %}>All Solutions</a>
               {% for s in collections.solutions | sortByNavOrder %}<a href="{{ s.url }}"{% if page.url == s.url %} class="is-current" aria-current="page"{% endif %}>{{ s.data.navLabel or s.data.title }}</a>
               {% endfor %}
             </div>
@@ -100,7 +99,6 @@
     <a href="/platform/shopper-services/"{% if page.url == "/platform/shopper-services/" %} class="is-current" aria-current="page"{% endif %}>Shopper Services</a>
     <a href="/platform/integrations/"{% if page.url == "/platform/integrations/" %} class="is-current" aria-current="page"{% endif %}>Integrations &amp; APIs</a>
     <div class="nav-mob-head">Solutions</div>
-    <a href="/solutions/"{% if page.url == "/solutions/" %} class="is-current" aria-current="page"{% endif %}>All Solutions</a>
     {% for s in collections.solutions | sortByNavOrder %}<a href="{{ s.url }}"{% if page.url == s.url %} class="is-current" aria-current="page"{% endif %}>{{ s.data.navLabel or s.data.title }}</a>
     {% endfor %}
     {% for r in collections.resources %}<a href="{{ r.url }}"{% if page.url == r.url %} class="is-current" aria-current="page"{% endif %}>{{ r.data.navLabel or r.data.title }}</a>
