@@ -7,16 +7,14 @@ module.exports = [
     title: "Powering high-performance retail at one of the world's largest sporting events",
     blurb: "Event retail at the highest level of pressure — thousands of transactions in tight windows, on one platform.",
     sector: "Stadiums & Venues",
-    url: "/blog/powering-high-performance-retail-at-one-of-the-worlds-largest-sporting-events/",
-    featured: true
+    url: "/blog/powering-high-performance-retail-at-one-of-the-worlds-largest-sporting-events/"
   },
   {
     client: "Carolina Hurricanes",
     title: "Inside the Carolina Hurricanes retail transformation",
     blurb: "An NHL franchise rebuilding arena retail around mobile POS and real-time inventory.",
     sector: "Stadiums & Venues",
-    url: "/blog/carolina-hurricanes-retail-transformation/",
-    featured: true
+    url: "/blog/carolina-hurricanes-retail-transformation/"
   },
   {
     client: "Sports Basement",
@@ -24,14 +22,15 @@ module.exports = [
     blurb: "Turning the checkout screen into a retail-media channel with Shopper Services.",
     sector: "Retail Media",
     url: "/blog/monetizing-the-moment-how-sports-basement-and-teamwork-commerce-are-redefining-in-store-advertising/",
-    featured: true
+    photo: "/assets/images/customers/sports-basement.jpg", logo: "/assets/images/customers/logos/sports-basement-logo.png"
   },
   {
     client: "Sports Basement",
     title: "From ice rink to innovation: transforming retail with Teamwork Commerce",
     blurb: "A Bay Area institution moving its stores onto iOS-native POS.",
     sector: "Sporting Goods",
-    url: "/blog/from-ice-rink-to-innovation-how-sports-basement-transformed-retail-with-teamwork-commerce/"
+    url: "/blog/from-ice-rink-to-innovation-how-sports-basement-transformed-retail-with-teamwork-commerce/",
+    photo: "/assets/images/customers/sports-basement.jpg", logo: "/assets/images/customers/logos/sports-basement-logo.png"
   },
   {
     client: "FAO Schwarz",
@@ -39,7 +38,7 @@ module.exports = [
     blurb: "The flagship toy store keeping theater on the floor and the register out of the way.",
     sector: "Specialty Retail",
     url: "/blog/fao-schwarz-delivers-magical-retail-experiences-with-teamwork-commerces-mobile-pos/",
-    featured: true
+    photo: "/assets/images/customers/fao-schwarz.jpg", logo: "/assets/images/customers/logos/fao-schwarz-logo.png"
   },
   {
     client: "ASICS",
@@ -47,28 +46,31 @@ module.exports = [
     blurb: "A global athletic brand standardizing store operations on one platform.",
     sector: "Footwear",
     url: "/blog/asics-and-teamwork-commerce-revolutionizing-retail-with-cutting-edge-pos-solutions/",
-    featured: true
+    logo: "/assets/images/logos/asics-logo.png"
   },
   {
     client: "Art Computers",
     title: "Art Computer's digital transformation with Teamwork Commerce",
     blurb: "Consumer electronics retail moving to a unified, mobile-first system.",
     sector: "Electronics",
-    url: "/blog/art-computers-digital-transformation-with-teamwork-commerce/"
+    url: "/blog/art-computers-digital-transformation-with-teamwork-commerce/",
+    photo: "/assets/images/customers/art-computer.jpg", logo: "/assets/images/customers/logos/art-computer-logo.png"
   },
   {
     client: "Moose Knuckles",
     title: "Moose Knuckles × Teamwork Commerce: enhancing the customer journey",
     blurb: "Luxury outerwear connecting clienteling and checkout across markets.",
     sector: "Luxury Apparel",
-    url: "/blog/moose-knuckles-x-teamwork-commerce-enhancing-the-customer-journey/"
+    url: "/blog/moose-knuckles-x-teamwork-commerce-enhancing-the-customer-journey/",
+    logo: "/assets/images/logos/moose-knuckles-logo.png"
   },
   {
     client: "Moose Knuckles",
     title: "Global retail excellence with Adyen and Teamwork Commerce",
     blurb: "One payments and POS stack across every country the brand operates in.",
     sector: "Luxury Apparel",
-    url: "/blog/how-moose-knuckles-delivers-global-retail-excellence-with-adyen-teamwork-commerce/"
+    url: "/blog/how-moose-knuckles-delivers-global-retail-excellence-with-adyen-teamwork-commerce/",
+    logo: "/assets/images/logos/moose-knuckles-logo.png"
   },
   {
     client: "Petco",
@@ -76,8 +78,7 @@ module.exports = [
     blurb: "118 stores and 2,000+ terminals consolidated onto POS, loyalty, and CRM in one system.",
     sector: "Pet Retail",
     url: "https://www.teamworkcommerce.com/petco-omnichannel-transformation/",
-    external: true,
-    featured: true
+    external: true
   },
   {
     client: "Royal Pets",
@@ -125,6 +126,7 @@ module.exports = [
     blurb: "Pop-up event retail deployed fast, then packed down just as fast.",
     sector: "Footwear",
     url: "https://www.teamworkcommerce.com/asics-outperforms-itself-with-teamwork-in-the-36th-edition-of-fathers-day-race/",
+    logo: "/assets/images/logos/asics-logo.png",
     external: true
   },
   {
@@ -133,6 +135,7 @@ module.exports = [
     blurb: "Reopening the world's most famous toy store with a modern POS foundation.",
     sector: "Specialty Retail",
     url: "https://www.teamworkcommerce.com/fao-schwarz-reopens-with-the-help-of-cutting-edge-retail-technology/",
+    photo: "/assets/images/customers/fao-schwarz.jpg", logo: "/assets/images/customers/logos/fao-schwarz-logo.png",
     external: true
   },
   {

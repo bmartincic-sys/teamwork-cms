@@ -37,36 +37,12 @@ permalink: "/case-studies/"
   </div>
 </section>
 
-<!-- ============ FEATURED ============ -->
-<section class="section" style="padding-bottom: 0;">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-eyebrow">Featured</div>
-      <h2 class="section-title">Start with these.</h2>
-    </div>
-    <div class="csx-feature-grid">
-      {% for cs in caseStudies %}{% if cs.featured %}
-      <a class="csx-feature" href="{{ cs.url }}"{% if cs.external %} target="_blank" rel="noopener"{% endif %}>
-        <div class="csx-feature-top">
-          <span class="csx-sector">{{ cs.sector }}</span>
-          {% if cs.external %}<i class="ti ti-external-link csx-ext"></i>{% else %}<i class="ti ti-arrow-right csx-ext"></i>{% endif %}
-        </div>
-        <div class="csx-client">{{ cs.client }}</div>
-        <h3>{{ cs.title }}</h3>
-        <p>{{ cs.blurb }}</p>
-        <span class="csx-read">Read the story <i class="ti ti-arrow-right"></i></span>
-      </a>
-      {% endif %}{% endfor %}
-    </div>
-  </div>
-</section>
-
 <!-- ============ ALL STORIES (filterable) ============ -->
 <section class="section" id="all-stories">
   <div class="container">
     <div class="section-header">
       <div class="section-eyebrow">Every Story</div>
-      <h2 class="section-title">All {{ caseStudies.length }} case studies.</h2>
+      <h2 class="section-title">Every case study.</h2>
       <p class="section-sub">Filter by sector, or read straight through.</p>
     </div>
 
@@ -82,14 +58,19 @@ permalink: "/case-studies/"
 
     <div class="csx-grid" id="csGrid">
       {% for cs in caseStudies %}
-      <a class="csx-card" href="{{ cs.url }}"{% if cs.external %} target="_blank" rel="noopener"{% endif %} data-sector="{{ cs.sector | slugify }}">
-        <div class="csx-card-head">
-          <span class="csx-sector">{{ cs.sector }}</span>
-          {% if cs.external %}<i class="ti ti-external-link csx-ext"></i>{% else %}<i class="ti ti-arrow-right csx-ext"></i>{% endif %}
+      <a class="csx-card{% if cs.photo %} has-photo{% else %} is-ink tone-{{ loop.index0 % 3 }}{% endif %}" href="{{ cs.url }}"{% if cs.external %} target="_blank" rel="noopener"{% endif %} data-sector="{{ cs.sector | slugify }}">
+        {% if cs.photo %}<img class="csx-photo" src="{{ cs.photo }}" alt="{{ cs.client }}" loading="lazy">{% endif %}
+        <div class="csx-scrim"></div>
+        <span class="csx-sector">{{ cs.sector }}</span>
+        {% if cs.external %}<i class="ti ti-external-link csx-ext"></i>{% endif %}
+        <div class="csx-face">
+          {% if cs.logo %}<img class="csx-logo" src="{{ cs.logo }}" alt="{{ cs.client }}">{% else %}<span class="csx-name">{{ cs.client }}</span>{% endif %}
         </div>
-        <div class="csx-client">{{ cs.client }}</div>
-        <h3>{{ cs.title }}</h3>
-        <p>{{ cs.blurb }}</p>
+        <div class="csx-hover">
+          <h3>{{ cs.title }}</h3>
+          <p>{{ cs.blurb }}</p>
+          <span class="csx-read">Read the case study <i class="ti ti-arrow-right"></i></span>
+        </div>
       </a>
       {% endfor %}
     </div>
