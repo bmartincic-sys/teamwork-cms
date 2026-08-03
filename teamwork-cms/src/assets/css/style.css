@@ -2773,6 +2773,37 @@ main[data-vertical] .tm-band-glow {
   .lx-cell:nth-child(n+2) { border-top: 1px solid var(--border); }
 }
 
+/* Stadiums: game-day board (angular chips, sharp cards) */
+.sv-board { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.sv-card {
+  position: relative; padding: 24px 24px 26px;
+  background: var(--bg-elevated); border: 1px solid var(--border); border-radius: 10px;
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+.sv-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); border-color: var(--border-strong); }
+.sv-chip {
+  display: inline-block; margin-bottom: 16px; padding: 4px 12px;
+  transform: skewX(-11deg);
+  font-family: var(--font-mono); font-size: 12px; font-weight: 700;
+  letter-spacing: 0.12em; color: #fff; border-radius: 4px;
+}
+.sv-blue .sv-chip { background: var(--brand-blue); }
+.sv-purple .sv-chip { background: var(--brand-purple); }
+.sv-card h3 {
+  font-size: 18.5px; font-weight: 850; letter-spacing: -0.015em;
+  text-transform: uppercase; margin: 0 0 8px; color: var(--text);
+}
+.sv-card p { font-size: 13.5px; line-height: 1.6; color: var(--text-muted); margin: 0; }
+.sv-card p a { color: var(--brand-text); font-weight: 700; }
+.sv-wide { grid-column: 1 / -1; display: flex; align-items: flex-start; gap: 22px; }
+.sv-wide .sv-chip { margin-bottom: 0; flex-shrink: 0; margin-top: 3px; }
+.sv-wide p { max-width: 900px; }
+@media (max-width: 1000px) { .sv-board { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) {
+  .sv-board { grid-template-columns: 1fr; }
+  .sv-wide { flex-direction: column; gap: 12px; }
+}
+
 /* Pet: ID-tag capability cards */
 .pt-tags { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
 .pt-tag {
