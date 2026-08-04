@@ -11,3 +11,33 @@
   from = "/solutions/"
   to = "/platform/tcs/"
   status = 301
+
+[[redirects]]
+  from = "/platform/pxp/"
+  to = "/features/product-data/"
+  status = 301
+
+[[redirects]]
+  from = "/platform/cxp/"
+  to = "/features/customer-data/"
+  status = 301
+
+[[redirects]]
+  from = "/platform/tap/"
+  to = "/features/access-identity/"
+  status = 301
+
+[[redirects]]
+  from = "/platform/teammate/"
+  to = "/features/access-identity/"
+  status = 301
+
+[[redirects]]
+  from = "/platform/lms/"
+  to = "/features/training/"
+  status = 301
+
+[[redirects]]
+  from = "/platform/tcs/"
+  to = "/platform/mobile-pos/"
+  status = 301

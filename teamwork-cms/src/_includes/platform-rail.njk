@@ -1,18 +1,18 @@
 {% if platformRail %}
 {% set railMeta = {
-  "mobile-pos": { "label": "Mobile POS", "icon": "ti-device-mobile" },
-  "rfid": { "label": "Native RFID", "icon": "ti-scan" },
-  "oms": { "label": "Order Management", "icon": "ti-truck-delivery" },
-  "inventory-control": { "label": "Inventory Control", "icon": "ti-packages" },
-  "cxp": { "label": "CXP · Customer", "icon": "ti-user-heart" },
-  "pxp": { "label": "PXP · Product", "icon": "ti-tag" },
-  "tap": { "label": "TAP · Identity", "icon": "ti-shield-lock" },
-  "teammate": { "label": "TEAMMATE", "icon": "ti-id-badge-2" },
-  "lms": { "label": "LMS · Training", "icon": "ti-school" },
-  "analytics": { "label": "Analytics · Cloud HQ", "icon": "ti-chart-bar" },
-  "shopper-services": { "label": "Shopper Services", "icon": "ti-ad-2" },
-  "integrations": { "label": "Integrations & APIs", "icon": "ti-plug-connected" },
-  "tcs": { "label": "The Full Platform", "icon": "ti-layers-subtract" }
+  "mobile-pos": { "label": "Mobile POS", "icon": "ti-device-mobile", "url": "/platform/mobile-pos/" },
+  "rfid": { "label": "RFID & Self-Checkout", "icon": "ti-scan", "url": "/platform/rfid/" },
+  "oms": { "label": "Order Management", "icon": "ti-truck-delivery", "url": "/platform/oms/" },
+  "inventory-control": { "label": "Inventory Control", "icon": "ti-packages", "url": "/platform/inventory-control/" },
+  "cxp": { "label": "Customer Data", "icon": "ti-user-heart", "url": "/features/customer-data/" },
+  "pxp": { "label": "Product Data", "icon": "ti-tag", "url": "/features/product-data/" },
+  "tap": { "label": "Access & Identity", "icon": "ti-shield-lock", "url": "/features/access-identity/" },
+  "teammate": { "label": "Associate App", "icon": "ti-id-badge-2", "url": "/features/access-identity/" },
+  "lms": { "label": "Training", "icon": "ti-school", "url": "/features/training/" },
+  "analytics": { "label": "Analytics & Reporting", "icon": "ti-chart-bar", "url": "/platform/analytics/" },
+  "shopper-services": { "label": "Retail Media", "icon": "ti-ad-2", "url": "/platform/shopper-services/" },
+  "integrations": { "label": "Integrations & APIs", "icon": "ti-plug-connected", "url": "/platform/integrations/" },
+  "tcs": { "label": "Point of Sale", "icon": "ti-device-tablet", "url": "/platform/mobile-pos/" }
 } %}
 <section class="section" style="padding-top: 0;">
   <div class="container">
@@ -25,7 +25,7 @@
       <div class="prail-grid">
         {% for slug in platformRail %}
         {% set m = railMeta[slug] %}
-        <a class="prail-chip" href="/platform/{{ slug }}/">
+        <a class="prail-chip" href="{{ m.url }}">
           <i class="ti {{ m.icon }}"></i>
           <span>{{ m.label }}</span>
           <i class="ti ti-arrow-right prail-arrow"></i>

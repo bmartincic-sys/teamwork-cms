@@ -107,10 +107,10 @@
 {% elif rawSegments.length >= 4 %}
 {% if rawSegments[1] == "platform" %}
   {% set categoryName = "Platform" %}
-  {% set categoryUrl = "/platform/tcs/" %}
+  {% set categoryUrl = "/platform/mobile-pos/" %}
 {% elif rawSegments[1] == "solutions" %}
   {% set categoryName = "Solutions" %}
-  {% set categoryUrl = "/platform/tcs/" %}
+  {% set categoryUrl = "/platform/mobile-pos/" %}
 {% else %}
   {% set categoryName = rawSegments[1] | capitalize %}
   {% set categoryUrl = "/" + rawSegments[1] + "/" %}
