@@ -52,7 +52,7 @@ permalink: "/case-studies/"
 
     <div class="csx-grid" id="csGrid">
       {% for cs in caseStudies %}
-      <a class="csx-card{% if cs.photo %} has-photo{% else %} is-ink tone-{{ loop.index0 % 3 }}{% endif %}" href="{{ cs.url }}"{% if cs.external %} target="_blank" rel="noopener"{% endif %} data-sector="{{ cs.sector | slugify }}">
+      <a class="csx-card{% if cs.photo %} has-photo{% else %} is-ink tone-{{ loop.index0 % 3 }}{% endif %}" href="{{ cs.url }}"{% if cs.external %} target="_blank" rel="noopener"{% endif %} data-sector="{{ cs.sector | slugify }}"{% if cs.video %} data-video="{{ cs.video }}"{% endif %}>
         {% if cs.photo %}<img class="csx-photo" src="{{ cs.photo }}" alt="{{ cs.client }}" loading="lazy">{% endif %}
         <div class="csx-scrim"></div>
         <span class="csx-sector">{{ cs.sector }}</span>

@@ -3190,6 +3190,9 @@ a.tm-day-win:hover i { transform: translateX(2px); }
   transition: transform .6s cubic-bezier(.2,.7,.3,1);
 }
 .csx-card:hover .csx-photo { transform: scale(1.05); }
+.csx-card .cs-video { z-index: 1; }
+.csx-card .cs-video-on ~ .csx-photo, .csx-card:has(.cs-video-on) .csx-photo { opacity: 0; }
+.csx-photo { transition: transform .6s cubic-bezier(.2,.7,.3,1), opacity .5s ease; }
 .csx-card.is-ink { background: #0a0d22; }
 .csx-card.is-ink::before {
   content: ''; position: absolute; inset: 0;
@@ -4791,7 +4794,7 @@ main > .hero:first-child { margin-top: -85px; padding-top: 230px; }
 }
 .cs-more-label { font-size: 15px; color: rgba(238,241,251,0.8); font-weight: 600; margin: 6px 0 10px; max-width: 200px; }
 .cs-more-count.cs-more-phrase { font-size: 32px; line-height: 1.15; max-width: 240px; }
-.cs-video {
+.cs-video, .csx-card .cs-video {
   position: absolute; top: 50%; left: 50%;
   height: 128%; aspect-ratio: 16 / 9; width: auto; min-width: 104%;
   transform: translate(-50%, -50%);

@@ -373,7 +373,7 @@ if (window.netlifyIdentity) {
         }
       });
     });
-    document.querySelectorAll(".cs-card[data-video]").forEach(function (card) {
+    document.querySelectorAll(".cs-card[data-video], .csx-card[data-video]").forEach(function (card) {
       var id = card.getAttribute("data-video");
       var entry = { card: card, iframe: null };
       csPlayers.push(entry);
@@ -398,7 +398,7 @@ if (window.netlifyIdentity) {
               iframe.contentWindow.postMessage(JSON.stringify({ event: "listening", id: id }), "*");
             });
             entry.iframe = iframe;
-            card.insertBefore(iframe, card.querySelector(".cs-scrim"));
+            card.insertBefore(iframe, card.querySelector(".cs-scrim") || card.querySelector(".csx-scrim"));
           } else {
             command("mute");
             command("playVideo");
