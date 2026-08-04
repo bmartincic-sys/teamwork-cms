@@ -3122,6 +3122,26 @@ a.tm-day-win:hover i { transform: translateX(2px); }
 .mini-card p a { color: var(--brand-text); font-weight: 700; }
 @media (max-width: 900px) { .mini-grid, .mini-grid-2 { grid-template-columns: 1fr; } }
 
+/* Product benefits grid */
+.ben-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 32px; }
+.ben-item {
+  display: flex; align-items: flex-start; gap: 14px;
+  padding: 22px 22px 24px; border-radius: 16px;
+  background: var(--bg-elevated); border: 1px solid var(--border);
+  transition: border-color .25s ease, transform .25s ease;
+}
+.ben-item:hover { border-color: rgba(36,125,255,0.4); transform: translateY(-2px); }
+.ben-ico {
+  width: 38px; height: 38px; flex-shrink: 0; border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 19px; color: var(--brand-blue); background: var(--brand-soft);
+}
+.ben-item:nth-child(even) .ben-ico { color: var(--brand-purple); background: rgba(124,80,245,0.10); }
+.ben-item h3 { font-size: 16px; font-weight: 850; letter-spacing: -0.015em; margin: 0 0 6px; color: var(--text); }
+.ben-item p { font-size: 13.5px; line-height: 1.6; color: var(--text-muted); margin: 0; }
+@media (max-width: 1000px) { .ben-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 620px) { .ben-grid { grid-template-columns: 1fr; } }
+
 /* LMS: three working surfaces */
 .lms-cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 34px; }
 .lms-col {
