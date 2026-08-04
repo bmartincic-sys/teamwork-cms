@@ -3161,7 +3161,7 @@ a.tm-day-win:hover i { transform: translateX(2px); }
 }
 
 /* Filters */
-.csx-filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 30px 0 26px; }
+.csx-filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 26px; }
 .csx-filter {
   padding: 8px 16px; border-radius: 100px; cursor: pointer;
   background: var(--bg-elevated); border: 1px solid var(--border);

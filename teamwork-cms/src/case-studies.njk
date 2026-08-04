@@ -40,12 +40,6 @@ permalink: "/case-studies/"
 <!-- ============ ALL STORIES (filterable) ============ -->
 <section class="section" id="all-stories">
   <div class="container">
-    <div class="section-header">
-      <div class="section-eyebrow">Every Story</div>
-      <h2 class="section-title">Every case study.</h2>
-      <p class="section-sub">Filter by sector, or read straight through.</p>
-    </div>
-
     {% set sectors = [] %}
     {% for cs in caseStudies %}{% if cs.sector not in sectors %}{% set sectors = (sectors.push(cs.sector), sectors) %}{% endif %}{% endfor %}
 
