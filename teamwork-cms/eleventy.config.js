@@ -27,6 +27,9 @@ module.exports = function (eleventyConfig) {
     return [...new Set(cats)];
   });
 
+  // First N items of a list (used for the "latest stories" nav dropdown)
+  eleventyConfig.addFilter("take", (arr, n) => (Array.isArray(arr) ? arr.slice(0, n) : []));
+
   eleventyConfig.addFilter("sortByNavOrder", (items) => {
     return [...(items || [])].sort((a, b) => (a.data.navOrder ?? 999) - (b.data.navOrder ?? 999));
   });

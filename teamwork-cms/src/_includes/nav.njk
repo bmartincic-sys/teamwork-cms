@@ -50,7 +50,27 @@
         </div>
       </div>
       <div class="nav-item">
-        <a href="/case-studies/" class="nav-link{% if onCaseStudy %} nav-link-active{% endif %}">Case Studies</a>
+        <a href="/case-studies/" class="nav-link{% if onCaseStudy %} nav-link-active{% endif %}">Case Studies <i class="ti ti-chevron-down" style="font-size:14px"></i></a>
+        <div class="nav-dropdown nav-cs">
+          <div class="nav-cs-head">
+            <span>Latest stories</span>
+            <a href="/case-studies/">View all <i class="ti ti-arrow-right"></i></a>
+          </div>
+          <div class="nav-cs-grid">
+            {% for cs in caseStudies | take(3) %}
+            <a class="ncs-card" href="{{ cs.url }}"{% if cs.external %} target="_blank" rel="noopener"{% endif %}>
+              {% if cs.photo %}<img class="ncs-photo" src="{{ cs.photo }}" alt="{{ cs.client }}" loading="lazy">{% endif %}
+              <span class="ncs-scrim"></span>
+              <span class="ncs-sector">{{ cs.sector }}</span>
+              <span class="ncs-body">
+                {% if cs.logo %}<img class="ncs-logo" src="{{ cs.logo }}" alt="{{ cs.client }}">{% else %}<span class="ncs-name">{{ cs.client }}</span>{% endif %}
+                <span class="ncs-title">{{ cs.title }}</span>
+                {% if cs.result %}<span class="ncs-result"><i class="ti {{ cs.resultIcon }}"></i> {{ cs.result }}</span>{% endif %}
+              </span>
+            </a>
+            {% endfor %}
+          </div>
+        </div>
       </div>
       <div class="nav-item">
         <a href="https://partners.teamworkcommerce.com/integrations" class="nav-link" target="_blank" rel="noopener">Partners <i class="ti ti-external-link" style="font-size:13px"></i></a>
