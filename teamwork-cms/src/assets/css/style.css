@@ -4713,8 +4713,9 @@ main > .hero:first-child { margin-top: -85px; padding-top: 230px; }
   .hero-photo-head.hero-head-wide { max-width: 100%; }
 }
 .os-grad {
-  background: linear-gradient(100deg, #6fb4ff 0%, #b49bff 48%, #d68cff 100%);
-  filter: saturate(1.15) brightness(1.06);
+  background: linear-gradient(100deg, #5cb6ff 0%, #a98cff 46%, #e46dff 100%);
+  filter: saturate(1.45) brightness(1.22);
+  text-shadow: none;
   -webkit-background-clip: text; background-clip: text;
   -webkit-text-fill-color: transparent;
 }
