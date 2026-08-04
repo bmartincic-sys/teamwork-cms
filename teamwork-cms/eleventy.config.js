@@ -27,6 +27,14 @@ module.exports = function (eleventyConfig) {
     return [...new Set(cats)];
   });
 
+  // Most recent N posts by date (used for the "latest from the blog" nav dropdown)
+  eleventyConfig.addFilter("recentPosts", (posts, n) => {
+    if (!Array.isArray(posts)) return [];
+    return [...posts]
+      .sort((a, b) => new Date(b.data.date) - new Date(a.data.date))
+      .slice(0, n);
+  });
+
   // First N items of a list (used for the "latest stories" nav dropdown)
   eleventyConfig.addFilter("take", (arr, n) => (Array.isArray(arr) ? arr.slice(0, n) : []));
 

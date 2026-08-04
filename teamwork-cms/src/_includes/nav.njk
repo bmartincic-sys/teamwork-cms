@@ -78,8 +78,27 @@
       {% if collections.resources.length %}
       <div class="nav-item">
         <span class="nav-link{% if not onCaseStudy and ("/blog/" in page.url or "/glossary/" in page.url or "/frequently-asked-questions/" in page.url) %} nav-link-active{% endif %}">Resources <i class="ti ti-chevron-down" style="font-size:14px"></i></span>
-        <div class="nav-dropdown">
-          {% for r in collections.resources %}{% if r.url != "/case-studies/" %}<a href="{{ r.url }}"{% if page.url == r.url %} class="is-current" aria-current="page"{% endif %}>{{ r.data.navLabel or r.data.title }}</a>{% endif %}{% endfor %}
+        <div class="nav-dropdown nav-cs">
+          <div class="nav-cs-head">
+            <span>Latest from the blog</span>
+            <a href="/blog/">View all <i class="ti ti-arrow-right"></i></a>
+          </div>
+          <div class="nav-cs-grid">
+            {% for post in collections.blogpost | recentPosts(3) %}
+            <a class="ncs-card" href="{{ post.url }}">
+              <img class="ncs-photo" src="/assets/images/blog/real/{{ post.fileSlug }}.jpg" alt="{{ post.data.title }}" loading="lazy">
+              <span class="ncs-scrim"></span>
+              {% if post.data.category %}<span class="ncs-sector">{{ post.data.category }}</span>{% endif %}
+              <span class="ncs-body">
+                <span class="ncs-name">{{ post.data.date | formatDate }}</span>
+                <span class="ncs-title">{{ post.data.title }}</span>
+              </span>
+            </a>
+            {% endfor %}
+          </div>
+          <div class="nav-cs-links">
+            {% for r in collections.resources %}{% if r.url != "/case-studies/" %}<a href="{{ r.url }}"{% if page.url == r.url %} class="is-current" aria-current="page"{% endif %}>{{ r.data.navLabel or r.data.title }}</a>{% endif %}{% endfor %}
+          </div>
         </div>
       </div>
       {% endif %}
