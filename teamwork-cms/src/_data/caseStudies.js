@@ -7,14 +7,18 @@ module.exports = [
     title: "Powering high-performance retail at one of the world's largest sporting events",
     blurb: "Event retail at the highest level of pressure — thousands of transactions in tight windows, on one platform.",
     sector: "Stadiums & Venues",
-    url: "/blog/powering-high-performance-retail-at-one-of-the-worlds-largest-sporting-events/"
+    url: "/blog/powering-high-performance-retail-at-one-of-the-worlds-largest-sporting-events/",
+    photo: "/assets/images/customers/sporting-event.jpg",
+    resultIcon: "ti-users",
+    result: "60,000+ fans in a matter of hours"
   },
   {
     client: "Carolina Hurricanes",
     title: "Inside the Carolina Hurricanes retail transformation",
     blurb: "An NHL franchise rebuilding arena retail around mobile POS and real-time inventory.",
     sector: "Stadiums & Venues",
-    url: "/blog/carolina-hurricanes-retail-transformation/"
+    url: "/blog/carolina-hurricanes-retail-transformation/",
+    photo: "/assets/images/customers/carolina-hurricanes.jpg"
   },
   {
     client: "Sports Basement",
@@ -22,7 +26,9 @@ module.exports = [
     blurb: "Turning the checkout screen into a retail-media channel with Shopper Services.",
     sector: "Retail Media",
     url: "/blog/monetizing-the-moment-how-sports-basement-and-teamwork-commerce-are-redefining-in-store-advertising/",
-    photo: "/assets/images/customers/sports-basement.jpg", logo: "/assets/images/customers/logos/sports-basement-logo.png"
+    photo: "/assets/images/customers/sports-basement.jpg", logo: "/assets/images/customers/logos/sports-basement-logo.png",
+    resultIcon: "ti-ad-2",
+    result: "Checkout turned into a revenue channel"
   },
   {
     client: "Sports Basement",
@@ -30,7 +36,9 @@ module.exports = [
     blurb: "A Bay Area institution moving its stores onto iOS-native POS.",
     sector: "Sporting Goods",
     url: "/blog/from-ice-rink-to-innovation-how-sports-basement-transformed-retail-with-teamwork-commerce/",
-    photo: "/assets/images/customers/sports-basement.jpg", logo: "/assets/images/customers/logos/sports-basement-logo.png"
+    photo: "/assets/images/customers/sports-basement.jpg", logo: "/assets/images/customers/logos/sports-basement-logo.png",
+    resultIcon: "ti-refresh",
+    result: "15 years of legacy POS replaced"
   },
   {
     client: "FAO Schwarz",
@@ -38,7 +46,9 @@ module.exports = [
     blurb: "The flagship toy store keeping theater on the floor and the register out of the way.",
     sector: "Specialty Retail",
     url: "/blog/fao-schwarz-delivers-magical-retail-experiences-with-teamwork-commerces-mobile-pos/",
-    photo: "/assets/images/customers/fao-schwarz.jpg", logo: "/assets/images/customers/logos/fao-schwarz-logo.png"
+    photo: "/assets/images/customers/fao-schwarz.jpg", logo: "/assets/images/customers/logos/fao-schwarz-logo.png",
+    resultIcon: "ti-users",
+    result: "Up to 15,000 guests served daily"
   },
   {
     client: "ASICS",
@@ -46,7 +56,8 @@ module.exports = [
     blurb: "A global athletic brand standardizing store operations on one platform.",
     sector: "Footwear",
     url: "/blog/asics-and-teamwork-commerce-revolutionizing-retail-with-cutting-edge-pos-solutions/",
-    logo: "/assets/images/logos/asics-logo.png"
+    logo: "/assets/images/logos/asics-logo.png",
+    photo: "/assets/images/customers/asics-wall.jpg"
   },
   {
     client: "Art Computers",
@@ -54,7 +65,9 @@ module.exports = [
     blurb: "Consumer electronics retail moving to a unified, mobile-first system.",
     sector: "Electronics",
     url: "/blog/art-computers-digital-transformation-with-teamwork-commerce/",
-    photo: "/assets/images/customers/art-computer.jpg", logo: "/assets/images/customers/logos/art-computer-logo.png"
+    photo: "/assets/images/customers/art-computer.jpg", logo: "/assets/images/customers/logos/art-computer-logo.png",
+    resultIcon: "ti-clock",
+    result: "Registration cut from 15 min to 3"
   },
   {
     client: "Moose Knuckles",
@@ -62,7 +75,7 @@ module.exports = [
     blurb: "Luxury outerwear connecting clienteling and checkout across markets.",
     sector: "Luxury Apparel",
     url: "/blog/moose-knuckles-x-teamwork-commerce-enhancing-the-customer-journey/",
-    photo: "/assets/images/customers/moose-knuckles.jpg",
+    photo: "/assets/images/customers/moose-knuckles-store.jpg",
     logo: "/assets/images/logos/moose-knuckles-logo.png"
   },
   {
@@ -71,7 +84,10 @@ module.exports = [
     blurb: "One payments and POS stack across every country the brand operates in.",
     sector: "Luxury Apparel",
     url: "/blog/how-moose-knuckles-delivers-global-retail-excellence-with-adyen-teamwork-commerce/",
-    logo: "/assets/images/logos/moose-knuckles-logo.png"
+    logo: "/assets/images/logos/moose-knuckles-logo.png",
+    photo: "/assets/images/customers/moose-knuckles-storefront.jpg",
+    resultIcon: "ti-credit-card",
+    result: "One payments stack across every market"
   },
   {
     client: "Moose Knuckles Canada",
@@ -90,7 +106,9 @@ module.exports = [
     sector: "Pet Retail",
     url: "https://www.teamworkcommerce.com/petco-omnichannel-transformation/",
     photo: "/assets/images/customers/petco.jpg",
-    external: true
+    external: true,
+    resultIcon: "ti-percentage",
+    result: "93% of transactions through Club Petco"
   },
   {
     client: "Royal Pets",
@@ -117,7 +135,9 @@ module.exports = [
     sector: "Stadiums & Venues",
     url: "https://www.teamworkcommerce.com/mlb-all-star-host-2021-colorado-rockies-elevate-omnichannel-experience-for-fans/",
     photo: "/assets/images/customers/colorado-rockies.jpg",
-    external: true
+    external: true,
+    resultIcon: "ti-bolt",
+    result: "Staff on registers in under 5 minutes"
   },
   {
     client: "Prada Shoes",
@@ -126,7 +146,9 @@ module.exports = [
     sector: "Luxury Apparel",
     url: "https://www.teamworkcommerce.com/prada-shoes-improves-customer-experience-teamwork-commerce-omnichannel-platform/",
     photo: "/assets/images/customers/prada-shoes.jpg",
-    external: true
+    external: true,
+    resultIcon: "ti-clock",
+    result: "Replaced reporting delays of up to 15 days"
   },
   {
     client: "Princesse Tam Tam · Comptoir des Cotonniers",
@@ -135,7 +157,9 @@ module.exports = [
     sector: "Fashion & Apparel",
     url: "https://www.teamworkcommerce.com/princesse-tam-tam-and-comptoir-des-cotonniers-ptt-cdc/",
     photo: "/assets/images/customers/ptt-cdc.jpg",
-    external: true
+    external: true,
+    resultIcon: "ti-map-pin",
+    result: "220+ locations across 6 countries"
   },
   {
     client: "ASICS",

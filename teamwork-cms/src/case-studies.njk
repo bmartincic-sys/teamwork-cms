@@ -57,13 +57,14 @@ permalink: "/case-studies/"
         <div class="csx-scrim"></div>
         <span class="csx-sector">{{ cs.sector }}</span>
         {% if cs.external %}<i class="ti ti-external-link csx-ext"></i>{% endif %}
-        <div class="csx-face">
+        <div class="csx-body">
           {% if cs.logo %}<img class="csx-logo" src="{{ cs.logo }}" alt="{{ cs.client }}">{% else %}<span class="csx-name">{{ cs.client }}</span>{% endif %}
-        </div>
-        <div class="csx-hover">
           <h3>{{ cs.title }}</h3>
-          <p>{{ cs.blurb }}</p>
-          <span class="csx-read">Read the case study <i class="ti ti-arrow-right"></i></span>
+          {% if cs.result %}<span class="csx-result"><i class="ti {{ cs.resultIcon }}"></i> {{ cs.result }}</span>{% endif %}
+          <div class="csx-more">
+            <p>{{ cs.blurb }}</p>
+            <span class="csx-read">Read the case study <i class="ti ti-arrow-right"></i></span>
+          </div>
         </div>
       </a>
       {% endfor %}
