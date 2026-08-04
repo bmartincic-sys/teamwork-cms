@@ -164,13 +164,5 @@ module.exports = [
     url: "https://www.teamworkcommerce.com/the-new-stand-improves-days-and-mobility/",
     photo: "/assets/images/customers/the-new-stand.jpg",
     external: true
-  },
-  {
-    client: "Microsoft Azure · AppScale",
-    title: "Using Microsoft Azure and AppScale for the next-gen retail experience",
-    blurb: "The cloud architecture underneath the platform, told with our infrastructure partners.",
-    sector: "Technology",
-    url: "https://www.teamworkcommerce.com/teamwork-retail-using-microsoft-azure-and-appscale-to-provide-the-next-gen-retail-experience/",
-    external: true
   }
 ];
