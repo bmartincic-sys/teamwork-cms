@@ -1,8 +1,8 @@
 ---
 layout: "solution.njk"
-title: "Store Access, Identity & the Associate App"
-description: "Secure store logins with rotating QR codes, Active Directory/SSO/MFA integration, device management, and one associate app on iOS and Android that works offline."
-navLabel: "Access & Identity"
+title: "Retail IAM, SSO & Mobile Device Management"
+description: "Identity and access management (IAM) for store systems — rotating QR store logins, Active Directory/SSO/MFA integration, mobile device management, and one associate app on iOS and Android that works offline."
+navLabel: "Access & Identity (IAM)"
 tags: "features"
 featureGroup: "Team"
 navOrder: 8
@@ -30,7 +30,7 @@ permalink: "/features/access-identity/"
 
     <div class="hero-photo-foot hero-foot-left fade-up" style="animation-delay: 0.25s;">
       <div class="hero-photo-note">
-        <p>No shared passwords, no separate user database, no extra hardware. Rotating QR logins on the phones your team already carries — governed by the identity provider you already run.</p>
+        <p>Identity and access management for store systems, on the identity provider you already run. No shared passwords, no separate user database, no extra hardware — rotating QR logins on the phones your team already carries.</p>
         <div class="hero-cta">
           <a href="/contact/" class="btn btn-primary btn-lg">Book a demo <i class="ti ti-arrow-right"></i></a>
           <a href="/platform/mobile-pos/" class="btn btn-ghost btn-lg">See the POS</a>
@@ -116,7 +116,7 @@ permalink: "/features/access-identity/"
     <div class="mini-grid mini-grid-2">
       <div class="mini-card">
         <div class="mini-ico"><i class="ti ti-devices"></i></div>
-        <h3>Device Management</h3>
+        <h3>Mobile Device Management</h3>
         <p>Register and manage company-owned and personal devices side by side, with application access and security policies controlled per device type.</p>
       </div>
       <div class="mini-card">
@@ -231,6 +231,13 @@ permalink: "/features/access-identity/"
     <div style="max-width: 800px; margin: 0 auto;">
       <div class="faq-item">
         <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          How does this fit our existing IAM and device management?
+          <span class="faq-icon"><i class="ti ti-plus"></i></span>
+        </button>
+        <div class="faq-answer"><p>Identity management integrates with Active Directory, SSO, and MFA, so authentication continues to run on the identity provider you already own rather than in a separate user database. Device management registers company-owned and personal devices, with application access and security policies controlled per device type, and associate records, roles, and training assignments synchronize across every application.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
           How do associates sign in to the POS?
           <span class="faq-icon"><i class="ti ti-plus"></i></span>
         </button>
@@ -280,6 +287,14 @@ permalink: "/features/access-identity/"
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How does this fit our existing IAM and device management?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Identity management integrates with Active Directory, SSO, and MFA, so authentication continues to run on the identity provider you already own rather than in a separate user database. Device management registers company-owned and personal devices, with application access and security policies controlled per device type, and associate records, roles, and training assignments synchronize across every application."
+      }
+    },
     {
       "@type": "Question",
       "name": "How do associates sign in to the POS?",
