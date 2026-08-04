@@ -1,7 +1,7 @@
 ---
 layout: "solution.njk"
 title: "Learning Management System (LMS)"
-description: "LMS is the associate training platform inside Teamwork Commerce — role-based learning paths from TAP, training synced from live PXP product records, AI role-play simulations, and certifications."
+description: "LMS is the associate training platform inside Teamwork Commerce — a role-based course library, course builder, search and manager dashboard, learning paths from TAP, training synced from live PXP records, and certifications."
 navLabel: "Learning Management System"
 tags: "platform"
 navOrder: 3.4
@@ -126,6 +126,58 @@ permalink: "/platform/lms/"
   </div>
 </section>
 
+<!-- ============ INSIDE LMS (library / builder / search) ============ -->
+<section class="section" style="padding-top: 0;">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">Inside LMS</div>
+      <h2 class="section-title">Build it, find it, control who sees it.</h2>
+      <p class="section-sub">Three working surfaces: the library associates learn from, the builder your team authors in, and the oversight HQ needs.</p>
+    </div>
+
+    <div class="lms-cols">
+      <div class="lms-col">
+        <div class="lms-col-head">
+          <span class="lms-ico"><i class="ti ti-library"></i></span>
+          <h3>Course Library</h3>
+        </div>
+        <p>Where associates work through their assigned training, one step at a time.</p>
+        <ul class="feature-bullets">
+          <li>Step-by-step progression through course content, with each step tracked as it is completed</li>
+          <li>Sort and filter the library to reach the right course quickly instead of scrolling a flat list</li>
+          <li>Role-based access and visibility, so associates only see the courses that apply to their role</li>
+        </ul>
+      </div>
+
+      <div class="lms-col">
+        <div class="lms-col-head">
+          <span class="lms-ico"><i class="ti ti-tool"></i></span>
+          <h3>Course Builder</h3>
+        </div>
+        <p>Where your training team authors and structures what the floor learns.</p>
+        <ul class="feature-bullets">
+          <li>Structure a course into ordered steps and sections, and control how learners navigate it</li>
+          <li>Straightforward input forms for building content — no separate authoring tool to learn</li>
+          <li>Filter and sort your own course catalog as it grows, so maintenance stays manageable</li>
+        </ul>
+      </div>
+
+      <div class="lms-col">
+        <div class="lms-col-head">
+          <span class="lms-ico"><i class="ti ti-search"></i></span>
+          <h3>Search &amp; Oversight</h3>
+        </div>
+        <p>Where HQ finds content and follows progress across the fleet.</p>
+        <ul class="feature-bullets">
+          <li>Search across courses and content to locate the right material directly</li>
+          <li>A manager dashboard built for HQ employees, not a report exported after the fact</li>
+          <li>Progress and certification status visible alongside the rest of the team record in <a href="/platform/tap/" style="color: var(--brand-text);">TAP</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============ HOW IT WORKS (flow) ============ -->
 <section class="section innov-section">
   <div class="innov-bg"></div>
@@ -223,6 +275,13 @@ permalink: "/platform/lms/"
       </div>
       <div class="faq-item">
         <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          Who can see which courses, and how do managers track progress?
+          <span class="faq-icon"><i class="ti ti-plus"></i></span>
+        </button>
+        <div class="faq-answer"><p>Access and visibility in the course library are role-based, so associates only see the courses that apply to their role. Course content can be sorted, filtered, and searched to reach the right material quickly, and a manager dashboard gives HQ employees a view of progress and certification status across the team.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
           Where do associates take the training?
           <span class="faq-icon"><i class="ti ti-plus"></i></span>
         </button>
@@ -281,6 +340,14 @@ permalink: "/platform/lms/"
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "AI simulations are voice and text role-play scenarios that mimic customer interactions and evaluate an associate's product knowledge. Certifications track progress and award certified status for a product or category, so managers can see who is cleared to sell what. AI simulations are part of the Plus upgrade."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who can see which courses, and how do managers track progress?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Access and visibility in the course library are role-based, so associates only see the courses that apply to their role. Course content can be sorted, filtered, and searched to reach the right material quickly, and a manager dashboard gives HQ employees a view of progress and certification status across the team."
       }
     },
     {
