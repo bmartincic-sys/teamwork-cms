@@ -86,9 +86,9 @@
             <span>Latest from the blog</span>
             <a href="/blog/">View all <i class="ti ti-arrow-right"></i></a>
           </div>
-          <div class="nav-cs-grid">
-            {% for post in collections.blogpost | recentPosts(3) %}
-            <a class="ncs-card" href="{{ post.url }}">
+          <div class="nav-split">
+            {% for post in collections.blogpost | recentPosts(1) %}
+            <a class="ncs-card ncs-card-wide" href="{{ post.url }}">
               <img class="ncs-photo" src="/assets/images/blog/real/{{ post.fileSlug }}.jpg" alt="{{ post.data.title }}" loading="lazy">
               <span class="ncs-scrim"></span>
               {% if post.data.category %}<span class="ncs-sector">{{ post.data.category }}</span>{% endif %}
@@ -98,10 +98,23 @@
               </span>
             </a>
             {% endfor %}
-          </div>
-          <div class="nav-cs-links">
-            {% set resIcons = {"/blog/":"ti-article","/glossary/":"ti-book","/frequently-asked-questions/":"ti-help-circle"} %}
-            {% for r in collections.resources %}{% if r.url != "/case-studies/" %}<a href="{{ r.url }}"{% if page.url == r.url %} class="is-current" aria-current="page"{% endif %}><i class="ti {{ resIcons[r.url] or "ti-file" }}"></i> {{ r.data.navLabel or r.data.title }}</a>{% endif %}{% endfor %}
+            <div class="nav-rows">
+              {% set resMeta = {
+                "/blog/": ["ti-article", "Insights, trends, and how retailers are operating"],
+                "/glossary/": ["ti-book", "Retail and POS terminology, defined"],
+                "/frequently-asked-questions/": ["ti-help-circle", "Straight answers to the questions we get most"]
+              } %}
+              {% for r in collections.resources %}{% if r.url != "/case-studies/" %}
+              <a class="nav-row" href="{{ r.url }}"{% if page.url == r.url %} aria-current="page"{% endif %}>
+                <span class="nav-row-ico"><i class="ti {{ resMeta[r.url][0] or "ti-file" }}"></i></span>
+                <span class="nav-row-text">
+                  <strong>{{ r.data.navLabel or r.data.title }}</strong>
+                  <em>{{ resMeta[r.url][1] }}</em>
+                </span>
+                <i class="ti ti-arrow-right nav-row-arrow"></i>
+              </a>
+              {% endif %}{% endfor %}
+            </div>
           </div>
         </div>
       </div>
@@ -116,9 +129,9 @@
             <span>Latest press releases</span>
             <a href="/press-room/">View all <i class="ti ti-arrow-right"></i></a>
           </div>
-          <div class="nav-cs-grid">
-            {% for post in collections.blogpost | inCategory("News") | take(3) %}
-            <a class="ncs-card" href="{{ post.url }}">
+          <div class="nav-split">
+            {% for post in collections.blogpost | inCategory("News") | take(1) %}
+            <a class="ncs-card ncs-card-wide" href="{{ post.url }}">
               <img class="ncs-photo" src="/assets/images/blog/real/{{ post.fileSlug }}.jpg" alt="{{ post.data.title }}" loading="lazy">
               <span class="ncs-scrim"></span>
               <span class="ncs-sector">Press Release</span>
@@ -128,9 +141,25 @@
               </span>
             </a>
             {% endfor %}
-          </div>
-          <div class="nav-cs-links">
-            {% for c in companyUrls %}<a href="{{ c }}"{% if page.url == c %} class="is-current" aria-current="page"{% endif %}><i class="ti {{ companyIcons[c] }}"></i> {{ companyLabels[c] }}</a>{% endfor %}
+            <div class="nav-rows">
+              {% set companyDesc = {
+                "/about/": "Who we are and how we got here",
+                "/careers/": "Open roles across the company",
+                "/teamwork-cares/": "How our team gives back",
+                "/press-room/": "Announcements and media contacts",
+                "/partners/": "Integrations and partner network"
+              } %}
+              {% for c in companyUrls %}
+              <a class="nav-row" href="{{ c }}"{% if page.url == c %} aria-current="page"{% endif %}>
+                <span class="nav-row-ico"><i class="ti {{ companyIcons[c] }}"></i></span>
+                <span class="nav-row-text">
+                  <strong>{{ companyLabels[c] }}</strong>
+                  <em>{{ companyDesc[c] }}</em>
+                </span>
+                <i class="ti ti-arrow-right nav-row-arrow"></i>
+              </a>
+              {% endfor %}
+            </div>
           </div>
         </div>
       </div>
