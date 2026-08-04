@@ -29,6 +29,29 @@ permalink: "/press-room/"
   </div>
 </section>
 
+<!-- ============ LATEST PRESS RELEASES ============ -->
+<section class="section" id="releases">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">In the News</div>
+      <h2 class="section-title">Latest press releases.</h2>
+      <p class="section-sub">Announcements, partnerships, and deployments, newest first.</p>
+    </div>
+    <div class="prl-list">
+      {% for post in collections.blogpost | inCategory("News") %}
+      <a class="prl-item" href="{{ post.url }}">
+        <span class="prl-date">{{ post.data.date | formatDate }}</span>
+        <span class="prl-text">
+          <span class="prl-title">{{ post.data.title }}</span>
+          {% if post.data.dek %}<span class="prl-dek">{{ post.data.dek }}</span>{% endif %}
+        </span>
+        <i class="ti ti-arrow-right prl-arrow"></i>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
 <!-- ============ COVERAGE AREAS ============ -->
 <section class="section">
   <div class="container">

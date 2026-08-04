@@ -27,6 +27,14 @@ module.exports = function (eleventyConfig) {
     return [...new Set(cats)];
   });
 
+  // Posts in a given category, newest first
+  eleventyConfig.addFilter("inCategory", (posts, cat) => {
+    if (!Array.isArray(posts)) return [];
+    return posts
+      .filter((p) => p.data.category === cat)
+      .sort((a, b) => new Date(b.data.date) - new Date(a.data.date));
+  });
+
   // Most recent N posts by date (used for the "latest from the blog" nav dropdown)
   eleventyConfig.addFilter("recentPosts", (posts, n) => {
     if (!Array.isArray(posts)) return [];

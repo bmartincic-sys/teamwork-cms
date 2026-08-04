@@ -1,6 +1,9 @@
 {% set csUrls = [] %}
 {% for cs in caseStudies %}{% if not cs.external %}{% set csUrls = (csUrls.push(cs.url), csUrls) %}{% endif %}{% endfor %}
 {% set onCaseStudy = page.url == "/case-studies/" or page.url in csUrls %}
+{% set newsUrls = [] %}
+{% for np in collections.blogpost | inCategory("News") %}{% set newsUrls = (newsUrls.push(np.url), newsUrls) %}{% endfor %}
+{% set onPressRelease = page.url in newsUrls %}
 <nav class="nav">
   <div class="nav-inner">
     <a href="/" class="nav-logo">
@@ -77,7 +80,7 @@
       </div>
       {% if collections.resources.length %}
       <div class="nav-item">
-        <span class="nav-link{% if not onCaseStudy and ("/blog/" in page.url or "/glossary/" in page.url or "/frequently-asked-questions/" in page.url) %} nav-link-active{% endif %}">Resources <i class="ti ti-chevron-down" style="font-size:14px"></i></span>
+        <span class="nav-link{% if not onCaseStudy and not onPressRelease and ("/blog/" in page.url or "/glossary/" in page.url or "/frequently-asked-questions/" in page.url) %} nav-link-active{% endif %}">Resources <i class="ti ti-chevron-down" style="font-size:14px"></i></span>
         <div class="nav-dropdown nav-cs">
           <div class="nav-cs-head">
             <span>Latest from the blog</span>
@@ -97,16 +100,38 @@
             {% endfor %}
           </div>
           <div class="nav-cs-links">
-            {% for r in collections.resources %}{% if r.url != "/case-studies/" %}<a href="{{ r.url }}"{% if page.url == r.url %} class="is-current" aria-current="page"{% endif %}>{{ r.data.navLabel or r.data.title }}</a>{% endif %}{% endfor %}
+            {% set resIcons = {"/blog/":"ti-article","/glossary/":"ti-book","/frequently-asked-questions/":"ti-help-circle"} %}
+            {% for r in collections.resources %}{% if r.url != "/case-studies/" %}<a href="{{ r.url }}"{% if page.url == r.url %} class="is-current" aria-current="page"{% endif %}><i class="ti {{ resIcons[r.url] or "ti-file" }}"></i> {{ r.data.navLabel or r.data.title }}</a>{% endif %}{% endfor %}
           </div>
         </div>
       </div>
       {% endif %}
       <div class="nav-item">
-        {% set companyUrls = ["/about/", "/careers/", "/teamwork-cares/", "/press-room/"] %}
-        <a href="/about/" class="nav-link{% if page.url in companyUrls %} nav-link-active{% endif %}">Company <i class="ti ti-chevron-down" style="font-size:14px"></i></a>
-        <div class="nav-dropdown">
-          {% for c in companyUrls %}<a href="{{ c }}"{% if page.url == c %} class="is-current" aria-current="page"{% endif %}>{{ {"/about/":"About","/careers/":"Careers","/teamwork-cares/":"Teamwork Cares","/press-room/":"Press Room","/contact/":"Contact"}[c] }}</a>{% endfor %}
+        {% set companyUrls = ["/about/", "/careers/", "/teamwork-cares/", "/press-room/", "/partners/"] %}
+        {% set companyIcons = {"/about/":"ti-building","/careers/":"ti-briefcase","/teamwork-cares/":"ti-heart-handshake","/press-room/":"ti-news","/partners/":"ti-plug-connected"} %}
+        {% set companyLabels = {"/about/":"About","/careers/":"Careers","/teamwork-cares/":"Teamwork Cares","/press-room/":"Press Room","/partners/":"Partner Program"} %}
+        <a href="/about/" class="nav-link{% if onPressRelease or page.url in companyUrls %} nav-link-active{% endif %}">Company <i class="ti ti-chevron-down" style="font-size:14px"></i></a>
+        <div class="nav-dropdown nav-cs">
+          <div class="nav-cs-head">
+            <span>Latest press releases</span>
+            <a href="/press-room/">View all <i class="ti ti-arrow-right"></i></a>
+          </div>
+          <div class="nav-cs-grid">
+            {% for post in collections.blogpost | inCategory("News") | take(3) %}
+            <a class="ncs-card" href="{{ post.url }}">
+              <img class="ncs-photo" src="/assets/images/blog/real/{{ post.fileSlug }}.jpg" alt="{{ post.data.title }}" loading="lazy">
+              <span class="ncs-scrim"></span>
+              <span class="ncs-sector">Press Release</span>
+              <span class="ncs-body">
+                <span class="ncs-name">{{ post.data.date | formatDate }}</span>
+                <span class="ncs-title">{{ post.data.title }}</span>
+              </span>
+            </a>
+            {% endfor %}
+          </div>
+          <div class="nav-cs-links">
+            {% for c in companyUrls %}<a href="{{ c }}"{% if page.url == c %} class="is-current" aria-current="page"{% endif %}><i class="ti {{ companyIcons[c] }}"></i> {{ companyLabels[c] }}</a>{% endfor %}
+          </div>
         </div>
       </div>
       <div class="nav-item">
