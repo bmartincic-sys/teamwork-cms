@@ -4819,7 +4819,7 @@ main > .hero:first-child { margin-top: -85px; padding-top: 230px; }
   min-height: max(620px, 82vh);
   display: flex; align-items: stretch;
 }
-.hero-photo-compact { min-height: max(500px, 60vh); }
+.hero-photo-compact { min-height: max(560px, 66vh); }
 .hero-photo-compact .hero-photo-inner { justify-content: flex-start; }
 .hero-photo-compact .hero-photo-foot { margin-top: 32px; }
 .hero-photo-compact .hero-photo-title { font-size: clamp(42px, 5.4vw, 76px); }
@@ -5495,7 +5495,7 @@ main > .hero:first-child { margin-top: -85px; padding-top: 230px; }
 
 /* Hero: real pull-out screenshot as translucent glass, slight 3D */
 .glass-shot {
-  padding: 0; width: 300px; top: 9%;
+  padding: 0; width: 274px; top: 2.5%;
   background: transparent;
   border: none;
   border-radius: 11px;
