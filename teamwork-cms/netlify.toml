@@ -41,3 +41,8 @@
   from = "/platform/tcs/"
   to = "/platform/mobile-pos/"
   status = 301
+
+[[redirects]]
+  from = "/platform/shopper-services/"
+  to = "/platform/mobile-pos/#shopper-display"
+  status = 301

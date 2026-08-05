@@ -24,7 +24,7 @@ module.exports = [
   {
     client: "Sports Basement",
     title: "Monetizing the Moment: Redefining In-Store Advertising",
-    blurb: "Turning the checkout screen into a retail-media channel with Shopper Services.",
+    blurb: "Turning the checkout screen into a retail-media channel on the shopper display.",
     sector: "Retail Media",
     url: "/blog/monetizing-the-moment-how-sports-basement-and-teamwork-commerce-are-redefining-in-store-advertising/",
     photo: "/assets/images/customers/sports-basement-advertising.jpg", logo: "/assets/images/customers/logos/sports-basement-logo.png",
