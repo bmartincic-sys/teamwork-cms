@@ -4296,6 +4296,59 @@ a.tm-day-win:hover i { transform: translateX(2px); }
   box-shadow: 0 10px 26px -6px rgba(7, 9, 26, 0.28);
 }
 
+/* Payments section styled as a printed receipt */
+.pay-rcpt-wrap { display: flex; justify-content: center; }
+.pay-rcpt {
+  width: min(720px, 100%); background: #ffffff; color: #1a1d29;
+  font-family: var(--font-mono);
+  padding: 30px 34px 34px; border-radius: 3px 3px 0 0;
+  box-shadow: 0 26px 26px -24px rgba(7,9,26,0.30), 0 6px 20px rgba(7,9,26,0.08);
+  position: relative;
+}
+.pay-rcpt::after {
+  content: ''; position: absolute; left: 0; right: 0; bottom: -11px; height: 12px;
+  background: linear-gradient(-45deg, #ffffff 8px, transparent 0), linear-gradient(45deg, #ffffff 8px, transparent 0);
+  background-size: 16px 12px; background-repeat: repeat-x;
+}
+.pay-rcpt-head { text-align: center; }
+.pay-rcpt-brand { font-size: 13px; font-weight: 600; letter-spacing: 0.12em; color: #1a1d29; }
+.pay-rcpt-meta { font-size: 10px; letter-spacing: 0.08em; color: #8a90a3; margin-top: 4px; }
+.pay-item { padding: 12px 0; border-bottom: 1px dashed #e2e6ef; }
+.pay-item:last-of-type { border-bottom: none; }
+.pay-item-row { display: flex; align-items: baseline; gap: 10px; }
+.pay-qty { font-size: 11px; color: #8a90a3; letter-spacing: 0.06em; flex-shrink: 0; }
+.pay-name {
+  font-family: var(--font-body); font-size: 15px; font-weight: 600;
+  letter-spacing: -0.01em; color: #1a1d29;
+}
+.pay-dots { flex: 1; border-bottom: 2px dotted #ccd1de; transform: translateY(-3px); min-width: 20px; }
+.pay-tag {
+  font-size: 10px; font-weight: 600; letter-spacing: 0.08em; color: var(--brand-blue);
+  white-space: nowrap; flex-shrink: 0;
+}
+.pay-desc {
+  font-family: var(--font-body); font-size: 13.5px; line-height: 1.55;
+  color: #5a6478; margin: 6px 0 0; padding-left: 30px;
+}
+.pay-rcpt-total { display: flex; align-items: baseline; justify-content: space-between; padding: 6px 0 2px; }
+.pay-rcpt-total .lbl { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; color: #1a1d29; }
+.pay-rcpt-total .val {
+  font-family: var(--font-body); font-size: 22px; font-weight: 600;
+  letter-spacing: -0.02em; color: var(--brand-blue);
+}
+.pay-rcpt-barcode {
+  height: 34px; margin: 16px auto 10px; width: 70%;
+  background: repeating-linear-gradient(90deg, #1a1d29 0 2px, transparent 2px 5px),
+              repeating-linear-gradient(90deg, #1a1d29 0 1px, transparent 1px 7px);
+}
+.pay-rcpt-foot { text-align: center; font-size: 10px; letter-spacing: 0.08em; color: #8a90a3; }
+@media (max-width: 620px) {
+  .pay-rcpt { padding: 24px 20px 28px; }
+  .pay-desc { padding-left: 0; }
+}
+
+/* Payments section styled as a printed receipt — end */
+
 /* --- Register annotations on hero devices --- */
 .hero-annot {
   position: absolute; z-index: 3;
