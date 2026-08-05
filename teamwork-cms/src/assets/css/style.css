@@ -4296,58 +4296,70 @@ a.tm-day-win:hover i { transform: translateX(2px); }
   box-shadow: 0 10px 26px -6px rgba(7, 9, 26, 0.28);
 }
 
-/* Payments section styled as a printed receipt */
-.pay-rcpt-wrap { display: flex; justify-content: center; }
-.pay-rcpt {
-  width: min(720px, 100%); background: #ffffff; color: #1a1d29;
-  font-family: var(--font-mono);
-  padding: 30px 34px 34px; border-radius: 3px 3px 0 0;
-  box-shadow: 0 26px 26px -24px rgba(7,9,26,0.30), 0 6px 20px rgba(7,9,26,0.08);
-  position: relative;
-}
-.pay-rcpt::after {
-  content: ''; position: absolute; left: 0; right: 0; bottom: -11px; height: 12px;
-  background: linear-gradient(-45deg, #ffffff 8px, transparent 0), linear-gradient(45deg, #ffffff 8px, transparent 0);
-  background-size: 16px 12px; background-repeat: repeat-x;
-}
-.pay-rcpt-head { text-align: center; }
-.pay-rcpt-brand { font-size: 13px; font-weight: 600; letter-spacing: 0.12em; color: #1a1d29; }
-.pay-rcpt-meta { font-size: 10px; letter-spacing: 0.08em; color: #8a90a3; margin-top: 4px; }
-.pay-item { padding: 12px 0; border-bottom: 1px dashed #e2e6ef; }
-.pay-item:last-of-type { border-bottom: none; }
-.pay-item-row { display: flex; align-items: baseline; gap: 10px; }
-.pay-qty { font-size: 11px; color: #8a90a3; letter-spacing: 0.06em; flex-shrink: 0; }
-.pay-name {
-  font-family: var(--font-body); font-size: 15px; font-weight: 600;
-  letter-spacing: -0.01em; color: #1a1d29;
-}
-.pay-dots { flex: 1; border-bottom: 2px dotted #ccd1de; transform: translateY(-3px); min-width: 20px; }
-.pay-tag {
-  font-size: 10px; font-weight: 600; letter-spacing: 0.08em; color: var(--brand-blue);
-  white-space: nowrap; flex-shrink: 0;
-}
-.pay-desc {
-  font-family: var(--font-body); font-size: 13.5px; line-height: 1.55;
-  color: #5a6478; margin: 6px 0 0; padding-left: 30px;
-}
-.pay-rcpt-total { display: flex; align-items: baseline; justify-content: space-between; padding: 6px 0 2px; }
-.pay-rcpt-total .lbl { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; color: #1a1d29; }
-.pay-rcpt-total .val {
-  font-family: var(--font-body); font-size: 22px; font-weight: 600;
-  letter-spacing: -0.02em; color: var(--brand-blue);
-}
-.pay-rcpt-barcode {
-  height: 34px; margin: 16px auto 10px; width: 70%;
-  background: repeating-linear-gradient(90deg, #1a1d29 0 2px, transparent 2px 5px),
-              repeating-linear-gradient(90deg, #1a1d29 0 1px, transparent 1px 7px);
-}
-.pay-rcpt-foot { text-align: center; font-size: 10px; letter-spacing: 0.08em; color: #8a90a3; }
-@media (max-width: 620px) {
-  .pay-rcpt { padding: 24px 20px 28px; }
-  .pay-desc { padding-left: 0; }
-}
 
-/* Payments section styled as a printed receipt — end */
+
+/* Payments: terminal + tender list */
+.pay-stage { display: grid; grid-template-columns: 300px 1fr; gap: 44px; align-items: start; margin-top: 30px; }
+.pay-term { position: sticky; top: 100px; }
+.pay-term-body {
+  background: linear-gradient(180deg, #23273a 0%, #14172a 100%);
+  border: 1px solid rgba(255,255,255,0.10); border-radius: 18px 18px 10px 10px;
+  padding: 14px 14px 16px; box-shadow: 0 26px 26px -22px rgba(7,9,26,0.30);
+}
+.pay-term-screen {
+  background: #0b0e1e; border: 1px solid rgba(255,255,255,0.08); border-radius: 8px;
+  padding: 14px 14px 16px; color: #fff;
+}
+.pay-term-top { display: flex; align-items: center; justify-content: space-between; }
+.pay-term-brand { font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.14em; color: rgba(255,255,255,0.55); }
+.pay-term-sig { display: flex; gap: 5px; font-size: 11px; color: rgba(255,255,255,0.45); }
+.pay-term-amount { margin-top: 14px; }
+.pay-term-lbl { display: block; font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.45); }
+.pay-term-val { display: block; font-size: 30px; font-weight: 600; letter-spacing: -0.03em; margin-top: 3px; }
+.pay-term-nfc { position: relative; height: 74px; display: flex; align-items: center; justify-content: center; margin: 12px 0 6px; }
+.pay-term-nfc i { font-size: 30px; color: var(--brand-blue); position: relative; z-index: 1; }
+.pay-nfc-ring {
+  position: absolute; width: 44px; height: 44px; border-radius: 50%;
+  border: 1.5px solid rgba(36,125,255,0.55); animation: payPulse 2.4s ease-out infinite;
+}
+.pay-nfc-ring-2 { animation-delay: 1.2s; }
+@keyframes payPulse { 0% { transform: scale(0.7); opacity: 0.9; } 100% { transform: scale(1.7); opacity: 0; } }
+.pay-term-prompt { text-align: center; font-size: 11.5px; color: rgba(255,255,255,0.72); }
+.pay-term-methods { display: flex; justify-content: center; gap: 5px; margin-top: 11px; }
+.pay-term-methods span {
+  font-family: var(--font-mono); font-size: 8px; letter-spacing: 0.08em;
+  padding: 3px 7px; border-radius: 4px;
+  background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.10); color: rgba(255,255,255,0.62);
+}
+.pay-term-keys { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 13px; }
+.pay-term-keys span { height: 17px; border-radius: 4px; background: rgba(255,255,255,0.07); }
+.pay-term-keys .k-red { background: rgba(239,68,68,0.30); }
+.pay-term-keys .k-green { background: rgba(34,197,94,0.32); }
+.pay-term-base {
+  height: 9px; margin: 0 16px; border-radius: 0 0 10px 10px;
+  background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.08); border-top: none;
+}
+.pay-list { list-style: none; margin: 0; padding: 0; counter-reset: pay; }
+.pay-row {
+  display: flex; gap: 16px; align-items: flex-start;
+  padding: 18px 0; border-bottom: 1px solid var(--border); position: relative;
+}
+.pay-row:first-child { padding-top: 0; }
+.pay-row:last-child { border-bottom: none; }
+.pay-row-ico {
+  width: 40px; height: 40px; flex-shrink: 0; border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 19px; color: var(--brand-blue); background: var(--brand-soft);
+  border: 1px solid rgba(36,125,255,0.22);
+}
+.pay-row:nth-child(even) .pay-row-ico { color: var(--brand-purple); background: rgba(124,80,245,0.10); border-color: rgba(124,80,245,0.22); }
+.pay-row-text h3 { font-size: 17px; font-weight: 600; letter-spacing: -0.015em; margin: 2px 0 5px; color: var(--text); }
+.pay-row-text p { font-size: 14px; line-height: 1.6; color: var(--text-muted); margin: 0; }
+@media (prefers-reduced-motion: reduce) { .pay-nfc-ring { animation: none; } }
+@media (max-width: 900px) {
+  .pay-stage { grid-template-columns: 1fr; gap: 32px; }
+  .pay-term { position: static; max-width: 300px; margin: 0 auto; }
+}
 
 /* --- Register annotations on hero devices --- */
 .hero-annot {

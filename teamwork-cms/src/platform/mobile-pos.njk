@@ -437,52 +437,84 @@ navOrder: 1.5
       <p class="section-sub">Processor-agnostic tender handling, contactless on the phone itself, and the local requirements each market imposes.</p>
     </div>
 
-    <div class="pay-rcpt-wrap">
-      <div class="pay-rcpt">
-        <div class="pay-rcpt-head">
-          <div class="pay-rcpt-brand">TEAMWORK COMMERCE</div>
-          <div class="pay-rcpt-meta">TENDER &amp; COMPLIANCE · ALL MARKETS</div>
+    <div class="pay-stage">
+      <!-- payment terminal -->
+      <div class="pay-term" aria-hidden="true">
+        <div class="pay-term-body">
+          <div class="pay-term-screen">
+            <div class="pay-term-top">
+              <span class="pay-term-brand">TEAMWORK</span>
+              <span class="pay-term-sig"><i class="ti ti-wifi"></i><i class="ti ti-battery-3"></i></span>
+            </div>
+            <div class="pay-term-amount">
+              <span class="pay-term-lbl">Amount due</span>
+              <span class="pay-term-val">$119.50</span>
+            </div>
+            <div class="pay-term-nfc">
+              <span class="pay-nfc-ring"></span>
+              <span class="pay-nfc-ring pay-nfc-ring-2"></span>
+              <i class="ti ti-nfc"></i>
+            </div>
+            <div class="pay-term-prompt">Tap, insert, or scan to pay</div>
+            <div class="pay-term-methods">
+              <span>NFC</span><span>CHIP</span><span>QR</span><span>CASH</span>
+            </div>
+          </div>
+          <div class="pay-term-keys">
+            <span></span><span></span><span></span>
+            <span></span><span></span><span></span>
+            <span></span><span></span><span></span>
+            <span class="k-red"></span><span></span><span class="k-green"></span>
+          </div>
         </div>
-        <hr class="rcpt-div">
-
-        <div class="pay-item">
-          <div class="pay-item-row"><span class="pay-qty">01</span><span class="pay-name">Tap to Pay on iPhone</span><span class="pay-dots"></span><span class="pay-tag">NFC</span></div>
-          <p class="pay-desc">Native NFC on the iPhone processes contactless cards directly on the device — no separate card reader hardware.</p>
-        </div>
-
-        <div class="pay-item">
-          <div class="pay-item-row"><span class="pay-qty">02</span><span class="pay-name">Global payment methods</span><span class="pay-dots"></span><span class="pay-tag">MULTI</span></div>
-          <p class="pay-desc">Integrated merchant platforms including Adyen and Razorpay, plus cash, credit memos, foreign-currency cash conversion, and digital installment programs.</p>
-        </div>
-
-        <div class="pay-item">
-          <div class="pay-item-row"><span class="pay-qty">03</span><span class="pay-name">QR-based payments</span><span class="pay-dots"></span><span class="pay-tag">WALLET</span></div>
-          <p class="pay-desc">Dynamic checkout QR codes generated on screen for regional mobile wallets, such as Aplazo in Mexico.</p>
-        </div>
-
-        <div class="pay-item">
-          <div class="pay-item-row"><span class="pay-qty">04</span><span class="pay-name">Localized compliance</span><span class="pay-dots"></span><span class="pay-tag">40+ MKTS</span></div>
-          <p class="pay-desc">Market-specific architecture — digital invoicing QR systems for China, and consumer-facing layouts for signature capture and installment selection with Naver Pay and Kakao Pay in South Korea.</p>
-        </div>
-
-        <div class="pay-item">
-          <div class="pay-item-row"><span class="pay-qty">05</span><span class="pay-name">Multi-tender &amp; split billing</span><span class="pay-dots"></span><span class="pay-tag">SPLIT</span></div>
-          <p class="pay-desc">Unlimited split payments across methods — store credit and cash together on one ticket, in any combination.</p>
-        </div>
-
-        <div class="pay-item">
-          <div class="pay-item-row"><span class="pay-qty">06</span><span class="pay-name">Segmented receipts</span><span class="pay-dots"></span><span class="pay-tag">PRINT</span></div>
-          <p class="pay-desc">Print, email, or preview — and split one large ticket into multiple gift receipts assigned item by item.</p>
-        </div>
-
-        <hr class="rcpt-div">
-        <div class="pay-rcpt-total">
-          <span class="lbl">TENDER TYPES SUPPORTED</span>
-          <span class="val">All of them</span>
-        </div>
-        <div class="pay-rcpt-barcode" aria-hidden="true"></div>
-        <div class="pay-rcpt-foot">ONE PLATFORM · EVERY MARKET · THANK YOU</div>
+        <div class="pay-term-base"></div>
       </div>
+
+      <!-- tender selections -->
+      <ol class="pay-list">
+        <li class="pay-row">
+          <span class="pay-row-ico"><i class="ti ti-nfc"></i></span>
+          <div class="pay-row-text">
+            <h3>Tap to Pay on iPhone</h3>
+            <p>Native NFC on the iPhone processes contactless cards directly on the device — no separate card reader hardware.</p>
+          </div>
+        </li>
+        <li class="pay-row">
+          <span class="pay-row-ico"><i class="ti ti-credit-card"></i></span>
+          <div class="pay-row-text">
+            <h3>Global payment methods</h3>
+            <p>Integrated merchant platforms including Adyen and Razorpay, plus cash, credit memos, foreign-currency cash conversion, and digital installment programs.</p>
+          </div>
+        </li>
+        <li class="pay-row">
+          <span class="pay-row-ico"><i class="ti ti-qrcode"></i></span>
+          <div class="pay-row-text">
+            <h3>QR-based payments</h3>
+            <p>Dynamic checkout QR codes generated on screen for regional mobile wallets, such as Aplazo in Mexico.</p>
+          </div>
+        </li>
+        <li class="pay-row">
+          <span class="pay-row-ico"><i class="ti ti-world-check"></i></span>
+          <div class="pay-row-text">
+            <h3>Localized compliance</h3>
+            <p>Market-specific architecture — digital invoicing QR systems for China, and consumer-facing layouts for signature capture and installment selection with Naver Pay and Kakao Pay in South Korea.</p>
+          </div>
+        </li>
+        <li class="pay-row">
+          <span class="pay-row-ico"><i class="ti ti-arrows-split-2"></i></span>
+          <div class="pay-row-text">
+            <h3>Multi-tender &amp; split billing</h3>
+            <p>Unlimited split payments across methods — store credit and cash together on one ticket, in any combination.</p>
+          </div>
+        </li>
+        <li class="pay-row">
+          <span class="pay-row-ico"><i class="ti ti-receipt"></i></span>
+          <div class="pay-row-text">
+            <h3>Segmented receipts</h3>
+            <p>Print, email, or preview — and split one large ticket into multiple gift receipts assigned item by item.</p>
+          </div>
+        </li>
+      </ol>
     </div>
   </div>
 </section>
