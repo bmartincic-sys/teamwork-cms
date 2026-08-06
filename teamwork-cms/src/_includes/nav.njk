@@ -93,7 +93,7 @@
       </div>
       {% if collections.resources.length %}
       <div class="nav-item">
-        <span class="nav-link{% if not onCaseStudy and not onPressRelease and ("/blog/" in page.url or "/glossary/" in page.url or "/frequently-asked-questions/" in page.url) %} nav-link-active{% endif %}">Resources <i class="ti ti-chevron-down" style="font-size:14px"></i></span>
+        <span class="nav-link{% if not onCaseStudy and not onPressRelease and ("/blog/" in page.url or "/glossary/" in page.url or "/frequently-asked-questions/" in page.url or "/technical-evaluation/" in page.url) %} nav-link-active{% endif %}">Resources <i class="ti ti-chevron-down" style="font-size:14px"></i></span>
         <div class="nav-dropdown nav-cs">
           <div class="nav-cs-head">
             <span>Latest from the blog</span>
@@ -115,7 +115,8 @@
               {% set resMeta = {
                 "/blog/": ["ti-article", "Insights, trends, and how retailers are operating"],
                 "/glossary/": ["ti-book", "Retail and POS terminology, defined"],
-                "/frequently-asked-questions/": ["ti-help-circle", "Straight answers to the questions we get most"]
+                "/frequently-asked-questions/": ["ti-help-circle", "Straight answers to the questions we get most"],
+                "/technical-evaluation/": ["ti-shield-lock", "Architecture, security, and migration — for technical evaluators"]
               } %}
               {% for r in collections.resources %}{% if r.url != "/case-studies/" %}
               <a class="nav-row" href="{{ r.url }}"{% if page.url == r.url %} aria-current="page"{% endif %}>
