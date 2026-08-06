@@ -163,48 +163,79 @@ permalink: "/platform/scalability/"
   </div>
 </section>
 
-<!-- ============ EVIDENCE ============ -->
-<section class="section" style="padding-top: 0;">
+<!-- ============ EVIDENCE — one global deployment ============ -->
+<section class="section globe-section" style="padding-top: 0;">
   <div class="container">
     <div class="section-header">
       <div class="section-eyebrow">Proven at Scale</div>
       <h2 class="section-title">Not a projection. A deployment.</h2>
     </div>
-    <div class="mini-grid">
-      <div class="mini-card mini-card-lead">
-        <div class="mini-ico"><i class="ti ti-world"></i></div>
-        <h3>2,500+ stores, 25+ markets, one platform</h3>
-        <p>Our largest deployment: a global apparel retailer running its entire international fleet on Teamwork Commerce — every store, every market, one codebase. Named under NDA.</p>
+
+    <div class="globe-stage">
+      <div class="globe-wrap" aria-hidden="true">
+        <span class="globe-halo"></span>
+        <svg class="globe" viewBox="0 0 400 400" role="presentation" focusable="false">
+          <defs>
+            <radialGradient id="glFill" cx="38%" cy="30%" r="78%">
+              <stop offset="0%" stop-color="#1b2a63" stop-opacity="0.60"/>
+              <stop offset="60%" stop-color="#0d1230" stop-opacity="0.45"/>
+              <stop offset="100%" stop-color="#07091a" stop-opacity="0.25"/>
+            </radialGradient>
+            <linearGradient id="glEdge" x1="0" y1="0" x2="400" y2="400" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#247dff"/>
+              <stop offset="55%" stop-color="#7c50f5"/>
+              <stop offset="100%" stop-color="#8a0add"/>
+            </linearGradient>
+          </defs>
+
+          <circle class="gl-sphere" cx="200" cy="200" r="170" fill="url(#glFill)"/>
+
+          <g class="gl-grid">
+            <ellipse class="gl-lat" cx="200" cy="61.7" rx="85.0" ry="29.1"/>
+            <ellipse class="gl-lat" cx="200" cy="120.1" rx="147.2" ry="50.4"/>
+            <ellipse class="gl-lat" cx="200" cy="200.0" rx="170.0" ry="58.1"/>
+            <ellipse class="gl-lat" cx="200" cy="279.9" rx="147.2" ry="50.4"/>
+            <ellipse class="gl-lat" cx="200" cy="338.3" rx="85.0" ry="29.1"/>
+
+            <ellipse class="gl-mer gl-mer-1" cx="200" cy="200" rx="0" ry="170"/>
+            <ellipse class="gl-mer gl-mer-2" cx="200" cy="200" rx="85" ry="170"/>
+            <ellipse class="gl-mer gl-mer-3" cx="200" cy="200" rx="147.2" ry="170"/>
+            <ellipse class="gl-mer gl-mer-4" cx="200" cy="200" rx="170" ry="170"/>
+            <ellipse class="gl-mer gl-mer-5" cx="200" cy="200" rx="147.2" ry="170"/>
+            <ellipse class="gl-mer gl-mer-6" cx="200" cy="200" rx="85" ry="170"/>
+          </g>
+
+          <g class="gl-nodes">
+            <circle class="gl-node" cx="200.0" cy="112.4" r="2.6" style="animation-delay:0s"/>
+            <circle class="gl-node" cx="74.8" cy="109.6" r="2.6" style="animation-delay:0.42s"/>
+            <circle class="gl-node" cx="204.0" cy="120.2" r="2.6" style="animation-delay:0.84s"/>
+            <circle class="gl-node" cx="87.4" cy="299.6" r="2.6" style="animation-delay:1.26s"/>
+            <circle class="gl-node" cx="326.2" cy="162.7" r="2.6" style="animation-delay:1.68s"/>
+            <circle class="gl-node" cx="223.5" cy="109.0" r="2.6" style="animation-delay:2.1s"/>
+            <circle class="gl-node" cx="271.7" cy="316.2" r="2.6" style="animation-delay:2.52s"/>
+          </g>
+
+          <circle class="gl-rim" cx="200" cy="200" r="170" fill="none" stroke="url(#glEdge)"/>
+        </svg>
       </div>
-      <div class="mini-card">
-        <div class="mini-ico"><i class="ti ti-building-store"></i></div>
-        <h3>118 stores, 2,000+ terminals</h3>
-        <p>Petco Mexico consolidated POS, loyalty, CRM, and online store integration across the fleet — with 93% of transactions running through its loyalty program.</p>
-      </div>
-      <div class="mini-card">
-        <div class="mini-ico"><i class="ti ti-map-pins"></i></div>
-        <h3>250 stores, one platform</h3>
-        <p>InnovaSport scales from an in-venue store to an entire retail fleet on the same system.</p>
-      </div>
-      <div class="mini-card">
-        <div class="mini-ico"><i class="ti ti-bolt"></i></div>
-        <h3>Seasonal staff live in under 5 minutes</h3>
-        <p>The Colorado Rockies put new associates on registers minutes after they start — the practical test of whether a system scales with people.</p>
-      </div>
-      <div class="mini-card">
-        <div class="mini-ico"><i class="ti ti-users-group"></i></div>
-        <h3>60,000+ fans in a matter of hours</h3>
-        <p>Event retail at one of the world's largest sporting events, where the challenge was never traffic — it was handling it.</p>
-      </div>
-      <div class="mini-card">
-        <div class="mini-ico"><i class="ti ti-clock"></i></div>
-        <h3>Training measured in minutes</h3>
-        <p>The iOS interface follows patterns staff already know, bringing associate training down to under 30 minutes.</p>
-      </div>
-      <div class="mini-card">
-        <div class="mini-ico"><i class="ti ti-target-arrow"></i></div>
-        <h3>99.9% inventory accuracy</h3>
-        <p>RFID-driven item-level accuracy against an industry average of 70–80% — the difference between fulfilling a promise and cancelling it.</p>
+
+      <div class="globe-copy">
+        <p class="globe-lede">Our largest single deployment is a global apparel retailer running its entire international fleet on Teamwork Commerce.</p>
+        <div class="globe-figures">
+          <div class="globe-fig">
+            <span class="globe-fig-num">2,500<span>+</span></span>
+            <span class="globe-fig-label">Stores</span>
+          </div>
+          <div class="globe-fig">
+            <span class="globe-fig-num">25<span>+</span></span>
+            <span class="globe-fig-label">Markets</span>
+          </div>
+          <div class="globe-fig">
+            <span class="globe-fig-num">1</span>
+            <span class="globe-fig-label">Platform</span>
+          </div>
+        </div>
+        <p class="globe-foot">Every store, every market, on one codebase and one upgrade path — the same system described on this page, at the size most retailers are still planning for.</p>
       </div>
     </div>
   </div>
@@ -245,7 +276,7 @@ permalink: "/platform/scalability/"
           How many stores and terminals can the platform handle?
           <span class="faq-icon"><i class="ti ti-plus"></i></span>
         </button>
-        <div class="faq-answer"><p>The platform runs across more than 30,000 terminals in over 40 countries at 99.99% uptime. Our largest single-customer deployment is a global apparel retailer running more than 2,500 stores across 25-plus markets on one platform, named under NDA. Other deployments include 118 stores with 2,000-plus terminals at Petco Mexico and 250 stores at InnovaSport, alongside single-venue and pop-up operations on the same system.</p></div>
+        <div class="faq-answer"><p>The platform runs across more than 30,000 terminals in over 40 countries at 99.99% uptime. Our largest single-customer deployment is a global apparel retailer running more than 2,500 stores across 25-plus markets on one platform. Deployments range from that international fleet down to single-venue and pop-up operations on the same system.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
@@ -303,7 +334,7 @@ permalink: "/platform/scalability/"
       "name": "How many stores and terminals can the platform handle?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The platform runs across more than 30,000 terminals in over 40 countries at 99.99% uptime. Our largest single-customer deployment is a global apparel retailer running more than 2,500 stores across 25-plus markets on one platform, named under NDA. Other deployments include 118 stores with 2,000-plus terminals at Petco Mexico and 250 stores at InnovaSport, alongside single-venue and pop-up operations on the same system."
+        "text": "The platform runs across more than 30,000 terminals in over 40 countries at 99.99% uptime. Our largest single-customer deployment is a global apparel retailer running more than 2,500 stores across 25-plus markets on one platform. Deployments range from that international fleet down to single-venue and pop-up operations on the same system."
       }
     },
     {

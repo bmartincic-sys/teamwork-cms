@@ -46,3 +46,9 @@
   from = "/platform/shopper-services/"
   to = "/platform/mobile-pos/#shopper-display"
   status = 301
+
+[[redirects]]
+  from = "/partners/"
+  to = "https://partners.teamworkcommerce.com/integrations"
+  status = 301
+  force = true

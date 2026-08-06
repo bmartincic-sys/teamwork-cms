@@ -134,9 +134,9 @@
       </div>
       {% endif %}
       <div class="nav-item">
-        {% set companyUrls = ["/about/", "/careers/", "/teamwork-cares/", "/press-room/", "/partners/"] %}
-        {% set companyIcons = {"/about/":"ti-building","/careers/":"ti-briefcase","/teamwork-cares/":"ti-heart-handshake","/press-room/":"ti-news","/partners/":"ti-plug-connected"} %}
-        {% set companyLabels = {"/about/":"About","/careers/":"Careers","/teamwork-cares/":"Teamwork Cares","/press-room/":"Press Room","/partners/":"Partner Program"} %}
+        {% set companyUrls = ["/about/", "/careers/", "/teamwork-cares/", "/press-room/"] %}
+        {% set companyIcons = {"/about/":"ti-building","/careers/":"ti-briefcase","/teamwork-cares/":"ti-heart-handshake","/press-room/":"ti-news"} %}
+        {% set companyLabels = {"/about/":"About","/careers/":"Careers","/teamwork-cares/":"Teamwork Cares","/press-room/":"Press Room"} %}
         <a href="/about/" class="nav-link{% if onPressRelease or page.url in companyUrls %} nav-link-active{% endif %}">Company <i class="ti ti-chevron-down" style="font-size:14px"></i></a>
         <div class="nav-dropdown nav-cs">
           <div class="nav-cs-head">
@@ -160,8 +160,7 @@
                 "/about/": "Who we are and how we got here",
                 "/careers/": "Open roles across the company",
                 "/teamwork-cares/": "How our team gives back",
-                "/press-room/": "Announcements and media contacts",
-                "/partners/": "Integrations and partner network"
+                "/press-room/": "Announcements and media contacts"
               } %}
               {% for c in companyUrls %}
               <a class="nav-row" href="{{ c }}"{% if page.url == c %} aria-current="page"{% endif %}>
@@ -220,7 +219,6 @@
     <a href="/about/"{% if page.url == "/about/" %} class="is-current" aria-current="page"{% endif %}>About</a>
     <a href="/careers/"{% if page.url == "/careers/" %} class="is-current" aria-current="page"{% endif %}>Careers</a>
     <a href="/teamwork-cares/"{% if page.url == "/teamwork-cares/" %} class="is-current" aria-current="page"{% endif %}>Teamwork Cares</a>
-    <a href="/partners/"{% if page.url == "/partners/" %} class="is-current" aria-current="page"{% endif %}>Partner Program</a>
     <a href="/press-room/"{% if page.url == "/press-room/" %} class="is-current" aria-current="page"{% endif %}>Press Room</a>
     <a href="/contact/"{% if page.url == "/contact/" %} class="is-current" aria-current="page"{% endif %}>Contact</a>
     <button class="btn btn-primary" onclick="window.location.href='/contact/'">Book a demo</button>
