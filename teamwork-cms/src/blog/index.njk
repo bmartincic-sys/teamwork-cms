@@ -18,7 +18,9 @@ permalink: "/blog/"
 <section style="padding: 4px 0 0;">
   <div class="container">
     <div class="blog-head">
-      <h1 class="blog-h1">Insights, research &amp; news</h1>
+      <div class="blog-head-eyebrow">Blog</div>
+      <h1 class="blog-h1">Insights, research &amp; news.</h1>
+      <p class="blog-head-sub">Perspectives on point of sale, unified commerce, RFID, and mobile retail — from the team behind the platform.</p>
       <div class="blog-filter-bar" id="blogFilterBar">
         <button class="filter-pill active" data-filter="all">All ({{ collections.blogpost.length }})</button>
         {% set categories = collections.blogpost | uniqueCategories %}
