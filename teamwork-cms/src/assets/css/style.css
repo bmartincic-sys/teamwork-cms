@@ -5986,3 +5986,11 @@ main > .hero:first-child { margin-top: -85px; padding-top: 230px; }
 .ticker-value .counter, .statcard-value .counter, .globe-fig-num .counter { font-size: inherit; }
 .ats-side .statcard-value { margin-bottom: 4px; }
 @media (max-width: 700px) { :root { --stat-size: clamp(36px, 9vw, 48px); } }
+
+/* Direction indicator on a stat figure, replaces a minus sign */
+/* stays inline so the parent's background-clip:text gradient paints the glyph */
+.stat-dir { font-size: 0.74em; letter-spacing: -0.01em; }
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
