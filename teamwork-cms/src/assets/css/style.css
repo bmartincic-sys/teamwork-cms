@@ -5761,7 +5761,6 @@ main > .hero:first-child { margin-top: -85px; padding-top: 230px; }
   font-size: clamp(30px, 3.6vw, 48px); font-weight: 600; letter-spacing: -0.035em; line-height: 1.08;
   margin: 0 0 26px; color: var(--text);
 }
-.bento-fade { color: var(--text-faint); font-weight: 600; }
 .bento-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1.2fr;
