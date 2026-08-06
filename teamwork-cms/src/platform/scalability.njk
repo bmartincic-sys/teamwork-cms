@@ -174,47 +174,28 @@ permalink: "/platform/scalability/"
     <div class="globe-stage">
       <div class="globe-wrap" aria-hidden="true">
         <span class="globe-halo"></span>
-        <svg class="globe" viewBox="0 0 400 400" role="presentation" focusable="false">
+        <canvas class="globe-canvas" width="440" height="440"></canvas>
+        <svg class="globe globe-fallback" viewBox="0 0 400 400" role="presentation" focusable="false">
           <defs>
             <radialGradient id="glFill" cx="38%" cy="30%" r="78%">
               <stop offset="0%" stop-color="#1b2a63" stop-opacity="0.60"/>
-              <stop offset="60%" stop-color="#0d1230" stop-opacity="0.45"/>
               <stop offset="100%" stop-color="#07091a" stop-opacity="0.25"/>
             </radialGradient>
             <linearGradient id="glEdge" x1="0" y1="0" x2="400" y2="400" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stop-color="#247dff"/>
-              <stop offset="55%" stop-color="#7c50f5"/>
-              <stop offset="100%" stop-color="#8a0add"/>
+              <stop offset="0%" stop-color="#247dff"/><stop offset="55%" stop-color="#7c50f5"/><stop offset="100%" stop-color="#8a0add"/>
             </linearGradient>
           </defs>
-
           <circle class="gl-sphere" cx="200" cy="200" r="170" fill="url(#glFill)"/>
-
           <g class="gl-grid">
             <ellipse class="gl-lat" cx="200" cy="61.7" rx="85.0" ry="29.1"/>
             <ellipse class="gl-lat" cx="200" cy="120.1" rx="147.2" ry="50.4"/>
             <ellipse class="gl-lat" cx="200" cy="200.0" rx="170.0" ry="58.1"/>
             <ellipse class="gl-lat" cx="200" cy="279.9" rx="147.2" ry="50.4"/>
             <ellipse class="gl-lat" cx="200" cy="338.3" rx="85.0" ry="29.1"/>
-
-            <ellipse class="gl-mer gl-mer-1" cx="200" cy="200" rx="0" ry="170"/>
-            <ellipse class="gl-mer gl-mer-2" cx="200" cy="200" rx="85" ry="170"/>
-            <ellipse class="gl-mer gl-mer-3" cx="200" cy="200" rx="147.2" ry="170"/>
-            <ellipse class="gl-mer gl-mer-4" cx="200" cy="200" rx="170" ry="170"/>
-            <ellipse class="gl-mer gl-mer-5" cx="200" cy="200" rx="147.2" ry="170"/>
-            <ellipse class="gl-mer gl-mer-6" cx="200" cy="200" rx="85" ry="170"/>
+            <ellipse class="gl-mer" cx="200" cy="200" rx="85" ry="170"/>
+            <ellipse class="gl-mer" cx="200" cy="200" rx="147.2" ry="170"/>
+            <ellipse class="gl-mer" cx="200" cy="200" rx="170" ry="170"/>
           </g>
-
-          <g class="gl-nodes">
-            <circle class="gl-node" cx="200.0" cy="112.4" r="2.6" style="animation-delay:0s"/>
-            <circle class="gl-node" cx="74.8" cy="109.6" r="2.6" style="animation-delay:0.42s"/>
-            <circle class="gl-node" cx="204.0" cy="120.2" r="2.6" style="animation-delay:0.84s"/>
-            <circle class="gl-node" cx="87.4" cy="299.6" r="2.6" style="animation-delay:1.26s"/>
-            <circle class="gl-node" cx="326.2" cy="162.7" r="2.6" style="animation-delay:1.68s"/>
-            <circle class="gl-node" cx="223.5" cy="109.0" r="2.6" style="animation-delay:2.1s"/>
-            <circle class="gl-node" cx="271.7" cy="316.2" r="2.6" style="animation-delay:2.52s"/>
-          </g>
-
           <circle class="gl-rim" cx="200" cy="200" r="170" fill="none" stroke="url(#glEdge)"/>
         </svg>
       </div>
@@ -372,3 +353,5 @@ permalink: "/platform/scalability/"
   ]
 }
 </script>
+
+<script src="/assets/js/globe.js" defer></script>

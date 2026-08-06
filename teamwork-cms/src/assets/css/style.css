@@ -3988,6 +3988,7 @@ a.tm-day-win:hover i { transform: translateX(2px); }
   filter: blur(30px);
 }
 .globe { position: relative; display: block; width: 100%; height: auto; }
+.globe-canvas { position: relative; display: none; width: 100%; height: auto; aspect-ratio: 1; }
 .gl-rim { stroke-width: 1.6; opacity: 0.85; }
 .gl-lat, .gl-mer {
   fill: none; stroke: var(--border-strong); stroke-width: 1;
@@ -3999,24 +4000,11 @@ a.tm-day-win:hover i { transform: translateX(2px); }
 [data-theme="light"] .gl-lat { stroke: rgba(7,9,26,0.13); }
 [data-theme="light"] .gl-mer { stroke: rgba(36,125,255,0.26); }
 [data-theme="light"] .globe-halo { opacity: 0.55; }
-/* rx sweeps 0 -> R -> 0, which is exactly how meridians read on a spinning globe */
-@keyframes gl-spin {
-  0%   { rx: 170px; }
   25%  { rx: 0px; }
   50%  { rx: 170px; }
   75%  { rx: 0px; }
   100% { rx: 170px; }
 }
-.gl-mer { animation: gl-spin 16s cubic-bezier(0.45,0,0.55,1) infinite; }
-.gl-mer-1 { animation-delay: -0s; }
-.gl-mer-2 { animation-delay: -1.33s; }
-.gl-mer-3 { animation-delay: -2.67s; }
-.gl-mer-4 { animation-delay: -4s; }
-.gl-mer-5 { animation-delay: -5.33s; }
-.gl-mer-6 { animation-delay: -6.67s; }
-.gl-node { fill: #6d9bff; animation: gl-pulse 3s ease-out infinite; }
-@keyframes gl-pulse {
-  0%, 100% { opacity: 0.45; r: 2.6px; }
   50%      { opacity: 1; r: 4px; }
 }
 
@@ -4060,8 +4048,7 @@ a.tm-day-win:hover i { transform: translateX(2px); }
   .globe-figures { grid-template-columns: repeat(3, 1fr); gap: 0 12px; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .gl-mer { animation: none; }
-  .gl-node { animation: none; opacity: 0.8; }
+  .globe-canvas { opacity: 1; }
 }
 
 /* ===== Technical evaluation track ===== */
