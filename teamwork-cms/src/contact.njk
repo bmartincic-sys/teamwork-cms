@@ -26,40 +26,44 @@ permalink: "/contact/"
         <h2 style="font-size: 24px; font-weight: 900; letter-spacing: -0.02em; margin-bottom: 8px;">Book a demo</h2>
         <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 32px;">Fill out the form and a solutions architect will be in touch within 24 hours.</p>
 
+        <form name="demo-request" method="POST" action="/thanks/" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="demo-request">
+        <p hidden><label>Leave this empty: <input name="bot-field"></label></p>
+
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px;">
           <div>
             <label style="display: block; font-size: 12px; font-weight: 700; color: var(--text); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.06em;">First Name *</label>
-            <input type="text" placeholder="Jane" style="width: 100%; padding: 12px 14px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg-deep); color: var(--text); font-family: var(--font-body); font-size: 14px; outline: none; transition: border-color 0.2s;" onfocus="this.style.borderColor='var(--brand-blue)'" onblur="this.style.borderColor='var(--border)'">
+            <input type="text" placeholder="Jane" name="first_name" required style="width: 100%; padding: 12px 14px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg-deep); color: var(--text); font-family: var(--font-body); font-size: 14px; outline: none; transition: border-color 0.2s;" onfocus="this.style.borderColor='var(--brand-blue)'" onblur="this.style.borderColor='var(--border)'">
           </div>
           <div>
             <label style="display: block; font-size: 12px; font-weight: 700; color: var(--text); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.06em;">Last Name *</label>
-            <input type="text" placeholder="Smith" style="width: 100%; padding: 12px 14px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg-deep); color: var(--text); font-family: var(--font-body); font-size: 14px; outline: none; transition: border-color 0.2s;" onfocus="this.style.borderColor='var(--brand-blue)'" onblur="this.style.borderColor='var(--border)'">
+            <input type="text" placeholder="Smith" name="last_name" required style="width: 100%; padding: 12px 14px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg-deep); color: var(--text); font-family: var(--font-body); font-size: 14px; outline: none; transition: border-color 0.2s;" onfocus="this.style.borderColor='var(--brand-blue)'" onblur="this.style.borderColor='var(--border)'">
           </div>
         </div>
 
         <div style="margin-bottom: 16px;">
           <label style="display: block; font-size: 12px; font-weight: 700; color: var(--text); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.06em;">Work Email *</label>
-          <input type="email" placeholder="jane@company.com" style="width: 100%; padding: 12px 14px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg-deep); color: var(--text); font-family: var(--font-body); font-size: 14px; outline: none; transition: border-color 0.2s;" onfocus="this.style.borderColor='var(--brand-blue)'" onblur="this.style.borderColor='var(--border)'">
+          <input type="email" placeholder="jane@company.com" name="work_email" required style="width: 100%; padding: 12px 14px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg-deep); color: var(--text); font-family: var(--font-body); font-size: 14px; outline: none; transition: border-color 0.2s;" onfocus="this.style.borderColor='var(--brand-blue)'" onblur="this.style.borderColor='var(--border)'">
         </div>
 
         <div style="margin-bottom: 16px;">
           <label style="display: block; font-size: 12px; font-weight: 700; color: var(--text); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.06em;">Phone</label>
-          <input type="tel" placeholder="+1 (555) 000-0000" style="width: 100%; padding: 12px 14px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg-deep); color: var(--text); font-family: var(--font-body); font-size: 14px; outline: none; transition: border-color 0.2s;" onfocus="this.style.borderColor='var(--brand-blue)'" onblur="this.style.borderColor='var(--border)'">
+          <input type="tel" placeholder="+1 (555) 000-0000" name="phone" style="width: 100%; padding: 12px 14px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg-deep); color: var(--text); font-family: var(--font-body); font-size: 14px; outline: none; transition: border-color 0.2s;" onfocus="this.style.borderColor='var(--brand-blue)'" onblur="this.style.borderColor='var(--border)'">
         </div>
 
         <div style="margin-bottom: 16px;">
           <label style="display: block; font-size: 12px; font-weight: 700; color: var(--text); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.06em;">Company *</label>
-          <input type="text" placeholder="Your company" style="width: 100%; padding: 12px 14px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg-deep); color: var(--text); font-family: var(--font-body); font-size: 14px; outline: none; transition: border-color 0.2s;" onfocus="this.style.borderColor='var(--brand-blue)'" onblur="this.style.borderColor='var(--border)'">
+          <input type="text" placeholder="Your company" name="company" required style="width: 100%; padding: 12px 14px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg-deep); color: var(--text); font-family: var(--font-body); font-size: 14px; outline: none; transition: border-color 0.2s;" onfocus="this.style.borderColor='var(--brand-blue)'" onblur="this.style.borderColor='var(--border)'">
         </div>
 
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px;">
           <div>
             <label style="display: block; font-size: 12px; font-weight: 700; color: var(--text); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.06em;">Job Title</label>
-            <input type="text" placeholder="VP of Retail" style="width: 100%; padding: 12px 14px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg-deep); color: var(--text); font-family: var(--font-body); font-size: 14px; outline: none; transition: border-color 0.2s;" onfocus="this.style.borderColor='var(--brand-blue)'" onblur="this.style.borderColor='var(--border)'">
+            <input type="text" placeholder="VP of Retail" name="job_title" style="width: 100%; padding: 12px 14px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg-deep); color: var(--text); font-family: var(--font-body); font-size: 14px; outline: none; transition: border-color 0.2s;" onfocus="this.style.borderColor='var(--brand-blue)'" onblur="this.style.borderColor='var(--border)'">
           </div>
           <div>
             <label style="display: block; font-size: 12px; font-weight: 700; color: var(--text); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.06em;">Number of Stores</label>
-            <select style="width: 100%; padding: 12px 14px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg-deep); color: var(--text); font-family: var(--font-body); font-size: 14px; outline: none; appearance: auto;">
+            <select name="store_count" style="width: 100%; padding: 12px 14px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg-deep); color: var(--text); font-family: var(--font-body); font-size: 14px; outline: none; appearance: auto;">
               <option value="">Select...</option>
               <option>1–10</option>
               <option>11–50</option>
@@ -72,7 +76,7 @@ permalink: "/contact/"
 
         <div style="margin-bottom: 16px;">
           <label style="display: block; font-size: 12px; font-weight: 700; color: var(--text); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.06em;">Industry</label>
-          <select style="width: 100%; padding: 12px 14px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg-deep); color: var(--text); font-family: var(--font-body); font-size: 14px; outline: none; appearance: auto;">
+          <select name="industry" style="width: 100%; padding: 12px 14px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg-deep); color: var(--text); font-family: var(--font-body); font-size: 14px; outline: none; appearance: auto;">
             <option value="">Select your industry...</option>
             <option>Footwear & Apparel</option>
             <option>Fashion & Fast Fashion</option>
@@ -89,23 +93,26 @@ permalink: "/contact/"
         <div style="margin-bottom: 16px;">
           <label style="display: block; font-size: 12px; font-weight: 700; color: var(--text); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.06em;">What are you most interested in?</label>
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
-            <label style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-muted); cursor: pointer; padding: 8px 0;"><input type="checkbox" style="accent-color: var(--brand-blue);"> Mobile POS</label>
-            <label style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-muted); cursor: pointer; padding: 8px 0;"><input type="checkbox" style="accent-color: var(--brand-blue);"> RFID</label>
-            <label style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-muted); cursor: pointer; padding: 8px 0;"><input type="checkbox" style="accent-color: var(--brand-blue);"> Order Management</label>
-            <label style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-muted); cursor: pointer; padding: 8px 0;"><input type="checkbox" style="accent-color: var(--brand-blue);"> 121 Commerce (AI)</label>
-            <label style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-muted); cursor: pointer; padding: 8px 0;"><input type="checkbox" style="accent-color: var(--brand-blue);"> Inventory Control</label>
-            <label style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-muted); cursor: pointer; padding: 8px 0;"><input type="checkbox" style="accent-color: var(--brand-blue);"> Analytics</label>
+            <label style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-muted); cursor: pointer; padding: 8px 0;"><input type="checkbox" name="interest" value="Mobile POS" style="accent-color: var(--brand-blue);"> Mobile POS</label>
+            <label style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-muted); cursor: pointer; padding: 8px 0;"><input type="checkbox" name="interest" value="RFID" style="accent-color: var(--brand-blue);"> RFID</label>
+            <label style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-muted); cursor: pointer; padding: 8px 0;"><input type="checkbox" name="interest" value="Order Management" style="accent-color: var(--brand-blue);"> Order Management</label>
+            <label style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-muted); cursor: pointer; padding: 8px 0;"><input type="checkbox" name="interest" value="121 Commerce (AI)" style="accent-color: var(--brand-blue);"> 121 Commerce (AI)</label>
+            <label style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-muted); cursor: pointer; padding: 8px 0;"><input type="checkbox" name="interest" value="Inventory Control" style="accent-color: var(--brand-blue);"> Inventory Control</label>
+            <label style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-muted); cursor: pointer; padding: 8px 0;"><input type="checkbox" name="interest" value="Analytics" style="accent-color: var(--brand-blue);"> Analytics</label>
           </div>
         </div>
 
         <div style="margin-bottom: 24px;">
           <label style="display: block; font-size: 12px; font-weight: 700; color: var(--text); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.06em;">Anything else we should know?</label>
-          <textarea placeholder="Tell us about your current setup, pain points, or timeline..." rows="3" style="width: 100%; padding: 12px 14px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg-deep); color: var(--text); font-family: var(--font-body); font-size: 14px; outline: none; resize: vertical; transition: border-color 0.2s;" onfocus="this.style.borderColor='var(--brand-blue)'" onblur="this.style.borderColor='var(--border)'"></textarea>
+          <textarea name="message" placeholder="Tell us about your current setup, pain points, or timeline..." rows="3" style="width: 100%; padding: 12px 14px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg-deep); color: var(--text); font-family: var(--font-body); font-size: 14px; outline: none; resize: vertical; transition: border-color 0.2s;" onfocus="this.style.borderColor='var(--brand-blue)'" onblur="this.style.borderColor='var(--border)'"></textarea>
         </div>
 
-        <button class="btn btn-primary btn-lg" style="width: 100%; justify-content: center;">Submit request <i class="ti ti-arrow-right"></i></button>
+        <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; justify-content: center;">Submit request <i class="ti ti-arrow-right"></i></button>
+        </form>
 
-        <p style="font-size: 11px; color: var(--text-faint); margin-top: 16px; line-height: 1.5;">By submitting, you agree to our <a href="#" style="color: var(--brand-blue); text-decoration: underline;">Privacy Policy</a>. We'll never share your information with third parties.</p>
+        <p style="font-size: 11px; color: var(--text-faint); margin-top: 16px; line-height: 1.5;">By submitting, you agree to our <a href="/privacy-policy/" style="color: var(--brand-blue); text-decoration: underline;">Privacy Policy</a>. We'll never share your information with third parties.</p>
+
+        <p class="contact-alt">Evaluating on the technical side? <a href="/technical-evaluation/">Request a technical review instead</a> — architecture, security, integrations and migration, straight with a solutions architect.</p>
       </div>
 
       <!-- Right: Trust signals + what to expect -->

@@ -3957,6 +3957,57 @@ a.tm-day-win:hover i { transform: translateX(2px); }
 .ticker-item:nth-child(odd) .ticker-value { color: #6aa8ff; }
 .ticker-item:nth-child(2n) .ticker-value { color: #a78bfa; }
 
+.security-tech-link {
+  display: inline-flex; align-items: center; gap: 7px; margin-top: 20px;
+  font-size: 13.5px; font-weight: 600; color: var(--brand-text); text-decoration: none;
+  transition: gap .2s ease;
+}
+.security-tech-link:hover { gap: 11px; }
+.contact-alt {
+  margin: 20px 0 0; padding-top: 18px; border-top: 1px solid var(--border);
+  font-size: 12.5px; line-height: 1.6; color: var(--text-muted);
+}
+.contact-alt a { color: var(--brand-text); font-weight: 600; }
+/* ===== Technical evaluation track ===== */
+.tev-grid { display: grid; grid-template-columns: 1fr 1.05fr; gap: 56px; align-items: start; }
+.tev-formwrap {
+  background: var(--bg-elevated); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 32px; box-shadow: var(--shadow-lg);
+}
+.tev-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+.tev-field { display: block; min-width: 0; }
+.tev-field label, .tev-legend {
+  display: block; margin-bottom: 6px;
+  font-size: 11px; font-weight: 600; letter-spacing: 0.06em;
+  text-transform: uppercase; color: var(--text);
+}
+.tev-field input[type="text"], .tev-field input[type="email"],
+.tev-field select, .tev-field textarea {
+  width: 100%; padding: 12px 14px; border-radius: 8px;
+  border: 1px solid var(--border); background: var(--bg-deep); color: var(--text);
+  font-family: var(--font-body); font-size: 14px; outline: none;
+  transition: border-color .2s ease;
+}
+.tev-field select { appearance: auto; }
+.tev-field textarea { resize: vertical; }
+.tev-field input:focus, .tev-field select:focus, .tev-field textarea:focus { border-color: var(--brand-blue); }
+.tev-checks { display: grid; grid-template-columns: 1fr 1fr; gap: 2px 16px; }
+.tev-checks label {
+  display: flex; align-items: center; gap: 8px; padding: 7px 0;
+  font-size: 13px; font-weight: 400; letter-spacing: 0; text-transform: none;
+  color: var(--text-muted); cursor: pointer; margin: 0;
+}
+.tev-checks input { accent-color: var(--brand-blue); }
+.tev-fine { margin: 14px 0 0; font-size: 11.5px; line-height: 1.55; color: var(--text-faint); }
+.tev-fine a { color: var(--brand-text); text-decoration: underline; }
+@media (max-width: 900px) {
+  .tev-grid { grid-template-columns: 1fr; gap: 34px; }
+}
+@media (max-width: 520px) {
+  .tev-row, .tev-checks { grid-template-columns: 1fr; }
+  .tev-formwrap { padding: 24px; }
+}
+
 /* ===== RFID in Practice — handheld broadcasting to two columns of topics ===== */
 .rfp-stage {
   position: relative; margin-top: 40px;
@@ -5592,6 +5643,15 @@ main > .hero:first-child { margin-top: -85px; padding-top: 230px; }
    OUTCOMES BENTO — quiet metric cards + tall accent card
    ===================================================== */
 .bento-head { max-width: 880px; margin-bottom: 48px; }
+.fine-note {
+  margin: 18px 0 0; max-width: 620px;
+  font-size: 12.5px; line-height: 1.6; color: var(--text-faint);
+  padding-left: 14px; border-left: 2px solid var(--border-strong);
+}
+.bento-note {
+  margin: 22px 0 0; max-width: 760px;
+  font-size: 12.5px; line-height: 1.6; color: var(--text-faint);
+}
 .bento-badge {
   display: inline-flex; align-items: center; gap: 8px;
   font-size: 13px; font-weight: 600;
