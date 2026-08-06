@@ -4067,6 +4067,52 @@ a.tm-day-win:hover i { transform: translateX(2px); }
   .globe-canvas { opacity: 1; }
 }
 
+/* ===== Reference architecture diagram + capability index ===== */
+.arch-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; padding-bottom: 6px; }
+.arch-svg { display: block; width: 100%; min-width: 860px; height: auto; }
+.arch-band { fill: var(--bg-deep); stroke: var(--border); stroke-width: 1; }
+.arch-band-label {
+  font-family: var(--font-mono); font-size: 10.5px; font-weight: 600;
+  letter-spacing: 0.07em; fill: var(--brand-text);
+}
+.arch-item { fill: var(--bg-elevated); stroke: var(--border-strong); stroke-width: 1; }
+.arch-item-core { stroke: rgba(36,125,255,0.45); fill: rgba(36,125,255,0.07); }
+.arch-item-ext  { stroke: rgba(124,80,245,0.38); fill: rgba(124,80,245,0.06); }
+.arch-item-t { font-size: 13.5px; font-weight: 600; fill: var(--text); text-anchor: middle; }
+.arch-item-s { font-size: 10.5px; fill: var(--text-muted); text-anchor: middle; }
+.arch-note { font-size: 11.5px; fill: var(--text-muted); text-anchor: middle; font-style: italic; }
+.arch-int { font-size: 11.5px; fill: var(--text-muted); text-anchor: middle; }
+.arch-conn { stroke: var(--border-strong); stroke-width: 1.5; stroke-dasharray: 4 4; marker-end: none; }
+.arch-conn-t { font-size: 10.5px; fill: var(--text-faint); }
+.arch-caption { margin: 18px 0 0; font-size: 12.5px; line-height: 1.6; color: var(--text-faint); max-width: 780px; }
+
+.capx-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; border: 1px solid var(--border); border-radius: 12px; }
+.capx { width: 100%; min-width: 720px; border-collapse: collapse; font-size: 13.5px; }
+.capx thead th {
+  position: sticky; top: 0; z-index: 1;
+  background: var(--bg-deep); text-align: left; padding: 13px 18px;
+  font-size: 10.5px; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase;
+  color: var(--text-muted); border-bottom: 1px solid var(--border-strong);
+}
+.capx tbody th, .capx tbody td { padding: 13px 18px; border-bottom: 1px solid var(--border); vertical-align: top; text-align: left; }
+.capx tbody th { font-weight: 600; color: var(--text); white-space: nowrap; }
+.capx tbody td { color: var(--text-muted); line-height: 1.55; }
+.capx tbody tr:last-child th, .capx tbody tr:last-child td { border-bottom: none; }
+.capx-group th {
+  background: var(--bg-deep); color: var(--brand-text) !important;
+  font-family: var(--font-mono); font-size: 10.5px; font-weight: 600;
+  letter-spacing: 0.07em; text-transform: uppercase; white-space: normal !important;
+}
+.capx tbody tr:not(.capx-group):hover { background: var(--bg-elevated); }
+.capx-n, .capx-c {
+  display: inline-block; padding: 3px 10px; border-radius: 100px;
+  font-size: 11px; font-weight: 600; white-space: nowrap;
+}
+.capx-n { color: var(--brand-blue); background: var(--brand-soft); }
+.capx-c { color: var(--brand-purple); background: rgba(124,80,245,0.10); }
+[data-theme="dark"] .capx-c { color: #a78bfa; }
+@media (max-width: 700px) { .capx { font-size: 13px; } .capx tbody th, .capx tbody td { padding: 11px 14px; } }
+
 /* ===== Technical evaluation track ===== */
 .tev-grid { display: grid; grid-template-columns: 1fr 1.05fr; gap: 56px; align-items: start; }
 .tev-formwrap {

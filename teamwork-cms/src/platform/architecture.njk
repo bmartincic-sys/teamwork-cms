@@ -1,0 +1,211 @@
+---
+layout: "solution.njk"
+title: "Reference Architecture & Capability Index"
+description: "Where Teamwork Commerce sits in a retail target-state architecture, what is native to the platform versus connected to it, and a full capability index for evaluation and RFP scoring."
+navLabel: "Architecture"
+permalink: "/platform/architecture/"
+---
+<!-- Breadcrumb -->
+<div class="container">
+  <nav class="breadcrumb" aria-label="Breadcrumb" style="padding: 16px 0; font-size: 12px; color: var(--text-faint);">
+    <a href="/" style="color: var(--text-muted);">Home</a> <span style="margin: 0 6px;">/</span>
+    <a href="/platform/mobile-pos/" style="color: var(--text-muted);">Platform</a> <span style="margin: 0 6px;">/</span>
+    Architecture
+  </nav>
+</div>
+
+<section style="padding: 4px 0 0;">
+  <div class="container">
+    <div class="blog-head">
+      <div class="blog-head-eyebrow">Reference Architecture</div>
+      <h1 class="blog-h1">Where this sits in your target state.</h1>
+      <p class="blog-head-sub">What runs in the store, what is native to the platform, and what connects to the systems you already own — plus a full capability index for evaluation and RFP scoring.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DIAGRAM ============ -->
+<section class="section" style="padding-top: 34px;">
+  <div class="container">
+    <div class="arch-scroll">
+      <svg class="arch-svg" viewBox="0 0 1000 752" role="img" aria-label="Reference architecture: in-store devices connect to the Teamwork Commerce platform on Google Cloud, which connects through an integration layer to existing ERP, e-commerce, payments, warehouse, marketing and BI systems.">
+        <text class="arch-band-label" x="6" y="20">IN STORE</text>
+        <rect class="arch-band" x="0" y="28" width="1000" height="108" rx="14"/>
+        <rect class="arch-item" x="16.0" y="50" width="230" height="64" rx="9"/>
+        <text class="arch-item-t" x="131.0" y="78.0">iPhone &amp; iPad POS</text>
+        <text class="arch-item-s" x="131.0" y="95.0">Native app, sells offline</text>
+        <rect class="arch-item" x="262.0" y="50" width="230" height="64" rx="9"/>
+        <text class="arch-item-t" x="377.0" y="78.0">RFID readers</text>
+        <text class="arch-item-s" x="377.0" y="95.0">Handhelds, bins, counter pads</text>
+        <rect class="arch-item" x="508.0" y="50" width="230" height="64" rx="9"/>
+        <text class="arch-item-t" x="623.0" y="78.0">Shopper display</text>
+        <text class="arch-item-s" x="623.0" y="95.0">Second customer-facing screen</text>
+        <rect class="arch-item" x="754.0" y="50" width="230" height="64" rx="9"/>
+        <text class="arch-item-t" x="869.0" y="78.0">Peripherals</text>
+        <text class="arch-item-s" x="869.0" y="95.0">Printers, drawers, EAS gates</text>
+        <path class="arch-conn" d="M500 142 L500 186"/>
+        <text class="arch-conn-t" x="512" y="169">Store-and-Forward — terminals keep selling through an outage, then sync</text>
+        <text class="arch-band-label" x="6" y="188">TEAMWORK COMMERCE — ONE CODEBASE, RUNNING ON GOOGLE CLOUD</text>
+        <rect class="arch-band" x="0" y="196" width="1000" height="208" rx="14"/>
+        <rect class="arch-item arch-item-core" x="18.0" y="222" width="180" height="52" rx="9"/>
+        <text class="arch-item-t" x="108.0" y="252.0">POS engine</text>
+        <rect class="arch-item arch-item-core" x="214.0" y="222" width="180" height="52" rx="9"/>
+        <text class="arch-item-t" x="304.0" y="252.0">Inventory</text>
+        <rect class="arch-item arch-item-core" x="410.0" y="222" width="180" height="52" rx="9"/>
+        <text class="arch-item-t" x="500.0" y="252.0">Order management</text>
+        <rect class="arch-item arch-item-core" x="606.0" y="222" width="180" height="52" rx="9"/>
+        <text class="arch-item-t" x="696.0" y="252.0">RFID unit ledger</text>
+        <rect class="arch-item arch-item-core" x="802.0" y="222" width="180" height="52" rx="9"/>
+        <text class="arch-item-t" x="892.0" y="252.0">Product data (PIM)</text>
+        <rect class="arch-item arch-item-core" x="116.0" y="286" width="180" height="52" rx="9"/>
+        <text class="arch-item-t" x="206.0" y="316.0">Customer data (CDP)</text>
+        <rect class="arch-item arch-item-core" x="312.0" y="286" width="180" height="52" rx="9"/>
+        <text class="arch-item-t" x="402.0" y="316.0">Analytics — Cloud HQ</text>
+        <rect class="arch-item arch-item-core" x="508.0" y="286" width="180" height="52" rx="9"/>
+        <text class="arch-item-t" x="598.0" y="316.0">Training</text>
+        <rect class="arch-item arch-item-core" x="704.0" y="286" width="180" height="52" rx="9"/>
+        <text class="arch-item-t" x="794.0" y="316.0">Identity &amp; access</text>
+        <text class="arch-note" x="500" y="376">Every block above is native to the platform — one data model, one release, one upgrade path.</text>
+        <path class="arch-conn" d="M500 410 L500 442"/>
+        <text class="arch-band-label" x="6" y="444">INTEGRATION LAYER</text>
+        <rect class="arch-band" x="0" y="452" width="1000" height="62" rx="14"/>
+        <text class="arch-int" x="500" y="489">Open APIs &#183; External services and logic overlays &#183; Integration platform for mass data transfer &#183; Integration Architect, BA, QA and developer per client</text>
+        <path class="arch-conn" d="M500 520 L500 552"/>
+        <text class="arch-band-label" x="6" y="554">YOUR EXISTING SYSTEMS</text>
+        <rect class="arch-band" x="0" y="562" width="1000" height="176" rx="14"/>
+        <rect class="arch-item arch-item-ext" x="34.0" y="586" width="300" height="62" rx="9"/>
+        <text class="arch-item-t" x="184.0" y="613.0">ERP</text>
+        <text class="arch-item-s" x="184.0" y="630.0">SAP, Oracle, Dynamics, NetSuite</text>
+        <rect class="arch-item arch-item-ext" x="350.0" y="586" width="300" height="62" rx="9"/>
+        <text class="arch-item-t" x="500.0" y="613.0">E-commerce</text>
+        <text class="arch-item-s" x="500.0" y="630.0">Salesforce, Adobe, BigCommerce</text>
+        <rect class="arch-item arch-item-ext" x="666.0" y="586" width="300" height="62" rx="9"/>
+        <text class="arch-item-t" x="816.0" y="613.0">Payments</text>
+        <text class="arch-item-s" x="816.0" y="630.0">Adyen, Stripe, PayPal, Clover</text>
+        <rect class="arch-item arch-item-ext" x="34.0" y="660" width="300" height="62" rx="9"/>
+        <text class="arch-item-t" x="184.0" y="687.0">WMS &amp; returns</text>
+        <text class="arch-item-s" x="184.0" y="704.0">Warehouse and reverse logistics</text>
+        <rect class="arch-item arch-item-ext" x="350.0" y="660" width="300" height="62" rx="9"/>
+        <text class="arch-item-t" x="500.0" y="687.0">Marketing &amp; CRM</text>
+        <text class="arch-item-s" x="500.0" y="704.0">Klaviyo, Mailchimp</text>
+        <rect class="arch-item arch-item-ext" x="666.0" y="660" width="300" height="62" rx="9"/>
+        <text class="arch-item-t" x="816.0" y="687.0">BI &amp; marketplaces</text>
+        <text class="arch-item-s" x="816.0" y="704.0">Looker, accounting, channels</text>
+      </svg>
+    </div>
+    <p class="arch-caption">Read it top to bottom: devices in the store, the platform they run on, the integration layer, and the systems that stay where they are. Nothing between the top two bands is an integration — it is one codebase.</p>
+  </div>
+</section>
+
+<!-- ============ COMPOSABLE POSITION ============ -->
+<section class="section" style="padding-top: 0;">
+  <div class="container">
+    <div class="feature-row">
+      <div class="feature-text">
+        <span class="section-eyebrow">Where we stand on composable</span>
+        <h2>Unified at the core. Composable at the edge.</h2>
+        <p>Composable architecture solved a real problem: monolithic suites that forced a retailer to take every module from one vendor and wait years for any of them to change. It also created one — an estate of independently versioned services that agree on nothing, where every release is a regression cycle across a dozen contracts.</p>
+        <p>Teamwork Commerce takes a deliberate position between the two. The transactional core — selling, inventory, orders, product, customer, identity — is one codebase with one data model, because those are the domains where disagreement between systems shows up as a wrong answer in front of a customer. Everything outside that core is yours to compose.</p>
+        <ul class="feature-bullets">
+          <li>One data model across POS, inventory, orders, product and customer — no sync window in which two systems disagree</li>
+          <li>One release and one upgrade path, rather than a regression cycle per connected app</li>
+          <li>Open APIs for import and export, so the core is readable and writable by the rest of your estate</li>
+          <li>Custom services and logic overlays run alongside the core through external APIs — your bespoke workflow does not become a fork you are frozen on</li>
+          <li>Interface composition per retailer: module sequence, order and exposure are configured, not coded</li>
+        </ul>
+        <p class="fine-note">If your target state mandates fully independent, separately deployable services for every retail domain, that is a genuine architectural difference worth testing early — bring it to a technical review rather than discovering it in an RFP response.</p>
+      </div>
+      <div class="feature-visual">
+        <div class="shot">
+          <div class="shot-glow"></div>
+          <img class="shot-img" src="/assets/images/homepage/extensibility.jpg" alt="A developer building a custom service against the Teamwork Commerce APIs" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CAPABILITY INDEX ============ -->
+<section class="section" style="padding-top: 0;" id="capabilities">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">Capability Index</div>
+      <h2 class="section-title">Native, or connected. Nothing in between.</h2>
+      <p class="section-sub">Every capability documented on this site, in one list. <strong>Native</strong> means it ships in the same codebase as the POS. <strong>Connected</strong> means it integrates with a system you choose.</p>
+    </div>
+    <div class="capx-wrap">
+      <table class="capx">
+        <thead>
+          <tr><th scope="col">Capability</th><th scope="col">What it covers</th><th scope="col">Delivery</th></tr>
+        </thead>
+        <tbody>
+          <tr class="capx-group"><th colspan="3" scope="colgroup">Selling &amp; transactions</th></tr>
+          <tr><th scope="row">Mobile POS</th><td>Full POS on iPhone and iPad, sold from anywhere on the floor rather than a fixed cash wrap.</td><td><span class="capx-n">Native</span></td></tr>
+          <tr><th scope="row">Payments</th><td>Tap to Pay on iPhone, contactless, chip, swipe, split tender, gift cards, BNPL, foreign-currency cash. Processor-agnostic.</td><td><span class="capx-c">Connected</span></td></tr>
+          <tr><th scope="row">Promotions &amp; loyalty engine</th><td>Thresholds, multi-item BOGO, stackable and customer-specific coupons, tax exemptions — identical across channels.</td><td><span class="capx-n">Native</span></td></tr>
+          <tr><th scope="row">Line-level control</th><td>Per-line discounts, price overrides, associate attribution, gift messaging, suspend and retrieve — all permissioned and logged.</td><td><span class="capx-n">Native</span></td></tr>
+          <tr><th scope="row">Returns &amp; exchanges</th><td>Cross-channel returns and exchanges with no sync lag, including promotion-aware bundle returns.</td><td><span class="capx-n">Native</span></td></tr>
+          <tr><th scope="row">Cash management</th><td>Drawer memos, shared drawers, paid-in/paid-out, blind counts with management sign-off, end-of-day reconciliation and fiscal summaries.</td><td><span class="capx-n">Native</span></td></tr>
+          <tr><th scope="row">Shopper display</th><td>Second customer-facing screen running targeted content and offers alongside the transaction.</td><td><span class="capx-n">Native</span></td></tr>
+
+          <tr class="capx-group"><th colspan="3" scope="colgroup">Inventory &amp; RFID</th></tr>
+          <tr><th scope="row">Inventory control</th><td>Item-level visibility across stores, warehouses and channels; receiving, transfers and adjustments from the device.</td><td><span class="capx-n">Native</span></td></tr>
+          <tr><th scope="row">Counting</th><td>Full-store counts in about 20 minutes and targeted cycle counts, without closing the door.</td><td><span class="capx-n">Native</span></td></tr>
+          <tr><th scope="row">End-to-end RFID</th><td>Source tagging, EPC commissioning, unit control ledger, RFID checkout and self-checkout, EAS loss prevention — no middleware.</td><td><span class="capx-n">Native</span></td></tr>
+          <tr><th scope="row">RFID hardware</th><td>Certified readers, sleds, bins, counter pads and tag printers from Bluebird, Zebra, Impinj, Honeywell and Epson.</td><td><span class="capx-c">Connected</span></td></tr>
+
+          <tr class="capx-group"><th colspan="3" scope="colgroup">Order management &amp; fulfilment</th></tr>
+          <tr><th scope="row">Order routing</th><td>Order Fill Logic selects the fulfilment location; split shipments and incoming/outgoing queues.</td><td><span class="capx-n">Native</span></td></tr>
+          <tr><th scope="row">Omnichannel plays</th><td>BOPIS, curbside, reserve in store, ship-from-store, Endless Aisle, Save the Sale, BORIS.</td><td><span class="capx-n">Native</span></td></tr>
+          <tr><th scope="row">Carriers &amp; warehouse</th><td>Shipping carriers, warehouse management and returns automation.</td><td><span class="capx-c">Connected</span></td></tr>
+
+          <tr class="capx-group"><th colspan="3" scope="colgroup">Product &amp; customer data</th></tr>
+          <tr><th scope="row">Product information (PIM)</th><td>One product record with structured attributes, imagery, translations, catalog imports, brand concepts and seasonal staging.</td><td><span class="capx-n">Native</span></td></tr>
+          <tr><th scope="row">Customer data (CDP)</th><td>Profiles, marketing consent, QR self sign-up, feedback capture and customer APIs — without a separate CRM migration.</td><td><span class="capx-n">Native</span></td></tr>
+          <tr><th scope="row">Clienteling</th><td>360-degree profiles at the point of sale, outreach and lookbooks sent by the associate.</td><td><span class="capx-n">Native</span></td></tr>
+          <tr><th scope="row">AI at the point of sale</th><td>121 Commerce — product answers, recommendations and next actions drawn from the product and customer records.</td><td><span class="capx-n">Native</span></td></tr>
+          <tr><th scope="row">Marketing &amp; CRM platforms</th><td>Audience and campaign tools such as Klaviyo and Mailchimp.</td><td><span class="capx-c">Connected</span></td></tr>
+
+          <tr class="capx-group"><th colspan="3" scope="colgroup">Analytics</th></tr>
+          <tr><th scope="row">Reporting</th><td>Cloud HQ with 150+ prebuilt retail reports, custom KPIs, segment views and scheduled distribution.</td><td><span class="capx-n">Native</span></td></tr>
+          <tr><th scope="row">BI dashboards</th><td>Looker dashboards out of the box; onward BI and data platforms by integration.</td><td><span class="capx-c">Connected</span></td></tr>
+
+          <tr class="capx-group"><th colspan="3" scope="colgroup">People &amp; access</th></tr>
+          <tr><th scope="row">Identity &amp; permissions</th><td>Matrixed rights across hundreds of corporate actions, rotating QR sign-in, every action attributable to a person.</td><td><span class="capx-n">Native</span></td></tr>
+          <tr><th scope="row">Enterprise identity</th><td>Integrates with the identity provider you already run — Active Directory, SSO and MFA — rather than adding another user store.</td><td><span class="capx-c">Connected</span></td></tr>
+          <tr><th scope="row">Biometric sign-in</th><td>Optional multi-user facial recognition on shared devices, off by default and governed by the retailer.</td><td><span class="capx-n">Native</span></td></tr>
+          <tr><th scope="row">Device management</th><td>Company-owned and personal devices governed side by side, with policy per device type.</td><td><span class="capx-n">Native</span></td></tr>
+          <tr><th scope="row">Training &amp; certification</th><td>Role-based assignment from the team member record, course builder and library, certifications, material synced from live product data.</td><td><span class="capx-n">Native</span></td></tr>
+
+          <tr class="capx-group"><th colspan="3" scope="colgroup">Global operations</th></tr>
+          <tr><th scope="row">Fiscal compliance</th><td>Automated compliance across 40+ countries — VAT, GST, NF525, TSE — with locally required fiscal summaries.</td><td><span class="capx-n">Native</span></td></tr>
+          <tr><th scope="row">Multi-currency &amp; language</th><td>Configured per market from one dashboard, with destination-jurisdiction tax on shipped orders.</td><td><span class="capx-n">Native</span></td></tr>
+          <tr><th scope="row">Regional payment methods</th><td>QR wallets, digital invoicing in China, installment selection in South Korea, market-specific merchant platforms.</td><td><span class="capx-c">Connected</span></td></tr>
+
+          <tr class="capx-group"><th colspan="3" scope="colgroup">Platform</th></tr>
+          <tr><th scope="row">Hosting</th><td>Google Cloud Platform. AWS, Azure, Tencent and hybrid deployments supported by request.</td><td><span class="capx-n">Native</span></td></tr>
+          <tr><th scope="row">Offline resilience</th><td>Store-and-Forward keeps every terminal fully operational through an outage, encrypting locally and syncing on reconnect.</td><td><span class="capx-n">Native</span></td></tr>
+          <tr><th scope="row">Extensibility</th><td>Open APIs for import and export; custom services and logic overlays through external APIs without altering the core.</td><td><span class="capx-n">Native</span></td></tr>
+          <tr><th scope="row">Interface configuration</th><td>Module sequence, order and exposure set per retailer rather than developed.</td><td><span class="capx-n">Native</span></td></tr>
+          <tr><th scope="row">Enterprise systems</th><td>ERP including SAP, Oracle, Microsoft Dynamics and NetSuite; marketplaces, accounting, fraud, traffic counters and legacy internal systems.</td><td><span class="capx-c">Connected</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="arch-caption">Every row is documented elsewhere on this site. Anything you need that is not on this list is a question worth putting to a solutions architect rather than assuming either way.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top: 0;">
+  <div class="container">
+    <div class="final-cta" style="border-radius: var(--radius-lg);">
+      <div class="container final-cta-inner">
+        <h2>Test it against your <span class="gradient-text">target state.</span></h2>
+        <p>Bring your architecture, your integration map, and the constraints that will actually decide this.</p>
+        <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+          <a href="/technical-evaluation/" class="btn btn-primary btn-lg">Request a technical review <i class="ti ti-arrow-right"></i></a>
+          <a href="/platform/integrations/" class="btn btn-ghost btn-lg">Integrations &amp; APIs</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
