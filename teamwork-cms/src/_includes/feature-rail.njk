@@ -12,6 +12,12 @@
   { "url": "/features/access-identity/", "label": "Access & Identity", "desc": "Secure logins, one associate app", "icon": "ti-shield-lock", "group": "Team" },
   { "url": "/features/training/", "label": "Training & Certification", "desc": "Role-based, always current", "icon": "ti-school", "group": "Team" }
 ] %}
+{% set featureGroups = [
+  { "name": "Sell", "icon": "ti-shopping-cart" },
+  { "name": "Know", "icon": "ti-database" },
+  { "name": "Operate", "icon": "ti-settings-cog" },
+  { "name": "Team", "icon": "ti-users-group" }
+] %}
 <section class="section-tight" style="border-top: 1px solid var(--border);">
   <div class="container">
     <div class="section-header" style="text-align: center;">
@@ -19,17 +25,25 @@
       <h2 class="section-title" style="font-size: clamp(24px, 3vw, 36px);">Everything else it does.</h2>
       <p class="section-sub">Every capability runs on the same system — one codebase, one version of the truth.</p>
     </div>
-    <div class="frail-grid">
-      {% for f in allFeatures %}{% if f.url != page.url %}
-      <a class="frail-card" href="{{ f.url }}">
-        <span class="frail-ico"><i class="ti {{ f.icon }}"></i></span>
-        <span class="frail-text">
-          <strong>{{ f.label }}</strong>
-          <em>{{ f.desc }}</em>
-        </span>
-        <i class="ti ti-arrow-right frail-arrow"></i>
-      </a>
-      {% endif %}{% endfor %}
+    <div class="frail-cols">
+      {% for g in featureGroups %}
+        {% set items = [] %}
+        {% for f in allFeatures %}{% if f.group == g.name and f.url != page.url %}{% set items = (items.push(f), items) %}{% endif %}{% endfor %}
+        {% if items.length %}
+        <div class="frail-col">
+          <div class="frail-head"><i class="ti {{ g.icon }}"></i> {{ g.name }}</div>
+          {% for f in items %}
+          <a class="frail-row" href="{{ f.url }}">
+            <span class="frail-ico"><i class="ti {{ f.icon }}"></i></span>
+            <span class="frail-text">
+              <strong>{{ f.label }}</strong>
+              <em>{{ f.desc }}</em>
+            </span>
+          </a>
+          {% endfor %}
+        </div>
+        {% endif %}
+      {% endfor %}
     </div>
   </div>
 </section>

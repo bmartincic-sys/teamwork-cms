@@ -3212,31 +3212,39 @@ a.tm-day-win:hover i { transform: translateX(2px); }
 @media (max-width: 900px) { .mini-grid, .mini-grid-2 { grid-template-columns: 1fr; } }
 
 /* Shared feature rail */
-.frail-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 34px; }
-.frail-card {
-  display: flex; align-items: center; gap: 12px;
-  padding: 15px 16px; border-radius: 13px;
-  background: var(--bg-elevated); border: 1px solid var(--border);
-  text-decoration: none;
-  transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease;
+/* One Platform — grouped the same way the header groups the product */
+.frail-cols { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0 20px; margin-top: 34px; }
+.frail-col { display: flex; flex-direction: column; gap: 2px; align-self: start; border-top: 1px solid var(--border); padding-top: 14px; }
+.frail-head {
+  display: flex; align-items: center; gap: 7px; padding: 0 10px 10px;
+  font-family: var(--font-mono); font-size: 10.5px; font-weight: 600;
+  letter-spacing: 0.06em; text-transform: uppercase; color: var(--brand-text);
 }
-.frail-card:hover {
-  transform: translateY(-3px); border-color: rgba(36,125,255,0.45);
-  box-shadow: 0 16px 26px -22px rgba(7, 9, 26, 0.3);
+.frail-head i { font-size: 14px; }
+.frail-col:nth-child(2) .frail-head { color: var(--brand-purple); }
+.frail-col:nth-child(3) .frail-head { color: var(--text-faint); }
+.frail-col:nth-child(4) .frail-head { color: var(--brand-magenta); }
+.frail-row {
+  display: flex; align-items: flex-start; gap: 11px; min-width: 0;
+  padding: 10px; border-radius: 9px; border: 1px solid transparent;
+  text-decoration: none; transition: background .18s ease, border-color .18s ease;
 }
+.frail-row:hover { background: var(--bg-elevated); border-color: var(--border); }
 .frail-ico {
-  width: 38px; height: 38px; flex-shrink: 0; border-radius: 10px;
+  width: 32px; height: 32px; flex-shrink: 0; border-radius: 9px;
   display: flex; align-items: center; justify-content: center;
-  font-size: 18px; color: var(--brand-blue); background: var(--brand-soft);
+  font-size: 16px; color: var(--brand-blue); background: var(--brand-soft);
 }
-.frail-card:nth-child(even) .frail-ico { color: var(--brand-purple); background: rgba(124,80,245,0.10); }
+.frail-col:nth-child(2n) .frail-ico { color: var(--brand-purple); background: rgba(124,80,245,0.10); }
 .frail-text { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
 .frail-text strong { font-size: 13.5px; font-weight: 600; color: var(--text); letter-spacing: -0.01em; }
-.frail-text em { font-style: normal; font-size: 11.5px; line-height: 1.35; color: var(--text-muted); }
-.frail-arrow { margin-left: auto; font-size: 14px; color: var(--text-faint); transition: transform .22s ease, color .22s ease; }
-.frail-card:hover .frail-arrow { color: var(--brand-text); transform: translateX(3px); }
-@media (max-width: 1000px) { .frail-grid { grid-template-columns: 1fr 1fr; } }
-@media (max-width: 640px) { .frail-grid { grid-template-columns: 1fr; } }
+.frail-text em { font-style: normal; font-size: 11.5px; line-height: 1.4; color: var(--text-muted); }
+@media (max-width: 900px) {
+  .frail-cols { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px 20px; }
+}
+@media (max-width: 560px) {
+  .frail-cols { grid-template-columns: 1fr; gap: 22px; }
+}
 
 /* Product benefits grid */
 .ben-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 26px; }
