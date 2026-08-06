@@ -5,7 +5,7 @@ module.exports = [
   {
     client: "One of the world's largest sporting events",
     title: "Powering High-Performance Retail at One of the World's Largest Sporting Events",
-    blurb: "Event retail at the highest level of pressure — thousands of transactions in tight windows, on one platform.",
+    blurb: "Event retail at the highest level of pressure: thousands of transactions in tight windows, on one platform.",
     sector: "Stadiums & Venues",
     url: "/blog/powering-high-performance-retail-at-one-of-the-worlds-largest-sporting-events/",
     photo: "/assets/images/customers/sporting-event.jpg",

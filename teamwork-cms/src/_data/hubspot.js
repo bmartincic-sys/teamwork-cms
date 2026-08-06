@@ -4,5 +4,5 @@
 module.exports = {
   portalId: "",   // e.g. "1234567"
   formId: "",     // e.g. "0a1b2c3d-4e5f-6789-abcd-ef0123456789"
-  region: "na1",  // "na1" | "eu1" — from your embed code
+  region: "na1",  // "na1" | "eu1", from your embed code
 };

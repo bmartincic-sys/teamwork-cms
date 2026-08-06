@@ -1,4 +1,4 @@
-/* Rotating globe — one dot per ~6 stores in the largest deployment's fleet.
+/* Rotating globe, one dot per ~6 stores in the largest deployment's fleet.
    Coordinates are scattered across the retailer's live markets in proportion to
    the store count each market carries. */
 (function () {
@@ -90,7 +90,7 @@
       }
     }
 
-    // Coastlines are drawn only between two front-facing vertices — clamped points
+    // Coastlines are drawn only between two front-facing vertices, clamped points
     // would otherwise be joined by straight chords across the face of the globe.
     function landStroke(rot) {
       ctx.beginPath();

@@ -2,7 +2,7 @@
 layout: "solution.njk"
 title: "Blog"
 navLabel: "Blog"
-description: "Insights, research, and news on retail technology from Teamwork Commerce — POS, unified commerce, RFID, and mobile retail."
+description: "Insights, research, and news on retail technology from Teamwork Commerce: POS, unified commerce, RFID, and mobile retail."
 tags: "resources"
 permalink: "/blog/"
 ---
@@ -14,13 +14,13 @@ permalink: "/blog/"
   </nav>
 </div>
 
-<!-- ============ HEAD + FILTER (compact — straight into the posts) ============ -->
+<!-- ============ HEAD + FILTER (compact, straight into the posts) ============ -->
 <section style="padding: 4px 0 0;">
   <div class="container">
     <div class="blog-head">
       <div class="blog-head-eyebrow">Blog</div>
       <h1 class="blog-h1">Insights, research &amp; news.</h1>
-      <p class="blog-head-sub">Perspectives on point of sale, unified commerce, RFID, and mobile retail — from the team behind the platform.</p>
+      <p class="blog-head-sub">Perspectives on point of sale, unified commerce, RFID, and mobile retail, from the team behind the platform.</p>
       <div class="blog-filter-bar" id="blogFilterBar">
         <button class="filter-pill active" data-filter="all">All ({{ collections.blogpost.length }})</button>
         {% set categories = collections.blogpost | uniqueCategories %}

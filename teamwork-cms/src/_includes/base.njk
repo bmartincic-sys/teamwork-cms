@@ -74,13 +74,13 @@
   "name": "Teamwork Commerce",
   "applicationCategory": "BusinessApplication",
   "operatingSystem": "iOS, Cloud",
-  "description": "Natively integrated enterprise POS, with OMS, Inventory Management, RFID, and AI as extras that make it stronger — for mid-market and enterprise retailers.",
+  "description": "Natively integrated enterprise POS, with OMS, Inventory Management, RFID, and AI as extras that make it stronger, for mid-market and enterprise retailers.",
   "featureList": [
     "Mobile-first enterprise POS",
     "Distributed Order Management with configurable Order Fill Logic",
     "Real-time Inventory Management",
     "Native end-to-end RFID (99.9% accuracy)",
-    "121 Commerce — AI guidance for associates",
+    "121 Commerce: AI guidance for associates",
     "Fiscal compliance in 40+ countries",
     "Store-and-Forward offline resilience",
     "150+ pre-configured analytics reports",
@@ -237,20 +237,20 @@ if (window.netlifyIdentity) {
   var mapFeed = document.getElementById("mapFeed");
   {
     var LF_EVENTS = [
-      ["pos", "Tap to Pay approved — <strong>Melbourne Central</strong>"],
-      ["fiscal", "NF525 receipt signed — <strong>Paris Le Marais</strong>"],
-      ["rfid", "RFID cycle count: 4,208 items in 2m 11s — <strong>Tokyo Ginza</strong>"],
-      ["omni", "BOPIS order picked up — <strong>Store #114, Austin</strong>"],
-      ["pos", "121 Commerce recommendation accepted — <strong>NYC SoHo</strong>"],
-      ["fiscal", "TSE transaction logged — <strong>Berlin Mitte</strong>"],
+      ["pos", "Tap to Pay approved <strong>Melbourne Central</strong>"],
+      ["fiscal", "NF525 receipt signed <strong>Paris Le Marais</strong>"],
+      ["rfid", "RFID cycle count: 4,208 items in 2m 11s <strong>Tokyo Ginza</strong>"],
+      ["omni", "BOPIS order picked up <strong>Store #114, Austin</strong>"],
+      ["pos", "121 Commerce recommendation accepted <strong>NYC SoHo</strong>"],
+      ["fiscal", "TSE transaction logged <strong>Berlin Mitte</strong>"],
       ["omni", "Endless Aisle: size 11 shipped from <strong>Dallas DC</strong>"],
-      ["rfid", "Self-checkout: 8 items in 2.4s — <strong>Osaka Umeda</strong>"],
-      ["pos", "Store-and-Forward sync complete — <strong>Zermatt</strong> (offline 14m)"],
-      ["omni", "Return restocked in real time — <strong>London Regent St</strong>"],
-      ["fiscal", "CFDI invoice issued — <strong>Mexico City Polanco</strong>"],
-      ["pos", "Loyalty sign-up via QR — <strong>Singapore Orchard</strong>"],
-      ["omni", "Ship-from-store label printed — <strong>Toronto Eaton Centre</strong>"],
-      ["rfid", "EAS gate verified 3 items sold — <strong>Stockholm City</strong>"]
+      ["rfid", "Self-checkout: 8 items in 2.4s <strong>Osaka Umeda</strong>"],
+      ["pos", "Store-and-Forward sync complete <strong>Zermatt</strong> (offline 14m)"],
+      ["omni", "Return restocked in real time <strong>London Regent St</strong>"],
+      ["fiscal", "CFDI invoice issued <strong>Mexico City Polanco</strong>"],
+      ["pos", "Loyalty sign-up via QR <strong>Singapore Orchard</strong>"],
+      ["omni", "Ship-from-store label printed <strong>Toronto Eaton Centre</strong>"],
+      ["rfid", "EAS gate verified 3 items sold <strong>Stockholm City</strong>"]
     ];
     var LF_TAGS = { pos: "POS", rfid: "RFID", omni: "OMNI", fiscal: "FISCAL" };
     var lfIdx = Math.floor(Math.random() * LF_EVENTS.length);
@@ -372,7 +372,7 @@ if (window.netlifyIdentity) {
         }
       });
     });
-    document.querySelectorAll(".cs-card[data-video], .csx-card[data-video]").forEach(function (card) {
+    document.querySelectorAll(".cs-card[data-video].csx-card[data-video]").forEach(function (card) {
       var id = card.getAttribute("data-video");
       var entry = { card: card, iframe: null };
       csPlayers.push(entry);
@@ -493,7 +493,7 @@ if (window.netlifyIdentity) {
   vids.forEach(function (v) {
     managed.add(v);
     v.muted = true;
-    // A manual pause while the video is on screen means the viewer opted out — stop managing it.
+    // A manual pause while the video is on screen means the viewer opted out. Stop managing it.
     v.addEventListener("pause", function () {
       if (v._autoPaused) { v._autoPaused = false; return; }
       if (v.ended) return;
