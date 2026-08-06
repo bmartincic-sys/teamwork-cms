@@ -372,7 +372,7 @@ if (window.netlifyIdentity) {
         }
       });
     });
-    document.querySelectorAll(".cs-card[data-video].csx-card[data-video]").forEach(function (card) {
+    document.querySelectorAll(".cs-card[data-video], .csx-card[data-video]").forEach(function (card) {
       var id = card.getAttribute("data-video");
       var entry = { card: card, iframe: null };
       csPlayers.push(entry);
