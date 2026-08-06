@@ -93,7 +93,7 @@
       </div>
       {% if collections.resources.length %}
       <div class="nav-item">
-        <span class="nav-link{% if not onCaseStudy and not onPressRelease and ("/blog/" in page.url or "/glossary/" in page.url or "/frequently-asked-questions/" in page.url or "/technical-evaluation/" in page.url) %} nav-link-active{% endif %}">Resources <i class="ti ti-chevron-down" style="font-size:14px"></i></span>
+        <span class="nav-link{% if not onCaseStudy and (onPressRelease or "/blog/" in page.url or "/press-room/" in page.url or "/technical-evaluation/" in page.url) %} nav-link-active{% endif %}">Resources <i class="ti ti-chevron-down" style="font-size:14px"></i></span>
         <div class="nav-dropdown nav-cs">
           <div class="nav-cs-head">
             <span>Latest from the blog</span>
@@ -112,55 +112,37 @@
             </a>
             {% endfor %}
             <div class="nav-rows">
-              {% set resMeta = {
-                "/blog/": ["ti-article", "Insights, trends, and how retailers are operating"],
-                "/glossary/": ["ti-book", "Retail and POS terminology, defined"],
-                "/frequently-asked-questions/": ["ti-help-circle", "Straight answers to the questions we get most"],
-                "/technical-evaluation/": ["ti-shield-lock", "Architecture, security, and migration — for technical evaluators"]
-              } %}
-              {% for r in collections.resources %}{% if r.url != "/case-studies/" %}
-              <a class="nav-row" href="{{ r.url }}"{% if page.url == r.url %} aria-current="page"{% endif %}>
-                <span class="nav-row-ico"><i class="ti {{ resMeta[r.url][0] or "ti-file" }}"></i></span>
+              {% set resRows = [
+                ["/blog/", "ti-article", "Blog", "Insights, trends, and how retailers are operating"],
+                ["/press-room/", "ti-news", "Press Room", "Announcements and media contacts"],
+                ["/technical-evaluation/", "ti-shield-lock", "Technical Evaluation", "Architecture, security, and migration"]
+              ] %}
+              {% for r in resRows %}
+              <a class="nav-row" href="{{ r[0] }}"{% if page.url == r[0] %} aria-current="page"{% endif %}>
+                <span class="nav-row-ico"><i class="ti {{ r[1] }}"></i></span>
                 <span class="nav-row-text">
-                  <strong>{{ r.data.navLabel or r.data.title }}</strong>
-                  <em>{{ resMeta[r.url][1] }}</em>
+                  <strong>{{ r[2] }}</strong>
+                  <em>{{ r[3] }}</em>
                 </span>
                 <i class="ti ti-arrow-right nav-row-arrow"></i>
               </a>
-              {% endif %}{% endfor %}
+              {% endfor %}
             </div>
           </div>
         </div>
       </div>
       {% endif %}
       <div class="nav-item">
-        {% set companyUrls = ["/about/", "/careers/", "/teamwork-cares/", "/press-room/"] %}
-        {% set companyIcons = {"/about/":"ti-building","/careers/":"ti-briefcase","/teamwork-cares/":"ti-heart-handshake","/press-room/":"ti-news"} %}
-        {% set companyLabels = {"/about/":"About","/careers/":"Careers","/teamwork-cares/":"Teamwork Cares","/press-room/":"Press Room"} %}
-        <a href="/about/" class="nav-link{% if onPressRelease or page.url in companyUrls %} nav-link-active{% endif %}">Company <i class="ti ti-chevron-down" style="font-size:14px"></i></a>
-        <div class="nav-dropdown nav-cs">
-          <div class="nav-cs-head">
-            <span>Latest press releases</span>
-            <a href="/press-room/">View all <i class="ti ti-arrow-right"></i></a>
-          </div>
-          <div class="nav-split">
-            {% for post in collections.blogpost | inCategory("News") | take(1) %}
-            <a class="ncs-card ncs-card-wide" href="{{ post.url }}">
-              <img class="ncs-photo" src="/assets/images/blog/real/{{ post.fileSlug }}.jpg" alt="{{ post.data.title }}" loading="lazy">
-              <span class="ncs-scrim"></span>
-              <span class="ncs-sector">Press Release</span>
-              <span class="ncs-body">
-                <span class="ncs-name">{{ post.data.date | formatDate }}</span>
-                <span class="ncs-title">{{ post.data.title }}</span>
-              </span>
-            </a>
-            {% endfor %}
-            <div class="nav-rows">
+        {% set companyUrls = ["/about/", "/careers/", "/teamwork-cares/"] %}
+        {% set companyIcons = {"/about/":"ti-building","/careers/":"ti-briefcase","/teamwork-cares/":"ti-heart-handshake"} %}
+        {% set companyLabels = {"/about/":"About","/careers/":"Careers","/teamwork-cares/":"Teamwork Cares"} %}
+        <a href="/about/" class="nav-link{% if page.url in companyUrls %} nav-link-active{% endif %}">Company <i class="ti ti-chevron-down" style="font-size:14px"></i></a>
+        <div class="nav-dropdown nav-cs nav-cs-solo">
+          <div class="nav-rows nav-rows-solo">
               {% set companyDesc = {
                 "/about/": "Who we are and how we got here",
                 "/careers/": "Open roles across the company",
-                "/teamwork-cares/": "How our team gives back",
-                "/press-room/": "Announcements and media contacts"
+                "/teamwork-cares/": "How our team gives back"
               } %}
               {% for c in companyUrls %}
               <a class="nav-row" href="{{ c }}"{% if page.url == c %} aria-current="page"{% endif %}>
@@ -172,7 +154,6 @@
                 <i class="ti ti-arrow-right nav-row-arrow"></i>
               </a>
               {% endfor %}
-            </div>
           </div>
         </div>
       </div>
@@ -214,12 +195,14 @@
     <div class="nav-mob-head">Solutions by industry</div>
     {% for s in collections.solutions | sortByNavOrder %}<a class="nav-mob-ind{% if page.url == s.url %} is-current{% endif %}" href="{{ s.url }}"{% if page.url == s.url %} aria-current="page"{% endif %}><i class="ti ti-{{ s.data.navIcon or 'building-store' }}"></i> {{ s.data.navLabel or s.data.title }}</a>
     {% endfor %}
-    {% for r in collections.resources %}<a href="{{ r.url }}"{% if page.url == r.url %} class="is-current" aria-current="page"{% endif %}>{{ r.data.navLabel or r.data.title }}</a>
-    {% endfor %}
+    <div class="nav-mob-head">Resources</div>
+    <a href="/blog/"{% if "/blog/" in page.url %} class="is-current" aria-current="page"{% endif %}>Blog</a>
+    <a href="/press-room/"{% if page.url == "/press-room/" %} class="is-current" aria-current="page"{% endif %}>Press Room</a>
+    <a href="/technical-evaluation/"{% if page.url == "/technical-evaluation/" %} class="is-current" aria-current="page"{% endif %}>Technical Evaluation</a>
+    <div class="nav-mob-head">Company</div>
     <a href="/about/"{% if page.url == "/about/" %} class="is-current" aria-current="page"{% endif %}>About</a>
     <a href="/careers/"{% if page.url == "/careers/" %} class="is-current" aria-current="page"{% endif %}>Careers</a>
     <a href="/teamwork-cares/"{% if page.url == "/teamwork-cares/" %} class="is-current" aria-current="page"{% endif %}>Teamwork Cares</a>
-    <a href="/press-room/"{% if page.url == "/press-room/" %} class="is-current" aria-current="page"{% endif %}>Press Room</a>
     <a href="/contact/"{% if page.url == "/contact/" %} class="is-current" aria-current="page"{% endif %}>Contact</a>
     <button class="btn btn-primary" onclick="window.location.href='/contact/'">Book a demo</button>
   </div>

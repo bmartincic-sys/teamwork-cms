@@ -3384,6 +3384,7 @@ a.tm-day-win:hover i { transform: translateX(2px); }
 
 /* Case Studies nav dropdown — homepage card language, no hover video */
 .nav-cs { min-width: 720px; padding: 14px; left: 50%; transform: translate(-50%, -4px); }
+.nav-cs-solo { min-width: 360px; }   /* rows-only dropdown, no feature card */
 .nav-item:hover .nav-cs, .nav-item:focus-within .nav-cs { transform: translate(-50%, 0); }
 .nav-cs-head {
   display: flex; align-items: center; justify-content: space-between;

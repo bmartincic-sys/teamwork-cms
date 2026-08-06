@@ -42,14 +42,16 @@
         <a href="/about/">About</a>
         <a href="/teamwork-cares/">Teamwork Cares</a>
         <a href="/careers/">Careers</a>
-        <a href="/press-room/">Press</a>
         <a href="/contact/">Contact</a>
         <h4 style="margin-top: 22px;">Case Studies &amp; Partners</h4>
         <a href="/case-studies/">Case Studies</a>
         <a href="https://partners.teamworkcommerce.com/integrations" target="_blank" rel="noopener">Partners Portal</a>
         <h4 style="margin-top: 22px;">Resources</h4>
-        {% for r in collections.resources %}{% if r.url != "/case-studies/" %}<a href="{{ r.url }}">{{ r.data.navLabel or r.data.title }}</a>
-        {% endif %}{% endfor %}
+        <a href="/blog/">Blog</a>
+        <a href="/press-room/">Press Room</a>
+        <a href="/technical-evaluation/">Technical Evaluation</a>
+        <a href="/frequently-asked-questions/">FAQ</a>
+        <a href="/glossary/">Glossary</a>
       </div>
     </div>
     <div class="footer-bottom">
