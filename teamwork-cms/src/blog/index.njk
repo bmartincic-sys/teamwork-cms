@@ -14,34 +14,24 @@ permalink: "/blog/"
   </nav>
 </div>
 
-<!-- ============ HERO ============ -->
-<section class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-glow"></div>
-  <div class="container hero-inner fade-up">
-    <span class="eyebrow"><span class="eyebrow-dot"></span> Blog</span>
-    <h1>Insights, research, & news about <span class="accent">commerce.</span></h1>
-    <p class="hero-sub">
-      Perspectives on point of sale, unified commerce, RFID, and mobile retail — informed by 30+ years of retail experience and the retailers we work with every day.
-    </p>
-  </div>
-</section>
-
-<!-- ============ CATEGORY FILTER ============ -->
-<section class="section" style="padding-bottom: 0;">
+<!-- ============ HEAD + FILTER (compact — straight into the posts) ============ -->
+<section style="padding: 4px 0 0;">
   <div class="container">
-    <div class="blog-filter-bar" id="blogFilterBar">
-      <button class="filter-pill active" data-filter="all">All ({{ collections.blogpost.length }})</button>
-      {% set categories = collections.blogpost | uniqueCategories %}
-      {% for cat in categories %}
-      <button class="filter-pill" data-filter="{{ cat | slugify }}">{{ cat }}</button>
-      {% endfor %}
+    <div class="blog-head">
+      <h1 class="blog-h1">Insights, research &amp; news</h1>
+      <div class="blog-filter-bar" id="blogFilterBar">
+        <button class="filter-pill active" data-filter="all">All ({{ collections.blogpost.length }})</button>
+        {% set categories = collections.blogpost | uniqueCategories %}
+        {% for cat in categories %}
+        <button class="filter-pill" data-filter="{{ cat | slugify }}">{{ cat }}</button>
+        {% endfor %}
+      </div>
     </div>
   </div>
 </section>
 
 <!-- ============ POST GRID ============ -->
-<section class="section">
+<section class="section" style="padding-top: 26px;">
   <div class="container">
     <div class="pillars-grid" id="blogGrid" style="grid-template-columns: repeat(3, 1fr);">
       {% for post in collections.blogpost %}

@@ -13,30 +13,19 @@ permalink: "/press-room/"
   </nav>
 </div>
 
-<!-- ============ HERO ============ -->
-<section class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-glow"></div>
-  <div class="container hero-inner fade-up">
-    <span class="eyebrow"><span class="eyebrow-dot"></span> Press Room</span>
-    <h1>Stay updated with our <span class="accent">latest news.</span></h1>
-    <p class="hero-sub">
-      See what we're doing in the news. For media, analyst, and speaking inquiries, contact us directly — our team responds to press requests personally, not through a ticket queue.
-    </p>
-    <div class="hero-cta">
-      <a href="/contact/" class="btn btn-primary btn-lg">Connect with Teamwork <i class="ti ti-arrow-right"></i></a>
+<!-- ============ HEAD (compact — straight into the releases) ============ -->
+<section style="padding: 4px 0 0;">
+  <div class="container">
+    <div class="blog-head">
+      <h1 class="blog-h1">Press room</h1>
+      <p class="blog-head-sub">Announcements, partnerships, and deployments, newest first. For media, analyst, and speaking inquiries, <a href="/contact/">contact us directly</a> — our team responds personally, not through a ticket queue.</p>
     </div>
   </div>
 </section>
 
 <!-- ============ LATEST PRESS RELEASES ============ -->
-<section class="section" id="releases">
+<section class="section" id="releases" style="padding-top: 6px;">
   <div class="container">
-    <div class="section-header">
-      <div class="section-eyebrow">In the News</div>
-      <h2 class="section-title">Latest press releases.</h2>
-      <p class="section-sub">Announcements, partnerships, and deployments, newest first.</p>
-    </div>
     <div class="prl-list">
       {% for post in collections.blogpost | inCategory("News") %}
       <a class="prl-item" href="{{ post.url }}">

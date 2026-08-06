@@ -2429,6 +2429,17 @@ details[open] summary { color: var(--brand-text); }
 
 /* ============ BLOG FILTER BAR ============ */
 .blog-filter-bar { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; margin-bottom: 8px; }
+/* Blog index: no hero — a compact title row sits directly above the grid */
+.blog-head {
+  padding: 12px 0 20px; border-bottom: 1px solid var(--border);
+}
+.blog-h1 {
+  margin: 0; font-size: clamp(24px, 2.7vw, 32px); font-weight: 600;
+  letter-spacing: -0.032em; line-height: 1.1; color: var(--text);
+}
+.blog-head .blog-filter-bar { justify-content: flex-start; margin: 16px 0 0; }
+.blog-head-sub { margin: 10px 0 0; max-width: 720px; font-size: 14.5px; line-height: 1.6; color: var(--text-muted); }
+.blog-head-sub a { color: var(--brand-text); font-weight: 600; }
 .filter-pill {
   padding: 8px 16px; border-radius: 100px; border: 1px solid var(--border);
   background: var(--bg-elevated); color: var(--text-muted); font-size: 13px; font-weight: 600;
