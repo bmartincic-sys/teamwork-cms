@@ -3968,6 +3968,12 @@ a.tm-day-win:hover i { transform: translateX(2px); }
   font-size: 12.5px; line-height: 1.6; color: var(--text-muted);
 }
 .contact-alt a { color: var(--brand-text); font-weight: 600; }
+.mini-card-lead {
+  grid-column: span 2;
+  border-color: rgba(36,125,255,0.30);
+  background: linear-gradient(150deg, rgba(36,125,255,0.07), rgba(124,80,245,0.05)), var(--bg-elevated);
+}
+@media (max-width: 900px) { .mini-card-lead { grid-column: span 1; } }
 /* ===== Technical evaluation track ===== */
 .tev-grid { display: grid; grid-template-columns: 1fr 1.05fr; gap: 56px; align-items: start; }
 .tev-formwrap {
