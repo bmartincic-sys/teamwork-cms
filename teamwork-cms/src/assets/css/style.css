@@ -1529,6 +1529,75 @@ a { color: inherit; text-decoration: none; }
 @media (max-width: 460px) { .innov-nodes { grid-template-columns: 1fr; } }
 @media (prefers-reduced-motion: reduce) { .innov-pulse { animation: none; opacity: 0; } }
 
+/* ===== RFID emitter — one reader broadcasting to every stage ===== */
+.rfx-track { margin-top: 48px; }
+.rfx-emitter { display: flex; flex-direction: column; align-items: center; }
+.rfx-halo { position: relative; width: 78px; height: 78px; display: grid; place-items: center; }
+.rfx-wave {
+  position: absolute; left: 50%; top: 50%; width: 78px; height: 78px; margin: -39px 0 0 -39px;
+  border-radius: 50%; border: 1.5px solid rgba(36,125,255,0.5);
+  opacity: 0; animation: rfx-ring 3.6s cubic-bezier(0.2,0.6,0.4,1) infinite;
+}
+.rfx-wave:nth-child(2) { animation-delay: 1.2s; border-color: rgba(122,92,255,0.45); }
+.rfx-wave:nth-child(3) { animation-delay: 2.4s; border-color: rgba(180,140,255,0.4); }
+@keyframes rfx-ring {
+  0%   { transform: scale(0.7); opacity: 0.75; }
+  70%  { opacity: 0.10; }
+  100% { transform: scale(2.9); opacity: 0; }
+}
+.rfx-reader {
+  position: relative; z-index: 2; width: 78px; height: 78px; border-radius: 14px;
+  display: flex; align-items: center; justify-content: center; font-size: 34px; color: #fff;
+  background: linear-gradient(150deg, #101740, #070912) padding-box,
+              linear-gradient(150deg, rgba(36,125,255,1), rgba(138,10,221,1)) border-box;
+  border: 1.5px solid transparent;
+  box-shadow: 0 18px 26px -16px rgba(7, 9, 26, 0.30), 0 0 26px -6px rgba(36,125,255,0.30), inset 0 1px 0 rgba(255,255,255,0.10);
+}
+.rfx-reader-cap {
+  margin-top: 12px; font-size: 11px; font-weight: 600; letter-spacing: 0.06em;
+  text-transform: uppercase; color: var(--text-muted);
+}
+.rfx-beams { display: block; width: 100%; height: 116px; margin: 12px 0 -2px; overflow: visible; }
+.rfx-beam-track path { fill: none; stroke: var(--border-strong); stroke-width: 1.5; stroke-dasharray: 3 5; vector-effect: non-scaling-stroke; }
+.rfx-beam-live path {
+  fill: none; stroke: url(#rfxBeam); stroke-width: 2.5; stroke-linecap: round;
+  vector-effect: non-scaling-stroke; stroke-dasharray: 22 100;
+  animation: rfx-shoot 2.8s cubic-bezier(0.45,0,0.55,1) infinite;
+}
+/* dash is a % of each path, so short beams get a longer share to read evenly */
+.rfx-beam-live path:nth-child(1) { animation-delay: 0s;    stroke-dasharray: 22 100; }
+.rfx-beam-live path:nth-child(2) { animation-delay: 0.16s; stroke-dasharray: 34 100; }
+.rfx-beam-live path:nth-child(3) { animation-delay: 0.32s; stroke-dasharray: 56 100; }
+.rfx-beam-live path:nth-child(4) { animation-delay: 0.48s; stroke-dasharray: 34 100; }
+.rfx-beam-live path:nth-child(5) { animation-delay: 0.64s; stroke-dasharray: 22 100; }
+@keyframes rfx-shoot {
+  0%   { stroke-dashoffset: 156; opacity: 0; }
+  8%   { opacity: 1; }
+  66%  { opacity: 1; }
+  74%  { stroke-dashoffset: 0; opacity: 0; }
+  100% { stroke-dashoffset: 0; opacity: 0; }
+}
+.rfx-track .innov-node-dot { animation: rfx-hit 2.8s ease-out infinite; }
+.rfx-track .innov-node:nth-child(1) .innov-node-dot { animation-delay: 0s; }
+.rfx-track .innov-node:nth-child(2) .innov-node-dot { animation-delay: 0.16s; }
+.rfx-track .innov-node:nth-child(3) .innov-node-dot { animation-delay: 0.32s; }
+.rfx-track .innov-node:nth-child(4) .innov-node-dot { animation-delay: 0.48s; }
+.rfx-track .innov-node:nth-child(5) .innov-node-dot { animation-delay: 0.64s; }
+@keyframes rfx-hit {
+  0%, 62% { box-shadow: 0 18px 26px -18px rgba(7, 9, 26, 0.3), inset 0 1px 0 rgba(255,255,255,0.08); }
+  72%     { box-shadow: 0 0 0 6px rgba(36,125,255,0.14), 0 18px 26px -18px rgba(7, 9, 26, 0.3), inset 0 1px 0 rgba(255,255,255,0.08); }
+  90%, 100% { box-shadow: 0 18px 26px -18px rgba(7, 9, 26, 0.3), inset 0 1px 0 rgba(255,255,255,0.08); }
+}
+@media (max-width: 820px) {
+  .rfx-beams { display: none; }
+  .rfx-emitter { margin-bottom: 34px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .rfx-wave { animation: none; opacity: 0; }
+  .rfx-beam-live path { animation: none; stroke-dasharray: none; opacity: 0.5; }
+  .rfx-track .innov-node-dot { animation: none; }
+}
+
 /* ===== Platform service cards (rich, with visual + bold Plus) ===== */
 .svc-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 .svc-grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; max-width: 760px; }
