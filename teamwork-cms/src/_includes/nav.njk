@@ -50,8 +50,16 @@
           <div class="mega-cols" style="margin-top: 10px;">
             <div class="mega-col" style="grid-column: 1 / -1;">
               <div class="mega-head"><i class="ti ti-building-store"></i> Solutions by industry</div>
-              <div class="mega-sol">
-                {% for sol in collections.solutions | sortByNavOrder %}<a href="{{ sol.url }}"{% if page.url == sol.url %} class="is-current" aria-current="page"{% endif %}>{{ sol.data.navLabel or sol.data.title }}</a>{% endfor %}
+              <div class="mega-ind">
+                {% for sol in collections.solutions | sortByNavOrder %}
+                <a class="mega-ind-item{% if page.url == sol.url %} is-current{% endif %}" href="{{ sol.url }}"{% if page.url == sol.url %} aria-current="page"{% endif %}>
+                  <span class="mega-ind-ico"><i class="ti ti-{{ sol.data.navIcon or 'building-store' }}"></i></span>
+                  <span class="mega-ind-text">
+                    <strong>{{ sol.data.navLabel or sol.data.title }}</strong>
+                    {% if sol.data.navBlurb %}<em>{{ sol.data.navBlurb }}</em>{% endif %}
+                  </span>
+                </a>
+                {% endfor %}
               </div>
             </div>
           </div>
@@ -203,8 +211,8 @@
     <a href="/features/training/"{% if page.url == "/features/training/" %} class="is-current" aria-current="page"{% endif %}>Training &amp; Certification</a>
     <a href="/case-studies/"{% if onCaseStudy %} class="is-current" aria-current="page"{% endif %}>Case Studies</a>
     <a href="https://partners.teamworkcommerce.com/integrations" target="_blank" rel="noopener">Partners</a>
-    <div class="nav-mob-head">Solutions</div>
-    {% for s in collections.solutions | sortByNavOrder %}<a href="{{ s.url }}"{% if page.url == s.url %} class="is-current" aria-current="page"{% endif %}>{{ s.data.navLabel or s.data.title }}</a>
+    <div class="nav-mob-head">Solutions by industry</div>
+    {% for s in collections.solutions | sortByNavOrder %}<a class="nav-mob-ind{% if page.url == s.url %} is-current{% endif %}" href="{{ s.url }}"{% if page.url == s.url %} aria-current="page"{% endif %}><i class="ti ti-{{ s.data.navIcon or 'building-store' }}"></i> {{ s.data.navLabel or s.data.title }}</a>
     {% endfor %}
     {% for r in collections.resources %}<a href="{{ r.url }}"{% if page.url == r.url %} class="is-current" aria-current="page"{% endif %}>{{ r.data.navLabel or r.data.title }}</a>
     {% endfor %}
