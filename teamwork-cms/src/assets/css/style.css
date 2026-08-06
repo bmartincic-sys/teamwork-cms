@@ -3929,6 +3929,97 @@ a.tm-day-win:hover i { transform: translateX(2px); }
 .ticker-item:nth-child(odd) .ticker-value { color: #6aa8ff; }
 .ticker-item:nth-child(2n) .ticker-value { color: #a78bfa; }
 
+/* ===== RFID in Practice — handheld broadcasting to two columns of topics ===== */
+.rfp-stage {
+  position: relative; margin-top: 40px;
+  display: grid; grid-template-columns: 1fr 280px 1fr; gap: 0 64px; align-items: stretch;
+}
+.rfp-beam-layer { position: absolute; top: 0; bottom: 0; left: -64px; right: -64px; z-index: 0; pointer-events: none; }
+.rfp-beams { display: block; width: 100%; height: 100%; }
+.rfp-beam-track path { fill: none; stroke: var(--border-strong); stroke-width: 1.5; stroke-dasharray: 3 5; vector-effect: non-scaling-stroke; }
+.rfp-beam-live path {
+  fill: none; stroke-width: 2.5; stroke-linecap: round; vector-effect: non-scaling-stroke;
+  stroke-dasharray: 30 100; animation: rfp-shoot 3.2s cubic-bezier(0.45,0,0.55,1) infinite;
+}
+.rfp-beam-live path:nth-child(-n+3) { stroke: url(#rfpL); }
+.rfp-beam-live path:nth-child(n+4)  { stroke: url(#rfpR); }
+.rfp-beam-live path:nth-child(1) { animation-delay: 0s; }
+.rfp-beam-live path:nth-child(4) { animation-delay: 0.18s; }
+.rfp-beam-live path:nth-child(2) { animation-delay: 0.36s; }
+.rfp-beam-live path:nth-child(5) { animation-delay: 0.54s; }
+.rfp-beam-live path:nth-child(3) { animation-delay: 0.72s; }
+.rfp-beam-live path:nth-child(6) { animation-delay: 0.90s; }
+@keyframes rfp-shoot {
+  0%   { stroke-dashoffset: 130; opacity: 0; }
+  10%  { opacity: 1; }
+  68%  { opacity: 1; }
+  78%  { stroke-dashoffset: 0; opacity: 0; }
+  100% { stroke-dashoffset: 0; opacity: 0; }
+}
+.rfp-col { position: relative; z-index: 1; display: grid; grid-template-rows: repeat(3, 1fr); gap: 0; }
+.rfp-card {
+  position: relative; margin: 9px 0;
+  padding: 24px 26px 26px; border-radius: 10px;
+  background: var(--bg-elevated); border: 1px solid var(--border);
+  transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+}
+.rfp-card:hover { transform: translateY(-3px); border-color: rgba(36,125,255,0.4); box-shadow: var(--shadow-lg); }
+.rfp-card h3 { font-size: 17px; font-weight: 600; letter-spacing: -0.02em; margin: 0 0 8px; color: var(--text); }
+.rfp-card p { font-size: 13.5px; line-height: 1.62; color: var(--text-muted); margin: 0; }
+.rfp-col-right .rfp-card .mini-ico { color: var(--brand-purple); background: rgba(124,80,245,0.10); }
+/* the point where each beam lands on its card */
+.rfp-card::after {
+  content: ''; position: absolute; top: 50%; width: 9px; height: 9px; border-radius: 50%;
+  transform: translateY(-50%); background: var(--brand-blue);
+  box-shadow: 0 0 0 4px rgba(36,125,255,0.16);
+}
+.rfp-col-left .rfp-card::after  { right: -4.5px; }
+.rfp-col-right .rfp-card::after { left: -4.5px; background: #a78bfa; box-shadow: 0 0 0 4px rgba(167,139,250,0.16); }
+
+.rfp-hub { position: relative; z-index: 1; display: flex; align-items: center; justify-content: center; }
+.rfp-hub::before {
+  content: ''; position: absolute; left: 50%; top: 50%; width: 360px; height: 360px;
+  transform: translate(-50%, -50%); border-radius: 50%; z-index: 0; pointer-events: none;
+  background: radial-gradient(circle, rgba(36,125,255,0.18), rgba(124,80,245,0.10) 45%, transparent 70%);
+  filter: blur(26px);
+}
+.rfp-shot {
+  position: relative; z-index: 2; display: block; width: 100%; height: auto;
+  filter: drop-shadow(0 26px 26px rgba(7, 9, 26, 0.30));
+}
+.rfp-ring {
+  position: absolute; left: 50%; top: 50%; width: 190px; height: 190px; margin: -95px 0 0 -95px;
+  border-radius: 50%; border: 1.5px solid rgba(36,125,255,0.45); z-index: 1;
+  opacity: 0; animation: rfp-ring 4.2s cubic-bezier(0.2,0.6,0.4,1) infinite;
+}
+.rfp-ring:nth-child(2) { animation-delay: 1.4s; border-color: rgba(122,92,255,0.4); }
+.rfp-ring:nth-child(3) { animation-delay: 2.8s; border-color: rgba(180,140,255,0.35); }
+@keyframes rfp-ring {
+  0%   { transform: scale(0.5); opacity: 0.7; }
+  70%  { opacity: 0.08; }
+  100% { transform: scale(2.2); opacity: 0; }
+}
+@media (max-width: 1000px) {
+  .rfp-stage { grid-template-columns: 1fr 210px 1fr; gap: 0 40px; }
+  .rfp-beam-layer { left: -40px; right: -40px; }
+  .rfp-ring { width: 150px; height: 150px; margin: -75px 0 0 -75px; }
+}
+@media (max-width: 820px) {
+  .rfp-stage { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .rfp-beam-layer { display: none; }
+  .rfp-col { display: contents; }
+  .rfp-card { margin: 0; }
+  .rfp-card::after { display: none; }
+  .rfp-hub { grid-column: 1 / -1; order: -1; margin-bottom: 22px; }
+  .rfp-shot { width: 168px; margin: 0 auto; }
+  .rfp-ring { width: 140px; height: 140px; margin: -70px 0 0 -70px; }
+}
+@media (max-width: 560px) { .rfp-stage { grid-template-columns: 1fr; } }
+@media (prefers-reduced-motion: reduce) {
+  .rfp-ring { animation: none; opacity: 0; }
+  .rfp-beam-live path { animation: none; stroke-dasharray: none; opacity: 0.45; }
+}
+
 /* RFID journey connectors between chapters */
 .journey-link {
   position: relative; width: 2px; height: 108px; margin: -96px auto -12px;

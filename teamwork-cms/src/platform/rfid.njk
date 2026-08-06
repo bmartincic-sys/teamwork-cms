@@ -358,36 +358,79 @@ navOrder: 5
       <div class="section-eyebrow">RFID in Practice</div>
       <h2 class="section-title">What the handheld actually does.</h2>
     </div>
-    <div class="mini-grid">
-      <div class="mini-card">
-        <div class="mini-ico"><i class="ti ti-package-import"></i></div>
-        <h3>Bulk Receiving &amp; Transfers</h3>
-        <p>Paired handheld readers scan a large merchandise order inside an incoming or outgoing transfer in seconds, logging bulk counts alongside individual EPC identifiers.</p>
+    <div class="rfp-stage">
+      <div class="rfp-col rfp-col-left">
+        <div class="rfp-card">
+          <div class="mini-ico"><i class="ti ti-package-import"></i></div>
+          <h3>Bulk Receiving &amp; Transfers</h3>
+          <p>Paired handheld readers scan a large merchandise order inside an incoming or outgoing transfer in seconds, logging bulk counts alongside individual EPC identifiers.</p>
+        </div>
+        <div class="rfp-card">
+          <div class="mini-ico"><i class="ti ti-antenna"></i></div>
+          <h3>Adjustable Antenna Power</h3>
+          <p>Scale the reader from low to high power — pinpoint one item on a rack, or sweep an entire room.</p>
+        </div>
+        <div class="rfp-card">
+          <div class="mini-ico"><i class="ti ti-list-check"></i></div>
+          <h3>Full &amp; Cycle Counts</h3>
+          <p>Run a comprehensive daily full-store count, or isolate the count to targeted product variations while unrelated items filter out automatically.</p>
+        </div>
       </div>
-      <div class="mini-card">
-        <div class="mini-ico"><i class="ti ti-antenna"></i></div>
-        <h3>Adjustable Antenna Power</h3>
-        <p>Scale the reader from low to high power — pinpoint one item on a rack, or sweep an entire room.</p>
+
+      <div class="rfp-hub">
+        <!-- spans the hub column plus both gaps, so x=0 / x=408 land exactly on the card edges -->
+        <div class="rfp-beam-layer">
+        <svg class="rfp-beams" viewBox="0 0 408 100" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+          <defs>
+            <linearGradient id="rfpL" gradientUnits="userSpaceOnUse" x1="204" y1="0" x2="0" y2="0">
+              <stop offset="0%" stop-color="#6d9bff" stop-opacity="0.1"/>
+              <stop offset="55%" stop-color="#6d9bff" stop-opacity="0.95"/>
+              <stop offset="100%" stop-color="#b48cff" stop-opacity="0.95"/>
+            </linearGradient>
+            <linearGradient id="rfpR" gradientUnits="userSpaceOnUse" x1="204" y1="0" x2="408" y2="0">
+              <stop offset="0%" stop-color="#6d9bff" stop-opacity="0.1"/>
+              <stop offset="55%" stop-color="#6d9bff" stop-opacity="0.95"/>
+              <stop offset="100%" stop-color="#b48cff" stop-opacity="0.95"/>
+            </linearGradient>
+          </defs>
+          <g class="rfp-beam-track">
+            <path d="M204 50 L0 16.667"/><path d="M204 50 L0 50"/><path d="M204 50 L0 83.333"/>
+            <path d="M204 50 L408 16.667"/><path d="M204 50 L408 50"/><path d="M204 50 L408 83.333"/>
+          </g>
+          <g class="rfp-beam-live">
+            <path pathLength="100" d="M204 50 L0 16.667"/>
+            <path pathLength="100" d="M204 50 L0 50"/>
+            <path pathLength="100" d="M204 50 L0 83.333"/>
+            <path pathLength="100" d="M204 50 L408 16.667"/>
+            <path pathLength="100" d="M204 50 L408 50"/>
+            <path pathLength="100" d="M204 50 L408 83.333"/>
+          </g>
+        </svg>
+        </div>
+        <span class="rfp-ring"></span>
+        <span class="rfp-ring"></span>
+        <span class="rfp-ring"></span>
+        <img class="rfp-shot" src="/assets/images/homepage/rfid-handheld.webp"
+             alt="A Bluebird RFID sled reader with an iPhone running the Teamwork Commerce daily count screen"
+             width="560" height="1001" loading="lazy">
       </div>
-      <div class="mini-card">
-        <div class="mini-ico"><i class="ti ti-list-check"></i></div>
-        <h3>Full &amp; Cycle Counts</h3>
-        <p>Run a comprehensive daily full-store count, or isolate the count to targeted product variations while unrelated items filter out automatically.</p>
-      </div>
-      <div class="mini-card">
-        <div class="mini-ico"><i class="ti ti-radar-2"></i></div>
-        <h3>Hot-and-Cold Finder</h3>
-        <p>A proximity meter tracks how close the reader is to a specific item, walking an associate to stock that has gone missing on the floor.</p>
-      </div>
-      <div class="mini-card">
-        <div class="mini-ico"><i class="ti ti-shopping-cart"></i></div>
-        <h3>Self-Checkout Bins &amp; Counter Pads</h3>
-        <p>Structural RFID bins and flat counter pads register a whole basket at once with no line of sight to a barcode.</p>
-      </div>
-      <div class="mini-card">
-        <div class="mini-ico"><i class="ti ti-device-desktop"></i></div>
-        <h3>Customer-Facing Screen</h3>
-        <p>A paired client display shows the items as they register, takes payment, and can issue a secure web-page QR receipt.</p>
+
+      <div class="rfp-col rfp-col-right">
+        <div class="rfp-card">
+          <div class="mini-ico"><i class="ti ti-radar-2"></i></div>
+          <h3>Hot-and-Cold Finder</h3>
+          <p>A proximity meter tracks how close the reader is to a specific item, walking an associate to stock that has gone missing on the floor.</p>
+        </div>
+        <div class="rfp-card">
+          <div class="mini-ico"><i class="ti ti-shopping-cart"></i></div>
+          <h3>Self-Checkout Bins &amp; Counter Pads</h3>
+          <p>Structural RFID bins and flat counter pads register a whole basket at once with no line of sight to a barcode.</p>
+        </div>
+        <div class="rfp-card">
+          <div class="mini-ico"><i class="ti ti-device-desktop"></i></div>
+          <h3>Customer-Facing Screen</h3>
+          <p>A paired client display shows the items as they register, takes payment, and can issue a secure web-page QR receipt.</p>
+        </div>
       </div>
     </div>
   </div>
