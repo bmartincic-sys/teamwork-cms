@@ -4,7 +4,7 @@ title: "Teamwork Commerce | The Operating System for Modern Enterprise Retail"
 description: "Teamwork Commerce is the operating system for modern enterprise retail: 30,000+ terminals across 40+ countries with 99.99% uptime, enterprise POS, native RFID, and unified commerce."
 permalink: "/"
 ---
-<!-- ============ HERO: the POS completing a sale ============ -->
+<!-- ============ HERO: the Sales Receipt screen completing a sale ============ -->
 <section class="hero hpos-hero">
   <div class="hero-bg"></div>
   <div class="hero-glow"></div>
@@ -21,46 +21,76 @@ permalink: "/"
     </div>
 
     <div class="hpos-stage fade-up" style="animation-delay: 0.12s;">
-      <div class="hpos-device" id="hposDevice" aria-label="Teamwork Commerce point of sale completing a sale">
-        <div class="hpos-screen">
+      <div class="hpos-device" id="hposDevice" aria-label="Teamwork Commerce Sales Receipt screen completing a sale">
+        <div class="hpos-screen srx">
 
-          <div class="pos-users">
-            <div class="pos-user"><span class="pos-av">EM</span><span class="pos-ut"><em>Cashier</em><strong>Eric M.</strong></span></div>
-            <div class="pos-user"><span class="pos-av">EM</span><span class="pos-ut"><em>Associate</em><strong>Eric M.</strong></span></div>
+          <div class="srx-head">
+            <span class="srx-close" aria-hidden="true">&times;</span>
+            <span class="srx-title">Sales Receipt</span>
+            <span class="srx-tab">Cart (<span data-srx-qty>4</span>)</span>
           </div>
 
-          <div class="pos-row pos-fill" id="posItemsRow">
-            <span class="pos-lb">Sale Items (<span data-pos-qty>3</span>)</span>
-            <span class="pos-amt">$ <span data-pos-sub>104.39</span></span>
+          <div class="srx-body">
+            <div class="srx-cart">
+              <div class="srx-cols"><span>Items (<span data-srx-qty2>4</span>)</span><span>Qty</span><span>Total</span></div>
+              <ul class="srx-items" id="srxItems">
+                <li class="srx-item" data-srx-item>
+                  <span class="srx-swatch srx-sw1"></span>
+                  <span class="srx-inm"><strong>Cashmere overcoat</strong><em>Charcoal &middot; 40</em></span>
+                  <span class="srx-qty">1</span>
+                  <span class="srx-price">$ 1,290.00</span>
+                  <span class="srx-actions" aria-hidden="true"><i class="srx-act srx-act-d">Disc</i><i class="srx-act srx-act-x">Remove</i></span>
+                </li>
+                <li class="srx-item" data-srx-item data-srx-scarf>
+                  <span class="srx-swatch srx-sw2"></span>
+                  <span class="srx-inm"><strong>Silk twill scarf</strong><em>Ivory</em></span>
+                  <span class="srx-qty">1</span>
+                  <span class="srx-price"><b class="srx-plain">$ 395.00</b><b class="srx-now">$ 355.50</b><s class="srx-was">$ 395.00</s></span>
+                  <span class="srx-actions" aria-hidden="true"><i class="srx-act srx-act-d">Disc</i><i class="srx-act srx-act-x">Remove</i></span>
+                </li>
+                <li class="srx-item" data-srx-item>
+                  <span class="srx-swatch srx-sw3"></span>
+                  <span class="srx-inm"><strong>Leather Chelsea boot</strong><em>Black &middot; 10</em></span>
+                  <span class="srx-qty">1</span>
+                  <span class="srx-price">$ 850.00</span>
+                  <span class="srx-actions" aria-hidden="true"><i class="srx-act srx-act-d">Disc</i><i class="srx-act srx-act-x">Remove</i></span>
+                </li>
+                <li class="srx-item" data-srx-item>
+                  <span class="srx-swatch srx-sw4"></span>
+                  <span class="srx-inm"><strong>Merino turtleneck</strong><em>Camel &middot; M</em></span>
+                  <span class="srx-qty">1</span>
+                  <span class="srx-price">$ 420.00</span>
+                  <span class="srx-actions" aria-hidden="true"><i class="srx-act srx-act-d">Disc</i><i class="srx-act srx-act-x">Remove</i></span>
+                </li>
+              </ul>
+              <div class="srx-note" data-srx-note><span>Discount</span> &ndash; Courtesy 10% <b>&minus;$ 39.50</b></div>
+            </div>
+
+            <div class="srx-side">
+              <div class="srx-users">
+                <span class="srx-user"><i class="srx-av">EM</i><span><em>Cashier</em><strong>Eric M.</strong></span></span>
+                <span class="srx-user"><i class="srx-av">EM</i><span><em>Associate</em><strong>Eric M.</strong></span></span>
+              </div>
+              <div class="srx-row srx-fill"><span>Sale Items (<span data-srx-qty3>4</span>)</span><b>$ <span data-srx-sub>2,955.00</span></b></div>
+              <div class="srx-row"><span>Item Discounts</span><b class="srx-neg">&minus;$ <span data-srx-disc>39.50</span></b></div>
+              <div class="srx-row"><span>Sale Fees</span><span class="srx-plus" aria-hidden="true">+</span></div>
+              <div class="srx-row"><span>Taxes</span><b class="srx-blue">$ <span data-srx-tax>233.24</span></b></div>
+              <div class="srx-pills"><span>Rewards</span><span>Coupons</span></div>
+              <div class="srx-row srx-fill"><span>Bags</span><span class="srx-step" aria-hidden="true"><i>&minus;</i><i>+</i></span><b class="srx-bagsx">0 x $ 0.10</b></div>
+              <div class="srx-total"><span>Total</span><b>$ <span data-srx-tot>3,148.74</span></b></div>
+              <button class="srx-pay" type="button" tabindex="-1">PAY</button>
+            </div>
           </div>
-
-          <div class="pos-row"><span class="pos-lb2">Sale Discounts</span><span class="pos-plus" aria-hidden="true">+</span></div>
-          <div class="pos-row"><span class="pos-lb2">Sale Fees</span><span class="pos-plus" aria-hidden="true">+</span></div>
-          <div class="pos-row"><span class="pos-lb2">Taxes</span><span class="pos-blue">$ <span data-pos-tax>15.11</span></span></div>
-
-          <div class="pos-pills">
-            <span class="pos-pill">Rewards</span>
-            <span class="pos-pill">Coupons</span>
-          </div>
-
-          <div class="pos-row pos-fill pos-bags">
-            <span class="pos-lb2">Bags</span>
-            <span class="pos-step" aria-hidden="true"><i>&minus;</i><i>+</i></span>
-            <span class="pos-bagsx">0 x $ 0.10</span>
-          </div>
-
-          <div class="pos-total"><span>Total</span><span class="pos-tot">$ <span data-pos-tot>119.50</span></span></div>
-
-          <button class="pos-pay" type="button" tabindex="-1">PAY</button>
 
         </div>
       </div>
-      <span class="hpos-annot" id="hposAnnot" aria-hidden="true">RFID reads the basket at once</span>
+      <span class="hpos-annot" id="hposAnnot" aria-hidden="true">Swipe for line actions</span>
       <div class="hpos-shadow" aria-hidden="true"></div>
-      <p class="hpos-caption">The Teamwork POS checkout panel, completing a sale.</p>
+      <p class="hpos-caption">The Teamwork POS Sales Receipt screen, completing a sale.</p>
     </div>
   </div>
 </section>
+
 
 {% include "logos.njk" %}
 
