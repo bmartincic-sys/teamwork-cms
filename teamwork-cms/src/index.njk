@@ -24,51 +24,40 @@ permalink: "/"
       <div class="hpos-device" id="hposDevice" aria-label="Teamwork Commerce point of sale completing a sale">
         <div class="hpos-screen">
 
-          <div class="hpos-top">
-            <span class="hpos-store"><span class="hpos-dot"></span> Store 041 &middot; Associate EM</span>
-            <span class="hpos-badge hpos-status is-paid" data-at="0">Paid</span>
+          <div class="pos-users">
+            <div class="pos-user"><span class="pos-av">EM</span><span class="pos-ut"><em>Cashier</em><strong>Eric M.</strong></span></div>
+            <div class="pos-user"><span class="pos-av">EM</span><span class="pos-ut"><em>Associate</em><strong>Eric M.</strong></span></div>
           </div>
 
-          <ul class="hpos-items">
-            <li class="hpos-item" data-at="220"><span class="hpos-thumb"></span><span class="hpos-nm">Merino crew neck<em>Charcoal &middot; M</em></span><span class="hpos-pr">$128.00</span></li>
-            <li class="hpos-item" data-at="480"><span class="hpos-thumb"></span><span class="hpos-nm">Tailored chino<em>Stone &middot; 32</em></span><span class="hpos-pr">$96.00</span></li>
-            <li class="hpos-item hpos-rfid-item" data-at="1500"><span class="hpos-thumb"></span><span class="hpos-nm">Oxford shirt<em>White &middot; M</em></span><span class="hpos-pr">$82.00</span></li>
-            <li class="hpos-item hpos-rfid-item" data-at="1560"><span class="hpos-thumb"></span><span class="hpos-nm">Wool socks<em>2 pack</em></span><span class="hpos-pr">$24.00</span></li>
-            <li class="hpos-item hpos-rfid-item" data-at="1620"><span class="hpos-thumb"></span><span class="hpos-nm">Canvas tote<em>Natural</em></span><span class="hpos-pr">$38.00</span></li>
-          </ul>
-
-          <div class="hpos-rfid" data-at="1150">
-            <span class="hpos-rfid-ico" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
-                <rect x="8.3" y="3" width="7.4" height="7" rx="1.5"/>
-                <path d="M15.31 12.59 A 4.2 4.2 0 0 1 8.69 12.59"/>
-                <path d="M17.99 14.68 A 7.6 7.6 0 0 1 6.01 14.68"/>
-              </svg>
-            </span>
-            <span>RFID read &middot; 3 items at once</span>
+          <div class="pos-row pos-fill" id="posItemsRow">
+            <span class="pos-lb">Sale Items (<span data-pos-qty>3</span>)</span>
+            <span class="pos-amt">$ <span data-pos-sub>104.39</span></span>
           </div>
 
-          <div class="hpos-totals" data-at="2200">
-            <div class="hpos-row"><span>Subtotal</span><span>$368.00</span></div>
-            <div class="hpos-row"><span>Tax</span><span>$29.44</span></div>
-            <div class="hpos-row hpos-row-total"><span>Total</span><span class="hpos-total">$397.44</span></div>
+          <div class="pos-row"><span class="pos-lb2">Sale Discounts</span><span class="pos-plus" aria-hidden="true">+</span></div>
+          <div class="pos-row"><span class="pos-lb2">Sale Fees</span><span class="pos-plus" aria-hidden="true">+</span></div>
+          <div class="pos-row"><span class="pos-lb2">Taxes</span><span class="pos-blue">$ <span data-pos-tax>15.11</span></span></div>
+
+          <div class="pos-pills">
+            <span class="pos-pill">Rewards</span>
+            <span class="pos-pill">Coupons</span>
           </div>
 
-          <div class="hpos-pay" data-at="2900">
-            <span class="hpos-pay-face">
-              <span class="hpos-pay-ico" aria-hidden="true"><i class="ti ti-nfc"></i></span>
-              <span class="hpos-pay-txt">Hold near reader to pay</span>
-            </span>
-            <span class="hpos-done-face" data-at="3900">
-              <span class="hpos-tick" aria-hidden="true"><i class="ti ti-check"></i></span>
-              <span class="hpos-done-txt"><strong>Approved</strong><em>Contactless &middot; receipt sent</em></span>
-            </span>
+          <div class="pos-row pos-fill pos-bags">
+            <span class="pos-lb2">Bags</span>
+            <span class="pos-step" aria-hidden="true"><i>&minus;</i><i>+</i></span>
+            <span class="pos-bagsx">0 x $ 0.10</span>
           </div>
+
+          <div class="pos-total"><span>Total</span><span class="pos-tot">$ <span data-pos-tot>119.50</span></span></div>
+
+          <button class="pos-pay" type="button" tabindex="-1">PAY</button>
 
         </div>
       </div>
+      <span class="hpos-annot" id="hposAnnot" aria-hidden="true">RFID reads the basket at once</span>
       <div class="hpos-shadow" aria-hidden="true"></div>
-      <p class="hpos-caption">A basket completed on Teamwork POS: five items, one RFID read, contactless payment.</p>
+      <p class="hpos-caption">The Teamwork POS checkout panel, completing a sale.</p>
     </div>
   </div>
 </section>
