@@ -4,32 +4,71 @@ title: "Teamwork Commerce | The Operating System for Modern Enterprise Retail"
 description: "Teamwork Commerce is the operating system for modern enterprise retail: 30,000+ terminals across 40+ countries with 99.99% uptime, enterprise POS, native RFID, and unified commerce."
 permalink: "/"
 ---
-<!-- ============ HERO ============ -->
-<section class="hero hero-photo hero-photo-compact">
+<!-- ============ HERO: the POS completing a sale ============ -->
+<section class="hero hpos-hero">
   <div class="hero-bg"></div>
   <div class="hero-glow"></div>
 
-  <img class="hero-photo-bg" src="/assets/images/homepage/hero-store-jewelry.jpg" alt="A Teamwork Commerce checkout at a jewelry counter, an associate and a customer at the display case with the iPad POS and customer-facing display" style="object-position: 50% 42%;">
-  <div class="hero-photo-scrim"></div>
-
-  <div class="container hero-photo-inner">
-    <div class="hero-photo-head hero-head-wide fade-up">
+  <div class="container hpos-grid">
+    <div class="hpos-copy fade-up">
       <span class="eyebrow"><span class="eyebrow-dot"></span> Built for enterprise retail</span>
-      <h1 class="hero-photo-title hero-title-os">The <span class="os-grad">Operating System</span> For Modern Enterprise Retail</h1>
+      <h1 class="hpos-title">The <span class="os-grad">Operating System</span> For Modern Enterprise Retail</h1>
+      <p class="hpos-sub">Point of Sale at the core: every store, every channel, every country. Built by retailers, for retailers.</p>
+      <div class="hero-cta">
+        <a href="/contact/" class="btn btn-primary btn-lg">Book a demo <i class="ti ti-arrow-right"></i></a>
+        <a href="/platform/mobile-pos/" class="btn btn-ghost btn-lg">Explore the platform</a>
+      </div>
     </div>
 
-    <aside class="glass-card glass-shot fade-up" style="animation-delay: 0.15s;">
-      <img src="/assets/images/homepage/hero-pullout.webp" alt="The Teamwork POS checkout panel: sale items, taxes, rewards, bags, and one-tap PAY">
-    </aside>
+    <div class="hpos-stage fade-up" style="animation-delay: 0.12s;">
+      <div class="hpos-device" id="hposDevice" aria-label="Teamwork Commerce point of sale completing a sale">
+        <div class="hpos-screen">
 
-    <div class="hero-photo-foot hero-foot-left fade-up" style="animation-delay: 0.25s;">
-      <div class="hero-photo-note">
-        <p>Point of Sale at the core: every store, every channel, every country. Built by retailers, for retailers.</p>
-        <div class="hero-cta">
-          <a href="/contact/" class="btn btn-primary btn-lg">Book a demo <i class="ti ti-arrow-right"></i></a>
-          <a href="/platform/mobile-pos/" class="btn btn-ghost btn-lg">Explore the platform</a>
+          <div class="hpos-top">
+            <span class="hpos-store"><span class="hpos-dot"></span> Store 041 &middot; Associate EM</span>
+            <span class="hpos-badge hpos-status is-paid" data-at="0">Paid</span>
+          </div>
+
+          <ul class="hpos-items">
+            <li class="hpos-item" data-at="220"><span class="hpos-thumb"></span><span class="hpos-nm">Merino crew neck<em>Charcoal &middot; M</em></span><span class="hpos-pr">$128.00</span></li>
+            <li class="hpos-item" data-at="480"><span class="hpos-thumb"></span><span class="hpos-nm">Tailored chino<em>Stone &middot; 32</em></span><span class="hpos-pr">$96.00</span></li>
+            <li class="hpos-item hpos-rfid-item" data-at="1500"><span class="hpos-thumb"></span><span class="hpos-nm">Oxford shirt<em>White &middot; M</em></span><span class="hpos-pr">$82.00</span></li>
+            <li class="hpos-item hpos-rfid-item" data-at="1560"><span class="hpos-thumb"></span><span class="hpos-nm">Wool socks<em>2 pack</em></span><span class="hpos-pr">$24.00</span></li>
+            <li class="hpos-item hpos-rfid-item" data-at="1620"><span class="hpos-thumb"></span><span class="hpos-nm">Canvas tote<em>Natural</em></span><span class="hpos-pr">$38.00</span></li>
+          </ul>
+
+          <div class="hpos-rfid" data-at="1150">
+            <span class="hpos-rfid-ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+                <rect x="8.3" y="3" width="7.4" height="7" rx="1.5"/>
+                <path d="M15.31 12.59 A 4.2 4.2 0 0 1 8.69 12.59"/>
+                <path d="M17.99 14.68 A 7.6 7.6 0 0 1 6.01 14.68"/>
+              </svg>
+            </span>
+            <span>RFID read &middot; 3 items at once</span>
+          </div>
+
+          <div class="hpos-totals" data-at="2200">
+            <div class="hpos-row"><span>Subtotal</span><span>$368.00</span></div>
+            <div class="hpos-row"><span>Tax</span><span>$29.44</span></div>
+            <div class="hpos-row hpos-row-total"><span>Total</span><span class="hpos-total">$397.44</span></div>
+          </div>
+
+          <div class="hpos-pay" data-at="2900">
+            <span class="hpos-pay-face">
+              <span class="hpos-pay-ico" aria-hidden="true"><i class="ti ti-nfc"></i></span>
+              <span class="hpos-pay-txt">Hold near reader to pay</span>
+            </span>
+            <span class="hpos-done-face" data-at="3900">
+              <span class="hpos-tick" aria-hidden="true"><i class="ti ti-check"></i></span>
+              <span class="hpos-done-txt"><strong>Approved</strong><em>Contactless &middot; receipt sent</em></span>
+            </span>
+          </div>
+
         </div>
       </div>
+      <div class="hpos-shadow" aria-hidden="true"></div>
+      <p class="hpos-caption">A basket completed on Teamwork POS: five items, one RFID read, contactless payment.</p>
     </div>
   </div>
 </section>
@@ -429,3 +468,5 @@ permalink: "/"
 </script>
 
 <!-- ============ FOOTER ============ -->
+
+<script src="/assets/js/hero-pos.js" defer></script>
