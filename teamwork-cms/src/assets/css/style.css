@@ -6009,7 +6009,6 @@ main > .hero:first-child { margin-top: -85px; padding-top: 230px; }
   letter-spacing: -0.034em; line-height: 1.06; color: var(--text);
 }
 .hpos-sub { margin: 0 0 26px; max-width: 470px; font-size: 16.5px; line-height: 1.6; color: var(--text-muted); }
-.hpos-caption { margin: 34px auto 0; font-size: 11.5px; line-height: 1.55; color: var(--text-faint); text-align: center; max-width: 340px; }
 
 /* device */
 .hpos-stage { position: relative; justify-self: center; width: 100%; max-width: min(660px, 100%); }
@@ -6196,7 +6195,6 @@ main > .hero:first-child { margin-top: -85px; padding-top: 230px; }
   .hpos-grid { grid-template-columns: 1fr; gap: 26px; padding: 40px 0 56px; min-height: 0; }
   .hpos-copy { max-width: none; }
   .hpos-stage { max-width: min(620px, 100%); margin: 0 auto; }
-  .hpos-caption { max-width: none; }
 }
 @media (max-width: 520px) {
   .hpos-screen { padding: 15px 14px 16px; }
@@ -6234,7 +6232,6 @@ main > .hero.hpos-hero:first-child { margin-top: -85px; padding-top: 112px; }
 }
 .hpos-hero .hero-bg { opacity: 0.18; }
 .hpos-hero .hero-glow { display: none; }
-.hpos-caption { color: rgba(238,241,251,0.55); }
 
 @media (max-width: 1040px) {
   main > .hero.hpos-hero:first-child { padding-top: 104px; }
@@ -6261,3 +6258,19 @@ main > .hero.hpos-hero:first-child { margin-top: -85px; padding-top: 112px; }
 }
 
 .hpos-copy .hero-cta { justify-content: flex-start; margin-bottom: 0; }
+
+/* ===== Logo carousels: grab and slide ===== */
+.logos-marquee.is-draggable {
+  overflow-x: auto; overflow-y: hidden;
+  cursor: grab; scrollbar-width: none; -ms-overflow-style: none;
+  overscroll-behavior-x: contain; -webkit-overflow-scrolling: touch;
+}
+.logos-marquee.is-draggable::-webkit-scrollbar { display: none; }
+.logos-marquee.is-dragging { cursor: grabbing; }
+/* the keyframe drift is replaced by scrollLeft, so switch it off */
+.logos-marquee.is-draggable .logos-track,
+.logos-marquee.is-draggable .logos-track:hover { animation: none; }
+.logos-marquee.is-draggable .logo-slot,
+.logos-marquee.is-draggable .logo-slot img {
+  user-select: none; -webkit-user-select: none; -webkit-user-drag: none;
+}
