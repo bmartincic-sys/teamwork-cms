@@ -6449,3 +6449,40 @@ main > .hero.hpos-hero:first-child { margin-top: -85px; padding-top: 112px; }
 .off-note { margin: 14px 0 0; font-size: 12.5px; line-height: 1.6; color: var(--text-faint); }
 @media (max-width: 900px) { .off-cards { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 560px) { .off-cards { grid-template-columns: 1fr; } }
+
+/* ============ AROUND THE WORLD: photo mosaic ============
+   Deliberate spans so it reads as a designed wall rather than a dump. dense
+   flow backfills the holes the big tiles leave. */
+.gal {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 168px; gap: 14px; grid-auto-flow: dense;
+}
+.gal-cell {
+  margin: 0; position: relative; overflow: hidden; border-radius: 16px;
+  border: 1px solid var(--border); background: var(--bg-elevated);
+}
+.gal-cell img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  transition: transform 0.5s cubic-bezier(.2,.8,.2,1);
+}
+.gal-cell::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(180deg, transparent 55%, rgba(5,7,13,0.35));
+  opacity: 0; transition: opacity 0.35s ease;
+}
+.gal-cell:hover img { transform: scale(1.06); }
+.gal-cell:hover::after { opacity: 1; }
+.gal-big  { grid-column: span 2; grid-row: span 2; }
+.gal-wide { grid-column: span 2; }
+.gal-tall { grid-row: span 2; }
+@media (max-width: 900px) {
+  .gal { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 150px; }
+  .gal-big { grid-column: span 2; grid-row: span 2; }
+  .gal-wide { grid-column: span 2; grid-row: span 1; }
+  .gal-tall { grid-column: span 1; grid-row: span 2; }
+}
+@media (max-width: 520px) {
+  .gal { grid-template-columns: 1fr; grid-auto-rows: 200px; }
+  .gal-big, .gal-wide { grid-column: span 1; grid-row: span 1; }
+  .gal-tall { grid-row: span 1; }
+}
