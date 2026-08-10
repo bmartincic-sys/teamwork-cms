@@ -286,32 +286,66 @@ stickyHref: "/contact/"
 </section>
 
 <!-- ============ THE E-COMMERCE MISSION ============ -->
-<section style="padding: 96px 0; background: var(--bg-deep); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); position: relative; overflow: hidden;">
-  <div style="position: absolute; top: 0; right: -200px; width: 600px; height: 600px; background: var(--gradient-radial); opacity: 0.4; pointer-events: none;"></div>
+<!-- The copy always said there are two opposed missions. The old layout was four
+     stat cards, which expressed neither of them. Now the two failure modes face
+     each other and converge on the one number that fixes both. -->
+<section class="emx">
+  <div class="emx-glow"></div>
   <div class="container" style="position: relative; z-index: 1;">
-    <div style="max-width: 760px; margin: 0 auto 48px; text-align: center;">
+    <div class="section-header">
       <div class="section-eyebrow">The E-Commerce Mission</div>
-      <h2 class="section-title">Accurate available-to-sell for e-commerce.</h2>
-      <p class="section-sub">Every retailer has two e-commerce missions, never offer a product you can't fulfill, and never fail to offer a product you have. RFID delivers the accurate Available-to-Sell data that makes both possible.</p>
+      <h2 class="section-title">Two missions that pull in opposite directions.</h2>
+      <p class="section-sub">Never offer a product you cannot fulfil. Never fail to offer a product you have. Miss either one and the cost lands on the same customer.</p>
     </div>
-    <div class="ats-grid">
-      <div class="statcard statcard-blue ats-hero">
-        <div class="ats-hero-value"><span class="counter" data-target="99.9" data-suffix="%">99.9%</span></div>
-        <div class="ats-hero-label">ATS accuracy with RFID</div>
-        <p class="ats-hero-sub">Available-to-Sell your e-commerce can actually trust: every unit verified on the shelf, not assumed.</p>
+
+    <div class="emx-pair">
+      <div class="emx-mission">
+        <span class="emx-num">Mission 01</span>
+        <h3>Never offer what you cannot fulfil</h3>
+        <p class="emx-lead">The site sells a unit the shelf does not have.</p>
+        <ul class="emx-cost">
+          <li><i class="ti ti-x"></i> The order is cancelled after the customer has paid</li>
+          <li><i class="ti ti-x"></i> A refund, an apology, and a shopper who now doubts the stock figure</li>
+          <li><i class="ti ti-x"></i> Every subsequent promise on the site is worth less</li>
+        </ul>
       </div>
-      <div class="ats-side">
-        <div class="statcard statcard-purple">
-          <div class="statcard-value">0</div>
-          <div class="statcard-label">Ghost SKUs sold online</div>
+
+      <div class="emx-vs" aria-hidden="true"><span>and</span></div>
+
+      <div class="emx-mission">
+        <span class="emx-num">Mission 02</span>
+        <h3>Never fail to offer what you have</h3>
+        <p class="emx-lead">The shelf holds a unit the site will not sell.</p>
+        <ul class="emx-cost">
+          <li><i class="ti ti-x"></i> Stock sits in a stockroom while the page reads sold out</li>
+          <li><i class="ti ti-x"></i> The sale goes to whoever did trust their own numbers</li>
+          <li><i class="ti ti-x"></i> The markdown at the end of the season is yours to take</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="emx-converge" aria-hidden="true">
+      <span></span><span></span>
+    </div>
+
+    <div class="emx-fix">
+      <div class="emx-fix-head">
+        <span class="emx-fix-eyebrow"><i class="ti ti-check"></i> Both come down to one number</span>
+        <h3>Available-to-Sell your e-commerce can actually trust.</h3>
+        <p>Every unit verified on the shelf rather than assumed from a transaction log. Accurate ATS is what lets you promise the last unit and still sell it.</p>
+      </div>
+      <div class="emx-figs">
+        <div class="emx-fig">
+          <strong><span class="counter" data-target="99.9" data-suffix="%">99.9%</span></strong>
+          <span>Item-level accuracy with RFID</span>
         </div>
-        <div class="statcard statcard-blue">
-          <div class="statcard-value">15–22<span>%</span></div>
-          <div class="statcard-label">Revenue lift (Endless Aisle)</div>
+        <div class="emx-fig">
+          <strong><span class="counter" data-target="20" data-suffix=" min">20 min</span></strong>
+          <span>Full-store count, doors open</span>
         </div>
-        <div class="statcard statcard-purple">
-          <div class="statcard-value"><span class="counter" data-target="20" data-suffix=" min">20 min</span></div>
-          <div class="statcard-label">Full store count (was 24–48 hrs)</div>
+        <div class="emx-fig">
+          <strong>15&ndash;22<span class="emx-pct">%</span></strong>
+          <span>Revenue lift from Endless Aisle</span>
         </div>
       </div>
     </div>
@@ -319,36 +353,48 @@ stickyHref: "/contact/"
 </section>
 
 <!-- ============ CERTIFIED HARDWARE ============ -->
-<section class="section">
+<section class="section" style="padding-top: 0;">
   <div class="container">
     <div class="section-header">
       <div class="section-eyebrow">Certified Hardware</div>
-      <h2 class="section-title">Certified RFID hardware and tags only.</h2>
-      <p class="section-sub">We only certify hardware that's been tested and proven to work, the penalty for bad tags or unreliable equipment is years of labor lost.</p>
+      <h2 class="section-title">A published certified hardware list.</h2>
+      <p class="section-sub">Every device we integrate is tested, given a certification status, and tracked by release and by country. The list is public, and it is reviewed on a schedule rather than when someone remembers.</p>
     </div>
-    <div class="hw-grid">
-      <div class="hw-card">
-        <div class="hw-visual"><img src="/assets/images/hardware/bluebird-rfr901.png" alt="Bluebird RFR901 RFID sled with an iPhone running the Teamwork Commerce scanning app" loading="lazy"></div>
-        <h3 class="pillar-title">Bluebird RFID handhelds</h3>
-        <p class="pillar-desc">Certified RFID guns for counting, receiving, transfers, and item locate. Built into the iOS app workflow, with both power modes.</p>
+    <div class="mini-grid">
+      <div class="mini-card">
+        <div class="mini-ico"><i class="ti ti-device-mobile"></i></div>
+        <h3>Bluebird RFID handhelds</h3>
+        <p>Certified RFID sleds for counting, receiving, transfers and item locate, built into the iOS app workflow with both power modes.</p>
       </div>
-      <div class="hw-card">
-        <div class="hw-visual"><img src="/assets/images/hardware/impinj-speedway.png" alt="Impinj Speedway fixed RFID readers" loading="lazy"></div>
-        <h3 class="pillar-title">Zebra, Impinj &amp; Honeywell</h3>
-        <p class="pillar-desc">Hardware-agnostic across the global leaders: fixed readers, handhelds, and antennas, certified and supported in 40+ countries.</p>
+      <div class="mini-card">
+        <div class="mini-ico"><i class="ti ti-certificate"></i></div>
+        <h3>A certification status per device</h3>
+        <p>Each device on the list carries the level of testing and approval it has been through, so you know what is fully certified and what is merely compatible.</p>
       </div>
-      <div class="hw-card">
-        <div class="hw-visual hw-visual-icon"><i class="ti ti-tag"></i></div>
-        <h3 class="pillar-title">Certified tag quality</h3>
-        <p class="pillar-desc">We verify vendor tag quality before it reaches your inventory: a bad tag means re-tagging everything, a cost measured in years of labor, not dollars.</p>
+      <div class="mini-card">
+        <div class="mini-ico"><i class="ti ti-world"></i></div>
+        <h3>Availability by country</h3>
+        <p>The list records where each device is supported and which release of TW POS Pro introduced the integration, which is what a multi-market rollout actually needs.</p>
       </div>
-      <div class="hw-card">
-        <div class="hw-visual"><img src="/assets/images/hardware/epson-t88vi.png" alt="Epson TM-T88 printer that prints and encodes RFID tags" loading="lazy"></div>
-        <h3 class="pillar-title">Epson tag printers</h3>
-        <p class="pillar-desc">Print and encode tags from the iOS device during receiving: EPCs commissioned inside the purchase receipt document, one step.</p>
+      <div class="mini-card">
+        <div class="mini-ico"><i class="ti ti-refresh"></i></div>
+        <h3>Reviewed every 120 days</h3>
+        <p>A full review every 120 days keeps new integrations, status changes and newly certified devices current, rather than leaving a list to rot.</p>
+      </div>
+      <div class="mini-card">
+        <div class="mini-ico"><i class="ti ti-plug-connected"></i></div>
+        <h3>Bring your own, with advice</h3>
+        <p>We recommend certified hardware for full compatibility. If you want to use something that is not on the list, your Client Success team will talk through the support implications first.</p>
+      </div>
+      <div class="mini-card">
+        <div class="mini-ico"><i class="ti ti-list-details"></i></div>
+        <h3>See the whole list</h3>
+        <p>The current hardware compatibility list is published in full, categorised by what each device is for.</p>
       </div>
     </div>
-
+    <div style="text-align: center; margin-top: 32px;">
+      <a href="/certified-hardware/" class="btn btn-ghost">See the certified hardware list <i class="ti ti-arrow-right"></i></a>
+    </div>
   </div>
 </section>
 
@@ -466,7 +512,7 @@ stickyHref: "/contact/"
           What hardware do you support?
           <span class="faq-icon"><i class="ti ti-plus"></i></span>
         </button>
-        <div class="faq-answer"><p>We certify and support Bluebird RFID handhelds, Zebra, Impinj, and Honeywell readers, and Epson tag printers. We only promote equipment that has been tested and proven to work. The platform is hardware-agnostic across these certified brands and supports regional deployments across 40+ countries.</p></div>
+        <div class="faq-answer"><p>We publish a certified hardware list covering the devices that are integrated and supported with TW POS Pro, including Bluebird RFID handhelds. Each device carries a certification status, the release it was introduced in, and the countries it is available in, and the whole list is reviewed every 120 days. We recommend certified hardware for full compatibility; if you want to use something not on the list, your Client Success team can advise on support.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
@@ -526,7 +572,7 @@ stickyHref: "/contact/"
       "name": "What hardware do you support?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "We certify and support Bluebird RFID handhelds, Zebra, Impinj, and Honeywell readers, and Epson tag printers. We only promote equipment that has been tested and proven to work. The platform is hardware-agnostic across these certified brands and supports regional deployments across 40+ countries."
+        "text": "We publish a certified hardware list covering the devices that are integrated and supported with TW POS Pro, including Bluebird RFID handhelds. Each device carries a certification status, the release it was introduced in, and the countries it is available in, and the whole list is reviewed every 120 days. We recommend certified hardware for full compatibility; if you want to use something not on the list, your Client Success team can advise on support."
       }
     },
     {

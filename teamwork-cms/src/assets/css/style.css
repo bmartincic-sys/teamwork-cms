@@ -6823,3 +6823,96 @@ main > .hero.hpos-hero:first-child { margin-top: -85px; padding-top: 112px; }
   .rfpq-sec-head { flex-direction: column; gap: 16px; }
   .rfpq-qs li { padding-left: 38px; font-size: 15px; }
 }
+
+/* ============ RFID: THE E-COMMERCE MISSION ============
+   Two opposed failure modes facing each other, converging on one figure. */
+.emx {
+  position: relative; overflow: hidden; padding: 96px 0;
+  background: var(--bg-deep); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+}
+.emx-glow {
+  position: absolute; inset: 0; pointer-events: none;
+  background:
+    radial-gradient(46% 60% at 12% 12%, rgba(36,125,255,0.16), transparent 62%),
+    radial-gradient(46% 60% at 88% 14%, rgba(138,10,221,0.16), transparent 62%);
+}
+.emx-pair { display: grid; grid-template-columns: 1fr auto 1fr; gap: 26px; align-items: stretch; }
+.emx-mission {
+  padding: 30px 32px 32px; border: 1px solid var(--border); border-radius: 20px;
+  background: var(--bg-elevated);
+}
+.emx-num {
+  display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--brand-text); margin-bottom: 14px;
+}
+.emx-mission h3 {
+  margin: 0 0 10px; font-size: clamp(19px, 2.1vw, 23px); font-weight: 600;
+  letter-spacing: -0.025em; line-height: 1.25; color: var(--text);
+}
+.emx-lead { margin: 0 0 22px; font-size: 15px; line-height: 1.6; color: var(--text-muted); font-style: italic; }
+.emx-cost { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+.emx-cost li {
+  display: flex; gap: 11px; align-items: flex-start;
+  font-size: 14px; line-height: 1.6; color: var(--text-muted);
+}
+.emx-cost i {
+  flex: 0 0 auto; margin-top: 2px; font-size: 13px; color: var(--brand-purple);
+  width: 18px; height: 18px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center;
+  background: rgba(124,80,245,0.14);
+}
+/* The word between the two panels, on a vertical rule. */
+.emx-vs { position: relative; display: flex; align-items: center; justify-content: center; width: 34px; }
+.emx-vs::before {
+  content: ""; position: absolute; top: 0; bottom: 0; left: 50%; width: 1px;
+  background: linear-gradient(180deg, transparent, var(--border-strong) 18%, var(--border-strong) 82%, transparent);
+}
+.emx-vs span {
+  position: relative; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--text-faint); background: var(--bg-deep); padding: 8px 0;
+}
+/* Two short verticals dropping from the panels into the fix. */
+.emx-converge { display: grid; grid-template-columns: 1fr 1fr; gap: 0; height: 40px; margin: 0 auto; max-width: 60%; }
+.emx-converge span { position: relative; }
+.emx-converge span::before {
+  content: ""; position: absolute; top: 0; bottom: 0; left: 50%; width: 1px;
+  background: linear-gradient(180deg, var(--border-strong), rgba(36,125,255,0.65));
+}
+.emx-fix {
+  display: grid; grid-template-columns: 1.1fr 1fr; gap: 40px; align-items: center;
+  padding: 34px 38px; border: 1px solid rgba(36,125,255,0.34); border-radius: 20px;
+  background:
+    linear-gradient(180deg, rgba(36,125,255,0.09), rgba(138,10,221,0.06)),
+    var(--bg-elevated);
+}
+.emx-fix-eyebrow {
+  display: inline-flex; align-items: center; gap: 7px; margin-bottom: 14px;
+  font-size: 11px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: var(--brand-text);
+}
+.emx-fix-eyebrow i {
+  width: 17px; height: 17px; border-radius: 50%; background: var(--gradient); color: #fff;
+  display: inline-flex; align-items: center; justify-content: center; font-size: 11px;
+}
+.emx-fix h3 {
+  margin: 0 0 12px; font-size: clamp(21px, 2.5vw, 28px); font-weight: 600;
+  letter-spacing: -0.03em; line-height: 1.2; color: var(--text);
+}
+.emx-fix p { margin: 0; font-size: 14.5px; line-height: 1.7; color: var(--text-muted); }
+.emx-figs { display: flex; flex-direction: column; gap: 18px; }
+.emx-fig { display: flex; flex-direction: column; gap: 4px; }
+.emx-fig strong {
+  font-size: clamp(30px, 3.6vw, 42px); font-weight: 700; letter-spacing: -0.04em; line-height: 1;
+  background: var(--gradient); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+}
+.emx-fig > span { font-size: 13px; color: var(--text-muted); }
+.emx-pct { font-size: 0.62em; }
+@media (max-width: 900px) {
+  .emx { padding: 72px 0; }
+  .emx-pair { grid-template-columns: 1fr; gap: 16px; }
+  .emx-vs { width: auto; height: 34px; }
+  .emx-vs::before { top: 50%; bottom: auto; left: 0; right: 0; width: auto; height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border-strong) 18%, var(--border-strong) 82%, transparent); }
+  .emx-vs span { padding: 0 12px; }
+  .emx-converge { max-width: 100%; grid-template-columns: 1fr; height: 30px; }
+  .emx-converge span:last-child { display: none; }
+  .emx-fix { grid-template-columns: 1fr; gap: 26px; padding: 28px 24px; }
+}
