@@ -160,52 +160,57 @@ stickyHref: "/contact/"
 </section>
 
 <!-- ============ WHY WE WIN (competitive edge) ============ -->
-<section class="edge-section">
-  <div class="edge-bg"></div>
-  <div class="edge-glow-1"></div>
-  <div class="edge-glow-2"></div>
-  <div class="container" style="position: relative; z-index: 1;">
+<section class="section" style="padding-top: 0;">
+  <div class="container">
     <div class="section-header">
       <div class="section-eyebrow">The Competitive Edge</div>
       <h2 class="section-title">How Teamwork Commerce compares.</h2>
+      <p class="section-sub">The difference is not a feature list. It is whether inventory, RFID and fulfilment are parts of one system or five systems agreeing to talk.</p>
     </div>
-    <div class="edge-grid">
-      <div class="edge-card">
-        <div class="edge-icon"><i class="ti ti-device-mobile"></i></div>
-        <h3>Native iOS ecosystem</h3>
-        <p>Built for iPad and iPhone: fast, secure, and familiar to associates. Zero training required.</p>
-        <div class="edge-vs">
-          <div class="edge-no"><i class="ti ti-x"></i> The field: web wrappers in an iPad frame</div>
-          <div class="edge-yes"><i class="ti ti-check"></i> Teamwork: native, instant</div>
+    <!-- The argument this section makes, drawn. No competitor is named: the point
+         is the shape of the stack, not who sells the pieces. -->
+    <div class="vsx" role="img" aria-label="On the left, five separate systems joined by brittle connections. On the right, one platform with the same capabilities built in.">
+      <div class="vsx-side">
+        <span class="vsx-cap">The usual shape</span>
+        <div class="vsx-stack">
+          <span class="vsx-box">POS</span>
+          <span class="vsx-box">Inventory</span>
+          <span class="vsx-box">RFID middleware</span>
+          <span class="vsx-box">Order management</span>
+          <span class="vsx-box">Reporting</span>
+          <svg class="vsx-joins" viewBox="0 0 100 300" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M50 24 L50 76"/><path d="M50 84 L50 136"/><path d="M50 144 L50 196"/><path d="M50 204 L50 256"/>
+          </svg>
         </div>
+        <ul class="vsx-cost">
+          <li>Five vendors, five roadmaps, five support desks</li>
+          <li>Every join is a place data goes stale</li>
+          <li>An upgrade anywhere is a regression test everywhere</li>
+        </ul>
       </div>
-      <div class="edge-card">
-        <div class="edge-icon"><i class="ti ti-wifi-off"></i></div>
-        <h3>Offline resilience</h3>
-        <p>Store-and-Forward keeps counts, receiving, and stock updates running with no Wi-Fi. Everything syncs when connectivity returns.</p>
-        <div class="edge-vs">
-          <div class="edge-no"><i class="ti ti-x"></i> The field: outage means operations stop</div>
-          <div class="edge-yes"><i class="ti ti-check"></i> Teamwork: zero data gaps, ever</div>
+      <div class="vsx-side">
+        <span class="vsx-cap vsx-cap-on">Teamwork Commerce</span>
+        <div class="vsx-one">
+          <span class="vsx-one-t">One platform, one codebase</span>
+          <span class="vsx-slab">POS</span>
+          <span class="vsx-slab">Inventory</span>
+          <span class="vsx-slab">RFID, no middleware</span>
+          <span class="vsx-slab">Order management</span>
+          <span class="vsx-slab">Reporting</span>
         </div>
+        <ul class="vsx-cost vsx-cost-on">
+          <li>One vendor, one roadmap, one number to call</li>
+          <li>No joins to go stale, one version of the truth</li>
+          <li>One upgrade, tested as a whole</li>
+        </ul>
       </div>
-      <div class="edge-card">
-        <div class="edge-icon"><i class="ti ti-scan"></i></div>
-        <h3>Native RFID, no middleware</h3>
-        <p>The industry's only native end-to-end RFID stack. 99.9% count accuracy in minutes. Competitors need third parties for deep RFID workflows.</p>
-        <div class="edge-vs">
-          <div class="edge-no"><i class="ti ti-x"></i> The field: third-party RFID middleware</div>
-          <div class="edge-yes"><i class="ti ti-check"></i> Teamwork: RFID in the same codebase</div>
-        </div>
-      </div>
-      <div class="edge-card">
-        <div class="edge-icon"><i class="ti ti-plug-connected"></i></div>
-        <h3>No frankenstack</h3>
-        <p>POS, OMS, Inventory, and RFID on one platform, no silos, no sync lag, no integration errors.</p>
-        <div class="edge-vs">
-          <div class="edge-no"><i class="ti ti-x"></i> The field: modules bolted together</div>
-          <div class="edge-yes"><i class="ti ti-check"></i> Teamwork: one codebase, one data model</div>
-        </div>
-      </div>
+    </div>
+
+    <div class="mini-grid" style="margin-top: 40px;">
+        <div class="mini-card"><h3>Native iOS ecosystem</h3><p>Built for iPad and iPhone: fast, secure, and familiar to associates. Zero training required.</p></div>
+        <div class="mini-card"><h3>Offline resilience</h3><p>Store-and-Forward keeps counts, receiving, and stock updates running with no Wi-Fi. Everything syncs when connectivity returns.</p></div>
+        <div class="mini-card"><h3>Native RFID, no middleware</h3><p>The industry's only native end-to-end RFID stack. 99.9% count accuracy in minutes. Competitors need third parties for deep RFID workflows.</p></div>
+        <div class="mini-card"><h3>No frankenstack</h3><p>POS, OMS, Inventory, and RFID on one platform, no silos, no sync lag, no integration errors.</p></div>
     </div>
   </div>
 </section>
