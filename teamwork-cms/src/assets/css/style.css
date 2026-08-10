@@ -6548,6 +6548,10 @@ main > .hero.hpos-hero:first-child { margin-top: -85px; padding-top: 112px; }
   letter-spacing: -0.04em; line-height: 1.05; color: var(--text);
 }
 .tev-hero-sub { margin: 18px 0 0; font-size: 16px; line-height: 1.7; color: var(--text-muted); max-width: 46ch; }
+/* .hero-cta is built for the centred hero: it centres its buttons and carries a
+   64px bottom margin. In this left-aligned column that pushed the buttons out of
+   line with the headline above them and left dead space underneath. */
+.tev-hero-copy .hero-cta { justify-content: flex-start; margin: 28px 0 0; }
 @media (max-width: 980px) {
   .tev-hero-grid { grid-template-columns: 1fr; gap: 34px; }
 }
