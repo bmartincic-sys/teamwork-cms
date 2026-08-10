@@ -1,0 +1,11 @@
+---
+permalink: "/assets/downloads/enterprise-pos-rfp-questions.csv"
+eleventyExcludeFromCollections: true
+layout: false
+---
+Section,Number,Question,Vendor response,Evidence required,Score
+{%- for s in rfpQuestions %}
+{%- for q in s.questions %}
+"{{ s.title }}",{{ loop.index }},"{{ q | replace('"', '""') | safe }}",,,
+{%- endfor %}
+{%- endfor %}

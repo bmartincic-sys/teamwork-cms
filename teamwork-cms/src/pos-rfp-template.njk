@@ -1,0 +1,252 @@
+---
+layout: "solution.njk"
+title: "Enterprise POS RFP Template: 123 Questions to Ask Vendors"
+description: "A free, ungated RFP question bank for retailers selecting an enterprise point of sale. 123 questions across 15 sections covering commercial terms, checkout, inventory, omnichannel, RFID, architecture, security, integrations, implementation, support and exit. Copy any section or download the whole thing as a spreadsheet."
+navLabel: "POS RFP Template"
+tags: "resources"
+permalink: "/pos-rfp-template/"
+stickyText: "123 RFP questions, no form."
+stickyCta: "Download the CSV"
+stickyHref: "/assets/downloads/enterprise-pos-rfp-questions.csv"
+stickyRest: ".final-cta, .footer"
+---
+<!-- Breadcrumb -->
+<div class="container">
+  <nav class="breadcrumb" aria-label="Breadcrumb" style="padding: 16px 0; font-size: 12px; color: var(--text-faint);">
+    <a href="/" style="color: var(--text-muted);">Home</a> <span style="margin: 0 6px;">/</span>
+    POS RFP Template
+  </nav>
+</div>
+
+<!-- ============ HERO ============ -->
+<section class="section" style="padding-bottom: 34px;">
+  <div class="container">
+    <div class="rfp-hero">
+      <span class="eyebrow"><span class="eyebrow-dot"></span> Free Resource, No Form</span>
+      <h1 class="rfp-h1">Enterprise POS RFP template.<br><span class="gradient-text">123 questions to ask vendors.</span></h1>
+      <p class="rfp-hero-sub">
+        Every question is on this page. Copy a section straight into your RFP, or take the whole bank as a spreadsheet. Nothing is gated, and you do not have to tell us who you are.
+      </p>
+      <div class="hero-cta rfp-cta">
+        <a href="/assets/downloads/enterprise-pos-rfp-questions.csv" class="btn btn-primary btn-lg" download>
+          <i class="ti ti-download"></i> Download all 123 (CSV)
+        </a>
+        <a href="#sections" class="btn btn-ghost btn-lg">Jump to the questions</a>
+      </div>
+      <p class="rfp-disclosure">
+        <i class="ti ti-info-circle"></i>
+        Written by Teamwork Commerce, a POS vendor. We have deliberately included questions we would not win on, because a question bank that only asks what one vendor is good at is no use to you. Judge it on whether it makes your RFP harder to answer.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AT A GLANCE ============ -->
+<section class="section" style="padding-top: 0; padding-bottom: 0;">
+  <div class="container">
+    <div class="rfp-stats">
+      <div class="rfp-stat"><strong>123</strong><span>Questions</span></div>
+      <div class="rfp-stat"><strong>15</strong><span>Sections</span></div>
+      <div class="rfp-stat"><strong>0</strong><span>Forms to fill in</span></div>
+      <div class="rfp-stat"><strong>CSV</strong><span>Opens in Excel or Sheets</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW TO USE IT ============ -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">How To Use It</div>
+      <h2 class="section-title">Three things that make an RFP answerable.</h2>
+    </div>
+    <div class="mini-grid">
+      <div class="mini-card">
+        <div class="mini-ico"><i class="ti ti-target-arrow"></i></div>
+        <h3>Cut it down before you send it</h3>
+        <p>123 questions is a bank to choose from, not a document to post. Sending all of them produces long, evasive answers. Pick the twenty that would actually change your decision and make those mandatory.</p>
+      </div>
+      <div class="mini-card">
+        <div class="mini-ico"><i class="ti ti-ruler-measure"></i></div>
+        <h3>Ask for evidence, not confirmation</h3>
+        <p>Any vendor can answer yes. Require a named reference, a measured figure, a document, or a live demonstration against every claim that matters, and say so in the question.</p>
+      </div>
+      <div class="mini-card">
+        <div class="mini-ico"><i class="ti ti-scale"></i></div>
+        <h3>Score before you read the responses</h3>
+        <p>Agree the weighting with your stakeholders while the field is still open. Deciding what matters after you have read a good-looking response is how organisations talk themselves into the wrong platform.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ THE QUESTION BANK ============ -->
+<section class="section" id="sections" style="padding-top: 0;">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">The Question Bank</div>
+      <h2 class="section-title">123 questions, in 15 sections.</h2>
+      <p class="section-sub">Use the copy button on any section to take its questions as plain text.</p>
+    </div>
+
+    <nav class="rfp-jump" aria-label="Jump to a section">
+      {% for s in rfpQuestions %}
+      <a href="#{{ s.id }}"><i class="ti {{ s.icon }}"></i> {{ s.title }} <b>{{ s.questions.length }}</b></a>
+      {% endfor %}
+    </nav>
+
+    {% for s in rfpQuestions %}
+    <section class="rfp-sec" id="{{ s.id }}">
+      <header class="rfp-sec-head">
+        <div>
+          <h3><i class="ti {{ s.icon }}"></i> {{ s.title }}</h3>
+          <p>{{ s.blurb }}</p>
+        </div>
+        <button class="rfp-copy" type="button" data-copy="{{ s.id }}"
+                aria-label="Copy the {{ s.title }} questions">
+          <i class="ti ti-copy"></i> <span>Copy {{ s.questions.length }}</span>
+        </button>
+      </header>
+      <ol class="rfp-qs" id="qs-{{ s.id }}">
+        {% for q in s.questions %}
+        <li>{{ q }}</li>
+        {% endfor %}
+      </ol>
+    </section>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- ============ FAQ (visible text matches the FAQPage schema below) ============ -->
+<section class="section" style="padding-top: 0;">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">Frequently Asked Questions</div>
+      <h2 class="section-title">Writing a POS RFP, answered.</h2>
+    </div>
+    <div style="max-width: 800px; margin: 0 auto;">
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          What should a retail POS RFP include?
+          <span class="faq-icon"><i class="ti ti-plus"></i></span>
+        </button>
+        <div class="faq-answer"><p>A POS RFP should cover commercial and licensing terms, point of sale and checkout behaviour, inventory accuracy, omnichannel and order management, customer data and consent, RFID if it is relevant to you, architecture and resilience, security and compliance, integrations and APIs, identity and audit, devices and hardware, implementation and migration, training, support and SLAs, and exit and data portability. The last of those is the one most often left out and most often regretted, because it is far harder to negotiate after you have signed.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          How many questions should be in a POS RFP?
+          <span class="faq-icon"><i class="ti ti-plus"></i></span>
+        </button>
+        <div class="faq-answer"><p>Fewer than most retailers send. A bank of a hundred or more is useful for choosing from, but posting all of them invites long, hedged answers that are hard to compare. Twenty to forty questions that would genuinely change your decision, each requiring evidence rather than a yes, will tell you more than a hundred that can be answered with a feature matrix.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          What questions do POS vendors find hardest to answer?
+          <span class="faq-icon"><i class="ti ti-plus"></i></span>
+        </button>
+        <div class="faq-answer"><p>In practice, four kinds. Requests for measured figures from a comparable live estate rather than targets. Requests to speak to recent customers of a similar size without the vendor present. Requests for documents, such as an audit report under NDA or public API documentation you can read during the evaluation. And exit questions: what you get back, in what format, how quickly, and at what cost.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          Should we use a vendor's RFP template?
+          <span class="faq-icon"><i class="ti ti-plus"></i></span>
+        </button>
+        <div class="faq-answer"><p>Use several, and treat each as a starting point rather than a specification. Any vendor-authored template reflects what that vendor is good at, so cross-reference at least two, add your own operational requirements, and delete anything you would not actually change your decision over. Independent analyst templates are worth reading alongside vendor ones for the same reason.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          How long does an enterprise POS selection take?
+          <span class="faq-icon"><i class="ti ti-plus"></i></span>
+        </button>
+        <div class="faq-answer"><p>For a multi-market estate, expect several months from writing the RFP to signing, and longer again to a first store going live. The stages that most often slip are security and architecture review, because those teams are usually brought in late, and reference calls, because they depend on other retailers' availability. Both are worth starting earlier than feels necessary.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="final-cta">
+  <div class="container final-cta-inner">
+    <h2>Put these questions to <span class="gradient-text">us.</span></h2>
+    <p>Bring the section that worries you most to a working session with solutions architects rather than an account executive.</p>
+    <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+      <a href="/technical-evaluation/" class="btn btn-primary btn-lg">Book a technical review <i class="ti ti-arrow-right"></i></a>
+      <a href="/assets/downloads/enterprise-pos-rfp-questions.csv" class="btn btn-ghost btn-lg" download>Download the CSV</a>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What should a retail POS RFP include?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A POS RFP should cover commercial and licensing terms, point of sale and checkout behaviour, inventory accuracy, omnichannel and order management, customer data and consent, RFID if it is relevant to you, architecture and resilience, security and compliance, integrations and APIs, identity and audit, devices and hardware, implementation and migration, training, support and SLAs, and exit and data portability. The last of those is the one most often left out and most often regretted, because it is far harder to negotiate after you have signed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many questions should be in a POS RFP?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fewer than most retailers send. A bank of a hundred or more is useful for choosing from, but posting all of them invites long, hedged answers that are hard to compare. Twenty to forty questions that would genuinely change your decision, each requiring evidence rather than a yes, will tell you more than a hundred that can be answered with a feature matrix."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What questions do POS vendors find hardest to answer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In practice, four kinds. Requests for measured figures from a comparable live estate rather than targets. Requests to speak to recent customers of a similar size without the vendor present. Requests for documents, such as an audit report under NDA or public API documentation you can read during the evaluation. And exit questions: what you get back, in what format, how quickly, and at what cost."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should we use a vendor's RFP template?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use several, and treat each as a starting point rather than a specification. Any vendor-authored template reflects what that vendor is good at, so cross-reference at least two, add your own operational requirements, and delete anything you would not actually change your decision over. Independent analyst templates are worth reading alongside vendor ones for the same reason."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does an enterprise POS selection take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For a multi-market estate, expect several months from writing the RFP to signing, and longer again to a first store going live. The stages that most often slip are security and architecture review, because those teams are usually brought in late, and reference calls, because they depend on other retailers' availability. Both are worth starting earlier than feels necessary."
+      }
+    }
+  ]
+}
+</script>
+
+<script>
+(function () {
+  var btns = document.querySelectorAll(".rfp-copy");
+  if (!btns.length || !navigator.clipboard) return;
+  btns.forEach(function (btn) {
+    var label = btn.querySelector("span");
+    var original = label.textContent;
+    btn.addEventListener("click", function () {
+      var list = document.getElementById("qs-" + btn.getAttribute("data-copy"));
+      if (!list) return;
+      var lines = [].map.call(list.querySelectorAll("li"), function (li, i) {
+        return (i + 1) + ". " + li.textContent.trim();
+      });
+      navigator.clipboard.writeText(lines.join("\n")).then(function () {
+        btn.classList.add("is-done");
+        label.textContent = "Copied";
+        setTimeout(function () {
+          btn.classList.remove("is-done");
+          label.textContent = original;
+        }, 1800);
+      });
+    });
+  });
+})();
+</script>
