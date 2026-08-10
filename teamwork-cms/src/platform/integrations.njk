@@ -21,15 +21,60 @@ stickyHref: "/contact/"
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="hero-glow"></div>
-  <div class="container hero-inner fade-up">
-    <span class="eyebrow"><span class="eyebrow-dot"></span> Part of the Teamwork Commerce platform</span>
-    <h1>POS is the core. Integrations connect it to <span class="accent">everything else.</span></h1>
-    <p class="hero-sub">
-      Most systems aren't one size fits all, and we don't want to be. Teamwork Commerce runs on a mobile point of sale and order management system that connects to the external platforms your business already depends on. Integrations & APIs is part of the Teamwork Commerce platform, extending the same Mobile POS you already run rather than replacing it. It's simply included.
-    </p>
-    <div class="hero-cta">
-      <a href="/contact/" class="btn btn-primary btn-lg">Book a demo <i class="ti ti-arrow-right"></i></a>
-      <a href="/platform/architecture/" class="btn btn-ghost btn-lg">Reference architecture</a>
+  <div class="container">
+    <div class="intg-hero-grid fade-up">
+      <div class="intg-hero-copy">
+        <span class="eyebrow"><span class="eyebrow-dot"></span> Part of the Teamwork Commerce platform</span>
+        <h1>POS is the core. Integrations connect it to <span class="accent">everything else.</span></h1>
+        <p class="hero-sub">
+          Most systems aren't one size fits all, and we don't want to be. Teamwork Commerce runs on a mobile point of sale and order management system that connects to the external platforms your business already depends on, rather than replacing them.
+        </p>
+        <div class="hero-cta intg-hero-cta">
+          <a href="/contact/" class="btn btn-primary btn-lg">Book a demo <i class="ti ti-arrow-right"></i></a>
+          <a href="/platform/architecture/" class="btn btn-ghost btn-lg">Reference architecture</a>
+        </div>
+      </div>
+
+      <!-- The page's whole argument, drawn. Spokes and chips come from one set of
+           ellipse coordinates, so a line can never miss its node. -->
+      <div class="hubx" role="img" aria-label="The Teamwork Commerce point of sale at the centre of six integration categories: ERP, warehouse and fulfilment, payments and fraud, marketing and CRM, analytics, and marketplaces.">
+        <svg class="hubx-wires" viewBox="0 0 900 560" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+          <defs>
+            <radialGradient id="hubxG" gradientUnits="userSpaceOnUse" cx="450" cy="280" r="380">
+              <stop offset="0%" stop-color="#6d9bff" stop-opacity="0.95"/>
+              <stop offset="100%" stop-color="#b48cff" stop-opacity="0.3"/>
+            </radialGradient>
+          </defs>
+          <g class="hubx-track">
+            <line x1="450" y1="280" x2="450.0" y2="89.6"/>
+            <line x1="450" y1="280" x2="746.2" y2="184.8"/>
+            <line x1="450" y1="280" x2="746.2" y2="375.2"/>
+            <line x1="450" y1="280" x2="450.0" y2="470.4"/>
+            <line x1="450" y1="280" x2="153.8" y2="375.2"/>
+            <line x1="450" y1="280" x2="153.8" y2="184.8"/>
+          </g>
+          <g class="hubx-live">
+            <line pathLength="100" x1="450" y1="280" x2="450.0" y2="89.6"/>
+            <line pathLength="100" x1="450" y1="280" x2="746.2" y2="184.8"/>
+            <line pathLength="100" x1="450" y1="280" x2="746.2" y2="375.2"/>
+            <line pathLength="100" x1="450" y1="280" x2="450.0" y2="470.4"/>
+            <line pathLength="100" x1="450" y1="280" x2="153.8" y2="375.2"/>
+            <line pathLength="100" x1="450" y1="280" x2="153.8" y2="184.8"/>
+          </g>
+        </svg>
+        <span class="hubx-core">
+          <span class="hubx-core-ring"></span>
+          <span class="hubx-core-ring"></span>
+          <strong>POS</strong>
+          <em>One codebase</em>
+        </span>
+        <span class="hubx-node" style="--x: 50.0%; --y: 16.0%;"><i class="ti ti-building-warehouse"></i> ERP</span>
+        <span class="hubx-node hubx-node-r" style="--x: 82.9%; --y: 33.0%;"><i class="ti ti-truck-delivery"></i> Warehouse &amp; fulfilment</span>
+        <span class="hubx-node hubx-node-r" style="--x: 82.9%; --y: 67.0%;"><i class="ti ti-credit-card"></i> Payments &amp; fraud</span>
+        <span class="hubx-node" style="--x: 50.0%; --y: 84.0%;"><i class="ti ti-mail"></i> Marketing &amp; CRM</span>
+        <span class="hubx-node hubx-node-l" style="--x: 17.1%; --y: 67.0%;"><i class="ti ti-chart-bar"></i> Analytics</span>
+        <span class="hubx-node hubx-node-l" style="--x: 17.1%; --y: 33.0%;"><i class="ti ti-basket"></i> Marketplaces</span>
+      </div>
     </div>
   </div>
 </section>
@@ -80,37 +125,57 @@ stickyHref: "/contact/"
 <!-- ============ CLOUD NATIVE INFRASTRUCTURE ============ -->
 <section class="section" style="padding-top: 0;">
   <div class="container">
-    <div class="feature-row">
-      <div class="feature-text">
-        <span class="section-eyebrow">Cloud Native Infrastructure</span>
-        <h2>Built on Google Cloud.</h2>
-        <p>Teamwork Commerce runs on Google Cloud Platform, which eliminates the infrastructure, maintenance, and data center costs retailers would otherwise carry themselves. Other cloud providers, including AWS, Azure, and Tencent, and hybrid deployments are supported by request.</p>
-        <p>Being cloud-native means Teamwork Commerce can keep bringing new GCP services to retailers as they mature, particularly in data analytics and machine learning, without asking retailers to re-platform to get them.</p>
+    <div class="section-header">
+      <div class="section-eyebrow">Cloud Native Infrastructure</div>
+      <h2 class="section-title">Built on Google Cloud.</h2>
+      <p class="section-sub">Running cloud-native removes the infrastructure, maintenance and data centre costs a retailer would otherwise carry, and means new platform services arrive without a hardware project.</p>
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 44px; align-items: center;">
+      <div class="cloudx">
+        <div class="cloudx-layer">
+          <i class="ti ti-device-ipad"></i>
+          <div><strong>The store</strong><br><span>iOS devices, peripherals, RFID readers</span></div>
+        </div>
+        <div class="cloudx-layer is-core">
+          <i class="ti ti-brand-google"></i>
+          <div><strong>Teamwork Commerce on Google Cloud</strong><br><span>POS, OMS, inventory, RFID, reporting, one codebase</span></div>
+        </div>
+        <div class="cloudx-layer">
+          <i class="ti ti-plug-connected"></i>
+          <div><strong>Your systems</strong><br><span>ERP, WMS, e-commerce, payments, CRM</span></div>
+        </div>
+        <p class="cloudx-note">Other providers, including AWS, Azure and Tencent, and hybrid deployments, are supported by request.</p>
+      </div>
+      <div>
+        <p style="font-size: 15px; line-height: 1.75; color: var(--text-muted); margin: 0 0 16px;">The store talks to one platform. The platform talks to everything else. Nothing in the middle for you to run, patch or capacity-plan.</p>
+        <p style="font-size: 15px; line-height: 1.75; color: var(--text-muted); margin: 0;">Because the platform is cloud-native rather than hosted, new capabilities ship into the same deployment you already have rather than arriving as an upgrade project.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ============ ARCHITECTURE & INTEGRATION TEAM ============ -->
-<section class="section" style="background: var(--bg-deep);">
+<section class="section" style="padding-top: 0;">
   <div class="container">
     <div class="section-header">
       <div class="section-eyebrow">Architecture</div>
       <h2 class="section-title">Add or change integrations without downtime.</h2>
-      <p class="section-sub">Omnichannel ecosystems change constantly to keep up with consumer demand. Teamwork Commerce is built so integrations can be added or changed without disrupting the systems already in place.</p>
+      <p class="section-sub">Omnichannel ecosystems change constantly. Integrations attach to the platform rather than being wired through it, so one can be replaced while the rest of the estate keeps trading.</p>
     </div>
-    <div class="pillars-grid" style="grid-template-columns: repeat(2, 1fr);">
-      <div class="pillar-card">
-        <div class="pillar-icon"><i class="ti ti-server-2"></i></div>
-        <h3 class="pillar-title">A mature integration platform</h3>
-        <p class="pillar-desc">Teamwork's own integration platform handles mass data transfer, built to keep data correct, move it efficiently, and scale to millions of records.</p>
+    <div class="swapx" role="img" aria-label="One integration detaching from the platform core while a replacement connects, with the core continuing to run.">
+      <div class="swapx-side">
+        <span class="swapx-chip"><i class="ti ti-building-warehouse"></i> ERP</span>
+        <span class="swapx-chip"><i class="ti ti-credit-card"></i> Payments</span>
+        <span class="swapx-chip is-out"><i class="ti ti-plug-off"></i> Legacy WMS</span>
       </div>
-      <div class="pillar-card">
-        <div class="pillar-icon"><i class="ti ti-users"></i></div>
-        <h3 class="pillar-title">A dedicated integration team</h3>
-        <p class="pillar-desc">Every client is assigned an Integration Architect, a Business Analyst, dedicated QA, and a developer, so each integration is designed, built, and fully tested around the exact business and process flows it needs to support.</p>
+      <div class="swapx-core"><strong>POS</strong></div>
+      <div class="swapx-side">
+        <span class="swapx-chip"><i class="ti ti-chart-bar"></i> Analytics</span>
+        <span class="swapx-chip"><i class="ti ti-mail"></i> CRM</span>
+        <span class="swapx-chip is-in"><i class="ti ti-plug-connected"></i> New WMS</span>
       </div>
     </div>
+    <p style="text-align: center; font-size: 13px; color: var(--text-faint); margin: 26px 0 0;">The core keeps running throughout. Only the connection changes.</p>
   </div>
 </section>
 
