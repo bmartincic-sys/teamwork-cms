@@ -44,34 +44,4 @@
   </div>
 </section>
 
-<!-- Sticky CTA bar -->
-<div class="stickycta" id="stickycta" aria-hidden="true">
-  <div class="container stickycta-inner">
-    <div class="stickycta-copy">{{ stickyText | default("See the platform on your own numbers.") }}</div>
-    <div class="stickycta-actions">
-      <a href="#get-in-touch" class="btn btn-primary">{{ stickyCta | default("Request a session") }} <i class="ti ti-arrow-right"></i></a>
-      <button class="stickycta-close" type="button" aria-label="Dismiss">&times;</button>
-    </div>
-  </div>
-</div>
-<script>
-(function () {
-  var bar = document.getElementById("stickycta");
-  var target = document.getElementById("get-in-touch");
-  if (!bar || !target) return;
-  if (sessionStorage.getItem("tw-sticky-dismissed") === "1") return;
-  bar.querySelector(".stickycta-close").addEventListener("click", function () {
-    bar.classList.remove("show");
-    sessionStorage.setItem("tw-sticky-dismissed", "1");
-  });
-  function update() {
-    var scrolled = (window.scrollY || document.documentElement.scrollTop) > 900;
-    var formRect = target.getBoundingClientRect();
-    var formVisible = formRect.top < window.innerHeight && formRect.bottom > 0;
-    bar.classList.toggle("show", scrolled && !formVisible);
-  }
-  window.addEventListener("scroll", update, { passive: true });
-  window.addEventListener("resize", update, { passive: true });
-  update();
-})();
-</script>
+{% include "sticky-cta.njk" %}

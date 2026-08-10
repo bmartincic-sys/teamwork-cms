@@ -1,0 +1,62 @@
+<!-- ============ STICKY CTA BAR (shared) ============
+  Slides up once the reader is past the fold, and gets out of the way when the
+  page's own conversion block is on screen.
+
+  stickyText   the line of copy. Be specific to the page.
+  stickyCta    button label.
+  stickyHref   where the button goes. An in-page anchor (#get-in-touch) on
+               pages carrying the lead form, otherwise a real URL.
+  stickyRest   selector for the block the bar should defer to. Defaults to the
+               lead form, then the final CTA, so a page needs to set this only
+               when neither applies.
+============================================================ -->
+<div class="stickycta" id="stickycta" aria-hidden="true">
+  <div class="container stickycta-inner">
+    <div class="stickycta-copy">{{ stickyText | default("See the platform on your own numbers.") }}</div>
+    <div class="stickycta-actions">
+      <a href="{{ stickyHref | default('#get-in-touch') }}" class="btn btn-primary">{{ stickyCta | default("Request a session") }} <i class="ti ti-arrow-right"></i></a>
+      <button class="stickycta-close" type="button" aria-label="Dismiss">&times;</button>
+    </div>
+  </div>
+</div>
+<script>
+(function () {
+  var bar = document.getElementById("stickycta");
+  if (!bar) return;
+  if (sessionStorage.getItem("tw-sticky-dismissed") === "1") return;
+
+  // Every block the bar gets out of the way for. The footer counts: at the very
+  // bottom the page's own CTA has scrolled above the viewport, and without it
+  // the bar pops back up over the footer.
+  var SELECTOR = {{ (stickyRest | default("#get-in-touch, .final-cta, .footer")) | dump | safe }};
+  var rest = [];
+  var dismissed = false;
+
+  // This script sits at the end of the page body, so it runs while the footer
+  // is still being parsed. Resolve the targets once the document is complete.
+  function collect() { rest = document.querySelectorAll(SELECTOR); update(); }
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", collect);
+  } else {
+    collect();
+  }
+
+  bar.querySelector(".stickycta-close").addEventListener("click", function () {
+    dismissed = true;
+    bar.classList.remove("show");
+    sessionStorage.setItem("tw-sticky-dismissed", "1");
+  });
+
+  function update() {
+    if (dismissed) return;
+    var scrolled = (window.scrollY || document.documentElement.scrollTop) > 900;
+    var restVisible = Array.prototype.some.call(rest, function (el) {
+      var r = el.getBoundingClientRect();
+      return r.top < window.innerHeight && r.bottom > 0;
+    });
+    bar.classList.toggle("show", scrolled && !restVisible);
+  }
+  window.addEventListener("scroll", update, { passive: true });
+  window.addEventListener("resize", update, { passive: true });
+})();
+</script>
