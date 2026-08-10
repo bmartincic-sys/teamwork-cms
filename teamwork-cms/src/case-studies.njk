@@ -14,42 +14,29 @@ permalink: "/case-studies/"
   </nav>
 </div>
 
-<!-- ============ HERO ============ -->
-<section class="hero hero-shot">
-  <img class="hero-shot-bg" src="/assets/images/homepage/case-studies-hero.jpg" alt="A jewelry boutique associate completing a sale on the iPad POS with a customer-facing display" style="object-position: 52% 42%;">
-  <div class="hero-shot-scrim"></div>
-  <div class="container hero-inner fade-up">
-    <span class="eyebrow"><span class="eyebrow-dot"></span> Case Studies</span>
-    <h1>Case studies from the <span class="accent">sales floor.</span></h1>
-    <p class="hero-sub">
-      {{ caseStudies.length }} stories from the brands that run their stores on Teamwork Commerce: global athletic labels, luxury houses, pro sports franchises, and multi-hundred-store fleets.
-    </p>
-    <div class="csx-hero-stats">
-      <div><strong>{{ caseStudies.length }}</strong><span>Published stories</span></div>
-      <div><strong>30K+</strong><span>Terminals live</span></div>
-      <div><strong>40+</strong><span>Countries</span></div>
-      <div><strong>99.99%</strong><span>Uptime</span></div>
-    </div>
-    <div class="hero-cta">
-      <a href="/contact/" class="btn btn-primary btn-lg">Book a demo <i class="ti ti-arrow-right"></i></a>
-      <a href="#all-stories" class="btn btn-ghost btn-lg">Browse every story</a>
+{% set sectors = [] %}
+{% for cs in caseStudies %}{% if cs.sector not in sectors %}{% set sectors = (sectors.push(cs.sector), sectors) %}{% endif %}{% endfor %}
+
+<!-- ============ HEAD + FILTER (compact, straight into the stories) ============ -->
+<section style="padding: 4px 0 0;">
+  <div class="container">
+    <div class="blog-head">
+      <div class="blog-head-eyebrow">Case Studies</div>
+      <h1 class="blog-h1">Case studies from the sales floor.</h1>
+      <p class="blog-head-sub">{{ caseStudies.length }} stories from the brands that run their stores on Teamwork Commerce: global athletic labels, luxury houses, pro sports franchises, and multi-hundred-store fleets.</p>
+      <div class="blog-filter-bar" id="csFilterBar" role="tablist" aria-label="Filter case studies by sector">
+        <button class="filter-pill active" data-filter="all" role="tab" aria-selected="true">All ({{ caseStudies.length }})</button>
+        {% for sec in sectors %}
+        <button class="filter-pill" data-filter="{{ sec | slugify }}" role="tab" aria-selected="false">{{ sec }}</button>
+        {% endfor %}
+      </div>
     </div>
   </div>
 </section>
 
 <!-- ============ ALL STORIES (filterable) ============ -->
-<section class="section" id="all-stories">
+<section class="section" id="all-stories" style="padding-top: 26px;">
   <div class="container">
-    {% set sectors = [] %}
-    {% for cs in caseStudies %}{% if cs.sector not in sectors %}{% set sectors = (sectors.push(cs.sector), sectors) %}{% endif %}{% endfor %}
-
-    <div class="csx-filters" role="tablist" aria-label="Filter case studies by sector">
-      <button class="csx-filter is-active" data-filter="all" role="tab" aria-selected="true">All <span>{{ caseStudies.length }}</span></button>
-      {% for sec in sectors %}
-      <button class="csx-filter" data-filter="{{ sec | slugify }}" role="tab" aria-selected="false">{{ sec }}</button>
-      {% endfor %}
-    </div>
-
     <div class="csx-grid" id="csGrid">
       {% for cs in caseStudies %}
       <a class="csx-card{% if cs.photo %} has-photo{% else %} is-ink tone-{{ loop.index0 % 3 }}{% endif %}" href="{{ cs.url }}"{% if cs.external %} target="_blank" rel="noopener"{% endif %} data-sector="{{ cs.sector | slugify }}"{% if cs.video %} data-video="{{ cs.video }}"{% endif %}>
@@ -108,17 +95,18 @@ permalink: "/case-studies/"
 
 <script>
 (function () {
-  var filters = document.querySelectorAll(".csx-filter");
+  var bar = document.getElementById("csFilterBar");
   var cards = document.querySelectorAll("#csGrid .csx-card");
   var empty = document.getElementById("csEmpty");
-  if (!filters.length || !cards.length) return;
+  if (!bar || !cards.length) return;
+  var filters = bar.querySelectorAll(".filter-pill");
 
   filters.forEach(function (btn) {
     btn.addEventListener("click", function () {
       var want = btn.getAttribute("data-filter");
       filters.forEach(function (b) {
         var on = b === btn;
-        b.classList.toggle("is-active", on);
+        b.classList.toggle("active", on);
         b.setAttribute("aria-selected", on ? "true" : "false");
       });
       var shown = 0;
