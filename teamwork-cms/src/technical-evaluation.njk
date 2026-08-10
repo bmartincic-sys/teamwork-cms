@@ -19,26 +19,39 @@ stickyRest: "#request, .final-cta, .footer"
 </div>
 
 <!-- ============ HERO ============ -->
-<section class="hero hero-photo hero-photo-compact">
-  <div class="hero-bg"></div>
-  <div class="hero-glow"></div>
-
-  <img class="hero-photo-bg" src="/assets/images/company/life/office-desks.webp" alt="Teamwork Commerce engineers working at their desks" style="object-position: 50% 45%;">
-  <div class="hero-photo-scrim"></div>
-
-  <div class="container hero-photo-inner">
-    <div class="hero-photo-head fade-up">
-      <span class="eyebrow"><span class="eyebrow-dot"></span> For Technical Evaluators</span>
-      <h1 class="hero-photo-title">Not a demo.<br>A technical review.</h1>
-    </div>
-
-    <div class="hero-photo-foot hero-foot-left fade-up" style="animation-delay: 0.25s;">
-      <div class="hero-photo-note" style="max-width: 760px;">
-        <p>If you are the architect, the CISO or the CTO, a product walkthrough answers the wrong questions. This session goes straight to the ones that decide it.</p>
+<section class="section tev-hero">
+  <div class="container">
+    <div class="tev-hero-grid">
+      <div class="tev-hero-copy fade-up">
+        <span class="eyebrow"><span class="eyebrow-dot"></span> For Technical Evaluators</span>
+        <h1 class="tev-h1">Not a demo.<br>A <span class="gradient-text">technical review.</span></h1>
+        <p class="tev-hero-sub">If you are the architect, the CISO or the CTO, a product walkthrough answers the wrong questions. We go through your estate layer by layer instead.</p>
         <div class="hero-cta">
           <a href="#request" class="btn btn-primary btn-lg">Request a review <i class="ti ti-arrow-right"></i></a>
           <a href="#agenda" class="btn btn-ghost btn-lg">See the questions</a>
         </div>
+      </div>
+
+      <!-- Looking through the store at the technology in it: the photo is dimmed,
+           and the lens over the counter resolves into the layers a review covers. -->
+      <div class="xray fade-up" style="animation-delay: 0.2s;" role="img"
+           aria-label="A store interior with the checkout area highlighted, annotated with the layers a technical review covers: POS terminals, item-level stock, associate identity, store network and payments.">
+        <img class="xray-base" src="/assets/images/homepage/sol-footwear.jpg" alt="">
+        <div class="xray-lens">
+          <img class="xray-scan" src="/assets/images/homepage/sol-footwear.jpg" alt="">
+          <span class="xray-tint"></span>
+          <span class="xray-grid"></span>
+          <span class="xray-sweep"></span>
+        <b class="xray-pin" style="--x: 62%; --y: 20%;"><i></i><em>Store network</em></b>
+        <b class="xray-pin xray-pin-flip" style="--x: 90%; --y: 32%;"><i></i><em>Item-level stock</em></b>
+        <b class="xray-pin" style="--x: 70%; --y: 46%;"><i></i><em>POS terminals</em></b>
+        <b class="xray-pin xray-pin-flip" style="--x: 88%; --y: 58%;"><i></i><em>Payments</em></b>
+        <b class="xray-pin" style="--x: 64%; --y: 70%;"><i></i><em>Associate identity</em></b>
+        </div>
+        <span class="xray-line"></span>
+        <span class="xray-tick tl"></span><span class="xray-tick tr"></span>
+        <span class="xray-tick bl"></span><span class="xray-tick br"></span>
+        <span class="xray-tag"><i class="ti ti-scan-eye"></i> Reviewing the estate</span>
       </div>
     </div>
   </div>
@@ -49,16 +62,19 @@ stickyRest: "#request, .final-cta, .footer"
   <div class="container">
     <div class="rev-facts">
       <div class="rev-fact">
-        <div class="rev-fact-k">90 minutes</div>
-        <div class="rev-fact-v">One working session, agenda set by you in advance.</div>
+        <span class="rev-fact-ico"><i class="ti ti-clock-hour-4"></i></span>
+        <div class="rev-fact-k">90 min</div>
+        <div class="rev-fact-v">One working session, with the agenda set by you in advance.</div>
       </div>
       <div class="rev-fact">
-        <div class="rev-fact-k">Architects, not an AE</div>
+        <span class="rev-fact-ico"><i class="ti ti-users-group"></i></span>
+        <div class="rev-fact-k">No AE</div>
         <div class="rev-fact-v">Solutions architects and integration engineers who own the answers.</div>
       </div>
       <div class="rev-fact">
-        <div class="rev-fact-k">Written follow-up</div>
-        <div class="rev-fact-v">Answers in writing after the call, including what we could not answer live.</div>
+        <span class="rev-fact-ico"><i class="ti ti-file-description"></i></span>
+        <div class="rev-fact-k">In writing</div>
+        <div class="rev-fact-v">A written follow-up, including whatever we could not answer live.</div>
       </div>
     </div>
   </div>
@@ -73,7 +89,7 @@ stickyRest: "#request, .final-cta, .footer"
       <p class="section-sub">Six tracks. Pick the ones that matter and we bring the people who own them. Anything marked documented is already answered on this site, so your team can start before we speak.</p>
     </div>
 
-    <div class="captabs-nav" role="tablist" aria-label="Technical evaluation tracks">
+    <div class="captabs-nav tev-nav" role="tablist" aria-label="Technical evaluation tracks">
       <button class="captab active" role="tab" aria-selected="true" data-captab="tev-arch"><i class="ti ti-server-cog"></i> Architecture &amp; hosting</button>
       <button class="captab" role="tab" aria-selected="false" data-captab="tev-sec"><i class="ti ti-shield-lock"></i> Security &amp; compliance</button>
       <button class="captab" role="tab" aria-selected="false" data-captab="tev-intg"><i class="ti ti-plug-connected"></i> Integration mapping</button>
