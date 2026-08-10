@@ -6332,7 +6332,14 @@ main > .hero.hpos-hero:first-child { margin-top: -85px; padding-top: 112px; }
 }
 
 /* Team mosaic. A dense wall of faces, the point being how many there are. */
-.tmos { display: grid; grid-template-columns: repeat(auto-fill, minmax(112px, 1fr)); gap: 10px; }
+/* Team mosaic. Fixed column counts rather than auto-fill, because auto-fill fit
+   ten across and left a last row of four. Every count below divides the 24 faces
+   exactly, so no row is ever short. Keep the counts as divisors of the face count
+   if faces are added or removed. */
+.tmos { display: grid; grid-template-columns: repeat(8, 1fr); gap: 10px; }
+@media (max-width: 1040px) { .tmos { grid-template-columns: repeat(6, 1fr); } }
+@media (max-width: 760px)  { .tmos { grid-template-columns: repeat(4, 1fr); } }
+@media (max-width: 460px)  { .tmos { grid-template-columns: repeat(3, 1fr); } }
 .tmos img {
   width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 14px; display: block;
   border: 1px solid var(--border); filter: grayscale(0.35); transition: filter 0.25s ease, transform 0.25s ease;
@@ -6519,4 +6526,14 @@ main > .hero.hpos-hero:first-child { margin-top: -85px; padding-top: 112px; }
 /* Someone who has asked for less motion gets the first word, held still. */
 @media (prefers-reduced-motion: reduce) {
   .wordrot-track { animation: none; }
+}
+
+/* Gallery caption. Sits over a gradient at the foot of the tile, always visible
+   rather than hover-only, since it carries which initiative the photo is from. */
+.gal-cap {
+  position: absolute; left: 0; right: 0; bottom: 0; z-index: 1;
+  padding: 26px 16px 12px; font-size: 12px; font-weight: 700;
+  letter-spacing: 0.05em; text-transform: uppercase; color: #fff;
+  background: linear-gradient(180deg, transparent, rgba(5,7,13,0.82));
+  text-shadow: 0 1px 3px rgba(0,0,0,0.5);
 }
