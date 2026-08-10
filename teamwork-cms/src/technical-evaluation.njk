@@ -1,10 +1,14 @@
 ---
 layout: "solution.njk"
 title: "Technical Evaluation"
-description: "For architects, CISOs, and CTOs evaluating Teamwork Commerce. Bring your architecture, security, integration, and migration questions to a solutions architect, no sales demo required."
+description: "For architects, CISOs and CTOs evaluating Teamwork Commerce. A working session on architecture, security, integrations, migration, identity and device fleet operations, run by solutions architects rather than an account executive."
 navLabel: "Technical Evaluation"
 tags: "resources"
 permalink: "/technical-evaluation/"
+stickyText: "Bring your architecture questions."
+stickyCta: "Request a review"
+stickyHref: "#request"
+stickyRest: "#request, .final-cta, .footer"
 ---
 <!-- Breadcrumb -->
 <div class="container">
@@ -15,118 +19,159 @@ permalink: "/technical-evaluation/"
 </div>
 
 <!-- ============ HERO ============ -->
-<section class="hero" style="padding-bottom: 0;">
+<section class="hero hero-photo hero-photo-compact">
   <div class="hero-bg"></div>
   <div class="hero-glow"></div>
-  <div class="container hero-inner fade-up" style="padding-bottom: 48px;">
-    <span class="eyebrow"><span class="eyebrow-dot"></span> For technical evaluators</span>
-    <h1>Not a demo. A <span class="accent">technical review.</span></h1>
-    <p class="hero-sub">
-      If you're the architect, the CISO, or the CTO, a product walkthrough answers the wrong questions. This track goes straight to the ones that decide it: architecture, security posture, integration surface, and what replacing a live estate actually involves.
-    </p>
+
+  <img class="hero-photo-bg" src="/assets/images/company/life/office-desks.webp" alt="Teamwork Commerce engineers working at their desks" style="object-position: 50% 45%;">
+  <div class="hero-photo-scrim"></div>
+
+  <div class="container hero-photo-inner">
+    <div class="hero-photo-head fade-up">
+      <span class="eyebrow"><span class="eyebrow-dot"></span> For Technical Evaluators</span>
+      <h1 class="hero-photo-title">Not a demo.<br>A technical review.</h1>
+    </div>
+
+    <div class="hero-photo-foot hero-foot-left fade-up" style="animation-delay: 0.25s;">
+      <div class="hero-photo-note" style="max-width: 760px;">
+        <p>If you are the architect, the CISO or the CTO, a product walkthrough answers the wrong questions. This session goes straight to the ones that decide it.</p>
+        <div class="hero-cta">
+          <a href="#request" class="btn btn-primary btn-lg">Request a review <i class="ti ti-arrow-right"></i></a>
+          <a href="#agenda" class="btn btn-ghost btn-lg">See the questions</a>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- ============ WHAT WE'LL COVER ============ -->
-<section class="section" style="padding-top: 40px;">
+<!-- ============ WHAT THE SESSION IS ============ -->
+<section class="section" style="padding-bottom: 0;">
+  <div class="container">
+    <div class="rev-facts">
+      <div class="rev-fact">
+        <div class="rev-fact-k">90 minutes</div>
+        <div class="rev-fact-v">One working session, agenda set by you in advance.</div>
+      </div>
+      <div class="rev-fact">
+        <div class="rev-fact-k">Architects, not an AE</div>
+        <div class="rev-fact-v">Solutions architects and integration engineers who own the answers.</div>
+      </div>
+      <div class="rev-fact">
+        <div class="rev-fact-k">Written follow-up</div>
+        <div class="rev-fact-v">Answers in writing after the call, including what we could not answer live.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ THE AGENDA: REAL QUESTIONS ============ -->
+<section class="section captabs" id="agenda">
   <div class="container">
     <div class="section-header">
       <div class="section-eyebrow">The Agenda Is Yours</div>
-      <h2 class="section-title">Bring the hard questions.</h2>
-      <p class="section-sub">Tell us which of these matter and we'll bring the people who own them, not an account executive relaying answers.</p>
+      <h2 class="section-title">The questions this session answers.</h2>
+      <p class="section-sub">Six tracks. Pick the ones that matter and we bring the people who own them. Anything marked documented is already answered on this site, so your team can start before we speak.</p>
     </div>
 
-    <div class="mini-grid">
-      <div class="mini-card">
-        <div class="mini-ico"><i class="ti ti-server-cog"></i></div>
-        <h3>Architecture &amp; hosting</h3>
-        <p>How the platform is deployed and isolated, what runs on Google Cloud, and what other providers or hybrid arrangements are supported for your regions.</p>
+    <div class="captabs-nav" role="tablist" aria-label="Technical evaluation tracks">
+      <button class="captab active" role="tab" aria-selected="true" data-captab="tev-arch"><i class="ti ti-server-cog"></i> Architecture &amp; hosting</button>
+      <button class="captab" role="tab" aria-selected="false" data-captab="tev-sec"><i class="ti ti-shield-lock"></i> Security &amp; compliance</button>
+      <button class="captab" role="tab" aria-selected="false" data-captab="tev-intg"><i class="ti ti-plug-connected"></i> Integration mapping</button>
+      <button class="captab" role="tab" aria-selected="false" data-captab="tev-migr"><i class="ti ti-arrow-guide"></i> Migration &amp; cutover</button>
+      <button class="captab" role="tab" aria-selected="false" data-captab="tev-idam"><i class="ti ti-users-group"></i> Identity &amp; access</button>
+      <button class="captab" role="tab" aria-selected="false" data-captab="tev-dev"><i class="ti ti-device-desktop-cog"></i> Devices &amp; fleet operations</button>
+    </div>
+    <div class="captab-panel active" id="tev-arch" role="tabpanel">
+      <div class="qwrap">
+        <ol class="qlist">
+          <li><span>Where does the platform run, and which regions can our data sit in?</span><em>On the call</em></li>
+          <li><span>What is native to the platform versus connected to it?</span><a href="/platform/architecture/">Documented <i class="ti ti-arrow-up-right"></i></a></li>
+          <li><span>What happens in a store when the network drops mid-transaction?</span><a href="/platform/scalability/">Documented <i class="ti ti-arrow-up-right"></i></a></li>
+          <li><span>What does the platform look like under peak trading load?</span><a href="/platform/scalability/">Documented <i class="ti ti-arrow-up-right"></i></a></li>
+          <li><span>How are environments isolated between tenants?</span><em>On the call</em></li>
+        </ol>
       </div>
-      <div class="mini-card">
-        <div class="mini-ico"><i class="ti ti-shield-lock"></i></div>
-        <h3>Security &amp; compliance review</h3>
-        <p>Walk your security questionnaire through with us. SOC 2 Type 2, PCI DSS, GDPR, and the fiscal certifications for each market you operate in.</p>
+    </div>
+    <div class="captab-panel" id="tev-sec" role="tabpanel">
+      <div class="qwrap">
+        <ol class="qlist">
+          <li><span>Which certifications do you hold, and can we see the reports?</span><em>On the call</em></li>
+          <li><span>Who are your subprocessors and where is data processed?</span><a href="/data-processing-agreement/">Documented <i class="ti ti-arrow-up-right"></i></a></li>
+          <li><span>How is every associate action attributed in the audit trail?</span><a href="/features/access-identity/">Documented <i class="ti ti-arrow-up-right"></i></a></li>
+          <li><span>Which fiscal regimes are certified for the markets we trade in?</span><a href="/platform/mobile-pos/">Documented <i class="ti ti-arrow-up-right"></i></a></li>
+          <li><span>How do you handle a security questionnaire and pen test evidence?</span><em>On the call</em></li>
+        </ol>
       </div>
-      <div class="mini-card">
-        <div class="mini-ico"><i class="ti ti-plug-connected"></i></div>
-        <h3>Integration mapping</h3>
-        <p>Your ERP, e-commerce, OMS, WMS, and payments stack against our integration surface, including live SAP, Oracle, Microsoft Dynamics, and NetSuite integrations, and which patterns we've already built for retailers your size.</p>
+    </div>
+    <div class="captab-panel" id="tev-intg" role="tabpanel">
+      <div class="qwrap">
+        <ol class="qlist">
+          <li><span>Which ERP, WMS and e-commerce platforms are already live?</span><a href="/platform/integrations/">Documented <i class="ti ti-arrow-up-right"></i></a></li>
+          <li><span>What do the APIs expose, and what are the rate and volume limits?</span><a href="/platform/integrations/">Documented <i class="ti ti-arrow-up-right"></i></a></li>
+          <li><span>Can we see the certified partner directory?</span><a href="https://partners.teamworkcommerce.com/integrations" target="_blank" rel="noopener">Documented <i class="ti ti-arrow-up-right"></i></a></li>
+          <li><span>What happens to our integrations during a platform upgrade?</span><a href="/platform/integrations/">Documented <i class="ti ti-arrow-up-right"></i></a></li>
+          <li><span>Who owns the integration once it is live?</span><em>On the call</em></li>
+        </ol>
       </div>
-      <div class="mini-card">
-        <div class="mini-ico"><i class="ti ti-arrow-guide"></i></div>
-        <h3>Migration &amp; cutover</h3>
-        <p>Running alongside your incumbent POS, moving historical transaction and customer data, phasing by region, and what rollback looks like if a wave goes badly.</p>
+    </div>
+    <div class="captab-panel" id="tev-migr" role="tabpanel">
+      <div class="qwrap">
+        <ol class="qlist">
+          <li><span>Can we run alongside the incumbent POS during a wave?</span><em>On the call</em></li>
+          <li><span>What historical transaction and customer data moves, and in what form?</span><em>On the call</em></li>
+          <li><span>How do you phase a rollout by region?</span><a href="/platform/scalability/">Documented <i class="ti ti-arrow-up-right"></i></a></li>
+          <li><span>What does rollback look like if a wave goes badly?</span><em>On the call</em></li>
+          <li><span>Who is on the ground at cutover, and what changes after go-live?</span><em>On the call</em></li>
+        </ol>
       </div>
-      <div class="mini-card">
-        <div class="mini-ico"><i class="ti ti-users-group"></i></div>
-        <h3>Identity &amp; access</h3>
-        <p>How associates and corporate users authenticate across a fleet, what's attributable in the audit trail, and the options where biometric sign-in isn't appropriate.</p>
+    </div>
+    <div class="captab-panel" id="tev-idam" role="tabpanel">
+      <div class="qwrap">
+        <ol class="qlist">
+          <li><span>How do associates sign in without shared credentials?</span><a href="/features/access-identity/">Documented <i class="ti ti-arrow-up-right"></i></a></li>
+          <li><span>Does it work with our identity provider, SSO and MFA?</span><a href="/features/access-identity/">Documented <i class="ti ti-arrow-up-right"></i></a></li>
+          <li><span>How granular are permissions across corporate actions?</span><a href="/features/access-identity/">Documented <i class="ti ti-arrow-up-right"></i></a></li>
+          <li><span>What are the options where biometrics are not appropriate?</span><em>On the call</em></li>
+          <li><span>How are leavers and internal transfers handled?</span><a href="/features/access-identity/">Documented <i class="ti ti-arrow-up-right"></i></a></li>
+        </ol>
       </div>
-      <div class="mini-card">
-        <div class="mini-ico"><i class="ti ti-device-desktop-cog"></i></div>
-        <h3>Devices &amp; fleet operations</h3>
-        <p>The iOS estate. Hardware selection, device management, RFID readers and peripherals, and how terminals are provisioned and replaced at scale.</p>
+    </div>
+    <div class="captab-panel" id="tev-dev" role="tabpanel">
+      <div class="qwrap">
+        <ol class="qlist">
+          <li><span>Which devices and peripherals are certified?</span><a href="/certified-hardware/">Documented <i class="ti ti-arrow-up-right"></i></a></li>
+          <li><span>How are terminals provisioned, updated and replaced at scale?</span><em>On the call</em></li>
+          <li><span>Which RFID readers and printers are supported?</span><a href="/platform/rfid/">Documented <i class="ti ti-arrow-up-right"></i></a></li>
+          <li><span>How is device access governed alongside user access?</span><a href="/features/access-identity/">Documented <i class="ti ti-arrow-up-right"></i></a></li>
+          <li><span>What does the hardware refresh cycle look like?</span><a href="/certified-hardware/">Documented <i class="ti ti-arrow-up-right"></i></a></li>
+        </ol>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ WHAT WE CAN ANSWER TODAY ============ -->
+<!-- ============ HOW IT RUNS ============ -->
 <section class="section" style="padding-top: 0;">
   <div class="container">
     <div class="section-header">
-      <div class="section-eyebrow">Already on Record</div>
-      <h2 class="section-title">Start here, no form required.</h2>
-      <p class="section-sub">Everything below is documented on this site. Send it to your team before we speak.</p>
+      <div class="section-eyebrow">How It Runs</div>
+      <h2 class="section-title">Three steps, no sales cycle.</h2>
     </div>
-    <div class="frail-cols">
-      <div class="frail-col">
-        <div class="frail-head"><i class="ti ti-trending-up"></i> Scale</div>
-        <a class="frail-row" href="/platform/architecture/">
-          <span class="frail-ico"><i class="ti ti-sitemap"></i></span>
-          <span class="frail-text"><strong>Reference architecture</strong><em>Target state, and the capability index</em></span>
-        </a>
-        <a class="frail-row" href="/platform/scalability/">
-          <span class="frail-ico"><i class="ti ti-building-store"></i></span>
-          <span class="frail-text"><strong>Scaling &amp; Global</strong><em>Stores, markets, volume, people</em></span>
-        </a>
-        <a class="frail-row" href="/case-studies/">
-          <span class="frail-ico"><i class="ti ti-award"></i></span>
-          <span class="frail-text"><strong>Case studies</strong><em>Nineteen deployments in production</em></span>
-        </a>
+    <div class="rev-steps">
+      <div class="rev-step">
+        <span class="rev-num">1</span>
+        <h3>Send the questions</h3>
+        <p>Tell us which tracks matter, who needs to be on the call, and send your security questionnaire ahead of time. We would rather come prepared than improvise.</p>
       </div>
-      <div class="frail-col">
-        <div class="frail-head"><i class="ti ti-plug-connected"></i> Connectivity</div>
-        <a class="frail-row" href="/platform/integrations/">
-          <span class="frail-ico"><i class="ti ti-api"></i></span>
-          <span class="frail-text"><strong>Integrations &amp; APIs</strong><em>The integration platform and team</em></span>
-        </a>
-        <a class="frail-row" href="https://partners.teamworkcommerce.com/integrations" target="_blank" rel="noopener">
-          <span class="frail-ico"><i class="ti ti-external-link"></i></span>
-          <span class="frail-text"><strong>Partner directory</strong><em>Every certified integration</em></span>
-        </a>
+      <div class="rev-step">
+        <span class="rev-num">2</span>
+        <h3>Work through them</h3>
+        <p>Ninety minutes with the architects and integration engineers who built the thing being questioned. Your stack on screen, not a slide deck.</p>
       </div>
-      <div class="frail-col">
-        <div class="frail-head"><i class="ti ti-shield-lock"></i> Governance</div>
-        <a class="frail-row" href="/features/access-identity/">
-          <span class="frail-ico"><i class="ti ti-fingerprint"></i></span>
-          <span class="frail-text"><strong>Access &amp; Identity</strong><em>Authentication and audit trail</em></span>
-        </a>
-        <a class="frail-row" href="/data-processing-agreement/">
-          <span class="frail-ico"><i class="ti ti-file-text"></i></span>
-          <span class="frail-text"><strong>Data Processing Agreement</strong><em>Subprocessors and data handling</em></span>
-        </a>
-      </div>
-      <div class="frail-col">
-        <div class="frail-head"><i class="ti ti-help-circle"></i> Detail</div>
-        <a class="frail-row" href="/frequently-asked-questions/">
-          <span class="frail-ico"><i class="ti ti-list-details"></i></span>
-          <span class="frail-text"><strong>Full FAQ</strong><em>Every product question in one place</em></span>
-        </a>
-        <a class="frail-row" href="/glossary/">
-          <span class="frail-ico"><i class="ti ti-book"></i></span>
-          <span class="frail-text"><strong>Glossary</strong><em>Terms as we use them</em></span>
-        </a>
+      <div class="rev-step">
+        <span class="rev-num">3</span>
+        <h3>Get it in writing</h3>
+        <p>A written follow-up covering what we answered, what needs a specialist, and what we could not answer. Something you can circulate internally.</p>
       </div>
     </div>
   </div>
@@ -141,7 +186,7 @@ permalink: "/technical-evaluation/"
       <div class="tev-copy">
         <div class="section-eyebrow">Request a Technical Review</div>
         <h2 class="section-title" style="font-size: clamp(26px, 3.2vw, 38px);">Send us the questions in advance.</h2>
-        <p class="section-sub" style="margin-bottom: 26px;">We'd rather come prepared. Tell us what you need covered and who needs to be on the call, and we'll bring the right engineers.</p>
+        <p class="section-sub" style="margin-bottom: 26px;">Tell us what you need covered and who needs to be on the call, and we will bring the right engineers.</p>
         <ul class="lead-points">
           <li><i class="ti ti-user-check"></i> Solutions architects and integration engineers, not an AE</li>
           <li><i class="ti ti-file-description"></i> Send your security questionnaire ahead of time</li>
@@ -151,80 +196,80 @@ permalink: "/technical-evaluation/"
 
       <div class="tev-formwrap">
         <form name="technical-evaluation" method="POST" action="/thanks/" data-netlify="true" netlify-honeypot="bot-field">
-          <input type="hidden" name="form-name" value="technical-evaluation">
-          <p hidden><label>Leave this empty: <input name="bot-field"></label></p>
+                  <input type="hidden" name="form-name" value="technical-evaluation">
+                  <p hidden><label>Leave this empty: <input name="bot-field"></label></p>
 
-          <div class="tev-row">
-            <div class="tev-field">
-              <label for="tev-name">Name *</label>
-              <input id="tev-name" type="text" name="name" required placeholder="Jane Smith">
-            </div>
-            <div class="tev-field">
-              <label for="tev-title">Role *</label>
-              <input id="tev-title" type="text" name="job_title" required placeholder="VP Architecture">
-            </div>
-          </div>
+                  <div class="tev-row">
+                    <div class="tev-field">
+                      <label for="tev-name">Name *</label>
+                      <input id="tev-name" type="text" name="name" required placeholder="Jane Smith">
+                    </div>
+                    <div class="tev-field">
+                      <label for="tev-title">Role *</label>
+                      <input id="tev-title" type="text" name="job_title" required placeholder="VP Architecture">
+                    </div>
+                  </div>
 
-          <div class="tev-row">
-            <div class="tev-field">
-              <label for="tev-email">Work email *</label>
-              <input id="tev-email" type="email" name="work_email" required placeholder="jane@company.com">
-            </div>
-            <div class="tev-field">
-              <label for="tev-company">Company *</label>
-              <input id="tev-company" type="text" name="company" required placeholder="Your company">
-            </div>
-          </div>
+                  <div class="tev-row">
+                    <div class="tev-field">
+                      <label for="tev-email">Work email *</label>
+                      <input id="tev-email" type="email" name="work_email" required placeholder="jane@company.com">
+                    </div>
+                    <div class="tev-field">
+                      <label for="tev-company">Company *</label>
+                      <input id="tev-company" type="text" name="company" required placeholder="Your company">
+                    </div>
+                  </div>
 
-          <div class="tev-row">
-            <div class="tev-field">
-              <label for="tev-stores">Stores in scope</label>
-              <select id="tev-stores" name="store_count">
-                <option value="">Select…</option>
-                <option>1–50</option>
-                <option>51–200</option>
-                <option>201–500</option>
-                <option>501–1,000</option>
-                <option>1,000+</option>
-              </select>
-            </div>
-            <div class="tev-field">
-              <label for="tev-markets">Markets</label>
-              <select id="tev-markets" name="markets">
-                <option value="">Select…</option>
-                <option>Single market</option>
-                <option>2–5</option>
-                <option>6–15</option>
-                <option>16+</option>
-              </select>
-            </div>
-          </div>
+                  <div class="tev-row">
+                    <div class="tev-field">
+                      <label for="tev-stores">Stores in scope</label>
+                      <select id="tev-stores" name="store_count">
+                        <option value="">Select…</option>
+                        <option>1–50</option>
+                        <option>51–200</option>
+                        <option>201–500</option>
+                        <option>501–1,000</option>
+                        <option>1,000+</option>
+                      </select>
+                    </div>
+                    <div class="tev-field">
+                      <label for="tev-markets">Markets</label>
+                      <select id="tev-markets" name="markets">
+                        <option value="">Select…</option>
+                        <option>Single market</option>
+                        <option>2–5</option>
+                        <option>6–15</option>
+                        <option>16+</option>
+                      </select>
+                    </div>
+                  </div>
 
-          <div class="tev-field" style="margin-bottom: 18px;">
-            <span class="tev-legend">What should we cover?</span>
-            <div class="tev-checks">
-              <label><input type="checkbox" name="topics" value="Architecture &amp; hosting"> Architecture &amp; hosting</label>
-              <label><input type="checkbox" name="topics" value="Security review"> Security review</label>
-              <label><input type="checkbox" name="topics" value="Integration mapping"> Integration mapping</label>
-              <label><input type="checkbox" name="topics" value="Migration &amp; cutover"> Migration &amp; cutover</label>
-              <label><input type="checkbox" name="topics" value="Identity &amp; access"> Identity &amp; access</label>
-              <label><input type="checkbox" name="topics" value="Devices &amp; fleet ops"> Devices &amp; fleet ops</label>
-            </div>
-          </div>
+                  <div class="tev-field" style="margin-bottom: 18px;">
+                    <span class="tev-legend">What should we cover?</span>
+                    <div class="tev-checks">
+                      <label><input type="checkbox" name="topics" value="Architecture &amp; hosting"> Architecture &amp; hosting</label>
+                      <label><input type="checkbox" name="topics" value="Security review"> Security review</label>
+                      <label><input type="checkbox" name="topics" value="Integration mapping"> Integration mapping</label>
+                      <label><input type="checkbox" name="topics" value="Migration &amp; cutover"> Migration &amp; cutover</label>
+                      <label><input type="checkbox" name="topics" value="Identity &amp; access"> Identity &amp; access</label>
+                      <label><input type="checkbox" name="topics" value="Devices &amp; fleet ops"> Devices &amp; fleet ops</label>
+                    </div>
+                  </div>
 
-          <div class="tev-field" style="margin-bottom: 18px;">
-            <label for="tev-stack">Current stack</label>
-            <input id="tev-stack" type="text" name="current_stack" placeholder="Incumbent POS, ERP, e-commerce, OMS, payments">
-          </div>
+                  <div class="tev-field" style="margin-bottom: 18px;">
+                    <label for="tev-stack">Current stack</label>
+                    <input id="tev-stack" type="text" name="current_stack" placeholder="Incumbent POS, ERP, e-commerce, OMS, payments">
+                  </div>
 
-          <div class="tev-field" style="margin-bottom: 20px;">
-            <label for="tev-notes">Anything specific you need answered?</label>
-            <textarea id="tev-notes" name="message" rows="3" placeholder="Timelines, constraints, the question that will decide this…"></textarea>
-          </div>
+                  <div class="tev-field" style="margin-bottom: 20px;">
+                    <label for="tev-notes">Anything specific you need answered?</label>
+                    <textarea id="tev-notes" name="message" rows="3" placeholder="Timelines, constraints, the question that will decide this…"></textarea>
+                  </div>
 
-          <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; justify-content: center;">Request a technical review <i class="ti ti-arrow-right"></i></button>
-          <p class="tev-fine">A solutions architect responds within one business day. By submitting, you agree to our <a href="/privacy-policy/">Privacy Policy</a>.</p>
-        </form>
+                  <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; justify-content: center;">Request a technical review <i class="ti ti-arrow-right"></i></button>
+                  <p class="tev-fine">A solutions architect responds within one business day. By submitting, you agree to our <a href="/privacy-policy/">Privacy Policy</a>.</p>
+                </form>
       </div>
     </div>
   </div>
