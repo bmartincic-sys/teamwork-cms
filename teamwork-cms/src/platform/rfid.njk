@@ -231,45 +231,54 @@ stickyHref: "/contact/"
 <!-- ============ CHAPTER 4: AT THE GATES ============ -->
 <section class="section" style="padding-top: 0;">
   <div class="container">
-    <div class="feature-row">
-      <div class="feature-text">
-        <span class="story-chip"><span class="story-num">04</span> At the gates</span>
-        <h2>EAS gates that know what was paid for.</h2>
-        <p>The whitelist signal beats the customer to the EAS gate. No false alarms, no ambiguity about who triggered one, and anything that heads for the door without a sale gets flagged on the way.</p>
-        <ul class="feature-bullets">
-          <li>Works with Checkpoint, Sensormatic, and other gate providers via API</li>
-          <li>Bag Check: every EPC verified against the receipt at the exit</li>
-          <li>AI anomaly detection flags tags that move toward the door without a sale</li>
-        </ul>
+    <div class="section-header">
+      <div class="section-eyebrow">At The Gates</div>
+      <h2 class="section-title">EAS gates that know what was paid for.</h2>
+      <p class="section-sub">The whitelist signal beats the customer to the door. Nothing alarms because it was tagged; it alarms because it was never sold.</p>
+    </div>
+
+    <!-- The whitelist is the differentiator and was invisible. Three states, left
+         to right: what the till publishes, the gate reading it, and the two
+         possible outcomes. -->
+    <div class="gatex" role="img" aria-label="At the till, sold EPCs are added to a whitelist. At the exit gate, whitelisted items pass silently while an item never sold is flagged.">
+      <div class="gatex-step">
+        <span class="gatex-cap">01 &middot; At the till</span>
+        <div class="gatex-panel">
+          <span class="gatex-panel-t">Sold, whitelisted</span>
+          <span class="gatex-epc"><i class="ti ti-check"></i> EPC &middot;&middot;&middot; 4C1A</span>
+          <span class="gatex-epc"><i class="ti ti-check"></i> EPC &middot;&middot;&middot; 9B07</span>
+          <span class="gatex-epc"><i class="ti ti-check"></i> EPC &middot;&middot;&middot; 2F55</span>
+        </div>
       </div>
-      <!-- Diagram: Blacklist/whitelist flow -->
-      <div class="feature-visual">
-        <div class="mockup-panel" style="padding: 24px;">
-          <div style="display: flex; align-items: center; justify-content: space-between; padding-bottom: 16px; margin-bottom: 16px; border-bottom: 1px solid var(--border);">
-            <span style="display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 700; color: #fff; padding: 5px 11px; background: var(--gradient); border-radius: 100px;"><i class="ti ti-shield-check" style="font-size:11px"></i> EAS Control</span>
-            <span style="font-size: 11px; color: var(--text-faint); font-family: var(--font-mono);">Real-time</span>
-          </div>
-          <div style="display: flex; flex-direction: column; gap: 6px;">
-            <div style="padding: 10px 14px; border-radius: 8px; background: var(--bg-deep); border: 1px solid var(--border); display: flex; align-items: center; gap: 10px; font-size: 12px;">
-              <span style="width: 8px; height: 8px; border-radius: 50%; background: #ef4444; flex-shrink: 0;"></span>
-              <span style="color: var(--text); font-weight: 600; flex: 1;">EPC ...1192.0041</span>
-              <span style="font-size: 10px; color: #ef4444; font-weight: 700; padding: 2px 8px; background: rgba(239, 68, 68, 0.1); border-radius: 100px;">BLACKLISTED</span>
-            </div>
-            <div style="text-align: center; font-size: 16px; color: var(--text-faint);">↓ <span style="font-size: 10px; font-weight: 700; letter-spacing: 0.06em;">POS SALE COMPLETED</span> ↓</div>
-            <div style="padding: 10px 14px; border-radius: 8px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.2); display: flex; align-items: center; gap: 10px; font-size: 12px;">
-              <span style="width: 8px; height: 8px; border-radius: 50%; background: #ffffff; flex-shrink: 0;"></span>
-              <span style="color: var(--text); font-weight: 600; flex: 1;">EPC ...1192.0041</span>
-              <span style="font-size: 10px; color: var(--text); font-weight: 700; padding: 2px 8px; background: rgba(255,255,255,0.08); border-radius: 100px;">WHITELISTED</span>
-            </div>
-            <div style="text-align: center; font-size: 16px; color: var(--text-faint);">↓ <span style="font-size: 10px; font-weight: 700; letter-spacing: 0.06em;">INSTANT API → LOCAL SERVER → EAS GATE</span> ↓</div>
-            <div style="padding: 10px 14px; border-radius: 8px; background: var(--bg-deep); border: 1px solid var(--border); display: flex; align-items: center; gap: 10px; font-size: 12px;">
-              <i class="ti ti-door-exit" style="color: var(--text); font-size: 16px;"></i>
-              <span style="color: var(--text); font-weight: 700;">Customer exits, gate clear ✓</span>
-            </div>
-          </div>
+
+      <div class="gatex-step gatex-gate">
+        <span class="gatex-cap">02 &middot; At the exit</span>
+        <div class="gatex-ped">
+          <span class="gatex-pillar"></span>
+          <span class="gatex-field"><b></b><b></b><b></b></span>
+          <span class="gatex-pillar"></span>
+        </div>
+        <span class="gatex-gatelabel">Gate reads every EPC</span>
+      </div>
+
+      <div class="gatex-step">
+        <span class="gatex-cap">03 &middot; Outcome</span>
+        <div class="gatex-out is-pass">
+          <i class="ti ti-volume-off"></i>
+          <div><strong>On the list</strong><span>Passes silently. No false alarm.</span></div>
+        </div>
+        <div class="gatex-out is-flag">
+          <i class="ti ti-alert-triangle"></i>
+          <div><strong>Not on the list</strong><span>Flagged, with the EPC and the time.</span></div>
         </div>
       </div>
     </div>
+
+    <ul class="gatex-notes">
+          <li><i class="ti ti-check"></i> Works with Checkpoint, Sensormatic, and other gate providers via API</li>
+          <li><i class="ti ti-check"></i> Bag Check: every EPC verified against the receipt at the exit</li>
+          <li><i class="ti ti-check"></i> AI anomaly detection flags tags that move toward the door without a sale</li>
+    </ul>
   </div>
 </section>
 

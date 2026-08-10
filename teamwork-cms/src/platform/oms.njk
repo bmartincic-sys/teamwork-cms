@@ -146,6 +146,39 @@ stickyHref: "/contact/"
       <h2 class="section-title">Every fulfillment workflow. One platform.</h2>
       <p class="section-sub">From click-to-ship to cross-channel returns: every order scenario your operation needs, natively integrated with POS, inventory, and RFID.</p>
     </div>
+    <!-- Order Fill Logic, drawn. One order in, four candidate fulfilment paths,
+         the chosen one lit and the rejected ones dashed. The claim on this page is
+         that the logic is configurable, which is meaningless until you can see it
+         choosing. -->
+    <div class="routex" role="img" aria-label="One order evaluated against four fulfilment options: nearest store with stock, ship from store, distribution centre and endless aisle. The chosen path is highlighted.">
+      <div class="routex-in">
+        <span class="routex-cap">Order in</span>
+        <div class="routex-order">
+          <strong>1 unit</strong>
+          <span>Size 9, online</span>
+        </div>
+      </div>
+      <svg class="routex-wires" viewBox="0 0 480 320" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+        <defs>
+          <linearGradient id="routexG" gradientUnits="userSpaceOnUse" x1="0" y1="160" x2="480" y2="160">
+            <stop offset="0%" stop-color="#6d9bff" stop-opacity="0.15"/>
+            <stop offset="100%" stop-color="#b48cff" stop-opacity="0.95"/>
+          </linearGradient>
+        </defs>
+        <path class="routex-dim" d="M0 160 C240 160 240 40 480 40"/>
+        <path class="routex-pick" d="M0 160 C240 160 240 120 480 120"/>
+        <path class="routex-dim" d="M0 160 C240 160 240 200 480 200"/>
+        <path class="routex-dim" d="M0 160 C240 160 240 280 480 280"/>
+      </svg>
+      <div class="routex-out">
+        <span class="routex-cap">Candidates</span>
+        <div class="routex-opt"><i class="ti ti-building-store"></i><div><strong>Nearest store</strong><span>No stock on hand</span></div><em>Skipped</em></div>
+        <div class="routex-opt is-pick"><i class="ti ti-package"></i><div><strong>Ship from store</strong><span>RFID-verified, 1 unit</span></div><em>Chosen</em></div>
+        <div class="routex-opt"><i class="ti ti-building-warehouse"></i><div><strong>Distribution centre</strong><span>Slower, higher cost</span></div><em>Skipped</em></div>
+        <div class="routex-opt"><i class="ti ti-world-search"></i><div><strong>Endless aisle</strong><span>Not needed, stock found</span></div><em>Skipped</em></div>
+      </div>
+    </div>
+
 
     <div class="capcol-grid">
       <div class="capcol">
@@ -240,36 +273,63 @@ stickyHref: "/contact/"
     <div class="section-header">
       <div class="section-eyebrow">Fulfillment Operations</div>
       <h2 class="section-title">What the associate does when an order lands.</h2>
-      <p class="section-sub">What the associate actually touches when an omnichannel order lands in their store.</p>
+      <p class="section-sub">Three taps on the device already in their hand, between a customer walking in and a parcel going out.</p>
     </div>
-    <div class="mini-grid">
+    <div class="stepx">
+      <div class="stepx-phone">
+        <span class="stepx-n">1</span>
+        <div class="stepx-screen">
+          <span class="stepx-bar"></span>
+          <span class="stepx-alert"><i class="ti ti-bell"></i> New order to fulfil</span>
+          <span class="stepx-line w70"></span><span class="stepx-line w45"></span>
+        </div>
+        <strong>It arrives</strong>
+        <p>The order lands on the floor device as a notification, not in a back-office queue nobody is watching.</p>
+      </div>
+      <div class="stepx-phone">
+        <span class="stepx-n">2</span>
+        <div class="stepx-screen">
+          <span class="stepx-bar"></span>
+          <span class="stepx-row"><i class="ti ti-square-check"></i> Size 9, black</span>
+          <span class="stepx-row"><i class="ti ti-square"></i> Gift wrap</span>
+          <span class="stepx-line w60"></span>
+        </div>
+        <strong>They pick it</strong>
+        <p>A pick list against RFID-verified stock, so the unit is on the shelf rather than assumed to be.</p>
+      </div>
+      <div class="stepx-phone">
+        <span class="stepx-n">3</span>
+        <div class="stepx-screen">
+          <span class="stepx-bar"></span>
+          <span class="stepx-label"><i class="ti ti-barcode"></i></span>
+          <span class="stepx-line w80"></span><span class="stepx-line w35"></span>
+        </div>
+        <strong>The label prints</strong>
+        <p>Carrier label from the device, and the order closes without anyone opening a laptop.</p>
+      </div>
+    </div>
+    <div class="mini-grid" style="margin-top: 40px;">
       <div class="mini-card">
-        <div class="mini-ico"><i class="ti ti-list-search"></i></div>
         <h3>Real-time global inventory lookup</h3>
         <p>An enterprise search showing stock broken down by location group, with live on-hand, committed, and available-to-sell figures.</p>
       </div>
       <div class="mini-card">
-        <div class="mini-ico"><i class="ti ti-send"></i></div>
-        <h3>Send sale &amp; customer orders</h3>
+        <h3>Send sale & customer orders</h3>
         <p>Ship to the customer's home or schedule a pickup at another store, with tax calculated in real time against the destination jurisdiction.</p>
       </div>
       <div class="mini-card">
-        <div class="mini-ico"><i class="ti ti-inbox"></i></div>
-        <h3>Incoming &amp; outgoing queues</h3>
+        <h3>Incoming & outgoing queues</h3>
         <p>Dedicated modules alert the team to outstanding omnichannel tickets, and staff pick, pack, or reject each one with a reason code.</p>
       </div>
       <div class="mini-card">
-        <div class="mini-ico"><i class="ti ti-printer"></i></div>
         <h3>Carrier labels on the device</h3>
         <p>Out-of-the-box shipping integration, ShippyPro connecting to carriers such as FedEx, fetches live rates and prints the label from the device.</p>
       </div>
       <div class="mini-card">
-        <div class="mini-ico"><i class="ti ti-signature"></i></div>
         <h3>In-store pickup</h3>
         <p>Collection status tracked per order, with custom instructions, an alternate designated collector, and on-screen signature capture.</p>
       </div>
       <div class="mini-card">
-        <div class="mini-ico"><i class="ti ti-truck-delivery"></i></div>
         <h3>Same-day delivery</h3>
         <p>Direct integrations with DoorDash and Uber, giving associates line-level visibility into driver notifications, timing, and customer tips.</p>
       </div>
