@@ -6380,3 +6380,72 @@ main > .hero.hpos-hero:first-child { margin-top: -85px; padding-top: 112px; }
 .chero-art img:first-child { aspect-ratio: 4 / 5; object-fit: cover; }
 .chero-art img:last-child { aspect-ratio: 3 / 5; object-fit: cover; margin-top: 34px; }
 @media (max-width: 900px) { .chero-art { display: none; } }
+
+/* Office list: a plain roll-call, the point is the count and the spread. */
+.off-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.off-item {
+  display: flex; align-items: center; gap: 14px; padding: 18px 20px;
+  border: 1px solid var(--border); border-radius: 14px; background: var(--bg-elevated);
+  transition: border-color 0.2s ease;
+}
+.off-item:hover { border-color: rgba(36,125,255,0.4); }
+.off-item i { font-size: 20px; color: var(--brand-text); flex-shrink: 0; }
+.off-item strong { display: block; font-size: 15px; font-weight: 600; color: var(--text); letter-spacing: -0.015em; }
+.off-item span { display: block; font-size: 13px; color: var(--text-muted); margin-top: 2px; }
+@media (max-width: 1000px) { .off-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 760px) { .off-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 460px) { .off-grid { grid-template-columns: 1fr; } }
+
+/* TikTok embeds. The widget injects a fixed-width iframe, so cap and centre each cell. */
+.tik-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; align-items: start; }
+.tik-grid .tiktok-embed { margin: 0 auto !important; max-width: 100% !important; min-width: 0 !important; width: 100%; }
+.tik-grid > * { min-width: 0; display: flex; justify-content: center; }
+/* The widget resizes each iframe over postMessage once metadata loads. Give it a
+   floor so a slow or blocked message can never leave a 150px sliver on the page. */
+.tik-grid iframe { min-height: 560px; width: 100% !important; max-width: 340px; border-radius: 14px; }
+.tik-grid .tiktok-embed section { margin: 0; }
+@media (max-width: 1000px) { .tik-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 680px) { .tik-grid { grid-template-columns: 1fr; } }
+
+/* ============ CONTACT PAGE ============ */
+.route-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+.route-card {
+  display: grid; grid-template-columns: 132px 1fr; gap: 22px; align-items: center;
+  padding: 26px 28px; border: 1px solid var(--border); border-radius: 18px; background: var(--bg-elevated);
+}
+.route-card img { width: 132px; height: auto; display: block; }
+.route-card h2 { margin: 0 0 8px; font-size: 20px; font-weight: 600; letter-spacing: -0.022em; color: var(--text); line-height: 1.3; }
+.route-card p { margin: 0 0 18px; font-size: 14.5px; line-height: 1.6; color: var(--text-muted); }
+@media (max-width: 900px) { .route-grid { grid-template-columns: 1fr; } }
+@media (max-width: 520px) { .route-card { grid-template-columns: 1fr; text-align: center; } .route-card img { margin: 0 auto; } }
+
+.contact-split { display: grid; grid-template-columns: 1.35fr 1fr; gap: 44px; align-items: start; }
+@media (max-width: 980px) { .contact-split { grid-template-columns: 1fr; } }
+
+.contact-aside { display: flex; flex-direction: column; gap: 14px; position: sticky; top: 96px; }
+@media (max-width: 980px) { .contact-aside { position: static; } }
+.cside-card { padding: 24px 26px; border: 1px solid var(--border); border-radius: 16px; background: var(--bg-elevated); }
+.cside-card h3 { margin: 0 0 12px; font-size: 15px; font-weight: 600; letter-spacing: -0.015em; color: var(--text); }
+.cside-card p { margin: 0; font-size: 14px; line-height: 1.7; color: var(--text-muted); }
+.cside-card address { font-style: normal; margin-bottom: 14px; }
+.cside-card address span { display: block; font-size: 14px; line-height: 1.65; color: var(--text-muted); }
+.cside-rows { display: flex; flex-direction: column; gap: 8px; }
+.cside-rows a, .cside-link {
+  display: flex; align-items: center; gap: 9px; font-size: 14px; color: var(--brand-text);
+  font-weight: 600; text-decoration: none;
+}
+.cside-rows a:hover, .cside-link:hover { text-decoration: underline; }
+.cside-link { margin-top: 14px; }
+
+.off-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.off-card { padding: 24px 26px; border: 1px solid var(--border); border-radius: 16px; background: var(--bg-elevated); }
+.off-card h3 { margin: 0 0 4px; font-size: 17px; font-weight: 600; letter-spacing: -0.02em; color: var(--text); }
+.off-country {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em;
+  color: var(--brand-text); margin-bottom: 14px;
+}
+.off-card address { font-style: normal; }
+.off-card address span { display: block; font-size: 14px; line-height: 1.7; color: var(--text-muted); }
+.off-note { margin: 14px 0 0; font-size: 12.5px; line-height: 1.6; color: var(--text-faint); }
+@media (max-width: 900px) { .off-cards { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .off-cards { grid-template-columns: 1fr; } }

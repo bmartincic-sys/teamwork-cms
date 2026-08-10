@@ -175,6 +175,59 @@ stickyHref: "/contact/"
   </div>
 </section>
 
+<!-- ============ GLOBAL OFFICES ============ -->
+<section class="section" style="padding-top: 0;">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">Global Presence</div>
+      <h2 class="section-title">Twelve offices across four continents.</h2>
+      <p class="section-sub">Our teams are based in offices and stores all over the world, which is how support follows the sun rather than a single time zone.</p>
+    </div>
+    <div class="off-grid">
+      {% set offices = [
+        ["Clearwater","Florida, USA","ti-building-skyscraper"],
+        ["Dallas","Texas, USA","ti-building"],
+        ["Queretaro","Mexico","ti-building"],
+        ["Sao Paulo","Brazil","ti-building"],
+        ["Dublin","Ireland","ti-building"],
+        ["London","United Kingdom","ti-building"],
+        ["Kharkiv","Ukraine","ti-building"],
+        ["Shanghai","China","ti-building"],
+        ["Tokyo","Japan","ti-building"],
+        ["Sydney","Australia","ti-building"],
+        ["Alicante","Spain","ti-building"],
+        ["Warsaw","Poland","ti-building"]
+      ] %}
+      {% for o in offices %}
+      <div class="off-item">
+        <i class="ti {{ o[2] }}"></i>
+        <div>
+          <strong>{{ o[0] }}</strong>
+          <span>{{ o[1] }}</span>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <div style="text-align: center; margin-top: 32px;">
+      <a href="/contact/" class="btn btn-ghost">See every office and how to reach us <i class="ti ti-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CUSTOMERS ============ -->
+<section class="section" style="padding-top: 0;">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">In Their Words</div>
+      <h2 class="section-title">Retailers who chose Teamwork Commerce.</h2>
+    </div>
+  </div>
+  {% include "case-study-rail.njk" %}
+</section>
+
+<!-- ============ SECURITY & COMPLIANCE ============ -->
+{% include "security.njk" %}
+
 <!-- ============ TEAMWORK CARES PREVIEW ============ -->
 <section class="section" style="padding-top: 0;">
   <div class="container">
