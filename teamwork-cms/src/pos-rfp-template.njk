@@ -21,19 +21,19 @@ stickyRest: ".final-cta, .footer"
 <!-- ============ HERO ============ -->
 <section class="section" style="padding-bottom: 34px;">
   <div class="container">
-    <div class="rfp-hero">
+    <div class="rfpq-hero">
       <span class="eyebrow"><span class="eyebrow-dot"></span> Free Resource, No Form</span>
-      <h1 class="rfp-h1">Enterprise POS RFP template.<br><span class="gradient-text">123 questions to ask vendors.</span></h1>
-      <p class="rfp-hero-sub">
+      <h1 class="rfpq-h1">Enterprise POS RFP template.<br><span class="gradient-text">123 questions to ask vendors.</span></h1>
+      <p class="rfpq-hero-sub">
         Every question is on this page. Copy a section straight into your RFP, or take the whole bank as a spreadsheet. Nothing is gated, and you do not have to tell us who you are.
       </p>
-      <div class="hero-cta rfp-cta">
+      <div class="hero-cta rfpq-cta">
         <a href="/assets/downloads/enterprise-pos-rfp-questions.csv" class="btn btn-primary btn-lg" download>
           <i class="ti ti-download"></i> Download all 123 (CSV)
         </a>
         <a href="#sections" class="btn btn-ghost btn-lg">Jump to the questions</a>
       </div>
-      <p class="rfp-disclosure">
+      <p class="rfpq-disclosure">
         <i class="ti ti-info-circle"></i>
         Written by Teamwork Commerce, a POS vendor. We have deliberately included questions we would not win on, because a question bank that only asks what one vendor is good at is no use to you. Judge it on whether it makes your RFP harder to answer.
       </p>
@@ -44,11 +44,11 @@ stickyRest: ".final-cta, .footer"
 <!-- ============ AT A GLANCE ============ -->
 <section class="section" style="padding-top: 0; padding-bottom: 0;">
   <div class="container">
-    <div class="rfp-stats">
-      <div class="rfp-stat"><strong>123</strong><span>Questions</span></div>
-      <div class="rfp-stat"><strong>15</strong><span>Sections</span></div>
-      <div class="rfp-stat"><strong>0</strong><span>Forms to fill in</span></div>
-      <div class="rfp-stat"><strong>CSV</strong><span>Opens in Excel or Sheets</span></div>
+    <div class="rfpq-stats">
+      <div class="rfpq-stat"><strong>123</strong><span>Questions</span></div>
+      <div class="rfpq-stat"><strong>15</strong><span>Sections</span></div>
+      <div class="rfpq-stat"><strong>0</strong><span>Forms to fill in</span></div>
+      <div class="rfpq-stat"><strong>CSV</strong><span>Opens in Excel or Sheets</span></div>
     </div>
   </div>
 </section>
@@ -89,25 +89,25 @@ stickyRest: ".final-cta, .footer"
       <p class="section-sub">Use the copy button on any section to take its questions as plain text.</p>
     </div>
 
-    <nav class="rfp-jump" aria-label="Jump to a section">
+    <nav class="rfpq-jump" aria-label="Jump to a section">
       {% for s in rfpQuestions %}
       <a href="#{{ s.id }}"><i class="ti {{ s.icon }}"></i> {{ s.title }} <b>{{ s.questions.length }}</b></a>
       {% endfor %}
     </nav>
 
     {% for s in rfpQuestions %}
-    <section class="rfp-sec" id="{{ s.id }}">
-      <header class="rfp-sec-head">
+    <section class="rfpq-sec" id="{{ s.id }}">
+      <header class="rfpq-sec-head">
         <div>
           <h3><i class="ti {{ s.icon }}"></i> {{ s.title }}</h3>
           <p>{{ s.blurb }}</p>
         </div>
-        <button class="rfp-copy" type="button" data-copy="{{ s.id }}"
+        <button class="rfpq-copy" type="button" data-copy="{{ s.id }}"
                 aria-label="Copy the {{ s.title }} questions">
           <i class="ti ti-copy"></i> <span>Copy {{ s.questions.length }}</span>
         </button>
       </header>
-      <ol class="rfp-qs" id="qs-{{ s.id }}">
+      <ol class="rfpq-qs" id="qs-{{ s.id }}">
         {% for q in s.questions %}
         <li>{{ q }}</li>
         {% endfor %}
@@ -227,7 +227,7 @@ stickyRest: ".final-cta, .footer"
 
 <script>
 (function () {
-  var btns = document.querySelectorAll(".rfp-copy");
+  var btns = document.querySelectorAll(".rfpq-copy");
   if (!btns.length || !navigator.clipboard) return;
   btns.forEach(function (btn) {
     var label = btn.querySelector("span");
