@@ -6451,20 +6451,23 @@ main > .hero.hpos-hero:first-child { margin-top: -85px; padding-top: 112px; }
 @media (max-width: 560px) { .off-cards { grid-template-columns: 1fr; } }
 
 /* ============ AROUND THE WORLD: photo mosaic ============
-   Masonry columns, not a fixed-row grid. Every photo keeps its own aspect ratio
-   so nothing is cropped, and each renders at full column width, which is what
-   makes the faces in the big group shots legible. */
-.gal { columns: 3; column-gap: 16px; }
+   A uniform grid, not masonry. Masonry balanced these particular photos badly:
+   the one portrait shot ran its column 472px longer than the shortest, leaving a
+   dead void. Fixed rows at three columns give each tile ~395x300, which is where
+   faces in the group shots actually become legible, and the cell count (9 over
+   three columns) divides exactly so there is never a hole. Most of these photos
+   are natively 4:3 so the box crops nothing; the portrait one spans two rows to
+   keep its shape. */
+.gal {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 300px; gap: 16px; grid-auto-flow: dense;
+}
 .gal-cell {
-  break-inside: avoid; margin: 0 0 16px; position: relative; overflow: hidden;
-  border-radius: 16px; border: 1px solid var(--border); background: var(--bg-elevated);
-  display: block;
+  margin: 0; position: relative; overflow: hidden; border-radius: 16px;
+  border: 1px solid var(--border); background: var(--bg-elevated);
 }
 .gal-cell img {
-  width: 100%; height: auto; display: block;
-  /* Cap the extremes. A portrait phone shot is otherwise ~1.8x the height of a
-     landscape one at the same width and runs its column away from the others. */
-  max-height: 520px; object-fit: cover;
+  width: 100%; height: 100%; object-fit: cover; display: block;
   transition: transform 0.5s cubic-bezier(.2,.8,.2,1);
 }
 .gal-cell::after {
@@ -6474,5 +6477,46 @@ main > .hero.hpos-hero:first-child { margin-top: -85px; padding-top: 112px; }
 }
 .gal-cell:hover img { transform: scale(1.04); }
 .gal-cell:hover::after { opacity: 1; }
-@media (max-width: 1000px) { .gal { columns: 2; } }
-@media (max-width: 620px) { .gal { columns: 1; } }
+.gal-tall { grid-row: span 2; }
+/* Two columns: the tall tile drops to 1x1 so the count is 8, four exact rows.
+   Left spanning two it totals 9 and strands a hole. */
+@media (max-width: 1000px) {
+  .gal { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 300px; }
+  .gal-tall { grid-row: span 1; }
+}
+@media (max-width: 620px) {
+  .gal { grid-template-columns: 1fr; grid-auto-rows: 260px; }
+}
+
+/* ============ ROTATING WORD (careers h1) ============
+   'Be a team player / mate / worker', the way the old site cycled it. The track
+   slides up one word at a time inside a one-word window.
+
+   The window has to be tall enough to contain the glyphs, not just the line box.
+   At line-height 1.05 the descender on 'player' paints outside its own box and
+   peeks over the top of the next word, so the box is 1.3em and the whole thing
+   is nudged back up to sit on the surrounding baseline. Step, word height and
+   window height are all the same value, which is what guarantees exactly one
+   word is ever in frame. The fourth item repeats the first so the loop restart
+   is invisible rather than a snap back. */
+.wordrot {
+  display: inline-flex; overflow: hidden; vertical-align: baseline;
+  height: 1.3em; margin-bottom: -0.25em;
+}
+.wordrot-track {
+  display: flex; flex-direction: column;
+  animation: wordrot 7.5s cubic-bezier(.76,0,.24,1) infinite;
+}
+.wordrot-w.gradient-text {
+  display: block; height: 1.3em; line-height: 1.3; white-space: nowrap;
+}
+@keyframes wordrot {
+  0%,   28%  { transform: translateY(0); }
+  33.3%, 61% { transform: translateY(-1.3em); }
+  66.6%, 94% { transform: translateY(-2.6em); }
+  100%       { transform: translateY(-3.9em); }
+}
+/* Someone who has asked for less motion gets the first word, held still. */
+@media (prefers-reduced-motion: reduce) {
+  .wordrot-track { animation: none; }
+}

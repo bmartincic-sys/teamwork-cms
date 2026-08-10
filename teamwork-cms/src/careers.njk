@@ -25,7 +25,14 @@ stickyRest: "#positions, .final-cta, .footer"
       <div>
         <span class="eyebrow"><span class="eyebrow-dot"></span> Careers</span>
         <h1 style="font-size: clamp(38px, 5.4vw, 62px); font-weight: 600; letter-spacing: -0.04em; line-height: 1.04; margin: 18px 0 0;">
-          Be a team <span class="gradient-text">player.</span>
+          Be a team <span class="wordrot" role="text" aria-label="player, mate, worker.">
+            <span class="wordrot-track" aria-hidden="true">
+              <span class="wordrot-w gradient-text">player.</span>
+              <span class="wordrot-w gradient-text">mate.</span>
+              <span class="wordrot-w gradient-text">worker.</span>
+              <span class="wordrot-w gradient-text">player.</span>
+            </span>
+          </span>
         </h1>
         <p class="hero-sub" style="margin-top: 18px;">
           We market ourselves as Teamwork Commerce and make teamwork our culture.
@@ -112,16 +119,13 @@ stickyRest: "#positions, .final-cta, .footer"
     </div>
     <div class="tmos">
       {% set faces = [
-        ["klestan","Klestan"], ["oly","Oly"], ["china2","A team member in China"],
         ["melinda-1","Melinda"], ["clarence","Clarence"], ["alex","Alex"],
-        ["pam","Pam"], ["nathan","Nathan"], ["b2","A team member"],
-        ["dani-1","Dani"], ["allison","Allison"], ["sai","Sai"],
+        ["b2","A team member"], ["dani-1","Dani"], ["allison","Allison"],
         ["bo2","Bo"], ["dunya-1","Dunya"], ["ody-1","Ody"],
         ["alex-2","Alex"], ["martin","Martin"], ["rosie","Rosie"],
         ["chris-1","Chris"], ["stan","Stan"], ["mp-1","A team member"],
-        ["frank-1","Frank"], ["mckenna","McKenna"], ["eric","Eric"],
-        ["di","Di"], ["amanda","Amanda"], ["clint","Clint"],
-        ["sandra","Sandra"], ["moises","Moises"], ["rachael-d-1","Rachael"],
+        ["frank-1","Frank"], ["eric","Eric"], ["di","Di"],
+        ["clint","Clint"], ["moises","Moises"], ["rachael-d-1","Rachael"],
         ["matt","Matt"], ["mm-1","A team member"], ["tori","Tori"]
       ] %}
       {% for f in faces %}
@@ -157,6 +161,9 @@ stickyRest: "#positions, .final-cta, .footer"
       <p class="section-sub">Offsites, trade show floors and the occasional costume. This is what the work actually looks like.</p>
     </div>
     <div class="gal">
+      <figure class="gal-cell gal-tall">
+        <img src="/assets/images/company/life/trade-show.webp" alt="A Teamwork Commerce stand at a retail trade show" loading="lazy">
+      </figure>
       <figure class="gal-cell">
         <img src="/assets/images/company/life/group-offsite.webp" alt="The whole team together at a company offsite" loading="lazy">
       </figure>
@@ -164,22 +171,19 @@ stickyRest: "#positions, .final-cta, .footer"
         <img src="/assets/images/company/life/asia-office.webp" alt="The Asia office team at the Teamwork Commerce wall" loading="lazy">
       </figure>
       <figure class="gal-cell">
-        <img src="/assets/images/company/life/office-desks.webp" alt="Team members working together at their desks" loading="lazy">
-      </figure>
-      <figure class="gal-cell">
         <img src="/assets/images/company/life/team-party.webp" alt="A Teamwork Commerce team party in costume" loading="lazy">
-      </figure>
-      <figure class="gal-cell">
-        <img src="/assets/images/company/life/olympics.webp" alt="The team with the USA Olympic flag in the office" loading="lazy">
-      </figure>
-      <figure class="gal-cell">
-        <img src="/assets/images/company/life/office-window.webp" alt="Two team members in the office" loading="lazy">
       </figure>
       <figure class="gal-cell">
         <img src="/assets/images/company/life/mexico-team.webp" alt="The Mexico team together" loading="lazy">
       </figure>
       <figure class="gal-cell">
-        <img src="/assets/images/company/life/trade-show.webp" alt="A Teamwork Commerce stand at a retail trade show" loading="lazy">
+        <img src="/assets/images/company/life/olympics.webp" alt="The team with the USA Olympic flag in the office" loading="lazy">
+      </figure>
+      <figure class="gal-cell">
+        <img src="/assets/images/company/life/office-desks.webp" alt="Team members working together at their desks" loading="lazy">
+      </figure>
+      <figure class="gal-cell">
+        <img src="/assets/images/company/life/office-window.webp" alt="Two team members in the office" loading="lazy">
       </figure>
     </div>
   </div>
