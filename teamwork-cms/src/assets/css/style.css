@@ -6341,7 +6341,10 @@ main > .hero.hpos-hero:first-child { margin-top: -85px; padding-top: 112px; }
    wall of people look muted and greyed-out. */
 .tmos { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
 .tmos img {
-  flex: 0 0 calc((100% - 6 * 10px) / 7);
+  /* Nine across so the current face count lands in three lines, which is the
+     shape asked for. If the count changes, this divisor is what to revisit:
+     ceil(count / 3). */
+  flex: 0 0 calc((100% - 8 * 10px) / 9);
   /* Flex items default to min-width:auto, which for a replaced element is its
      intrinsic width. Without this the 420px source wins and the basis is ignored. */
   min-width: 0;
@@ -6350,8 +6353,9 @@ main > .hero.hpos-hero:first-child { margin-top: -85px; padding-top: 112px; }
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 .tmos img:hover { transform: translateY(-3px) scale(1.03); box-shadow: 0 18px 34px -20px rgba(0,0,0,0.8); }
-@media (max-width: 1040px) { .tmos img { flex-basis: calc((100% - 5 * 10px) / 6); } }
-@media (max-width: 760px)  { .tmos img { flex-basis: calc((100% - 3 * 10px) / 4); } }
+@media (max-width: 1100px) { .tmos img { flex-basis: calc((100% - 6 * 10px) / 7); } }
+@media (max-width: 860px)  { .tmos img { flex-basis: calc((100% - 4 * 10px) / 5); } }
+@media (max-width: 660px)  { .tmos img { flex-basis: calc((100% - 3 * 10px) / 4); } }
 @media (max-width: 460px)  { .tmos img { flex-basis: calc((100% - 2 * 10px) / 3); } }
 
 /* Cares events. Photo left, copy right, alternating. */
