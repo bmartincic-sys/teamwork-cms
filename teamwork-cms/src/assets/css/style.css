@@ -7166,37 +7166,73 @@ main > .hero.hpos-hero:first-child { margin-top: -85px; padding-top: 112px; }
   .routex-out { min-width: 0; }
 }
 
+/* ============ SHARED: PRODUCT UI SURFACE ============
+   The real software is a light iOS interface: white panels, grey chrome, blue
+   controls, a green primary action. Any mock of a product screen uses these
+   tokens so it reads as the product rather than as this website. */
+.uix {
+  --uix-bg: #f2f4f7; --uix-panel: #ffffff; --uix-line: #dfe3ea;
+  --uix-ink: #16191f; --uix-dim: #6b7280; --uix-blue: #2f7ff6; --uix-green: #2fb457;
+  background: var(--uix-bg); color: var(--uix-ink);
+  border-radius: 14px; padding: 10px; display: flex; flex-direction: column; gap: 9px;
+  border: 1px solid rgba(0,0,0,0.16); box-shadow: 0 20px 46px -26px rgba(0,0,0,0.75);
+}
+.uix-phone { min-height: 236px; }
+.uix-nav {
+  display: grid; grid-template-columns: auto 1fr auto; align-items: center;
+  padding-bottom: 8px; border-bottom: 1px solid var(--uix-line);
+}
+.uix-back { color: var(--uix-blue); font-size: 17px; line-height: 1; }
+.uix-title { text-align: center; font-size: 12px; font-weight: 700; color: var(--uix-ink); }
+.uix-dots { font-size: 10px; color: var(--uix-dim); }
+.uix-card {
+  background: var(--uix-panel); border: 1px solid var(--uix-line); border-radius: 10px;
+  padding: 10px 11px; display: flex; flex-direction: column; gap: 3px;
+}
+.uix-card.is-new { border-left: 3px solid var(--uix-blue); }
+.uix-row1 { font-size: 12px; font-weight: 700; }
+.uix-row2 { font-size: 11px; color: var(--uix-ink); }
+.uix-row3 { font-size: 10px; color: var(--uix-dim); }
+.uix-btn {
+  margin-top: auto; text-align: center; padding: 9px 0; border-radius: 8px;
+  background: var(--uix-blue); color: #fff; font-size: 11.5px; font-weight: 700;
+}
+.uix-btn.is-go { background: var(--uix-green); }
+.uix-line {
+  display: flex; gap: 9px; align-items: flex-start; background: var(--uix-panel);
+  border: 1px solid var(--uix-line); border-radius: 10px; padding: 9px 10px;
+}
+.uix-check {
+  flex: 0 0 auto; width: 16px; height: 16px; border-radius: 4px; margin-top: 1px;
+  border: 1px solid #b9c0cc; background: #fff; color: #fff;
+  font-size: 11px; line-height: 14px; text-align: center;
+}
+.uix-check.on { background: var(--uix-blue); border-color: var(--uix-blue); }
+.uix-l { display: flex; flex-direction: column; gap: 2px; font-size: 10px; color: var(--uix-dim); }
+.uix-l b { font-size: 11.5px; font-weight: 600; color: var(--uix-ink); }
+.uix-tag { font-size: 10px; font-weight: 600; color: var(--uix-dim); }
+.uix-label { background: var(--uix-panel); border: 1px solid var(--uix-line); border-radius: 8px; padding: 9px 10px; }
+.uix-label-top { display: block; font-size: 8.5px; font-weight: 800; letter-spacing: 0.1em; margin-bottom: 7px; }
+.uix-label-code {
+  display: block; height: 32px; margin-bottom: 7px;
+  background-image: repeating-linear-gradient(90deg, #16191f 0 2px, transparent 2px 4px, #16191f 4px 5px, transparent 5px 9px);
+}
+.uix-label-addr { display: block; font-size: 9px; line-height: 1.45; font-weight: 600; }
+
 /* ============ OMS: THE ASSOCIATE'S THREE TAPS ============ */
 .stepx { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
 .stepx-phone { position: relative; padding: 26px 26px 28px; border: 1px solid var(--border); border-radius: 18px; background: var(--bg-elevated); }
 .stepx-n {
   position: absolute; top: 20px; right: 22px; width: 26px; height: 26px; border-radius: 50%;
-  background: var(--gradient); color: #fff; font-size: 12px; font-weight: 700;
+  background: var(--gradient); color: #fff; font-size: 12px; font-weight: 700; z-index: 1;
   display: inline-flex; align-items: center; justify-content: center;
 }
-.stepx-screen {
-  height: 168px; border-radius: 14px; padding: 14px; margin-bottom: 20px;
-  background: var(--bg-deep); border: 1px solid var(--border-strong);
-  display: flex; flex-direction: column; gap: 9px;
-}
-.stepx-bar { height: 6px; width: 34px; border-radius: 3px; background: var(--border-strong); margin: 0 auto 6px; }
-.stepx-alert {
-  display: flex; align-items: center; gap: 8px; padding: 10px 12px; border-radius: 9px;
-  background: linear-gradient(180deg, rgba(36,125,255,0.16), rgba(36,125,255,0.06));
-  border: 1px solid rgba(36,125,255,0.34); font-size: 11.5px; font-weight: 600; color: var(--text);
-}
-.stepx-alert i { color: var(--brand-text); font-size: 13px; }
-.stepx-row { display: flex; align-items: center; gap: 8px; font-size: 11.5px; color: var(--text-muted); }
-.stepx-row i { font-size: 14px; color: var(--brand-text); }
-.stepx-label {
-  height: 54px; border-radius: 8px; display: flex; align-items: center; justify-content: center;
-  background: rgba(255,255,255,0.9); color: #0a0e1e; font-size: 26px;
-}
-.stepx-line { height: 7px; border-radius: 4px; background: var(--border); }
-.stepx-line.w80 { width: 80%; } .stepx-line.w70 { width: 70%; }
-.stepx-line.w60 { width: 60%; } .stepx-line.w45 { width: 45%; } .stepx-line.w35 { width: 35%; }
+.stepx-phone .uix { margin-bottom: 20px; }
 .stepx-phone strong { display: block; font-size: 17px; font-weight: 600; letter-spacing: -0.02em; color: var(--text); margin-bottom: 8px; }
 .stepx-phone p { margin: 0; font-size: 13.5px; line-height: 1.65; color: var(--text-muted); }
+/* Says plainly that these are illustrations, not captures. */
+.stepx-note { text-align: center; font-size: 12.5px; color: var(--text-faint); margin: 26px 0 0; }
+.stepx-note a { color: var(--brand-text); font-weight: 600; }
 @media (max-width: 900px) { .stepx { grid-template-columns: 1fr; } }
 
 /* ============ STACK VS NATIVE ============
@@ -7261,44 +7297,14 @@ main > .hero.hpos-hero:first-child { margin-top: -85px; padding-top: 112px; }
 
 /* ============ ROTATING QR SIGN-IN ============ */
 .qrx { display: grid; grid-template-columns: auto 1fr; gap: 48px; align-items: center; }
+.qrx-real { display: flex; justify-content: center; }
+.qrx-real img { width: 236px; height: auto; display: block; filter: drop-shadow(0 30px 60px rgba(0,0,0,0.7)); }
 .qrx-phone {
   width: 236px; padding: 16px 18px 22px; border-radius: 26px;
   background: var(--bg-deep); border: 1px solid var(--border-strong);
   display: flex; flex-direction: column; align-items: center; gap: 12px;
   box-shadow: 0 30px 70px -34px rgba(0,0,0,0.85);
 }
-.qrx-notch { width: 46px; height: 5px; border-radius: 3px; background: var(--border-strong); }
-.qrx-title { font-size: 13px; font-weight: 600; color: var(--text); }
-/* Four quadrants cross-fading stands in for the code regenerating. */
-.qrx-code { position: relative; width: 132px; height: 132px; border-radius: 12px; background: #fff; overflow: hidden; }
-.qrx-code b {
-  position: absolute; width: 50%; height: 50%;
-  background-image:
-    repeating-linear-gradient(0deg, #0a0e1e 0 6px, transparent 6px 12px),
-    repeating-linear-gradient(90deg, #0a0e1e 0 6px, transparent 6px 12px);
-  background-size: 12px 12px;
-  animation: qrxflip 4s steps(1, end) infinite;
-}
-.qrx-code b:nth-child(1) { left: 0; top: 0; }
-.qrx-code b:nth-child(2) { right: 0; top: 0; animation-delay: 1s; }
-.qrx-code b:nth-child(3) { left: 0; bottom: 0; animation-delay: 2s; }
-.qrx-code b:nth-child(4) { right: 0; bottom: 0; animation-delay: 3s; }
-@keyframes qrxflip {
-  0%, 49% { background-position: 0 0, 0 0; }
-  50%, 100% { background-position: 6px 6px, 6px 0; }
-}
-/* Three finder squares. Without them the module grid reads as a barcode rather
-   than a QR code, which is the whole point of the visual. */
-.qrx-code u {
-  position: absolute; width: 32px; height: 32px; background: #fff;
-  border: 7px solid #0a0e1e; box-shadow: inset 0 0 0 4px #fff;
-}
-.qrx-code u.tl { top: 8px; left: 8px; }
-.qrx-code u.tr { top: 8px; right: 8px; }
-.qrx-code u.bl { bottom: 8px; left: 8px; }
-.qrx-timer { width: 132px; height: 4px; border-radius: 2px; background: var(--border); overflow: hidden; }
-.qrx-timer i { display: block; height: 100%; background: var(--gradient); animation: qrxtimer 4s linear infinite; }
-@keyframes qrxtimer { from { width: 100%; } to { width: 0%; } }
 .qrx-hint { font-size: 10.5px; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; color: var(--text-faint); }
 .qrx-copy { display: flex; flex-direction: column; gap: 20px; }
 .qrx-point { display: flex; gap: 15px; align-items: flex-start; }
@@ -7444,3 +7450,17 @@ main > .hero.hpos-hero:first-child { margin-top: -85px; padding-top: 112px; }
   .captx { grid-template-columns: 1fr; gap: 26px; }
   .captx-target { width: 100%; }
 }
+
+
+/* The real catalog screens are light tables, so the diff matches them. */
+.diffx-light .diffx-pane {
+  background: #f7f8fa; border-color: rgba(0,0,0,0.16); color: #16191f;
+  box-shadow: 0 20px 46px -28px rgba(0,0,0,0.7);
+}
+.diffx-light .diffx-pane.is-after { background: #f7f8fa; border-color: #2f7ff6; }
+.diffx-light .diffx-cap { color: #6b7280; }
+.diffx-light .diffx-pane.is-after .diffx-cap { color: #2f7ff6; }
+.diffx-light .diffx-row { border-top-color: #e3e6ec; color: #16191f; }
+.diffx-light .diffx-row b { color: #6b7280; }
+.diffx-light .diffx-row.is-empty { color: #9aa1ad; }
+.diffx-light .diffx-row.is-add { background: rgba(47,127,246,0.09); border-left-color: #2f7ff6; color: #16191f; }

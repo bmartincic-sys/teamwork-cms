@@ -276,38 +276,57 @@ stickyHref: "/contact/"
       <p class="section-sub">Three taps on the device already in their hand, between a customer walking in and a parcel going out.</p>
     </div>
     <div class="stepx">
+      <!-- Styled to match the real product UI, which is a light iOS interface with
+           blue controls and a green primary action, not a dark themed one. These are
+           still illustrations: see the note under the section. -->
       <div class="stepx-phone">
         <span class="stepx-n">1</span>
-        <div class="stepx-screen">
-          <span class="stepx-bar"></span>
-          <span class="stepx-alert"><i class="ti ti-bell"></i> New order to fulfil</span>
-          <span class="stepx-line w70"></span><span class="stepx-line w45"></span>
+        <div class="uix uix-phone">
+          <div class="uix-nav"><span class="uix-back">&lsaquo;</span><span class="uix-title">Orders</span><span class="uix-dots">&middot;&middot;&middot;</span></div>
+          <div class="uix-card is-new">
+            <span class="uix-row1">Ship from Store</span>
+            <span class="uix-row2">#48213 &middot; 1 item</span>
+            <span class="uix-row3">Regent St &middot; 2 min ago</span>
+          </div>
+          <span class="uix-btn">Accept</span>
         </div>
         <strong>It arrives</strong>
         <p>The order lands on the floor device as a notification, not in a back-office queue nobody is watching.</p>
       </div>
       <div class="stepx-phone">
         <span class="stepx-n">2</span>
-        <div class="stepx-screen">
-          <span class="stepx-bar"></span>
-          <span class="stepx-row"><i class="ti ti-square-check"></i> Size 9, black</span>
-          <span class="stepx-row"><i class="ti ti-square"></i> Gift wrap</span>
-          <span class="stepx-line w60"></span>
+        <div class="uix uix-phone">
+          <div class="uix-nav"><span class="uix-back">&lsaquo;</span><span class="uix-title">Pick list</span><span class="uix-dots">1 of 1</span></div>
+          <div class="uix-line">
+            <span class="uix-check on">&#10003;</span>
+            <span class="uix-l"><b>Runner Low, Black</b>Size 9 &middot; Bay 4, shelf 2</span>
+          </div>
+          <div class="uix-line">
+            <span class="uix-check"></span>
+            <span class="uix-l"><b>Gift wrap</b>Requested</span>
+          </div>
+          <span class="uix-tag">RFID verified on shelf</span>
+          <span class="uix-btn is-go">Confirm pick</span>
         </div>
         <strong>They pick it</strong>
         <p>A pick list against RFID-verified stock, so the unit is on the shelf rather than assumed to be.</p>
       </div>
       <div class="stepx-phone">
         <span class="stepx-n">3</span>
-        <div class="stepx-screen">
-          <span class="stepx-bar"></span>
-          <span class="stepx-label"><i class="ti ti-barcode"></i></span>
-          <span class="stepx-line w80"></span><span class="stepx-line w35"></span>
+        <div class="uix uix-phone">
+          <div class="uix-nav"><span class="uix-back">&lsaquo;</span><span class="uix-title">Shipment</span><span class="uix-dots">&middot;&middot;&middot;</span></div>
+          <div class="uix-label">
+            <span class="uix-label-top">NEXT DAY &middot; 1.2 kg</span>
+            <span class="uix-label-code"></span>
+            <span class="uix-label-addr">A. Okafor<br>14 Ellis Court, London</span>
+          </div>
+          <span class="uix-tag">Label printed, order closed</span>
         </div>
         <strong>The label prints</strong>
         <p>Carrier label from the device, and the order closes without anyone opening a laptop.</p>
       </div>
     </div>
+    <p class="stepx-note">Illustrations of the flow. <a href="/contact/">Ask for a walkthrough</a> to see it on a live device.</p>
     <div class="mini-grid" style="margin-top: 40px;">
       <div class="mini-card">
         <h3>Real-time global inventory lookup</h3>
