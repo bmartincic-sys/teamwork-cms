@@ -1,0 +1,201 @@
+---
+layout: "solution.njk"
+title: "Book a Demo"
+description: "See Teamwork Commerce running against your own operation. A working session with a retail solutions architect, not a slide deck, covering the workflows your stores actually run."
+navLabel: "Book a Demo"
+permalink: "/demo/"
+---
+<!-- Breadcrumb -->
+<div class="container">
+  <nav class="breadcrumb" aria-label="Breadcrumb" style="padding: 16px 0; font-size: 12px; color: var(--text-faint);">
+    <a href="/" style="color: var(--text-muted);">Home</a> <span style="margin: 0 6px;">/</span>
+    Book a Demo
+  </nav>
+</div>
+
+<!-- ============ FORM FIRST ============
+  The form is the page. Competitor demo pages put supporting content above it and
+  make you scroll to convert; this one leads with it and keeps the proof alongside. -->
+<section class="section demox" style="padding-bottom: 40px;">
+  <div class="container">
+    <div class="demox-grid">
+      <div class="demox-copy">
+        <span class="eyebrow"><span class="eyebrow-dot"></span> Book a Demo</span>
+        <h1 class="demox-h1">See it running against <span class="gradient-text">your own operation.</span></h1>
+        <p class="demox-sub">Tell us how your stores actually work and a retail solutions architect will walk through the platform against it. Your assortment, your markets, your edge cases.</p>
+
+        <ul class="demox-points">
+          <li><i class="ti ti-user-check"></i><div><strong>A solutions architect, not an account executive</strong><span>Someone who can answer the awkward question in the room rather than take it away.</span></div></li>
+          <li><i class="ti ti-clock-hour-4"></i><div><strong>45 minutes, and an agenda you set</strong><span>Tell us what matters and we will skip the rest. No generic product tour.</span></div></li>
+          <li><i class="ti ti-device-ipad"></i><div><strong>The real product on real devices</strong><span>Live POS, RFID counting and fulfilment, not screenshots in a deck.</span></div></li>
+          <li><i class="ti ti-lock"></i><div><strong>Your details stay with us</strong><span>No list sharing, and no sequence of chase emails afterwards.</span></div></li>
+        </ul>
+
+        <div class="demox-promise">
+          <i class="ti ti-mail-fast"></i>
+          <span>A solutions architect replies <strong>within one business day.</strong> If we are not the right fit for what you need, we will tell you that instead of booking the call.</span>
+        </div>
+      </div>
+
+      <div class="demox-formwrap" id="request">
+        <div class="demox-formhead">
+          <h2>Request your session</h2>
+          <p>Four fields to get started. Everything below them is optional and only helps us come prepared.</p>
+        </div>
+
+        <form name="demo-request" method="POST" action="/thanks/" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="demo-request">
+          <p hidden><label>Leave this empty: <input name="bot-field"></label></p>
+
+          <div class="dfx-row">
+            <div class="dfx-field">
+              <label for="dfx-first">First name *</label>
+              <input id="dfx-first" type="text" name="first_name" required placeholder="Jane">
+            </div>
+            <div class="dfx-field">
+              <label for="dfx-last">Last name *</label>
+              <input id="dfx-last" type="text" name="last_name" required placeholder="Smith">
+            </div>
+          </div>
+
+          <div class="dfx-row">
+            <div class="dfx-field">
+              <label for="dfx-email">Work email *</label>
+              <input id="dfx-email" type="email" name="work_email" required placeholder="jane@company.com">
+            </div>
+            <div class="dfx-field">
+              <label for="dfx-company">Company *</label>
+              <input id="dfx-company" type="text" name="company" required placeholder="Your company">
+            </div>
+          </div>
+
+          <details class="dfx-more">
+            <summary>Add detail so we can come prepared <span>optional</span></summary>
+
+            <div class="dfx-row">
+              <div class="dfx-field">
+                <label for="dfx-role">Role</label>
+                <input id="dfx-role" type="text" name="job_title" placeholder="VP of Retail">
+              </div>
+              <div class="dfx-field">
+                <label for="dfx-phone">Phone</label>
+                <input id="dfx-phone" type="tel" name="phone" placeholder="+1 (555) 000-0000">
+              </div>
+            </div>
+
+            <div class="dfx-row">
+              <div class="dfx-field">
+                <label for="dfx-stores">Stores in scope</label>
+                <select id="dfx-stores" name="store_count">
+                  <option value="">Select&hellip;</option>
+                  <option>1&ndash;50</option>
+                  <option>51&ndash;200</option>
+                  <option>201&ndash;500</option>
+                  <option>501&ndash;1,000</option>
+                  <option>1,000+</option>
+                </select>
+              </div>
+              <div class="dfx-field">
+                <label for="dfx-industry">Industry</label>
+                <select id="dfx-industry" name="industry">
+                  <option value="">Select&hellip;</option>
+                  <option>Fashion &amp; apparel</option>
+                  <option>Luxury</option>
+                  <option>Footwear</option>
+                  <option>Jewelry &amp; watches</option>
+                  <option>Museums &amp; cultural</option>
+                  <option>Pet retail</option>
+                  <option>Stadiums &amp; venues</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="dfx-field">
+              <span class="dfx-legend">What would you like to see?</span>
+              <div class="dfx-checks">
+                <label><input type="checkbox" name="interest" value="Mobile POS"> Mobile POS</label>
+                <label><input type="checkbox" name="interest" value="RFID"> RFID &amp; self-checkout</label>
+                <label><input type="checkbox" name="interest" value="Order Management"> Order management</label>
+                <label><input type="checkbox" name="interest" value="Inventory Control"> Inventory control</label>
+                <label><input type="checkbox" name="interest" value="121 Commerce (AI)"> AI at the point of sale</label>
+                <label><input type="checkbox" name="interest" value="Analytics"> Analytics &amp; reporting</label>
+              </div>
+            </div>
+
+            <div class="dfx-field">
+              <label for="dfx-msg">Anything specific we should cover?</label>
+              <textarea id="dfx-msg" name="message" rows="3" placeholder="Current stack, timeline, the workflow that keeps breaking&hellip;"></textarea>
+            </div>
+          </details>
+
+          <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; justify-content: center; margin-top: 8px;">Request a demo <i class="ti ti-arrow-right"></i></button>
+          <p class="dfx-fine">By submitting, you agree to our <a href="/privacy-policy/">Privacy Policy</a>. Prefer email? <a href="mailto:sales@teamworkcommerce.com">sales@teamworkcommerce.com</a></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRUST STRIP ============ -->
+{% include "logos.njk" %}
+
+<!-- ============ WHAT HAPPENS NEXT ============ -->
+<section class="section" style="padding-top: 0;">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">What Happens Next</div>
+      <h2 class="section-title">Three steps, and no sales sequence.</h2>
+    </div>
+    <div class="rev-steps">
+      <div class="rev-step">
+        <span class="rev-num">1</span>
+        <h3>We reply within a business day</h3>
+        <p>A solutions architect reads what you sent and comes back with times, and with anything we need from you to make the session useful.</p>
+      </div>
+      <div class="rev-step">
+        <span class="rev-num">2</span>
+        <h3>45 minutes on your workflows</h3>
+        <p>Live product against the operation you described. Bring whoever needs to see it, including the people whose objections will decide this.</p>
+      </div>
+      <div class="rev-step">
+        <span class="rev-num">3</span>
+        <h3>You get the follow-up in writing</h3>
+        <p>What we showed, what we could not answer live, and who owns it. Something you can circulate internally without rewriting it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NOT READY YET ============ -->
+<section class="section" style="padding-top: 0;">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">Not Ready For A Call</div>
+      <h2 class="section-title">Then do not book one yet.</h2>
+      <p class="section-sub">Most of what a first demo covers is already published here, ungated. Come back when a conversation would actually be useful.</p>
+    </div>
+    <div class="mini-grid">
+      <a class="mini-card demox-alt" href="/pos-rfp-template/">
+        <div class="mini-ico"><i class="ti ti-list-check"></i></div>
+        <h3>123 RFP questions</h3>
+        <p>The question bank for a POS selection, free and with no form. Includes the ones we would struggle with.</p>
+        <span class="demox-alt-go">Open the bank <i class="ti ti-arrow-right"></i></span>
+      </a>
+      <a class="mini-card demox-alt" href="/technical-evaluation/">
+        <div class="mini-ico"><i class="ti ti-server-cog"></i></div>
+        <h3>A technical review instead</h3>
+        <p>If you are the architect or the CISO, a product walkthrough answers the wrong questions. This one is for you.</p>
+        <span class="demox-alt-go">See the agenda <i class="ti ti-arrow-right"></i></span>
+      </a>
+      <a class="mini-card demox-alt" href="/case-studies/">
+        <div class="mini-ico"><i class="ti ti-award"></i></div>
+        <h3>Read what others did</h3>
+        <p>Retailers running this platform today, by sector, with what actually changed for them.</p>
+        <span class="demox-alt-go">Browse case studies <i class="ti ti-arrow-right"></i></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+{% include "security.njk" %}

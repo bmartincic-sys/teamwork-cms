@@ -20,7 +20,7 @@ permalink: "/contact/"
     <div style="max-width: 720px;">
       <span class="eyebrow"><span class="eyebrow-dot"></span> Contact Us</span>
       <h1 style="font-size: clamp(36px, 5vw, 58px); font-weight: 600; letter-spacing: -0.04em; line-height: 1.06; margin: 18px 0 0;">Contact us.</h1>
-      <p class="hero-sub" style="margin-top: 16px;">We would love to hear from you. Fill out the form below and we will be in touch as soon as possible.</p>
+      <p class="hero-sub" style="margin-top: 16px;">Sales, support and twelve offices. For a product walkthrough, the demo page is the faster route.</p>
     </div>
   </div>
 </section>
@@ -34,7 +34,7 @@ permalink: "/contact/"
         <div>
           <h2>Talk to a member of our sales team.</h2>
           <p>We will help you with the right solution for your business.</p>
-          <a href="#sales" class="btn btn-primary">Contact sales <i class="ti ti-arrow-right"></i></a>
+          <a href="/demo/" class="btn btn-primary">Book a demo <i class="ti ti-arrow-right"></i></a>
         </div>
       </div>
       <div class="route-card">
@@ -49,110 +49,22 @@ permalink: "/contact/"
   </div>
 </section>
 
-<!-- ============ FORM + DETAILS ============ -->
+<!-- ============ HOW TO REACH US ============ -->
 <section class="section" id="sales" style="padding-top: 0;">
   <div class="container">
     <div class="contact-split">
-      <div>
-        <h2 class="section-title" style="font-size: clamp(24px, 3vw, 32px); margin-bottom: 8px;">Contact sales</h2>
-        <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 26px;">A solutions architect will get back to you within one business day.</p>
-        <form name="demo-request" method="POST" action="/thanks/" data-netlify="true" netlify-honeypot="bot-field">
-                <input type="hidden" name="form-name" value="demo-request">
-                <p hidden><label>Leave this empty: <input name="bot-field"></label></p>
-
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px;">
-                  <div>
-                    <label style="display: block; font-size: 12px; font-weight: 700; color: var(--text); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.06em;">First Name *</label>
-                    <input type="text" placeholder="Jane" name="first_name" required style="width: 100%; padding: 12px 14px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg-deep); color: var(--text); font-family: var(--font-body); font-size: 14px; outline: none; transition: border-color 0.2s;" onfocus="this.style.borderColor='var(--brand-blue)'" onblur="this.style.borderColor='var(--border)'">
-                  </div>
-                  <div>
-                    <label style="display: block; font-size: 12px; font-weight: 700; color: var(--text); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.06em;">Last Name *</label>
-                    <input type="text" placeholder="Smith" name="last_name" required style="width: 100%; padding: 12px 14px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg-deep); color: var(--text); font-family: var(--font-body); font-size: 14px; outline: none; transition: border-color 0.2s;" onfocus="this.style.borderColor='var(--brand-blue)'" onblur="this.style.borderColor='var(--border)'">
-                  </div>
-                </div>
-
-                <div style="margin-bottom: 16px;">
-                  <label style="display: block; font-size: 12px; font-weight: 700; color: var(--text); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.06em;">Work Email *</label>
-                  <input type="email" placeholder="jane@company.com" name="work_email" required style="width: 100%; padding: 12px 14px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg-deep); color: var(--text); font-family: var(--font-body); font-size: 14px; outline: none; transition: border-color 0.2s;" onfocus="this.style.borderColor='var(--brand-blue)'" onblur="this.style.borderColor='var(--border)'">
-                </div>
-
-                <div style="margin-bottom: 16px;">
-                  <label style="display: block; font-size: 12px; font-weight: 700; color: var(--text); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.06em;">Phone</label>
-                  <input type="tel" placeholder="+1 (555) 000-0000" name="phone" style="width: 100%; padding: 12px 14px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg-deep); color: var(--text); font-family: var(--font-body); font-size: 14px; outline: none; transition: border-color 0.2s;" onfocus="this.style.borderColor='var(--brand-blue)'" onblur="this.style.borderColor='var(--border)'">
-                </div>
-
-                <div style="margin-bottom: 16px;">
-                  <label style="display: block; font-size: 12px; font-weight: 700; color: var(--text); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.06em;">Company *</label>
-                  <input type="text" placeholder="Your company" name="company" required style="width: 100%; padding: 12px 14px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg-deep); color: var(--text); font-family: var(--font-body); font-size: 14px; outline: none; transition: border-color 0.2s;" onfocus="this.style.borderColor='var(--brand-blue)'" onblur="this.style.borderColor='var(--border)'">
-                </div>
-
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px;">
-                  <div>
-                    <label style="display: block; font-size: 12px; font-weight: 700; color: var(--text); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.06em;">Job Title</label>
-                    <input type="text" placeholder="VP of Retail" name="job_title" style="width: 100%; padding: 12px 14px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg-deep); color: var(--text); font-family: var(--font-body); font-size: 14px; outline: none; transition: border-color 0.2s;" onfocus="this.style.borderColor='var(--brand-blue)'" onblur="this.style.borderColor='var(--border)'">
-                  </div>
-                  <div>
-                    <label style="display: block; font-size: 12px; font-weight: 700; color: var(--text); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.06em;">Number of Stores</label>
-                    <select name="store_count" style="width: 100%; padding: 12px 14px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg-deep); color: var(--text); font-family: var(--font-body); font-size: 14px; outline: none; appearance: auto;">
-                      <option value="">Select...</option>
-                      <option>1–10</option>
-                      <option>11–50</option>
-                      <option>51–100</option>
-                      <option>101–500</option>
-                      <option>500+</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div style="margin-bottom: 16px;">
-                  <label style="display: block; font-size: 12px; font-weight: 700; color: var(--text); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.06em;">Industry</label>
-                  <select name="industry" style="width: 100%; padding: 12px 14px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg-deep); color: var(--text); font-family: var(--font-body); font-size: 14px; outline: none; appearance: auto;">
-                    <option value="">Select your industry...</option>
-                    <option>Footwear & Apparel</option>
-                    <option>Fashion & Fast Fashion</option>
-                    <option>Luxury Apparel & High-End</option>
-                    <option>Stadiums & Venues</option>
-                    <option>Museums & Cultural</option>
-                    <option>Jewelry & Watches</option>
-                    <option>Pet Goods</option>
-                    <option>Specialty Retail</option>
-                    <option>Other</option>
-                  </select>
-                </div>
-
-                <div style="margin-bottom: 16px;">
-                  <label style="display: block; font-size: 12px; font-weight: 700; color: var(--text); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.06em;">What are you most interested in?</label>
-                  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
-                    <label style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-muted); cursor: pointer; padding: 8px 0;"><input type="checkbox" name="interest" value="Mobile POS" style="accent-color: var(--brand-blue);"> Mobile POS</label>
-                    <label style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-muted); cursor: pointer; padding: 8px 0;"><input type="checkbox" name="interest" value="RFID" style="accent-color: var(--brand-blue);"> RFID</label>
-                    <label style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-muted); cursor: pointer; padding: 8px 0;"><input type="checkbox" name="interest" value="Order Management" style="accent-color: var(--brand-blue);"> Order Management</label>
-                    <label style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-muted); cursor: pointer; padding: 8px 0;"><input type="checkbox" name="interest" value="121 Commerce (AI)" style="accent-color: var(--brand-blue);"> 121 Commerce (AI)</label>
-                    <label style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-muted); cursor: pointer; padding: 8px 0;"><input type="checkbox" name="interest" value="Inventory Control" style="accent-color: var(--brand-blue);"> Inventory Control</label>
-                    <label style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-muted); cursor: pointer; padding: 8px 0;"><input type="checkbox" name="interest" value="Analytics" style="accent-color: var(--brand-blue);"> Analytics</label>
-                  </div>
-                </div>
-
-                <div style="margin-bottom: 24px;">
-                  <label style="display: block; font-size: 12px; font-weight: 700; color: var(--text); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.06em;">Anything else we should know?</label>
-                  <textarea name="message" placeholder="Tell us about your current setup, pain points, or timeline..." rows="3" style="width: 100%; padding: 12px 14px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg-deep); color: var(--text); font-family: var(--font-body); font-size: 14px; outline: none; resize: vertical; transition: border-color 0.2s;" onfocus="this.style.borderColor='var(--brand-blue)'" onblur="this.style.borderColor='var(--border)'"></textarea>
-                </div>
-
-                <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; justify-content: center;">Submit request <i class="ti ti-arrow-right"></i></button>
-                </form>
-      </div>
-
-      <aside class="contact-aside">
-        <div class="cside-card">
-          <h3>Teamwork Commerce</h3>
-          <address>
-            <span>380 Park Place Blvd, Suite 250</span>
-            <span>Clearwater, FL 33759</span>
-          </address>
-          <div class="cside-rows">
-            <a href="tel:+17272101700"><i class="ti ti-phone"></i> Corporate office: 727-210-1700</a>
-            <a href="mailto:sales@teamworkcommerce.com"><i class="ti ti-mail"></i> sales@teamworkcommerce.com</a>
-          </div>
+      <div class="cside-card" style="padding: 30px 32px;">
+        <h3>Teamwork Commerce</h3>
+        <address>
+          <span>380 Park Place Blvd, Suite 250</span>
+          <span>Clearwater, FL 33759</span>
+        </address>
+        <div class="cside-rows">
+          <a href="tel:+17272101700"><i class="ti ti-phone"></i> Corporate office: 727-210-1700</a>
+          <a href="mailto:sales@teamworkcommerce.com"><i class="ti ti-mail"></i> sales@teamworkcommerce.com</a>
         </div>
+      </div>
+      <aside class="contact-aside">
         <div class="cside-card">
           <h3>Business hours</h3>
           <p>Monday to Friday<br>9:00am to 5:00pm</p>
@@ -281,7 +193,7 @@ permalink: "/contact/"
     <h2>A holistic customer <span class="gradient-text">experience.</span></h2>
     <p>Tell us about your estate and we will bring the people who own the answers.</p>
     <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
-      <a href="#sales" class="btn btn-primary btn-lg">Contact sales <i class="ti ti-arrow-right"></i></a>
+      <a href="/demo/" class="btn btn-primary btn-lg">Book a demo <i class="ti ti-arrow-right"></i></a>
     </div>
   </div>
 </section>

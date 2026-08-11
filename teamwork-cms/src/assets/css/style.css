@@ -140,9 +140,11 @@ a { color: inherit; text-decoration: none; }
 }
 .btn-icon:hover { color: var(--text); border-color: var(--border-strong); background: var(--bg-deep); }
 
+/* Buttons keep the site's own fill, weight and hover. The only thing borrowed from
+   Apple is the shape: a full pill instead of an 8px corner. */
 .btn {
   display: inline-flex; align-items: center; gap: 8px;
-  padding: 12px 24px; border-radius: 8px; font-size: 14px; font-weight: 600;
+  padding: 12px 24px; border-radius: 980px; font-size: 14px; font-weight: 600;
   cursor: pointer; transition: all 0.2s ease; border: 1px solid transparent;
   font-family: var(--font-body); white-space: nowrap; letter-spacing: -0.005em;
 }
@@ -6344,7 +6346,7 @@ main > .hero.hpos-hero:first-child { margin-top: -85px; padding-top: 112px; }
   /* Nine across so the current face count lands in three lines, which is the
      shape asked for. If the count changes, this divisor is what to revisit:
      ceil(count / 3). */
-  flex: 0 0 calc((100% - 8 * 10px) / 9);
+  flex: 0 0 calc((100% - 9 * 10px) / 10);
   /* Flex items default to min-width:auto, which for a replaced element is its
      intrinsic width. Without this the 420px source wins and the basis is ignored. */
   min-width: 0;
@@ -7492,3 +7494,89 @@ main > .hero.hpos-hero:first-child { margin-top: -85px; padding-top: 112px; }
 }
 .uix-tile i { font-size: 19px; color: var(--uix-blue); }
 .dossx-shot img { max-width: 100%; }
+
+/* ============ DEMO PAGE ============
+   Form first and beside the proof, rather than below it. */
+.demox-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+.demox-h1 {
+  margin: 18px 0 0; font-size: clamp(32px, 3.6vw, 48px); font-weight: 600;
+  letter-spacing: -0.04em; line-height: 1.07; color: var(--text);
+}
+.demox-sub { margin: 18px 0 0; font-size: 16.5px; line-height: 1.7; color: var(--text-muted); max-width: 48ch; }
+.demox-points { list-style: none; margin: 30px 0 0; padding: 0; display: flex; flex-direction: column; gap: 20px; }
+.demox-points li { display: flex; gap: 15px; align-items: flex-start; }
+.demox-points > li > i {
+  flex: 0 0 auto; width: 36px; height: 36px; border-radius: 10px; display: inline-flex;
+  align-items: center; justify-content: center; font-size: 17px; color: var(--brand-text);
+  background: rgba(36,125,255,0.12); border: 1px solid rgba(36,125,255,0.26);
+}
+.demox-points strong { display: block; font-size: 14.5px; font-weight: 600; color: var(--text); margin-bottom: 3px; }
+.demox-points span { display: block; font-size: 13.5px; line-height: 1.6; color: var(--text-muted); }
+.demox-promise {
+  display: flex; gap: 12px; align-items: flex-start; margin-top: 28px; padding: 16px 18px;
+  border: 1px solid rgba(36,125,255,0.3); border-radius: 12px;
+  background: linear-gradient(180deg, rgba(36,125,255,0.08), transparent);
+  font-size: 13.5px; line-height: 1.65; color: var(--text-muted);
+}
+.demox-promise i { color: var(--brand-text); font-size: 18px; flex: 0 0 auto; margin-top: 1px; }
+.demox-promise strong { color: var(--text); }
+
+.demox-formwrap {
+  padding: 30px 32px 32px; border: 1px solid var(--border); border-radius: 20px;
+  background: var(--bg-elevated); box-shadow: var(--shadow-lg); position: sticky; top: 96px;
+}
+.demox-formhead { margin-bottom: 22px; }
+.demox-formhead h2 { margin: 0 0 7px; font-size: 21px; font-weight: 600; letter-spacing: -0.022em; color: var(--text); }
+.demox-formhead p { margin: 0; font-size: 13px; line-height: 1.6; color: var(--text-muted); }
+
+.dfx-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+.dfx-field { display: flex; flex-direction: column; margin-bottom: 14px; }
+.dfx-row .dfx-field { margin-bottom: 0; }
+.dfx-field label, .dfx-legend {
+  font-size: 11.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;
+  color: var(--text-muted); margin-bottom: 7px;
+}
+.dfx-field input, .dfx-field select, .dfx-field textarea {
+  width: 100%; padding: 12px 14px; border-radius: 10px; border: 1px solid var(--border);
+  background: var(--bg-deep); color: var(--text); font-family: var(--font-body); font-size: 14px;
+  outline: none; transition: border-color 0.15s ease;
+}
+.dfx-field input:focus, .dfx-field select:focus, .dfx-field textarea:focus { border-color: var(--brand-blue); }
+.dfx-field textarea { resize: vertical; }
+/* Optional detail collapsed by default: four required fields on show, the rest on ask. */
+.dfx-more { margin-bottom: 6px; border-top: 1px solid var(--border); padding-top: 16px; }
+.dfx-more summary {
+  cursor: pointer; font-size: 13.5px; font-weight: 600; color: var(--brand-text);
+  display: flex; align-items: center; gap: 9px; margin-bottom: 16px; list-style: none;
+}
+.dfx-more summary::-webkit-details-marker { display: none; }
+.dfx-more summary::before { content: "+"; font-size: 15px; line-height: 1; }
+.dfx-more[open] summary::before { content: "\\2013"; }
+.dfx-more summary span {
+  font-size: 10px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase;
+  color: var(--text-faint); border: 1px solid var(--border); border-radius: 100px; padding: 2px 8px;
+}
+.dfx-checks { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 14px; }
+.dfx-checks label {
+  display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 400;
+  text-transform: none; letter-spacing: 0; color: var(--text-muted); cursor: pointer;
+  padding: 6px 0; margin: 0;
+}
+.dfx-checks input { accent-color: var(--brand-blue); width: auto; }
+.dfx-fine { margin: 14px 0 0; font-size: 11.5px; line-height: 1.6; color: var(--text-faint); text-align: center; }
+.dfx-fine a { color: var(--brand-text); }
+
+.demox-alt { text-decoration: none; display: block; }
+.demox-alt-go {
+  display: inline-flex; align-items: center; gap: 6px; margin-top: 14px;
+  font-size: 12.5px; font-weight: 700; color: var(--brand-text);
+}
+@media (max-width: 1000px) {
+  .demox-grid { grid-template-columns: 1fr; gap: 40px; }
+  .demox-formwrap { position: static; }
+}
+@media (max-width: 560px) {
+  .dfx-row { grid-template-columns: 1fr; gap: 14px; margin-bottom: 14px; }
+  .dfx-checks { grid-template-columns: 1fr; }
+  .demox-formwrap { padding: 24px 20px 26px; }
+}
