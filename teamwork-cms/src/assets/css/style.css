@@ -6332,19 +6332,27 @@ main > .hero.hpos-hero:first-child { margin-top: -85px; padding-top: 112px; }
 }
 
 /* Team mosaic. A dense wall of faces, the point being how many there are. */
-/* Team mosaic. Fixed column counts rather than auto-fill, because auto-fill fit
-   ten across and left a last row of four. Every count below divides the 24 faces
-   exactly, so no row is ever short. Keep the counts as divisors of the face count
-   if faces are added or removed. */
-.tmos { display: grid; grid-template-columns: repeat(8, 1fr); gap: 10px; }
-@media (max-width: 1040px) { .tmos { grid-template-columns: repeat(6, 1fr); } }
-@media (max-width: 760px)  { .tmos { grid-template-columns: repeat(4, 1fr); } }
-@media (max-width: 460px)  { .tmos { grid-template-columns: repeat(3, 1fr); } }
+/* Team mosaic. Flex with a centred last row rather than fixed columns: the face
+   count changes whenever someone joins or leaves, and a centred remainder reads as
+   deliberate at any count. Fixed columns only look right when the count happens to
+   divide by them, which it did at 24 and does not at 25.
+
+   Faces are full colour at rest. They were desaturated until hover, which made a
+   wall of people look muted and greyed-out. */
+.tmos { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
 .tmos img {
-  width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 14px; display: block;
-  border: 1px solid var(--border); filter: grayscale(0.35); transition: filter 0.25s ease, transform 0.25s ease;
+  flex: 0 0 calc((100% - 6 * 10px) / 7);
+  /* Flex items default to min-width:auto, which for a replaced element is its
+     intrinsic width. Without this the 420px source wins and the basis is ignored. */
+  min-width: 0;
+  aspect-ratio: 1; object-fit: cover; border-radius: 14px; display: block;
+  border: 1px solid var(--border);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
-.tmos img:hover { filter: grayscale(0); transform: translateY(-3px) scale(1.03); }
+.tmos img:hover { transform: translateY(-3px) scale(1.03); box-shadow: 0 18px 34px -20px rgba(0,0,0,0.8); }
+@media (max-width: 1040px) { .tmos img { flex-basis: calc((100% - 5 * 10px) / 6); } }
+@media (max-width: 760px)  { .tmos img { flex-basis: calc((100% - 3 * 10px) / 4); } }
+@media (max-width: 460px)  { .tmos img { flex-basis: calc((100% - 2 * 10px) / 3); } }
 
 /* Cares events. Photo left, copy right, alternating. */
 .evt-list { display: flex; flex-direction: column; gap: 18px; }
@@ -7299,6 +7307,11 @@ main > .hero.hpos-hero:first-child { margin-top: -85px; padding-top: 112px; }
 .qrx { display: grid; grid-template-columns: auto 1fr; gap: 48px; align-items: center; }
 .qrx-real { display: flex; justify-content: center; }
 .qrx-real img { width: 236px; height: auto; display: block; filter: drop-shadow(0 30px 60px rgba(0,0,0,0.7)); }
+.qrx-wide { width: 100%; }
+.qrx-wide img {
+  width: 100%; max-width: 520px; border-radius: 18px; border: 1px solid var(--border);
+  filter: none; aspect-ratio: 4 / 3; object-fit: cover;
+}
 .qrx-phone {
   width: 236px; padding: 16px 18px 22px; border-radius: 26px;
   background: var(--bg-deep); border: 1px solid var(--border-strong);
@@ -7344,7 +7357,7 @@ main > .hero.hpos-hero:first-child { margin-top: -85px; padding-top: 112px; }
    the section shows a record. Every field here is one the published list carries. */
 .dossx { display: grid; grid-template-columns: 300px 1fr; gap: 44px; align-items: center; }
 .dossx-shot { display: flex; justify-content: center; }
-.dossx-shot img { width: 100%; max-width: 260px; height: auto; display: block; filter: drop-shadow(0 30px 50px rgba(0,0,0,0.6)); }
+.dossx-shot img { width: 100%; max-width: 300px; height: auto; display: block; border-radius: 16px; border: 1px solid var(--border); aspect-ratio: 4 / 5; object-fit: cover; }
 .dossx-rec { padding: 30px 34px 32px; border: 1px solid var(--border); border-radius: 20px; background: var(--bg-elevated); }
 .dossx-cap { display: block; font-size: 10.5px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--brand-text); margin-bottom: 10px; }
 .dossx-rec h3 { margin: 0 0 10px; font-size: 22px; font-weight: 600; letter-spacing: -0.025em; color: var(--text); }
@@ -7464,3 +7477,14 @@ main > .hero.hpos-hero:first-child { margin-top: -85px; padding-top: 112px; }
 .diffx-light .diffx-row b { color: #6b7280; }
 .diffx-light .diffx-row.is-empty { color: #9aa1ad; }
 .diffx-light .diffx-row.is-add { background: rgba(47,127,246,0.09); border-left-color: #2f7ff6; color: #16191f; }
+
+/* App home on the product's own light UI. */
+.uix-home { min-height: 250px; }
+.uix-tiles { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.uix-tile {
+  background: var(--uix-panel); border: 1px solid var(--uix-line); border-radius: 10px;
+  padding: 12px 8px; text-align: center; font-size: 10px; font-weight: 600; line-height: 1.3;
+  color: var(--uix-ink); display: flex; flex-direction: column; align-items: center; gap: 6px;
+}
+.uix-tile i { font-size: 19px; color: var(--uix-blue); }
+.dossx-shot img { max-width: 100%; }
