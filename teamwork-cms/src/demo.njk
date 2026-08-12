@@ -131,6 +131,7 @@ permalink: "/demo/"
 
           <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; justify-content: center; margin-top: 8px;">Request a demo <i class="ti ti-arrow-right"></i></button>
           <p class="dfx-fine">By submitting, you agree to our <a href="/privacy-policy/">Privacy Policy</a>. Prefer email? <a href="mailto:sales@teamworkcommerce.com">sales@teamworkcommerce.com</a></p>
+          <input type="hidden" name="source" id="dfx-source" value="">
         </form>
       </div>
     </div>
@@ -199,3 +200,32 @@ permalink: "/demo/"
 </section>
 
 {% include "security.njk" %}
+
+<script>
+(function () {
+  // The event CTAs on /come-find-us/ arrive with ?ref=<slug>. Prefill the message so a
+  // "book a meeting at our stand" click does not land on an empty form, and record the
+  // slug in a hidden field so the submission says which show it came from. Unknown or
+  // absent values leave the form exactly as it was.
+  var CONTEXT = {
+    "nrf-2027": "I would like to book a meeting with your team at NRF 2027, Booth #6156.",
+    "nrf-europe-2026": "I would like to book a meeting at your stand at NRF Europe 2026, Stand I-050.",
+    "events": "I would like to book a meeting with your team at an upcoming retail event.",
+    "events-updates": "Please keep me posted on which retail events your team will be attending."
+  };
+
+  var ref = new URLSearchParams(window.location.search).get("ref");
+  if (!ref) return;
+
+  var source = document.getElementById("dfx-source");
+  if (source) source.value = ref;
+
+  var msg = document.getElementById("dfx-msg");
+  if (msg && !msg.value && CONTEXT[ref]) {
+    msg.value = CONTEXT[ref];
+    // The optional block is collapsed by default, so open it or the prefill is invisible.
+    var more = msg.closest("details");
+    if (more) more.open = true;
+  }
+})();
+</script>

@@ -1,0 +1,174 @@
+---
+layout: "solution.njk"
+title: "Come Find Us: Teamwork Commerce at NRF, Shoptalk and EuroShop"
+description: "Where to find Teamwork Commerce on the show floor. Booth numbers, dates and venues for NRF, NRF Europe, Shoptalk and EuroShop, plus how to book a meeting before the show."
+navLabel: "Come Find Us"
+tags: "resources"
+permalink: "/come-find-us/"
+stickyText: "Meeting slots go fast once the floor opens."
+stickyCta: "Book a meeting"
+stickyHref: "/demo/?ref=events"
+---
+<!-- Breadcrumb -->
+<div class="container">
+  <nav class="breadcrumb" aria-label="Breadcrumb" style="padding: 16px 0; font-size: 12px; color: var(--text-faint);">
+    <a href="/" style="color: var(--text-muted);">Home</a> <span style="margin: 0 6px;">/</span>
+    Come Find Us
+  </nav>
+</div>
+
+<!-- ============ HERO: the booth at the Javits Center ============ -->
+<section class="hero hero-photo hero-photo-compact">
+  <div class="hero-bg"></div>
+  <div class="hero-glow"></div>
+
+  <img class="hero-photo-bg" src="/assets/images/company/life/trade-show.webp" alt="The Teamwork Commerce booth on the show floor, with the platform running on iPad and iPhone" style="object-position: 50% 26%;">
+  <div class="hero-photo-scrim"></div>
+
+  <div class="container hero-photo-inner">
+    <div class="hero-photo-head fade-up">
+      <span class="eyebrow"><span class="eyebrow-dot"></span> Events</span>
+      <h1 class="hero-photo-title">Come find us.</h1>
+    </div>
+
+    <div class="hero-photo-foot hero-foot-left fade-up" style="animation-delay: 0.25s;">
+      <div class="hero-photo-note" style="max-width: 760px;">
+        <p>We're on the ground at the world's leading retail events: on the show floor, in the sessions, and ready to talk. Find us, book a meeting, and see what next-level retail looks like.</p>
+        <div class="hero-cta">
+          <a href="/demo/?ref=events" class="btn btn-primary btn-lg">Book a meeting <i class="ti ti-arrow-right"></i></a>
+          {% if events.upcoming.length %}
+          <a href="#headed" class="btn btn-ghost btn-lg">See where we'll be</a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% if events.upcoming.length %}
+<!-- ============ WHERE WE'RE HEADED ============ -->
+<section class="section" id="headed">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">Where We're Headed</div>
+      <h2 class="section-title">Get on our calendar before the show floor gets busy.</h2>
+    </div>
+
+    <div class="cfu-next">
+      {% for e in events.upcoming %}
+      <article class="cfu-card">
+        <div class="cfu-rail">
+          <div class="cfu-cal" aria-hidden="true">
+            <span class="cfu-cal-mon">{{ e.monthShort }}</span>
+            <span class="cfu-cal-day">{{ e.dayRange }}</span>
+            <span class="cfu-cal-yr">{{ e.year }}</span>
+          </div>
+          {% if e.stand %}
+          <div class="cfu-stand">
+            <span class="cfu-stand-lab">{{ e.standLabel }}</span>
+            <span class="cfu-stand-no">{{ e.stand }}</span>
+          </div>
+          {% endif %}
+        </div>
+
+        <div class="cfu-main">
+          <div class="cfu-top">
+            <h3 class="cfu-name">{{ e.name }}</h3>
+            <div class="cfu-facts">
+              <span class="cfu-fact"><i class="ti ti-calendar-event"></i> {{ e.dateLabel }}</span>
+              <span class="cfu-fact"><i class="ti ti-map-pin"></i> {{ e.venue }}, {{ e.city }}</span>
+            </div>
+            <span class="cfu-away" data-start="{{ e.start }}" hidden></span>
+          </div>
+
+          <h4 class="cfu-headline">{{ e.headline }}</h4>
+          <p class="cfu-body">{{ e.body }}</p>
+          <a href="/demo/?ref={{ e.ref }}" class="btn btn-primary">{{ e.cta }} <i class="ti ti-arrow-right"></i></a>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% if events.past.length %}
+<!-- ============ WHERE WE'VE BEEN ============ -->
+<section class="section" id="been" style="padding-top: 0;">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">Where We've Been</div>
+      <h2 class="section-title">Two years on the show floor.</h2>
+      <p class="section-sub">The shows our team has worked over the last two years, and what we took away from each one.</p>
+    </div>
+
+    <div class="cfu-past">
+      {% for e in events.past %}
+      <article class="cfu-pcard">
+        <div class="cfu-phead">
+          <h3>{{ e.name }}</h3>
+          {% if e.stand %}<span class="cfu-pstand">{{ e.standLabel }} {{ e.stand }}</span>{% endif %}
+        </div>
+        <div class="cfu-pmeta">
+          <span><i class="ti ti-calendar"></i> {{ e.dateLabel }}</span>
+          <span><i class="ti ti-map-pin"></i> {{ e.venue }}, {{ e.city }}</span>
+        </div>
+        <p>{{ e.body }}</p>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<!-- ============ CAN'T MAKE IT ============ -->
+<section class="section" style="padding-top: 0;">
+  <div class="container">
+    <div class="cfu-remote">
+      <div class="cfu-remote-copy">
+        <div class="section-eyebrow">Anywhere Else</div>
+        <h2>Can't make it to the next show?</h2>
+        <p>Our team is just as happy on a video call. Book a live demo and find out how Teamwork Commerce can empower your retail operations, wherever you are in the world.</p>
+        <div class="cfu-remote-cta">
+          <a href="/demo/" class="btn btn-primary btn-lg">Book a demo <i class="ti ti-arrow-right"></i></a>
+          <a href="/demo/?ref=events-updates" class="btn btn-ghost btn-lg">Keep me posted</a>
+        </div>
+      </div>
+      <div class="cfu-remote-side" aria-hidden="true">
+        <div class="cfu-globe">
+          <span class="cfu-globe-ring"></span>
+          <span class="cfu-globe-ring"></span>
+          <span class="cfu-globe-ring"></span>
+          <i class="ti ti-video"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+(function () {
+  // "X days away" is computed from the event's start date rather than written into the
+  // page, so it cannot go stale between deploys. Hidden by default and only revealed
+  // once a real positive number exists, which also covers the no-JS case.
+  var MS_DAY = 86400000;
+  var now = new Date();
+  var today = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate());
+
+  document.querySelectorAll(".cfu-away").forEach(function (el) {
+    var parts = (el.getAttribute("data-start") || "").split("-");
+    if (parts.length !== 3) return;
+    var start = Date.UTC(+parts[0], +parts[1] - 1, +parts[2]);
+    var days = Math.round((start - today) / MS_DAY);
+    if (days > 0) {
+      el.textContent = days === 1 ? "Tomorrow" : days + " days away";
+      el.hidden = false;
+    } else if (days === 0) {
+      el.textContent = "Happening today";
+      el.hidden = false;
+    }
+  });
+})();
+</script>
+
+{% include "sticky-cta.njk" %}
