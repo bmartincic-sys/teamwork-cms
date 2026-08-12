@@ -1,7 +1,7 @@
 ---
 layout: "solution.njk"
 title: "Native End-to-End RFID Solution"
-description: "The industry's only native end-to-end RFID stack: source tagging through EAS gates, 99.9% accuracy, AI loss prevention."
+description: "The industry's only native end-to-end RFID stack: tag encoding at receiving through EAS gates, 99.9% accuracy, AI loss prevention."
 navLabel: "RFID Solution"
 tags: "platform"
 permalink: "/platform/rfid/"
@@ -27,12 +27,12 @@ stickyHref: "/demo/"
   <div class="container hero-photo-inner">
     <div class="hero-photo-head fade-up">
       <span class="eyebrow"><span class="eyebrow-dot"></span> Part of the Teamwork Commerce platform</span>
-      <h1 class="hero-photo-title">End-to-end RFID,<br>from factory to front door.</h1>
+      <h1 class="hero-photo-title">End-to-end RFID,<br>from warehouse to front door.</h1>
     </div>
 
     <div class="hero-photo-foot hero-foot-left fade-up" style="animation-delay: 0.25s;">
       <div class="hero-photo-note">
-        <p>The industry's only native end-to-end RFID: source tagging through self-checkout. No middleware, no third parties. Just 99.9% item-level accuracy, built in.</p>
+        <p>The industry's only native end-to-end RFID: receiving through self-checkout. No middleware, no third parties. Just 99.9% item-level accuracy, built in.</p>
         <div class="hero-cta">
           <a href="/demo/" class="btn btn-primary btn-lg">Book a demo <i class="ti ti-arrow-right"></i></a>
         </div>
@@ -51,7 +51,7 @@ stickyHref: "/demo/"
     <div class="section-header">
       <div class="section-eyebrow">The RFID Story</div>
       <h2 class="section-title">One unit. One record. The whole journey.</h2>
-      <p class="section-sub">Every product gets an EPC at birth and a ledger entry for life. Follow one unit from the factory to the front door.</p>
+      <p class="section-sub">Every unit gets an EPC before it reaches the sales floor, and a ledger entry for life. Follow one unit from the warehouse to the front door.</p>
     </div>
     <div class="innov-track rfx-track">
       <div class="rfx-emitter">
@@ -81,30 +81,23 @@ stickyHref: "/demo/"
           </linearGradient>
         </defs>
         <g class="rfx-beam-track">
-          <path d="M500 2 L94.7 114"/>
-          <path d="M500 2 L297.3 114"/>
-          <path d="M500 2 L500 114"/>
-          <path d="M500 2 L702.7 114"/>
-          <path d="M500 2 L905.3 114"/>
+          <path d="M500 2 L125 114"/>
+          <path d="M500 2 L375 114"/>
+          <path d="M500 2 L625 114"/>
+          <path d="M500 2 L875 114"/>
         </g>
         <g class="rfx-beam-live">
-          <path pathLength="100" d="M500 2 L94.7 114"/>
-          <path pathLength="100" d="M500 2 L297.3 114"/>
-          <path pathLength="100" d="M500 2 L500 114"/>
-          <path pathLength="100" d="M500 2 L702.7 114"/>
-          <path pathLength="100" d="M500 2 L905.3 114"/>
+          <path pathLength="100" d="M500 2 L125 114"/>
+          <path pathLength="100" d="M500 2 L375 114"/>
+          <path pathLength="100" d="M500 2 L625 114"/>
+          <path pathLength="100" d="M500 2 L875 114"/>
         </g>
       </svg>
-      <div class="innov-nodes">
+      <div class="innov-nodes innov-nodes-4">
         <div class="innov-node">
-          <div class="innov-node-dot"><i class="ti ti-tag"></i></div>
-          <div class="innov-node-title">Source Tagging</div>
-          <div class="innov-node-sub">An EPC commissioned at the point of creation</div>
-        </div>
-        <div class="innov-node">
-          <div class="innov-node-dot"><i class="ti ti-ship"></i></div>
-          <div class="innov-node-title">In-Transit</div>
-          <div class="innov-node-sub">Tracked from factory to dock</div>
+          <div class="innov-node-dot"><i class="ti ti-building-warehouse"></i></div>
+          <div class="innov-node-title">Warehouse</div>
+          <div class="innov-node-sub">Ships vendor-tagged, or arrives untagged</div>
         </div>
         <div class="innov-node">
           <div class="innov-node-dot"><i class="ti ti-package"></i></div>
@@ -157,7 +150,7 @@ stickyHref: "/demo/"
       <div class="feature-text">
         <span class="story-chip"><span class="story-num">01</span> At receiving</span>
         <h2>Received in one step.</h2>
-        <p>The shipment lands. Tag, encode, and scan happen inside the purchase receipt workflow, and low-power reads capture only the boxes in front of you, never the racks behind.</p>
+        <p>The shipment lands. Scan straight into the purchase receipt, and low-power reads capture only the boxes in front of you, never the racks behind.</p>
         <ul class="feature-bullets">
           <li>Vendor pre-tagged? Scan straight into the receipt</li>
           <li>No tags from the vendor? The retailer prints and encodes them at receipt, right from the iOS device</li>
@@ -183,7 +176,7 @@ stickyHref: "/demo/"
       <div class="feature-text">
         <span class="story-chip"><span class="story-num">02</span> On the floor</span>
         <h2>Counted in minutes. Found in seconds.</h2>
-        <p>Now the unit lives in the store, and never disappears. High-power sweeps read thousands of EPCs without touching a rack; when something hides in the backroom, Geiger Counter locate walks you straight to it.</p>
+        <p>Now the unit lives in the store, and never disappears. High-power sweeps read thousands of EPCs without touching a rack; when something hides in the backroom, the handheld's locate mode reads the tag's signal and leads you straight to it.</p>
         <ul class="feature-bullets">
           <li>Full-store counts in minutes, not days. Recover $150K–$300K in "lost" stock in year one</li>
           <li>80% less search time on "missing" items</li>
@@ -288,7 +281,7 @@ stickyHref: "/demo/"
   <div class="container midcta-inner">
     <div>
       <div class="midcta-title">See the full RFID lifecycle live.</div>
-      <div class="midcta-sub">From source tagging to EAS gate, walk through it with a solutions architect.</div>
+      <div class="midcta-sub">From receiving to the EAS gate, walk through it with a solutions architect.</div>
     </div>
     <a href="/demo/" class="btn btn-lg midcta-btn">Book a demo <i class="ti ti-arrow-right"></i></a>
   </div>
@@ -489,7 +482,7 @@ stickyHref: "/demo/"
           What makes Teamwork Commerce RFID different from competitors?
           <span class="faq-icon"><i class="ti ti-plus"></i></span>
         </button>
-        <div class="faq-answer"><p>Teamwork Commerce offers the industry's only native end-to-end RFID stack, from source tagging and commissioning through checkout, loss prevention, and analytics. No third-party middleware required. New Black and NewStore offer unified commerce but require third-party integrations for deep RFID workflows. Our RFID is native to the core logic: every transaction (receiving, counting, transferring, selling) operates by individual EPC, not just UPC.</p></div>
+        <div class="faq-answer"><p>Teamwork Commerce offers the industry's only native end-to-end RFID stack, from tag encoding at receiving through checkout, loss prevention, and analytics. No third-party middleware required. New Black and NewStore offer unified commerce but require third-party integrations for deep RFID workflows. Our RFID is native to the core logic: every transaction (receiving, counting, transferring, selling) operates by individual EPC, not just UPC.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
@@ -517,7 +510,7 @@ stickyHref: "/demo/"
           Can vendors pre-tag items, or do we need to commission tags in-store?
           <span class="faq-icon"><i class="ti ti-plus"></i></span>
         </button>
-        <div class="faq-answer"><p>Both. The ideal approach is vendor source tagging at the point of manufacture. If that's not possible, Teamwork provides an integrated commissioning workflow inside the purchase receipt document: define quantity, print and encode tags, affix them, then RFID scan to populate the receipt with individual EPCs. One step, no separate process.</p></div>
+        <div class="faq-answer"><p>Both. If your vendor or warehouse ships goods already tagged, they scan straight into the purchase receipt. If not, Teamwork provides an integrated encoding workflow inside the purchase receipt document: define quantity, print and encode tags, affix them, then RFID scan to populate the receipt with individual EPCs. One step, no separate process.</p></div>
       </div>
     </div>
   </div>
@@ -546,7 +539,7 @@ stickyHref: "/demo/"
       "name": "What makes Teamwork Commerce RFID different from competitors?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Teamwork Commerce offers the industry's only native end-to-end RFID stack, from source tagging and commissioning through checkout, loss prevention, and analytics. No third-party middleware required. New Black and NewStore offer unified commerce but require third-party integrations for deep RFID workflows. Our RFID is native to the core logic: every transaction (receiving, counting, transferring, selling) operates by individual EPC, not just UPC."
+        "text": "Teamwork Commerce offers the industry's only native end-to-end RFID stack, from tag encoding at receiving through checkout, loss prevention, and analytics. No third-party middleware required. New Black and NewStore offer unified commerce but require third-party integrations for deep RFID workflows. Our RFID is native to the core logic: every transaction (receiving, counting, transferring, selling) operates by individual EPC, not just UPC."
       }
     },
     {
@@ -578,7 +571,7 @@ stickyHref: "/demo/"
       "name": "Can vendors pre-tag items, or do we need to commission tags in-store?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Both. The ideal approach is vendor source tagging at the point of manufacture. If that's not possible, Teamwork provides an integrated commissioning workflow inside the purchase receipt document: define quantity, print and encode tags, affix them, then RFID scan to populate the receipt with individual EPCs. One step, no separate process."
+        "text": "Both. If your vendor or warehouse ships goods already tagged, they scan straight into the purchase receipt. If not, Teamwork provides an integrated encoding workflow inside the purchase receipt document: define quantity, print and encode tags, affix them, then RFID scan to populate the receipt with individual EPCs. One step, no separate process."
       }
     }
   ]
