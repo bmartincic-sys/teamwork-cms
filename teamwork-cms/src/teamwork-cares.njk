@@ -86,6 +86,43 @@ stickyHref: "/contact/"
   </div>
 </section>
 
+<!-- ============ PROGRAM PILLARS ============ -->
+<section class="section" style="padding-top: 0;" id="pillars">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">Program Pillars</div>
+      <h2 class="section-title">Where we show up.</h2>
+      <p class="section-sub">Eight pillars guide both our volunteering and our charitable giving, so there is always more than one way for the team to take part.</p>
+    </div>
+
+    {% set pillars = [
+      ["ti-building-community", "Community & Local Impact", ["Food banks and food drives", "Homelessness support", "Community cleanups", "Local nonprofit and school partnerships"]],
+      ["ti-school", "Education & Youth", ["School supply drives", "Mentoring and tutoring", "Scholarships and career readiness", "STEM and technology education"]],
+      ["ti-stethoscope", "Health & Well-Being", ["Mental health awareness", "Senior support", "Hospital and nonprofit volunteering", "Blood drives and health initiatives"]],
+      ["ti-leaf", "Environment & Sustainability", ["Beach, park and neighborhood cleanups", "Tree planting", "Recycling initiatives", "Conservation and sustainability education"]],
+      ["ti-soup", "Hunger & Basic Needs", ["Food bank volunteering and meal packing", "Clothing and hygiene drives", "Holiday giving", "Support for families experiencing hardship"]],
+      ["ti-world", "Global Communities", ["Disaster relief", "International aid organizations", "Refugee support", "Employee-led fundraising for global causes"]],
+      ["ti-accessible", "Inclusion & Empowerment", ["Programs supporting people with disabilities", "Women's empowerment", "Veteran support", "Organizations promoting opportunity and accessibility"]],
+      ["ti-paw", "Animals & Animal Welfare", ["Animal shelter volunteering", "Pet food and supply drives", "Adoption events", "Wildlife conservation"]]
+    ] %}
+
+    <div class="cpil-grid">
+      {% for pl in pillars %}
+      <div class="cpil">
+        <div class="cpil-head">
+          <span class="cpil-ico"><i class="ti {{ pl[0] }}"></i></span>
+          <h3 class="cpil-name">{{ pl[1] }}</h3>
+        </div>
+        <ul class="cpil-list">
+          {% for item in pl[2] %}<li>{{ item }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
 <!-- ============ WHAT DO WE BELIEVE IN ============ -->
 <section class="section" style="padding-top: 0;">
   <div class="container">

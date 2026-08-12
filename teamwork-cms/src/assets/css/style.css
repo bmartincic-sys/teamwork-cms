@@ -8038,3 +8038,36 @@ a.evc:hover .evc-go { opacity: 1; }
 }
 .evc-country, .cfu-country { font-weight: 600; color: var(--text-muted); }
 .cfu-country { color: var(--text); }
+
+
+/* ============ TEAMWORKCARES PROGRAM PILLARS (.cpil) ============
+   Eight compact cards guiding volunteering and giving. Four across so all eight sit in
+   two rows on desktop; the lists are short examples, not exhaustive programs. Solid
+   accents only, per the gradient rule. */
+.cpil-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.cpil {
+  display: flex; flex-direction: column; gap: 12px;
+  padding: 20px 20px 22px; border: 1px solid var(--border); border-radius: 16px;
+  background: var(--bg-elevated); transition: border-color 0.2s ease;
+}
+.cpil:hover { border-color: rgba(36,125,255,0.4); }
+.cpil-head { display: flex; align-items: center; gap: 10px; }
+.cpil-ico {
+  display: grid; place-items: center; flex: 0 0 auto;
+  width: 36px; height: 36px; border-radius: 10px;
+  background: rgba(36,125,255,0.12); border: 1px solid rgba(36,125,255,0.28);
+}
+.cpil-ico i { font-size: 18px; color: var(--brand-text); }
+.cpil-name { margin: 0; font-size: 14.5px; font-weight: 600; letter-spacing: -0.015em; line-height: 1.25; color: var(--text); }
+.cpil-list { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 6px; }
+.cpil-list li {
+  position: relative; padding-left: 14px;
+  font-size: 12.5px; line-height: 1.5; color: var(--text-muted);
+}
+.cpil-list li::before {
+  content: ''; position: absolute; left: 0; top: 8px;
+  width: 5px; height: 5px; border-radius: 50%; background: var(--brand-blue); opacity: 0.65;
+}
+@media (max-width: 1100px) { .cpil-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .cpil-grid { grid-template-columns: 1fr; } }
+@media (prefers-reduced-motion: reduce) { .cpil { transition: none; } }
