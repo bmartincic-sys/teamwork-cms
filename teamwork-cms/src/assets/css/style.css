@@ -7720,7 +7720,7 @@ main > .hero.hpos-hero:first-child { margin-top: -85px; padding-top: 112px; }
 
 
 /* ============ COME FIND US (.cfu) ============
-   Event cards for /come-find-us/. The reader's two questions on a show floor are "when"
+   Event cards for /events/. The reader's two questions on a show floor are "when"
    and "which booth", so both get their own block in a left rail rather than being buried
    in a line of prose. Solid blue and grey throughout: the gradient is reserved for CTAs
    and the AI/Plus surfaces. */
@@ -7910,3 +7910,21 @@ main > .hero.hpos-hero:first-child { margin-top: -85px; padding-top: 112px; }
   .omsr-stat { flex-direction: row; align-items: baseline; gap: 14px; }
   .omsr-stat strong { flex: 0 0 auto; }
 }
+
+
+/* The team is the subject of this hero, and the shared scrim's bottom-up gradient sits
+   straight across their faces. Every piece of text on this page lives in the upper and
+   middle left, so the bottom and right can be much lighter here without costing
+   legibility. */
+.cfu-hero .hero-photo-scrim {
+  background:
+    linear-gradient(92deg, rgba(6,7,15,0.88) 0%, rgba(6,7,15,0.5) 44%, rgba(6,7,15,0.14) 70%),
+    linear-gradient(to top, rgba(6,7,15,0.52) 0%, rgba(6,7,15,0.12) 26%, transparent 44%),
+    linear-gradient(to bottom, rgba(6,7,15,0.82) 0px, rgba(6,7,15,0.42) 120px, rgba(6,7,15,0.12) 230px, transparent 330px);
+}
+.cfu-hero .hero-photo-scrim::after {
+  background: linear-gradient(100deg, rgba(4,6,20,0.82) 0%, rgba(4,6,20,0.5) 34%, rgba(4,6,20,0.08) 60%, transparent 76%);
+}
+
+/* The percent sign rides smaller than the number, matching the stat ticker. */
+.omsr-big-pct { font-size: 0.52em; font-weight: 600; letter-spacing: -0.02em; }

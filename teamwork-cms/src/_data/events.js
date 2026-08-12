@@ -1,4 +1,4 @@
-// Trade shows and conferences for /come-find-us/.
+// Trade shows and conferences for /events/.
 //
 // Upcoming vs past is derived from `end` at build time rather than being flagged by
 // hand, so the page re-sorts itself on every deploy and nothing has to be moved from

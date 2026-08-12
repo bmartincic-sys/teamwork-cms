@@ -52,3 +52,8 @@
   to = "https://partners.teamworkcommerce.com/integrations"
   status = 301
   force = true
+
+[[redirects]]
+  from = "/come-find-us/"
+  to = "/events/"
+  status = 301

@@ -94,7 +94,7 @@
       </div>
       {% if collections.resources.length %}
       <div class="nav-item">
-        <span class="nav-link{% if not onCaseStudy and (onPressRelease or "/blog/" in page.url or "/press-room/" in page.url or "/technical-evaluation/" in page.url or "/come-find-us/" in page.url) %} nav-link-active{% endif %}">Resources <i class="ti ti-chevron-down" style="font-size:14px"></i></span>
+        <span class="nav-link{% if not onCaseStudy and (onPressRelease or "/blog/" in page.url or "/press-room/" in page.url or "/technical-evaluation/" in page.url or "/events/" in page.url) %} nav-link-active{% endif %}">Resources <i class="ti ti-chevron-down" style="font-size:14px"></i></span>
         <div class="nav-dropdown nav-cs">
           <div class="nav-cs-head">
             <span>Latest from the blog</span>
@@ -117,7 +117,7 @@
                 ["/blog/", "ti-article", "Blog", "Insights, trends, and how retailers are operating"],
                 ["/press-room/", "ti-news", "Press Room", "Announcements and media contacts"],
                 ["/technical-evaluation/", "ti-shield-lock", "Technical Evaluation", "Architecture, security, and migration"],
-                ["/come-find-us/", "ti-map-pin", "Come Find Us", "Booth numbers and dates for the shows we work"]
+                ["/events/", "ti-map-pin", "Events", "Booth numbers and dates for the shows we work"]
               ] %}
               {% for r in resRows %}
               <a class="nav-row" href="{{ r[0] }}"{% if page.url == r[0] %} aria-current="page"{% endif %}>
@@ -201,7 +201,7 @@
     <a href="/blog/"{% if "/blog/" in page.url %} class="is-current" aria-current="page"{% endif %}>Blog</a>
     <a href="/press-room/"{% if page.url == "/press-room/" %} class="is-current" aria-current="page"{% endif %}>Press Room</a>
     <a href="/technical-evaluation/"{% if page.url == "/technical-evaluation/" %} class="is-current" aria-current="page"{% endif %}>Technical Evaluation</a>
-    <a href="/come-find-us/"{% if page.url == "/come-find-us/" %} class="is-current" aria-current="page"{% endif %}>Come Find Us</a>
+    <a href="/events/"{% if page.url == "/events/" %} class="is-current" aria-current="page"{% endif %}>Events</a>
     <div class="nav-mob-head">Company</div>
     <a href="/about/"{% if page.url == "/about/" %} class="is-current" aria-current="page"{% endif %}>About</a>
     <a href="/careers/"{% if page.url == "/careers/" %} class="is-current" aria-current="page"{% endif %}>Careers</a>
