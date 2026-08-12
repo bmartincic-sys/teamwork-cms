@@ -7931,15 +7931,18 @@ main > .hero.hpos-hero:first-child { margin-top: -85px; padding-top: 112px; }
 
 
 /* ============ OSANO CMP WIDGET ============
-   Osano's persistent cookie widget is fixed to the bottom right with a near-maximum
-   z-index, which puts it on top of the sticky CTA bar and over its button. Lift it clear
-   while that bar is showing. Their positioning comes from a stylesheet rather than inline
-   styles, but it is specific enough to need !important. Bar is 77px, 73px on mobile. */
-.osano-cm-widget { transition: bottom .35s cubic-bezier(.2, .8, .2, 1); }
-body:has(.stickycta.show) .osano-cm-widget { bottom: 89px !important; }
-@media (max-width: 900px) {
-  body:has(.stickycta.show) .osano-cm-widget { bottom: 85px !important; }
-}
-@media (prefers-reduced-motion: reduce) {
-  .osano-cm-widget { transition: none; }
-}
+   Hide Osano's floating cookie icon. This is the method Osano documents for it; there is
+   no dashboard toggle, and all of their advanced styling has to live in our own
+   stylesheet.
+
+   Their docs are explicit that removing the widget requires giving people another route
+   to their storage preferences. That is the "Cookie Preferences" link in the footer,
+   which calls Osano.cm.showDrawer and is on all 131 pages. It is the only remaining
+   entry point, so it has to stay in the footer.
+
+   This also retires the collision fix that used to live here: the widget sat at
+   bottom 12px with a near-maximum z-index and covered the sticky CTA's button, so it was
+   being lifted to 89px whenever that bar showed. Nothing to lift now. The CTA still
+   defers to the consent dialog itself, which is a separate bottom bar; that lives in
+   sticky-cta.njk. */
+.osano-cm-widget { display: none; }
