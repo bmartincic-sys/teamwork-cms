@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Theme is applied before Osano so the page does not flash the wrong theme while the
+     CMP loads. Safe to run first: it is inline with no src and touches only the theme
+     key in localStorage, so it is not something Osano would gate. -->
 <script>
 (function () {
   var saved = localStorage.getItem("theme");
@@ -8,8 +14,13 @@
   document.documentElement.setAttribute("data-theme", theme);
 })();
 </script>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Osano CMP. This must stay above every other script that has a src: Osano blocks
+     third-party scripts by intercepting them as they load, so anything declared earlier
+     would run before the CMP exists and set its cookies ungated.
+     Note it only intercepts scripts. Stylesheets (<link>) and iframes are not covered,
+     so third-party CSS and video embeds still have to be handled in the markup. -->
+<script src="https://cmp.osano.com/169lWRSfbjfGi1iTF/bd7c56a3-144c-425f-9298-235bf64c29eb/osano.js"></script>
 {% if "Teamwork Commerce" in title %}{% set pageTitle = title %}{% else %}{% set pageTitle = title + " | Teamwork Commerce" %}{% endif %}
 <title>{{ pageTitle }}</title>
 <meta name="description" content="{{ description }}">
@@ -137,16 +148,25 @@
 
 {% include "footer.njk" %}
 
-<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 <script>
-if (window.netlifyIdentity) {
-  window.netlifyIdentity.on("init", user => {
-    if (!user) {
-      window.netlifyIdentity.on("login", () => { document.location.href = "/admin/"; });
-    }
-  });
-}
+(function () {
+  // The footer control is a real link to the cookie section of the privacy policy and
+  // only upgrades to the Osano drawer when Osano is actually present. If the CMP is
+  // blocked by an extension or its CDN fails, the visitor still gets somewhere useful
+  // instead of a dead control. showDrawer is the current API; Osano.cm.emit is deprecated.
+  var prefs = document.getElementById("cookiePrefs");
+  if (prefs) {
+    prefs.addEventListener("click", function (e) {
+      var cm = window.Osano && window.Osano.cm;
+      if (cm && typeof cm.showDrawer === "function") {
+        e.preventDefault();
+        cm.showDrawer("osano-cm-dom-info-dialog-open");
+      }
+    });
+  }
+})();
 </script>
+
 <script>
 (function () {
   var themeToggle = document.getElementById("themeToggle");

@@ -47,6 +47,17 @@
     sessionStorage.setItem("tw-sticky-dismissed", "1");
   });
 
+  // Osano's consent banner is also a bottom bar. Two stacked bottom bars is a mess, and
+  // the consent choice has to come first, so the CTA holds off while the dialog is up.
+  // The dialog stays in the DOM when closed, so presence is not enough to test on.
+  function consentOpen() {
+    var dlg = document.querySelector(".osano-cm-dialog, .osano-cm-window__dialog");
+    if (!dlg) return false;
+    var cs = window.getComputedStyle(dlg);
+    if (cs.display === "none" || cs.visibility === "hidden" || cs.opacity === "0") return false;
+    return dlg.getBoundingClientRect().height > 0;
+  }
+
   function update() {
     if (dismissed) return;
     var scrolled = (window.scrollY || document.documentElement.scrollTop) > 900;
@@ -54,9 +65,21 @@
       var r = el.getBoundingClientRect();
       return r.top < window.innerHeight && r.bottom > 0;
     });
-    bar.classList.toggle("show", scrolled && !restVisible);
+    bar.classList.toggle("show", scrolled && !restVisible && !consentOpen());
   }
   window.addEventListener("scroll", update, { passive: true });
   window.addEventListener("resize", update, { passive: true });
+
+  // Without this the bar would stay hidden after someone accepts until they happen to
+  // scroll again. Osano can finish loading after this script, so wait for the API rather
+  // than assuming it is there.
+  (function hookConsent(tries) {
+    var cm = window.Osano && window.Osano.cm;
+    if (cm && typeof cm.addEventListener === "function") {
+      cm.addEventListener("osano-cm-consent-saved", update);
+      return;
+    }
+    if (tries > 0) setTimeout(function () { hookConsent(tries - 1); }, 400);
+  })(15);
 })();
 </script>

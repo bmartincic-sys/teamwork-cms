@@ -7928,3 +7928,18 @@ main > .hero.hpos-hero:first-child { margin-top: -85px; padding-top: 112px; }
 
 /* The percent sign rides smaller than the number, matching the stat ticker. */
 .omsr-big-pct { font-size: 0.52em; font-weight: 600; letter-spacing: -0.02em; }
+
+
+/* ============ OSANO CMP WIDGET ============
+   Osano's persistent cookie widget is fixed to the bottom right with a near-maximum
+   z-index, which puts it on top of the sticky CTA bar and over its button. Lift it clear
+   while that bar is showing. Their positioning comes from a stylesheet rather than inline
+   styles, but it is specific enough to need !important. Bar is 77px, 73px on mobile. */
+.osano-cm-widget { transition: bottom .35s cubic-bezier(.2, .8, .2, 1); }
+body:has(.stickycta.show) .osano-cm-widget { bottom: 89px !important; }
+@media (max-width: 900px) {
+  body:has(.stickycta.show) .osano-cm-widget { bottom: 85px !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .osano-cm-widget { transition: none; }
+}
