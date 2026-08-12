@@ -2004,8 +2004,9 @@ a { color: inherit; text-decoration: none; }
 .footer-locale:hover { border-color: var(--border-strong); }
 @media (max-width: 900px) {
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
-  .nav-links { display: none; }
 }
+/* Kept with the rest of the nav breakpoint above, not the footer's. */
+@media (max-width: 1049px) { .nav-links { display: none; } }
 @media (max-width: 600px) { .footer-grid { grid-template-columns: 1fr; } }
 
 /* ============ FAQ ============ */
@@ -2300,7 +2301,11 @@ details[open] summary { color: var(--brand-text); }
   align-items: center; justify-content: center;
 }
 .nav-mobile-menu { display: none; }
-@media (max-width: 900px) {
+/* 1049px, not 900px. The desktop bar needs 1047px for the logo, six nav items, the two
+   icon buttons and the CTA, so every width from 901 up to 1046 was pushing the CTA past
+   the viewport edge. Tablets get the mobile menu, which is the better trade: it already
+   carries all 29 links, grouped. */
+@media (max-width: 1049px) {
   .nav-links { display: none !important; }
   .nav-hamburger { display: flex; }
   .nav-mobile-menu {
@@ -7645,9 +7650,11 @@ main > .hero.hpos-hero:first-child { margin-top: -85px; padding-top: 112px; }
    Anything a thumb has to hit gets at least ~44px of height. Inline links inside
    running text become inline-flex so they gain the height without breaking the line
    box, and the icon-only controls become square. */
-@media (max-width: 900px) {
+@media (max-width: 1049px) {
   .nav-hamburger { width: 44px; height: 44px; }
-  .nav-logo { padding: 3px 0; }
+  .nav-logo { padding: 3px 0; min-height: 44px; }
+}
+@media (max-width: 900px) {
 
   .btn { min-height: 44px; }
   .btn-sm { min-height: 40px; }
@@ -7670,7 +7677,6 @@ main > .hero.hpos-hero:first-child { margin-top: -85px; padding-top: 112px; }
   .footer-col a { min-height: 40px; }
   /* The legal row's links carry no class of their own. */
   .footer-bottom a { display: inline-flex; align-items: center; min-height: 40px; }
-  .nav-logo { min-height: 44px; }
 
   /* Checkbox and radio inputs ship at 13px. The box itself grows, and the label
      around it becomes the hit area so the text counts too. */
