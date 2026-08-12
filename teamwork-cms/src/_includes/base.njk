@@ -159,6 +159,22 @@ if (window.netlifyIdentity) {
   }
   setIcon(document.documentElement.getAttribute("data-theme"));
 
+  var themeToggleMob = document.getElementById("themeToggleMob");
+  var themeIconMob = document.getElementById("themeIconMob");
+  function setIconMob(theme) {
+    if (!themeIconMob) return;
+    themeIconMob.classList.toggle("ti-sun", theme === "light");
+    themeIconMob.classList.toggle("ti-moon", theme === "dark");
+  }
+  setIconMob(document.documentElement.getAttribute("data-theme"));
+  function flipTheme() {
+    var current = document.documentElement.getAttribute("data-theme");
+    var next = current === "dark" ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", next);
+    localStorage.setItem("theme", next);
+    setIcon(next); setIconMob(next);
+  }
+  if (themeToggleMob) themeToggleMob.addEventListener("click", flipTheme);
   if (themeToggle) {
     themeToggle.addEventListener("click", function () {
       var current = document.documentElement.getAttribute("data-theme");

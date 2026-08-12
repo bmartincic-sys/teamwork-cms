@@ -176,7 +176,10 @@ a { color: inherit; text-decoration: none; }
   width: 1100px; height: 700px; pointer-events: none; z-index: 0;
   background: var(--gradient-radial);
 }
-.hero-inner { position: relative; z-index: 1; padding: 28px 0 56px; text-align: center; }
+/* padding-block, never the padding shorthand: these elements also carry .container, and
+   a shorthand with a 0 horizontal value wipes the container's own side padding. That ran
+   the hero copy edge to edge on every phone. */
+.hero-inner { position: relative; z-index: 1; padding-block: 28px 56px; text-align: center; }
 
 .eyebrow {
   display: inline-flex; align-items: center; gap: 8px;
@@ -2114,7 +2117,7 @@ details[open] summary { color: var(--brand-text); }
   .hero-sub { font-size: 16px; margin-bottom: 28px; }
   .hero-cta { flex-direction: column; align-items: stretch; }
   .hero-cta .btn { justify-content: center; }
-  .hero-inner { padding: 24px 0 48px; }
+  .hero-inner { padding-block: 24px 48px; }
   .eyebrow { font-size: 11px; margin-bottom: 24px; }
 
   /* Product mockup: stack and simplify */
@@ -2140,7 +2143,10 @@ details[open] summary { color: var(--brand-text); }
   .feature-row, .feature-row.reverse { gap: 32px !important; }
   .feature-text h2 { font-size: clamp(26px, 7vw, 36px); }
   .feature-text p { font-size: 15px; }
-  .feature-bullets li { font-size: 13px; padding: 10px 0; }
+  /* The padding shorthand here used to be "10px 0", which wiped the 36px of left
+     padding that keeps the text clear of the absolutely positioned check icon. Every
+     product page's bullets were rendering with the first few characters underneath it. */
+  .feature-bullets li { font-size: 13px; padding: 10px 0 10px 34px; }
 
   /* Mockup panels */
   .mockup-panel { padding: 16px !important; }
@@ -2303,7 +2309,15 @@ details[open] summary { color: var(--brand-text); }
     padding: 16px 32px 24px; z-index: 99;
     box-shadow: 0 24px 26px rgba(0,0,0,0.1);
   }
-  .nav-mobile-menu.open { display: block; }
+  /* The full menu is ~1740px tall, well past any phone screen. It scrolls inside itself
+     rather than running off the end of the page. dvh so a browser's collapsing toolbar
+     does not leave the last item unreachable. */
+  .nav-mobile-menu.open {
+    display: block;
+    max-height: calc(100vh - 72px);
+    max-height: calc(100dvh - 72px);
+    overflow-y: auto; overscroll-behavior: contain;
+  }
   .nav-mobile-menu a, .nav-mobile-menu span {
     display: block; padding: 12px 0; font-size: 15px; font-weight: 600;
     color: var(--text-muted); border-bottom: 1px solid var(--border);
@@ -2311,6 +2325,32 @@ details[open] summary { color: var(--brand-text); }
   }
   .nav-mobile-menu a:last-child, .nav-mobile-menu span:last-child { border-bottom: none; }
   .nav-mobile-menu .btn { margin-top: 16px; width: 100%; justify-content: center; }
+
+  /* The top bar was trying to hold the logo, a hamburger, a theme toggle, a
+     language button and a 115px pill inside 375px less 64px of padding. That is
+     what pushed every page on the site to 410px wide. Tighter padding, no icon
+     buttons in the bar, and a compact CTA. The theme and language controls move
+     into the menu so nothing is lost. */
+  .nav-inner { padding: 0 18px; gap: 10px; }
+  .nav-cta { gap: 8px; }
+  .nav-cta .btn-icon { display: none; }
+  .nav-cta .btn { padding: 9px 15px; font-size: 13px; }
+  .nav-logo { height: 38px; }
+  .nav-logo img, .nav-logo svg { max-height: 38px; width: auto; }
+  .nav-hamburger { flex: 0 0 auto; }
+  .nav-mob-tools { display: flex; gap: 10px; margin-top: 18px; }
+  .nav-mob-tools button {
+    flex: 1 1 auto; display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    min-height: 44px; border-radius: 10px; border: 1px solid var(--border);
+    background: var(--bg-elevated); color: var(--text-muted);
+    font-family: var(--font-body); font-size: 13px; font-weight: 600; cursor: pointer;
+  }
+  .nav-mob-tools button i { font-size: 17px; }
+}
+.nav-mob-tools { display: none; }
+@media (max-width: 420px) {
+  .nav-inner { padding: 0 14px; }
+  .nav-cta .btn { padding: 9px 13px; font-size: 12.5px; }
 }
 
 /* ---- Additional responsive fixes ---- */
@@ -6003,7 +6043,7 @@ main > .hero:first-child { margin-top: -85px; padding-top: 230px; }
   position: relative; z-index: 1;
   display: grid; grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr);
   gap: 48px; align-items: start;
-  min-height: 0; padding: 52px 0 56px;
+  min-height: 0; padding-block: 52px 56px;
 }
 .hpos-copy { max-width: 620px; }
 .hpos-title {
@@ -6194,7 +6234,7 @@ main > .hero:first-child { margin-top: -85px; padding-top: 230px; }
 @media (max-width: 520px) { .hpos-annot { right: 8px; font-size: 9.5px; padding: 6px 10px; } }
 
 @media (max-width: 1040px) {
-  .hpos-grid { grid-template-columns: 1fr; gap: 26px; padding: 40px 0 56px; min-height: 0; }
+  .hpos-grid { grid-template-columns: 1fr; gap: 26px; padding-block: 40px 56px; min-height: 0; }
   .hpos-copy { max-width: none; }
   .hpos-stage { max-width: min(620px, 100%); margin: 0 auto; }
 }
@@ -6216,7 +6256,7 @@ main > .hero.hpos-hero:first-child { margin-top: -85px; padding-top: 112px; }
   font-weight: 600; letter-spacing: -0.038em; line-height: 1.02; color: #fff;
 }
 .hero .hpos-sub { margin: 0 0 26px; max-width: 460px; font-size: 16.5px; line-height: 1.6; color: rgba(238,241,251,0.80); }
-.hpos-grid { padding: 26px 0 56px !important; }
+.hpos-grid { padding-block: 26px 56px !important; }
 
 /* the store behind the copy, fading out toward the device */
 .hpos-photo {
@@ -6237,7 +6277,7 @@ main > .hero.hpos-hero:first-child { margin-top: -85px; padding-top: 112px; }
 
 @media (max-width: 1040px) {
   main > .hero.hpos-hero:first-child { padding-top: 104px; }
-  .hpos-grid { padding: 18px 0 48px !important; }
+  .hpos-grid { padding-block: 18px 48px !important; }
   .hpos-photo { object-position: 62% 40%; opacity: 0.5; }
   .hpos-scrim { background:
     radial-gradient(70% 40% at 20% 10%, rgba(36,125,255,0.34), transparent 64%),
@@ -7466,8 +7506,12 @@ main > .hero.hpos-hero:first-child { margin-top: -85px; padding-top: 112px; }
 }
 @media (prefers-reduced-motion: reduce) { .captx-target-ring { animation: none; } }
 @media (max-width: 900px) {
-  .captx { grid-template-columns: 1fr; gap: 26px; }
-  .captx-target { width: 100%; }
+  .captx { grid-template-columns: 1fr; gap: 26px; justify-items: center; }
+  .captx-target { width: 100%; max-width: 280px; }
+  /* The ring animates to scale(2.5), so at any mobile base it lands outside the
+     viewport, and a transform is not clipped by its parent. Capping the base was not
+     enough. It is decoration, so it goes below 900px. */
+  .captx-target-ring { display: none; }
 }
 
 
@@ -7579,4 +7623,97 @@ main > .hero.hpos-hero:first-child { margin-top: -85px; padding-top: 112px; }
   .dfx-row { grid-template-columns: 1fr; gap: 14px; margin-bottom: 14px; }
   .dfx-checks { grid-template-columns: 1fr; }
   .demox-formwrap { padding: 24px 20px 26px; }
+}
+
+
+/* ============ MOBILE: CONTAIN DECORATIVE OVERFLOW ============
+   The radial glows and rings are deliberately wider than their section. On a phone
+   there is no slack for that, so the sections that host them clip on the x axis.
+   overflow-x: clip rather than hidden, so nothing becomes a scroll container and
+   position: sticky keeps working. */
+@media (max-width: 900px) {
+  .hero, .section, .innov-section, .midcta, .tm-band, .emx, .final-cta,
+  .bento-section, .ticker, .security-tinted-split, .lead-band { overflow-x: clip; }
+}
+@media (max-width: 360px) {
+  .cside-card { padding: 20px 18px; }
+  .container { padding-left: 16px; padding-right: 16px; }
+}
+
+
+/* ============ MOBILE: TAP TARGETS ============
+   Anything a thumb has to hit gets at least ~44px of height. Inline links inside
+   running text become inline-flex so they gain the height without breaking the line
+   box, and the icon-only controls become square. */
+@media (max-width: 900px) {
+  .nav-hamburger { width: 44px; height: 44px; }
+  .nav-logo { padding: 3px 0; }
+
+  .btn { min-height: 44px; }
+  .btn-sm { min-height: 40px; }
+  .filter-pill { min-height: 42px; }
+  .captab { min-height: 46px; }
+
+  .stickycta-close { width: 40px; height: 40px; }
+  .footer-social a { width: 44px; height: 44px; display: inline-flex; align-items: center; justify-content: center; }
+
+  /* Inline links: breadcrumbs, the security note, the mailto fallbacks, contact details. */
+  .breadcrumb a,
+  .security-tech-link,
+  .lead-fallback-alt,
+  .cside-card a,
+  .off-item a,
+  .footer-col a {
+    display: inline-flex; align-items: center; min-height: 44px;
+  }
+  /* The footer link columns would otherwise gain 44px per row and double in height. */
+  .footer-col a { min-height: 40px; }
+  /* The legal row's links carry no class of their own. */
+  .footer-bottom a { display: inline-flex; align-items: center; min-height: 40px; }
+  .nav-logo { min-height: 44px; }
+
+  /* Checkbox and radio inputs ship at 13px. The box itself grows, and the label
+     around it becomes the hit area so the text counts too. */
+  input[type="checkbox"], input[type="radio"] { width: 20px; height: 20px; flex: 0 0 auto; }
+  .rfpq-jump a, a.tm-day-win { min-height: 44px; }
+  label:has(> input[type="checkbox"]), label:has(> input[type="radio"]) {
+    display: flex; align-items: center; gap: 10px; min-height: 44px;
+  }
+}
+
+
+/* A table too wide for a phone scrolls inside its own box rather than widening the page. */
+.tablewrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin-bottom: 16px; }
+
+
+/* ============ MOBILE: LET TEXT AND TRACKS SHRINK ============ */
+@media (max-width: 900px) {
+  /* A long URL or identifier has no break opportunity, so it widened the page instead
+     of wrapping. "anywhere" rather than "break-word" because it also lowers the
+     min-content width, which is what a grid track measures itself against. */
+  p, li, td, th, dd, dt, figcaption { overflow-wrap: break-word; }
+  a, code { overflow-wrap: anywhere; }
+
+  /* Grid and flex children default to min-width: auto, so one wide descendant forces a
+     track wider than the viewport and the rest of the column is clipped with it. */
+  .feature-text, .feature-visual, .feature-row > *,
+  .lead-inner > *, .hpos-grid > *, .captx > * { min-width: 0; }
+}
+
+
+/* iOS Safari zooms the whole page when a focused field's text is under 16px, and it does
+   not zoom back out. The demo form is the main conversion path, so every field goes to
+   16px on phones. The label and helper text keep their smaller sizes. */
+@media (max-width: 900px) {
+  input[type="text"], input[type="email"], input[type="tel"], input[type="url"],
+  input[type="number"], input[type="search"], input[type="password"],
+  select, textarea,
+  /* The three form scopes each set 14px with a class, which outranks a bare element
+     selector, so they are named here rather than relying on source order. */
+  /* input[type] rather than a bare input: these scopes declare the 14px against
+     input[type="text"], so the attribute selector is needed to match their specificity
+     and win on source order. */
+  .dfx-field input[type], .dfx-field select, .dfx-field textarea,
+  .tev-field input[type], .tev-field select, .tev-field textarea,
+  .hs-form-frame input[type], .hs-form-frame select, .hs-form-frame textarea { font-size: 16px; }
 }
