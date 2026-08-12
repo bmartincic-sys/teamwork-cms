@@ -7974,7 +7974,7 @@ a.evc:hover .evc-media img { transform: scale(1.045); }
   backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
 }
 .evc-go {
-  position: absolute; top: 10px; right: 10px; z-index: 2;
+  position: absolute; bottom: 10px; right: 10px; z-index: 2;
   display: grid; place-items: center; width: 26px; height: 26px; border-radius: 50%;
   color: #fff; background: rgba(5,6,14,0.55); border: 1px solid rgba(255,255,255,0.24);
   font-size: 14px; opacity: 0; transition: opacity 0.2s ease;
@@ -7996,7 +7996,9 @@ a.evc:hover .evc-go { opacity: 1; }
 .evc-body { display: flex; flex-direction: column; gap: 8px; padding: 18px 20px 20px; }
 .evc-name { font-size: 16px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.3; color: var(--text); }
 .evc-meta { display: flex; flex-direction: column; gap: 4px; }
-.evc-meta span { display: flex; align-items: flex-start; gap: 6px; font-size: 12.5px; line-height: 1.45; color: var(--text-faint); }
+/* Direct children only. A descendant selector also caught the inner label wrapper and
+   made it a second flex container, which put a 6px gap in front of the country. */
+.evc-meta > span { display: flex; align-items: flex-start; gap: 6px; font-size: 12.5px; line-height: 1.45; color: var(--text-faint); }
 .evc-meta i { font-size: 14px; flex: 0 0 auto; margin-top: 1px; }
 /* Clamped so a long recap cannot make one card taller than its row. */
 .evc-blurb {
@@ -8015,3 +8017,18 @@ a.evc:hover .evc-go { opacity: 1; }
   a.evc:hover { transform: none; }
   a.evc:hover .evc-media img { transform: none; }
 }
+
+
+/* Region and country. The archive spans three continents, and "Barcelona" or "ExCeL"
+   only tells you that if you already know the venue. The chip gives the region at a
+   glance and the country is spelled out in the location line underneath. */
+.evc-region {
+  position: absolute; top: 10px; right: 10px; z-index: 2;
+  font-family: var(--font-mono); font-size: 9.5px; font-weight: 600;
+  letter-spacing: 0.09em; text-transform: uppercase; color: #fff;
+  padding: 5px 9px; border-radius: 100px;
+  background: rgba(36,125,255,0.42); border: 1px solid rgba(255,255,255,0.3);
+  backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+}
+.evc-country, .cfu-country { font-weight: 600; color: var(--text-muted); }
+.cfu-country { color: var(--text); }

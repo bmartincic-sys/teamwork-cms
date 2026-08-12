@@ -76,7 +76,8 @@ stickyHref: "/demo/?ref=events"
             <h3 class="cfu-name">{{ e.name }}</h3>
             <div class="cfu-facts">
               <span class="cfu-fact"><i class="ti ti-calendar-event"></i> {{ e.dateLabel }}</span>
-              <span class="cfu-fact"><i class="ti ti-map-pin"></i> {{ e.venue }}, {{ e.city }}</span>
+              <span class="cfu-fact"><i class="ti ti-map-pin"></i> <span>{% if e.venue %}{{ e.venue }} &middot; {% endif %}{{ e.city }}, <b class="cfu-country">{{ e.country }}</b></span></span>
+              <span class="cfu-fact"><i class="ti ti-world"></i> {{ e.region }}</span>
             </div>
             <span class="cfu-away" data-start="{{ e.start }}" hidden></span>
           </div>
@@ -123,6 +124,7 @@ stickyHref: "/demo/?ref=events"
             <span class="evc-scrim"></span>
             {% if e.kind %}<span class="evc-kind">{{ e.kind }}</span>
             {% elif e.stand %}<span class="evc-kind">{{ e.standLabel }} {{ e.stand }}</span>{% endif %}
+            <span class="evc-region">{{ e.region }}</span>
             {% if e.link %}<span class="evc-go" aria-hidden="true"><i class="ti ti-arrow-up-right"></i></span>{% endif %}
           </span>
 
@@ -130,7 +132,7 @@ stickyHref: "/demo/?ref=events"
             <span class="evc-name">{{ e.name }}</span>
             <span class="evc-meta">
               <span><i class="ti ti-calendar"></i> {{ e.dateLabel }}</span>
-              <span><i class="ti ti-map-pin"></i> {{ e.venue }}, {{ e.city }}</span>
+              <span><i class="ti ti-map-pin"></i> <span>{% if e.venue %}{{ e.venue }} &middot; {% endif %}{{ e.city }}, <b class="evc-country">{{ e.country }}</b></span></span>
             </span>
             {% if e.body %}<span class="evc-blurb">{{ e.body }}</span>{% endif %}
           </span>
