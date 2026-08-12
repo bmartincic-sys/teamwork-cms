@@ -93,30 +93,52 @@ stickyHref: "/demo/?ref=events"
 {% endif %}
 
 {% if events.past.length %}
-<!-- ============ WHERE WE'VE BEEN ============ -->
+<!-- ============ WHERE WE'VE BEEN (archive) ============ -->
 <section class="section" id="been" style="padding-top: 0;">
   <div class="container">
     <div class="section-header">
       <div class="section-eyebrow">Where We've Been</div>
-      <h2 class="section-title">Two years on the show floor.</h2>
-      <p class="section-sub">The shows our team has worked over the last two years, and what we took away from each one.</p>
+      <h2 class="section-title">{{ events.pastCount }} shows, and counting.</h2>
+      <p class="section-sub">Every trade show, conference and private dinner our team has worked, newest first. If you met us at one of these, you already know how we prefer to do this.</p>
     </div>
 
-    <div class="cfu-past">
-      {% for e in events.past %}
-      <article class="cfu-pcard">
-        <div class="cfu-phead">
-          <h3>{{ e.name }}</h3>
-          {% if e.stand %}<span class="cfu-pstand">{{ e.standLabel }} {{ e.stand }}</span>{% endif %}
-        </div>
-        <div class="cfu-pmeta">
-          <span><i class="ti ti-calendar"></i> {{ e.dateLabel }}</span>
-          <span><i class="ti ti-map-pin"></i> {{ e.venue }}, {{ e.city }}</span>
-        </div>
-        <p>{{ e.body }}</p>
-      </article>
-      {% endfor %}
+    {% for group in events.pastByYear %}
+    <div class="evy">
+      <div class="evy-head">
+        <h3 class="evy-year">{{ group.year }}</h3>
+        <span class="evy-count">{{ group.events.length }} event{% if group.events.length != 1 %}s{% endif %}</span>
+        <span class="evy-rule" aria-hidden="true"></span>
+      </div>
+
+      <div class="evy-grid">
+        {% for e in group.events %}
+        {% set tag = "a" if e.link else "div" %}
+        <{{ tag }} class="evc{% if e.photoUrl %} has-photo{% else %} is-ink tone-{{ loop.index0 % 3 }}{% endif %}"{% if e.link %} href="{{ e.link }}" target="_blank" rel="noopener"{% endif %}>
+          <span class="evc-media">
+            {% if e.photoUrl %}
+            <img src="{{ e.photoUrl }}" alt="Teamwork Commerce at {{ e.name }}, {{ e.city }}" loading="lazy" decoding="async" width="880" height="660">
+            {% else %}
+            <span class="evc-fallback" aria-hidden="true">{{ e.name | replace(":", "") | truncate(26, true, "") }}</span>
+            {% endif %}
+            <span class="evc-scrim"></span>
+            {% if e.kind %}<span class="evc-kind">{{ e.kind }}</span>
+            {% elif e.stand %}<span class="evc-kind">{{ e.standLabel }} {{ e.stand }}</span>{% endif %}
+            {% if e.link %}<span class="evc-go" aria-hidden="true"><i class="ti ti-arrow-up-right"></i></span>{% endif %}
+          </span>
+
+          <span class="evc-body">
+            <span class="evc-name">{{ e.name }}</span>
+            <span class="evc-meta">
+              <span><i class="ti ti-calendar"></i> {{ e.dateLabel }}</span>
+              <span><i class="ti ti-map-pin"></i> {{ e.venue }}, {{ e.city }}</span>
+            </span>
+            {% if e.body %}<span class="evc-blurb">{{ e.body }}</span>{% endif %}
+          </span>
+        </{{ tag }}>
+        {% endfor %}
+      </div>
     </div>
+    {% endfor %}
   </div>
 </section>
 {% endif %}

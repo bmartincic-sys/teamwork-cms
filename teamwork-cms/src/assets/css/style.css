@@ -7794,22 +7794,6 @@ main > .hero.hpos-hero:first-child { margin-top: -85px; padding-top: 112px; }
 .cfu-headline { margin: 0 0 10px; font-size: 17px; font-weight: 600; letter-spacing: -0.02em; color: var(--text); }
 .cfu-body { margin: 0 0 22px; font-size: 14.5px; line-height: 1.7; color: var(--text-muted); }
 
-/* ---- Where we've been ---- */
-.cfu-past { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
-.cfu-pcard { padding: 24px 26px; border: 1px solid var(--border); border-radius: 18px; background: var(--bg-elevated); }
-.cfu-phead { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; margin-bottom: 10px; }
-.cfu-phead h3 { margin: 0; font-size: 17px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.3; color: var(--text); }
-.cfu-pstand {
-  flex: 0 0 auto; white-space: nowrap;
-  font-family: var(--font-mono); font-size: 10.5px; font-weight: 600; letter-spacing: 0.06em;
-  padding: 4px 9px; border-radius: 100px;
-  color: var(--text-muted); background: var(--bg-deep); border: 1px solid var(--border);
-}
-.cfu-pmeta { display: flex; flex-wrap: wrap; gap: 5px 16px; margin-bottom: 12px; }
-.cfu-pmeta span { display: inline-flex; align-items: center; gap: 6px; font-size: 12.5px; color: var(--text-faint); }
-.cfu-pmeta i { font-size: 14px; flex: 0 0 auto; }
-.cfu-pcard p { margin: 0; font-size: 14px; line-height: 1.7; color: var(--text-muted); }
-
 /* ---- Can't make it ---- */
 .cfu-remote {
   display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 44px; align-items: center;
@@ -7835,7 +7819,6 @@ main > .hero.hpos-hero:first-child { margin-top: -85px; padding-top: 112px; }
   .cfu-rail { flex-direction: row; align-items: stretch; }
   .cfu-cal, .cfu-stand { flex: 1 1 0; min-width: 0; }
   .cfu-name { font-size: 19px; }
-  .cfu-past { grid-template-columns: 1fr; }
   .cfu-remote { grid-template-columns: 1fr; gap: 30px; padding: 30px 22px; }
   .cfu-remote-side { display: flex; justify-content: center; }
   .cfu-globe { width: 148px; height: 148px; }
@@ -7843,7 +7826,6 @@ main > .hero.hpos-hero:first-child { margin-top: -85px; padding-top: 112px; }
   .cfu-globe-ring:nth-child(3) { inset: 46px; }
 }
 @media (max-width: 420px) {
-  .cfu-phead { flex-direction: column; gap: 8px; }
   .cfu-remote-cta .btn { width: 100%; justify-content: center; }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -7946,3 +7928,90 @@ main > .hero.hpos-hero:first-child { margin-top: -85px; padding-top: 112px; }
    defers to the consent dialog itself, which is a separate bottom bar; that lives in
    sticky-cta.njk. */
 .osano-cm-widget { display: none; }
+
+
+/* ============ EVENT ARCHIVE (.evy / .evc) ============
+   Twenty-odd past shows, grouped by year so the list stays scannable. Cards are the
+   photo first: the point of this section is that the team is physically present, and a
+   picture of the stand says that faster than a paragraph. Every card is the same 4:3
+   crop, so the grid holds its rhythm regardless of how the source photo was shot. */
+
+.evy { margin-bottom: 44px; }
+.evy:last-child { margin-bottom: 0; }
+.evy-head { display: flex; align-items: baseline; gap: 14px; margin-bottom: 20px; }
+.evy-year { margin: 0; font-size: 25px; font-weight: 600; letter-spacing: -0.03em; color: var(--text); }
+.evy-count {
+  flex: 0 0 auto; font-family: var(--font-mono); font-size: 10.5px; font-weight: 600;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-faint);
+}
+.evy-rule { flex: 1 1 auto; height: 1px; background: var(--border); }
+
+.evy-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+
+.evc {
+  display: flex; flex-direction: column; overflow: hidden;
+  border: 1px solid var(--border); border-radius: 18px; background: var(--bg-elevated);
+  text-decoration: none; color: inherit;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+a.evc:hover { border-color: rgba(36,125,255,0.45); transform: translateY(-3px); }
+
+.evc-media { position: relative; display: block; aspect-ratio: 4 / 3; overflow: hidden; background: var(--bg-deep); }
+.evc-media img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
+a.evc:hover .evc-media img { transform: scale(1.045); }
+.evc-scrim {
+  position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(to top, rgba(6,7,15,0.55) 0%, rgba(6,7,15,0.08) 38%, transparent 62%);
+}
+
+/* Booth number, or the label for an off-floor dinner or lunch. */
+.evc-kind {
+  position: absolute; top: 10px; left: 10px; z-index: 2;
+  font-family: var(--font-mono); font-size: 9.5px; font-weight: 600;
+  letter-spacing: 0.09em; text-transform: uppercase; color: #fff;
+  padding: 5px 9px; border-radius: 100px;
+  background: rgba(5,6,14,0.62); border: 1px solid rgba(255,255,255,0.26);
+  backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+}
+.evc-go {
+  position: absolute; top: 10px; right: 10px; z-index: 2;
+  display: grid; place-items: center; width: 26px; height: 26px; border-radius: 50%;
+  color: #fff; background: rgba(5,6,14,0.55); border: 1px solid rgba(255,255,255,0.24);
+  font-size: 14px; opacity: 0; transition: opacity 0.2s ease;
+  backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+}
+a.evc:hover .evc-go { opacity: 1; }
+
+/* No photo yet: a solid typographic panel rather than a hole in the grid. Solid tones,
+   since the gradient is reserved for CTAs and the AI surfaces. */
+.evc.is-ink .evc-media { display: grid; place-items: center; padding: 22px; }
+.evc.is-ink.tone-0 .evc-media { background: #0e1a38; }
+.evc.is-ink.tone-1 .evc-media { background: #1a1038; }
+.evc.is-ink.tone-2 .evc-media { background: #16181f; }
+.evc-fallback {
+  font-size: 21px; font-weight: 600; letter-spacing: -0.028em; line-height: 1.2;
+  text-align: center; color: rgba(255,255,255,0.5);
+}
+
+.evc-body { display: flex; flex-direction: column; gap: 8px; padding: 18px 20px 20px; }
+.evc-name { font-size: 16px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.3; color: var(--text); }
+.evc-meta { display: flex; flex-direction: column; gap: 4px; }
+.evc-meta span { display: flex; align-items: flex-start; gap: 6px; font-size: 12.5px; line-height: 1.45; color: var(--text-faint); }
+.evc-meta i { font-size: 14px; flex: 0 0 auto; margin-top: 1px; }
+/* Clamped so a long recap cannot make one card taller than its row. */
+.evc-blurb {
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+  margin-top: 2px; font-size: 13px; line-height: 1.6; color: var(--text-muted);
+}
+
+@media (max-width: 1000px) { .evy-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px) {
+  .evy-grid { grid-template-columns: 1fr; gap: 16px; }
+  .evy-year { font-size: 22px; }
+  .evy { margin-bottom: 34px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .evc, .evc-media img, .evc-go { transition: none; }
+  a.evc:hover { transform: none; }
+  a.evc:hover .evc-media img { transform: none; }
+}
