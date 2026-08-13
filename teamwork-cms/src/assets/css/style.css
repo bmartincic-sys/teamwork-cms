@@ -8140,10 +8140,6 @@ a.evc:hover .evc-go { opacity: 1; }
     content: ''; position: absolute; inset: 0; z-index: 5; pointer-events: none;
     background: linear-gradient(105deg, rgba(255,255,255,0.10) 0%, rgba(255,255,255,0.035) 30%, transparent 55%);
   }
-  /* mirror finish under the device; WebKit/Blink only, others just keep the glow */
-  .hpos-device {
-    -webkit-box-reflect: below 20px linear-gradient(transparent 78%, rgba(0,0,0,0.22));
-  }
   .hpos-stage { max-width: min(700px, 100%); }
 }
 /* On wide screens the device breaks the container's right edge, which is what makes it
