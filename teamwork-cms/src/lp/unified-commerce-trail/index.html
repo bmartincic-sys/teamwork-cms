@@ -136,7 +136,12 @@ header > *{pointer-events:auto}
 .pin:focus{outline:none}
 .pin:focus-visible .ring{stroke:var(--blue);stroke-width:3;opacity:1}
 .pin .ring{fill:none;stroke:transparent;opacity:0}
-.pin .label{
+.pin #summitflag{cursor:pointer}
+#summitflag .sflag-pole{stroke:#0B4FB8;stroke-width:2.6;stroke-linecap:round;fill:none}
+#summitflag .sflag{fill:var(--purple);stroke:#fff;stroke-width:1.2;stroke-linejoin:round}
+#summitflag .pulse{fill:var(--purple)}
+#summitflag.on .sflag{fill:#0B4FB8}
+.label{
   font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.07em;
   text-transform:uppercase;fill:var(--ink);text-anchor:middle;
   paint-order:stroke;stroke:var(--paper);stroke-width:5px;
@@ -1019,6 +1024,22 @@ STOPS.forEach(s => {
 hub.addEventListener("click", showBasecamp);
 hub.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); showBasecamp(); } });
 
+/* The Summit — the trail's destination, planted on the high ridge. It has always been
+   the fourth tab; this puts it on the map itself, clicking through to that page. */
+const summitG = el("g", {
+  id: "summitflag", transform: "translate(562,96)",
+  tabindex: "0", role: "button", "aria-label": "Summit: the full ROI picture"
+}, viewport);
+const summitIn = el("g", { class: "cscale" }, summitG);
+el("circle", { class: "pulse", cx: 0, cy: 0, r: 22 }, summitIn);
+el("path", { class: "sflag-pole", d: "M0 16 L0 -18" }, summitIn);
+el("path", { class: "sflag", d: "M0 -18 L21 -10.5 L0 -3 Z" }, summitIn);
+el("text", { class: "label", x: 0, y: 32 }, summitIn).textContent = "THE SUMMIT";
+summitG.addEventListener("click", () => go("summit"));
+summitG.addEventListener("keydown", e => {
+  if (e.key === "Enter" || e.key === " ") { e.preventDefault(); go("summit"); }
+});
+
 /* ---------------- Pan & zoom ---------------- */
 let tx = 0, ty = 0, k = 1;
 const MINK = .3, MAXK = 3.2;
@@ -1568,6 +1589,8 @@ function go(t, quiet){
   zoomer.classList.toggle("hidden", !onMap);
   // Stops and Summit are full pages, not cards over the map.
   sheet.classList.toggle("deep", !onMap);
+  const sf = document.getElementById("summitflag");
+  if (sf) sf.classList.toggle("on", t === "summit");
   if (quiet) return;
   if (t === "map"){ showBasecamp(); }
   if (t === "stops"){ renderStops(); setSheet("full"); }
