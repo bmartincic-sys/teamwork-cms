@@ -92,6 +92,13 @@
     var chipRfid = chip('hpos-chip-rfid', '<i class="pulse-dot"></i> RFID: the whole basket in one read');
     var chipPay = chip('hpos-chip-pay', '<i class="pulse-dot"></i> Tap to Pay');
 
+    /* ---- power-on veil (first cycle only) ---- */
+    var veil = document.createElement('span');
+    veil.className = 'hpos-bootveil';
+    veil.setAttribute('aria-hidden', 'true');
+    root.appendChild(veil);
+    var booted = false;
+
     /* ---- state machine ---- */
     root.classList.add('hpos-armed');
     var timers = [];
@@ -104,7 +111,7 @@
       root.classList.remove('hpos-ready');
       if (stage) stage.classList.remove('is-celebrate');
       pay.classList.remove('is-paid', 'is-pressed');
-      root.classList.remove('is-paidwash');
+      root.classList.remove('is-paidwash', 'is-payflash', 'is-scan');
       pay.textContent = 'PAY';
       qtys.forEach(function (el) { el.textContent = '0'; });
       snap(sub, '0.00'); snap(tax, '0.00'); snap(tot, '0.00'); snap(disc, '0.00');
@@ -128,6 +135,10 @@
 
       root.classList.add('is-sweep');
       at(1700, function () { root.classList.remove('is-sweep'); });
+
+      // the beam runs hot while the basket is being read
+      at(350,  function () { root.classList.add('is-scan'); });
+      at(2100, function () { root.classList.remove('is-scan'); });
 
       // the basket lands as one fast burst, which is the RFID story: four items,
       // one read. The chip makes the claim while it is happening.
@@ -175,10 +186,12 @@
         pay.classList.add('is-paid');
         pay.textContent = '✓ PAID';
         root.classList.add('is-paidwash');
+        root.classList.add('is-payflash');
         if (stage) stage.classList.add('is-celebrate');
         touch.classList.remove('is-on');
       });
       at(7300, function () { root.classList.remove('is-paidwash'); });
+      at(8300, function () { root.classList.remove('is-payflash'); });
       at(7650, function () {
         if (stage) stage.classList.remove('is-celebrate');
         chipPay.classList.remove('is-on');
@@ -196,7 +209,19 @@
       });
     }
 
-    function maybeStart() { if (visible && !running) { rewind(); cycle(); } }
+    function boot() {
+      running = true;
+      root.classList.add('is-boot');
+      timers.push(setTimeout(function () { root.classList.add('is-booton'); }, 300));
+      timers.push(setTimeout(function () {
+        root.classList.remove('is-boot', 'is-booton');
+        booted = true;
+        cycle();
+      }, 1150));
+    }
+    function maybeStart() {
+      if (visible && !running) { rewind(); booted ? cycle() : boot(); }
+    }
 
     if ('IntersectionObserver' in window) {
       var io = new IntersectionObserver(function (es) {
@@ -213,6 +238,10 @@
     if (fine.matches) {
       var hero = root.closest('.hpos-hero') || root;
       var shadow = stage ? stage.querySelector('.hpos-shadow') : null;
+      var spot = document.createElement('span');
+      spot.className = 'hpos-spot';
+      spot.setAttribute('aria-hidden', 'true');
+      hero.appendChild(spot);
       var tx = 0, ty = 0, cx = 0, cy = 0, raf = null;
       function frame() {
         cx += (tx - cx) * 0.10; cy += (ty - cy) * 0.10;
@@ -224,6 +253,9 @@
         else { raf = null; if (tx === 0 && ty === 0) root.classList.remove('is-tilting'); }
       }
       function aim(e) {
+        var hr = hero.getBoundingClientRect();
+        spot.style.transform = 'translate(' + (e.clientX - hr.left) + 'px,' + (e.clientY - hr.top) + 'px)';
+        spot.classList.add('is-on');
         var r = root.getBoundingClientRect();
         var nx = (e.clientX - (r.left + r.width / 2)) / (r.width / 2);
         var ny = (e.clientY - (r.top + r.height / 2)) / (r.height / 2);
@@ -234,6 +266,7 @@
       }
       hero.addEventListener('pointermove', aim);
       hero.addEventListener('pointerleave', function () {
+        spot.classList.remove('is-on');
         tx = 0; ty = 0;
         if (!raf) raf = requestAnimationFrame(frame);
       });

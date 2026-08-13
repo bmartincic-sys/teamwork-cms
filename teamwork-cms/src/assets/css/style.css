@@ -8319,3 +8319,67 @@ a.evc:hover .evc-go { opacity: 1; }
 @media (prefers-reduced-motion: reduce) {
   .hpos-aur-1, .hpos-aur-2, .hpos-device::before, .hpos-hero .os-grad { animation: none; }
 }
+
+
+/* ============ HERO POS: SHOWPIECE CUT ============ */
+
+/* Power-on. A dark glass veil sits over the screen until the first cycle blooms it
+   away. JS creates the veil and drives the classes, so no-JS never sees it. */
+.hpos-bootveil {
+  position: absolute; inset: 12px; z-index: 7; border-radius: 17px; pointer-events: none;
+  background: linear-gradient(155deg, #0d101c 0%, #070910 55%, #0b0e18 100%);
+  opacity: 0;
+}
+.hpos-device.is-boot .hpos-bootveil { opacity: 1; }
+.hpos-device.is-booton .hpos-bootveil { animation: hpos-bloom 0.75s ease forwards; }
+@keyframes hpos-bloom {
+  0%   { opacity: 1; box-shadow: inset 0 0 0 0 rgba(255,255,255,0); }
+  40%  { opacity: 1; box-shadow: inset 0 0 140px 40px rgba(210, 230, 255, 0.4); }
+  100% { opacity: 0; box-shadow: inset 0 0 200px 80px rgba(210, 230, 255, 0); }
+}
+
+/* The products fly into their rows. Each swatch starts scattered off its position,
+   oversized and airborne, and drops in as the row lands: the basket being read. */
+.hpos-armed [data-srx-item].is-on .srx-swatch {
+  animation: srx-fly 0.62s cubic-bezier(0.22, 0.9, 0.3, 1.12) backwards;
+}
+.srx-items li:nth-child(1) { --fx: -74px; --fy: -58px; --fr: -16deg; }
+.srx-items li:nth-child(2) { --fx: 96px;  --fy: -44px; --fr: 11deg; }
+.srx-items li:nth-child(3) { --fx: -56px; --fy: -96px; --fr: -9deg; }
+.srx-items li:nth-child(4) { --fx: 84px;  --fy: -78px; --fr: 15deg; }
+@keyframes srx-fly {
+  0% {
+    opacity: 0;
+    transform: translate(var(--fx, 60px), var(--fy, -80px)) scale(1.8) rotate(var(--fr, 12deg));
+    filter: drop-shadow(0 14px 16px rgba(0, 0, 0, 0.35));
+  }
+  30% { opacity: 1; }
+  100% { opacity: 1; transform: none; filter: drop-shadow(0 0 0 rgba(0,0,0,0)); }
+}
+
+/* The light rig answers the sale: the orbiting beam runs four times faster during the
+   scan burst, and turns green for the paid beat. */
+.hpos-device.is-scan::before { animation-duration: 1.8s; }
+.hpos-device.is-payflash::before {
+  animation-duration: 2.2s;
+  background: conic-gradient(from var(--beam),
+    transparent 0 62%,
+    rgba(52, 199, 89, 0.85) 78%,
+    rgba(214, 255, 227, 1) 84%,
+    rgba(52, 199, 89, 0.85) 90%,
+    transparent 100%);
+}
+
+/* A soft light that follows the pointer across the hero. */
+.hpos-spot {
+  position: absolute; z-index: 2; width: 560px; height: 560px; margin: -280px 0 0 -280px;
+  border-radius: 50%; pointer-events: none;
+  background: radial-gradient(circle, rgba(150, 195, 255, 0.11), transparent 62%);
+  mix-blend-mode: screen; opacity: 0; transition: opacity 0.45s ease;
+}
+.hpos-spot.is-on { opacity: 1; }
+
+@media (prefers-reduced-motion: reduce) {
+  .hpos-bootveil, .hpos-spot { display: none; }
+  .hpos-armed [data-srx-item].is-on .srx-swatch { animation: none; }
+}
