@@ -8071,3 +8071,72 @@ a.evc:hover .evc-go { opacity: 1; }
 @media (max-width: 1100px) { .cpil-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 560px) { .cpil-grid { grid-template-columns: 1fr; } }
 @media (prefers-reduced-motion: reduce) { .cpil { transition: none; } }
+
+
+/* ============ HERO POS: GRAND PASS ============
+   The receipt now performs the sale on a loop with a visible touch point driving it,
+   the device answers the pointer with a shallow 3D tilt, a keylight sweeps the frame
+   once per cycle, and the under-glow pulses green when the sale lands. All of it sits
+   behind prefers-reduced-motion; without JS the markup still ships the finished sale. */
+
+/* Pointer tilt. The stage provides perspective; JS feeds the two custom properties. */
+.hpos-stage { perspective: 1300px; }
+.hpos-device {
+  transform: rotateX(var(--tiltx, 0deg)) rotateY(var(--tilty, 0deg));
+  transform-style: preserve-3d;
+  transition: box-shadow 0.4s ease;
+}
+.hpos-device.is-tilting { will-change: transform; }
+
+/* Keylight: a specular band that sweeps the frame once per cycle. On the frame's own
+   padding ring, clipped so it never washes over the screen content. */
+.hpos-device::after {
+  content: ''; position: absolute; inset: 0; border-radius: 26px; pointer-events: none;
+  background: linear-gradient(115deg, transparent 30%, rgba(255,255,255,0.14) 46%, rgba(255,255,255,0.30) 50%, rgba(255,255,255,0.14) 54%, transparent 70%);
+  background-size: 260% 100%; background-position: 130% 0;
+  opacity: 0;
+}
+.hpos-device.is-sweep::after {
+  opacity: 1;
+  animation: hpos-sweep 1.6s cubic-bezier(0.3, 0.1, 0.3, 1) forwards;
+}
+@keyframes hpos-sweep {
+  from { background-position: 130% 0; }
+  to   { background-position: -130% 0; }
+}
+
+/* The touch point that walks through the sale: slide, tap Disc, tap PAY. JS moves it;
+   the press is a ring that collapses onto the dot. */
+.hpos-touch {
+  position: absolute; z-index: 6; width: 34px; height: 34px; margin: -17px 0 0 -17px;
+  border-radius: 50%; pointer-events: none;
+  background: radial-gradient(circle at 38% 34%, rgba(255,255,255,0.95), rgba(255,255,255,0.55) 58%, rgba(255,255,255,0.28));
+  box-shadow: 0 4px 14px rgba(7, 9, 26, 0.45), inset 0 0 0 1px rgba(255,255,255,0.5);
+  opacity: 0; transform: scale(0.6);
+  transition: opacity 0.28s ease, transform 0.28s ease,
+              left 0.55s cubic-bezier(0.3, 0.1, 0.25, 1), top 0.55s cubic-bezier(0.3, 0.1, 0.25, 1);
+}
+.hpos-touch.is-on { opacity: 0.92; transform: scale(1); }
+.hpos-touch.is-press { animation: hpos-press 0.42s ease; }
+@keyframes hpos-press {
+  0% { box-shadow: 0 4px 14px rgba(7,9,26,0.45), 0 0 0 0 rgba(255,255,255,0.55); transform: scale(1); }
+  35% { transform: scale(0.82); }
+  100% { box-shadow: 0 4px 14px rgba(7,9,26,0.45), 0 0 0 22px rgba(255,255,255,0); transform: scale(1); }
+}
+
+/* The under-glow celebrates the paid state, then settles. */
+.hpos-shadow { transition: background 0.6s ease, opacity 0.6s ease; }
+.hpos-stage.is-celebrate .hpos-shadow {
+  background: radial-gradient(ellipse at center, rgba(52, 168, 83, 0.44), transparent 70%);
+  opacity: 1.0;
+}
+
+/* Between cycles the screen wipes to a fresh sale instead of snapping. */
+.hpos-armed .srx-body, .hpos-armed .srx-head { transition: opacity 0.32s ease; }
+.hpos-device.is-wiping .srx-body, .hpos-device.is-wiping .srx-head { opacity: 0; }
+
+@media (prefers-reduced-motion: reduce) {
+  .hpos-device { transform: none; }
+  .hpos-device::after { display: none; }
+  .hpos-touch { display: none; }
+}
