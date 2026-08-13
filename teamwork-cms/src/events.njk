@@ -17,30 +17,27 @@ stickyHref: "/demo/?ref=events"
   </nav>
 </div>
 
-<!-- ============ HERO: the booth at the Javits Center ============ -->
-<section class="hero hero-photo hero-photo-compact cfu-hero">
+<!-- ============ HERO: split, so the whole team photo shows ============ -->
+<section class="hero evhero">
   <div class="hero-bg"></div>
   <div class="hero-glow"></div>
 
-  <img class="hero-photo-bg" src="/assets/images/company/life/nrf-booth-team.webp" alt="The Teamwork Commerce team in front of their booth on the show floor, with the Point of Sale Avenue arch, AI Solutions and self-checkout displays behind them" style="object-position: 50% 46%;">
-  <div class="hero-photo-scrim"></div>
-
-  <div class="container hero-photo-inner">
-    <div class="hero-photo-head fade-up">
+  <div class="container evhero-grid">
+    <div class="evhero-copy fade-up">
       <span class="eyebrow"><span class="eyebrow-dot"></span> Events</span>
-      <h1 class="hero-photo-title">Meet us on the show floor.</h1>
+      <h1 class="evhero-title">Meet us on the show floor.</h1>
+      <p class="evhero-sub">We're on the ground at the world's leading retail events: on the show floor, in the sessions, and ready to talk. Find us, book a meeting, and see what next-level retail looks like.</p>
+      <div class="hero-cta">
+        <a href="/demo/?ref=events" class="btn btn-primary btn-lg">Book a meeting <i class="ti ti-arrow-right"></i></a>
+        {% if events.upcoming.length %}
+        <a href="#headed" class="btn btn-ghost btn-lg">See where we'll be</a>
+        {% endif %}
+      </div>
     </div>
 
-    <div class="hero-photo-foot hero-foot-left fade-up" style="animation-delay: 0.25s;">
-      <div class="hero-photo-note" style="max-width: 760px;">
-        <p>We're on the ground at the world's leading retail events: on the show floor, in the sessions, and ready to talk. Find us, book a meeting, and see what next-level retail looks like.</p>
-        <div class="hero-cta">
-          <a href="/demo/?ref=events" class="btn btn-primary btn-lg">Book a meeting <i class="ti ti-arrow-right"></i></a>
-          {% if events.upcoming.length %}
-          <a href="#headed" class="btn btn-ghost btn-lg">See where we'll be</a>
-          {% endif %}
-        </div>
-      </div>
+    <div class="evhero-media fade-up" style="animation-delay: 0.15s;">
+      <img src="/assets/images/company/life/nrf-booth-team.webp" alt="The Teamwork Commerce team in front of their booth on the show floor, with the Point of Sale Avenue arch, AI Solutions and self-checkout displays behind them" width="1800" height="1350">
+      <span class="evhero-tag"><i class="ti ti-map-pin"></i> NRF · Javits Center, New York</span>
     </div>
   </div>
 </section>
