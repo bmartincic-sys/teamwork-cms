@@ -57,3 +57,8 @@
   from = "/come-find-us/"
   to = "/events/"
   status = 301
+
+[[headers]]
+  for = "/lp/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"

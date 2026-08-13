@@ -2,6 +2,10 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets");
   eleventyConfig.addGlobalData("buildVersion", String(Date.now()));
   eleventyConfig.addPassthroughCopy("src/robots.txt");
+  // Standalone landing pages: copied verbatim, never templated, and invisible to
+  // collections, so nothing under src/lp can ever appear in the nav or the sitemap.
+  eleventyConfig.addPassthroughCopy("src/lp");
+  eleventyConfig.ignores.add("src/lp/**");
   eleventyConfig.addPassthroughCopy("src/llms.txt");
 
   eleventyConfig.addFilter("readingTime", (html) => {
