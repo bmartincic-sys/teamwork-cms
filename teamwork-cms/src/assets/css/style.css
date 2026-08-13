@@ -6059,6 +6059,14 @@ main > .hero:first-child { margin-top: -85px; padding-top: 230px; }
 
 /* device */
 .hpos-stage { position: relative; justify-self: center; width: 100%; max-width: min(660px, 100%); }
+/* The stage carves its own light: a dark pocket that separates the device from the
+   photo behind it, and a blue key inside that pocket. */
+.hpos-stage::before {
+  content: ''; position: absolute; inset: -14% -18%; z-index: 0; pointer-events: none;
+  background:
+    radial-gradient(58% 54% at 50% 48%, rgba(36, 125, 255, 0.17), transparent 72%),
+    radial-gradient(72% 66% at 50% 50%, rgba(4, 6, 20, 0.55), transparent 78%);
+}
 .hpos-device {
   position: relative; z-index: 2; border-radius: 26px; padding: 12px;
   background: linear-gradient(160deg, rgba(255,255,255,0.13), rgba(255,255,255,0.04)) padding-box,
@@ -6072,9 +6080,9 @@ main > .hero:first-child { margin-top: -85px; padding-top: 230px; }
 }
 [data-theme="light"] .hpos-screen { background: #fff; }
 .hpos-shadow {
-  position: absolute; left: 8%; right: 8%; bottom: -26px; height: 60px; z-index: 1;
-  background: radial-gradient(ellipse at center, rgba(36,125,255,0.28), transparent 70%);
-  filter: blur(26px);
+  position: absolute; left: 4%; right: 4%; bottom: -32px; height: 76px; z-index: 1;
+  background: radial-gradient(ellipse at center, rgba(36,125,255,0.36), transparent 70%);
+  filter: blur(30px);
 }
 
 /* The Sales Receipt screen, rebuilt to match the iPad product UI.
@@ -6276,7 +6284,7 @@ main > .hero:first-child { margin-top: -85px; padding-top: 230px; }
 main > .hero.hpos-hero:first-child { margin-top: -85px; padding-top: 112px; }
 .hero .hpos-title {
   margin: 0 0 18px;
-  font-size: clamp(40px, 4.7vw, 68px);
+  font-size: clamp(42px, 5.2vw, 76px);
   font-weight: 600; letter-spacing: -0.038em; line-height: 1.02; color: #fff;
 }
 .hero .hpos-sub { margin: 0 0 26px; max-width: 460px; font-size: 16.5px; line-height: 1.6; color: rgba(238,241,251,0.80); }
@@ -8110,7 +8118,7 @@ a.evc:hover .evc-go { opacity: 1; }
   transition: box-shadow 0.4s ease;
 }
 @media (min-width: 1041px) {
-  .hpos-device { --posex: 3.5deg; --posey: -8deg; }
+  .hpos-device { --posex: 4.5deg; --posey: -10deg; }
   /* the turned face catches a fixed sheen so the pose reads as lit, not skewed */
   .hpos-screen.srx { position: relative; }
   .hpos-screen.srx::before {
@@ -8123,13 +8131,18 @@ a.evc:hover .evc-go { opacity: 1; }
   }
   .hpos-stage { max-width: min(700px, 100%); }
 }
+/* On wide screens the device breaks the container's right edge, which is what makes it
+   read as an object in the scene rather than content in a column. The hero clips it. */
+@media (min-width: 1240px) {
+  .hpos-stage { max-width: 720px; margin-right: -52px; }
+}
 .hpos-device.is-tilting { will-change: transform; }
 
 /* Keylight: a specular band that sweeps the frame once per cycle. On the frame's own
    padding ring, clipped so it never washes over the screen content. */
 .hpos-device::after {
   content: ''; position: absolute; inset: 0; border-radius: 26px; pointer-events: none;
-  background: linear-gradient(115deg, transparent 30%, rgba(255,255,255,0.14) 46%, rgba(255,255,255,0.30) 50%, rgba(255,255,255,0.14) 54%, transparent 70%);
+  background: linear-gradient(115deg, transparent 30%, rgba(255,255,255,0.20) 46%, rgba(255,255,255,0.44) 50%, rgba(255,255,255,0.20) 54%, transparent 70%);
   background-size: 260% 100%; background-position: 130% 0;
   opacity: 0;
 }
