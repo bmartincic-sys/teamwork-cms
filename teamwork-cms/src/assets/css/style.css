@@ -8133,7 +8133,10 @@ a.evc:hover .evc-go { opacity: 1; }
   transition: box-shadow 0.4s ease;
 }
 @media (min-width: 1041px) {
-  .hpos-device { --posex: 4.5deg; --posey: -10deg; }
+  /* Face-on and flat at rest. The dimensionality lives in the pointer response: the
+     tilt and the screen's 16px lift only reveal themselves when the visitor moves,
+     which is the difference between a posed render and hardware that answers you. */
+  .hpos-device { --posex: 0deg; --posey: 0deg; }
   /* the turned face catches a fixed sheen so the pose reads as lit, not skewed */
   .hpos-screen.srx { position: relative; }
   .hpos-screen.srx::before {
