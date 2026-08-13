@@ -13,7 +13,7 @@
     { qty: '3', sub: '2,535.00', tax: '202.80', tot: '2,737.80' },
     { qty: '4', sub: '2,955.00', tax: '236.40', tot: '3,191.40' }
   ];
-  var HOLD_PAID_MS = 4200;   // how long the finished sale rests before the next cycle
+  var HOLD_PAID_MS = 5200;   // how long the finished sale rests before the next cycle
 
   function init() {
     var root = document.getElementById('hposDevice');
@@ -238,10 +238,6 @@
     if (fine.matches) {
       var hero = root.closest('.hpos-hero') || root;
       var shadow = stage ? stage.querySelector('.hpos-shadow') : null;
-      var spot = document.createElement('span');
-      spot.className = 'hpos-spot';
-      spot.setAttribute('aria-hidden', 'true');
-      hero.appendChild(spot);
       var tx = 0, ty = 0, cx = 0, cy = 0, raf = null;
       function frame() {
         cx += (tx - cx) * 0.10; cy += (ty - cy) * 0.10;
@@ -253,9 +249,6 @@
         else { raf = null; if (tx === 0 && ty === 0) root.classList.remove('is-tilting'); }
       }
       function aim(e) {
-        var hr = hero.getBoundingClientRect();
-        spot.style.transform = 'translate(' + (e.clientX - hr.left) + 'px,' + (e.clientY - hr.top) + 'px)';
-        spot.classList.add('is-on');
         var r = root.getBoundingClientRect();
         var nx = (e.clientX - (r.left + r.width / 2)) / (r.width / 2);
         var ny = (e.clientY - (r.top + r.height / 2)) / (r.height / 2);
@@ -266,7 +259,6 @@
       }
       hero.addEventListener('pointermove', aim);
       hero.addEventListener('pointerleave', function () {
-        spot.classList.remove('is-on');
         tx = 0; ty = 0;
         if (!raf) raf = requestAnimationFrame(frame);
       });
