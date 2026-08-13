@@ -917,13 +917,44 @@ terrainLabel(430, 100, "Peak Season Ridge");
 terrainLabel(520, 545, "Sell-Through Valley");
 terrainLabel(95, 455, "Store Lake", { "font-size": 11, fill: "#6F94A6" });
 
-/* Return roads (drawn under the trail) */
+/* Progress roads (drawn under the trail). Each stop's highlight retraces the trail
+   itself from basecamp, through every earlier stop, to the selected one — click stop 3
+   and the route runs basecamp → 1 → 2 → 3. The points are regenerated with the same
+   seed and drift constants as trailThrough below, so the highlight sits exactly on the
+   trail; if one changes, change the other. */
 const roads = el("g", {}, viewport);
+function loopPts(){
+  const rnd = mulberry32(2468);
+  const nodes = [[HUB.x, HUB.y], ...STOPS.map(s => [s.x, s.y])];
+  const pts = [];
+  for (let i = 0; i < nodes.length; i++){
+    const a = nodes[i], b = nodes[(i + 1) % nodes.length];
+    pts.push(a);
+    const dx = b[0] - a[0], dy = b[1] - a[1];
+    [0.30, 0.58, 0.82].forEach(t => {
+      const off = (rnd() - 0.5) * 0.15;
+      pts.push([a[0] + dx * t - dy * off, a[1] + dy * t + dx * off]);
+    });
+  }
+  return pts;
+}
+/* Open Catmull-Rom, clamped at the ends: the same smoothing closedPath uses, minus
+   the wrap-around, so a partial trail keeps the trail's hand-drawn character. */
+function openPath(pts){
+  const n = pts.length;
+  let d = `M${pts[0][0].toFixed(1)} ${pts[0][1].toFixed(1)}`;
+  for (let i = 0; i < n - 1; i++){
+    const p0 = pts[Math.max(0, i - 1)], p1 = pts[i], p2 = pts[i + 1], p3 = pts[Math.min(n - 1, i + 2)];
+    const c1 = [p1[0] + (p2[0] - p0[0]) / 6, p1[1] + (p2[1] - p0[1]) / 6];
+    const c2 = [p2[0] - (p3[0] - p1[0]) / 6, p2[1] - (p3[1] - p1[1]) / 6];
+    d += `C${c1[0].toFixed(1)} ${c1[1].toFixed(1)},${c2[0].toFixed(1)} ${c2[1].toFixed(1)},${p2[0].toFixed(1)} ${p2[1].toFixed(1)}`;
+  }
+  return d;
+}
 STOPS.forEach(s => {
-  const mx = (s.x + HUB.x) / 2 + (s.y - HUB.y) * 0.16;
-  const my = (s.y + HUB.y) / 2 - (s.x - HUB.x) * 0.16;
+  // node i sits at index 4*i: each segment contributes its node plus three drift points
   el("path", {
-    d: `M${s.x} ${s.y} Q${mx.toFixed(0)} ${my.toFixed(0)} ${HUB.x} ${HUB.y}`,
+    d: openPath(loopPts().slice(0, 4 * s.id + 1)),
     class: "ret", id: `ret-${s.id}`
   }, roads);
 });
@@ -952,6 +983,9 @@ const TRAIL_D = trailThrough([
 const trailG = el("g", {}, viewport);
 el("path", { d: TRAIL_D, class: "trail-casing" }, trailG);
 el("path", { d: TRAIL_D, class: "trail" }, trailG);
+/* The progress roads retrace the trail exactly, so under it they would be fully
+   occluded. Hoist them above the trail; markers are appended later and stay on top. */
+viewport.appendChild(roads);
 
 /* Basecamp marker */
 const hub = el("g", { id: "basecamp", transform: `translate(${HUB.x},${HUB.y})`, tabindex: "0", role: "button" }, viewport);
