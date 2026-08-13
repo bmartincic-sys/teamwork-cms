@@ -8101,9 +8101,27 @@ a.evc:hover .evc-go { opacity: 1; }
 /* Pointer tilt. The stage provides perspective; JS feeds the two custom properties. */
 .hpos-stage { perspective: 1300px; }
 .hpos-device {
-  transform: rotateX(var(--tiltx, 0deg)) rotateY(var(--tilty, 0deg));
+  /* The pose is the composition: at rest the device stands turned toward the copy like
+     a product shot, and the pointer tilt plays on top of it. Flat below 1041px where
+     the layout is a single centered column. */
+  transform: rotateX(calc(var(--posex, 0deg) + var(--tiltx, 0deg)))
+             rotateY(calc(var(--posey, 0deg) + var(--tilty, 0deg)));
   transform-style: preserve-3d;
   transition: box-shadow 0.4s ease;
+}
+@media (min-width: 1041px) {
+  .hpos-device { --posex: 3.5deg; --posey: -8deg; }
+  /* the turned face catches a fixed sheen so the pose reads as lit, not skewed */
+  .hpos-screen.srx { position: relative; }
+  .hpos-screen.srx::before {
+    content: ''; position: absolute; inset: 0; z-index: 5; pointer-events: none;
+    background: linear-gradient(105deg, rgba(255,255,255,0.10) 0%, rgba(255,255,255,0.035) 30%, transparent 55%);
+  }
+  /* mirror finish under the device; WebKit/Blink only, others just keep the glow */
+  .hpos-device {
+    -webkit-box-reflect: below 20px linear-gradient(transparent 78%, rgba(0,0,0,0.22));
+  }
+  .hpos-stage { max-width: min(700px, 100%); }
 }
 .hpos-device.is-tilting { will-change: transform; }
 
@@ -8143,6 +8161,15 @@ a.evc:hover .evc-go { opacity: 1; }
   100% { box-shadow: 0 4px 14px rgba(7,9,26,0.45), 0 0 0 22px rgba(255,255,255,0); transform: scale(1); }
 }
 
+/* At the paid beat a green wash sweeps up the whole screen, then drains. */
+.hpos-screen.srx::after {
+  content: ''; position: absolute; inset: 0; z-index: 6; pointer-events: none;
+  background: linear-gradient(to top, rgba(52, 199, 89, 0.30), rgba(52, 199, 89, 0.05) 55%, transparent 80%);
+  opacity: 0; transition: opacity 0.5s ease;
+}
+.hpos-device.is-paidwash .hpos-screen.srx::after { opacity: 1; }
+.hpos-screen.srx { position: relative; }
+
 /* The under-glow celebrates the paid state, then settles. */
 .hpos-shadow { transition: background 0.6s ease, opacity 0.6s ease; }
 .hpos-stage.is-celebrate .hpos-shadow {
@@ -8155,9 +8182,11 @@ a.evc:hover .evc-go { opacity: 1; }
 .hpos-device.is-wiping .srx-body, .hpos-device.is-wiping .srx-head { opacity: 0; }
 
 @media (prefers-reduced-motion: reduce) {
-  .hpos-device { transform: none; }
+  /* the pose is a static composition, so it stays; everything that moves goes */
+  .hpos-device { transform: rotateX(var(--posex, 0deg)) rotateY(var(--posey, 0deg)); }
   .hpos-device::after { display: none; }
   .hpos-touch { display: none; }
+  .hpos-screen.srx::after { display: none; }
 }
 
 
@@ -8196,7 +8225,9 @@ a.evc:hover .evc-go { opacity: 1; }
   100% { box-shadow: 0 0 0 0 rgba(52, 199, 89, 0); }
 }
 .hpos-chip-rfid { top: -16px; left: -12px; }
-.hpos-chip-pay { bottom: 92px; right: -14px; }
+/* Off the device's bottom corner: the 3D pose recedes the right edge, so anything
+   anchored beside it would sit over the totals column instead of hanging off it. */
+.hpos-chip-pay { bottom: -16px; right: 30px; }
 /* The chips hang off the device edges, which there is no room for on small screens. */
 @media (max-width: 700px) { .hpos-chip { display: none; } }
 @media (prefers-reduced-motion: reduce) {

@@ -104,6 +104,7 @@
       root.classList.remove('hpos-ready');
       if (stage) stage.classList.remove('is-celebrate');
       pay.classList.remove('is-paid', 'is-pressed');
+      root.classList.remove('is-paidwash');
       pay.textContent = 'PAY';
       qtys.forEach(function (el) { el.textContent = '0'; });
       snap(sub, '0.00'); snap(tax, '0.00'); snap(tot, '0.00'); snap(disc, '0.00');
@@ -128,30 +129,32 @@
       root.classList.add('is-sweep');
       at(1700, function () { root.classList.remove('is-sweep'); });
 
-      at(700,  function () { chipRfid.classList.add('is-on'); });
-      at(3050, function () { chipRfid.classList.remove('is-on'); });
+      // the basket lands as one fast burst, which is the RFID story: four items,
+      // one read. The chip makes the claim while it is happening.
+      at(500,  function () { chipRfid.classList.add('is-on'); });
+      at(2500, function () { chipRfid.classList.remove('is-on'); });
 
       at(400,  function () { land(0); });
-      at(1050, function () { land(1); });
-      at(1700, function () { land(2); });
-      at(2350, function () { land(3); });
+      at(700,  function () { land(1); });
+      at(1000, function () { land(2); });
+      at(1300, function () { land(3); });
 
       // the touch point slides the scarf row open
-      at(3050, function () {
+      at(2400, function () {
         moveTouch(items[1], 0.9, 0.5);
         touch.classList.add('is-on');
       });
-      at(3350, function () {
+      at(2750, function () {
         moveTouch(items[1], 0.55, 0.5);
         items[1].classList.add('is-swiped');
         if (annot) annot.classList.add('is-on');
       });
       // tap Disc: discount applies, row swings back, figures settle
-      at(4300, function () {
+      at(3650, function () {
         var act = items[1].querySelector('.srx-act-d') || items[1];
         moveTouch(act, 0.5, 0.5);
       });
-      at(4750, function () {
+      at(4100, function () {
         press();
         items[1].classList.remove('is-swiped');
         items[1].classList.add('is-disc');
@@ -163,25 +166,29 @@
         root.classList.add('hpos-ready');
       });
 
-      // tap PAY
-      at(5700, function () { chipPay.classList.add('is-on'); });
-      at(8400, function () { chipPay.classList.remove('is-on'); });
-      at(5900, function () { moveTouch(pay, 0.5, 0.5); });
-      at(6450, function () { press(); pay.classList.add('is-pressed'); });
-      at(6700, function () { pay.classList.remove('is-pressed'); });
-      at(6850, function () {
+      // tap PAY: the button pops and a green wash sweeps the whole screen
+      at(4950, function () { chipPay.classList.add('is-on'); });
+      at(5150, function () { moveTouch(pay, 0.5, 0.5); });
+      at(5700, function () { press(); pay.classList.add('is-pressed'); });
+      at(5950, function () { pay.classList.remove('is-pressed'); });
+      at(6100, function () {
         pay.classList.add('is-paid');
         pay.textContent = '✓ PAID';
+        root.classList.add('is-paidwash');
         if (stage) stage.classList.add('is-celebrate');
         touch.classList.remove('is-on');
       });
-      at(8400, function () { if (stage) stage.classList.remove('is-celebrate'); });
+      at(7300, function () { root.classList.remove('is-paidwash'); });
+      at(7650, function () {
+        if (stage) stage.classList.remove('is-celebrate');
+        chipPay.classList.remove('is-on');
+      });
 
       // wipe to a fresh sale and go again
-      at(6850 + HOLD_PAID_MS, function () {
+      at(6100 + HOLD_PAID_MS, function () {
         root.classList.add('is-wiping');
       });
-      at(6850 + HOLD_PAID_MS + 380, function () {
+      at(6100 + HOLD_PAID_MS + 380, function () {
         rewind();
         root.classList.remove('is-wiping');
         clearTimers();
