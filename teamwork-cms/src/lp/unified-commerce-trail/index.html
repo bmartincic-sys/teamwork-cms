@@ -199,12 +199,15 @@ header > *{pointer-events:auto}
   display:flex;flex-direction:column;
   transform:translateY(calc(100% - var(--sheet-h-peek)));
   transition:transform .38s cubic-bezier(.32,.72,0,1);
-  touch-action:none;
+  /* touch-action:none here vetoed the body's pan-y (effective touch-action is the
+     intersection with every ancestor), which killed touch scrolling in the sheet.
+     Only the grab handle needs the veto, for its drag gesture. */
+  touch-action:pan-y;
 }
 #sheet.half{transform:translateY(38%)}
 #sheet.full{transform:translateY(0)}
 #sheet.dragging{transition:none}
-.grab{flex:none;padding:9px 0 4px;display:grid;place-items:center;cursor:grab}
+.grab{flex:none;padding:9px 0 4px;display:grid;place-items:center;cursor:grab;touch-action:none}
 .grab span{width:38px;height:4px;border-radius:2px;background:#DCD8CE}
 #sheetbody{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:0 18px 26px;
   overscroll-behavior:contain;touch-action:pan-y}
@@ -1064,7 +1067,8 @@ function goHome(animate){
 
 let ptrs = new Map(), last = null, pinchStart = null, moved = false;
 wrap.addEventListener("pointerdown", e => {
-  wrap.setPointerCapture(e.pointerId);
+  /* Capturing here would retarget the eventual click to the wrapper and the pins
+     would never receive it. Capture starts in pointermove, once it is a real drag. */
   ptrs.set(e.pointerId, { x: e.clientX, y: e.clientY });
   moved = false;
   if (ptrs.size === 1){ last = { x: e.clientX, y: e.clientY }; wrap.classList.add("dragging"); }
@@ -1083,6 +1087,7 @@ wrap.addEventListener("pointermove", e => {
     const target = Math.min(MAXK, Math.max(MINK, pinchStart.k * (d / pinchStart.d)));
     zoomAt(mid.x, mid.y, target / k);
     moved = true;
+    try { wrap.setPointerCapture(e.pointerId); } catch (err) {}
     return;
   }
   if (ptrs.size === 1 && last){
@@ -1090,7 +1095,10 @@ wrap.addEventListener("pointermove", e => {
     const vb = svg.viewBox.baseVal;
     const sc = Math.max(r.width / vb.width, r.height / vb.height);
     const dx = (e.clientX - last.x) / sc, dy = (e.clientY - last.y) / sc;
-    if (Math.abs(dx) + Math.abs(dy) > 1) moved = true;
+    if (Math.abs(dx) + Math.abs(dy) > 1) {
+      moved = true;
+      try { wrap.setPointerCapture(e.pointerId); } catch (err) {}
+    }
     tx += dx; ty += dy;
     last = { x: e.clientX, y: e.clientY };
     applyTransform();
