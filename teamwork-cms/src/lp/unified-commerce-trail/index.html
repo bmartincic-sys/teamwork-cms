@@ -971,27 +971,11 @@ STOPS.forEach(s => {
   el("path", { d: openPath(pts), class: "ret", id: "ret-summit" }, roads);
 }
 
-/* The loop trail — a smooth meander that passes through the trailhead and every stop.
-   Nodes are the real markers; the points between them add gentle, hand-drawn drift
-   so the path reads like a walked trail rather than a set of straight hops. */
-function trailThrough(nodes){
-  const rnd = mulberry32(2468);
-  const pts = [];
-  for (let i = 0; i < nodes.length; i++){
-    const a = nodes[i], b = nodes[(i + 1) % nodes.length];
-    pts.push(a);
-    const dx = b[0] - a[0], dy = b[1] - a[1];
-    [0.30, 0.58, 0.82].forEach(t => {
-      const off = (rnd() - 0.5) * 0.15;               // perpendicular drift
-      pts.push([a[0] + dx * t - dy * off, a[1] + dy * t + dx * off]);
-    });
-  }
-  return closedPath(pts);
-}
-const TRAIL_D = trailThrough([
-  [HUB.x, HUB.y],
-  ...STOPS.map(s => [s.x, s.y])
-]);
+/* The trail — one line, walked in order: basecamp to stop 1 through stop 5, and on
+   up the spur to the summit. No leg returns to basecamp; the trailhead connects only
+   to stop 1. loopPts still generates the drift for the whole ring so the seeded
+   wobble stays identical, and the slice keeps just the outbound walk. */
+const TRAIL_D = openPath(loopPts().slice(0, 21));
 const trailG = el("g", {}, viewport);
 el("path", { d: TRAIL_D, class: "trail-casing" }, trailG);
 el("path", { d: TRAIL_D, class: "trail" }, trailG);
