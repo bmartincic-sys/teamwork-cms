@@ -963,6 +963,13 @@ STOPS.forEach(s => {
     class: "ret", id: `ret-${s.id}`
   }, roads);
 });
+// The summit's route: the whole journey. Through stop 5, one drift point onto the
+// homeward leg, then to the flag itself.
+{
+  const pts = loopPts().slice(0, 22);
+  pts.push([640, 752]);
+  el("path", { d: openPath(pts), class: "ret", id: "ret-summit" }, roads);
+}
 
 /* The loop trail — a smooth meander that passes through the trailhead and every stop.
    Nodes are the real markers; the points between them add gentle, hand-drawn drift
@@ -1024,17 +1031,17 @@ STOPS.forEach(s => {
 hub.addEventListener("click", showBasecamp);
 hub.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); showBasecamp(); } });
 
-/* The Summit — the trail's destination, planted on the high ridge. It has always been
-   the fourth tab; this puts it on the map itself, clicking through to that page. */
+/* The Summit — the trail's destination, planted after stop 5 so the journey reads
+   linearly: basecamp, five stops, summit. Clicks through to the Summit page. */
 const summitG = el("g", {
-  id: "summitflag", transform: "translate(562,96)",
+  id: "summitflag", transform: "translate(640,752)",
   tabindex: "0", role: "button", "aria-label": "Summit: the full ROI picture"
 }, viewport);
 const summitIn = el("g", { class: "cscale" }, summitG);
 el("circle", { class: "pulse", cx: 0, cy: 0, r: 22 }, summitIn);
 el("path", { class: "sflag-pole", d: "M0 16 L0 -18" }, summitIn);
 el("path", { class: "sflag", d: "M0 -18 L21 -10.5 L0 -3 Z" }, summitIn);
-el("text", { class: "label", x: 0, y: 32 }, summitIn).textContent = "THE SUMMIT";
+el("text", { class: "label", x: 0, y: -30 }, summitIn).textContent = "THE SUMMIT";
 summitG.addEventListener("click", () => go("summit"));
 summitG.addEventListener("keydown", e => {
   if (e.key === "Enter" || e.key === " ") { e.preventDefault(); go("summit"); }
@@ -1591,6 +1598,12 @@ function go(t, quiet){
   sheet.classList.toggle("deep", !onMap);
   const sf = document.getElementById("summitflag");
   if (sf) sf.classList.toggle("on", t === "summit");
+  if (t === "summit"){
+    document.querySelectorAll(".ret").forEach(p => p.classList.remove("on"));
+    Object.values(pinEls).forEach(p => p.classList.remove("active"));
+    const rs = document.getElementById("ret-summit");
+    if (rs) rs.classList.add("on");
+  }
   if (quiet) return;
   if (t === "map"){ showBasecamp(); }
   if (t === "stops"){ renderStops(); setSheet("full"); }
