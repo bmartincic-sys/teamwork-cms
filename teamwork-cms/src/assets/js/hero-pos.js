@@ -173,7 +173,7 @@
         var nx = (e.clientX - (r.left + r.width / 2)) / (r.width / 2);
         var ny = (e.clientY - (r.top + r.height / 2)) / (r.height / 2);
         nx = Math.max(-1.4, Math.min(1.4, nx)); ny = Math.max(-1.4, Math.min(1.4, ny));
-        tx = nx * 3.2; ty = ny * -2.6;
+        tx = nx * 1.5; ty = ny * -1.2;
         root.classList.add('is-tilting');
         if (!raf) raf = requestAnimationFrame(frame);
       }

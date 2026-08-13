@@ -6201,19 +6201,38 @@ main > .hero:first-child { margin-top: -85px; padding-top: 230px; }
   display: block; width: 100%; margin-top: 4px; padding: 12px 0;
   border: 0; border-radius: 100px; background: #34C759;
   color: #fff; font-family: inherit; font-size: 16px; font-weight: 700; letter-spacing: 0.01em;
-  cursor: default; transition: transform .18s ease, background .3s ease, opacity .3s ease;
+  cursor: default; transition: transform .18s ease, background .3s ease, opacity .3s ease, box-shadow .3s ease;
 }
-.srx-pay.is-pressed { transform: scale(0.97); background: #2CB04E; }
-.srx-pay.is-paid { background: #1F9E45; }
+/* Deep squash on press, then the paid state lands with a spring and a green shockwave.
+   Exaggerated on purpose: this is the payoff of the whole sequence. */
+.srx-pay.is-pressed { transform: scale(0.90); background: #27A34A; }
+.srx-pay.is-paid { background: #1F9E45; animation: srx-paid-pop .7s cubic-bezier(0.34, 1.56, 0.64, 1); }
+@keyframes srx-paid-pop {
+  0%   { transform: scale(0.90); box-shadow: 0 0 0 0 rgba(52, 199, 89, 0.55); }
+  55%  { transform: scale(1.06); }
+  100% { transform: scale(1); box-shadow: 0 0 0 26px rgba(52, 199, 89, 0); }
+}
 
 /* sequence states: armed rewinds, steps arrive */
-.hpos-armed [data-srx-item] { opacity: 0; transform: translateY(8px); }
+.hpos-armed [data-srx-item] { opacity: 0; transform: translateY(14px) scale(0.985); }
 .hpos-armed [data-srx-item].is-on {
   opacity: 1; transform: none;
-  transition: opacity .4s cubic-bezier(0.2,0.7,0.3,1), transform .4s cubic-bezier(0.2,0.7,0.3,1);
+  /* back-out ease: the row overshoots a touch and settles, so each landing reads as a
+     real gesture rather than a fade */
+  transition: opacity .38s ease, transform .55s cubic-bezier(0.34, 1.45, 0.5, 1);
 }
-.hpos-armed [data-srx-note] { opacity: 0; transition: opacity .4s ease; }
-.hpos-armed [data-srx-note].is-on { opacity: 1; }
+.hpos-armed [data-srx-note] { opacity: 0; transform: translateY(6px) scale(0.97); }
+.hpos-armed [data-srx-note].is-on {
+  opacity: 1; transform: none;
+  transition: opacity .3s ease, transform .5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+/* one green pulse on the scarf row the moment its discount lands */
+.hpos-armed [data-srx-scarf].is-disc { animation: srx-disc-pulse .65s ease; }
+@keyframes srx-disc-pulse {
+  0% { background: rgba(52, 199, 89, 0); }
+  30% { background: rgba(52, 199, 89, 0.16); }
+  100% { background: rgba(52, 199, 89, 0); }
+}
 .hpos-armed .srx-pay { opacity: 0.4; }
 .hpos-armed.hpos-ready .srx-pay { opacity: 1; }
 .srx-price .srx-plain { display: none; }
@@ -8108,15 +8127,15 @@ a.evc:hover .evc-go { opacity: 1; }
 /* The touch point that walks through the sale: slide, tap Disc, tap PAY. JS moves it;
    the press is a ring that collapses onto the dot. */
 .hpos-touch {
-  position: absolute; z-index: 6; width: 34px; height: 34px; margin: -17px 0 0 -17px;
+  position: absolute; z-index: 6; width: 26px; height: 26px; margin: -13px 0 0 -13px;
   border-radius: 50%; pointer-events: none;
-  background: radial-gradient(circle at 38% 34%, rgba(255,255,255,0.95), rgba(255,255,255,0.55) 58%, rgba(255,255,255,0.28));
-  box-shadow: 0 4px 14px rgba(7, 9, 26, 0.45), inset 0 0 0 1px rgba(255,255,255,0.5);
+  background: radial-gradient(circle at 38% 34%, rgba(255,255,255,0.8), rgba(255,255,255,0.4) 58%, rgba(255,255,255,0.16));
+  box-shadow: 0 3px 10px rgba(7, 9, 26, 0.35), inset 0 0 0 1px rgba(255,255,255,0.35);
   opacity: 0; transform: scale(0.6);
   transition: opacity 0.28s ease, transform 0.28s ease,
               left 0.55s cubic-bezier(0.3, 0.1, 0.25, 1), top 0.55s cubic-bezier(0.3, 0.1, 0.25, 1);
 }
-.hpos-touch.is-on { opacity: 0.92; transform: scale(1); }
+.hpos-touch.is-on { opacity: 0.7; transform: scale(1); }
 .hpos-touch.is-press { animation: hpos-press 0.42s ease; }
 @keyframes hpos-press {
   0% { box-shadow: 0 4px 14px rgba(7,9,26,0.45), 0 0 0 0 rgba(255,255,255,0.55); transform: scale(1); }
