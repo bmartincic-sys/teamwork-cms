@@ -137,10 +137,13 @@ header > *{pointer-events:auto}
 .pin:focus-visible .ring{stroke:var(--blue);stroke-width:3;opacity:1}
 .pin .ring{fill:none;stroke:transparent;opacity:0}
 .pin #summitflag{cursor:pointer}
-#summitflag .splate{fill:#fff;stroke:rgba(22,33,28,.25);stroke-width:1.6}
-#summitflag .sflag-pole{stroke:#3A4552;stroke-width:2;stroke-linecap:round;fill:none}
+#summitflag .pulse{fill:var(--purple);opacity:.14;animation:pulse 2.8s ease-out infinite}
+#summitflag .plate{fill:#fff;stroke:var(--purple);stroke-width:2.5}
+#summitflag .name{font-family:var(--font-display);font-weight:700;font-size:14px;fill:var(--ink);
+  text-anchor:middle;paint-order:stroke;stroke:var(--paper);stroke-width:4px}
+#summitflag .sflag-pole{stroke:var(--purple);stroke-width:2.6;stroke-linecap:round;fill:none}
 #summitflag .sflag{fill:var(--purple);stroke-linejoin:round}
-#summitflag.on .splate{stroke:var(--purple);stroke-width:2.6}
+#summitflag.on .plate{stroke-width:4.5}
 .label{
   font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.07em;
   text-transform:uppercase;fill:var(--ink);text-anchor:middle;
@@ -1029,10 +1032,11 @@ const summitG = el("g", {
   tabindex: "0", role: "button", "aria-label": "Summit: the full ROI picture"
 }, viewport);
 const summitIn = el("g", { class: "cscale" }, summitG);
-el("circle", { class: "splate", cx: 0, cy: 0, r: 16 }, summitIn);
-el("path", { class: "sflag-pole", d: "M-1 10 L-1 -10" }, summitIn);
-el("path", { class: "sflag", d: "M-1 -10 L13 -5.5 L-1 -1 Z" }, summitIn);
-el("text", { class: "label", x: 0, y: -28 }, summitIn).textContent = "THE SUMMIT";
+el("circle", { class: "pulse", cx: 0, cy: 0, r: 26 }, summitIn);
+el("rect", { class: "plate", x: -25, y: -25, width: 50, height: 50, rx: 15 }, summitIn);
+el("path", { class: "sflag-pole", d: "M-6 14 L-6 -14" }, summitIn);
+el("path", { class: "sflag", d: "M-6 -14 L14 -7 L-6 0 Z" }, summitIn);
+el("text", { class: "name", x: 0, y: 48 }, summitIn).textContent = "THE SUMMIT";
 summitG.addEventListener("click", () => go("summit"));
 summitG.addEventListener("keydown", e => {
   if (e.key === "Enter" || e.key === " ") { e.preventDefault(); go("summit"); }
