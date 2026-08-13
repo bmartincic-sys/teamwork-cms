@@ -92,6 +92,39 @@
     var chipRfid = chip('hpos-chip-rfid', '<i class="pulse-dot"></i> RFID: the whole basket in one read');
     var chipPay = chip('hpos-chip-pay', '<i class="pulse-dot"></i> Tap to Pay');
 
+    /* ---- camera layer ----
+       The receipt's content moves into a wrapper the camera beats can drive. Children
+       of the device (veil, touch point) stay outside it, so only the UI zooms. */
+    var screenEl = q('.hpos-screen');
+    var cam = document.createElement('div');
+    cam.className = 'srx-cam';
+    while (screenEl.firstChild) cam.appendChild(screenEl.firstChild);
+    screenEl.appendChild(cam);
+
+    // Push in on a target: translate is computed from unzoomed geometry, clamped so
+    // the zoomed content can never pull an edge inside the bezel.
+    function camFocus(target, s) {
+      var cr = cam.getBoundingClientRect(), tr = target.getBoundingClientRect();
+      var dx = (cr.left + cr.width / 2) - (tr.left + tr.width / 2);
+      var dy = (cr.top + cr.height / 2) - (tr.top + tr.height / 2);
+      var mx = (cr.width / 2) * (1 - 1 / s), my = (cr.height / 2) * (1 - 1 / s);
+      dx = Math.max(-mx, Math.min(mx, dx));
+      dy = Math.max(-my, Math.min(my, dy));
+      cam.style.setProperty('--cam', s);
+      cam.style.setProperty('--camdx', dx.toFixed(1) + 'px');
+      cam.style.setProperty('--camdy', dy.toFixed(1) + 'px');
+    }
+    function camWide() {
+      cam.style.removeProperty('--cam');
+      cam.style.removeProperty('--camdx');
+      cam.style.removeProperty('--camdy');
+    }
+    function camPunch() {
+      cam.classList.remove('cam-punch');
+      void cam.offsetWidth;
+      cam.classList.add('cam-punch');
+    }
+
     /* ---- power-on veil (first cycle only) ---- */
     var veil = document.createElement('span');
     veil.className = 'hpos-bootveil';
@@ -118,6 +151,8 @@
       if (discRow) discRow.style.visibility = 'hidden';
       chipRfid.classList.remove('is-on');
       chipPay.classList.remove('is-on');
+      camWide();
+      cam.classList.remove('cam-punch');
     }
 
     function land(i) {
@@ -149,6 +184,11 @@
       at(700,  function () { land(1); });
       at(1000, function () { land(2); });
       at(1300, function () { land(3); });
+
+      // the camera pushes in on the scarf row for the discount scene
+      at(2550, function () { camFocus(items[1], 1.18); });
+      // and pulls wide before the payment
+      at(4900, function () { camWide(); });
 
       // the touch point slides the scarf row open
       at(2400, function () {
@@ -187,6 +227,7 @@
         pay.textContent = '✓ PAID';
         root.classList.add('is-paidwash');
         root.classList.add('is-payflash');
+        camPunch();
         if (stage) stage.classList.add('is-celebrate');
         touch.classList.remove('is-on');
       });
