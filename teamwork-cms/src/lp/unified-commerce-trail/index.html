@@ -924,9 +924,9 @@ terrainLabel(95, 455, "Store Lake", { "font-size": 11, fill: "#6F94A6" });
 
 /* Progress roads (drawn under the trail). Each stop's highlight retraces the trail
    itself from basecamp, through every earlier stop, to the selected one — click stop 3
-   and the route runs basecamp → 1 → 2 → 3. The points are regenerated with the same
-   seed and drift constants as trailThrough below, so the highlight sits exactly on the
-   trail; if one changes, change the other. */
+   and the route runs basecamp → 1 → 2 → 3. loopPts below is the single source of the
+   trail's seeded drift: the visible trail and every highlight are sliced from it, so
+   they always sit on the same line. */
 const roads = el("g", {}, viewport);
 function loopPts(){
   const rnd = mulberry32(2468);
