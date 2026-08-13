@@ -53,6 +53,45 @@
       touch.classList.add('is-press');
     }
 
+    /* ---- rolling numbers ----
+       Totals count to their new value instead of snapping. 520ms with a cubic
+       ease-out fits inside the 650ms gap between item landings. */
+    // setTimeout rather than requestAnimationFrame: rAF throttles to zero in hidden
+    // tabs, which would leave a total resting on a mid-roll value until the visitor
+    // came back. Timeout stepping always finishes the roll.
+    function tick(el, target) {
+      var from = parseFloat((el.textContent || '0').replace(/,/g, '')) || 0;
+      var to = parseFloat(String(target).replace(/,/g, ''));
+      if (el._tick) clearTimeout(el._tick);
+      if (!isFinite(to) || from === to) { el.textContent = target; return; }
+      var t0 = Date.now(), dur = 520;
+      (function step() {
+        var p = Math.min(1, (Date.now() - t0) / dur);
+        var e = 1 - Math.pow(1 - p, 3);
+        var v = from + (to - from) * e;
+        el.textContent = v.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+        el._tick = p < 1 ? setTimeout(step, 24) : null;
+      })();
+    }
+    function snap(el, v) {
+      if (el._tick) { clearTimeout(el._tick); el._tick = null; }
+      el.textContent = v;
+    }
+
+    /* ---- narration chips ----
+       Two glass pills that say what the demo just did: the whole basket arriving in
+       one read, then Tap to Pay at the payment beat. */
+    function chip(cls, html) {
+      var el = document.createElement('span');
+      el.className = 'hpos-chip ' + cls;
+      el.setAttribute('aria-hidden', 'true');
+      el.innerHTML = html;
+      (stage || root).appendChild(el);
+      return el;
+    }
+    var chipRfid = chip('hpos-chip-rfid', '<i class="pulse-dot"></i> RFID: the whole basket in one read');
+    var chipPay = chip('hpos-chip-pay', '<i class="pulse-dot"></i> Tap to Pay');
+
     /* ---- state machine ---- */
     root.classList.add('hpos-armed');
     var timers = [];
@@ -67,16 +106,17 @@
       pay.classList.remove('is-paid', 'is-pressed');
       pay.textContent = 'PAY';
       qtys.forEach(function (el) { el.textContent = '0'; });
-      sub.textContent = '0.00'; tax.textContent = '0.00'; tot.textContent = '0.00';
-      disc.textContent = '0.00';
+      snap(sub, '0.00'); snap(tax, '0.00'); snap(tot, '0.00'); snap(disc, '0.00');
       if (discRow) discRow.style.visibility = 'hidden';
+      chipRfid.classList.remove('is-on');
+      chipPay.classList.remove('is-on');
     }
 
     function land(i) {
       items[i].classList.add('is-on');
       var st = STEPS[i];
       qtys.forEach(function (el) { el.textContent = st.qty; });
-      sub.textContent = st.sub; tax.textContent = st.tax; tot.textContent = st.tot;
+      tick(sub, st.sub); tick(tax, st.tax); tick(tot, st.tot);
     }
 
     var visible = false, running = false;
@@ -87,6 +127,9 @@
 
       root.classList.add('is-sweep');
       at(1700, function () { root.classList.remove('is-sweep'); });
+
+      at(700,  function () { chipRfid.classList.add('is-on'); });
+      at(3050, function () { chipRfid.classList.remove('is-on'); });
 
       at(400,  function () { land(0); });
       at(1050, function () { land(1); });
@@ -115,12 +158,14 @@
         if (annot) annot.classList.remove('is-on');
         if (note) note.classList.add('is-on');
         if (discRow) discRow.style.visibility = '';
-        disc.textContent = F.disc;
-        tax.textContent = F.tax; tot.textContent = F.tot;
+        tick(disc, F.disc);
+        tick(tax, F.tax); tick(tot, F.tot);
         root.classList.add('hpos-ready');
       });
 
       // tap PAY
+      at(5700, function () { chipPay.classList.add('is-on'); });
+      at(8400, function () { chipPay.classList.remove('is-on'); });
       at(5900, function () { moveTouch(pay, 0.5, 0.5); });
       at(6450, function () { press(); pay.classList.add('is-pressed'); });
       at(6700, function () { pay.classList.remove('is-pressed'); });
@@ -160,11 +205,14 @@
     var fine = window.matchMedia('(pointer: fine)');
     if (fine.matches) {
       var hero = root.closest('.hpos-hero') || root;
+      var shadow = stage ? stage.querySelector('.hpos-shadow') : null;
       var tx = 0, ty = 0, cx = 0, cy = 0, raf = null;
       function frame() {
         cx += (tx - cx) * 0.10; cy += (ty - cy) * 0.10;
         root.style.setProperty('--tilty', cx.toFixed(3) + 'deg');
         root.style.setProperty('--tiltx', cy.toFixed(3) + 'deg');
+        // the shadow slides opposite the tilt, which is what anchors the device
+        if (shadow) shadow.style.transform = 'translateX(' + (cx * -7).toFixed(2) + 'px)';
         if (Math.abs(tx - cx) > 0.01 || Math.abs(ty - cy) > 0.01) raf = requestAnimationFrame(frame);
         else { raf = null; if (tx === 0 && ty === 0) root.classList.remove('is-tilting'); }
       }
@@ -203,6 +251,9 @@
       root.classList.remove('is-sweep', 'is-wiping');
       if (stage) stage.classList.remove('is-celebrate');
       touch.classList.remove('is-on');
+      chipRfid.classList.remove('is-on');
+      chipPay.classList.remove('is-on');
+      snap(sub, F.sub); snap(disc, F.disc); snap(tax, F.tax); snap(tot, F.tot);
       root.style.removeProperty('--tiltx'); root.style.removeProperty('--tilty');
     });
   }
