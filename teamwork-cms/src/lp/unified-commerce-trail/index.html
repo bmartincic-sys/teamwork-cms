@@ -137,10 +137,10 @@ header > *{pointer-events:auto}
 .pin:focus-visible .ring{stroke:var(--blue);stroke-width:3;opacity:1}
 .pin .ring{fill:none;stroke:transparent;opacity:0}
 .pin #summitflag{cursor:pointer}
-#summitflag .sflag-pole{stroke:#0B4FB8;stroke-width:2.6;stroke-linecap:round;fill:none}
-#summitflag .sflag{fill:var(--purple);stroke:#fff;stroke-width:1.2;stroke-linejoin:round}
-#summitflag .pulse{fill:var(--purple)}
-#summitflag.on .sflag{fill:#0B4FB8}
+#summitflag .splate{fill:#fff;stroke:rgba(22,33,28,.25);stroke-width:1.6}
+#summitflag .sflag-pole{stroke:#3A4552;stroke-width:2;stroke-linecap:round;fill:none}
+#summitflag .sflag{fill:var(--purple);stroke-linejoin:round}
+#summitflag.on .splate{stroke:var(--purple);stroke-width:2.6}
 .label{
   font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.07em;
   text-transform:uppercase;fill:var(--ink);text-anchor:middle;
@@ -963,11 +963,11 @@ STOPS.forEach(s => {
     class: "ret", id: `ret-${s.id}`
   }, roads);
 });
-// The summit's route: the whole journey. Through stop 5, one drift point onto the
-// homeward leg, then to the flag itself.
+// The summit's route: the whole journey. Through stop 5, then up the spur. It never
+// touches the homeward leg, so summit and basecamp stay unconnected.
 {
-  const pts = loopPts().slice(0, 22);
-  pts.push([640, 752]);
+  const pts = loopPts().slice(0, 21);
+  pts.push([868, 652], [948, 540]);
   el("path", { d: openPath(pts), class: "ret", id: "ret-summit" }, roads);
 }
 
@@ -998,6 +998,13 @@ el("path", { d: TRAIL_D, class: "trail" }, trailG);
 /* The progress roads retrace the trail exactly, so under it they would be fully
    occluded. Hoist them above the trail; markers are appended later and stay on top. */
 viewport.appendChild(roads);
+
+/* The side trail: a spur that forks off at stop 5 and climbs away from basecamp to
+   the summit. Drawn with the trail's own style, under the progress roads. */
+const SPUR_PTS = [[760, 720], [868, 652], [948, 540]];
+const SPUR_D = openPath(SPUR_PTS);
+el("path", { d: SPUR_D, class: "trail-casing" }, trailG);
+el("path", { d: SPUR_D, class: "trail" }, trailG);
 
 /* Basecamp marker */
 const hub = el("g", { id: "basecamp", transform: `translate(${HUB.x},${HUB.y})`, tabindex: "0", role: "button" }, viewport);
@@ -1031,17 +1038,17 @@ STOPS.forEach(s => {
 hub.addEventListener("click", showBasecamp);
 hub.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); showBasecamp(); } });
 
-/* The Summit — the trail's destination, planted after stop 5 so the journey reads
-   linearly: basecamp, five stops, summit. Clicks through to the Summit page. */
+/* The Summit — the destination at the top of its own spur, past stop 5 and away
+   from basecamp. A clean badge, not a pulsing disc. Clicks through to the page. */
 const summitG = el("g", {
-  id: "summitflag", transform: "translate(640,752)",
+  id: "summitflag", transform: "translate(948,540)",
   tabindex: "0", role: "button", "aria-label": "Summit: the full ROI picture"
 }, viewport);
 const summitIn = el("g", { class: "cscale" }, summitG);
-el("circle", { class: "pulse", cx: 0, cy: 0, r: 22 }, summitIn);
-el("path", { class: "sflag-pole", d: "M0 16 L0 -18" }, summitIn);
-el("path", { class: "sflag", d: "M0 -18 L21 -10.5 L0 -3 Z" }, summitIn);
-el("text", { class: "label", x: 0, y: -30 }, summitIn).textContent = "THE SUMMIT";
+el("circle", { class: "splate", cx: 0, cy: 0, r: 16 }, summitIn);
+el("path", { class: "sflag-pole", d: "M-1 10 L-1 -10" }, summitIn);
+el("path", { class: "sflag", d: "M-1 -10 L13 -5.5 L-1 -1 Z" }, summitIn);
+el("text", { class: "label", x: 0, y: -28 }, summitIn).textContent = "THE SUMMIT";
 summitG.addEventListener("click", () => go("summit"));
 summitG.addEventListener("keydown", e => {
   if (e.key === "Enter" || e.key === " ") { e.preventDefault(); go("summit"); }
