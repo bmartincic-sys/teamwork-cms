@@ -18,8 +18,8 @@ module.exports = [
       "Get the money questions in early. Licensing models differ far more than feature lists do, and the total cost usually turns on the answers here rather than the sticker price.",
     questions: [
       "How is the platform licensed: per store, per terminal, per named user, per transaction, or on revenue?",
-      "What is included in the base licence, and what is a paid module or add-on?",
-      "What is the total cost over five years for our store count, including licences, implementation, hardware, support and training?",
+      "What is included in the base license, and what is a paid module or add-on?",
+      "What is the total cost over five years for our store count, including licenses, implementation, hardware, support and training?",
       "How does pricing change if our store count falls rather than grows?",
       "What are the annual uplift terms, and is there a cap?",
       "What are the contract term, notice period and exit terms?",
@@ -51,7 +51,7 @@ module.exports = [
     title: "Inventory and stock accuracy",
     icon: "ti-packages",
     blurb:
-      "Ask for measured accuracy in a comparable estate, not a target. The gap between claimed and achieved is where most omnichannel programmes fail.",
+      "Ask for measured accuracy in a comparable estate, not a target. The gap between claimed and achieved is where most omnichannel programs fail.",
     questions: [
       "What item-level inventory accuracy do comparable customers actually achieve, and how is it measured?",
       "How long does a full-store count take, and does the store have to close?",
