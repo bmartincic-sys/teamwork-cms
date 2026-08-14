@@ -51,7 +51,7 @@ module.exports = [
     title: "Inventory and stock accuracy",
     icon: "ti-packages",
     blurb:
-      "Ask for measured accuracy in a comparable estate, not a target. The gap between claimed and achieved is where most omnichannel programs fail.",
+      "Ask for measured accuracy in a comparable fleet, not a target. The gap between claimed and achieved is where most omnichannel programs fail.",
     questions: [
       "What item-level inventory accuracy do comparable customers actually achieve, and how is it measured?",
       "How long does a full-store count take, and does the store have to close?",
