@@ -621,7 +621,7 @@ nav .prog{position:absolute;top:0;left:0;height:2px;background:var(--blue);trans
       <div class="chip"><b>280%</b> ROI</div>
       <div class="chip"><b>69%</b> lower 3-yr TCO</div>
       <div class="chip"><b>&lt;12 mo</b> payback</div>
-      <div class="chip"><b>100%</b> native iOS</div>
+      <div class="chip"><b>100%</b> mobile native</div>
     </div>
   </header>
 
@@ -675,7 +675,7 @@ const CONFIG = {
   rating: "280% ROI · 40+ countries",
 
   trailName: "The Unified Commerce Trail",   // the experience name
-  client: "Columbia",                        // the prospect — used only in the personal touches
+  client: "",   // no prospect personalization in the public cut,                        // unused in this cut
 
   // Each stop slot shows a poster image. Add a video path or URL alongside it and
   // the poster gains a play button and swaps to the player on click.
@@ -691,7 +691,7 @@ const CONFIG = {
   rating: "280% ROI · 40+ countries",
 
   trailName: "The Unified Commerce Trail",   // the experience name
-  client: "Columbia",                        // the prospect — used only in the personal touches
+  client: "",   // no prospect personalization in the public cut,                        // unused in this cut
 
   videos: {
     ai:        "",   // 121 Commerce outfitting session
@@ -755,15 +755,15 @@ const CONFIG = {
 
 /* ---------------- Content ---------------- */
 const BASECAMP = {
-  title: "Basecamp: The iOS Native POS Core",
+  title: "Basecamp: The Mobile-Native POS Core",
   sub: "One platform. Every floor, channel, and backroom operation leads right back to the register.",
-  body: "POS built specifically for enterprise specialty retail. Teamwork Commerce runs 100% natively on iPad and iPhone to manage all store operations from a single application — without third-party bolt-ons or middleware.",
+  body: "POS built specifically for enterprise specialty retail. One modern, mobile-native application manages every store operation end to end, on a modern architecture — without third-party bolt-ons or middleware.",
   stats: [
     { n: "280%", l: "ROI · $2.81 per $1" },
     { n: "69%", l: "Lower 3-yr TCO" },
-    { n: "100%", l: "Native iOS" }
+    { n: "100%", l: "Mobile native" }
   ],
-  tags: ["Native iOS", "No Middleware", "OOTB Omnichannel", "Loyalty", "RFID Inventory", "Cloud OMS", "121 Commerce AI"]
+  tags: ["Mobile Native", "No Middleware", "OOTB Omnichannel", "Loyalty", "RFID Inventory", "Cloud OMS", "121 Commerce AI"]
 };
 
 const STOPS = [
@@ -1337,7 +1337,7 @@ function renderBasecamp(){
       <span class="sep">·</span>
       <span>5 stops</span>
     </div>
-    <p class="t-place">Built for ${esc(CONFIG.client)} · Teamwork Commerce</p>
+    <p class="t-place">Built for enterprise specialty retail · Teamwork Commerce</p>
     <div class="statbar">
       ${BASECAMP.stats.map(st => `<div><b>${esc(st.n)}</b><span>${esc(st.l)}</span></div>`).join("")}
     </div>
@@ -1477,7 +1477,7 @@ function renderSummit(){
           ${[0,1,2,3,4,5,6].map(i => `<path d="${ring(500,520,120+i*95,700+i*11,.2)}" fill="none" stroke="#fff" stroke-width="2"/>`).join("")}
         </svg>
         <div class="in">
-          <div class="k">Summit · ${esc(CONFIG.client)}</div>
+          <div class="k">Summit · Enterprise ROI</div>
           <h2>Proven enterprise ROI for high-volume outdoor retail</h2>
           <p>Teamwork Commerce delivers a 280% ROI — $2.81 returned for every $1 spent — and a payback period under 12 months.</p>
         </div>
@@ -1496,7 +1496,7 @@ function renderSummit(){
       </div>
       <button class="btn" data-link="demo">Book a tailored demo</button>
       <button class="btn ghost" data-link="roi">Request a custom ROI model</button>
-      <p class="fine">Figures reflect enterprise specialty retail deployments across 40+ countries. Ask for the underlying model and assumptions — we'll show the math for ${esc(CONFIG.client)}'s store count and volume.</p>
+      <p class="fine">Figures reflect enterprise specialty retail deployments across 40+ countries. Ask for the underlying model and assumptions — we'll show the math for your store count and volume.</p>
     </div>`;
   wireBody();
 }
