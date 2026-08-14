@@ -1,5 +1,8 @@
 <footer class="footer">
   <div class="container">
+    <!-- Five link columns, one topic each. The previous layout stacked two or three
+         headings inside a single column, which left one column carrying fifteen links
+         while another carried five. -->
     <div class="footer-grid">
       <div class="footer-brand">
         <div class="nav-logo">
@@ -13,55 +16,60 @@
           <a href="https://www.instagram.com/teamworkcommerce/" target="_blank" rel="noopener" aria-label="Teamwork Commerce on Instagram"><i class="ti ti-brand-instagram"></i></a>
         </div>
       </div>
+
       <div class="footer-col">
-        <h4>Sell</h4>
+        <h4>Platform</h4>
         <a href="/platform/mobile-pos/">Mobile POS</a>
         <a href="/platform/rfid/">RFID &amp; Self-Checkout</a>
-        <h4 style="margin-top: 22px;">Know</h4>
-        <a href="/features/product-data/">Product Data &amp; Catalog</a>
-        <a href="/features/customer-data/">Customer Data &amp; Clienteling</a>
-        <a href="/platform/analytics/">Analytics &amp; Reporting</a>
-      </div>
-      <div class="footer-col">
-        <h4>Operate</h4>
         <a href="/platform/inventory-control/">Inventory Control</a>
         <a href="/platform/oms/">Order Management</a>
         <a href="/platform/integrations/">Integrations &amp; APIs</a>
         <a href="/platform/scalability/">Scaling &amp; Global</a>
         <a href="/platform/architecture/">Architecture</a>
-        <h4 style="margin-top: 22px;">Team</h4>
+      </div>
+
+      <div class="footer-col">
+        <h4>Features</h4>
+        <a href="/features/product-data/">Product Data &amp; Catalog</a>
+        <a href="/features/customer-data/">Customer Data &amp; Clienteling</a>
+        <a href="/platform/analytics/">Analytics &amp; Reporting</a>
         <a href="/features/access-identity/">Access &amp; Identity</a>
         <a href="/features/training/">Training &amp; Certification</a>
       </div>
+
       <div class="footer-col">
         <h4>Solutions</h4>
         {% for s in collections.solutions | sortByNavOrder %}<a href="{{ s.url }}">{{ s.data.navLabel or s.data.title }}</a>
         {% endfor %}
       </div>
+
       <div class="footer-col">
-        <h4>Company</h4>
-        <a href="/about/">About</a>
-        <a href="/teamwork-cares/">Teamwork Cares</a>
-        <a href="/careers/">Careers</a>
-        <a href="/contact/">Contact</a>
-        <h4 style="margin-top: 22px;">Case Studies &amp; Partners</h4>
+        <h4>Resources</h4>
         <a href="/case-studies/">Case Studies</a>
-        <a href="https://partners.teamworkcommerce.com/integrations" target="_blank" rel="noopener">Partners Portal</a>
-        <a href="https://teamworkclients.atlassian.net/secure/Dashboard.jspa" target="_blank" rel="noopener">Support Portal <i class="ti ti-external-link" style="font-size: 12px;"></i></a>
-        <h4 style="margin-top: 22px;">Resources</h4>
         <a href="/blog/">Blog</a>
         <a href="/press-room/">Press Room</a>
+        <a href="/events/">Events</a>
         <a href="/technical-evaluation/">Technical Evaluation</a>
         <a href="/pos-rfp-template/">POS RFP Template</a>
         <a href="/certified-hardware/">Certified Hardware</a>
         <a href="/frequently-asked-questions/">FAQ</a>
         <a href="/glossary/">Glossary</a>
-        <a href="/events/">Events</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="/about/">About</a>
+        <a href="/careers/">Careers</a>
+        <a href="/teamwork-cares/">Teamwork Cares</a>
+        <a href="/contact/">Contact</a>
+        <a href="https://partners.teamworkcommerce.com/integrations" target="_blank" rel="noopener">Partner Portal <i class="ti ti-external-link footer-ext"></i></a>
+        <a href="https://teamworkclients.atlassian.net/secure/Dashboard.jspa" target="_blank" rel="noopener">Support Portal <i class="ti ti-external-link footer-ext"></i></a>
       </div>
     </div>
+
     <div class="footer-bottom">
-      <span>© 2026 Teamwork Commerce. All rights reserved.</span>
-      <div style="display:flex; gap: 20px; align-items: center; flex-wrap: wrap;">
+      <span>&copy; {{ buildYear }} Teamwork Commerce. All rights reserved.</span>
+      <div class="footer-legal">
         <a href="/privacy-policy/">Privacy</a>
         <a href="/terms-and-conditions/">Terms</a>
         <a href="/data-processing-agreement/">DPA</a>

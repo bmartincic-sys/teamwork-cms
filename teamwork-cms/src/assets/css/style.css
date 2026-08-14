@@ -1971,7 +1971,8 @@ a { color: inherit; text-decoration: none; }
   background: var(--bg);
 }
 .footer-grid {
-  display: grid; grid-template-columns: 1.6fr 1fr 1.05fr 1fr 1fr; gap: 40px;
+  /* Brand column plus five equal link columns, one topic each. */
+  display: grid; grid-template-columns: 1.45fr repeat(5, minmax(0, 1fr)); gap: 30px;
   padding-bottom: 56px; align-items: start;
 }
 .footer-brand .nav-logo { height: 32px; margin-bottom: 20px; }
@@ -7716,10 +7717,12 @@ main > .hero.hpos-hero:first-child { margin-top: -85px; padding-top: 112px; }
   .security-tech-link,
   .lead-fallback-alt,
   .cside-card a,
-  .off-item a,
-  .footer-col a {
+  .off-item a {
     display: inline-flex; align-items: center; min-height: 44px;
   }
+  /* Footer links are their own case: they must stay block level so each column reads
+     as a list. flex, not inline-flex, keeps the tap height without the run-on. */
+  .footer-col a { display: flex; align-items: center; }
   /* The footer link columns would otherwise gain 44px per row and double in height. */
   .footer-col a { min-height: 40px; }
   /* The legal row's links carry no class of their own. */
@@ -8433,5 +8436,18 @@ a.evc:hover .evc-go { opacity: 1; }
 }
 
 
-/* "THE point of sale" — the caps are the claim, so they get a little tracking to read
-   as deliberate emphasis rather than a stuck shift key. */
+
+/* ============ FOOTER LAYOUT ============
+   The legal row's flex used to live in an inline style attribute; it is a class now.
+   The external-link glyph rides small and dimmed so Partner Portal and Support Portal
+   still scan as single lines rather than as decorated buttons. */
+.footer-legal { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
+.footer-ext { font-size: 11.5px; opacity: 0.6; margin-left: 3px; }
+
+/* Between six columns and the existing 900px two-column tier, three columns with the
+   brand on its own row. The 900px and 600px tiers give the brand a full row too. */
+@media (max-width: 1180px) and (min-width: 901px) {
+  .footer-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 30px 26px; }
+  .footer-brand { grid-column: 1 / -1; }
+}
+@media (max-width: 900px) { .footer-brand { grid-column: 1 / -1; } }

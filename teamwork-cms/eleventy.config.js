@@ -1,6 +1,8 @@
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets");
   eleventyConfig.addGlobalData("buildVersion", String(Date.now()));
+  // Footer copyright: derived at build time so it cannot go stale in January.
+  eleventyConfig.addGlobalData("buildYear", String(new Date().getFullYear()));
   eleventyConfig.addPassthroughCopy("src/robots.txt");
   // Standalone landing pages: copied verbatim, never templated, and invisible to
   // collections, so nothing under src/lp can ever appear in the nav or the sitemap.
