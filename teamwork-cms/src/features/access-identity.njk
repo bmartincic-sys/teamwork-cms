@@ -111,9 +111,11 @@ stickyText: "Secure every login without slowing the floor."
         <p class="fine-note">Facial recognition is off by default and enabled at the retailer's discretion, with consent capture and retention periods configured by the retailer and subject to local biometric privacy law. QR-code and credential sign-in give you the same per-associate audit trail without processing biometric data.</p>
       </div>
       <div class="feature-visual">
-        <div class="shot">
+        <!-- shot-portrait: this asset is 441x800, and .shot-img alone is width: 100% with
+             no height cap, so it rendered 555x1007 here and 668x1212 at tablet width. -->
+        <div class="shot shot-portrait">
           <div class="shot-glow"></div>
-          <img class="shot-img shot-devices" src="/assets/images/homepage/teammate-card.webp" alt="Associate sign-in on iPhone, biometric authentication prompt">
+          <img class="shot-img shot-devices" src="/assets/images/homepage/teammate-card.webp" alt="Associate sign-in on iPhone, biometric authentication prompt" width="441" height="800">
         </div>
       </div>
     </div>
