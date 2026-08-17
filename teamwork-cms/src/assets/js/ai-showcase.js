@@ -65,8 +65,8 @@
       function at(ms, fn) { timers.push(setTimeout(fn, ms)); }
       function clear() { timers.forEach(clearTimeout); timers = []; }
 
-      var lines = [].slice.call(panel.querySelectorAll('.aiq-line'));
-      var tiles = [].slice.call(panel.querySelectorAll('.aiq-tile'));
+      var lines = [].slice.call(panel.querySelectorAll('.aiq-line, .aixb-line'));
+      var tiles = [].slice.call(panel.querySelectorAll('.aiq-tile, .aixb-tile'));
 
       function rewind() {
         panel.classList.remove('is-asked', 'is-thinking', 'is-answered', 'is-done');
