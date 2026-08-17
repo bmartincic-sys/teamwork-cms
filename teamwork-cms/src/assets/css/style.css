@@ -3271,6 +3271,45 @@ a.tm-day-win:hover i { transform: translateX(2px); }
 .mini-card p a { color: var(--brand-text); font-weight: 600; }
 @media (max-width: 900px) { .mini-grid, .mini-grid-2 { grid-template-columns: 1fr; } }
 
+/* ---- Capability strip ---------------------------------------------------------
+   The icon cards that round out a section. Two things made them read as stray
+   blocks. In the plain 3-up grid, a count of four or five orphaned one or two
+   cards under an empty gap. And where they shared a <section> with the feature
+   rows above them, only a 40px margin marked the change of subject, so they
+   blended into the block before them. .mini-strip gives them a recessed band and
+   a rule of their own; .mini-row puts them on one line. */
+.mini-strip {
+  border-top: 1px solid var(--border);
+  background: var(--bg-deep);
+  /* padding-block, never the shorthand: a 0 horizontal value here would be fine,
+     but the container inside is what carries the side padding and this keeps the
+     two concerns from ever getting crossed. */
+  padding-block: 56px 60px;
+}
+.mini-strip .section-eyebrow { display: block; margin-bottom: 20px; }
+.mini-strip .mini-row { margin-top: 0; }
+
+.mini-row { grid-template-columns: repeat(var(--cols, 3), minmax(0, 1fr)); gap: 12px; }
+.mini-row .mini-card { padding: 20px 20px 22px; }
+.mini-row .mini-ico {
+  width: 36px; height: 36px; border-radius: 9px; font-size: 17px; margin-bottom: 12px;
+}
+.mini-row .mini-card h3 { font-size: 15.5px; margin: 0 0 6px; }
+.mini-row .mini-card p { font-size: 13px; line-height: 1.58; }
+
+/* One line is the whole point, so the fallbacks are chosen never to leave a gap
+   beside a short last row: at two columns an odd final card spans the full width
+   instead of sitting alone next to empty space, which is the exact raggedness the
+   one-line treatment was fixing. */
+@media (max-width: 1080px) {
+  .mini-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .mini-row .mini-card { padding: 22px 22px 24px; }
+  .mini-row .mini-card:last-child:nth-child(odd) { grid-column: 1 / -1; }
+}
+@media (max-width: 640px) {
+  .mini-row { grid-template-columns: 1fr; }
+}
+
 /* Shared feature rail */
 /* One Platform, grouped the same way the header groups the product */
 .frail-cols { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0 20px; margin-top: 34px; }
