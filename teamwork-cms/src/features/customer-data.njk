@@ -113,34 +113,66 @@ stickyText: "See what your associates would know at checkout."
 </section>
 
 <!-- ============ THE CUSTOMER RECORD ============ -->
+<!-- ============ THE CUSTOMER RECORD ============ -->
+<!-- Laid out as a record rather than as five loose cards: an identity rail naming what
+     the profile holds, then the capabilities as numbered, hairline-separated fields. No
+     invented customer values, so nothing here reads as fabricated data. -->
 <section class="mini-strip">
   <div class="container">
     <span class="section-eyebrow">The Customer Record</span>
-    <div class="mini-grid mini-row" style="--cols: 5">
-      <div class="mini-card">
-        <div class="mini-ico"><i class="ti ti-user-circle"></i></div>
-        <h3>Customer profiles</h3>
-        <p>Centralized records, preferences, purchase history, and engagement data, the profile every channel personalizes from.</p>
-      </div>
-      <div class="mini-card">
-        <div class="mini-ico"><i class="ti ti-mail-check"></i></div>
-        <h3>Marketing consent</h3>
-        <p>Email and SMS opt-ins captured during registration, so marketing stays compliant and the audience grows from real consent.</p>
-      </div>
-      <div class="mini-card">
-        <div class="mini-ico"><i class="ti ti-barcode"></i></div>
-        <h3>POS integration</h3>
-        <p>A scannable barcode ties a new profile to the transaction and receipt instantly, no lookup, no retyping at the register.</p>
-      </div>
-      <div class="mini-card">
-        <div class="mini-ico"><i class="ti ti-message-star"></i></div>
-        <h3>Customer feedback</h3>
-        <p>Dynamic QR codes on receipts invite customers into a survey after purchase, turning a paper receipt into a feedback channel.</p>
-      </div>
-      <div class="mini-card">
-        <div class="mini-ico"><i class="ti ti-api"></i></div>
-        <h3>Customer APIs</h3>
-        <p>Import and export customer information through open APIs, so this fits alongside the CRM you already run instead of replacing it.</p>
+    <div class="crec">
+      <aside class="crec-id">
+        <span class="crec-avatar" aria-hidden="true"><i class="ti ti-user"></i></span>
+        <b>One profile per customer</b>
+        <p>Read by POS, e-commerce, and every channel that serves them.</p>
+        <ul class="crec-holds">
+          <li>Preferences</li>
+          <li>Purchase history</li>
+          <li>Consent</li>
+          <li>Engagement</li>
+        </ul>
+      </aside>
+      <div class="crec-fields">
+        <div class="crec-row">
+          <span class="crec-no">01</span>
+          <span class="crec-ico"><i class="ti ti-user-circle"></i></span>
+          <div class="crec-text">
+            <b>Customer profiles</b>
+            <p>Centralized records, preferences, purchase history, and engagement data, the profile every channel personalizes from.</p>
+          </div>
+        </div>
+        <div class="crec-row">
+          <span class="crec-no">02</span>
+          <span class="crec-ico"><i class="ti ti-mail-check"></i></span>
+          <div class="crec-text">
+            <b>Marketing consent</b>
+            <p>Email and SMS opt-ins captured during registration, so marketing stays compliant and the audience grows from real consent.</p>
+          </div>
+        </div>
+        <div class="crec-row">
+          <span class="crec-no">03</span>
+          <span class="crec-ico"><i class="ti ti-barcode"></i></span>
+          <div class="crec-text">
+            <b>POS integration</b>
+            <p>A scannable barcode ties a new profile to the transaction and receipt instantly, no lookup, no retyping at the register.</p>
+          </div>
+        </div>
+        <div class="crec-row">
+          <span class="crec-no">04</span>
+          <span class="crec-ico"><i class="ti ti-message-star"></i></span>
+          <div class="crec-text">
+            <b>Customer feedback</b>
+            <p>Dynamic QR codes on receipts invite customers into a survey after purchase, turning a paper receipt into a feedback channel.</p>
+          </div>
+        </div>
+        <div class="crec-row">
+          <span class="crec-no">05</span>
+          <span class="crec-ico"><i class="ti ti-api"></i></span>
+          <div class="crec-text">
+            <b>Customer APIs</b>
+            <p>Import and export customer information through open APIs, so this fits alongside the CRM you already run instead of replacing it.</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
