@@ -8639,7 +8639,10 @@ a.evc:hover .evc-go { opacity: 1; }
 
 .aix-head { max-width: 760px; margin: 0 auto 44px; text-align: center; }
 .aix-head h2 { margin: 0 0 16px; }
-.aix-head p { margin: 0; font-size: 17px; line-height: 1.7; color: var(--text-muted); }
+/* Matches .section-sub, so the AI band's lede sits on the same scale as every other
+   section lede on the page. */
+.aix-head p { margin: 0; font-size: 18px; line-height: 1.55; color: var(--text-muted); }
+.aix-head .section-title { margin: 0 0 16px; }
 .aix-cta { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-top: 46px; }
 
 /* three tracks: bullets, device, bullets */
