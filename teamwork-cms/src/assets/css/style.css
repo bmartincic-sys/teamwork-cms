@@ -9567,3 +9567,83 @@ a.evc:hover .evc-go { opacity: 1; }
   .capx-chip { padding: 7px 12px; font-size: 12.5px; }
 }
 @media (prefers-reduced-motion: reduce) { .capx-chip { transition: none; } }
+
+/* ---- Architecture: the short answer ------------------------------------------
+   Four facts stated before any of the detail, so a reader who only wants the shape
+   of the thing gets it without decoding a diagram first. */
+.arxq {
+  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0;
+  border: 1px solid var(--border); border-radius: 16px; overflow: hidden;
+  background: var(--bg-elevated);
+}
+.arxq-item {
+  padding: 22px 24px; border-left: 1px solid var(--border);
+  display: flex; flex-direction: column; gap: 7px;
+}
+.arxq-item:first-child { border-left: none; }
+.arxq-k {
+  font-size: 15.5px; font-weight: 600; letter-spacing: -0.015em; color: var(--text);
+}
+.arxq-k::before {
+  content: ''; display: block; width: 22px; height: 2px; margin-bottom: 12px;
+  border-radius: 2px; background: var(--accent, var(--brand-blue));
+}
+.arxq-v { font-size: 13.5px; line-height: 1.6; color: var(--text-muted); }
+
+/* four across leaves only ~180px of text per item below this, so it pairs up earlier */
+@media (max-width: 1040px) { .arxq { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .arxq-item:nth-child(3) { border-left: none; }
+  .arxq-item:nth-child(n+3) { border-top: 1px solid var(--border); } }
+@media (max-width: 560px) { .arxq { grid-template-columns: 1fr; }
+  .arxq-item { border-left: none; }
+  .arxq-item + .arxq-item { border-top: 1px solid var(--border); } }
+
+/* ---- Architecture: three-way position ----------------------------------------
+   The argument is a comparison, so it is laid out as one. The two failure modes sit
+   as plain columns; the position between them is the raised one. */
+.arx3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; align-items: start; }
+.arx3-col {
+  padding: 24px 26px 26px; border-radius: 16px;
+  border: 1px solid var(--border); background: var(--bg-elevated);
+}
+.arx3-col-ours {
+  border-color: rgba(155, 123, 255, 0.4);
+  background:
+    linear-gradient(180deg, rgba(155, 123, 255, 0.09), rgba(155, 123, 255, 0) 58%),
+    var(--bg-elevated);
+  box-shadow: 0 26px 54px -34px rgba(80, 40, 180, 0.6);
+}
+.arx3-cap {
+  display: block; font-family: var(--font-mono); font-size: 10.5px; font-weight: 600;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-faint); margin-bottom: 10px;
+}
+.arx3-col-ours .arx3-cap { color: #b49bff; }
+.arx3-sum {
+  margin: 0 0 16px; font-size: 17px; font-weight: 600; letter-spacing: -0.02em;
+  line-height: 1.3; color: var(--text);
+}
+.arx3-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 11px; }
+.arx3-list li {
+  position: relative; padding-left: 26px; font-size: 13.5px; line-height: 1.6; color: var(--text-muted);
+}
+.arx3-list li::before {
+  position: absolute; left: 0; top: 1px; width: 17px; height: 17px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px; font-weight: 700; line-height: 1;
+}
+.arx3-bad li::before { content: '\00d7'; color: #ff9d9d; background: rgba(255, 90, 90, 0.14); }
+.arx3-good li::before { content: '\2713'; color: #fff; background: var(--brand-purple); }
+.arx3-good li { color: var(--text); }
+
+.arx3-why {
+  margin: 22px 0 0; padding: 18px 22px; border-radius: 14px;
+  border-left: 3px solid var(--brand-purple); background: var(--bg-deep);
+  font-size: 14px; line-height: 1.7; color: var(--text-muted);
+}
+.arx3-why strong { color: var(--text); }
+
+@media (max-width: 980px) {
+  .arx3 { grid-template-columns: 1fr; }
+  /* the position we argue for leads once the comparison stacks */
+  .arx3-col-ours { order: -1; }
+}

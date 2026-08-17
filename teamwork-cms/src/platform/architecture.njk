@@ -57,6 +57,33 @@ stickyHref: "/technical-evaluation/"
   </div>
 </section>
 
+<!-- ============ THE SHORT ANSWER ============ -->
+<!-- The page previously made a reader work through a diagram and two dense paragraphs
+     before learning the shape of the thing. These are the four facts an architect is
+     actually looking for, stated before any of the detail. -->
+<section class="section ac-blue" style="padding-bottom: 0;">
+  <div class="container">
+    <div class="arxq">
+      <div class="arxq-item">
+        <span class="arxq-k">One codebase</span>
+        <span class="arxq-v">POS, inventory, orders, product, customer and identity, on one data model.</span>
+      </div>
+      <div class="arxq-item">
+        <span class="arxq-k">Open at the edge</span>
+        <span class="arxq-v">APIs for import and export, plus custom services alongside the core.</span>
+      </div>
+      <div class="arxq-item">
+        <span class="arxq-k">Google Cloud</span>
+        <span class="arxq-v">AWS, Azure, Tencent and hybrid deployments by request.</span>
+      </div>
+      <div class="arxq-item">
+        <span class="arxq-k">Sells offline</span>
+        <span class="arxq-v">Store-and-Forward keeps terminals trading through an outage.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============ DIAGRAM ============ -->
 <section class="section" style="padding-top: 34px;">
   <div class="container">
@@ -136,30 +163,53 @@ stickyHref: "/technical-evaluation/"
 </section>
 
 <!-- ============ COMPOSABLE POSITION ============ -->
-<section class="section" style="padding-top: 0;">
+<!-- This was two 53-word paragraphs carrying the whole positioning argument, which is
+     the hardest thing on the page to skim. The argument is a three-way comparison, so
+     it is laid out as one: the two failure modes, then the position between them. -->
+<section class="section ac-purple sunk" id="composable">
   <div class="container">
-    <div class="feature-row">
-      <div class="feature-text">
-        <span class="section-eyebrow">Where We Stand on Composable</span>
-        <h2>Unified at the core. Composable at the edge.</h2>
-        <p>Composable architecture fixed a real problem: monolithic suites that made you take every module from one vendor, and wait years for any of it to change. Then it created its own. A sprawl of independently versioned services that agree on nothing, where every release is a regression cycle across a dozen contracts.</p>
-        <p>Teamwork Commerce sits deliberately between the two. The transactional core, selling, inventory, orders, product, customer and identity, is one codebase with one data model. Those are the domains where two systems disagreeing becomes a wrong answer in front of a customer. Everything outside that core is yours to compose.</p>
-        <ul class="feature-bullets">
-          <li>One data model across POS, inventory, orders, product and customer, no sync window in which two systems disagree</li>
-          <li>One release and one upgrade path, rather than a regression cycle per connected app</li>
-          <li>Open APIs for import and export, so the core is readable and writable by the rest of your stack</li>
-          <li>Custom services and logic overlays run alongside the core through external APIs, your bespoke workflow does not become a fork you are frozen on</li>
-          <li>Interface composition per retailer: module sequence, order and exposure are configured, not coded</li>
+    <div class="section-header">
+      <div class="section-eyebrow">Where We Stand on Composable</div>
+      <h2 class="section-title">Unified at the core. Composable at the edge.</h2>
+      <p class="section-sub">Both extremes have a real failure mode. The useful question is which parts should never be allowed to disagree with each other.</p>
+    </div>
+
+    <div class="arx3">
+      <div class="arx3-col">
+        <span class="arx3-cap">Monolithic suite</span>
+        <p class="arx3-sum">Every module from one vendor.</p>
+        <ul class="arx3-list arx3-bad">
+          <li>Take the whole suite or none of it</li>
+          <li>Wait years for any one module to change</li>
+          <li>No room for a system you already run</li>
         </ul>
-        <p class="fine-note">If your target state mandates fully independent, separately deployable services for every retail domain, that is a genuine architectural difference worth testing early, bring it to a technical review rather than discovering it in an RFP response.</p>
       </div>
-      <div class="feature-visual">
-        <div class="shot">
-          <div class="shot-glow"></div>
-          <img class="shot-img" src="/assets/images/homepage/extensibility.jpg" alt="A developer building a custom service against the Teamwork Commerce APIs" loading="lazy">
-        </div>
+
+      <div class="arx3-col">
+        <span class="arx3-cap">Fully composable</span>
+        <p class="arx3-sum">Every domain a separate service.</p>
+        <ul class="arx3-list arx3-bad">
+          <li>Independently versioned services that agree on nothing</li>
+          <li>A regression cycle across a dozen contracts per release</li>
+          <li>Sync windows where two systems hold different answers</li>
+        </ul>
+      </div>
+
+      <div class="arx3-col arx3-col-ours">
+        <span class="arx3-cap">Teamwork Commerce</span>
+        <p class="arx3-sum">One core. Composable around it.</p>
+        <ul class="arx3-list arx3-good">
+          <li>One data model across POS, inventory, orders, product and customer, with no sync window</li>
+          <li>One release and one upgrade path, not a regression cycle per connected app</li>
+          <li>Open APIs, so the core is readable and writable by the rest of your stack</li>
+          <li>Custom services run alongside the core, so bespoke work never becomes a version you are frozen on</li>
+          <li>Interface composition per retailer: module sequence and exposure are configured, not coded</li>
+        </ul>
       </div>
     </div>
+
+    <p class="arx3-why"><strong>Why the core is the line:</strong> selling, inventory, orders, product, customer and identity are the domains where two systems disagreeing becomes a wrong answer in front of a customer. Everything outside that is yours to compose.</p>
+    <p class="fine-note">If your target state mandates fully independent, separately deployable services for every retail domain, that is a genuine architectural difference. Worth testing in a technical review rather than discovering in an RFP response.</p>
   </div>
 </section>
 
