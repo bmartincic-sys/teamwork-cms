@@ -9390,3 +9390,56 @@ a.evc:hover .evc-go { opacity: 1; }
   .aix-band .aiq { height: 618px; }
   .aix-band .aiq-phone { transform: scale(0.77); }
 }
+
+/* ---- Section accents ---------------------------------------------------------
+   The palette holds four brand hues but a long platform page used one: every
+   section eyebrow, every bullet check and every icon chip was the same blue, so
+   the page read as one note repeated for 13,000px. A section can now opt into an
+   accent and its eyebrow, bullet checks and icon chips follow it, which walks the
+   page through the palette without touching the brand gradient, still reserved
+   for AI, Plus and CTAs.
+   Every hook reads var(--accent, <its old value>), so sections that do not opt in
+   are byte-for-byte unchanged, here and on every other page. */
+.ac-blue    { --accent: #4D94FF; --accent-soft: rgba(77, 148, 255, 0.13); --accent-line: rgba(77, 148, 255, 0.42); }
+.ac-royal   { --accent: #6E90FF; --accent-soft: rgba(110, 144, 255, 0.13); --accent-line: rgba(110, 144, 255, 0.42); }
+.ac-purple  { --accent: #9B7BFF; --accent-soft: rgba(155, 123, 255, 0.13); --accent-line: rgba(155, 123, 255, 0.42); }
+.ac-magenta { --accent: #C77BF0; --accent-soft: rgba(199, 123, 240, 0.14); --accent-line: rgba(199, 123, 240, 0.42); }
+[data-theme="light"] .ac-blue    { --accent: #247DFF; --accent-soft: rgba(36, 125, 255, 0.09);  --accent-line: rgba(36, 125, 255, 0.4); }
+[data-theme="light"] .ac-royal   { --accent: #003DFF; --accent-soft: rgba(0, 61, 255, 0.08);    --accent-line: rgba(0, 61, 255, 0.36); }
+[data-theme="light"] .ac-purple  { --accent: #7C50F5; --accent-soft: rgba(124, 80, 245, 0.09);  --accent-line: rgba(124, 80, 245, 0.4); }
+[data-theme="light"] .ac-magenta { --accent: #8A0ADD; --accent-soft: rgba(138, 10, 221, 0.08);  --accent-line: rgba(138, 10, 221, 0.36); }
+
+.section-eyebrow { color: var(--accent, var(--brand-text)); }
+/* .section-header .section-eyebrow is two classes, so it outranked the rule above and
+   left those sections blue while their accent said otherwise. */
+.section-header .section-eyebrow { color: var(--accent, var(--brand-text)); }
+.feature-bullets li::before { background-color: var(--accent, var(--brand-blue)); }
+.mini-ico { color: var(--accent, var(--brand-blue)); background: var(--accent-soft, var(--brand-soft)); }
+/* the alternating icon in a card grid stays the counterpoint it already was */
+.mini-card:nth-child(even) .mini-ico { color: var(--brand-purple); background: rgba(124, 80, 245, 0.10); }
+.ac-purple .mini-card:nth-child(even) .mini-ico,
+.ac-magenta .mini-card:nth-child(even) .mini-ico { color: var(--brand-blue); background: rgba(36, 125, 255, 0.10); }
+
+/* ---- Alternating surface -----------------------------------------------------
+   82% of the page sat on one flat background, including an unbroken 4,100px run.
+   Sinking every other section onto the recessed surface, with a hairline in that
+   section's accent, gives the page rhythm without inventing new colour. */
+.sunk {
+  /* --bg-deep alone is only two RGB points from --bg in dark mode, so the band was
+     invisible. Mixing the section's accent into the surface makes it read as colour
+     while staying a flat fill, so the brand gradient keeps its meaning. The plain
+     declaration comes first as the fallback if color-mix is unavailable. */
+  background: var(--bg-deep);
+  background: color-mix(in srgb, var(--accent, #4D94FF) 7%, var(--bg-deep));
+  border-top: 1px solid var(--accent-line, var(--border));
+  border-bottom: 1px solid var(--border);
+}
+[data-theme="light"] .sunk {
+  background: var(--bg-deep);
+  background: color-mix(in srgb, var(--accent, #247DFF) 5%, var(--bg-deep));
+}
+
+/* Card hover borders follow the section accent too, so a section is one colour idea
+   rather than blue creeping back in on interaction. Falls back to the original blue. */
+.mini-card:hover { border-color: var(--accent-line, rgba(36, 125, 255, 0.4)); }
+.bento-card:hover { border-color: var(--accent-line, var(--border-strong)); }
