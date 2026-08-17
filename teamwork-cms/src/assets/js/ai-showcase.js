@@ -65,8 +65,8 @@
       function at(ms, fn) { timers.push(setTimeout(fn, ms)); }
       function clear() { timers.forEach(clearTimeout); timers = []; }
 
-      var lines = [].slice.call(panel.querySelectorAll('.aiq-line, .aixb-line'));
-      var tiles = [].slice.call(panel.querySelectorAll('.aiq-tile, .aixb-tile'));
+      var lines = [].slice.call(panel.querySelectorAll('.aiq-line, .aixb-line, .apx-line'));
+      var tiles = [].slice.call(panel.querySelectorAll('.aiq-tile, .aixb-tile, .apx-tile'));
 
       function rewind() {
         panel.classList.remove('is-asked', 'is-thinking', 'is-answered', 'is-done');
@@ -89,9 +89,9 @@
         });
         var afterLines = 2200 + lines.length * 620;
         tiles.forEach(function (t, i) {
-          at(afterLines + 260 + i * 200, function () { t.classList.add('is-on'); });
+          at(afterLines + 240 + i * 150, function () { t.classList.add('is-on'); });
         });
-        var end = afterLines + 260 + tiles.length * 200;
+        var end = afterLines + 240 + tiles.length * 150;
         at(end + 200, function () { panel.classList.add('is-done'); });
 
         // hold on the finished answer, then run it again

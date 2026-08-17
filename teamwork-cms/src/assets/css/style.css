@@ -9155,3 +9155,212 @@ a.evc:hover .evc-go { opacity: 1; }
   .aix-band .aix-split { grid-template-columns: 1fr; }
   .aix-band .aix-stage .aiq { max-width: 372px; }
 }
+
+/* ============================================================================
+   121 Commerce app screen (.apx)
+   A faithful rebuild of the AI Agent screen from the reference capture: the
+   five-icon toolbar with chat active, the question, the sparkle answer, the
+   full-bleed two-column result grid with truncated titles and descriptions, the
+   floating voice bar, and the bottom tab bar. Reuses the .aiq phone shell.
+   The TestFlight back-link in the capture is deliberately not reproduced: it is
+   a beta-distribution artifact, not part of the product.
+   Product titles and descriptions are written in full and truncated by CSS, so
+   the ellipsis is real at any width rather than baked into the string.
+   ========================================================================== */
+.aiq { max-width: 380px; }
+.aiq-screen { height: 780px; }   /* 358px screen width at the capture's 2.17 ratio */
+
+/* toolbar */
+.apx-bar {
+  display: flex; align-items: center; justify-content: space-between; gap: 2px;
+  margin: 6px 12px 8px; padding: 5px; border-radius: 100px; background: #efeff3;
+}
+.apx-bar span {
+  flex: 1; display: flex; align-items: center; justify-content: center;
+  height: 34px; border-radius: 100px; font-size: 18px; color: #3c3c43;
+}
+.apx-bar span.is-on { background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.14); }
+
+/* the conversation area; the grid runs under the floating bars */
+.apx-body { flex: 1; min-height: 0; position: relative; overflow: hidden; display: flex; flex-direction: column; }
+
+.apx-ask {
+  align-self: flex-end; max-width: 76%; margin: 6px 14px 0;
+  background: #d3d5de; color: #111; border-radius: 20px; padding: 11px 16px;
+  font-size: 15px; line-height: 1.35;
+  opacity: 0; transform: translateY(9px) scale(0.97);
+  transition: opacity .3s ease, transform .5s cubic-bezier(0.34, 1.5, 0.55, 1);
+}
+.aiq.is-asked .apx-ask { opacity: 1; transform: none; }
+
+.apx-answer { display: flex; gap: 6px; padding: 14px 14px 12px; }
+.apx-spark { flex: 0 0 auto; font-size: 15px; line-height: 1.42; color: #111;
+  opacity: 0; transition: opacity .3s ease; }
+.aiq.is-answered .apx-spark { opacity: 1; }
+.apx-line {
+  margin: 0; font-size: 15px; line-height: 1.42; color: #111; letter-spacing: -0.01em;
+  opacity: 0; transform: translateY(6px);
+  transition: opacity .36s ease, transform .5s cubic-bezier(0.3, 0.9, 0.3, 1);
+}
+.apx-line.is-on { opacity: 1; transform: none; }
+
+/* results: full bleed, two columns, no gaps, exactly as the capture */
+/* align-items: start is load-bearing: without it the grid rows stretch to the flex
+   container and the images ignore aspect-ratio, rendering at their intrinsic 440px. */
+.apx-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; align-items: start; align-content: start; }
+.apx-tile {
+  display: block; min-width: 0;
+  opacity: 0; transform: translateY(12px) scale(0.96);
+  transition: opacity .4s ease, transform .55s cubic-bezier(0.34, 1.4, 0.55, 1);
+}
+.apx-tile.is-on { opacity: 1; transform: none; }
+.apx-tile img { width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; display: block; background: #e7e7e9; }
+.apx-tile b, .apx-tile i {
+  display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  padding: 0 8px;
+}
+.apx-tile b { margin-top: 9px; font-size: 14.5px; font-weight: 700; color: #111; letter-spacing: -0.015em; }
+.apx-tile i { margin: 2px 0 12px; font-size: 13.5px; font-style: normal; color: #8a8a90; }
+
+/* voice input, floating over the results */
+.apx-voice {
+  position: absolute; left: 10px; right: 10px; bottom: 74px; z-index: 3;
+  display: flex; align-items: center; gap: 9px;
+}
+.apx-close {
+  flex: 0 0 auto; width: 40px; height: 40px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  background: #f0f0f4; color: #55555e; font-size: 17px;
+}
+.apx-pill {
+  flex: 1; min-width: 0; display: flex; align-items: center; gap: 8px;
+  height: 46px; padding: 0 5px 0 14px; border-radius: 100px; background: #0a0a0d;
+}
+.apx-wave { flex: 1; min-width: 0; display: flex; align-items: center; gap: 1px; height: 22px; }
+.apx-wave i {
+  flex: 1; min-width: 0; border-radius: 1px; background: #2f6fe0; display: block;
+  height: 30%; transform-origin: center;
+}
+/* a fixed profile, so it looks like a captured waveform rather than a flat line before
+   the animation starts, then each bar breathes on its own offset */
+.apx-wave i:nth-child(3n)   { height: 62%; }
+.apx-wave i:nth-child(4n)   { height: 22%; }
+.apx-wave i:nth-child(5n)   { height: 84%; }
+.apx-wave i:nth-child(7n)   { height: 45%; }
+.apx-wave i:nth-child(11n)  { height: 96%; }
+.aiq.is-answered .apx-wave i { animation: apx-wave 1.1s ease-in-out infinite; }
+.apx-wave i:nth-child(2n)  { animation-delay: .12s; }
+.apx-wave i:nth-child(3n)  { animation-delay: .26s; }
+.apx-wave i:nth-child(5n)  { animation-delay: .38s; }
+@keyframes apx-wave {
+  0%, 100% { transform: scaleY(0.42); opacity: .7; }
+  50% { transform: scaleY(1.5); opacity: 1; }
+}
+.apx-mic, .apx-send {
+  flex: 0 0 auto; width: 36px; height: 36px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center; font-size: 17px;
+}
+.apx-mic { background: #fff; color: #111; }
+.apx-send { background: #1f78ff; color: #fff; font-size: 16px; }
+
+/* bottom tab bar, also floating */
+.apx-tabs {
+  position: absolute; left: 8px; right: 8px; bottom: 10px; z-index: 3;
+  display: flex; align-items: center; justify-content: space-between; gap: 4px;
+}
+.apx-tab {
+  flex: 1; display: flex; flex-direction: column; align-items: center; gap: 2px;
+  padding: 8px 0 6px; border-radius: 100px;
+  font-size: 11px; font-weight: 600; color: #4a4a52;
+}
+.apx-tab i { font-size: 20px; font-style: normal; }
+.apx-tab.is-on { background: #ededf2; color: #1f78ff; }
+.apx-shelf {
+  position: absolute; left: 0; right: 0; bottom: 0; height: 74px; z-index: 2;
+  background: linear-gradient(180deg, rgba(255,255,255,0), #fff 42%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .apx-ask, .apx-spark, .apx-line, .apx-tile { opacity: 1; transform: none; }
+  .aiq.is-answered .apx-wave i { animation: none; height: 45%; }
+}
+
+/* status bar, matched to the capture: time with a person glyph, an orange recording dot
+   on the dynamic island, then signal, wifi and a battery reading its level. */
+.aiq-status { padding: 14px 20px 4px; font-size: 15px; font-weight: 600; }
+.apx-time { display: inline-flex; align-items: center; gap: 5px; }
+.apx-time i { font-size: 13px; }
+.aiq-notch { width: 108px; height: 30px; top: 15px; }
+.aiq-notch::after {
+  content: ''; position: absolute; right: 15px; top: 50%; transform: translateY(-50%);
+  width: 8px; height: 8px; border-radius: 50%; background: #ff7a1a;
+}
+.aiq-status-r { gap: 5px; font-size: 12px; }
+.apx-wifi { font-size: 14px; line-height: 1; color: #111; }
+.apx-batt {
+  position: relative; display: inline-flex; align-items: center; justify-content: center;
+  min-width: 27px; height: 14px; padding: 0 3px; border-radius: 4px;
+  background: #111; color: #fff; font-size: 9.5px; font-weight: 700; letter-spacing: 0;
+}
+.apx-batt::after {
+  content: ''; position: absolute; right: -3px; top: 50%; transform: translateY(-50%);
+  width: 2px; height: 5px; border-radius: 0 1px 1px 0; background: rgba(17,17,17,0.4);
+}
+
+/* ---- AI points as wired nodes ------------------------------------------------
+   Each point sits as a lit node on its rail with a connector running toward the
+   device, so the copy reads as feeding into the screen rather than as a plain
+   list beside it. The rails keep their purple-left / blue-right coding. */
+.aix-band .aix-points li { transition: transform .3s cubic-bezier(0.3, 0.9, 0.3, 1); }
+.aix-band .aix-points li::before {
+  content: ''; position: absolute; top: 10px; z-index: 2;
+  width: 9px; height: 9px; border-radius: 50%;
+  transition: box-shadow .3s ease, transform .3s ease;
+}
+.aix-band .aix-points-l li::before {
+  right: -5.5px; background: #b17cff;
+  box-shadow: 0 0 0 3px rgba(138, 10, 221, 0.2), 0 0 12px 2px rgba(160, 90, 255, 0.5);
+}
+.aix-band .aix-points-r li::before {
+  left: -5.5px; background: #6aa6ff;
+  box-shadow: 0 0 0 3px rgba(36, 125, 255, 0.2), 0 0 12px 2px rgba(80, 150, 255, 0.5);
+}
+/* brighter rails, so the node reads as sitting on a lit line */
+.aix-band .aix-points-l li { border-right-color: rgba(138, 10, 221, 0.5); }
+.aix-band .aix-points-r li { border-left-color: rgba(36, 125, 255, 0.5); }
+
+/* hover: the point leans toward the device and its node flares */
+.aix-band .aix-points-l li:hover { transform: translateX(4px); }
+.aix-band .aix-points-r li:hover { transform: translateX(-4px); }
+.aix-band .aix-points-l li:hover::before {
+  transform: scale(1.25);
+  box-shadow: 0 0 0 4px rgba(138, 10, 221, 0.26), 0 0 18px 4px rgba(160, 90, 255, 0.75);
+}
+.aix-band .aix-points-r li:hover::before {
+  transform: scale(1.25);
+  box-shadow: 0 0 0 4px rgba(36, 125, 255, 0.26), 0 0 18px 4px rgba(80, 150, 255, 0.75);
+}
+.aix-band .aix-points li:hover b { color: #fff; }
+.aix-band .aix-points b { transition: color .25s ease; }
+
+@media (max-width: 1040px) {
+  /* stacked: rails are all on the left, so the nodes go there too and nothing leans */
+  .aix-band .aix-points-l li::before { right: auto; left: -5.5px; }
+  .aix-band .aix-points-l li:hover, .aix-band .aix-points-r li:hover { transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .aix-band .aix-points li, .aix-band .aix-points li::before { transition: none; }
+  .aix-band .aix-points-l li:hover, .aix-band .aix-points-r li:hover { transform: none; }
+}
+
+/* Thinking beat. The capture is of a finished answer so it cannot show this state, but
+   without it there is a dead second between the question and the reply. */
+.apx-dots {
+  align-self: flex-start; display: none; gap: 4px; margin: 12px 0 0 14px;
+  padding: 10px 13px; border-radius: 100px; background: #eeeef2;
+}
+.apx-dots i { width: 6px; height: 6px; border-radius: 50%; background: #9a9aa2; display: block; }
+.aiq.is-thinking .apx-dots { display: flex; }
+.aiq.is-thinking .apx-dots i { animation: aiq-dot 1.1s ease-in-out infinite; }
+.apx-dots i:nth-child(2) { animation-delay: .16s; }
+.apx-dots i:nth-child(3) { animation-delay: .32s; }
