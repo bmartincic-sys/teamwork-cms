@@ -9526,3 +9526,44 @@ a.evc:hover .evc-go { opacity: 1; }
   .omsr-stat { transition: none; }
   .omsr-stat:hover { transform: none; }
 }
+
+/* ---- Capability index filter -------------------------------------------------
+   34 rows across 8 groups, with no way to narrow them, is a wall to read rather
+   than a list to consult. The chips filter by delivery and carry the counts, so
+   the native-versus-connected split is legible before reading a single row. */
+.capx-bar {
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 12px; margin-bottom: 16px;
+}
+.capx-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.capx-chip {
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 8px 14px; border-radius: 100px; cursor: pointer;
+  font-family: inherit; font-size: 13px; font-weight: 600; letter-spacing: -0.005em;
+  color: var(--text-muted); background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  transition: color .2s ease, border-color .2s ease, background .2s ease;
+}
+.capx-chip span {
+  font-family: var(--font-mono); font-size: 11px; font-weight: 600;
+  padding: 2px 6px; border-radius: 5px;
+  color: var(--text-faint); background: var(--bg-deep);
+}
+.capx-chip:hover { color: var(--text); border-color: var(--border-strong); }
+.capx-chip.is-on {
+  color: #fff; background: var(--brand-blue); border-color: var(--brand-blue);
+}
+.capx-chip.is-on span { color: #fff; background: rgba(255, 255, 255, 0.22); }
+.capx-chip[data-capx="native"].is-on { background: #4D94FF; border-color: #4D94FF; }
+.capx-chip[data-capx="connected"].is-on { background: #9B7BFF; border-color: #9B7BFF; }
+.capx-live { margin: 0; font-size: 12.5px; color: var(--text-faint); }
+
+/* the driver toggles this class rather than the hidden attribute, which a
+   display: table-row rule elsewhere could otherwise override */
+.capx tr.capx-off { display: none; }
+
+@media (max-width: 560px) {
+  .capx-bar { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .capx-chip { padding: 7px 12px; font-size: 12.5px; }
+}
+@media (prefers-reduced-motion: reduce) { .capx-chip { transition: none; } }

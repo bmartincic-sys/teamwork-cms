@@ -60,6 +60,11 @@ stickyHref: "/technical-evaluation/"
 <!-- ============ DIAGRAM ============ -->
 <section class="section" style="padding-top: 34px;">
   <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">Reference Diagram</div>
+      <h2 class="section-title">Four layers, top to bottom.</h2>
+      <p class="section-sub">Devices in the store, the platform they run on, the integration layer, and the systems that stay where they are.</p>
+    </div>
     <div class="arch-scroll">
       <svg class="arch-svg" viewBox="0 0 1000 752" role="img" aria-label="Reference architecture, in-store devices connect to the Teamwork Commerce platform on Google Cloud, which connects through an integration layer to existing ERP, e-commerce, payments, warehouse, marketing and BI systems.">
         <text class="arch-band-label" x="6" y="20">IN STORE</text>
@@ -126,7 +131,7 @@ stickyHref: "/technical-evaluation/"
         <text class="arch-item-s" x="816.0" y="704.0">Looker, accounting, channels</text>
       </svg>
     </div>
-    <p class="arch-caption">Read it top to bottom: devices in the store, the platform they run on, the integration layer, and the systems that stay where they are. Nothing between the top two bands is an integration. It is one codebase.</p>
+    <p class="arch-caption">Nothing between the top two bands is an integration. It is one codebase.</p>
   </div>
 </section>
 
@@ -137,8 +142,8 @@ stickyHref: "/technical-evaluation/"
       <div class="feature-text">
         <span class="section-eyebrow">Where We Stand on Composable</span>
         <h2>Unified at the core. Composable at the edge.</h2>
-        <p>Composable architecture solved a real problem: monolithic suites that forced a retailer to take every module from one vendor and wait years for any of them to change. It also created one, a sprawl of independently versioned services that agree on nothing, where every release is a regression cycle across a dozen contracts.</p>
-        <p>Teamwork Commerce takes a deliberate position between the two. The transactional core (selling, inventory, orders, product, customer, identity) is one codebase with one data model, because those are the domains where disagreement between systems shows up as a wrong answer in front of a customer. Everything outside that core is yours to compose.</p>
+        <p>Composable architecture fixed a real problem: monolithic suites that made you take every module from one vendor, and wait years for any of it to change. Then it created its own. A sprawl of independently versioned services that agree on nothing, where every release is a regression cycle across a dozen contracts.</p>
+        <p>Teamwork Commerce sits deliberately between the two. The transactional core, selling, inventory, orders, product, customer and identity, is one codebase with one data model. Those are the domains where two systems disagreeing becomes a wrong answer in front of a customer. Everything outside that core is yours to compose.</p>
         <ul class="feature-bullets">
           <li>One data model across POS, inventory, orders, product and customer, no sync window in which two systems disagree</li>
           <li>One release and one upgrade path, rather than a regression cycle per connected app</li>
@@ -159,12 +164,22 @@ stickyHref: "/technical-evaluation/"
 </section>
 
 <!-- ============ CAPABILITY INDEX ============ -->
-<section class="section" style="padding-top: 0;" id="capabilities">
+<section class="section" style="padding-top: 0;" id="capability-index">
   <div class="container">
     <div class="section-header">
       <div class="section-eyebrow">Capability Index</div>
       <h2 class="section-title">Capability index: native or connected.</h2>
       <p class="section-sub">Every capability documented on this site, in one list. <strong>Native</strong> means it ships in the same codebase as the POS. <strong>Connected</strong> means it integrates with a system you choose.</p>
+    </div>
+    <!-- 34 rows is a lot to read through, so the split is filterable and the counts are
+         on the chips, which answers "how much of this is native" without reading a row. -->
+    <div class="capx-bar" data-capx-filter>
+      <div class="capx-chips" role="group" aria-label="Filter capabilities by delivery">
+        <button type="button" class="capx-chip is-on" data-capx="all" aria-pressed="true">All <span>34</span></button>
+        <button type="button" class="capx-chip" data-capx="native" aria-pressed="false">Native <span>26</span></button>
+        <button type="button" class="capx-chip" data-capx="connected" aria-pressed="false">Connected <span>8</span></button>
+      </div>
+      <p class="capx-live" id="capxLive" role="status" aria-live="polite">Showing all 34 capabilities</p>
     </div>
     <div class="capx-wrap">
       <table class="capx">
@@ -224,7 +239,7 @@ stickyHref: "/technical-evaluation/"
         </tbody>
       </table>
     </div>
-    <p class="arch-caption">Every row is documented elsewhere on this site. Anything you need that is not on this list is a question worth putting to a solutions architect rather than assuming either way.</p>
+    <p class="arch-caption">Every row is documented elsewhere on this site. If something you need is not listed, put it to a solutions architect rather than assuming either way.</p>
   </div>
 </section>
 
