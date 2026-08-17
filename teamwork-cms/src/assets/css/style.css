@@ -9465,3 +9465,64 @@ a.evc:hover .evc-go { opacity: 1; }
 @media (max-width: 600px) {
   .ticker-words .ticker-value { font-size: 40px; }
 }
+
+/* ---- Customer Results, coloured ----------------------------------------------
+   The section was blue and grey throughout: a blue-tinted lead card, two blue
+   bars, and three stat cards with no colour at all. The three stats measure three
+   different things, so they carry three accents rather than one blue repeated.
+   The bars keep a single hue at two intensities, because they are the same metric
+   in two months and two hues there would imply two different measures. */
+.omsr-stat {
+  position: relative; overflow: hidden;
+  transition: transform .25s ease, border-color .25s ease;
+}
+.omsr-stat::before {
+  content: ''; position: absolute; inset: 0 0 auto; height: 2px;
+  background: var(--omsr-ac, var(--brand-blue));
+}
+.omsr-stat:hover { transform: translateY(-3px); border-color: var(--omsr-ac, var(--brand-blue)); }
+.omsr-stat:nth-child(1) { --omsr-ac: #4D94FF; --omsr-soft: rgba(77, 148, 255, 0.13); }
+.omsr-stat:nth-child(2) { --omsr-ac: #9B7BFF; --omsr-soft: rgba(155, 123, 255, 0.14); }
+.omsr-stat:nth-child(3) { --omsr-ac: #C77BF0; --omsr-soft: rgba(199, 123, 240, 0.14); }
+[data-theme="light"] .omsr-stat:nth-child(1) { --omsr-ac: #247DFF; --omsr-soft: rgba(36, 125, 255, 0.09); }
+[data-theme="light"] .omsr-stat:nth-child(2) { --omsr-ac: #7C50F5; --omsr-soft: rgba(124, 80, 245, 0.09); }
+[data-theme="light"] .omsr-stat:nth-child(3) { --omsr-ac: #8A0ADD; --omsr-soft: rgba(138, 10, 221, 0.08); }
+.omsr-stat strong { color: var(--omsr-ac, var(--text)); }
+/* .omsr-stat .omsr-ico, not .omsr-ico: the card already styles its spans
+   (.omsr-stat span), which at 0,1,1 outranks a lone class and was painting the icon
+   muted grey at 13px while its background tinted correctly. */
+.omsr-stat .omsr-ico {
+  width: 34px; height: 34px; border-radius: 9px; margin-bottom: 4px;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: 17px; line-height: 1;
+  color: var(--omsr-ac); background: var(--omsr-soft);
+}
+
+/* the uplift panel picks up the purple side of the palette, so the two cards at the
+   top of the block read as a blue and purple pair instead of blue and grey */
+.omsr-uplift {
+  border-color: rgba(155, 123, 255, 0.26);
+  background:
+    linear-gradient(180deg, rgba(155, 123, 255, 0.07), rgba(155, 123, 255, 0) 62%),
+    var(--bg-elevated);
+}
+/* #b49bff reads on the dark card but is far too light on white, so light mode takes
+   the saturated brand purple instead. */
+.omsr-uplift-head { color: #b49bff; }
+.omsr-avg i { color: #b49bff; }
+[data-theme="light"] .omsr-uplift-head,
+[data-theme="light"] .omsr-avg i { color: var(--brand-purple); }
+
+/* the growth ramp: same hue, more intensity in the stronger month */
+.omsr-bar-fill { background: #4D94FF; box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.28); }
+.omsr-bar:first-child .omsr-bar-fill { background: rgba(77, 148, 255, 0.42); }
+.omsr-bar:last-child .omsr-bar-val { color: #6aa6ff; }
+
+@media (max-width: 720px) {
+  /* the stat card goes horizontal at this width, so the icon sits inline with the figure */
+  .omsr-stat .omsr-ico { margin-bottom: 0; flex: 0 0 auto; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .omsr-stat { transition: none; }
+  .omsr-stat:hover { transform: none; }
+}
