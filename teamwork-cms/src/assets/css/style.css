@@ -9050,3 +9050,108 @@ a.evc:hover .evc-go { opacity: 1; }
   .crec-row { grid-template-columns: auto 1fr; }
   .crec-no { display: none; }
 }
+
+/* ---- Depth rig for the AI split ----------------------------------------------
+   The section read flat because everything sat on one plane: no light source, no
+   layering, nothing moving. This adds the depth cues instead of a tilt, which
+   skews the screen content and was already rejected on the homepage hero.
+     - an ambient light behind the device, so it is lit rather than pasted on
+     - a deep cast shadow plus a contact shadow beneath it, so it has somewhere to sit
+     - a slow idle float, so it reads as suspended
+     - scroll parallax, on .aix-stage, at a different rate from the copy columns
+   Float lives on .aiq and parallax on .aix-stage so the two transforms never
+   fight over the same element. */
+.aix-split { position: relative; }
+.aix-stage { position: relative; }
+
+/* ambient light */
+.aix-stage::before {
+  content: ''; position: absolute; left: 50%; top: 42%;
+  width: 178%; aspect-ratio: 1; transform: translate(-50%, -50%);
+  border-radius: 50%; pointer-events: none; z-index: 0;
+  background: radial-gradient(circle,
+    rgba(150, 105, 255, 0.5), rgba(36, 125, 255, 0.2) 38%, transparent 64%);
+  filter: blur(34px);
+}
+
+/* A vignette was tried here and removed: placed inside .aix-split it painted over the
+   lede and the CTA buttons and dimmed them, and pulled down the contrast of the copy
+   columns. Depth comes from the scale hierarchy below instead. */
+
+/* Rim light along the top of the device, so the light above it is believable. */
+.aix-split .aiq-phone::after {
+  content: ''; position: absolute; inset: 0; border-radius: 42px;
+  pointer-events: none;
+  background: linear-gradient(174deg, rgba(255, 255, 255, 0.3), transparent 16%);
+  -webkit-mask: linear-gradient(#000, #000) content-box, linear-gradient(#000, #000);
+  -webkit-mask-composite: xor; mask-composite: exclude;
+  padding: 1px;
+}
+/* contact shadow, so the device sits on something */
+.aix-stage::after {
+  content: ''; position: absolute; left: 50%; bottom: -14px;
+  width: 62%; height: 26px; transform: translateX(-50%);
+  border-radius: 50%; pointer-events: none; z-index: 0;
+  background: radial-gradient(ellipse, rgba(3, 1, 16, 0.75), transparent 70%);
+  filter: blur(11px);
+}
+.aix-stage .aiq { position: relative; z-index: 1; }
+
+.aix-split .aiq-phone {
+  box-shadow:
+    0 82px 110px -46px rgba(5, 2, 26, 0.9),
+    0 34px 56px -30px rgba(0, 0, 0, 0.62),
+    0 0 0 1px rgba(255, 255, 255, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.07);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .aix-stage .aiq { animation: aix-float 7.5s ease-in-out infinite; }
+}
+@keyframes aix-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Parallax: the driver writes --aixp, the copy columns take a fraction of it in
+   the opposite direction, which is what separates the planes as the page moves. */
+.aix-stage { transform: translateY(calc(var(--aixp, 0) * 1px)); will-change: transform; }
+.aix-points { transform: translateY(calc(var(--aixp, 0) * -0.42px)); will-change: transform; }
+
+/* Connectors reaching from each point toward the device, in the same brand colour as
+   that side's rail. An earlier pass here also restyled the rails themselves to flat
+   grey, which lost the purple/blue coding and read duller, not deeper; the rails are
+   left alone now and only the connector is added. */
+.aix-points li::after {
+  content: ''; position: absolute; top: 12px; width: 24px; height: 1px;
+  pointer-events: none;
+}
+.aix-points-l li::after { right: -24px; background: linear-gradient(270deg, rgba(138, 10, 221, 0.55), transparent); }
+.aix-points-r li::after { left: -24px;  background: linear-gradient(90deg,  rgba(36, 125, 255, 0.55), transparent); }
+
+@media (max-width: 1040px) {
+  /* stacked, so there are no planes to separate and no connectors to draw */
+  .aix-stage, .aix-points { transform: none; }
+  .aix-points li::after { display: none; }
+}
+
+/* ---- Scale hierarchy for the AI split ----------------------------------------
+   The section read flat because it was three even columns at one scale, all
+   centred: no foreground, so nothing to read first. The device now takes a wider
+   track and more size, so it leads and the copy reads as support around it. */
+.aix-band .aix-split {
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.5fr) minmax(0, 0.92fr);
+  gap: 26px;
+}
+.aix-band .aix-stage .aiq { max-width: 392px; }
+.aix-band .aix-points b { font-size: 16.5px; }
+
+@media (max-width: 1180px) {
+  .aix-band .aix-split { gap: 20px; }
+  .aix-band .aix-stage .aiq { max-width: 344px; }
+}
+@media (max-width: 1040px) {
+  /* stacked: the device is the only thing in its row, so it can take real width */
+  .aix-band .aix-split { grid-template-columns: 1fr; }
+  .aix-band .aix-stage .aiq { max-width: 372px; }
+}

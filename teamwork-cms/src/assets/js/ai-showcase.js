@@ -164,3 +164,59 @@
     ? document.addEventListener('DOMContentLoaded', init)
     : init();
 })();
+
+
+/* ============================================================================
+   Parallax for the AI split
+   The device and the copy columns move at different rates as the section
+   crosses the viewport, which is what stops the block reading as one flat
+   plane. Writes a single custom property; the CSS decides how each layer
+   uses it, so the copy can travel the opposite way without extra bookkeeping.
+   ========================================================================== */
+(function () {
+  function init() {
+    var splits = [].slice.call(document.querySelectorAll('.aix-split'));
+    if (!splits.length) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    var RANGE = 26;      // px of travel for the device layer
+    var queued = false;
+
+    function update() {
+      queued = false;
+      var vh = window.innerHeight || 1;
+      splits.forEach(function (s) {
+        // only pay for sections near the viewport
+        var r = s.getBoundingClientRect();
+        if (r.bottom < -vh || r.top > vh * 2) return;
+        // -1 when the section sits below the fold, +1 once it has passed above
+        var centre = r.top + r.height / 2;
+        var p = (vh / 2 - centre) / (vh / 2 + r.height / 2);
+        p = p < -1 ? -1 : p > 1 ? 1 : p;
+        s.style.setProperty('--aixp', (p * RANGE).toFixed(2));
+      });
+    }
+    function onScroll() {
+      if (!queued) { queued = true; requestAnimationFrame(update); }
+    }
+
+    // the stacked layout drops the parallax, so below that width do nothing
+    var wide = window.matchMedia('(min-width: 1041px)');
+    function bind() {
+      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('resize', onScroll);
+      if (wide.matches) {
+        window.addEventListener('scroll', onScroll, { passive: true });
+        window.addEventListener('resize', onScroll);
+        update();
+      } else {
+        splits.forEach(function (s) { s.style.removeProperty('--aixp'); });
+      }
+    }
+    wide.addEventListener ? wide.addEventListener('change', bind) : wide.addListener(bind);
+    bind();
+  }
+  document.readyState === 'loading'
+    ? document.addEventListener('DOMContentLoaded', init)
+    : init();
+})();
