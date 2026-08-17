@@ -9443,3 +9443,25 @@ a.evc:hover .evc-go { opacity: 1; }
    rather than blue creeping back in on interaction. Falls back to the original blue. */
 .mini-card:hover { border-color: var(--accent-line, rgba(36, 125, 255, 0.4)); }
 .bento-card:hover { border-color: var(--accent-line, var(--border-strong)); }
+
+/* ---- Ticker with word values -------------------------------------------------
+   .ticker-value is sized for short figures ("150+", "40+"), which is what twelve
+   of the thirteen tickers on the site use. The analytics page uses words, and at
+   the figure size they did not fit the column: "Included" was sliced by the
+   column divider and "Real-time" wrapped onto two lines, which pushed its label
+   down and made that item twice as tall as its neighbours.
+   Opt-in, so the figure tickers everywhere else keep the size they were tuned for.
+   The value now scales with the viewport, because a single fixed size cannot fit a
+   nine-character word in a column that is 227px wide at 1440 and 164px at 1024. */
+.ticker-words .ticker-value {
+  font-size: clamp(30px, 3.3vw, 48px);
+  line-height: 1.1;          /* gradient text is clipped to the text box, so give it room */
+  white-space: nowrap;       /* fail loudly in testing rather than silently wrapping */
+}
+@media (max-width: 900px) {
+  /* two columns here, so the items are wider and the value can grow again */
+  .ticker-words .ticker-value { font-size: clamp(32px, 6vw, 46px); }
+}
+@media (max-width: 600px) {
+  .ticker-words .ticker-value { font-size: 40px; }
+}
