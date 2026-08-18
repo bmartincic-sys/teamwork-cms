@@ -9910,33 +9910,18 @@ a.evc:hover .evc-go { opacity: 1; }
 /* iPhones in the POS fan: the shared card width is sized for iPad aspect, and a
    1470x3000 phone at that width would render three times the height of its
    neighbours. Width chosen so the phone's height matches the iPad cards. */
-/* ---- 5-card mixed-device fan: phone, three iPads, phone -------------------------
-   Offsets are percentages of each card's own width, so the narrow phones need far
-   larger throws than the iPads to land outside them. Widths chosen so phone and
-   iPad heights match. */
-.fanw-5 .fanw-card { width: clamp(250px, 31vw, 450px); }
-.fanw-5 .fanw-card.fanw-card-phone { width: clamp(118px, 12vw, 164px); }
-.fanw-5 { height: clamp(240px, 33vw, 470px); }
-.fanw-5 .fanw-card:nth-child(1) { transform: translateX(-50%) translateX(-345%) translateY(16%) rotate(-15deg); z-index: 1; }
-.fanw-5 .fanw-card:nth-child(2) { transform: translateX(-50%) translateX(-56%) translateY(6%) rotate(-8deg); z-index: 2; }
-.fanw-5 .fanw-card:nth-child(3) { transform: translateX(-50%) rotate(0deg); z-index: 4; }
-.fanw-5 .fanw-card:nth-child(4) { transform: translateX(-50%) translateX(56%) translateY(6%) rotate(8deg); z-index: 3; }
-.fanw-5 .fanw-card:nth-child(5) { transform: translateX(-50%) translateX(345%) translateY(16%) rotate(15deg); z-index: 1; }
-.fanw-stage:hover .fanw-5 .fanw-card:nth-child(1) { transform: translateX(-50%) translateX(-370%) translateY(18%) rotate(-17deg); }
-.fanw-stage:hover .fanw-5 .fanw-card:nth-child(2) { transform: translateX(-50%) translateX(-62%) translateY(7%) rotate(-9deg); }
-.fanw-stage:hover .fanw-5 .fanw-card:nth-child(4) { transform: translateX(-50%) translateX(62%) translateY(7%) rotate(9deg); }
-.fanw-stage:hover .fanw-5 .fanw-card:nth-child(5) { transform: translateX(-50%) translateX(370%) translateY(18%) rotate(17deg); }
-.fanw-5.reveal:not(.in-view) .fanw-card { transform: translateX(-50%) translateY(4%) rotate(0deg); }
-@media (max-width: 900px) {
-  /* phones drop on small screens, the three iPads carry the fan */
-  .fanw-5 .fanw-card-phone { display: none; }
-  .fanw-5 .fanw-card { width: 44vw; }
-  .fanw-5 { height: 52vw; }
-}
-
 /* ---- Button text legibility ------------------------------------------------------
    White CTA buttons (final-cta, midcta) coloured their text with var(--brand-text),
    which in dark mode is the pale #80B0FF meant for dark grounds: 2.19:1 on the white
    button. The saturated blue is correct on white in both themes. */
 .final-cta .btn-primary, .final-cta .btn-primary i,
 .midcta-btn, .midcta-btn i { color: #0050d4; }
+
+/* The first two Full Platform tiles zoom onto the tech: the wide framing put the
+   people front and centre, which is where generated photography shows its seams. The
+   crop now leads with the ship-memo screen and the inventory iPad, and the hover
+   keeps its small push past the base zoom. */
+.inc-zoom-oms img { transform: scale(1.85); transform-origin: 40% 24%; }
+.inc-tile:hover .inc-zoom-oms img { transform: scale(1.93); }
+.inc-zoom-inv img { transform: scale(1.62); transform-origin: 58% 52%; }
+.inc-tile:hover .inc-zoom-inv img { transform: scale(1.69); }
