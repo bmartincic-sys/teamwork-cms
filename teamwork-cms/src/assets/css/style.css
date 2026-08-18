@@ -9746,3 +9746,49 @@ a.evc:hover .evc-go { opacity: 1; }
 [class*="ac-"] .shot-img { border-color: var(--accent-line, rgba(255,255,255,0.14)); }
 [class*="ac-"] .shot:hover .shot-img { box-shadow: 0 26px 40px -24px var(--accent-glow, rgba(36,60,220,0.4)); }
 [class*="ac-"] .feature-photo img { border: 1px solid var(--accent-line, var(--border)); }
+
+/* ---- Coloured cards ------------------------------------------------------------
+   Requested on the Partner Advantage trio and "sections like this": the cards stop
+   being grey boxes and carry the palette themselves, cycling blue, purple, magenta,
+   royal by position. One rule set covers the card families sitewide. Fills are
+   single-hue washes; the brand gradient stays AI, Plus and CTAs. */
+.padv-card:nth-child(4n+1), .mini-card:nth-child(4n+1), .bento-card:nth-child(4n+1),
+.statcard:nth-child(4n+1), .pillar:nth-child(4n+1) {
+  --cac: #4D94FF; --cac-soft: rgba(77, 148, 255, 0.16); --cac-line: rgba(77, 148, 255, 0.5); }
+.padv-card:nth-child(4n+2), .mini-card:nth-child(4n+2), .bento-card:nth-child(4n+2),
+.statcard:nth-child(4n+2), .pillar:nth-child(4n+2) {
+  --cac: #9B7BFF; --cac-soft: rgba(155, 123, 255, 0.16); --cac-line: rgba(155, 123, 255, 0.5); }
+.padv-card:nth-child(4n+3), .mini-card:nth-child(4n+3), .bento-card:nth-child(4n+3),
+.statcard:nth-child(4n+3), .pillar:nth-child(4n+3) {
+  --cac: #C77BF0; --cac-soft: rgba(199, 123, 240, 0.17); --cac-line: rgba(199, 123, 240, 0.5); }
+.padv-card:nth-child(4n), .mini-card:nth-child(4n), .bento-card:nth-child(4n),
+.statcard:nth-child(4n), .pillar:nth-child(4n) {
+  --cac: #6E90FF; --cac-soft: rgba(110, 144, 255, 0.16); --cac-line: rgba(110, 144, 255, 0.5); }
+[data-theme="light"] .padv-card, [data-theme="light"] .mini-card, [data-theme="light"] .bento-card,
+[data-theme="light"] .statcard, [data-theme="light"] .pillar {
+  --cac-soft: color-mix(in srgb, var(--cac, #247DFF) 8%, transparent);
+  --cac-line: color-mix(in srgb, var(--cac, #247DFF) 38%, transparent);
+}
+
+.padv-card, .mini-card, .bento-card, .statcard, .pillar {
+  border-color: var(--cac-line, var(--border));
+  background:
+    linear-gradient(180deg, var(--cac-soft, transparent), transparent 62%),
+    var(--bg-elevated);
+}
+.padv-card:hover, .mini-card:hover, .bento-card:hover, .pillar:hover {
+  border-color: var(--cac, var(--brand-blue));
+  box-shadow: 0 20px 48px -24px var(--cac-soft, rgba(36,125,255,0.4));
+}
+/* the icon chip goes solid in the card's hue, white glyph */
+.padv-card .padv-badge, .mini-card .mini-ico, .pillar .pillar-ico {
+  color: #fff; background: var(--cac, var(--brand-blue));
+  box-shadow: 0 10px 22px -10px var(--cac, var(--brand-blue));
+}
+/* the kicker line picks the hue up too */
+.padv-card .padv-kicker { color: var(--cac, var(--brand-text)); }
+/* per-position icon rules from earlier passes would fight the cycle; the card wins */
+.mini-card:nth-child(even) .mini-ico { color: #fff; background: var(--cac, var(--brand-purple)); }
+.ac-purple .mini-card:nth-child(even) .mini-ico,
+.ac-magenta .mini-card:nth-child(even) .mini-ico { color: #fff; background: var(--cac, var(--brand-blue)); }
+.sunk .mini-ico { background: var(--cac, var(--brand-blue)); }
