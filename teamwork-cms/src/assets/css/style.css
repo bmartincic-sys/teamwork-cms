@@ -9845,3 +9845,30 @@ a.evc:hover .evc-go { opacity: 1; }
   color: color-mix(in srgb, var(--text) 82%, transparent);
 }
 [data-theme="light"] .padv-card p, [data-theme="light"] .mini-card p { color: var(--text-muted); }
+
+/* ---- Full-colour cards, final sweep ---------------------------------------------
+   The remaining peer-card families: event rows, day cards, compliance badges,
+   capability columns, review steps, contact-side cards, and the standard blog cards.
+   Skipped on purpose: fw-box (already carries its own colours), routex-opt (colour
+   is semantic there, picked versus skipped), quotes (editorial), and the featured
+   blog card, which has its own treatment. */
+.evt:nth-child(4n+1), .tm-day-card:nth-child(4n+1), .security-badge:nth-child(4n+1), .capcol:nth-child(4n+1), .rev-step:nth-child(4n+1), .cside-card:nth-child(4n+1), .blog-card:nth-child(4n+1):not(.featured) {
+  --cac: #4D94FF; --cac-soft: rgba(77, 148, 255, 0.2); }
+.evt:nth-child(4n+2), .tm-day-card:nth-child(4n+2), .security-badge:nth-child(4n+2), .capcol:nth-child(4n+2), .rev-step:nth-child(4n+2), .cside-card:nth-child(4n+2), .blog-card:nth-child(4n+2):not(.featured) {
+  --cac: #9B7BFF; --cac-soft: rgba(155, 123, 255, 0.2); }
+.evt:nth-child(4n+3), .tm-day-card:nth-child(4n+3), .security-badge:nth-child(4n+3), .capcol:nth-child(4n+3), .rev-step:nth-child(4n+3), .cside-card:nth-child(4n+3), .blog-card:nth-child(4n+3):not(.featured) {
+  --cac: #C77BF0; --cac-soft: rgba(199, 123, 240, 0.2); }
+.evt:nth-child(4n), .tm-day-card:nth-child(4n), .security-badge:nth-child(4n), .capcol:nth-child(4n), .rev-step:nth-child(4n), .cside-card:nth-child(4n), .blog-card:nth-child(4n):not(.featured) {
+  --cac: #6E90FF; --cac-soft: rgba(110, 144, 255, 0.2); }
+.evt, .tm-day-card, .security-badge, .capcol, .rev-step, .cside-card, .blog-card:not(.featured) {
+  background:
+    radial-gradient(120% 90% at 50% 0%, var(--cac-soft, rgba(77,148,255,0.2)), transparent 62%),
+    color-mix(in srgb, var(--cac, #4D94FF) 30%, var(--bg-elevated));
+  border-color: color-mix(in srgb, var(--cac, #4D94FF) 62%, transparent);
+}
+[data-theme="light"] .evt, [data-theme="light"] .tm-day-card, [data-theme="light"] .security-badge, [data-theme="light"] .capcol, [data-theme="light"] .rev-step, [data-theme="light"] .cside-card, [data-theme="light"] .blog-card:not(.featured) {
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--cac, #247DFF) 20%, transparent), transparent 70%),
+    color-mix(in srgb, var(--cac, #247DFF) 14%, var(--bg-elevated));
+  border-color: color-mix(in srgb, var(--cac, #247DFF) 45%, transparent);
+}
