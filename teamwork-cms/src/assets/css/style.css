@@ -10001,3 +10001,64 @@ a.evc:hover .evc-go { opacity: 1; }
     radial-gradient(120% 90% at 50% 0%, color-mix(in srgb, var(--_c) 30%, transparent), transparent 64%),
     color-mix(in srgb, var(--_c) 78%, #ffffff);
 }
+
+/* ---- Customer Results, inverted ---------------------------------------------------
+   Same treatment as the report widgets, requested for this section: the boxes carry
+   the colour and the coloured things inside go light. The lead card fills blue, the
+   uplift panel purple, and the three stat cards their existing per-card hues; the
+   figures, bars, chips and icons inside all render in white. */
+.omsr-lead {
+  border-color: rgba(77, 148, 255, 0.62);
+  background:
+    radial-gradient(120% 90% at 50% 0%, rgba(77, 148, 255, 0.26), transparent 64%),
+    color-mix(in srgb, #4D94FF 34%, var(--bg-deep));
+}
+.omsr-big-val { color: #ffffff; }
+.omsr-big-lab { color: #ffffff; }
+.omsr-note { color: rgba(255, 255, 255, 0.8); }
+
+.omsr-uplift {
+  border-color: rgba(155, 123, 255, 0.62);
+  background:
+    radial-gradient(120% 90% at 50% 0%, rgba(155, 123, 255, 0.26), transparent 64%),
+    color-mix(in srgb, #9B7BFF 34%, var(--bg-deep));
+}
+.omsr-uplift-head { color: rgba(255, 255, 255, 0.85); }
+.omsr-bar-val { color: #ffffff; }
+.omsr-bar-lab { color: rgba(255, 255, 255, 0.72); }
+.omsr-bar-fill { background: #ffffff; box-shadow: none; }
+.omsr-bar:first-child .omsr-bar-fill { background: rgba(255, 255, 255, 0.45); }
+.omsr-bar:last-child .omsr-bar-val { color: #ffffff; }
+.omsr-avg { color: #ffffff; border-top-color: rgba(255, 255, 255, 0.25); }
+.omsr-avg i { color: #ffffff; }
+
+.omsr-stat {
+  border-color: color-mix(in srgb, var(--omsr-ac, #4D94FF) 62%, transparent);
+  background:
+    radial-gradient(120% 90% at 50% 0%, color-mix(in srgb, var(--omsr-ac, #4D94FF) 26%, transparent), transparent 64%),
+    color-mix(in srgb, var(--omsr-ac, #4D94FF) 34%, var(--bg-deep));
+}
+.omsr-stat::before { background: rgba(255, 255, 255, 0.55); }
+.omsr-stat strong { color: #ffffff; }
+.omsr-stat span { color: rgba(255, 255, 255, 0.78); }
+.omsr-stat .omsr-ico { color: #ffffff; background: rgba(255, 255, 255, 0.18); }
+.omsr-stat:hover { border-color: var(--omsr-ac, var(--brand-blue)); }
+
+/* light theme: same vivid boxes; the white innards already read */
+[data-theme="light"] .omsr-lead {
+  background:
+    radial-gradient(120% 90% at 50% 0%, rgba(36, 125, 255, 0.3), transparent 64%),
+    color-mix(in srgb, #247DFF 78%, #ffffff);
+}
+[data-theme="light"] .omsr-uplift {
+  background:
+    radial-gradient(120% 90% at 50% 0%, rgba(124, 80, 245, 0.3), transparent 64%),
+    color-mix(in srgb, #7C50F5 78%, #ffffff);
+}
+[data-theme="light"] .omsr-stat {
+  background:
+    radial-gradient(120% 90% at 50% 0%, color-mix(in srgb, var(--omsr-ac, #247DFF) 30%, transparent), transparent 64%),
+    color-mix(in srgb, var(--omsr-ac, #247DFF) 78%, #ffffff);
+}
+[data-theme="light"] .omsr-uplift-head,
+[data-theme="light"] .omsr-avg i { color: rgba(255, 255, 255, 0.9); }
