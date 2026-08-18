@@ -9695,3 +9695,54 @@ a.evc:hover .evc-go { opacity: 1; }
    press-release graphics carry their own title strip). Cropping from the top keeps the
    photographic part and drops the baked text below the fold of the crop. */
 .blog-card:not(.featured) .blog-card-img img { object-position: 50% 0; }
+
+/* ---- Bolder still -------------------------------------------------------------
+   Second loudness pass, requested after the first. Three moves, all system-level:
+   an accent kicker bar under every accented section's title, doubled band glows,
+   and the accent bleeding into the components inside a band instead of stopping at
+   its shell. The brand gradient remains AI, Plus and CTAs only. */
+
+/* kicker bar under the title, in the section's colour */
+[class*="ac-"] .section-header .section-title { position: relative; padding-bottom: 18px; }
+[class*="ac-"] .section-header .section-title::after {
+  content: ''; position: absolute; left: 50%; bottom: 0; transform: translateX(-50%);
+  width: 64px; height: 4px; border-radius: 3px;
+  background: var(--accent, var(--brand-blue));
+  box-shadow: 0 0 18px 1px var(--accent-glow, rgba(77,148,255,0.5));
+}
+/* left-aligned headers keep the bar on their edge */
+[class*="ac-"] .feature-text .section-title::after,
+[class*="ac-"] .section-header[style*="text-align: left"] .section-title::after {
+  left: 0; transform: none;
+}
+
+/* the band glow doubles: top wash plus a low corner answer, both single-hue */
+.sunk {
+  background:
+    radial-gradient(70% 55% at 50% 0%, var(--accent-glow, rgba(77,148,255,0.20)), transparent 70%),
+    radial-gradient(52% 44% at 88% 100%, var(--accent-glow, rgba(77,148,255,0.20)), transparent 72%),
+    color-mix(in srgb, var(--accent, #4D94FF) 13%, var(--bg-deep));
+}
+[data-theme="light"] .sunk {
+  background:
+    radial-gradient(70% 55% at 50% 0%, var(--accent-glow-l, rgba(36,125,255,0.10)), transparent 70%),
+    radial-gradient(52% 44% at 88% 100%, var(--accent-glow-l, rgba(36,125,255,0.10)), transparent 72%),
+    color-mix(in srgb, var(--accent, #247DFF) 7%, var(--bg-deep));
+}
+
+/* inside a band, the components carry the colour too: cards take the accent edge,
+   and their icon chips saturate */
+.sunk .mini-card, .sunk .statcard, .sunk .bento-card, .sunk .pillar,
+.sunk .faq-item, .sunk .capx-wrap, .sunk .crec {
+  border-color: var(--accent-line, var(--border));
+}
+.sunk .mini-card:hover, .sunk .bento-card:hover {
+  border-color: var(--accent, var(--brand-blue));
+  box-shadow: 0 18px 44px -22px var(--accent-glow, rgba(77,148,255,0.5));
+}
+.sunk .mini-ico { background: color-mix(in srgb, var(--accent, #4D94FF) 20%, transparent); }
+
+/* screenshots and photos inside accented sections sit in a lit accent frame */
+[class*="ac-"] .shot-img { border-color: var(--accent-line, rgba(255,255,255,0.14)); }
+[class*="ac-"] .shot:hover .shot-img { box-shadow: 0 26px 40px -24px var(--accent-glow, rgba(36,60,220,0.4)); }
+[class*="ac-"] .feature-photo img { border: 1px solid var(--accent-line, var(--border)); }
