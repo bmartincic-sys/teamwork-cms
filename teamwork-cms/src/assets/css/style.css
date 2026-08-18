@@ -9965,3 +9965,39 @@ a.evc:hover .evc-go { opacity: 1; }
 .bento-card .bento-more i { color: #1a56f0; }
 /* the accent card is an <a>; the card-link whitening must not dim its pill */
 .bento-card.bento-accent { color: #ffffff; }
+
+/* ---- Report widgets, inverted -----------------------------------------------------
+   Requested on the Complete Reporting dashboard: the box carries the colour and the
+   colourful things inside go light. Each card fills with its group's hue and every
+   inner element that used the hue, sparklines, bars, donuts, chips, tags, icons,
+   renders in white instead. Group headings on the frame keep the hue, since they are
+   the row's label rather than a box. */
+.dashw {
+  background:
+    radial-gradient(120% 90% at 50% 0%, color-mix(in srgb, var(--_c) 26%, transparent), transparent 64%),
+    color-mix(in srgb, var(--_c) 34%, var(--bg-deep));
+  border-color: color-mix(in srgb, var(--_c) 62%, transparent);
+}
+.dashw:hover { border-color: color-mix(in srgb, var(--_c) 85%, transparent); }
+.dashw-head { color: #ffffff; }
+.dashw-head > i { color: rgba(255, 255, 255, 0.95); }
+.dashw-viz { color: rgba(255, 255, 255, 0.95); }
+.dashw p { color: rgba(255, 255, 255, 0.78); }
+.dashw-bars i { background: rgba(255, 255, 255, 0.85); }
+.dashw-donut-bars i { background: rgba(255, 255, 255, 0.55); }
+.dashw-hbars i { background: linear-gradient(90deg, rgba(255,255,255,0.9), rgba(255,255,255,0.4)); }
+.dashw-cal i { background: rgba(255, 255, 255, 0.18); }
+.dashw-cal i.on { background: rgba(255, 255, 255, 0.9); }
+.dashw-donut {
+  background: conic-gradient(#ffffff 0 62%, rgba(255,255,255,0.35) 62% 87%, rgba(255,255,255,0.14) 87% 100%);
+}
+.dashw-tag { color: #fff; background: rgba(255, 255, 255, 0.16); }
+.dashw-livechip { color: #fff; }
+.dashw-livechip i { background: #fff; }
+.dashw-chips span { color: #fff; background: rgba(255, 255, 255, 0.16); }
+/* light theme: same vivid boxes; the innards are already white */
+[data-theme="light"] .dashw {
+  background:
+    radial-gradient(120% 90% at 50% 0%, color-mix(in srgb, var(--_c) 30%, transparent), transparent 64%),
+    color-mix(in srgb, var(--_c) 78%, #ffffff);
+}
