@@ -1233,9 +1233,9 @@ a { color: inherit; text-decoration: none; }
   -webkit-background-clip: text; background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.blog-card.featured .blog-card-img { height: 220px; }
+.blog-card.featured .blog-card-img { height: 300px; }
 .blog-card.featured .blog-card-img i { font-size: 64px; }
-.blog-card:not(.featured) .blog-card-img { height: 140px; }
+.blog-card:not(.featured) .blog-card-img { height: 200px; }
 .blog-card-body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
 .blog-card.featured .blog-card-body { padding: 28px 32px 32px; }
 .blog-card-meta {
@@ -9647,3 +9647,24 @@ a.evc:hover .evc-go { opacity: 1; }
   /* the position we argue for leads once the comparison stacks */
   .arx3-col-ours { order: -1; }
 }
+
+
+/* Featured blog card, colour treatment. The structural redesign was rejected, so the
+   card keeps its shape and carries the brand colour instead: tinted border, a wash from
+   the top, and a lifted shadow. */
+.blog-card.featured {
+  border-color: rgba(36, 125, 255, 0.45);
+  background:
+    linear-gradient(180deg, rgba(36, 125, 255, 0.10), rgba(124, 80, 245, 0.04) 55%, rgba(36, 125, 255, 0) 80%),
+    var(--bg-elevated);
+  box-shadow: 0 24px 52px -30px rgba(20, 40, 150, 0.5);
+}
+.blog-card.featured:hover {
+  border-color: var(--brand-blue);
+  box-shadow: 0 30px 60px -28px rgba(20, 40, 150, 0.65);
+}
+
+/* At 200px the taller crop can slice through text baked into a post's artwork (the
+   press-release graphics carry their own title strip). Cropping from the top keeps the
+   photographic part and drops the baked text below the fold of the crop. */
+.blog-card:not(.featured) .blog-card-img img { object-position: 50% 0; }
