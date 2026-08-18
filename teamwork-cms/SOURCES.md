@@ -6,34 +6,32 @@ Verified by web search on 17 August 2026. Add to this file when adding a figure.
 | Figure | Claim as shown | Page | Source | Verified |
 |---|---|---|---|---|
 | $2,180 | Average loss per internal theft investigation (NRF) | features/access-identity | NRF National Retail Security Survey 2023, FY2022 data | exact match |
-| $112B | Annual U.S. retail shrink (NRF) | solutions/footwear-apparel | NRF, "Shrink Accounted for Over $112 Billion in Industry Losses in 2022" | exact match, FY2022 |
+| $112B | Annual U.S. retail shrink, FY2022 (NRF) | solutions/footwear-apparel | NRF, "Shrink Accounted for Over $112 Billion in Industry Losses in 2022" | exact match, FY2022 |
 | 29% | Of retail shrink is internal theft (Appriss Retail) | features/access-identity | Appriss Retail 2026 Total Retail Loss Benchmark Report | exact match |
 | $26B | Annual cost of employee theft (Appriss Retail) | features/access-identity | Appriss Retail 2026 Total Retail Loss Benchmark Report | exact match |
-| 1.68% | Retail shrink, share of revenue (NRF) | solutions/jewelry-watches | NRF National Retail Security Survey 2024 | exact match |
+| 1.68% | Retail shrink, share of revenue, 2024 (NRF) | solutions/jewelry-watches | NRF National Retail Security Survey 2024 | exact match |
 | $165B | U.S. pet spending, 2026 proj. (APPA) | solutions/pet-goods | APPA 2026 State of the Industry Report ($158B 2025, $165B projected 2026) | exact match |
 | 95M | U.S. pet-owning households (APPA) | solutions/pet-goods | APPA 2026 State of the Industry Report | exact match |
-| $97.7B | U.S. footwear market (2024) | solutions/footwear-apparel | Expert Market Research / Research and Markets, USD 97.72B in 2024 | exact match |
-| $398B | Global jewelry market (2026) | solutions/jewelry-watches | Grand View Research, USD 397.7B for 2026 | supported; estimates across firms range $254B to $409B |
+| $97.7B | U.S. footwear market, 2024 (Expert Market Research) | solutions/footwear-apparel | Expert Market Research, USD 97.72B in 2024 | exact match; source now named on the page |
+| $398B | Global jewelry market, 2026 (Grand View Research) | solutions/jewelry-watches | Grand View Research, USD 397.7B for 2026 | supported; source now named on the page because estimates across firms range $254B to $409B |
 | 1,000/sec | RFID tag read rate (Impinj) | solutions/fashion-apparel | Impinj R700 datasheet, over 1,100 tags/sec | conservative, claim is below spec |
 | 73% / 62% / 51% | Mobile devices for payments / inventory checks / product information (Toshiba / Retail Dive) | features/access-identity | Toshiba and Retail Dive survey of 148 retail executives | exact match on all three |
 | 49% / 63% | More frequent purchases / more spend per month from clienteled shoppers (Tulip) | features/customer-data | Tulip Global 2025 Clienteling Benchmark Report (2nd annual) | exact match on both |
-| 23% | Higher sales per hour from associate training (Wharton) | features/training | Wharton / Fisher et al., "Do Online Trainings Work in Retail?", 63,500 salespeople across 330 stores | figure traceable, metric wording needs a fix, see note |
+| 53% and 80% | In a survey of MLB fans, 53% wait 15+ minutes at concession stands, over 80% have abandoned a purchase because the line was too long (Mashgin, 2025) | solutions/stadiums-venues | Mashgin, Beyond the Bases 2025 MLB report, 530+ fans surveyed | both exact; source added and "fans" narrowed to MLB fans, which is who was surveyed |
+| 23% | Of the sales lift from training attributable to the training itself (Wharton) | features/training | Wharton / Fisher et al., "Do Online Trainings Work in Retail?", 63,500 salespeople across 330 stores | corrected: label now matches what the study measured |
 
 ## Notes and outstanding items
 
-**Wharton 23%.** The study's headline finding is that associates who completed at least
-one training module sold **46% more**. Researchers split that lift roughly in half:
-about 23 points attributable to the training itself and about 23 to the enthusiasm and
-self-selection of those who chose to train. So 23% is a real number from the study, but
-"higher sales per hour" is not the metric the study reports. Reword or reframe.
+**Resolved 18 August 2026.** The Wharton label said "higher sales per hour", which is
+not the metric the study reports: it found associates who completed at least one module
+sold 46% more, and split that lift roughly in half between the training itself and the
+enthusiasm of those who chose to train. The label now describes the 23% as the share of
+the lift attributable to training. The two NRF figures now carry their survey years,
+since $112B is FY2022 and 1.68% is the 2024 edition. The jewelry and footwear market
+sizes now name their research firm on the page.
 
-**NRF survey years are mixed.** $112B is FY2022 data; 1.68% is from the 2024 survey.
-Both are NRF, but from different years, and NRF has published newer editions since.
-State the year alongside each, or move both to the same edition.
-
-**Two market-size figures name no source on the page** ($398B jewelry, $97.7B footwear).
-Both check out, but for jewelry the spread across research firms is wide enough
-($254B to $409B) that the figure is only defensible with the firm named.
+**Still open: NRF has newer editions than FY2022.** The $112B figure is accurate for
+FY2022 but is no longer the latest available. Worth refreshing to the current survey.
 
 ## Figures from Teamwork's own data, not third-party research
 
