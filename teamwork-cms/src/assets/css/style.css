@@ -9792,3 +9792,32 @@ a.evc:hover .evc-go { opacity: 1; }
 .ac-purple .mini-card:nth-child(even) .mini-ico,
 .ac-magenta .mini-card:nth-child(even) .mini-ico { color: #fff; background: var(--cac, var(--brand-blue)); }
 .sunk .mini-ico { background: var(--cac, var(--brand-blue)); }
+
+/* ---- Coloured cards, extended families ----------------------------------------
+   Same cycle as the first pass, applied to the remaining peer-card grids. Chips,
+   tabs, gallery cells and semantic comparisons are deliberately excluded so colour
+   keeps meaning position, not kind. */
+
+.proof-card:nth-child(4n+1), .evc:nth-child(4n+1), .past-card:nth-child(4n+1), .off-card:nth-child(4n+1), .ben-item:nth-child(4n+1), .lms-col:nth-child(4n+1), .init-card:nth-child(4n+1), .cpil:nth-child(4n+1), .sv-card:nth-child(4n+1), .intg-card:nth-child(4n+1), .rfp-card:nth-child(4n+1), .rev-fact:nth-child(4n+1) {
+  --cac: #4D94FF; --cac-soft: rgba(77, 148, 255, 0.16); --cac-line: rgba(77, 148, 255, 0.5); }
+
+.proof-card:nth-child(4n+2), .evc:nth-child(4n+2), .past-card:nth-child(4n+2), .off-card:nth-child(4n+2), .ben-item:nth-child(4n+2), .lms-col:nth-child(4n+2), .init-card:nth-child(4n+2), .cpil:nth-child(4n+2), .sv-card:nth-child(4n+2), .intg-card:nth-child(4n+2), .rfp-card:nth-child(4n+2), .rev-fact:nth-child(4n+2) {
+  --cac: #9B7BFF; --cac-soft: rgba(155, 123, 255, 0.16); --cac-line: rgba(155, 123, 255, 0.5); }
+
+.proof-card:nth-child(4n+3), .evc:nth-child(4n+3), .past-card:nth-child(4n+3), .off-card:nth-child(4n+3), .ben-item:nth-child(4n+3), .lms-col:nth-child(4n+3), .init-card:nth-child(4n+3), .cpil:nth-child(4n+3), .sv-card:nth-child(4n+3), .intg-card:nth-child(4n+3), .rfp-card:nth-child(4n+3), .rev-fact:nth-child(4n+3) {
+  --cac: #C77BF0; --cac-soft: rgba(199, 123, 240, 0.17); --cac-line: rgba(199, 123, 240, 0.5); }
+
+.proof-card:nth-child(4n), .evc:nth-child(4n), .past-card:nth-child(4n), .off-card:nth-child(4n), .ben-item:nth-child(4n), .lms-col:nth-child(4n), .init-card:nth-child(4n), .cpil:nth-child(4n), .sv-card:nth-child(4n), .intg-card:nth-child(4n), .rfp-card:nth-child(4n), .rev-fact:nth-child(4n) {
+  --cac: #6E90FF; --cac-soft: rgba(110, 144, 255, 0.16); --cac-line: rgba(110, 144, 255, 0.5); }
+
+.proof-card, .evc, .past-card, .off-card, .ben-item, .lms-col, .init-card, .cpil, .sv-card, .intg-card, .rfp-card, .rev-fact {
+  border-color: var(--cac-line, var(--border));
+  background:
+    linear-gradient(180deg, var(--cac-soft, transparent), transparent 62%),
+    var(--bg-elevated);
+}
+
+[data-theme="light"] .proof-card, [data-theme="light"] .evc, [data-theme="light"] .past-card, [data-theme="light"] .off-card, [data-theme="light"] .ben-item, [data-theme="light"] .lms-col, [data-theme="light"] .init-card, [data-theme="light"] .cpil, [data-theme="light"] .sv-card, [data-theme="light"] .intg-card, [data-theme="light"] .rfp-card, [data-theme="light"] .rev-fact {
+  --cac-soft: color-mix(in srgb, var(--cac, #247DFF) 8%, transparent);
+  --cac-line: color-mix(in srgb, var(--cac, #247DFF) 38%, transparent);
+}
