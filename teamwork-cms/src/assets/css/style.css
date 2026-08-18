@@ -9821,3 +9821,27 @@ a.evc:hover .evc-go { opacity: 1; }
   --cac-soft: color-mix(in srgb, var(--cac, #247DFF) 8%, transparent);
   --cac-line: color-mix(in srgb, var(--cac, #247DFF) 38%, transparent);
 }
+
+/* ---- Coloured cards, full colour -----------------------------------------------
+   "Where is the color": the washes give way to real fills. Dark mode cards are deep
+   jewel tones of their hue, a 30 percent mix into the elevated surface under a hue
+   glow from the top, with the border a full-strength accent. Light mode carries a
+   solid 14 percent tint. Text stays the theme's own, which reads on both. */
+.padv-card, .mini-card, .bento-card, .statcard, .pillar, .proof-card, .evc, .past-card, .off-card, .ben-item, .lms-col, .init-card, .cpil, .sv-card, .intg-card, .rfp-card, .rev-fact {
+  background:
+    radial-gradient(120% 90% at 50% 0%, var(--cac-soft, rgba(77,148,255,0.2)), transparent 62%),
+    color-mix(in srgb, var(--cac, #4D94FF) 30%, var(--bg-elevated));
+  border-color: color-mix(in srgb, var(--cac, #4D94FF) 62%, transparent);
+}
+[data-theme="light"] .padv-card, [data-theme="light"] .mini-card, [data-theme="light"] .bento-card, [data-theme="light"] .statcard, [data-theme="light"] .pillar, [data-theme="light"] .proof-card, [data-theme="light"] .evc, [data-theme="light"] .past-card, [data-theme="light"] .off-card, [data-theme="light"] .ben-item, [data-theme="light"] .lms-col, [data-theme="light"] .init-card, [data-theme="light"] .cpil, [data-theme="light"] .sv-card, [data-theme="light"] .intg-card, [data-theme="light"] .rfp-card, [data-theme="light"] .rev-fact {
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--cac, #247DFF) 20%, transparent), transparent 70%),
+    color-mix(in srgb, var(--cac, #247DFF) 14%, var(--bg-elevated));
+  border-color: color-mix(in srgb, var(--cac, #247DFF) 45%, transparent);
+}
+/* muted copy brightens a step so it holds on the richer ground */
+.padv-card p, .mini-card p, .bento-card p, .statcard p, .pillar p, .proof-card p, .evc p, .past-card p, .off-card p, .ben-item p, .lms-col p, .init-card p, .cpil p, .sv-card p, .intg-card p, .rfp-card p, .rev-fact p,
+.padv-card span, .mini-card span, .bento-card span, .statcard span, .pillar span, .proof-card span, .evc span, .past-card span, .off-card span, .ben-item span, .lms-col span, .init-card span, .cpil span, .sv-card span, .intg-card span, .rfp-card span, .rev-fact span {
+  color: color-mix(in srgb, var(--text) 82%, transparent);
+}
+[data-theme="light"] .padv-card p, [data-theme="light"] .mini-card p { color: var(--text-muted); }
