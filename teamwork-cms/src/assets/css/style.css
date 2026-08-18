@@ -9872,3 +9872,37 @@ a.evc:hover .evc-go { opacity: 1; }
     color-mix(in srgb, var(--cac, #247DFF) 14%, var(--bg-elevated));
   border-color: color-mix(in srgb, var(--cac, #247DFF) 45%, transparent);
 }
+
+/* ---- Reference diagram, coloured and dimensional --------------------------------
+   The diagram was grey bands with faintly tinted boxes and dashed grey connectors.
+   Each band now carries a hue from the palette: store blue, platform purple,
+   integration magenta, existing systems royal. Items take their band's colour,
+   gradients give the bands depth, shadows lift the boxes, and the connectors gain
+   arrowheads so the flow reads top to bottom at a glance. */
+.arch-band { stroke-width: 1.25; }
+/* fill lives here, not as an SVG attribute: the base .arch-band rule sets fill, and CSS
+   beats presentation attributes, which silently flattened the gradients on first try */
+.arch-band-store { stroke: rgba(77, 148, 255, 0.45);  fill: url(#agb); }
+.arch-band-core  { stroke: rgba(155, 123, 255, 0.5);  fill: url(#agp); }
+.arch-band-int   { stroke: rgba(199, 123, 240, 0.5);  fill: url(#agm); }
+.arch-band-ext   { stroke: rgba(110, 144, 255, 0.4);  fill: url(#agr); }
+.arch-lab-store { fill: #6aa6ff; font-size: 11.5px; }
+.arch-lab-core  { fill: #b49bff; font-size: 11.5px; }
+.arch-lab-int   { fill: #d99df7; font-size: 11.5px; }
+.arch-lab-ext   { fill: #8fa8ff; font-size: 11.5px; }
+
+.arch-item { filter: drop-shadow(0 3px 6px rgba(3, 2, 16, 0.5)); }
+.arch-item-store { stroke: rgba(77, 148, 255, 0.55); fill: rgba(77, 148, 255, 0.13); }
+.arch-item-core  { stroke: rgba(155, 123, 255, 0.6); fill: rgba(155, 123, 255, 0.15); }
+.arch-item-ext   { stroke: rgba(110, 144, 255, 0.45); fill: rgba(110, 144, 255, 0.10); }
+
+.arch-conn { stroke: #9B7BFF; stroke-width: 2; stroke-dasharray: none; opacity: 0.85; }
+.arch-conn-t { fill: var(--text-muted); }
+.arch-int { fill: var(--text); }
+.arch-note { fill: #b49bff; font-style: normal; font-weight: 600; }
+
+[data-theme="light"] .arch-item { filter: drop-shadow(0 2px 4px rgba(7, 9, 26, 0.12)); }
+[data-theme="light"] .arch-lab-store { fill: #0050d4; }
+[data-theme="light"] .arch-lab-core  { fill: #6a3fe0; }
+[data-theme="light"] .arch-lab-int   { fill: #8A0ADD; }
+[data-theme="light"] .arch-lab-ext   { fill: #2d51d8; }

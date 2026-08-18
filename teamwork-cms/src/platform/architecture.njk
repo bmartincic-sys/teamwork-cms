@@ -94,24 +94,41 @@ stickyHref: "/technical-evaluation/"
     </div>
     <div class="arch-scroll">
       <svg class="arch-svg" viewBox="0 0 1000 752" role="img" aria-label="Reference architecture, in-store devices connect to the Teamwork Commerce platform on Google Cloud, which connects through an integration layer to existing ERP, e-commerce, payments, warehouse, marketing and BI systems.">
-        <text class="arch-band-label" x="6" y="20">IN STORE</text>
-        <rect class="arch-band" x="0" y="28" width="1000" height="108" rx="14"/>
-        <rect class="arch-item" x="16.0" y="50" width="230" height="64" rx="9"/>
+        <defs>
+          <linearGradient id="agb" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#4D94FF" stop-opacity="0.16"/><stop offset="1" stop-color="#4D94FF" stop-opacity="0.03"/>
+          </linearGradient>
+          <linearGradient id="agp" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#9B7BFF" stop-opacity="0.18"/><stop offset="1" stop-color="#9B7BFF" stop-opacity="0.04"/>
+          </linearGradient>
+          <linearGradient id="agm" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#C77BF0" stop-opacity="0.18"/><stop offset="1" stop-color="#C77BF0" stop-opacity="0.04"/>
+          </linearGradient>
+          <linearGradient id="agr" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#6E90FF" stop-opacity="0.15"/><stop offset="1" stop-color="#6E90FF" stop-opacity="0.03"/>
+          </linearGradient>
+          <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M 0 1 L 8 5 L 0 9 z" fill="#9B7BFF"/>
+          </marker>
+        </defs>
+        <text class="arch-band-label arch-lab-store" x="6" y="20">IN STORE</text>
+        <rect class="arch-band arch-band-store" fill="url(#agb)" x="0" y="28" width="1000" height="108" rx="14"/>
+        <rect class="arch-item arch-item-store" x="16.0" y="50" width="230" height="64" rx="9"/>
         <text class="arch-item-t" x="131.0" y="78.0">iPhone &amp; iPad POS</text>
         <text class="arch-item-s" x="131.0" y="95.0">Native app, sells offline</text>
-        <rect class="arch-item" x="262.0" y="50" width="230" height="64" rx="9"/>
+        <rect class="arch-item arch-item-store" x="262.0" y="50" width="230" height="64" rx="9"/>
         <text class="arch-item-t" x="377.0" y="78.0">RFID readers</text>
         <text class="arch-item-s" x="377.0" y="95.0">Handhelds, bins, counter pads</text>
-        <rect class="arch-item" x="508.0" y="50" width="230" height="64" rx="9"/>
+        <rect class="arch-item arch-item-store" x="508.0" y="50" width="230" height="64" rx="9"/>
         <text class="arch-item-t" x="623.0" y="78.0">Shopper display</text>
         <text class="arch-item-s" x="623.0" y="95.0">Second customer-facing screen</text>
-        <rect class="arch-item" x="754.0" y="50" width="230" height="64" rx="9"/>
+        <rect class="arch-item arch-item-store" x="754.0" y="50" width="230" height="64" rx="9"/>
         <text class="arch-item-t" x="869.0" y="78.0">Peripherals</text>
         <text class="arch-item-s" x="869.0" y="95.0">Printers, drawers, EAS gates</text>
-        <path class="arch-conn" d="M500 142 L500 186"/>
+        <path class="arch-conn" marker-end="url(#arrow)" d="M500 142 L500 186"/>
         <text class="arch-conn-t" x="512" y="169">Store-and-Forward. Terminals keep selling through an outage, then sync</text>
-        <text class="arch-band-label" x="6" y="188">TEAMWORK COMMERCE: ONE CODEBASE, RUNNING ON GOOGLE CLOUD</text>
-        <rect class="arch-band" x="0" y="196" width="1000" height="208" rx="14"/>
+        <text class="arch-band-label arch-lab-core" x="6" y="188">TEAMWORK COMMERCE: ONE CODEBASE, RUNNING ON GOOGLE CLOUD</text>
+        <rect class="arch-band arch-band-core" fill="url(#agp)" x="0" y="196" width="1000" height="208" rx="14"/>
         <rect class="arch-item arch-item-core" x="18.0" y="222" width="180" height="52" rx="9"/>
         <text class="arch-item-t" x="108.0" y="252.0">POS engine</text>
         <rect class="arch-item arch-item-core" x="214.0" y="222" width="180" height="52" rx="9"/>
@@ -131,13 +148,13 @@ stickyHref: "/technical-evaluation/"
         <rect class="arch-item arch-item-core" x="704.0" y="286" width="180" height="52" rx="9"/>
         <text class="arch-item-t" x="794.0" y="316.0">Identity &amp; access</text>
         <text class="arch-note" x="500" y="376">Every block above is native to the platform: one data model, one release, one upgrade path.</text>
-        <path class="arch-conn" d="M500 410 L500 442"/>
-        <text class="arch-band-label" x="6" y="444">INTEGRATION LAYER</text>
-        <rect class="arch-band" x="0" y="452" width="1000" height="62" rx="14"/>
+        <path class="arch-conn" marker-end="url(#arrow)" d="M500 410 L500 442"/>
+        <text class="arch-band-label arch-lab-int" x="6" y="444">INTEGRATION LAYER</text>
+        <rect class="arch-band arch-band-int" fill="url(#agm)" x="0" y="452" width="1000" height="62" rx="14"/>
         <text class="arch-int" x="500" y="489">Open APIs &#183; External services and logic overlays &#183; Integration platform for mass data transfer &#183; Integration Architect, BA, QA and developer per client</text>
-        <path class="arch-conn" d="M500 520 L500 552"/>
-        <text class="arch-band-label" x="6" y="554">YOUR EXISTING SYSTEMS</text>
-        <rect class="arch-band" x="0" y="562" width="1000" height="176" rx="14"/>
+        <path class="arch-conn" marker-end="url(#arrow)" d="M500 520 L500 552"/>
+        <text class="arch-band-label arch-lab-ext" x="6" y="554">YOUR EXISTING SYSTEMS</text>
+        <rect class="arch-band arch-band-ext" fill="url(#agr)" x="0" y="562" width="1000" height="176" rx="14"/>
         <rect class="arch-item arch-item-ext" x="34.0" y="586" width="300" height="62" rx="9"/>
         <text class="arch-item-t" x="184.0" y="613.0">ERP</text>
         <text class="arch-item-s" x="184.0" y="630.0">SAP, Oracle, Dynamics, NetSuite</text>
