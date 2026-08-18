@@ -5385,7 +5385,7 @@ main > .hero:first-child { margin-top: -85px; padding-top: 230px; }
 /* Left-anchored contrast wedge so the headline reads over any photo */
 .hero-photo .hero-photo-scrim::after {
   content: ''; position: absolute; inset: 0;
-  background: linear-gradient(100deg, rgba(4,6,20,0.86) 0%, rgba(4,6,20,0.62) 38%, rgba(4,6,20,0.12) 66%, transparent 82%);
+  background: linear-gradient(100deg, rgba(4,6,20,0.62) 0%, rgba(4,6,20,0.34) 38%, rgba(4,6,20,0.04) 60%, transparent 82%);
   pointer-events: none;
 }
 .hero-photo-bg {
@@ -5396,7 +5396,7 @@ main > .hero:first-child { margin-top: -85px; padding-top: 230px; }
 .hero-photo-scrim {
   position: absolute; inset: 0; z-index: 0;
   background:
-    linear-gradient(92deg, rgba(6,7,15,0.86) 0%, rgba(6,7,15,0.45) 46%, rgba(6,7,15,0.12) 72%),
+    linear-gradient(92deg, rgba(6,7,15,0.72) 0%, rgba(6,7,15,0.32) 46%, rgba(6,7,15,0.06) 68%),
     linear-gradient(to top, rgba(6,7,15,0.92) 0%, rgba(6,7,15,0.25) 34%, transparent 55%),
     linear-gradient(to bottom, rgba(6,7,15,0.85) 0px, rgba(6,7,15,0.55) 110px, rgba(6,7,15,0.28) 210px, rgba(6,7,15,0.1) 300px, transparent 400px);
 }
