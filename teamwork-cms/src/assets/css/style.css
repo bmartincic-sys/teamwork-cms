@@ -9425,18 +9425,45 @@ a.evc:hover .evc-go { opacity: 1; }
    Sinking every other section onto the recessed surface, with a hairline in that
    section's accent, gives the page rhythm without inventing new colour. */
 .sunk {
-  /* --bg-deep alone is only two RGB points from --bg in dark mode, so the band was
-     invisible. Mixing the section's accent into the surface makes it read as colour
-     while staying a flat fill, so the brand gradient keeps its meaning. The plain
-     declaration comes first as the fallback if color-mix is unavailable. */
+  /* Bold, not a tint: a 13% accent mix, a single-hue glow from the top, and a 2px
+     rule in the accent. Single-hue radial washes are already the site's idiom for
+     non-AI sections, so this stays inside the rule that reserves the brand gradient
+     for AI, Plus and CTAs. Plain declaration first as the color-mix fallback. */
+  position: relative;
   background: var(--bg-deep);
-  background: color-mix(in srgb, var(--accent, #4D94FF) 7%, var(--bg-deep));
-  border-top: 1px solid var(--accent-line, var(--border));
-  border-bottom: 1px solid var(--border);
+  background:
+    radial-gradient(70% 55% at 50% 0%, var(--accent-glow, rgba(77,148,255,0.20)), transparent 70%),
+    color-mix(in srgb, var(--accent, #4D94FF) 13%, var(--bg-deep));
+  border-top: 2px solid var(--accent-strong, var(--accent, var(--border)));
+  border-bottom: 1px solid var(--accent-line, var(--border));
 }
 [data-theme="light"] .sunk {
   background: var(--bg-deep);
-  background: color-mix(in srgb, var(--accent, #247DFF) 5%, var(--bg-deep));
+  background:
+    radial-gradient(70% 55% at 50% 0%, var(--accent-glow-l, rgba(36,125,255,0.10)), transparent 70%),
+    color-mix(in srgb, var(--accent, #247DFF) 7%, var(--bg-deep));
+}
+.ac-blue    { --accent-glow: rgba(77, 148, 255, 0.22);  --accent-glow-l: rgba(36, 125, 255, 0.11);  --accent-strong: rgba(77, 148, 255, 0.75); }
+.ac-royal   { --accent-glow: rgba(110, 144, 255, 0.22); --accent-glow-l: rgba(0, 61, 255, 0.09);    --accent-strong: rgba(110, 144, 255, 0.75); }
+.ac-purple  { --accent-glow: rgba(155, 123, 255, 0.22); --accent-glow-l: rgba(124, 80, 245, 0.10);  --accent-strong: rgba(155, 123, 255, 0.75); }
+.ac-magenta { --accent-glow: rgba(199, 123, 240, 0.24); --accent-glow-l: rgba(138, 10, 221, 0.09);  --accent-strong: rgba(199, 123, 240, 0.75); }
+
+/* The eyebrow becomes a pill in the section's accent, which is the single loudest
+   colour move available on every section without touching the gradient. Scoped to
+   accented sections, so pages outside the system keep the quiet text eyebrow. */
+[class*="ac-"] .section-eyebrow,
+[class*="ac-"] .section-header .section-eyebrow {
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 7px 15px; border-radius: 100px;
+  font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 700;
+  color: var(--accent, var(--brand-text));
+  background: var(--accent-soft, var(--brand-soft));
+  border: 1px solid var(--accent-line, var(--border));
+}
+[class*="ac-"] .section-eyebrow::before {
+  content: ''; width: 7px; height: 7px; border-radius: 50%;
+  background: var(--accent, var(--brand-blue));
+  box-shadow: 0 0 10px 1px var(--accent, var(--brand-blue));
 }
 
 /* Card hover borders follow the section accent too, so a section is one colour idea
