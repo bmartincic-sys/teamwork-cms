@@ -337,54 +337,28 @@ permalink: "/"
       <h2 class="section-title">Retail commerce insights and news.</h2>
       <p class="section-sub">Perspectives on point of sale, unified commerce, RFID, and mobile retail, from the team behind the platform.</p>
     </div>
+    <!-- Driven from the blog collection, not hardcoded. Three posts were hardcoded here
+         with hand-written excerpts, and they drifted: all three pointed at posts that did
+         not exist on teamworkcommerce.com, and two repeated research claims that could not
+         be sourced. Reading from the collection means these cards can only ever show real
+         published posts, with the post's own words. -->
     <div class="blog-grid">
-      <!-- Featured post -->
-      <a href="/blog/rfid-checkout-speed-study/" class="blog-card featured" style="text-decoration: none;">
+      {% for post in collections.blogpost | recentPosts(3) %}
+      <a href="{{ post.url }}" class="blog-card{% if loop.first %} featured{% endif %}" style="text-decoration: none;">
         <div class="blog-card-img">
-          <img src="/assets/images/blog/real/rfid-checkout-speed-study.jpg" alt="RFID self-checkout scanning a full basket in a retail store">
+          <img src="/assets/images/blog/real/{{ post.fileSlug }}.jpg" alt="{{ post.data.title }}" loading="lazy">
         </div>
         <div class="blog-card-body">
           <div class="blog-card-meta">
-            <span class="blog-tag featured">Featured</span>
-            <span class="blog-card-date">Research</span>
+            <span class="blog-tag{% if loop.first %} featured{% endif %}">{% if loop.first %}Featured{% else %}{{ post.data.category or "Blog" }}{% endif %}</span>
+            <span class="blog-card-date">{{ post.data.date | formatDate }}</span>
           </div>
-          <h3 class="blog-card-title">How RFID Technology Improves the Checkout Process</h3>
-          <p class="blog-card-excerpt">A study found RFID at checkout cut sale duration by 45.7% to 53%, and the gain gets larger the bigger the basket.</p>
+          <h3 class="blog-card-title">{{ post.data.title }}</h3>
+          <p class="blog-card-excerpt">{{ post.data.dek or post.data.description }}</p>
           <span class="pillar-link">Read article <i class="ti ti-arrow-right"></i></span>
         </div>
       </a>
-
-      <!-- Post 2 -->
-      <a href="/blog/mobile-pos-how-far-retailers-have-come/" class="blog-card" style="text-decoration: none;">
-        <div class="blog-card-img">
-          <img src="/assets/images/blog/real/mobile-pos-how-far-retailers-have-come.jpg" alt="An associate ringing up a customer on Teamwork mobile POS at a jewelry counter">
-        </div>
-        <div class="blog-card-body">
-          <div class="blog-card-meta">
-            <span class="blog-tag">Mobile POS</span>
-            <span class="blog-card-date">Industry survey</span>
-          </div>
-          <h3 class="blog-card-title">How Far Have Retailers Come with Mobile POS?</h3>
-          <p class="blog-card-excerpt">Teamwork Commerce and Retail Dive surveyed 100+ retail executives on where mobile POS adoption stands, and where the gaps still are.</p>
-          <span class="pillar-link">Read article <i class="ti ti-arrow-right"></i></span>
-        </div>
-      </a>
-
-      <!-- Post 3 -->
-      <a href="/blog/benefits-of-unified-commerce/" class="blog-card" style="text-decoration: none;">
-        <div class="blog-card-img">
-          <img src="/assets/images/blog/real/benefits-of-unified-commerce.jpg" alt="A shopper collecting a buy-online-pickup-in-store order at the counter">
-        </div>
-        <div class="blog-card-body">
-          <div class="blog-card-meta">
-            <span class="blog-tag">Unified Commerce</span>
-            <span class="blog-card-date">Strategy</span>
-          </div>
-          <h3 class="blog-card-title">The Benefits of Unified Commerce</h3>
-          <p class="blog-card-excerpt">One system of record for inventory, orders, and customers removes the seams shoppers notice most between online and in-store.</p>
-          <span class="pillar-link">Read article <i class="ti ti-arrow-right"></i></span>
-        </div>
-      </a>
+      {% endfor %}
     </div>
     <div style="text-align: center; margin-top: 40px;">
       <a href="/blog/" class="btn btn-ghost">View all posts <i class="ti ti-arrow-right"></i></a>
