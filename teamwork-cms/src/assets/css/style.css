@@ -9948,3 +9948,19 @@ a.evc:hover .evc-go { opacity: 1; }
 [data-theme="light"] .pillar a, [data-theme="light"] .statcard a {
   color: var(--brand-text);
 }
+
+/* ---- Repairs to the accent bento card ---------------------------------------------
+   Two casualties of the jewel-card passes, found via the invisible "See the case
+   studies" pill. The generic .bento-card fill overrode this card's brand gradient,
+   and the .bento-card span text rule outranked .bento-more's own blue, leaving
+   near-white text on the white pill. Both re-asserted with higher specificity. */
+.bento-card.bento-accent {
+  background: linear-gradient(150deg, #1a56f0 0%, #247DFF 35%, #7C50F5 100%);
+  border: none;
+}
+.bento-card .bento-more, .bento-card.bento-accent .bento-more {
+  color: #1a56f0; background: #ffffff; font-weight: 700;
+}
+.bento-card .bento-more i { color: #1a56f0; }
+/* the accent card is an <a>; the card-link whitening must not dim its pill */
+.bento-card.bento-accent { color: #ffffff; }
