@@ -6108,7 +6108,7 @@ main > .hero:first-child { margin-top: -85px; padding-top: 230px; }
 .hpos-hero { position: relative; overflow: hidden; padding: 0; }
 .hpos-grid {
   position: relative; z-index: 1;
-  display: grid; grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr);
+  display: grid; grid-template-columns: minmax(0, 0.74fr) minmax(0, 1.26fr);
   gap: 48px; align-items: start;
   min-height: 0; padding-block: 52px 56px;
 }
@@ -8227,7 +8227,7 @@ a.evc:hover .evc-go { opacity: 1; }
 /* On wide screens the device breaks the container's right edge, which is what makes it
    read as an object in the scene rather than content in a column. The hero clips it. */
 @media (min-width: 1240px) {
-  .hpos-stage { max-width: 720px; margin-right: -52px; }
+  .hpos-stage { max-width: 800px; margin-right: -72px; }
 }
 .hpos-device.is-tilting { will-change: transform; }
 
@@ -10134,11 +10134,12 @@ a.evc:hover .evc-go { opacity: 1; }
   /* Upright and grounded on the iPad's floor, not tilted and floating: the pair
      reads as a deliberate product family, the same app on either device, rather
      than a phone drifting behind the hero. */
-  position: absolute; right: -56px; bottom: 0; z-index: 1;
-  width: clamp(150px, 13vw, 192px); height: auto;
+  position: absolute; right: 0; bottom: 0; z-index: 1;
+  width: 188px; height: auto;
   filter: drop-shadow(0 22px 26px rgba(3, 2, 18, 0.6));
 }
-.hpos-stage .hpos-device { margin-right: 66px; }
+/* true side-by-side: the device cedes a full phone column, no overlap at all */
+.hpos-stage .hpos-device { margin-right: 208px; }
 /* the caption that states the point of the pairing */
 .hpos-duo {
   position: absolute; left: 50%; bottom: -44px; transform: translateX(-50%);
@@ -10152,5 +10153,11 @@ a.evc:hover .evc-go { opacity: 1; }
 .hpos-duo i { font-size: 14px; color: #6aa6ff; }
 @media (max-width: 1240px) { .hpos-duo { display: none; } }
 /* between 1240 and 1440 the stage sits nearer the edge, so the phone tucks in */
-@media (max-width: 1439px) { .hpos-companion { right: 18px; width: 156px; } .hpos-stage .hpos-device { margin-right: 54px; } }
+@media (max-width: 1439px) {
+  .hpos-companion { width: 168px; right: 8px; }
+  .hpos-stage .hpos-device { margin-right: 192px; }
+}
 @media (max-width: 1240px) { .hpos-companion { display: none; } .hpos-stage .hpos-device { margin-right: 0; } }
+
+/* at the narrower side-by-side width, money never wraps mid-amount */
+.srx-row b, .srx-total b { white-space: nowrap; }
