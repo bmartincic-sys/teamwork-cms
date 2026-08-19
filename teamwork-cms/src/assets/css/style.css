@@ -10131,20 +10131,26 @@ a.evc:hover .evc-go { opacity: 1; }
    where the stage already bleeds, with its own slow float offset from the receipt's
    rhythm. Dropped below 1240px, where the stage no longer has the width to spare. */
 .hpos-companion {
-  position: absolute; right: -56px; bottom: -6px; z-index: 1;
+  /* Upright and grounded on the iPad's floor, not tilted and floating: the pair
+     reads as a deliberate product family, the same app on either device, rather
+     than a phone drifting behind the hero. */
+  position: absolute; right: -56px; bottom: 0; z-index: 1;
   width: clamp(150px, 13vw, 192px); height: auto;
-  transform: rotate(7deg);
-  filter: drop-shadow(0 30px 44px rgba(3, 2, 18, 0.65));
+  filter: drop-shadow(0 22px 26px rgba(3, 2, 18, 0.6));
 }
-/* the device cedes a little width so half the phone's face shows instead of a sliver */
 .hpos-stage .hpos-device { margin-right: 66px; }
-@media (prefers-reduced-motion: no-preference) {
-  .hpos-companion { animation: hpos-companion-float 7s ease-in-out infinite; }
+/* the caption that states the point of the pairing */
+.hpos-duo {
+  position: absolute; left: 50%; bottom: -44px; transform: translateX(-50%);
+  z-index: 3; display: inline-flex; align-items: center; gap: 8px;
+  padding: 8px 16px; border-radius: 100px; white-space: nowrap;
+  font-family: var(--font-mono); font-size: 11px; font-weight: 600; letter-spacing: 0.07em;
+  text-transform: uppercase; color: #cdd9ff;
+  background: rgba(10, 12, 26, 0.72); border: 1px solid rgba(77, 148, 255, 0.4);
+  backdrop-filter: blur(8px);
 }
-@keyframes hpos-companion-float {
-  0%, 100% { transform: rotate(7deg) translateY(0); }
-  50% { transform: rotate(7.6deg) translateY(-9px); }
-}
+.hpos-duo i { font-size: 14px; color: #6aa6ff; }
+@media (max-width: 1240px) { .hpos-duo { display: none; } }
 /* between 1240 and 1440 the stage sits nearer the edge, so the phone tucks in */
 @media (max-width: 1439px) { .hpos-companion { right: 18px; width: 156px; } .hpos-stage .hpos-device { margin-right: 54px; } }
 @media (max-width: 1240px) { .hpos-companion { display: none; } .hpos-stage .hpos-device { margin-right: 0; } }
