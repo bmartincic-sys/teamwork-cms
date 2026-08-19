@@ -10095,3 +10095,18 @@ a.evc:hover .evc-go { opacity: 1; }
 }
 [data-theme="light"] .arch-node { fill: #247DFF; }
 [data-theme="light"] .arch-pin { fill: rgba(124, 80, 245, 0.5); }
+
+/* retail event pills on the sales-floor scenes, and the tokens that travel the traces */
+.arch-evt-pill { fill: rgba(77, 148, 255, 0.22); stroke: rgba(77, 148, 255, 0.55); stroke-width: 1; }
+.arch-evt-t {
+  font-family: var(--font-mono); font-size: 8.5px; font-weight: 600; letter-spacing: 0.08em;
+  fill: #9cc3ff; text-anchor: middle;
+}
+.arch-token rect { fill: #4D94FF; opacity: 0.95; }
+.arch-token text {
+  font-family: var(--font-mono); font-size: 9px; font-weight: 700; letter-spacing: 0.08em;
+  fill: #ffffff; text-anchor: middle;
+}
+.arch-token-m rect { fill: #C77BF0; }
+@media (prefers-reduced-motion: reduce) { .arch-token { display: none; } }
+[data-theme="light"] .arch-evt-t { fill: #0050d4; }
