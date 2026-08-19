@@ -10062,3 +10062,12 @@ a.evc:hover .evc-go { opacity: 1; }
 }
 [data-theme="light"] .omsr-uplift-head,
 [data-theme="light"] .omsr-avg i { color: rgba(255, 255, 255, 0.9); }
+
+/* The generic dropdown link rule sets white-space: nowrap, which is right for the
+   simple text menus but wrong for the industry tiles: their blurbs rendered on one
+   unwrapped line, running under the neighbouring boxes. The tiles wrap again, and
+   blurbs clamp to two lines so no tile outgrows its row. */
+.nav-dropdown a.mega-ind-item { white-space: normal; display: flex; }
+.mega-ind-text em {
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
