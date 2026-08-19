@@ -1288,12 +1288,13 @@ a { color: inherit; text-decoration: none; }
 .section-wash { position: relative; background: var(--gradient-soft); }
 .security-tinted-split { background: var(--bg-deep); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 72px 0; }
 .security-split { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 56px; align-items: center; }
-.security-badges-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+/* eight badges on two rows of four */
+.security-badges-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
 .security-badges-grid .security-badge { width: 100%; }
 @media (max-width: 900px) {
   .security-split { grid-template-columns: 1fr; gap: 32px; }
   .security-split-text { text-align: center; }
-  .security-badges-grid { grid-template-columns: repeat(3, 1fr); }
+  .security-badges-grid { grid-template-columns: repeat(2, 1fr); }
 }
 /* ============ PROBLEM SPLIT (fragmented systems) ============ */
 .problem-split { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
