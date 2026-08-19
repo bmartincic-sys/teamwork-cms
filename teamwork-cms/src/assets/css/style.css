@@ -10110,3 +10110,17 @@ a.evc:hover .evc-go { opacity: 1; }
 .arch-token-m rect { fill: #C77BF0; }
 @media (prefers-reduced-motion: reduce) { .arch-token { display: none; } }
 [data-theme="light"] .arch-evt-t { fill: #0050d4; }
+
+/* the storefront: awning scallops, the room, and line-art fixtures */
+.arch-awn { fill: rgba(77, 148, 255, 0.55); }
+.arch-awn-alt { fill: rgba(77, 148, 255, 0.18); }
+.arch-room { stroke: rgba(77, 148, 255, 0.5); stroke-width: 1.5; }
+.arch-glyph { fill: none; stroke: #7fb0ff; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.arch-glyph-fill { fill: rgba(77, 148, 255, 0.25); }
+@media (prefers-reduced-motion: no-preference) {
+  .arch-gate-pulse { animation: archGate 2.2s ease-in-out infinite; }
+}
+@keyframes archGate { 0%, 100% { opacity: 0.25; } 50% { opacity: 1; } }
+[data-theme="light"] .arch-glyph { stroke: #1a56f0; }
+[data-theme="light"] .arch-awn { fill: rgba(36, 125, 255, 0.6); }
+[data-theme="light"] .arch-awn-alt { fill: rgba(36, 125, 255, 0.2); }

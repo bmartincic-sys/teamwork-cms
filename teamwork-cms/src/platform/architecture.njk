@@ -93,10 +93,10 @@ stickyHref: "/technical-evaluation/"
       <p class="section-sub">Devices in the store, the platform they run on, the integration layer, and the systems that stay where they are.</p>
     </div>
     <div class="arch-scroll">
-      <svg class="arch-svg" viewBox="0 0 1000 880" role="img" aria-label="Reference architecture drawn as a circuit: in-store devices feed the Teamwork Commerce platform, one codebase on Google Cloud, which connects through an integration bus to the ERP, e-commerce, payments, warehouse, marketing and BI systems you already run.">
+      <svg class="arch-svg" viewBox="0 0 1000 880" role="img" aria-label="Reference architecture drawn as a store: the sales floor with fitting room, racks, counter and exit gates sits on the Teamwork Commerce platform, one codebase on Google Cloud, which connects through an integration bus to the head-office systems you already run.">
         <defs>
           <linearGradient id="agb" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0" stop-color="#4D94FF" stop-opacity="0.16"/><stop offset="1" stop-color="#4D94FF" stop-opacity="0.03"/>
+            <stop offset="0" stop-color="#4D94FF" stop-opacity="0.14"/><stop offset="1" stop-color="#4D94FF" stop-opacity="0.03"/>
           </linearGradient>
           <linearGradient id="agp" x1="0" y1="0" x2="0" y2="1">
             <stop offset="0" stop-color="#9B7BFF" stop-opacity="0.2"/><stop offset="1" stop-color="#9B7BFF" stop-opacity="0.05"/>
@@ -108,87 +108,126 @@ stickyHref: "/technical-evaluation/"
             <stop offset="0" stop-color="#6E90FF" stop-opacity="0.15"/><stop offset="1" stop-color="#6E90FF" stop-opacity="0.03"/>
           </linearGradient>
         </defs>
-        <text class="arch-band-label arch-lab-store" x="6" y="18">THE SALES FLOOR</text>
-        <rect class="arch-item arch-item-store" x="16" y="30" width="230" height="64" rx="9"/>
-        <text class="arch-item-t" x="131" y="54">Fitting room</text>
-        <text class="arch-item-s" x="131" y="71">RFID reads what walks in</text>
-        <rect class="arch-evt-pill" x="174.4" y="20" width="71.6" height="18" rx="9"/>
-        <text class="arch-evt-t" x="210.2" y="33">TAG READ</text>
-        <rect class="arch-item arch-item-store" x="262" y="30" width="230" height="64" rx="9"/>
-        <text class="arch-item-t" x="377" y="54">On the aisle</text>
-        <text class="arch-item-s" x="377" y="71">Sale rung on iPhone, no cash wrap</text>
-        <rect class="arch-evt-pill" x="449.2" y="20" width="42.8" height="18" rx="9"/>
-        <text class="arch-evt-t" x="470.6" y="33">SALE</text>
-        <rect class="arch-item arch-item-store" x="508" y="30" width="230" height="64" rx="9"/>
-        <text class="arch-item-t" x="623" y="54">Self-checkout</text>
-        <text class="arch-item-s" x="623" y="71">Whole basket read in one pass</text>
-        <rect class="arch-evt-pill" x="680.8" y="20" width="57.2" height="18" rx="9"/>
-        <text class="arch-evt-t" x="709.4" y="33">BASKET</text>
-        <rect class="arch-item arch-item-store" x="754" y="30" width="230" height="64" rx="9"/>
-        <text class="arch-item-t" x="869" y="54">At the exit</text>
-        <text class="arch-item-s" x="869" y="71">EAS gates verify it was paid</text>
-        <rect class="arch-evt-pill" x="941.2" y="20" width="42.8" height="18" rx="9"/>
-        <text class="arch-evt-t" x="962.6" y="33">PAID</text>
-        
-        <path class="arch-trace arch-trace-b" d="M131 94 V 128"/>
-        <path class="arch-trace arch-trace-b" d="M377 94 V 128"/>
-        <path class="arch-trace arch-trace-b" d="M623 94 V 128"/>
-        <path class="arch-trace arch-trace-b" d="M869 94 V 128"/>
-        <path class="arch-trace arch-trace-b" d="M131 128 H 869"/>
-        <circle class="arch-node" cx="131" cy="128" r="3.5"/><circle class="arch-node" cx="377" cy="128" r="3.5"/><circle class="arch-node" cx="623" cy="128" r="3.5"/><circle class="arch-node" cx="869" cy="128" r="3.5"/>
-        <path class="arch-trace arch-trace-b arch-flow" d="M500 128 V 172"/>
-        <text class="arch-conn-t" x="560" y="158">Store-and-Forward: terminals keep selling through an outage, then sync</text>
-        <text class="arch-band-label arch-lab-core" x="6" y="168">TEAMWORK COMMERCE &#183; ONE CODEBASE &#183; GOOGLE CLOUD</text>
-        <rect class="arch-plate" x="40" y="176" width="920" height="290" rx="18" fill="url(#agp)"/>
-        <rect class="arch-pin" x="32" y="206" width="8" height="14" rx="2"/>
-        <rect class="arch-pin" x="960" y="206" width="8" height="14" rx="2"/>
-        <rect class="arch-pin" x="32" y="248" width="8" height="14" rx="2"/>
-        <rect class="arch-pin" x="960" y="248" width="8" height="14" rx="2"/>
-        <rect class="arch-pin" x="32" y="290" width="8" height="14" rx="2"/>
-        <rect class="arch-pin" x="960" y="290" width="8" height="14" rx="2"/>
-        <rect class="arch-pin" x="32" y="332" width="8" height="14" rx="2"/>
-        <rect class="arch-pin" x="960" y="332" width="8" height="14" rx="2"/>
-        <rect class="arch-pin" x="32" y="374" width="8" height="14" rx="2"/>
-        <rect class="arch-pin" x="960" y="374" width="8" height="14" rx="2"/>
-        <rect class="arch-pin" x="32" y="416" width="8" height="14" rx="2"/>
-        <rect class="arch-pin" x="960" y="416" width="8" height="14" rx="2"/>
-        <rect class="arch-item arch-item-core" x="58" y="206" width="164" height="52" rx="9"/><text class="arch-item-t" x="140" y="237">POS engine</text>
-        <rect class="arch-item arch-item-core" x="238" y="206" width="164" height="52" rx="9"/><text class="arch-item-t" x="320" y="237">Inventory</text>
-        <rect class="arch-item arch-item-core" x="418" y="206" width="164" height="52" rx="9"/><text class="arch-item-t" x="500" y="237">Order management</text>
-        <rect class="arch-item arch-item-core" x="598" y="206" width="164" height="52" rx="9"/><text class="arch-item-t" x="680" y="237">RFID unit ledger</text>
-        <rect class="arch-item arch-item-core" x="778" y="206" width="164" height="52" rx="9"/><text class="arch-item-t" x="860" y="237">Product data (PIM)</text>
-        <rect class="arch-item arch-item-core" x="148" y="282" width="164" height="52" rx="9"/><text class="arch-item-t" x="230" y="313">Customer data (CDP)</text>
-        <rect class="arch-item arch-item-core" x="328" y="282" width="164" height="52" rx="9"/><text class="arch-item-t" x="410" y="313">Analytics, back office</text>
-        <rect class="arch-item arch-item-core" x="508" y="282" width="164" height="52" rx="9"/><text class="arch-item-t" x="590" y="313">Training</text>
-        <rect class="arch-item arch-item-core" x="688" y="282" width="164" height="52" rx="9"/><text class="arch-item-t" x="770" y="313">Identity &amp; access</text>
-        <text class="arch-note" x="500" y="376">Every block is native: one data model, one release, one upgrade path.</text>
-        <path class="arch-trace arch-trace-p" d="M58 410 H 942"/>
-        <text class="arch-plate-meta" x="58" y="444">30S AVG TRANSACTION &#160;&#183;&#160; 99.9% INVENTORY ACCURACY &#160;&#183;&#160; 99.99% UPTIME &#160;&#183;&#160; GOOGLE CLOUD, HYBRID BY REQUEST</text>
-        <path class="arch-trace arch-trace-m arch-flow" d="M500 466 V 508"/>
-        <text class="arch-band-label arch-lab-int" x="6" y="504">INTEGRATION BUS</text>
-        <rect class="arch-bus" x="60" y="512" width="880" height="48" rx="12" fill="url(#agm)"/>
-        <text class="arch-int" x="500" y="541">Open APIs &#183; external services and logic overlays &#183; integration platform for mass data transfer &#183; a dedicated integration team per client</text>
-        <path class="arch-trace arch-trace-r arch-flow" d="M184 560 V 596"/>
-        <circle class="arch-node arch-node-r" cx="184" cy="560" r="3.5"/>
-        <path class="arch-trace arch-trace-r arch-flow" d="M500 560 V 596"/>
-        <circle class="arch-node arch-node-r" cx="500" cy="560" r="3.5"/>
-        <path class="arch-trace arch-trace-r arch-flow" d="M816 560 V 596"/>
-        <circle class="arch-node arch-node-r" cx="816" cy="560" r="3.5"/>
-        <text class="arch-band-label arch-lab-ext" x="6" y="592">HEAD OFFICE &amp; CHANNELS, THE SYSTEMS YOU ALREADY RUN</text>
-        <rect class="arch-item arch-item-ext" x="34" y="604" width="300" height="62" rx="9"/><text class="arch-item-t" x="184" y="628">ERP</text><text class="arch-item-s" x="184" y="645">SAP, Oracle, Dynamics, NetSuite</text>
-        <rect class="arch-item arch-item-ext" x="350" y="604" width="300" height="62" rx="9"/><text class="arch-item-t" x="500" y="628">E-commerce</text><text class="arch-item-s" x="500" y="645">Salesforce, Adobe, BigCommerce</text>
-        <rect class="arch-item arch-item-ext" x="666" y="604" width="300" height="62" rx="9"/><text class="arch-item-t" x="816" y="628">Payments</text><text class="arch-item-s" x="816" y="645">Adyen, Stripe, PayPal, Clover</text>
-        <rect class="arch-item arch-item-ext" x="34" y="682" width="300" height="62" rx="9"/><text class="arch-item-t" x="184" y="706">WMS &amp; returns</text><text class="arch-item-s" x="184" y="723">Warehouse and reverse logistics</text>
-        <rect class="arch-item arch-item-ext" x="350" y="682" width="300" height="62" rx="9"/><text class="arch-item-t" x="500" y="706">Marketing &amp; CRM</text><text class="arch-item-s" x="500" y="723">Klaviyo, Mailchimp</text>
-        <rect class="arch-item arch-item-ext" x="666" y="682" width="300" height="62" rx="9"/><text class="arch-item-t" x="816" y="706">BI &amp; marketplaces</text><text class="arch-item-s" x="816" y="723">Looker, accounting, channels</text>
-        <g class="arch-token"><rect x="-26" y="-9" width="52" height="18" rx="9"/><text x="0" y="4">SALE</text>
-          <animateMotion dur="2.8s" repeatCount="indefinite" path="M500,128 L500,176"/></g>
-        <g class="arch-token"><rect x="-36" y="-9" width="72" height="18" rx="9"/><text x="0" y="4">TAG READ</text>
-          <animateMotion dur="2.8s" begin="0.9s" repeatCount="indefinite" path="M500,128 L500,176"/></g>
-        <g class="arch-token"><rect x="-30" y="-9" width="60" height="18" rx="9"/><text x="0" y="4">ORDER</text>
-          <animateMotion dur="2.8s" begin="1.8s" repeatCount="indefinite" path="M500,128 L500,176"/></g>
-        <g class="arch-token arch-token-m"><rect x="-27" y="-9" width="54" height="18" rx="9"/><text x="0" y="4">SYNC</text>
-          <animateMotion dur="3.2s" repeatCount="indefinite" path="M500,466 L500,508"/></g>
+        <rect class="arch-awn" x="16" y="14" width="44" height="14" rx="3"/>
+        <rect class="arch-awn arch-awn-alt" x="60" y="14" width="44" height="14" rx="3"/>
+        <rect class="arch-awn" x="104" y="14" width="44" height="14" rx="3"/>
+        <rect class="arch-awn arch-awn-alt" x="148" y="14" width="44" height="14" rx="3"/>
+        <rect class="arch-awn" x="192" y="14" width="44" height="14" rx="3"/>
+        <rect class="arch-awn arch-awn-alt" x="236" y="14" width="44" height="14" rx="3"/>
+        <rect class="arch-awn" x="280" y="14" width="44" height="14" rx="3"/>
+        <rect class="arch-awn arch-awn-alt" x="324" y="14" width="44" height="14" rx="3"/>
+        <rect class="arch-awn" x="368" y="14" width="44" height="14" rx="3"/>
+        <rect class="arch-awn arch-awn-alt" x="412" y="14" width="44" height="14" rx="3"/>
+        <rect class="arch-awn" x="456" y="14" width="44" height="14" rx="3"/>
+        <rect class="arch-awn arch-awn-alt" x="500" y="14" width="44" height="14" rx="3"/>
+        <rect class="arch-awn" x="544" y="14" width="44" height="14" rx="3"/>
+        <rect class="arch-awn arch-awn-alt" x="588" y="14" width="44" height="14" rx="3"/>
+        <rect class="arch-awn" x="632" y="14" width="44" height="14" rx="3"/>
+        <rect class="arch-awn arch-awn-alt" x="676" y="14" width="44" height="14" rx="3"/>
+        <rect class="arch-awn" x="720" y="14" width="44" height="14" rx="3"/>
+        <rect class="arch-awn arch-awn-alt" x="764" y="14" width="44" height="14" rx="3"/>
+        <rect class="arch-awn" x="808" y="14" width="44" height="14" rx="3"/>
+        <rect class="arch-awn arch-awn-alt" x="852" y="14" width="44" height="14" rx="3"/>
+        <rect class="arch-awn" x="896" y="14" width="44" height="14" rx="3"/>
+        <rect class="arch-awn arch-awn-alt" x="940" y="14" width="44" height="14" rx="3"/>
+        <rect class="arch-room" x="16" y="28" width="968" height="114" rx="12" fill="url(#agb)"/>
+        <text class="arch-band-label arch-lab-store" x="26" y="52">THE SALES FLOOR</text>
+        <rect class="arch-glyph" x="117" y="58" width="44" height="44" rx="4"/>
+        <path class="arch-glyph" d="M124 58 q5 8 0 16 q-5 8 0 16 q-5 6 0 12"/>
+        <path class="arch-glyph" d="M136 58 q5 8 0 16 q-5 8 0 16 q-5 6 0 12"/>
+        <path class="arch-glyph" d="M148 58 q5 8 0 16 q-5 8 0 16 q-5 6 0 12"/>
+        <path class="arch-glyph" d="M337 62 H 417"/>
+        <path class="arch-glyph" d="M341 62 V 102 M413 62 V 102"/>
+        <path class="arch-glyph" d="M357 62 v5"/>
+        <path class="arch-glyph" d="M357 67 l-8 9 v18 a2 2 0 0 0 2 2 h12 a2 2 0 0 0 2 -2 v-18 z"/>
+        <path class="arch-glyph" d="M377 62 v5"/>
+        <path class="arch-glyph" d="M377 67 l-8 9 v18 a2 2 0 0 0 2 2 h12 a2 2 0 0 0 2 -2 v-18 z"/>
+        <path class="arch-glyph" d="M397 62 v5"/>
+        <path class="arch-glyph" d="M397 67 l-8 9 v18 a2 2 0 0 0 2 2 h12 a2 2 0 0 0 2 -2 v-18 z"/>
+        <rect class="arch-glyph" x="592" y="80" width="62" height="22" rx="3"/>
+        <rect class="arch-glyph arch-glyph-fill" x="614" y="56" width="18" height="30" rx="4"/>
+        <path class="arch-glyph" d="M619 60 h8"/>
+        <rect class="arch-glyph" x="845" y="58" width="7" height="44" rx="2"/>
+        <rect class="arch-glyph" x="888" y="58" width="7" height="44" rx="2"/>
+        <path class="arch-glyph arch-gate-pulse" d="M858 76 q6 -6 12 0 M856 84 q8 -8 16 0"/>
+        <text class="arch-item-t" x="139" y="120">Fitting room</text>
+        <text class="arch-item-s" x="139" y="136">RFID reads what walks in</text>
+        <text class="arch-item-t" x="377" y="120">On the rack</text>
+        <text class="arch-item-s" x="377" y="136">Every unit in the ledger</text>
+        <text class="arch-item-t" x="623" y="120">At the counter</text>
+        <text class="arch-item-s" x="623" y="136">Sale rung on iPhone</text>
+        <text class="arch-item-t" x="869" y="120">At the exit</text>
+        <text class="arch-item-s" x="869" y="136">EAS verifies it was paid</text>
+        <path class="arch-trace arch-trace-b arch-flow" d="M139 142 V 176"/>
+        <path class="arch-trace arch-trace-b arch-flow" d="M377 142 V 176"/>
+        <path class="arch-trace arch-trace-b arch-flow" d="M623 142 V 176"/>
+        <path class="arch-trace arch-trace-b arch-flow" d="M869 142 V 176"/>
+        <text class="arch-conn-t" x="500" y="166" text-anchor="middle">Store-and-Forward: terminals keep selling through an outage, then sync</text>
+        <text class="arch-band-label arch-lab-core" x="6" y="200" opacity="0">.</text>
+        <rect class="arch-plate" x="40" y="176" width="920" height="300" rx="18" fill="url(#agp)"/>
+        <text class="arch-band-label arch-lab-core" x="58" y="206">TEAMWORK COMMERCE &#183; ONE CODEBASE &#183; THE FOUNDATION THE STORE STANDS ON</text>
+        <rect class="arch-pin" x="32" y="216" width="8" height="14" rx="2"/>
+        <rect class="arch-pin" x="960" y="216" width="8" height="14" rx="2"/>
+        <rect class="arch-pin" x="32" y="258" width="8" height="14" rx="2"/>
+        <rect class="arch-pin" x="960" y="258" width="8" height="14" rx="2"/>
+        <rect class="arch-pin" x="32" y="300" width="8" height="14" rx="2"/>
+        <rect class="arch-pin" x="960" y="300" width="8" height="14" rx="2"/>
+        <rect class="arch-pin" x="32" y="342" width="8" height="14" rx="2"/>
+        <rect class="arch-pin" x="960" y="342" width="8" height="14" rx="2"/>
+        <rect class="arch-pin" x="32" y="384" width="8" height="14" rx="2"/>
+        <rect class="arch-pin" x="960" y="384" width="8" height="14" rx="2"/>
+        <rect class="arch-pin" x="32" y="426" width="8" height="14" rx="2"/>
+        <rect class="arch-pin" x="960" y="426" width="8" height="14" rx="2"/>
+        <rect class="arch-item arch-item-core" x="58" y="222" width="164" height="52" rx="9"/>
+        <text class="arch-item-t" x="140" y="252">POS engine</text>
+        <rect class="arch-item arch-item-core" x="238" y="222" width="164" height="52" rx="9"/>
+        <text class="arch-item-t" x="320" y="252">Inventory</text>
+        <rect class="arch-item arch-item-core" x="418" y="222" width="164" height="52" rx="9"/>
+        <text class="arch-item-t" x="500" y="252">Order management</text>
+        <rect class="arch-item arch-item-core" x="598" y="222" width="164" height="52" rx="9"/>
+        <text class="arch-item-t" x="680" y="252">RFID unit ledger</text>
+        <rect class="arch-item arch-item-core" x="778" y="222" width="164" height="52" rx="9"/>
+        <text class="arch-item-t" x="860" y="252">Product data (PIM)</text>
+        <rect class="arch-item arch-item-core" x="148" y="298" width="164" height="52" rx="9"/>
+        <text class="arch-item-t" x="230" y="328">Customer data (CDP)</text>
+        <rect class="arch-item arch-item-core" x="328" y="298" width="164" height="52" rx="9"/>
+        <text class="arch-item-t" x="410" y="328">Analytics, back office</text>
+        <rect class="arch-item arch-item-core" x="508" y="298" width="164" height="52" rx="9"/>
+        <text class="arch-item-t" x="590" y="328">Training</text>
+        <rect class="arch-item arch-item-core" x="688" y="298" width="164" height="52" rx="9"/>
+        <text class="arch-item-t" x="770" y="328">Identity &amp; access</text>
+        <text class="arch-note" x="500" y="392">Every block is native: one data model, one release, one upgrade path.</text>
+        <path class="arch-trace arch-trace-p" d="M58 420 H 942"/>
+        <text class="arch-plate-meta" x="58" y="452">30S AVG TRANSACTION &#160;&#183;&#160; 99.9% INVENTORY ACCURACY &#160;&#183;&#160; 99.99% UPTIME &#160;&#183;&#160; GOOGLE CLOUD, HYBRID BY REQUEST</text>
+        <path class="arch-trace arch-trace-m arch-flow" d="M500 476 V 518"/>
+        <text class="arch-band-label arch-lab-int" x="6" y="514">INTEGRATION BUS</text>
+        <rect class="arch-bus" x="60" y="522" width="880" height="48" rx="12" fill="url(#agm)"/>
+        <text class="arch-int" x="500" y="551">Open APIs &#183; external services and logic overlays &#183; integration platform for mass data transfer &#183; a dedicated integration team per client</text>
+        <path class="arch-trace arch-trace-r arch-flow" d="M184 570 V 606"/>
+        <circle class="arch-node arch-node-r" cx="184" cy="570" r="3.5"/>
+        <path class="arch-trace arch-trace-r arch-flow" d="M500 570 V 606"/>
+        <circle class="arch-node arch-node-r" cx="500" cy="570" r="3.5"/>
+        <path class="arch-trace arch-trace-r arch-flow" d="M816 570 V 606"/>
+        <circle class="arch-node arch-node-r" cx="816" cy="570" r="3.5"/>
+        <text class="arch-band-label arch-lab-ext" x="6" y="602">HEAD OFFICE &amp; CHANNELS, THE SYSTEMS YOU ALREADY RUN</text>
+        <rect class="arch-item arch-item-ext" x="34" y="614" width="300" height="62" rx="9"/>
+        <text class="arch-item-t" x="184" y="638">ERP</text>
+        <text class="arch-item-s" x="184" y="655">SAP, Oracle, Dynamics, NetSuite</text>
+        <rect class="arch-item arch-item-ext" x="350" y="614" width="300" height="62" rx="9"/>
+        <text class="arch-item-t" x="500" y="638">E-commerce</text>
+        <text class="arch-item-s" x="500" y="655">Salesforce, Adobe, BigCommerce</text>
+        <rect class="arch-item arch-item-ext" x="666" y="614" width="300" height="62" rx="9"/>
+        <text class="arch-item-t" x="816" y="638">Payments</text>
+        <text class="arch-item-s" x="816" y="655">Adyen, Stripe, PayPal, Clover</text>
+        <rect class="arch-item arch-item-ext" x="34" y="692" width="300" height="62" rx="9"/>
+        <text class="arch-item-t" x="184" y="716">WMS &amp; returns</text>
+        <text class="arch-item-s" x="184" y="733">Warehouse and reverse logistics</text>
+        <rect class="arch-item arch-item-ext" x="350" y="692" width="300" height="62" rx="9"/>
+        <text class="arch-item-t" x="500" y="716">Marketing &amp; CRM</text>
+        <text class="arch-item-s" x="500" y="733">Klaviyo, Mailchimp</text>
+        <rect class="arch-item arch-item-ext" x="666" y="692" width="300" height="62" rx="9"/>
+        <text class="arch-item-t" x="816" y="716">BI &amp; marketplaces</text>
+        <text class="arch-item-s" x="816" y="733">Looker, accounting, channels</text>
         </svg>
     </div>
     <p class="arch-caption">Nothing between the top two bands is an integration. It is one codebase.</p>
