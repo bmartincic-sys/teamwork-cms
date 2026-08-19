@@ -10071,3 +10071,27 @@ a.evc:hover .evc-go { opacity: 1; }
 .mega-ind-text em {
   display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
 }
+
+/* ---- Architecture circuit layout ---------------------------------------------------
+   The diagram redrawn as a board: devices feed a central processor plate through
+   traced lines with flowing data, an integration bus rail below, then the systems
+   chips. Traces carry a slow dash flow; nodes mark the junctions. */
+.arch-plate { stroke: rgba(155, 123, 255, 0.55); stroke-width: 1.5; }
+.arch-bus { stroke: rgba(199, 123, 240, 0.55); stroke-width: 1.5; }
+.arch-pin { fill: rgba(155, 123, 255, 0.6); }
+.arch-trace { fill: none; stroke-width: 1.75; }
+.arch-trace-b { stroke: rgba(77, 148, 255, 0.5); }
+.arch-trace-p { stroke: rgba(155, 123, 255, 0.3); }
+.arch-trace-m { stroke: rgba(199, 123, 240, 0.6); }
+.arch-trace-r { stroke: rgba(110, 144, 255, 0.55); }
+.arch-node { fill: #6aa6ff; }
+.arch-node-r { fill: #8fa8ff; }
+.arch-flow { stroke-dasharray: 5 9; animation: archFlow 1.6s linear infinite; }
+@keyframes archFlow { to { stroke-dashoffset: -28; } }
+@media (prefers-reduced-motion: reduce) { .arch-flow { animation: none; stroke-dasharray: none; } }
+.arch-plate-meta {
+  font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.08em;
+  fill: var(--text-faint);
+}
+[data-theme="light"] .arch-node { fill: #247DFF; }
+[data-theme="light"] .arch-pin { fill: rgba(124, 80, 245, 0.5); }
