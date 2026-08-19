@@ -10125,3 +10125,24 @@ a.evc:hover .evc-go { opacity: 1; }
 [data-theme="light"] .arch-glyph { stroke: #1a56f0; }
 [data-theme="light"] .arch-awn { fill: rgba(36, 125, 255, 0.6); }
 [data-theme="light"] .arch-awn-alt { fill: rgba(36, 125, 255, 0.2); }
+
+/* ---- Hero companion iPhone --------------------------------------------------------
+   The associate home screen stands beside the animated iPad, behind it on the right
+   where the stage already bleeds, with its own slow float offset from the receipt's
+   rhythm. Dropped below 1240px, where the stage no longer has the width to spare. */
+.hpos-companion {
+  position: absolute; right: -58px; bottom: -4px; z-index: 1;
+  width: clamp(150px, 13vw, 192px); height: auto;
+  transform: rotate(7deg);
+  filter: drop-shadow(0 30px 44px rgba(3, 2, 18, 0.65));
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hpos-companion { animation: hpos-companion-float 7s ease-in-out infinite; }
+}
+@keyframes hpos-companion-float {
+  0%, 100% { transform: rotate(7deg) translateY(0); }
+  50% { transform: rotate(7.6deg) translateY(-9px); }
+}
+/* between 1240 and 1440 the stage sits nearer the edge, so the phone tucks in */
+@media (max-width: 1439px) { .hpos-companion { right: 26px; width: 158px; } }
+@media (max-width: 1240px) { .hpos-companion { display: none; } }
