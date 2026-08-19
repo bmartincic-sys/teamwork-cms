@@ -127,15 +127,6 @@ module.exports = [
     external: true
   },
   {
-    client: "Paul Stuart",
-    title: "Paul Stuart Adopts an Omnichannel Retail Strategy",
-    blurb: "Heritage menswear bringing stores and online onto one inventory truth.",
-    sector: "Luxury Apparel",
-    url: "https://www.teamworkcommerce.com/paul-stuart-adopts-omnichannel-retail-strategy-with-teamwork-commerce/",
-    photo: "/assets/images/customers/paul-stuart.jpg",
-    external: true
-  },
-  {
     client: "Colorado Rockies",
     title: "MLB All-Star Host 2021: Elevating the Omnichannel Experience for Fans",
     blurb: "Seasonal staff live on registers in minutes for the league's biggest week.",
