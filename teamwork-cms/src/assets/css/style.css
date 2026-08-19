@@ -10131,11 +10131,13 @@ a.evc:hover .evc-go { opacity: 1; }
    where the stage already bleeds, with its own slow float offset from the receipt's
    rhythm. Dropped below 1240px, where the stage no longer has the width to spare. */
 .hpos-companion {
-  position: absolute; right: -58px; bottom: -4px; z-index: 1;
+  position: absolute; right: -56px; bottom: -6px; z-index: 1;
   width: clamp(150px, 13vw, 192px); height: auto;
   transform: rotate(7deg);
   filter: drop-shadow(0 30px 44px rgba(3, 2, 18, 0.65));
 }
+/* the device cedes a little width so half the phone's face shows instead of a sliver */
+.hpos-stage .hpos-device { margin-right: 66px; }
 @media (prefers-reduced-motion: no-preference) {
   .hpos-companion { animation: hpos-companion-float 7s ease-in-out infinite; }
 }
@@ -10144,5 +10146,5 @@ a.evc:hover .evc-go { opacity: 1; }
   50% { transform: rotate(7.6deg) translateY(-9px); }
 }
 /* between 1240 and 1440 the stage sits nearer the edge, so the phone tucks in */
-@media (max-width: 1439px) { .hpos-companion { right: 26px; width: 158px; } }
-@media (max-width: 1240px) { .hpos-companion { display: none; } }
+@media (max-width: 1439px) { .hpos-companion { right: 18px; width: 156px; } .hpos-stage .hpos-device { margin-right: 54px; } }
+@media (max-width: 1240px) { .hpos-companion { display: none; } .hpos-stage .hpos-device { margin-right: 0; } }
