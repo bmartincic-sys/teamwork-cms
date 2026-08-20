@@ -6108,7 +6108,7 @@ main > .hero:first-child { margin-top: -85px; padding-top: 230px; }
 .hpos-hero { position: relative; overflow: hidden; padding: 0; }
 .hpos-grid {
   position: relative; z-index: 1;
-  display: grid; grid-template-columns: minmax(0, 0.74fr) minmax(0, 1.26fr);
+  display: grid; grid-template-columns: minmax(0, 0.86fr) minmax(0, 1.14fr);
   gap: 48px; align-items: start;
   min-height: 0; padding-block: 52px 56px;
 }
@@ -8334,7 +8334,8 @@ a.evc:hover .evc-go { opacity: 1; }
 .hpos-chip-rfid { top: -16px; left: -12px; }
 /* Off the device's bottom corner: the 3D pose recedes the right edge, so anything
    anchored beside it would sit over the totals column instead of hanging off it. */
-.hpos-chip-pay { bottom: -16px; right: 30px; }
+/* left, not right: the phone now occupies the iPad's bottom-right corner */
+  .hpos-chip-pay { bottom: -16px; left: 24px; right: auto; }
 /* The chips hang off the device edges, which there is no room for on small screens. */
 @media (max-width: 700px) { .hpos-chip { display: none; } }
 @media (prefers-reduced-motion: reduce) {
@@ -10206,7 +10207,20 @@ a.evc:hover .evc-go { opacity: 1; }
 .hph-chip { align-self: flex-start; font-size: 7.5px; font-weight: 600; padding: 3px 7px;
   border-radius: 100px; background: #fff; color: #3c3c43; }
 .hph-brand { margin: 6px auto 0; font-size: 12px; font-weight: 800; letter-spacing: -0.02em; color: #0a72e8; }
-.hph-sun { width: 26px; height: 26px; margin: 5px auto 3px; border-radius: 50%; border: 1.5px solid #3b3f4a; }
+/* the app's greeting glyph, drawn with the site's icon set rather than CSS shapes:
+   the hand-built rays rendered as a dot in the middle of a ring */
+.hph-sun { display: flex; justify-content: center; margin: 5px 0 3px; }
+.hph-sun i { font-size: 22px; line-height: 1; color: #3b3f4a; font-style: normal; }
+.hph-sun::before {
+  background:
+    linear-gradient(#3b3f4a, #3b3f4a) center/1.6px 5px no-repeat,
+    linear-gradient(#3b3f4a, #3b3f4a) center/5px 1.6px no-repeat;
+}
+.hph-sun::after { transform: rotate(45deg);
+  background:
+    linear-gradient(#3b3f4a, #3b3f4a) center/1.6px 5px no-repeat,
+    linear-gradient(#3b3f4a, #3b3f4a) center/5px 1.6px no-repeat;
+}
 .hph-greet { text-align: center; font-size: 11px; font-weight: 700; line-height: 1.25; margin-bottom: 7px; }
 .hph-card { display: grid; grid-template-columns: 1fr auto; gap: 1px 6px;
   padding: 6px 8px; margin-bottom: 5px; border-radius: 7px; background: #fff;
@@ -10216,6 +10230,11 @@ a.evc:hover .evc-go { opacity: 1; }
 .hph-v { grid-column: 1 / -1; display: inline-flex; align-items: center; gap: 4px;
   font-size: 8.5px; font-weight: 700; color: #16a34a; }
 .hph-tick { width: 8px; height: 8px; border-radius: 50%; background: #16a34a; flex: none; }
+.hph-sect { margin-top: 7px; font-size: 8.5px; font-weight: 800; }
+.hph-msg { font-size: 7.5px; line-height: 1.35; color: #3c3c43; margin-top: 2px; }
+.hph-links { display: flex; gap: 4px; margin-top: 5px; }
+.hph-links span { font-size: 7px; font-weight: 700; color: #0a72e8;
+  background: rgba(10,114,232,0.1); padding: 3px 6px; border-radius: 100px; }
 .hph-cta { margin: auto 0 8px; border: 0; width: 100%; height: 24px; border-radius: 100px;
   background: #0a84ff; color: #fff; font-size: 9px; font-weight: 800; letter-spacing: 0.04em;
   font-family: inherit; }
