@@ -6109,7 +6109,7 @@ main > .hero:first-child { margin-top: -85px; padding-top: 230px; }
 .hpos-grid {
   position: relative; z-index: 1;
   display: grid; grid-template-columns: minmax(0, 0.86fr) minmax(0, 1.14fr);
-  gap: 48px; align-items: start;
+  gap: 48px; align-items: center;   /* devices centre against the copy */
   min-height: 0; padding-block: 52px 56px;
 }
 .hpos-copy { max-width: 620px; }
@@ -10295,3 +10295,32 @@ a.evc:hover .evc-go { opacity: 1; }
 .hph-chip { font-size: 6.5px; padding: 2px 6px; }
 .hph-status { font-size: 7px; padding: 6px 10px 1px; }
 .hph-notch { width: 46px; height: 13px; top: 6px; }
+
+/* ---- NEW SALE, emphasised -----------------------------------------------------------
+   The primary action on the phone. It carries a brand gradient, a lifted shadow, a
+   halo that breathes outward, and a light sweep across the face on each cycle, so the
+   eye lands on it the way it lands on the iPad's PAY. */
+.hph-cta {
+  position: relative; overflow: hidden;
+  background: linear-gradient(135deg, #0a84ff, #2f6bff 55%, #6d4dff);
+  box-shadow: 0 4px 12px -2px rgba(10, 132, 255, 0.7);
+}
+.hph-cta::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(115deg, transparent 34%, rgba(255,255,255,0.55) 50%, transparent 66%);
+  transform: translateX(-120%);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hph-cta { animation: hph-cta-halo 7s ease-in-out infinite; }
+  .hph-cta::after { animation: hph-cta-sheen 7s ease-in-out infinite; }
+}
+@keyframes hph-cta-halo {
+  0%, 24% { box-shadow: 0 4px 12px -2px rgba(10,132,255,0.7), 0 0 0 0 rgba(10,132,255,0.55); }
+  38% { box-shadow: 0 6px 16px -2px rgba(10,132,255,0.85), 0 0 0 8px rgba(10,132,255,0); }
+  52%, 100% { box-shadow: 0 4px 12px -2px rgba(10,132,255,0.7), 0 0 0 0 rgba(10,132,255,0); }
+}
+@keyframes hph-cta-sheen {
+  0%, 26% { transform: translateX(-120%); }
+  44% { transform: translateX(120%); }
+  100% { transform: translateX(120%); }
+}
