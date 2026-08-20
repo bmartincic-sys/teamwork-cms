@@ -6124,12 +6124,10 @@ main > .hero:first-child { margin-top: -85px; padding-top: 230px; }
 /* The stage carves its own light: a dark pocket that separates the device from the
    photo behind it, and a blue key inside that pocket. */
 .hpos-stage::before {
-  content: ''; position: absolute; inset: -20% -24%; z-index: 0; pointer-events: none;
+  content: ''; position: absolute; inset: -14% -18%; z-index: 0; pointer-events: none;
   background:
-    radial-gradient(46% 40% at 44% 44%, rgba(77, 148, 255, 0.34), transparent 68%),
-    radial-gradient(52% 48% at 72% 60%, rgba(155, 123, 255, 0.26), transparent 70%),
-    radial-gradient(70% 62% at 50% 50%, rgba(36, 125, 255, 0.12), transparent 76%);
-  filter: blur(6px);
+    radial-gradient(58% 54% at 50% 48%, rgba(36, 125, 255, 0.17), transparent 72%),
+    radial-gradient(72% 66% at 50% 50%, rgba(4, 6, 20, 0.55), transparent 78%);
 }
 .hpos-device {
   position: relative; z-index: 2; border-radius: 26px; padding: 12px;
@@ -10163,21 +10161,3 @@ a.evc:hover .evc-go { opacity: 1; }
 
 /* at the narrower side-by-side width, money never wraps mid-amount */
 .srx-row b, .srx-total b { white-space: nowrap; }
-
-/* ---- Apple-grammar stage ------------------------------------------------------
-   From the iPhone 17 Pro and iPad Pro pages: a saturated colour pool isolating the
-   hardware, specular rim light on the frames, more scale, and depth between the two
-   units. The devices stay face-on: the static pose was removed at the user's request
-   earlier and stays removed; dimensionality lives in the pointer tilt. */
-/* rim light: the frame catches a keylight along its top edge */
-.hpos-device { box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.22), 0 60px 90px -40px rgba(3, 2, 20, 0.85); }
-/* the phone sits a plane behind: a touch smaller and dimmer, with its own grounding */
-.hpos-companion {
-  filter: brightness(0.96) drop-shadow(0 3px 2px rgba(255,255,255,0.06)) drop-shadow(0 34px 34px rgba(3, 2, 18, 0.7));
-}
-/* scale: the pair takes more of the frame */
-@media (min-width: 1441px) {
-  .hpos-stage { max-width: 860px; margin-right: -96px; }
-  .hpos-stage .hpos-device { margin-right: 218px; }
-  .hpos-companion { width: 198px; }
-}
