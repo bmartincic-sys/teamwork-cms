@@ -10141,7 +10141,7 @@ a.evc:hover .evc-go { opacity: 1; }
   filter: drop-shadow(0 22px 26px rgba(3, 2, 18, 0.6));
 }
 /* true side-by-side: the device cedes a full phone column, no overlap at all */
-.hpos-stage .hpos-device { margin-right: 158px; }
+.hpos-stage .hpos-device { margin-right: calc(22.5% - 26px); }
 /* the caption that states the point of the pairing */
 .hpos-duo {
   position: absolute; left: 50%; bottom: -44px; transform: translateX(-50%);
@@ -10157,7 +10157,7 @@ a.evc:hover .evc-go { opacity: 1; }
 /* between 1240 and 1440 the stage sits nearer the edge, so the phone tucks in */
 @media (max-width: 1439px) {
   .hpos-companion { width: 168px; right: 8px; }
-  .hpos-stage .hpos-device { margin-right: 150px; }
+  .hpos-stage .hpos-device { margin-right: calc(22.5% - 26px); }
 }
 @media (max-width: 1240px) { .hpos-companion { display: none; } .hpos-stage .hpos-device { margin-right: 0; } }
 
@@ -10183,7 +10183,12 @@ a.evc:hover .evc-go { opacity: 1; }
    sits over the iPad's right edge and never crosses into the headline column. */
 .hph {
   position: absolute; right: 0; bottom: -34px; z-index: 4;
-  width: 194px; aspect-ratio: 9 / 19.5;
+  /* Proportionate to the iPad at any width. An iPhone is 72mm wide against the
+     iPad's 248mm, so the phone should be 29% of the iPad's width. Both are derived
+     from the stage, which makes the ratio self-correcting: with phone = 22.5%S + 8
+     and the device ceding 22.5%S - 26, the ratio stays 0.29 and the overlap stays a
+     constant 34px, instead of needing a hand-tuned pair per breakpoint. */
+  width: calc(22.5% + 8px); aspect-ratio: 9 / 19.5;
   border-radius: 30px; padding: 7px;
   background: linear-gradient(160deg, #2b2f3c, #12141d 60%, #23262f);
   box-shadow: 0 40px 60px -26px rgba(2, 2, 14, 0.9), 0 0 0 1px rgba(255,255,255,0.1);
@@ -10262,8 +10267,31 @@ a.evc:hover .evc-go { opacity: 1; }
 }
 @media (prefers-reduced-motion: reduce) { .hph-card { opacity: 1; transform: none; } }
 
-@media (max-width: 1439px) { .hph { width: 176px; right: 8px; } }
-@media (max-width: 1240px) { .hph { width: 152px; right: 6px; bottom: -26px; }
-  .hpos-stage .hpos-device { margin-right: 120px; } }
-@media (max-width: 900px) { .hph { display: none; }
-  .hpos-stage .hpos-device { margin-right: 0; } }
+@media (max-width: 1439px) { .hph { right: 8px; } }
+/* Below this the hero stacks to one centred column, so the side-by-side geometry no
+   longer holds: the phone drops and the iPad takes the full stage. */
+@media (max-width: 1240px) {
+  .hph { display: none; }
+  .hpos-stage .hpos-device { margin-right: 0; }
+}
+
+
+/* the phone is at true relative scale now, so the screen's type and rhythm tighten to
+   match: at 158px wide the earlier sizes overflowed the tab bar */
+.hph-body { padding: 3px 8px 0; }
+.hph-brand { font-size: 10.5px; margin-top: 4px; }
+.hph-sun i { font-size: 18px; }
+.hph-greet { font-size: 9.5px; margin-bottom: 5px; }
+.hph-card { padding: 5px 7px; margin-bottom: 4px; border-radius: 6px; }
+.hph-k, .hph-a { font-size: 6.5px; }
+.hph-v { font-size: 7.5px; }
+.hph-tick { width: 6px; height: 6px; }
+.hph-sect { font-size: 7.5px; margin-top: 5px; }
+.hph-msg { font-size: 6.5px; }
+.hph-cta { height: 20px; font-size: 8px; margin-bottom: 6px; }
+.hph-tabs { padding: 3px 5px 5px; }
+.hph-tabs span { font-size: 5px; }
+.hph-tabs span i { font-size: 9.5px; }
+.hph-chip { font-size: 6.5px; padding: 2px 6px; }
+.hph-status { font-size: 7px; padding: 6px 10px 1px; }
+.hph-notch { width: 46px; height: 13px; top: 6px; }
