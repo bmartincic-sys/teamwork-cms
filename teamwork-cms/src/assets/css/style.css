@@ -10329,3 +10329,38 @@ a.evc:hover .evc-go { opacity: 1; }
    so the colour lockup applies in both themes. */
 .hph-brand { display: flex; justify-content: center; margin-top: 5px; }
 .hph-brand img { width: 74px; height: auto; display: block; }
+
+/* ---- Contact hero: copy left, form right --------------------------------------------
+   The page opened with a headline and then sent everyone off to other pages. The form
+   now sits in the hero, so the primary action is above the fold. Fields reuse the
+   demo page's dfx-* components rather than a second form system. */
+.chero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 0.92fr); gap: 48px; align-items: start; }
+.chero-title { font-size: clamp(36px, 5vw, 58px); font-weight: 600; letter-spacing: -0.04em; line-height: 1.06; margin: 18px 0 0; }
+.chero-points { list-style: none; margin: 26px 0 0; padding: 0; display: flex; flex-direction: column; gap: 14px; }
+.chero-points li { display: flex; gap: 11px; align-items: flex-start; font-size: 14.5px; line-height: 1.6; color: var(--text-muted); }
+.chero-points i { flex: none; font-size: 18px; color: var(--accent, var(--brand-blue)); margin-top: 1px; }
+.chero-points strong { color: var(--text); }
+.chero-points a { color: var(--brand-text); font-weight: 600; }
+
+.chero-form {
+  padding: 30px 32px 26px; border-radius: 18px;
+  background: var(--bg-elevated); border: 1px solid var(--accent-line, var(--border));
+  box-shadow: 0 30px 60px -34px rgba(6, 8, 30, 0.6);
+}
+.chero-formhead { margin-bottom: 18px; }
+.chero-formhead h2 { font-size: 21px; font-weight: 600; letter-spacing: -0.02em; margin: 0 0 6px; }
+.chero-formhead p { margin: 0; font-size: 13.5px; color: var(--text-muted); }
+.chero-form .dfx-field { margin-bottom: 14px; }
+.chero-form textarea {
+  width: 100%; font-family: inherit; font-size: 14px; padding: 11px 13px;
+  border-radius: 10px; border: 1px solid var(--border-strong);
+  background: var(--bg-deep); color: var(--text); resize: vertical;
+}
+.chero-fine { margin: 14px 0 0; font-size: 12.5px; color: var(--text-faint); text-align: center; }
+.chero-fine a { color: var(--brand-text); font-weight: 600; }
+
+@media (max-width: 980px) {
+  .chero { grid-template-columns: 1fr; gap: 30px; }
+  /* the form leads on narrow screens, where the copy would otherwise push it under the fold */
+  .chero-form { order: -1; }
+}
