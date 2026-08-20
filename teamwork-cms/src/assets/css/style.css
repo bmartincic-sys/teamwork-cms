@@ -6419,7 +6419,7 @@ main > .hero.hpos-hero:first-child { margin-top: -85px; padding-top: 112px; }
 /* Story timeline. The year is the anchor, so it sits in the rail rather than a bare dot. */
 .hist { max-width: 860px; margin: 0 auto; position: relative; }
 .hist::before {
-  content: ""; position: absolute; left: 76px; top: 18px; bottom: 18px; width: 2px;
+  content: ""; position: absolute; left: 156px; top: 18px; bottom: 18px; width: 2px;
   background: linear-gradient(180deg, transparent, var(--border) 8%, var(--border) 92%, transparent);
 }
 .hist-row { display: grid; grid-template-columns: 156px 1fr; gap: 28px; padding: 20px 0; position: relative; }
@@ -10371,7 +10371,7 @@ a.evc:hover .evc-go { opacity: 1; }
    which the driver writes. Dots stay grey until their row arrives, then light up.
    No JS means .hist-live is never added, so the fill sits at full height. */
 .hist-live::after {
-  content: ''; position: absolute; left: 76px; top: 18px; width: 2px;
+  content: ''; position: absolute; left: 156px; top: 18px; width: 2px;
   height: calc(var(--hist-p, 1) * (100% - 36px));
   background: linear-gradient(180deg, var(--brand-blue), var(--brand-purple));
   box-shadow: 0 0 10px 1px rgba(77, 148, 255, 0.5);
@@ -10391,3 +10391,9 @@ a.evc:hover .evc-go { opacity: 1; }
 .hist-live .hist-row .hist-year { transition: opacity .5s ease; }
 @media (max-width: 760px) { .hist-live::after { left: 5px; } }
 @media (prefers-reduced-motion: reduce) { .hist-live::after { height: calc(100% - 36px); transition: none; } }
+
+/* the rail runs at 156px so its 2px straddles 157px, where the year-column dots centre;
+   the dots paint over it so the line reads as passing through them */
+.hist-year::after { z-index: 2; }
+.hist::before, .hist-live::after { z-index: 0; }
+.hist-row { z-index: 1; }
