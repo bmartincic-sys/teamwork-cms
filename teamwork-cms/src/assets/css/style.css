@@ -6422,15 +6422,20 @@ main > .hero.hpos-hero:first-child { margin-top: -85px; padding-top: 112px; }
   content: ""; position: absolute; left: 156px; top: 18px; bottom: 18px; width: 2px;
   background: linear-gradient(180deg, transparent, var(--border) 8%, var(--border) 92%, transparent);
 }
-.hist-row { display: grid; grid-template-columns: 156px 1fr; gap: 28px; padding: 20px 0; position: relative; }
+/* --yrs is the gap in real years since the previous entry, so the 14 years from
+   1986 to 2000 open up and the consecutive years stay tight. */
+.hist-row { display: grid; grid-template-columns: 156px 1fr; gap: 28px; padding: 6px 0; position: relative;
+  margin-top: min(calc(34px + var(--yrs, 1) * 10px), 132px); }
+.hist-row:first-child { margin-top: 0; }
 .hist-year {
-  font-family: var(--font-body); font-size: 26px; font-weight: 700; letter-spacing: -0.03em;
+  font-family: var(--font-body); font-size: 30px; font-weight: 700; letter-spacing: -0.03em;
+  font-variant-numeric: tabular-nums; line-height: 1.28;
   text-align: right; padding-right: 26px; position: relative;
   background: var(--gradient); -webkit-background-clip: text; background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .hist-year::after {
-  content: ""; position: absolute; right: -7px; top: 12px; width: 12px; height: 12px;
+  content: ""; position: absolute; right: -7px; top: 14px; width: 12px; height: 12px;
   border-radius: 50%; background: var(--brand-blue); box-shadow: 0 0 0 4px var(--bg-deep);
 }
 .hist-body h3 { margin: 0; font-size: 17px; font-weight: 600; line-height: 1.5; letter-spacing: -0.02em; color: var(--text); }
@@ -10397,3 +10402,29 @@ a.evc:hover .evc-go { opacity: 1; }
 .hist-year::after { z-index: 2; }
 .hist::before, .hist-live::after { z-index: 0; }
 .hist-row { z-index: 1; }
+
+
+/* The timeline reads as travel: entries drift in from the rail, and each dot
+   sends out one ring as the scroll fill reaches it. */
+.hist-row.reveal { transform: translateY(20px) translateX(14px); }
+.hist-row.reveal.in-view { transform: none; }
+.hist-body { padding-top: 4px; }
+.hist-year::before {
+  content: ""; position: absolute; right: -7px; top: 14px; width: 12px; height: 12px;
+  border-radius: 50%; border: 2px solid var(--brand-blue); opacity: 0; pointer-events: none;
+}
+.hist-live .hist-row.in-view .hist-year::before { animation: hist-ping 1.5s cubic-bezier(0.2, 0.6, 0.2, 1) 0.25s 1 both; }
+@keyframes hist-ping {
+  0% { opacity: 0.85; transform: scale(1); }
+  100% { opacity: 0; transform: scale(3.4); }
+}
+@media (max-width: 720px) {
+  .hist-row { margin-top: min(calc(26px + var(--yrs, 1) * 7px), 92px); }
+  .hist-year::before { right: auto; left: -28px; top: 8px; }
+  /* no sideways travel here: 14px of it would push text past a 390px viewport mid-reveal */
+  .hist-row.reveal { transform: translateY(16px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hist-year::before { animation: none !important; }
+  .hist-row.reveal { transform: none; }
+}
