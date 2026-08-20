@@ -10324,3 +10324,8 @@ a.evc:hover .evc-go { opacity: 1; }
   44% { transform: translateX(120%); }
   100% { transform: translateX(120%); }
 }
+
+/* the phone's masthead uses the real logo, not a text wordmark. The screen is light,
+   so the colour lockup applies in both themes. */
+.hph-brand { display: flex; justify-content: center; margin-top: 5px; }
+.hph-brand img { width: 74px; height: auto; display: block; }
