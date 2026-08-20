@@ -6108,7 +6108,7 @@ main > .hero:first-child { margin-top: -85px; padding-top: 230px; }
 .hpos-hero { position: relative; overflow: hidden; padding: 0; }
 .hpos-grid {
   position: relative; z-index: 1;
-  display: grid; grid-template-columns: minmax(0, 0.74fr) minmax(0, 1.26fr);
+  display: grid; grid-template-columns: minmax(0, 0.62fr) minmax(0, 1.38fr);
   gap: 48px; align-items: start;
   min-height: 0; padding-block: 52px 56px;
 }
@@ -6124,18 +6124,22 @@ main > .hero:first-child { margin-top: -85px; padding-top: 230px; }
 /* The stage carves its own light: a dark pocket that separates the device from the
    photo behind it, and a blue key inside that pocket. */
 .hpos-stage::before {
-  content: ''; position: absolute; inset: -20% -24%; z-index: 0; pointer-events: none;
+  content: ''; position: absolute; inset: -26% -30%; z-index: 0; pointer-events: none;
   background:
-    radial-gradient(46% 40% at 44% 44%, rgba(77, 148, 255, 0.34), transparent 68%),
-    radial-gradient(52% 48% at 72% 60%, rgba(155, 123, 255, 0.26), transparent 70%),
-    radial-gradient(70% 62% at 50% 50%, rgba(36, 125, 255, 0.12), transparent 76%);
-  filter: blur(6px);
+    radial-gradient(44% 38% at 42% 42%, rgba(77, 148, 255, 0.55), transparent 66%),
+    radial-gradient(50% 46% at 74% 62%, rgba(155, 123, 255, 0.45), transparent 68%),
+    radial-gradient(72% 64% at 50% 52%, rgba(36, 125, 255, 0.18), transparent 78%);
 }
 .hpos-device {
-  position: relative; z-index: 2; border-radius: 26px; padding: 12px;
-  background: linear-gradient(160deg, rgba(255,255,255,0.13), rgba(255,255,255,0.04)) padding-box,
-              linear-gradient(160deg, rgba(255,255,255,0.34), rgba(255,255,255,0.07) 45%, rgba(255,255,255,0.16)) border-box;
-  border: 1px solid transparent;
+  /* Real iPad geometry: 4:3 landscape, a uniform dark bezel inside an aluminium
+     edge, and a camera on the top rail, instead of a thin-framed card. */
+  /* Real iPad geometry: landscape 4:3, which is the orientation this two-column
+     receipt was drawn for and how a counter iPad actually sits. */
+  position: relative; z-index: 2; border-radius: 30px; padding: 16px;
+  aspect-ratio: 4 / 3;
+  background: linear-gradient(160deg, #101118, #0a0b12) padding-box,
+              linear-gradient(160deg, rgba(235,238,248,0.65), rgba(160,166,184,0.25) 45%, rgba(220,224,238,0.45)) border-box;
+  border: 2px solid transparent;
   box-shadow: 0 26px 26px -18px rgba(7, 9, 26, 0.30);
 }
 .hpos-screen {
@@ -6361,14 +6365,10 @@ main > .hero.hpos-hero:first-child { margin-top: -85px; padding-top: 112px; }
      the product is the only lit object in the frame */
   filter: saturate(0.55) contrast(1.05) brightness(0.7) hue-rotate(-8deg);
 }
-.hpos-scrim {
-  position: absolute; inset: 0; z-index: 0; pointer-events: none;
+.hpos-scrim { position: absolute; inset: 0; z-index: 0;
   background:
-    radial-gradient(58% 52% at 10% 16%, rgba(36,125,255,0.40), transparent 62%),
-    radial-gradient(50% 46% at 82% 4%, rgba(138,10,221,0.34), transparent 64%),
-    radial-gradient(42% 40% at 62% 96%, rgba(255,64,180,0.16), transparent 66%),
-    linear-gradient(97deg, rgba(5,6,16,0.96) 0%, rgba(5,6,16,0.90) 30%, rgba(5,6,16,0.62) 56%, rgba(5,6,16,0.40) 78%, rgba(5,6,16,0.52) 100%),
-    linear-gradient(to bottom, rgba(5,6,16,0.55) 0%, transparent 26%, transparent 70%, rgba(5,6,16,0.72) 100%);
+    linear-gradient(90deg, rgba(5, 6, 18, 0.82) 0%, rgba(5, 6, 18, 0.55) 40%, rgba(4, 5, 16, 0.9) 62%, rgba(3, 4, 14, 0.97) 78%),
+    linear-gradient(to top, rgba(5, 6, 18, 0.9), transparent 40%);
 }
 .hpos-hero .hero-bg { opacity: 0.18; }
 .hpos-hero .hero-glow { display: none; }
@@ -8229,7 +8229,7 @@ a.evc:hover .evc-go { opacity: 1; }
 /* On wide screens the device breaks the container's right edge, which is what makes it
    read as an object in the scene rather than content in a column. The hero clips it. */
 @media (min-width: 1240px) {
-  .hpos-stage { max-width: 800px; margin-right: -72px; }
+  .hpos-stage { max-width: 900px; margin-right: -84px; }
 }
 .hpos-device.is-tilting { will-change: transform; }
 
@@ -10181,3 +10181,55 @@ a.evc:hover .evc-go { opacity: 1; }
   .hpos-stage .hpos-device { margin-right: 218px; }
   .hpos-companion { width: 198px; }
 }
+
+/* rim light with actual presence, and a lit floor under the pair (a pool, not a
+   reflection: reflections were rejected earlier and stay out) */
+.hpos-device { box-shadow: inset 0 1.5px 0 rgba(255, 255, 255, 0.38), inset 1px 0 0 rgba(255,255,255,0.14), 0 70px 100px -42px rgba(2, 2, 16, 0.95); }
+.hpos-stage::after {
+  content: ''; position: absolute; left: 4%; right: -6%; bottom: -46px; height: 90px;
+  z-index: 0; pointer-events: none;
+  background: radial-gradient(52% 100% at 50% 0%, rgba(90, 140, 255, 0.28), transparent 74%);
+  filter: blur(10px);
+}
+
+/* the front camera on the top bezel, landscape orientation */
+.hpos-cam { position: absolute; top: 8px; left: 50%; transform: translateX(-50%);
+  width: 7px; height: 7px; border-radius: 50%; z-index: 4;
+  background: radial-gradient(circle at 35% 35%, #2a3350, #05060c 70%);
+  box-shadow: 0 0 0 1.5px rgba(255,255,255,0.06); }
+/* the screen fills the bezel and clips */
+.hpos-device .hpos-screen { height: 100%; overflow: hidden; border-radius: 14px; }
+
+/* the receipt compresses vertically to live inside 4:3 */
+.hpos-screen .srx-head { padding-block: 10px; }
+.hpos-screen .srx-item { padding-block: 9px; }
+.hpos-screen .srx-cart, .hpos-screen .srx-side { padding-block: 10px; }
+.hpos-screen .srx-row { padding-block: 5px; }
+.hpos-screen .srx-pills { margin-block: 6px; }
+.hpos-screen .srx-total { padding-block: 8px; }
+.hpos-screen .srx-pay { height: 46px; }
+.hpos-screen .srx-body { padding-block: 8px; }
+
+/* 4:3 is shorter than the card this receipt was drawn for, so the two columns own
+   their own height: the item list takes the slack and clips internally, the summary
+   column stays whole so Total and PAY are always on screen. */
+.hpos-screen .srx-body { display: flex; min-height: 0; height: 100%; }
+.hpos-screen .srx-cart { flex: 1 1 auto; min-height: 0; overflow: hidden; display: flex; flex-direction: column; }
+.hpos-screen .srx-items { flex: 1 1 auto; min-height: 0; overflow: hidden; }
+.hpos-screen .srx-side { flex: 0 0 auto; display: flex; flex-direction: column; min-height: 0; }
+.hpos-screen .srx-total { margin-top: auto; }
+.hpos-screen .srx-item { padding-block: 7px; }
+.hpos-screen .srx-row { padding-block: 4px; }
+.hpos-screen .srx-pay { height: 42px; }
+
+/* ---- Receipt fit layer -------------------------------------------------------------
+   The receipt is a fixed-size UI (~620x490 natural); the iPad is a viewport. Rather
+   than cramping the content into 4:3, the fit layer lays out at 122% of the screen
+   box and scales to 0.82, so it renders exactly filling the screen with its own
+   proportions intact, which is what a real device screenshot looks like. */
+.hpos-screen .srx-fit {
+  width: 122%; height: 122%;
+  transform: scale(0.8197); transform-origin: top left;
+  display: flex; flex-direction: column; min-height: 0;
+}
+.hpos-screen .srx-fit .srx-body { flex: 1 1 auto; min-height: 0; }
