@@ -10364,3 +10364,30 @@ a.evc:hover .evc-go { opacity: 1; }
   /* the form leads on narrow screens, where the copy would otherwise push it under the fold */
   .chero-form { order: -1; }
 }
+
+/* ---- Our Story timeline, animated on scroll ------------------------------------------
+   Rows ride the shared reveal observer. The spine draws as the reader moves through
+   the list: the base rail stays faint and a brand-coloured fill grows to --hist-p,
+   which the driver writes. Dots stay grey until their row arrives, then light up.
+   No JS means .hist-live is never added, so the fill sits at full height. */
+.hist-live::after {
+  content: ''; position: absolute; left: 76px; top: 18px; width: 2px;
+  height: calc(var(--hist-p, 1) * (100% - 36px));
+  background: linear-gradient(180deg, var(--brand-blue), var(--brand-purple));
+  box-shadow: 0 0 10px 1px rgba(77, 148, 255, 0.5);
+  transition: height .18s linear;
+}
+.hist-live .hist-year::after {
+  background: var(--border-strong);
+  box-shadow: 0 0 0 4px var(--bg-deep);
+  transition: background .45s ease, box-shadow .45s ease, transform .45s cubic-bezier(0.34, 1.5, 0.55, 1);
+}
+.hist-live .hist-row.in-view .hist-year::after {
+  background: var(--brand-blue);
+  box-shadow: 0 0 0 4px var(--bg-deep), 0 0 12px 2px rgba(77, 148, 255, 0.7);
+  transform: scale(1.18);
+}
+/* the year counts in slightly ahead of its copy */
+.hist-live .hist-row .hist-year { transition: opacity .5s ease; }
+@media (max-width: 760px) { .hist-live::after { left: 5px; } }
+@media (prefers-reduced-motion: reduce) { .hist-live::after { height: calc(100% - 36px); transition: none; } }
