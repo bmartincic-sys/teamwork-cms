@@ -6131,6 +6131,7 @@ main > .hero:first-child { margin-top: -85px; padding-top: 230px; }
 }
 .hpos-device {
   position: relative; z-index: 2; border-radius: 26px; padding: 12px;
+  aspect-ratio: 4 / 3;   /* a real iPad, landscape */
   background: linear-gradient(160deg, rgba(255,255,255,0.13), rgba(255,255,255,0.04)) padding-box,
               linear-gradient(160deg, rgba(255,255,255,0.34), rgba(255,255,255,0.07) 45%, rgba(255,255,255,0.16)) border-box;
   border: 1px solid transparent;
@@ -10139,7 +10140,7 @@ a.evc:hover .evc-go { opacity: 1; }
   filter: drop-shadow(0 22px 26px rgba(3, 2, 18, 0.6));
 }
 /* true side-by-side: the device cedes a full phone column, no overlap at all */
-.hpos-stage .hpos-device { margin-right: 208px; }
+.hpos-stage .hpos-device { margin-right: 158px; }
 /* the caption that states the point of the pairing */
 .hpos-duo {
   position: absolute; left: 50%; bottom: -44px; transform: translateX(-50%);
@@ -10155,9 +10156,95 @@ a.evc:hover .evc-go { opacity: 1; }
 /* between 1240 and 1440 the stage sits nearer the edge, so the phone tucks in */
 @media (max-width: 1439px) {
   .hpos-companion { width: 168px; right: 8px; }
-  .hpos-stage .hpos-device { margin-right: 192px; }
+  .hpos-stage .hpos-device { margin-right: 150px; }
 }
 @media (max-width: 1240px) { .hpos-companion { display: none; } .hpos-stage .hpos-device { margin-right: 0; } }
 
 /* at the narrower side-by-side width, money never wraps mid-amount */
 .srx-row b, .srx-total b { white-space: nowrap; }
+
+/* ---- iPad screen: receipt scaled to fit -------------------------------------------
+   4:3 is shorter than the card the receipt was drawn for, so the receipt keeps its
+   own layout box (no reflow, no truncation) and renders smaller. It is absolute so
+   it cannot drive the device's height, and it renders at ~91% of the screen, which
+   leaves the right strip clear for the phone that overlaps there. */
+.hpos-screen { position: relative; height: 100%; overflow: hidden; }
+.hpos-screen .srx-fit {
+  position: absolute; top: 0; left: 0;
+  width: 122%; height: 122%;
+  transform: scale(0.75); transform-origin: top left;
+  display: flex; flex-direction: column; min-height: 0;
+}
+.hpos-screen .srx-fit .srx-body { flex: 1 1 auto; min-height: 0; }
+
+/* ---- Hero iPhone, over the iPad ---------------------------------------------------
+   A real device rather than a screenshot, so its screen animates like the iPad's. It
+   sits over the iPad's right edge and never crosses into the headline column. */
+.hph {
+  position: absolute; right: 0; bottom: -34px; z-index: 4;
+  width: 194px; aspect-ratio: 9 / 19.5;
+  border-radius: 30px; padding: 7px;
+  background: linear-gradient(160deg, #2b2f3c, #12141d 60%, #23262f);
+  box-shadow: 0 40px 60px -26px rgba(2, 2, 14, 0.9), 0 0 0 1px rgba(255,255,255,0.1);
+}
+.hph-screen {
+  position: relative; height: 100%; border-radius: 24px; overflow: hidden;
+  background: #eef0f5; color: #0b0c12;
+  font-family: -apple-system, BlinkMacSystemFont, var(--font-body), sans-serif;
+  display: flex; flex-direction: column;
+}
+.hph-notch { position: absolute; top: 7px; left: 50%; transform: translateX(-50%);
+  width: 54px; height: 15px; border-radius: 100px; background: #0b0c11; z-index: 5; }
+.hph-status { display: flex; justify-content: space-between; align-items: center;
+  padding: 7px 12px 2px; font-size: 8px; font-weight: 700; }
+.hph-status-r { display: inline-flex; align-items: center; gap: 3px; }
+.hph-sig, .hph-wifi, .hph-batt { display: block; background: #0b0c12; border-radius: 1px; }
+.hph-sig { width: 8px; height: 6px; }
+.hph-wifi { width: 7px; height: 6px; border-radius: 50% 50% 0 0; }
+.hph-batt { width: 13px; height: 6px; border-radius: 2px; }
+.hph-body { flex: 1 1 auto; min-height: 0; padding: 4px 10px 0; display: flex; flex-direction: column; }
+.hph-chip { align-self: flex-start; font-size: 7.5px; font-weight: 600; padding: 3px 7px;
+  border-radius: 100px; background: #fff; color: #3c3c43; }
+.hph-brand { margin: 6px auto 0; font-size: 12px; font-weight: 800; letter-spacing: -0.02em; color: #0a72e8; }
+.hph-sun { width: 26px; height: 26px; margin: 5px auto 3px; border-radius: 50%; border: 1.5px solid #3b3f4a; }
+.hph-greet { text-align: center; font-size: 11px; font-weight: 700; line-height: 1.25; margin-bottom: 7px; }
+.hph-card { display: grid; grid-template-columns: 1fr auto; gap: 1px 6px;
+  padding: 6px 8px; margin-bottom: 5px; border-radius: 7px; background: #fff;
+  box-shadow: 0 1px 2px rgba(10,12,26,0.06); opacity: 0; transform: translateY(5px); }
+.hph-k { font-size: 7.5px; font-weight: 700; }
+.hph-a { font-size: 7.5px; font-weight: 700; color: #0a72e8; }
+.hph-v { grid-column: 1 / -1; display: inline-flex; align-items: center; gap: 4px;
+  font-size: 8.5px; font-weight: 700; color: #16a34a; }
+.hph-tick { width: 8px; height: 8px; border-radius: 50%; background: #16a34a; flex: none; }
+.hph-cta { margin: auto 0 8px; border: 0; width: 100%; height: 24px; border-radius: 100px;
+  background: #0a84ff; color: #fff; font-size: 9px; font-weight: 800; letter-spacing: 0.04em;
+  font-family: inherit; }
+.hph-tabs { flex: none; display: flex; justify-content: space-between; gap: 2px;
+  padding: 4px 6px 7px; background: rgba(255,255,255,0.9); }
+.hph-tabs span { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 1px;
+  font-size: 5.5px; font-weight: 600; color: #6b6b76; }
+.hph-tabs span i { font-size: 11px; font-style: normal; }
+.hph-tabs span.is-on { color: #0a84ff; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .hph-c1 { animation: hph-land 7s ease-in-out infinite; }
+  .hph-c2 { animation: hph-land 7s ease-in-out .5s infinite; }
+  .hph-cta { animation: hph-pulse 7s ease-in-out infinite; }
+}
+@keyframes hph-land {
+  0%, 6% { opacity: 0; transform: translateY(5px); }
+  14%, 88% { opacity: 1; transform: none; }
+  100% { opacity: 0; transform: translateY(5px); }
+}
+@keyframes hph-pulse {
+  0%, 30% { background: #0a84ff; }
+  42% { background: #2b95ff; }
+  50%, 100% { background: #0a84ff; }
+}
+@media (prefers-reduced-motion: reduce) { .hph-card { opacity: 1; transform: none; } }
+
+@media (max-width: 1439px) { .hph { width: 176px; right: 8px; } }
+@media (max-width: 1240px) { .hph { width: 152px; right: 6px; bottom: -26px; }
+  .hpos-stage .hpos-device { margin-right: 120px; } }
+@media (max-width: 900px) { .hph { display: none; }
+  .hpos-stage .hpos-device { margin-right: 0; } }
