@@ -10306,12 +10306,17 @@ a.evc:hover .evc-go { opacity: 1; }
 /* Our Story. The year pins to the left and ticks over as entries scroll past it,
    so the reader feels the clock moving rather than reading a column of dates.
    Fails open: with no JS the first year shows and the spine sits full. */
-.hist { max-width: 940px; margin: 0 auto; display: grid; grid-template-columns: 190px minmax(0, 1fr); gap: 46px; }
+.hist { max-width: 940px; margin: 0 auto; display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 46px; }
 .hist-rail { position: relative; }
 .hist-stage { position: sticky; top: 38vh; text-align: right; }
+/* The gradient is clipped to the text, so the box MUST cover every glyph: a full-width
+   block let the last digit fall outside the background and render transparent. Sizing to
+   max-content fixes that, and the padding covers ink the negative tracking pulls past
+   the final advance. */
 .hist-now {
   font-family: var(--font-body); font-size: clamp(54px, 6.6vw, 84px); font-weight: 700;
   line-height: 1; letter-spacing: -0.05em; font-variant-numeric: tabular-nums;
+  width: max-content; max-width: 100%; margin-left: auto; padding-right: 0.07em;
   background: var(--gradient); -webkit-background-clip: text; background-clip: text;
   -webkit-text-fill-color: transparent;
 }
