@@ -8018,11 +8018,22 @@ main > .hero.hpos-hero:first-child { margin-top: -85px; padding-top: 112px; }
    picture of the stand says that faster than a paragraph. Every card is the same 4:3
    crop, so the grid holds its rhythm regardless of how the source photo was shot. */
 
-.evy { margin-bottom: 88px; }
+.evy { margin-bottom: 120px; }
 .evy:last-child { margin-bottom: 0; }
-.evy-head { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; }
+/* Each year pins under the nav (85px) and rides along while its own shows scroll
+   past, then the next year pushes it out: the archive reads as moving through
+   chapters rather than as one continuous grid. */
+.evy-head {
+  position: sticky; top: 96px; z-index: 20;
+  display: flex; align-items: center; gap: 18px;
+  margin-bottom: 30px; padding: 13px 24px 14px;
+  border-radius: 18px;
+  background: color-mix(in srgb, var(--accent, #4D94FF) 17%, var(--bg-deep));
+  border: 1px solid var(--accent-line, var(--border));
+  box-shadow: 0 20px 44px -26px rgba(0, 0, 0, 0.95);
+}
 .evy-year {
-  margin: 0; font-size: 42px; font-weight: 700; line-height: 1;
+  margin: 0; font-size: 54px; font-weight: 700; line-height: 1;
   letter-spacing: -0.04em; font-variant-numeric: tabular-nums; color: var(--text);
   display: flex; align-items: center; gap: 14px;
 }
@@ -8039,7 +8050,7 @@ main > .hero.hpos-hero:first-child { margin-top: -85px; padding-top: 112px; }
   background: var(--accent-soft, rgba(77, 148, 255, 0.12));
   border: 1px solid var(--accent-line, var(--border));
 }
-.evy-rule { flex: 1 1 auto; height: 1px; background: linear-gradient(90deg, var(--accent-line, var(--border)), transparent); }
+.evy-rule { display: none; }
 
 .evy-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 26px; }
 
@@ -8104,10 +8115,10 @@ a.evc:hover .evc-go { opacity: 1; }
 @media (max-width: 1000px) { .evy-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 640px) {
   .evy-grid { grid-template-columns: 1fr; gap: 20px; }
-  .evy-year { font-size: 32px; gap: 11px; }
+  .evy-year { font-size: 38px; gap: 11px; }
   .evy-year::before { width: 9px; height: 9px; }
-  .evy-head { gap: 12px; margin-bottom: 22px; }
-  .evy { margin-bottom: 58px; }
+  .evy-head { gap: 12px; margin-bottom: 22px; padding: 11px 18px 12px; top: 92px; }
+  .evy { margin-bottom: 76px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .evc, .evc-media img, .evc-go { transition: none; }
