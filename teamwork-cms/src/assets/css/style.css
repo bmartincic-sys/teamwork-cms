@@ -10343,7 +10343,9 @@ a.evc:hover .evc-go { opacity: 1; }
   box-shadow: 0 0 10px 1px rgba(77, 148, 255, 0.5);
   transition: height 0.18s linear;
 }
-.hist-item { position: relative; padding: 0 0 54px; }
+/* one spacing value for every entry: the rhythm should be steady, and the extra
+   room gives each year time to sit while it is the current one */
+.hist-item { position: relative; padding: 0 0 68px; }
 .hist-item:last-child { padding-bottom: 0; }
 /* pull the dot back out of the gutter so its centre lands on the spine at x=1 */
 .hist-item::before {
@@ -10381,7 +10383,7 @@ a.evc:hover .evc-go { opacity: 1; }
     background: var(--gradient); -webkit-background-clip: text; background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-  .hist-item { padding-bottom: 40px; }
+  .hist-item { padding-bottom: 46px; }
   .hist-item::before { top: 5px; }
   .hist-item.reveal { transform: translateY(16px); }
 }
