@@ -10308,7 +10308,7 @@ a.evc:hover .evc-go { opacity: 1; }
    Fails open: with no JS the first year shows and the spine sits full. */
 .hist { max-width: 940px; margin: 0 auto; display: grid; grid-template-columns: 190px minmax(0, 1fr); gap: 46px; }
 .hist-rail { position: relative; }
-.hist-stage { position: sticky; top: 38vh; display: flex; flex-direction: column; align-items: flex-end; gap: 12px; }
+.hist-stage { position: sticky; top: 38vh; text-align: right; }
 .hist-now {
   font-family: var(--font-body); font-size: clamp(54px, 6.6vw, 84px); font-weight: 700;
   line-height: 1; letter-spacing: -0.05em; font-variant-numeric: tabular-nums;
@@ -10321,11 +10321,6 @@ a.evc:hover .evc-go { opacity: 1; }
   60% { opacity: 1; }
   100% { opacity: 1; transform: none; }
 }
-.hist-count {
-  font-size: 11px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase;
-  color: var(--text-muted); padding-right: 3px;
-}
-.hist-count b { color: var(--brand-blue); font-weight: 700; }
 
 /* the entries, threaded on a spine that fills as the reader descends */
 /* --hist-lp is the one source of truth for the gutter: the spine is positioned

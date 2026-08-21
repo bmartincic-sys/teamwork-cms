@@ -17,7 +17,6 @@
         list: list,
         items: [].slice.call(el.querySelectorAll('.hist-item')),
         now: el.querySelector('.hist-now'),
-        count: el.querySelector('.hist-count b'),
         active: -1
       };
     }).filter(Boolean);
@@ -59,7 +58,6 @@
             t.now.classList.add('is-turning');
           }
         }
-        if (t.count) { t.count.textContent = String(idx + 1); }
       });
     }
     /* Coalesce to a frame, but never depend on one arriving: a paused or throttled
