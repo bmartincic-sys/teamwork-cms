@@ -3680,7 +3680,7 @@ a.tm-day-win:hover i { transform: translateX(2px); }
   background: var(--bg-deep); border: 1px solid var(--border);
 }
 .prail-head { max-width: 720px; margin-bottom: 26px; }
-.prail-title { font-size: clamp(24px, 2.6vw, 34px); font-weight: 600; letter-spacing: -0.03em; margin: 10px 0 8px; color: var(--text); }
+.prail-title { font-size: clamp(24px, 2.6vw, 34px); font-weight: 600; letter-spacing: -0.03em; margin: 0 0 8px; color: var(--text); }
 .prail-sub { font-size: 14.5px; line-height: 1.6; color: var(--text-muted); margin: 0; }
 .prail-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
 .prail-chip {
