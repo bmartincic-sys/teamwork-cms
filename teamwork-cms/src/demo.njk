@@ -43,96 +43,8 @@ permalink: "/demo/"
           <p>Four fields to get started. Everything below them is optional and only helps us come prepared.</p>
         </div>
 
-        <form name="demo-request" method="POST" action="/thanks/" data-netlify="true" netlify-honeypot="bot-field">
-          <input type="hidden" name="form-name" value="demo-request">
-          <p hidden><label>Leave this empty: <input name="bot-field"></label></p>
-
-          <div class="dfx-row">
-            <div class="dfx-field">
-              <label for="dfx-first">First name *</label>
-              <input id="dfx-first" type="text" name="first_name" required placeholder="Jane">
-            </div>
-            <div class="dfx-field">
-              <label for="dfx-last">Last name *</label>
-              <input id="dfx-last" type="text" name="last_name" required placeholder="Smith">
-            </div>
-          </div>
-
-          <div class="dfx-row">
-            <div class="dfx-field">
-              <label for="dfx-email">Work email *</label>
-              <input id="dfx-email" type="email" name="work_email" required placeholder="jane@company.com">
-            </div>
-            <div class="dfx-field">
-              <label for="dfx-company">Company *</label>
-              <input id="dfx-company" type="text" name="company" required placeholder="Your company">
-            </div>
-          </div>
-
-          <details class="dfx-more">
-            <summary>Add detail so we can come prepared <span>optional</span></summary>
-
-            <div class="dfx-row">
-              <div class="dfx-field">
-                <label for="dfx-role">Role</label>
-                <input id="dfx-role" type="text" name="job_title" placeholder="VP of Retail">
-              </div>
-              <div class="dfx-field">
-                <label for="dfx-phone">Phone</label>
-                <input id="dfx-phone" type="tel" name="phone" placeholder="+1 (555) 000-0000">
-              </div>
-            </div>
-
-            <div class="dfx-row">
-              <div class="dfx-field">
-                <label for="dfx-stores">Stores in scope</label>
-                <select id="dfx-stores" name="store_count">
-                  <option value="">Select&hellip;</option>
-                  <option>1&ndash;50</option>
-                  <option>51&ndash;200</option>
-                  <option>201&ndash;500</option>
-                  <option>501&ndash;1,000</option>
-                  <option>1,000+</option>
-                </select>
-              </div>
-              <div class="dfx-field">
-                <label for="dfx-industry">Industry</label>
-                <select id="dfx-industry" name="industry">
-                  <option value="">Select&hellip;</option>
-                  <option>Fashion &amp; apparel</option>
-                  <option>Luxury</option>
-                  <option>Footwear</option>
-                  <option>Jewelry &amp; watches</option>
-                  <option>Museums &amp; cultural</option>
-                  <option>Pet retail</option>
-                  <option>Stadiums &amp; venues</option>
-                  <option>Other</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="dfx-field">
-              <span class="dfx-legend">What would you like to see?</span>
-              <div class="dfx-checks">
-                <label><input type="checkbox" name="interest" value="Mobile POS"> Mobile POS</label>
-                <label><input type="checkbox" name="interest" value="RFID"> RFID &amp; self-checkout</label>
-                <label><input type="checkbox" name="interest" value="Order Management"> Order management</label>
-                <label><input type="checkbox" name="interest" value="Inventory Control"> Inventory control</label>
-                <label><input type="checkbox" name="interest" value="121 Commerce (AI)"> AI at the point of sale</label>
-                <label><input type="checkbox" name="interest" value="Analytics"> Analytics &amp; reporting</label>
-              </div>
-            </div>
-
-            <div class="dfx-field">
-              <label for="dfx-msg">Anything specific we should cover?</label>
-              <textarea id="dfx-msg" name="message" rows="3" placeholder="Current stack, timeline, the workflow that keeps breaking&hellip;"></textarea>
-            </div>
-          </details>
-
-          <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; justify-content: center; margin-top: 8px;">Request a demo <i class="ti ti-arrow-right"></i></button>
-          <p class="dfx-fine">By submitting, you agree to our <a href="/privacy-policy/">Privacy Policy</a>. Prefer email? <a href="mailto:sales@teamworkcommerce.com">sales@teamworkcommerce.com</a></p>
-          <input type="hidden" name="source" id="dfx-source" value="">
-        </form>
+        <script src="https://js.hsforms.net/forms/embed/50295934.js" defer></script>
+        <div class="hs-form-frame" data-region="na1" data-form-id="8cb1e7a4-1518-41b3-8611-9a195587d09f" data-portal-id="50295934"></div>
       </div>
     </div>
   </div>
@@ -201,31 +113,4 @@ permalink: "/demo/"
 
 {% include "security.njk" %}
 
-<script>
-(function () {
-  // The event CTAs on /events/ arrive with ?ref=<slug>. Prefill the message so a
-  // "book a meeting at our stand" click does not land on an empty form, and record the
-  // slug in a hidden field so the submission says which show it came from. Unknown or
-  // absent values leave the form exactly as it was.
-  var CONTEXT = {
-    "nrf-2027": "I would like to book a meeting with your team at NRF 2027, Booth #6156.",
-    "nrf-europe-2026": "I would like to book a meeting at your stand at NRF Europe 2026, Stand I-050.",
-    "events": "I would like to book a meeting with your team at an upcoming retail event.",
-    "events-updates": "Please keep me posted on which retail events your team will be attending."
-  };
 
-  var ref = new URLSearchParams(window.location.search).get("ref");
-  if (!ref) return;
-
-  var source = document.getElementById("dfx-source");
-  if (source) source.value = ref;
-
-  var msg = document.getElementById("dfx-msg");
-  if (msg && !msg.value && CONTEXT[ref]) {
-    msg.value = CONTEXT[ref];
-    // The optional block is collapsed by default, so open it or the prefill is invisible.
-    var more = msg.closest("details");
-    if (more) more.open = true;
-  }
-})();
-</script>
