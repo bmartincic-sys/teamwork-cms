@@ -37,6 +37,10 @@ permalink: "/demo/"
         </div>
       </div>
 
+      <!-- The /events/ CTAs still arrive with ?ref=<slug>. The fields now live in a
+           cross-origin HubSpot iframe, so nothing on this page can prefill them:
+           to capture the slug again, add a hidden field to the HubSpot form and
+           turn on query-string prefill for it. -->
       <div class="demox-formwrap" id="request">
         <div class="demox-formhead">
           <h2>Request your session</h2>
