@@ -10426,7 +10426,10 @@ a.evc:hover .evc-go { opacity: 1; }
 .chero-form.is-embed {
   padding: 0; background: none; border: 0; box-shadow: none; border-radius: 0;
 }
-.chero-form.is-embed .hs-form-frame { min-height: 620px; }
-@media (max-width: 980px) {
-  .chero-form.is-embed .hs-form-frame { min-height: 680px; }
+
+
+/* Same as the contact hero: the HubSpot form brings its own card, heading and
+   footnote, so the wrapper drops its chrome rather than framing it twice. */
+.demox-formwrap.is-embed {
+  padding: 0; background: none; border: 0; box-shadow: none; border-radius: 0;
 }
