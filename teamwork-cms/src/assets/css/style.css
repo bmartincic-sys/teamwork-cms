@@ -10460,3 +10460,9 @@ h1, h2, h3,
 .slotx-copy h1 {
   font-family: var(--font-display);
 }
+
+
+/* Three anchor figures instead of five. Fewer numbers, each carrying more. */
+.specs-row-3 { grid-template-columns: repeat(3, 1fr); max-width: none; margin-top: 0; gap: 28px; }
+.specs-row-3 .spec-big { font-size: clamp(34px, 4.2vw, 62px); }
+@media (max-width: 760px) { .specs-row-3 { grid-template-columns: 1fr; gap: 30px; } }
