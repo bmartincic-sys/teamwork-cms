@@ -10115,7 +10115,12 @@ a.evc:hover .evc-go { opacity: 1; }
   backdrop-filter: blur(8px);
 }
 .hpos-duo i { font-size: 14px; color: #6aa6ff; }
-@media (max-width: 1240px) { .hpos-duo { display: none; } }
+/* The phone cannot fit beside the iPad on a narrow screen, but the caption still
+   tells the iPhone and iPad story, so it stays and simply sits under the device. */
+@media (max-width: 1240px) {
+  /* transform must be reset too, or the base translateX(-50%) shifts it off centre */
+  .hpos-duo { position: static; transform: none; display: flex; width: max-content; margin: 16px auto 0; }
+}
 /* between 1240 and 1440 the stage sits nearer the edge, so the phone tucks in */
 @media (max-width: 1439px) {
   .hpos-companion { width: 168px; right: 8px; }
