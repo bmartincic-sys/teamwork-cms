@@ -10490,3 +10490,10 @@ h1, h2, h3,
   .switch-list li { padding: 24px 0; }
   .switch-turn { font-size: 19px; }
 }
+
+
+/* Rollout, compressed. The five numbered steps were both a card grid and a
+   1-2-3 sequence, two of the patterns the review flagged. */
+.rollout-brief { max-width: 820px; margin: 0 auto; text-align: center; }
+.rollout-brief .section-title { margin-bottom: 16px; }
+.rollout-brief p { margin: 0 auto 26px; font-size: 16.5px; line-height: 1.65; color: var(--text-muted); max-width: 700px; }
