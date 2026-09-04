@@ -10430,6 +10430,7 @@ a.evc:hover .evc-go { opacity: 1; }
 
 /* Same as the contact hero: the HubSpot form brings its own card, heading and
    footnote, so the wrapper drops its chrome rather than framing it twice. */
+.lead-formwrap.is-embed,
 .tev-formwrap.is-embed,
 .demox-formwrap.is-embed {
   padding: 0; background: none; border: 0; box-shadow: none; border-radius: 0;
