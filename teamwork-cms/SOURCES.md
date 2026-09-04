@@ -44,6 +44,7 @@ where known.
 | 900+ orders, 1,100+ units, +14% / +26% / +21%, 18 days | platform/oms | supplied directly by Teamwork, August 2026; retailer anonymised at their request |
 | 5,000+ store count | about | added when About was rebuilt from the live site (commit c5e69cd) |
 | 39+ omnichannel workflows | platform/mobile-pos | supplied directly by Teamwork, September 2026; needs sign-off |
+| 32s checkout with RFID vs 85s without; 53s saved per transaction; 15 hrs per 1,000 | platform/rfid | EXO, supplied by Teamwork September 2026. The 53s and 15 hrs are arithmetic on the first two figures (85-32=53; 53x1,000=14.7h). Needs sign-off on the EXO citation |
 | 2,500+ stores / 25+ markets at a single customer | platform/scalability | commit 4c25022, origin not recorded, needs sign-off |
 | 100K+ daily / 500K+ weekly orders, 98%+ fill rate | platform/oms | commit 4e6083e, origin not recorded, needs sign-off |
 | 93% of transactions through Club Petco | solutions/pet-goods | origin not recorded, needs sign-off |
