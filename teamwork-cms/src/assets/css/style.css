@@ -2801,7 +2801,7 @@ main[data-vertical] .tm-day-step::before { background: var(--v-accent); box-shad
 main[data-vertical] .tm-day-ico { color: var(--v-accent); background: color-mix(in srgb, var(--v-accent) 12%, transparent); }
 main[data-vertical] .tm-day-time { color: var(--v-accent); }
 main[data-vertical] a.tm-day-win { color: color-mix(in srgb, var(--v-accent) 75%, #fff); background: color-mix(in srgb, var(--v-accent) 12%, transparent); border-color: color-mix(in srgb, var(--v-accent) 32%, transparent); }
-main[data-vertical] .tm-day::before { background: linear-gradient(180deg, transparent, color-mix(in srgb, var(--v-accent) 40%, transparent) 6%, color-mix(in srgb, var(--v-accent) 40%, transparent) 94%, transparent); }
+main[data-vertical] .tm-day::before { background: transparent; }
 main[data-vertical] .proof-tag { color: color-mix(in srgb, var(--v-accent) 78%, #fff); background: color-mix(in srgb, var(--v-accent) 14%, transparent); }
 main[data-vertical] .proof-card:hover { border-color: color-mix(in srgb, var(--v-accent) 50%, transparent); }
 main[data-vertical] .proof-icp i { color: var(--v-accent); }
@@ -3920,7 +3920,7 @@ a.tm-day-win:hover i { transform: translateX(2px); }
 .dashw-cal i { height: 9px; border-radius: 3px; background: color-mix(in srgb, var(--_c) 14%, transparent); }
 .dashw-cal i.on { background: color-mix(in srgb, var(--_c) 80%, transparent); }
 .dashw-hbars { flex-direction: column; align-items: stretch; justify-content: center; gap: 7px; }
-.dashw-hbars i { height: 8px; border-radius: 4px; background: linear-gradient(90deg, color-mix(in srgb, var(--_c) 85%, transparent), color-mix(in srgb, var(--_c) 35%, transparent)); }
+.dashw-hbars i { height: 8px; border-radius: 4px; background: transparent; }
 .dashw {
   padding: 18px 18px 16px; border-radius: 12px;
   background: var(--bg-deep); border: 1px solid var(--border);
@@ -3948,7 +3948,7 @@ a.tm-day-win:hover i { transform: translateX(2px); }
 .dashw-bars i:nth-child(7) { height: 74%; opacity: .8; }
 .dashw-donut {
   width: 40px; height: 40px; border-radius: 50%; flex: none;
-  background: conic-gradient(var(--_c) 0 62%, color-mix(in srgb, var(--_c) 25%, transparent) 62% 87%, var(--border) 87%);
+  background: transparent;
   -webkit-mask: radial-gradient(circle, transparent 11px, #000 12px);
   mask: radial-gradient(circle, transparent 11px, #000 12px);
 }
@@ -9400,17 +9400,13 @@ a.evc:hover .evc-go { opacity: 1; }
      for AI, Plus and CTAs. Plain declaration first as the color-mix fallback. */
   position: relative;
   background: var(--bg-deep);
-  background:
-    radial-gradient(70% 55% at 50% 0%, var(--accent-glow, rgba(77,148,255,0.20)), transparent 70%),
-    color-mix(in srgb, var(--accent, #4D94FF) 13%, var(--bg-deep));
+  background: color-mix(in srgb, var(--accent, #4D94FF) 13%, var(--bg-deep));
   border-top: 2px solid var(--accent-strong, var(--accent, var(--border)));
   border-bottom: 1px solid var(--accent-line, var(--border));
 }
 [data-theme="light"] .sunk {
   background: var(--bg-deep);
-  background:
-    radial-gradient(70% 55% at 50% 0%, var(--accent-glow-l, rgba(36,125,255,0.10)), transparent 70%),
-    color-mix(in srgb, var(--accent, #247DFF) 7%, var(--bg-deep));
+  background: color-mix(in srgb, var(--accent, #247DFF) 7%, var(--bg-deep));
 }
 .ac-blue    { --accent-glow: rgba(77, 148, 255, 0.22);  --accent-glow-l: rgba(36, 125, 255, 0.11);  --accent-strong: rgba(77, 148, 255, 0.75); }
 .ac-royal   { --accent-glow: rgba(110, 144, 255, 0.22); --accent-glow-l: rgba(0, 61, 255, 0.09);    --accent-strong: rgba(110, 144, 255, 0.75); }
@@ -9686,16 +9682,10 @@ a.evc:hover .evc-go { opacity: 1; }
 
 /* the band glow doubles: top wash plus a low corner answer, both single-hue */
 .sunk {
-  background:
-    radial-gradient(70% 55% at 50% 0%, var(--accent-glow, rgba(77,148,255,0.20)), transparent 70%),
-    radial-gradient(52% 44% at 88% 100%, var(--accent-glow, rgba(77,148,255,0.20)), transparent 72%),
-    color-mix(in srgb, var(--accent, #4D94FF) 13%, var(--bg-deep));
+  background: color-mix(in srgb, var(--accent, #4D94FF) 13%, var(--bg-deep));
 }
 [data-theme="light"] .sunk {
-  background:
-    radial-gradient(70% 55% at 50% 0%, var(--accent-glow-l, rgba(36,125,255,0.10)), transparent 70%),
-    radial-gradient(52% 44% at 88% 100%, var(--accent-glow-l, rgba(36,125,255,0.10)), transparent 72%),
-    color-mix(in srgb, var(--accent, #247DFF) 7%, var(--bg-deep));
+  background: color-mix(in srgb, var(--accent, #247DFF) 7%, var(--bg-deep));
 }
 
 /* inside a band, the components carry the colour too: cards take the accent edge,
@@ -9796,15 +9786,11 @@ a.evc:hover .evc-go { opacity: 1; }
    glow from the top, with the border a full-strength accent. Light mode carries a
    solid 14 percent tint. Text stays the theme's own, which reads on both. */
 .padv-card, .mini-card, .bento-card, .statcard, .pillar, .proof-card, .evc, .past-card, .off-card, .ben-item, .lms-col, .init-card, .cpil, .sv-card, .intg-card, .rfp-card, .rev-fact {
-  background:
-    radial-gradient(120% 90% at 50% 0%, var(--cac-soft, rgba(77,148,255,0.2)), transparent 62%),
-    color-mix(in srgb, var(--cac, #4D94FF) 30%, var(--bg-elevated));
+  background: color-mix(in srgb, var(--cac, #4D94FF) 30%, var(--bg-elevated));
   border-color: color-mix(in srgb, var(--cac, #4D94FF) 62%, transparent);
 }
 [data-theme="light"] .padv-card, [data-theme="light"] .mini-card, [data-theme="light"] .bento-card, [data-theme="light"] .statcard, [data-theme="light"] .pillar, [data-theme="light"] .proof-card, [data-theme="light"] .evc, [data-theme="light"] .past-card, [data-theme="light"] .off-card, [data-theme="light"] .ben-item, [data-theme="light"] .lms-col, [data-theme="light"] .init-card, [data-theme="light"] .cpil, [data-theme="light"] .sv-card, [data-theme="light"] .intg-card, [data-theme="light"] .rfp-card, [data-theme="light"] .rev-fact {
-  background:
-    linear-gradient(180deg, color-mix(in srgb, var(--cac, #247DFF) 20%, transparent), transparent 70%),
-    color-mix(in srgb, var(--cac, #247DFF) 14%, var(--bg-elevated));
+  background: color-mix(in srgb, var(--cac, #247DFF) 14%, var(--bg-elevated));
   border-color: color-mix(in srgb, var(--cac, #247DFF) 45%, transparent);
 }
 /* muted copy brightens a step so it holds on the richer ground */
@@ -9829,15 +9815,11 @@ a.evc:hover .evc-go { opacity: 1; }
 .evt:nth-child(4n), .tm-day-card:nth-child(4n), .security-badge:nth-child(4n), .capcol:nth-child(4n), .rev-step:nth-child(4n), .cside-card:nth-child(4n), .blog-card:nth-child(4n):not(.featured) {
   --cac: #6E90FF; --cac-soft: rgba(110, 144, 255, 0.2); }
 .evt, .tm-day-card, .security-badge, .capcol, .rev-step, .cside-card, .blog-card:not(.featured) {
-  background:
-    radial-gradient(120% 90% at 50% 0%, var(--cac-soft, rgba(77,148,255,0.2)), transparent 62%),
-    color-mix(in srgb, var(--cac, #4D94FF) 30%, var(--bg-elevated));
+  background: color-mix(in srgb, var(--cac, #4D94FF) 30%, var(--bg-elevated));
   border-color: color-mix(in srgb, var(--cac, #4D94FF) 62%, transparent);
 }
 [data-theme="light"] .evt, [data-theme="light"] .tm-day-card, [data-theme="light"] .security-badge, [data-theme="light"] .capcol, [data-theme="light"] .rev-step, [data-theme="light"] .cside-card, [data-theme="light"] .blog-card:not(.featured) {
-  background:
-    linear-gradient(180deg, color-mix(in srgb, var(--cac, #247DFF) 20%, transparent), transparent 70%),
-    color-mix(in srgb, var(--cac, #247DFF) 14%, var(--bg-elevated));
+  background: color-mix(in srgb, var(--cac, #247DFF) 14%, var(--bg-elevated));
   border-color: color-mix(in srgb, var(--cac, #247DFF) 45%, transparent);
 }
 
@@ -9938,9 +9920,7 @@ a.evc:hover .evc-go { opacity: 1; }
    renders in white instead. Group headings on the frame keep the hue, since they are
    the row's label rather than a box. */
 .dashw {
-  background:
-    radial-gradient(120% 90% at 50% 0%, color-mix(in srgb, var(--_c) 26%, transparent), transparent 64%),
-    color-mix(in srgb, var(--_c) 34%, var(--bg-deep));
+  background: color-mix(in srgb, var(--_c) 34%, var(--bg-deep));
   border-color: color-mix(in srgb, var(--_c) 62%, transparent);
 }
 .dashw:hover { border-color: color-mix(in srgb, var(--_c) 85%, transparent); }
@@ -9962,9 +9942,7 @@ a.evc:hover .evc-go { opacity: 1; }
 .dashw-chips span { color: #fff; background: rgba(255, 255, 255, 0.16); }
 /* light theme: same vivid boxes; the innards are already white */
 [data-theme="light"] .dashw {
-  background:
-    radial-gradient(120% 90% at 50% 0%, color-mix(in srgb, var(--_c) 30%, transparent), transparent 64%),
-    color-mix(in srgb, var(--_c) 78%, #ffffff);
+  background: color-mix(in srgb, var(--_c) 78%, #ffffff);
 }
 
 /* ---- Customer Results, inverted ---------------------------------------------------
@@ -9974,9 +9952,7 @@ a.evc:hover .evc-go { opacity: 1; }
    figures, bars, chips and icons inside all render in white. */
 .omsr-lead {
   border-color: rgba(77, 148, 255, 0.62);
-  background:
-    radial-gradient(120% 90% at 50% 0%, rgba(77, 148, 255, 0.26), transparent 64%),
-    color-mix(in srgb, #4D94FF 34%, var(--bg-deep));
+  background: color-mix(in srgb, #4D94FF 34%, var(--bg-deep));
 }
 .omsr-big-val { color: #ffffff; }
 .omsr-big-lab { color: #ffffff; }
@@ -9984,9 +9960,7 @@ a.evc:hover .evc-go { opacity: 1; }
 
 .omsr-uplift {
   border-color: rgba(155, 123, 255, 0.62);
-  background:
-    radial-gradient(120% 90% at 50% 0%, rgba(155, 123, 255, 0.26), transparent 64%),
-    color-mix(in srgb, #9B7BFF 34%, var(--bg-deep));
+  background: color-mix(in srgb, #9B7BFF 34%, var(--bg-deep));
 }
 .omsr-uplift-head { color: rgba(255, 255, 255, 0.85); }
 .omsr-bar-val { color: #ffffff; }
@@ -9999,9 +9973,7 @@ a.evc:hover .evc-go { opacity: 1; }
 
 .omsr-stat {
   border-color: color-mix(in srgb, var(--omsr-ac, #4D94FF) 62%, transparent);
-  background:
-    radial-gradient(120% 90% at 50% 0%, color-mix(in srgb, var(--omsr-ac, #4D94FF) 26%, transparent), transparent 64%),
-    color-mix(in srgb, var(--omsr-ac, #4D94FF) 34%, var(--bg-deep));
+  background: color-mix(in srgb, var(--omsr-ac, #4D94FF) 34%, var(--bg-deep));
 }
 .omsr-stat::before { background: rgba(255, 255, 255, 0.55); }
 .omsr-stat strong { color: #ffffff; }
@@ -10011,19 +9983,13 @@ a.evc:hover .evc-go { opacity: 1; }
 
 /* light theme: same vivid boxes; the white innards already read */
 [data-theme="light"] .omsr-lead {
-  background:
-    radial-gradient(120% 90% at 50% 0%, rgba(36, 125, 255, 0.3), transparent 64%),
-    color-mix(in srgb, #247DFF 78%, #ffffff);
+  background: color-mix(in srgb, #247DFF 78%, #ffffff);
 }
 [data-theme="light"] .omsr-uplift {
-  background:
-    radial-gradient(120% 90% at 50% 0%, rgba(124, 80, 245, 0.3), transparent 64%),
-    color-mix(in srgb, #7C50F5 78%, #ffffff);
+  background: color-mix(in srgb, #7C50F5 78%, #ffffff);
 }
 [data-theme="light"] .omsr-stat {
-  background:
-    radial-gradient(120% 90% at 50% 0%, color-mix(in srgb, var(--omsr-ac, #247DFF) 30%, transparent), transparent 64%),
-    color-mix(in srgb, var(--omsr-ac, #247DFF) 78%, #ffffff);
+  background: color-mix(in srgb, var(--omsr-ac, #247DFF) 78%, #ffffff);
 }
 [data-theme="light"] .omsr-uplift-head,
 [data-theme="light"] .omsr-avg i { color: rgba(255, 255, 255, 0.9); }
@@ -10451,3 +10417,43 @@ a.evc:hover .evc-go { opacity: 1; }
 }
 .nav-cta .btn-primary:hover,
 .nav-mobile-cta .btn-primary:hover { background: var(--brand-royal); }
+
+
+/* Gradient reduced to the places it earns: gradient text, AI and Plus
+   surfaces, and the primary CTA. The decorative glow layer is off. */
+.hero-devices-glow,
+.shot-glow,
+.shot-glow::after,
+.plus-callout .innov-glow-1,
+.plus-callout .innov-glow-2,
+.midcta-glow,
+.innov-glow-1,
+.innov-glow-2,
+.caps-media-glow,
+.pfh-band-glow,
+.padv-glow-1,
+.padv-glow-2,
+.lead-glow,
+main[data-vertical] .padv-glow-1,
+main[data-vertical] .padv-glow-2,
+main[data-vertical] .tm-band-glow,
+.tm-band-glow,
+.globe-halo,
+.edge-glow-1,
+.edge-glow-2,
+.hero-glow::before,
+.hero-glow::after,
+.emx-glow,
+.hpos-aur-1,
+.hpos-aur-2,
+.hpos-bootveil { background: none; }
+
+
+/* Card and tile fills flattened to solid surfaces: the colour stays, the
+   gradient goes. Gradient text is deliberately excluded here, since a solid
+   background behind background-clip:text would hide the words. */
+.bento-card, .cs-card, .blog-card, .duo-card { background: var(--bg-elevated); }
+.statband .container > .specs-row { background: var(--bg-elevated); }
+.duo-img, .inc-visual { background: var(--bg-deep); }
+.bento-badge { background: var(--brand-blue); }
+.rollout-steps::before { background: var(--border); }
