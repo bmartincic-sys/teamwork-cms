@@ -58,7 +58,7 @@ module.exports = [
       "How often can cycle counts run without disrupting trade?",
       "How are receiving, transfers and adjustments handled on the shop floor?",
       "How quickly does a sale, return or transfer reflect in available-to-sell?",
-      "How does the system handle serialised inventory, and to what granularity?",
+      "How does the system handle serialized inventory, and to what granularity?",
       "What reporting exists for shrink, and how is it attributed?",
       "How is allocation and replenishment decided, and can we override it by store?"
     ]
@@ -70,9 +70,9 @@ module.exports = [
     blurb:
       "The scenarios that break systems are the ones that cross channels. Push for the failure cases, not the happy path.",
     questions: [
-      "Which fulfilment models are supported natively: ship-from-store, click and collect, ship to store, endless aisle?",
+      "Which fulfillment models are supported natively: ship-from-store, click and collect, ship to store, endless aisle?",
       "How is the fulfilling location chosen, and can we configure that logic ourselves?",
-      "What happens when a store cannot fulfil a picked order?",
+      "What happens when a store cannot fulfill a picked order?",
       "Can a customer return an online order to any store, and how is the refund handled?",
       "How are partial shipments and multi-location orders presented to the customer?",
       "What does the associate actually do when an order lands in their store?",

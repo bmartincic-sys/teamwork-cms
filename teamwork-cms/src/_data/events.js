@@ -189,7 +189,7 @@ const EVENTS = [
     region: "Europe",
     photo: "forum-retail-2025.webp",
     link: "https://www.teamworkcommerce.com/forum-retail/",
-    body: "The 25th edition of Italy's largest retail innovation and networking event, organised by iKN. Two days of keynotes, panels and hubs with the CEOs and innovators shaping Italian retail.",
+    body: "The 25th edition of Italy's largest retail innovation and networking event, organized by iKN. Two days of keynotes, panels and hubs with the CEOs and innovators shaping Italian retail.",
   },
   {
     name: "Chicago Dinner, Shoptalk Fall",
@@ -269,7 +269,7 @@ const EVENTS = [
     stand: "#D46",
     photo: "netcomm-forum-2025.webp",
     link: "https://www.teamworkcommerce.com/netcomm-forum-2025/",
-    body: "Italy's leading digital commerce forum, at Booth #D46. We ran the platform in Italian on the stand, which tends to end the localisation conversation quickly.",
+    body: "Italy's leading digital commerce forum, at Booth #D46. We ran the platform in Italian on the stand, which tends to end the localization conversation quickly.",
   },
   {
     name: "Retail Technology Show 2025",
@@ -314,7 +314,7 @@ const EVENTS = [
     stand: "Hall 10 / E24",
     photo: "eurocis-2025.webp",
     link: "https://www.teamworkcommerce.com/eurocis-2025/",
-    body: "Europe's leading retail technology trade fair. Hall 10, Stand E24, and a steady stream of German and Benelux retailers asking hard questions about fiscal compliance. Our favourite kind.",
+    body: "Europe's leading retail technology trade fair. Hall 10, Stand E24, and a steady stream of German and Benelux retailers asking hard questions about fiscal compliance. Our favorite kind.",
   },
 
   // ---------- 2024 ----------
