@@ -43,6 +43,7 @@ where known.
 | 30,000+ terminals, 40+ countries, 100+ integrations, 150+ reports, 99.9%, 99.99%, 30s, $300K, 20 min, 118 Petco stores, 2,000+ Petco terminals, 250 InnovaSport stores, 22% per-cap | various | in the original content drop, commit bd54a7a, 9 July 2026 |
 | 900+ orders, 1,100+ units, +14% / +26% / +21%, 18 days | platform/oms | supplied directly by Teamwork, August 2026; retailer anonymised at their request |
 | 5,000+ store count | about | added when About was rebuilt from the live site (commit c5e69cd) |
+| 39+ omnichannel workflows | platform/mobile-pos | supplied directly by Teamwork, September 2026; needs sign-off |
 | 2,500+ stores / 25+ markets at a single customer | platform/scalability | commit 4c25022, origin not recorded, needs sign-off |
 | 100K+ daily / 500K+ weekly orders, 98%+ fill rate | platform/oms | commit 4e6083e, origin not recorded, needs sign-off |
 | 93% of transactions through Club Petco | solutions/pet-goods | origin not recorded, needs sign-off |
