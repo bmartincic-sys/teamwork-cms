@@ -13,7 +13,7 @@
   --panel: #ffffff;
   --text: #07091a;
   --text-muted: #5a6478;
-  --text-faint: #8a93a6;
+  --text-faint: #646e82;
   --text-inverse: #ffffff;
   --border: rgba(7, 9, 26, 0.08);
   --border-strong: rgba(7, 9, 26, 0.16);
@@ -53,7 +53,7 @@
   --panel: #0f1228;
   --text: #ffffff;
   --text-muted: #9ba8c0;
-  --text-faint: #6b7589;
+  --text-faint: #7b8599;
   --text-inverse: #07091a;
   --border: rgba(255, 255, 255, 0.08);
   --border-strong: rgba(255, 255, 255, 0.16);
@@ -708,7 +708,7 @@ a { color: inherit; text-decoration: none; }
 /* The Plus callout interior is dark in both themes. Re-apply dark-theme tokens in light mode */
 [data-theme="light"] .plus-callout-inner {
   --bg: #07091a; --bg-deep: #050717; --bg-elevated: #0f1228; --panel: #0f1228;
-  --text: #ffffff; --text-muted: #9ba8c0; --text-faint: #6b7589; --text-inverse: #07091a;
+  --text: #ffffff; --text-muted: #9ba8c0; --text-faint: #7b8599; --text-inverse: #07091a;
   --border: rgba(255, 255, 255, 0.08); --border-strong: rgba(255, 255, 255, 0.16);
   --brand-blue: #4D94FF; --brand-text: #80B0FF; --brand-soft: rgba(77, 148, 255, 0.12);
   color: var(--text);
@@ -10439,4 +10439,14 @@ a.evc:hover .evc-go { opacity: 1; }
 .tev-formwrap.is-embed,
 .demox-formwrap.is-embed {
   padding: 0; background: none; border: 0; box-shadow: none; border-radius: 0;
+}
+
+
+/* Reduced motion: 35 of the looping animations had no explicit escape here.
+   Capping the iteration count stops everything looping forever while still
+   letting a one-shot entrance animation finish, which killing the duration
+   outright would not: anything animating itself from opacity 0 would stay
+   invisible. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-iteration-count: 1 !important; }
 }
