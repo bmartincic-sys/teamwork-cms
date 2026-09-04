@@ -10440,3 +10440,14 @@ a.evc:hover .evc-go { opacity: 1; }
 .demox-formwrap.is-embed {
   padding: 0; background: none; border: 0; box-shadow: none; border-radius: 0;
 }
+
+
+/* Nav CTA in the main brand blue rather than the gradient. */
+.nav-cta .btn-primary,
+.nav-mobile-cta .btn-primary {
+  background: var(--brand-blue);
+  border-color: transparent;
+  text-shadow: none;
+}
+.nav-cta .btn-primary:hover,
+.nav-mobile-cta .btn-primary:hover { background: var(--brand-royal); }
