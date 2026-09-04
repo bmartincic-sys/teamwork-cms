@@ -40,8 +40,8 @@
 
   --radius: 10px;
   --radius-lg: 14px;
-  --font-body: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
-  --font-display: -apple-system, BlinkMacSystemFont, 'IBM Plex Sans', 'Inter', sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-display: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
   --font-mono: 'IBM Plex Mono', 'JetBrains Mono', monospace;
   --max-w: 1280px;
 }
@@ -10449,4 +10449,14 @@ a.evc:hover .evc-go { opacity: 1; }
    invisible. */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-iteration-count: 1 !important; }
+}
+
+
+/* Display face on headings, body face on prose. Both weights headings use (600
+   and 700) are loaded for IBM Plex Sans, so nothing is synthesised. The two
+   title elements that are not headings are named explicitly. */
+h1, h2, h3,
+.midcta-title,
+.slotx-copy h1 {
+  font-family: var(--font-display);
 }
