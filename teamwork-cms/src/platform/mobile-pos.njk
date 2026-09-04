@@ -336,8 +336,33 @@ stickyHref: "/demo/"
   </div>
 </section>
 
+<!-- ============ PLATFORM HIGHLIGHTS (horizontal, flashy) ============ -->
+<section class="pfh-band">
+  <div class="pfh-band-glow"></div>
+  <div class="container">
+    <div class="pfh-row">
+      <div class="pfh-col">
+        <div class="pfh-big">iOS Native</div>
+        <div class="pfh-desc">Not a web wrapper: 100% native iOS for speed, security, and responsiveness.</div>
+      </div>
+      <div class="pfh-col">
+        <div class="pfh-big">Open APIs</div>
+        <div class="pfh-desc">Platform-agnostic. Any e-commerce, any payment processor, any ERP. No lock-in.</div>
+      </div>
+      <div class="pfh-col">
+        <div class="pfh-big">&lt;5 min</div>
+        <div class="pfh-desc">Associate training. The UI follows familiar iOS design patterns your team already knows.</div>
+      </div>
+      <div class="pfh-col">
+        <div class="pfh-big">150+</div>
+        <div class="pfh-desc">Pre-configured reports in <a href="/platform/analytics/">Analytics</a>. Live multi-store monitoring, custom KPIs, and unified inventory health.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============ 121 COMMERCE: AI ON THE SALES FLOOR ============ -->
-<section class="section aix aix-band">
+<section class="section aix aix-band" id="121-commerce">
   <div class="container">
     <div class="aix-head">
       <span class="aix-badge"><i class="ti ti-sparkles aix-spark"></i> 121 Commerce &middot; AI on the Sales Floor</span>
@@ -599,12 +624,12 @@ stickyHref: "/demo/"
     <div class="feature-row">
       <div class="feature-text">
         <span class="section-eyebrow">Extensibility &amp; APIs</span>
-        <h2>Custom workflows through open APIs, without forking the POS.</h2>
+        <h2>Custom workflows through open APIs, without changing the core POS.</h2>
         <p>Custom external APIs and logic overlays streamline workflows specific to your business without altering the core POS codebase, so a bespoke process doesn't become a bespoke build.</p>
         <ul class="feature-bullets">
           <li>Custom services integrate through external APIs, leaving the core untouched</li>
-          <li>Demonstrated with a computer-vision service that recognizes a decorated configuration, a shoe with multiple distinct accessories, from a camera snapshot, matches the current price matrix, and drops the items straight into the cart</li>
-          <li>The interface itself is configurable: module sequence, order, and exposure are set per retailer</li>
+          <li>One example: a computer-vision service photographs a customized product, such as a shoe with several accessories fitted, identifies each item, looks up its price, and adds the whole set to the sale</li>
+          <li>Which modules appear on screen, and in what order, is configured per retailer rather than coded</li>
           <li>Runs as a native application on both iPad and iPhone</li>
         </ul>
         <a href="/platform/integrations/" class="btn btn-primary">Integrations &amp; APIs <i class="ti ti-arrow-right"></i></a>
@@ -622,31 +647,6 @@ stickyHref: "/demo/"
 
 {% include "roi-bento.njk" %}
 
-<!-- ============ PLATFORM HIGHLIGHTS (horizontal, flashy) ============ -->
-<section class="pfh-band">
-  <div class="pfh-band-glow"></div>
-  <div class="container">
-    <div class="pfh-row">
-      <div class="pfh-col">
-        <div class="pfh-big">iOS Native</div>
-        <div class="pfh-desc">Not a web wrapper: 100% native iOS for speed, security, and responsiveness.</div>
-      </div>
-      <div class="pfh-col">
-        <div class="pfh-big">Open APIs</div>
-        <div class="pfh-desc">Platform-agnostic. Any e-commerce (Salesforce, Adobe, BigCommerce), any payment processor, any ERP. No lock-in.</div>
-      </div>
-      <div class="pfh-col">
-        <div class="pfh-big">&lt;5 min</div>
-        <div class="pfh-desc">Associate training. The UI follows familiar iOS design patterns your team already knows. Virtually zero learning curve.</div>
-      </div>
-      <div class="pfh-col">
-        <div class="pfh-big">150+</div>
-        <div class="pfh-desc">Pre-configured reports in <a href="/platform/analytics/">Analytics</a>. Live multi-store monitoring, custom KPIs, and unified inventory health.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ============ PARTNER ADVANTAGE ============ -->
 <section class="padv-showcase">
   <div class="padv-glow padv-glow-1"></div>
@@ -663,7 +663,7 @@ stickyHref: "/demo/"
         <div class="padv-badge"><i class="ti ti-history"></i></div>
         <div class="padv-kicker">01 · Experience</div>
         <h3>30+ years of retail DNA</h3>
-        <p>Decades of retail-specific operational expertise, not a startup learning your industry on your dime.</p>
+        <p>Decades of retail operational expertise, not a startup learning your industry on your dime.</p>
       </div>
       <div class="padv-card">
         <div class="padv-badge"><i class="ti ti-rocket"></i></div>
@@ -675,7 +675,7 @@ stickyHref: "/demo/"
         <div class="padv-badge"><i class="ti ti-headset"></i></div>
         <div class="padv-kicker">03 · Support</div>
         <h3>Dedicated experts, not a queue</h3>
-        <p>Direct access to retail technology professionals who know your setup and your business logic, real people who pick up.</p>
+        <p>Direct access to retail technology professionals who know your setup and your business logic. Real people who pick up.</p>
       </div>
     </div>
 
@@ -692,8 +692,7 @@ stickyHref: "/demo/"
 <section class="section cs-section">
   <div class="container">
     <span class="ch-eyebrow">Case Studies</span>
-    <h2 class="ch-title ch-title-sm">Retailers running this POS today.</h2>
-    <p class="ch-para">Not renders, not demos, the actual point of sale running in these stores.</p>
+    <h2 class="ch-title ch-title-sm">Retailers using Teamwork Commerce today.</h2>
   </div>
 
   {% include "case-study-rail.njk" %}
@@ -716,7 +715,7 @@ stickyHref: "/demo/"
           Why is Teamwork Commerce the preferred POS for global enterprise retail?
           <span class="faq-icon"><i class="ti ti-plus"></i></span>
         </button>
-        <div class="faq-answer"><p>Teamwork Commerce is a natively global, end-to-end enterprise retail platform that unifies POS, inventory management, RFID, shipping/receiving, pricing, promotions, and loyalty within a single codebase. This eliminates vendor sprawl while enabling fiscal compliance in 40+ countries. Unlike competitors that require third-party middleware for RFID or separate regional vendors for compliance, Teamwork delivers everything in one integrated iOS-native system.</p></div>
+        <div class="faq-answer"><p>Teamwork Commerce is an enterprise retail platform built for global operations. It unifies POS, inventory management, RFID, shipping/receiving, pricing, promotions, and loyalty within a single codebase. This eliminates vendor sprawl while enabling fiscal compliance in 40+ countries. Unlike competitors that require third-party middleware for RFID or separate regional vendors for compliance, Teamwork delivers everything in one integrated iOS-native system.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
@@ -737,28 +736,28 @@ stickyHref: "/demo/"
           How long does it take to train associates on the POS?
           <span class="faq-icon"><i class="ti ti-plus"></i></span>
         </button>
-        <div class="faq-answer"><p>The design-led iOS interface reduces training time to under 30 minutes. Retailers like the Colorado Rockies have put associates on registers in as little as 5 minutes. The UI follows familiar iOS design patterns your staff already knows, so the learning curve is virtually flat.</p></div>
+        <div class="faq-answer"><p>The design-led iOS interface reduces training time to under 30 minutes. Retailers like the Colorado Rockies have put associates on registers in as little as 5 minutes. The UI follows familiar iOS design patterns your staff already knows.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
           Does the POS support RFID checkout?
           <span class="faq-icon"><i class="ti ti-plus"></i></span>
         </button>
-        <div class="faq-answer"><p>Yes. Teamwork Commerce offers the industry's only native end-to-end RFID stack, no third-party middleware. RFID-enabled checkout processes entire baskets in seconds without line-of-sight scanning. Next-gen self-checkout kiosks auto-detect items. The system delivers 99.9% inventory accuracy with integrated EAS loss prevention.</p></div>
+        <div class="faq-answer"><p>Yes. Teamwork Commerce offers the industry's only native end-to-end RFID stack, no third-party middleware. RFID-enabled checkout processes entire baskets in seconds without line-of-sight scanning. Next generation self-checkout kiosks auto-detect items. The system delivers 99.9% inventory accuracy with integrated EAS loss prevention.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
           How does this compare to other unified commerce POS platforms?
           <span class="faq-icon"><i class="ti ti-plus"></i></span>
         </button>
-        <div class="faq-answer"><p>Unlike NewStore (mobile-first but no native RFID), New Black EVA (unified commerce but requires third-party RFID integrations), and Cegid (strong in Europe but limited AI capabilities), Teamwork Commerce uniquely combines iOS-native architecture, AI woven into product and customer intelligence at the point of sale (branded 121 Commerce), the industry's only native end-to-end RFID stack, and 30+ years of retail DNA, all in one system with 99.99% uptime across 40+ countries.</p></div>
+        <div class="faq-answer"><p>NewStore is mobile-first but has no native RFID. New Black EVA offers unified commerce but requires third-party RFID integrations. Cegid is strong in Europe but limited on AI. Teamwork Commerce combines iOS-native architecture, <a href="#121-commerce" style="color: var(--brand-text);">121 Commerce</a> AI bringing product and customer intelligence to the point of sale, the industry's only native end-to-end RFID stack, and 30+ years of retail DNA, in one system with 99.99% uptime across 40+ countries.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
           How does this compare to an e-commerce-first POS for enterprise retail?
           <span class="faq-icon"><i class="ti ti-plus"></i></span>
         </button>
-        <div class="faq-answer"><p>Shopify POS is built for high-volume DTC and SMB retail, with point of sale as an extension of its e-commerce platform. Teamwork Commerce is built the other way, POS first, for the physical store, with native end-to-end RFID, offline resilience via Store-and-Forward, and 121 Commerce AI built in. For enterprise retailers running fiscal compliance across 40+ countries and RFID-driven inventory accuracy, Teamwork Commerce is purpose-built for that scale; Shopify POS is purpose-built for fast-growing DTC brands.</p></div>
+        <div class="faq-answer"><p>Shopify POS is built for high-volume DTC and SMB retail, with point of sale as an extension of its e-commerce platform. Teamwork Commerce is built the other way, POS first, for the physical store, with native end-to-end RFID, offline resilience via Store-and-Forward, and 121 Commerce AI built in. It connects to whichever e-commerce platform you run, so online orders, BOPIS, ship-from-store, and cross-channel returns all resolve against one inventory count and one customer record. For enterprise retailers running fiscal compliance across 40+ countries and RFID-driven inventory accuracy, Teamwork Commerce is purpose-built for that scale; Shopify POS is purpose-built for fast-growing DTC brands.</p></div>
       </div>
     </div>
   </div>
@@ -776,8 +775,6 @@ stickyHref: "/demo/"
   </div>
 </section>
 
-
-
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -788,7 +785,7 @@ stickyHref: "/demo/"
       "name": "Why is Teamwork Commerce the preferred POS for global enterprise retail?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Teamwork Commerce is a natively global, end-to-end enterprise retail platform that unifies POS, inventory management, RFID, shipping/receiving, pricing, promotions, and loyalty within a single codebase. This eliminates vendor sprawl while enabling fiscal compliance in 40+ countries. Unlike competitors that require third-party middleware for RFID or separate regional vendors for compliance, Teamwork delivers everything in one integrated iOS-native system."
+        "text": "Teamwork Commerce is an enterprise retail platform built for global operations. It unifies POS, inventory management, RFID, shipping/receiving, pricing, promotions, and loyalty within a single codebase. This eliminates vendor sprawl while enabling fiscal compliance in 40+ countries. Unlike competitors that require third-party middleware for RFID or separate regional vendors for compliance, Teamwork delivers everything in one integrated iOS-native system."
       }
     },
     {
@@ -812,7 +809,7 @@ stickyHref: "/demo/"
       "name": "How long does it take to train associates on the POS?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The design-led iOS interface reduces training time to under 30 minutes. Retailers like the Colorado Rockies have put associates on registers in as little as 5 minutes. The UI follows familiar iOS design patterns your staff already knows, so the learning curve is virtually flat."
+        "text": "The design-led iOS interface reduces training time to under 30 minutes. Retailers like the Colorado Rockies have put associates on registers in as little as 5 minutes. The UI follows familiar iOS design patterns your staff already knows."
       }
     },
     {
@@ -820,7 +817,7 @@ stickyHref: "/demo/"
       "name": "Does the POS support RFID checkout?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. Teamwork Commerce offers the industry's only native end-to-end RFID stack, no third-party middleware. RFID-enabled checkout processes entire baskets in seconds without line-of-sight scanning. Next-gen self-checkout kiosks auto-detect items. The system delivers 99.9% inventory accuracy with integrated EAS loss prevention."
+        "text": "Yes. Teamwork Commerce offers the industry's only native end-to-end RFID stack, no third-party middleware. RFID-enabled checkout processes entire baskets in seconds without line-of-sight scanning. Next generation self-checkout kiosks auto-detect items. The system delivers 99.9% inventory accuracy with integrated EAS loss prevention."
       }
     },
     {
@@ -828,7 +825,7 @@ stickyHref: "/demo/"
       "name": "How does this compare to other unified commerce POS platforms?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Unlike NewStore (mobile-first but no native RFID), New Black EVA (unified commerce but requires third-party RFID integrations), and Cegid (strong in Europe but limited AI capabilities), Teamwork Commerce uniquely combines iOS-native architecture, AI woven into product and customer intelligence at the point of sale (branded 121 Commerce), the industry's only native end-to-end RFID stack, and 30+ years of retail DNA, all in one system with 99.99% uptime across 40+ countries."
+        "text": "NewStore is mobile-first but has no native RFID. New Black EVA offers unified commerce but requires third-party RFID integrations. Cegid is strong in Europe but limited on AI. Teamwork Commerce combines iOS-native architecture, 121 Commerce AI bringing product and customer intelligence to the point of sale, the industry's only native end-to-end RFID stack, and 30+ years of retail DNA, in one system with 99.99% uptime across 40+ countries."
       }
     },
     {
@@ -836,7 +833,7 @@ stickyHref: "/demo/"
       "name": "How does this compare to an e-commerce-first POS for enterprise retail?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Shopify POS is built for high-volume DTC and SMB retail, with point of sale as an extension of its e-commerce platform. Teamwork Commerce is built the other way, POS first, for the physical store, with native end-to-end RFID, offline resilience via Store-and-Forward, and 121 Commerce AI built in. For enterprise retailers running fiscal compliance across 40+ countries and RFID-driven inventory accuracy, Teamwork Commerce is purpose-built for that scale; Shopify POS is purpose-built for fast-growing DTC brands."
+        "text": "Shopify POS is built for high-volume DTC and SMB retail, with point of sale as an extension of its e-commerce platform. Teamwork Commerce is built the other way, POS first, for the physical store, with native end-to-end RFID, offline resilience via Store-and-Forward, and 121 Commerce AI built in. It connects to whichever e-commerce platform you run, so online orders, BOPIS, ship-from-store, and cross-channel returns all resolve against one inventory count and one customer record. For enterprise retailers running fiscal compliance across 40+ countries and RFID-driven inventory accuracy, Teamwork Commerce is purpose-built for that scale; Shopify POS is purpose-built for fast-growing DTC brands."
       }
     }
   ]
