@@ -10671,3 +10671,55 @@ main[data-vertical] .tm-band-glow,
 [data-theme="light"] .duo-tags .t-plus {
   background: rgba(55, 48, 163, 0.09); color: #3730a3; border-color: rgba(55, 48, 163, 0.30);
 }
+
+
+/* The flip card puts the tile last, and a fixed aspect ratio left it short of
+   the card's full height once the grid stretched all three to match, which is
+   the white strip under the blue. Let the tile take the remaining space and
+   centre the sleds inside it. */
+.duo-card-flip .duo-img {
+  aspect-ratio: auto;
+  flex: 1 1 auto;
+  min-height: 230px;
+  align-items: center;
+}
+.duo-card-flip .duo-img img {
+  width: 100%; height: 100%;
+  object-fit: contain;
+  object-position: center;
+  padding: 18px 24px;
+}
+
+
+/* Second row: the operational numbers sit under the three headline readings,
+   smaller and on one line, so all six are present without six equal columns
+   competing for the same attention. */
+.innum-sub {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  margin-top: 34px; padding-top: 26px;
+  border-top: 1px solid var(--border);
+}
+.innum-subcol {
+  display: flex; align-items: baseline; gap: 10px;
+  padding: 0 34px; position: relative;
+}
+.innum-subcol:first-child { padding-left: 0; }
+.innum-subcol + .innum-subcol::before {
+  content: ""; position: absolute; left: 0; top: 1px; bottom: 1px; width: 1px;
+  background: var(--border);
+}
+.innum-subfig {
+  font-family: var(--font-display); font-size: 24px; font-weight: 600;
+  letter-spacing: -0.03em; color: var(--brand-text); flex: 0 0 auto;
+}
+.innum-subcap { font-size: 13px; line-height: 1.4; color: var(--text-faint); }
+
+/* And let the standard duo cards absorb their leftover height, which was
+   showing as a strip under the third card. */
+.duo-card .duo-body { flex: 1 1 auto; }
+
+@media (max-width: 860px) {
+  .innum-sub { grid-template-columns: 1fr; gap: 14px; }
+  .innum-subcol { padding: 0; }
+  .innum-subcol + .innum-subcol::before { display: none; }
+}
