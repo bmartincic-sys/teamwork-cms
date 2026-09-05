@@ -10781,3 +10781,53 @@ main[data-vertical] .tm-band-glow,
   .fan-bubble, .hpos-annot, .hpos-chip-pay { background: var(--bg-elevated); }
   .evy-head { background: color-mix(in srgb, var(--accent, #4D94FF) 17%, var(--bg-deep)); }
 }
+
+
+/* The accent card's paragraph was losing to a later .bento-card p rule at the
+   same specificity, so dark body text was sitting on the blue gradient.
+   Raised above it and pinned to white. */
+.bento-card.bento-accent p { color: rgba(255, 255, 255, 0.88); }
+.bento-card.bento-accent h3 { color: #ffffff; }
+
+/* Retail, not abstract: a real store sits behind the gradient so the numbers
+   are grounded in a shop floor rather than floating on brand colour. */
+.bento-card.bento-accent {
+  background:
+    linear-gradient(150deg, rgba(18, 63, 176, 0.95) 0%, rgba(31, 106, 224, 0.92) 35%, rgba(107, 63, 224, 0.94) 100%),
+    url("/assets/images/homepage/hero-store.jpg") center / cover no-repeat;
+}
+
+/* "Your stores could be next" as a real store behind glass, so the fourth
+   tile belongs to the rail of store photographs instead of interrupting it
+   with a flat blue block. */
+.cs-card.cs-card-more {
+  background:
+    linear-gradient(180deg, rgba(10, 30, 84, 0.30) 0%, rgba(10, 30, 84, 0.72) 100%),
+    url("/assets/images/homepage/hero-store.jpg") center / cover no-repeat;
+  border-color: rgba(255, 255, 255, 0.20);
+}
+.cs-card-more .cs-more-inner {
+  margin: auto 12px 12px;
+  padding: 18px 18px 20px;
+  border-radius: 16px;
+  background: rgba(12, 34, 92, 0.34);
+  backdrop-filter: saturate(190%) blur(16px);
+  -webkit-backdrop-filter: saturate(190%) blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.34),
+    0 12px 28px -18px rgba(0, 0, 0, 0.7);
+}
+@supports not (backdrop-filter: blur(1px)) {
+  .cs-card-more .cs-more-inner { background: rgba(12, 34, 92, 0.82); }
+}
+
+
+/* The badge went solid blue in the gradient pass but kept dark text, which
+   left it barely readable. White on it, and the icon with it. */
+.bento-badge { color: #ffffff; }
+.bento-badge i { color: #ffffff; }
+
+
+/* Gradient stops deepened: white body text on the old blue end was 3.85:1.
+   Every stop now clears 4.5 against white (5.00 at the lightest). */
