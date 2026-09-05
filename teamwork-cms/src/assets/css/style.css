@@ -17,6 +17,9 @@
      watcher in base.njk. 0 once it is dismissed, and 0 if the CMP never
      loads, so the hero falls back to filling the viewport on its own. */
   --cmp-h: 0px;
+  /* The accent purple, kept out of the blue rotation. The ramp is blue now,
+     so this is for the few places that want a deliberate purple. */
+  --brand-violet: #7C50F5;
   --bg-deep: #eef2f8;
   --bg-elevated: #ffffff;
   --bg-inverse: #07091a;
@@ -10918,16 +10921,23 @@ main[data-vertical] .tm-band-glow,
 
 /* buttons that hold up on footage: solid white, and an outlined companion */
 .vhero-btn {
-  background: #ffffff; color: #0b1020; border: 1px solid #ffffff;
+  /* #0b57d0 rather than --brand-blue: white on #247DFF is 3.85:1, and a 15px
+     bold label is not large text, so it would miss AA. This is 6.4:1 and is
+     already the solid blue the nav CTA uses. */
+  background: #0b57d0; color: #ffffff; border: 1px solid #0b57d0;
   font-weight: 700; text-shadow: none;
 }
-.vhero-btn:hover { background: #ffffff; transform: translateY(-2px); }
-.vhero-btn i { color: #0b1020; }
+.vhero-btn:hover {
+  background: #0a4cb8; border-color: #0a4cb8; transform: translateY(-2px);
+}
+.vhero-btn i { color: #ffffff; }
 .vhero-btn-out {
   background: transparent; color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.55); font-weight: 600;
+  border: 1.5px solid var(--brand-violet); font-weight: 600;
 }
-.vhero-btn-out:hover { background: rgba(255, 255, 255, 0.12); border-color: #ffffff; }
+.vhero-btn-out:hover {
+  background: rgba(124, 80, 245, 0.20); border-color: #9679ff;
+}
 
 @media (max-width: 900px) {
   .vhero-veil {
