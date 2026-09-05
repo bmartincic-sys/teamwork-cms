@@ -6,16 +6,16 @@
    Accent 2:   #8A0ADD  (Magenta)
    ===================================================== */
 :root {
-  --bg: #ffffff;
-  --bg-deep: #f4f6fb;
+  --bg: #f7f9fc;
+  --bg-deep: #eef2f8;
   --bg-elevated: #ffffff;
   --bg-inverse: #07091a;
   --panel: #ffffff;
   --text: #07091a;
   --text-muted: #5a6478;
-  --text-faint: #8a93a6;
+  --text-faint: #5d6678;
   --text-inverse: #ffffff;
-  --border: rgba(7, 9, 26, 0.08);
+  --border: rgba(7, 9, 26, 0.12);
   --border-strong: rgba(7, 9, 26, 0.16);
 
   --brand-blue: #247DFF;
@@ -53,7 +53,7 @@
   --panel: #0f1228;
   --text: #ffffff;
   --text-muted: #9ba8c0;
-  --text-faint: #6b7589;
+  --text-faint: #7b8599;
   --text-inverse: #07091a;
   --border: rgba(255, 255, 255, 0.08);
   --border-strong: rgba(255, 255, 255, 0.16);
@@ -708,7 +708,7 @@ a { color: inherit; text-decoration: none; }
 /* The Plus callout interior is dark in both themes. Re-apply dark-theme tokens in light mode */
 [data-theme="light"] .plus-callout-inner {
   --bg: #07091a; --bg-deep: #050717; --bg-elevated: #0f1228; --panel: #0f1228;
-  --text: #ffffff; --text-muted: #9ba8c0; --text-faint: #6b7589; --text-inverse: #07091a;
+  --text: #ffffff; --text-muted: #9ba8c0; --text-faint: #7b8599; --text-inverse: #07091a;
   --border: rgba(255, 255, 255, 0.08); --border-strong: rgba(255, 255, 255, 0.16);
   --brand-blue: #4D94FF; --brand-text: #80B0FF; --brand-soft: rgba(77, 148, 255, 0.12);
   color: var(--text);
@@ -10457,3 +10457,18 @@ main[data-vertical] .tm-band-glow,
 .duo-img, .inc-visual { background: var(--bg-deep); }
 .bento-badge { background: var(--brand-blue); }
 .rollout-steps::before { background: var(--border); }
+
+
+/* Light mode contrast. #247DFF is a fine brand colour but fails WCAG AA both
+   ways at body size: white on it is 3.85:1 and it is 3.85:1 on white. In light
+   mode, solid blue fills go darker and blue text uses --brand-text, which is
+   already accessible. Dark mode is unaffected. */
+[data-theme="light"] .btn-primary,
+[data-theme="light"] .nav-cta .btn-primary,
+[data-theme="light"] .nav-mobile-cta .btn-primary,
+[data-theme="light"] .rollout-num,
+[data-theme="light"] .bento-badge { background: #0b57d0; }
+[data-theme="light"] .counter,
+[data-theme="light"] .spec-big,
+[data-theme="light"] .vs-us { color: var(--brand-text); }
+[data-theme="light"] .padv-kicker { color: #9b30d0; }
