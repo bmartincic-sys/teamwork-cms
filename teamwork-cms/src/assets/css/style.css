@@ -12,7 +12,7 @@
      from these so the logo rail's bottom edge lands on the bottom of the
      viewport whatever the screen. Keep them in step with .nav and .logos. */
   --nav-h: 84px;
-  --logos-h: 119px;
+  --logos-h: 83px;
   /* The accent purple, kept out of the blue rotation. The ramp is blue now,
      so this is for the few places that want a deliberate purple. */
   --brand-violet: #7C50F5;
@@ -431,6 +431,8 @@ a { color: inherit; text-decoration: none; }
 
 /* ============ LOGOS ============ */
 .logos { padding: 26px 0 16px; border-bottom: 1px solid var(--border); overflow: hidden; }
+/* The shared rail carries no label, but the solutions pages each write their
+   own vertical-specific one. */
 .logos-label {
   font-size: 11px; color: var(--text-faint); font-weight: 600;
   text-transform: uppercase; letter-spacing: 0.06em; text-align: center;
