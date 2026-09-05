@@ -10690,36 +10690,50 @@ main[data-vertical] .tm-band-glow,
   padding: 18px 24px;
 }
 
-
-/* Second row: the operational numbers sit under the three headline readings,
-   smaller and on one line, so all six are present without six equal columns
-   competing for the same attention. */
-.innum-sub {
-  display: grid; grid-template-columns: repeat(3, 1fr);
-  margin-top: 34px; padding-top: 26px;
-  border-top: 1px solid var(--border);
-}
-.innum-subcol {
-  display: flex; align-items: baseline; gap: 10px;
-  padding: 0 34px; position: relative;
-}
-.innum-subcol:first-child { padding-left: 0; }
-.innum-subcol + .innum-subcol::before {
-  content: ""; position: absolute; left: 0; top: 1px; bottom: 1px; width: 1px;
-  background: var(--border);
-}
-.innum-subfig {
-  font-family: var(--font-display); font-size: 24px; font-weight: 600;
-  letter-spacing: -0.03em; color: var(--brand-text); flex: 0 0 auto;
-}
-.innum-subcap { font-size: 13px; line-height: 1.4; color: var(--text-faint); }
-
 /* And let the standard duo cards absorb their leftover height, which was
    showing as a strip under the third card. */
 .duo-card .duo-body { flex: 1 1 auto; }
 
-@media (max-width: 860px) {
-  .innum-sub { grid-template-columns: 1fr; gap: 14px; }
-  .innum-subcol { padding: 0; }
-  .innum-subcol + .innum-subcol::before { display: none; }
+
+/* Liquid glass on the nav. What makes Apple's version read as glass is not
+   the blur, which everyone copies, but the edge: a specular highlight where
+   light catches the top, the surface seating into the page beneath it, and
+   enough transparency for content to refract through rather than sit behind
+   frosted plastic.
+   Written at the same specificity as the theme rules above, and respecting
+   the existing scroll state: dark keeps its transparent bar over the hero
+   photos and turns to glass once scrolled. */
+[data-theme="light"] .nav,
+[data-theme="dark"] .nav.nav-scrolled {
+  background: color-mix(in srgb, var(--bg) 66%, transparent);
+  backdrop-filter: saturate(200%) blur(30px);
+  -webkit-backdrop-filter: saturate(200%) blur(30px);
+  border-bottom: 0;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.62),
+    inset 0 -1px 0 rgba(7, 9, 26, 0.07),
+    0 8px 26px -16px rgba(7, 9, 26, 0.20);
+}
+[data-theme="dark"] .nav.nav-scrolled {
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.13),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.45),
+    0 8px 26px -16px rgba(0, 0, 0, 0.6);
+}
+
+/* the light falling across the surface */
+[data-theme="light"] .nav::after,
+[data-theme="dark"] .nav.nav-scrolled::after {
+  content: "";
+  position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.40), rgba(255, 255, 255, 0) 62%);
+}
+[data-theme="dark"] .nav.nav-scrolled::after {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0) 62%);
+}
+.nav-inner { position: relative; z-index: 1; }
+
+/* Without backdrop-filter, an opaque bar rather than unreadable text. */
+@supports not (backdrop-filter: blur(1px)) {
+  [data-theme="light"] .nav, [data-theme="dark"] .nav.nav-scrolled { background: var(--bg); }
 }
