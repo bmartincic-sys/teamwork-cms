@@ -10610,3 +10610,64 @@ main[data-vertical] .tm-band-glow,
   .innum-col + .innum-col::before { display: none; }
   .innum-vis { height: 110px; }
 }
+
+
+/* Duo cards. The flattening pass earlier left every tile near-white, which
+   drained the section; the product shots are transparent cut-outs, so a
+   saturated tile reads through them. Each card takes its own colour. */
+.duo-card-ai .duo-img-tile      { background: #ddd0ff; }
+.duo-card-flip .duo-img-tile    { background: #cbe0ff; }
+.duo-grid .duo-card:last-child .duo-img-tile { background: #d5dcff; }
+
+/* The middle card was letterboxed: contain plus side padding left the sled
+   shot floating in its tile. It fills the space now. */
+.duo-card-flip .duo-img-tile { padding: 0; }
+.duo-card-flip .duo-img img { object-fit: cover; object-position: center; }
+
+/* Kickers in solid brand colour rather than the washed-out tints. */
+.duo-kicker { color: var(--brand-text); }
+.duo-kicker-ai { color: #7a0bc0; }
+
+
+/* Uptime read as a run of trading days rather than a number repeated twice. */
+.innum-vis-bars {
+  display: flex; align-items: flex-end; justify-content: center;
+  gap: 5px; padding-bottom: 16px;
+}
+.innum-vis-bars span {
+  width: 7px; border-radius: 3px; background: #247DFF; opacity: 0.85;
+  height: 62px;
+}
+.innum-vis-bars span:nth-child(3n)   { height: 74px; }
+.innum-vis-bars span:nth-child(4n+1) { height: 52px; }
+.innum-vis-bars span:nth-child(7)    { height: 40px; opacity: 0.35; }
+.innum-vis-bars span:nth-child(13)   { height: 46px; opacity: 0.35; }
+
+
+/* Cooler, more restrained tiles: the lavender read as pastel. Blues and a
+   steel grey instead, still saturated enough to carry the section. */
+.duo-card-ai .duo-img-tile      { background: #dbe7fb; }
+.duo-card-flip .duo-img-tile    { background: #c8dcf4; }
+.duo-grid .duo-card:last-child .duo-img-tile { background: #e0e5ed; }
+.duo-kicker-ai { color: #3730a3; }
+
+/* The sled shot is 1600x903, so a 16/10.5 tile was cropping the sides under
+   object-fit: cover. Matching the tile to the image's own ratio lets it sit
+   centred and fill edge to edge with nothing cut off. */
+.duo-card-flip .duo-img { aspect-ratio: 16 / 9; }
+.duo-card-flip .duo-img img { object-fit: contain; object-position: center; }
+
+
+/* The Proof: fourth card in brand blue rather than navy. #1A6FF0 is the
+   closest step down from #247DFF that carries white body text at 4.59:1;
+   the brand blue itself only reaches 3.85 and would fail on the label. */
+.cs-card.cs-card-more { background: #1A6FF0; border-color: rgba(255, 255, 255, 0.22); }
+.cs-card-more .cs-more-count {
+  background: none; -webkit-text-fill-color: #ffffff; color: #ffffff;
+}
+.cs-card-more .cs-more-label { color: rgba(255, 255, 255, 0.92); }
+
+/* Cool the remaining magenta pill, which was the last pink in the section. */
+[data-theme="light"] .duo-tags .t-plus {
+  background: rgba(55, 48, 163, 0.09); color: #3730a3; border-color: rgba(55, 48, 163, 0.30);
+}
