@@ -13,6 +13,10 @@
      viewport whatever the screen. Keep them in step with .nav and .logos. */
   --nav-h: 84px;
   --logos-h: 119px;
+  /* Height of the consent bar while it is on screen, written by the CMP
+     watcher in base.njk. 0 once it is dismissed, and 0 if the CMP never
+     loads, so the hero falls back to filling the viewport on its own. */
+  --cmp-h: 0px;
   --bg-deep: #eef2f8;
   --bg-elevated: #ffffff;
   --bg-inverse: #07091a;
@@ -10882,8 +10886,8 @@ main[data-vertical] .tm-band-glow,
   /* Sized so the customer logo rail clears the fold rather than sitting just
      under it: 240px is the nav plus the whole logos block (padding, label,
      marquee), so the strip is on screen the moment the page opens. */
-  min-height: max(380px, calc(100vh - var(--nav-h) - var(--logos-h)));
-  min-height: max(380px, calc(100dvh - var(--nav-h) - var(--logos-h)));
+  min-height: max(380px, calc(100vh - var(--nav-h) - var(--logos-h) - var(--cmp-h, 0px)));
+  min-height: max(380px, calc(100dvh - var(--nav-h) - var(--logos-h) - var(--cmp-h, 0px)));
   display: flex; align-items: center;
   overflow: hidden;
   background: #0b1020;
@@ -11095,5 +11099,6 @@ main[data-vertical] .tm-band-glow,
   .pmod-shot { height: 210px; }
   .pmod-body { padding: 22px 22px 24px; }
 }
+
 
 

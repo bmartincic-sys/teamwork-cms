@@ -150,6 +150,65 @@
 
 <script>
 (function () {
+  /* The homepage hero is sized so the customer logo rail lands on the bottom of
+     the viewport. The Osano consent bar is fixed to that same edge and covers the
+     rail on a first visit, so while the bar is up we publish its height as
+     --cmp-h and the hero gives back exactly that much.
+
+     Fails open in every direction: no CMP, a blocked CDN, a bar that is not
+     bottom-anchored, or a thrown measurement all leave --cmp-h at 0, which is
+     the plain fill-the-viewport layout. */
+  var root = document.documentElement;
+  var last = -1;
+
+  function publish(px) {
+    var v = px > 0 ? Math.round(px) : 0;
+    if (v === last) return;
+    last = v;
+    root.style.setProperty("--cmp-h", v + "px");
+  }
+
+  function measure() {
+    try {
+      var vh = window.innerHeight || 0;
+      var els = document.querySelectorAll(".osano-cm-dialog, .osano-cm-window");
+      var tallest = 0;
+      for (var i = 0; i < els.length; i++) {
+        var r = els[i].getBoundingClientRect();
+        // only a visible bar pinned to the bottom of the window displaces the rail
+        if (!r.height || !r.width) continue;
+        if (r.bottom < vh - 8 || r.top > vh) continue;
+        if (r.height > vh * 0.6) continue;      // a full-screen drawer is not a bar
+        if (r.height > tallest) tallest = r.height;
+      }
+      publish(tallest);
+    } catch (e) {
+      publish(0);
+    }
+  }
+
+  var queued = false;
+  function queue() {
+    if (queued) return;
+    queued = true;
+    // never depend on a frame arriving: a throttled rAF would latch this forever
+    var ran = false;
+    function run() { if (ran) return; ran = true; queued = false; measure(); }
+    requestAnimationFrame(run);
+    setTimeout(run, 120);
+  }
+
+  if (window.MutationObserver) {
+    new MutationObserver(queue).observe(document.body, { childList: true, subtree: true });
+  }
+  window.addEventListener("resize", queue);
+  // the CMP renders on its own schedule, so sample across the first few seconds
+  [0, 300, 900, 2000, 4000].forEach(function (t) { setTimeout(measure, t); });
+})();
+</script>
+
+<script>
+(function () {
   // The footer control is a real link to the cookie section of the privacy policy and
   // only upgrades to the Osano drawer when Osano is actually present. If the CMP is
   // blocked by an extension or its CDN fails, the visitor still gets somewhere useful
