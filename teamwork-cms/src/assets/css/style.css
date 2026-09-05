@@ -8526,7 +8526,7 @@ a.evc:hover .evc-go { opacity: 1; }
 @media (max-width: 900px) { .footer-brand { grid-column: 1 / -1; } }
 
 /* ============ AI SHOWCASE (.aix) ============
-   Shared treatment for the sections about 121 Commerce. AI is the differentiator, so
+   Shared treatment for the sections about AI. AI is the differentiator, so
    these sections get a lit stage instead of a plain two-column row: an aurora behind
    the section, a gradient-edged frame around the screenshot, an aura that sweeps the
    device, and chips that arrive in sequence to suggest the model working. Everything
@@ -9156,7 +9156,7 @@ a.evc:hover .evc-go { opacity: 1; }
 }
 
 /* ============================================================================
-   121 Commerce app screen (.apx)
+   AI app screen (.apx)
    A faithful rebuild of the AI Agent screen from the reference capture: the
    five-icon toolbar with chat active, the question, the sparkle answer, the
    full-bleed two-column result grid with truncated titles and descriptions, the
@@ -11094,7 +11094,9 @@ main[data-vertical] .tm-band-glow,
 /* --- the tall plate --- */
 .pmod-figure {
   position: relative; display: block; overflow: hidden;
-  border-radius: 24px; min-height: 540px;
+  /* Shorter since the copy beside it was cut: the plate sets the row height,
+     so an over-tall one strands the panel CTA below a gap. */
+  border-radius: 24px; min-height: 470px;
   color: #ffffff; text-decoration: none; background: #0b1020;
 }
 .pmod-figure img {

@@ -73,7 +73,7 @@ const EVENTS = [
     region: "Europe",
     photo: "shoptalk-europe-2026.webp",
     link: "https://50295934.hs-sites.com/shoptalk-europe-2026",
-    body: "Barcelona brought together thousands of retail innovators to shape the future of commerce, and we were there for every conversation. Our team connected with the people driving the industry forward, talking Enterprise POS, OMS, RFID self-checkout, and 121 Commerce throughout the three days.",
+    body: "Barcelona brought together thousands of retail innovators to shape the future of commerce, and we were there for every conversation. Our team connected with the people driving the industry forward, talking Enterprise POS, OMS, RFID self-checkout, and AI throughout the three days.",
   },
   {
     name: "Retail Technology Show 2026",
@@ -88,7 +88,7 @@ const EVENTS = [
     stand: "W20",
     photo: "retail-technology-show-2026.webp",
     link: "https://50295934.hs-sites.com/retail-technology-show-2026",
-    body: "Back at ExCeL for the UK's biggest retail technology gathering, this time on Stand W20. Two days of live product across POS, OMS, RFID self-checkout and 121 Commerce with the retailers rebuilding their stacks.",
+    body: "Back at ExCeL for the UK's biggest retail technology gathering, this time on Stand W20. Two days of live product across POS, OMS, RFID self-checkout and AI with the retailers rebuilding their stacks.",
   },
   {
     name: "Retail Leaders Lunch, Shoptalk",
@@ -159,7 +159,7 @@ const EVENTS = [
     stand: "#5957",
     photo: "nrf-2026.webp",
     link: "https://www.teamworkcommerce.com/nrf-2026/",
-    body: "Retail's biggest stage delivered. Booth #5957 was where enterprise POS, RFID, 121 Commerce AI, and omnichannel OMS came to life in front of retail leaders from across the globe. If you were there, you know. If you missed us, we're back at Booth #6156 in January 2027.",
+    body: "Retail's biggest stage delivered. Booth #5957 was where enterprise POS, RFID, AI, and omnichannel OMS came to life in front of retail leaders from across the globe. If you were there, you know. If you missed us, we're back at Booth #6156 in January 2027.",
   },
 
   // ---------- 2025 ----------

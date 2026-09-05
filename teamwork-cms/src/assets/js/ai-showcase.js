@@ -46,7 +46,7 @@
 
 
 /* ============================================================================
-   121 Commerce conversation panel (.aiq)
+   AI conversation panel (.aiq)
    A live recreation of the AI Agent screen rather than a screenshot, so the
    answer and the product results actually arrive on the glass, the way the
    homepage receipt performs its sale. Loops while the section is on screen.
