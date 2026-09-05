@@ -10109,8 +10109,7 @@ a.evc:hover .evc-go { opacity: 1; }
   position: absolute; left: 50%; bottom: -44px; transform: translateX(-50%);
   z-index: 3; display: inline-flex; align-items: center; gap: 8px;
   padding: 8px 16px; border-radius: 100px; white-space: nowrap;
-  font-family: var(--font-mono); font-size: 11px; font-weight: 600; letter-spacing: 0.07em;
-  text-transform: uppercase; color: #cdd9ff;
+  font-family: var(--font-mono); font-size: 11px; font-weight: 600; letter-spacing: 0.07em; color: #cdd9ff;
   background: rgba(10, 12, 26, 0.72); border: 1px solid rgba(77, 148, 255, 0.4);
   backdrop-filter: blur(8px);
 }
@@ -11216,4 +11215,23 @@ main[data-vertical] .tm-band-glow,
   font-weight: 400;
   font-size: 1.08em;
   letter-spacing: -0.005em;
+}
+
+/* The device stage was lit for the dark homepage hero it used to live in: its
+   pocket laid rgba(4,6,20,0.55) behind the devices, which on the light POS page
+   reads as a grey smudge on clean ground. Light mode gets a blue halo instead,
+   with the separation coming from a real drop shadow, and the iPad takes the
+   same graphite bezel the iPhone beside it already had rather than a
+   translucent white frame that went ghostly on a pale background. */
+[data-theme="light"] .hpos-stage::before {
+  background:
+    radial-gradient(54% 50% at 50% 46%, rgba(36, 125, 255, 0.15), transparent 70%),
+    radial-gradient(76% 70% at 50% 54%, rgba(36, 125, 255, 0.055), transparent 78%);
+}
+[data-theme="light"] .hpos-device {
+  background: linear-gradient(160deg, #2d313d 0%, #171a24 100%) padding-box,
+              linear-gradient(160deg, rgba(255,255,255,0.30), rgba(255,255,255,0.06) 45%, rgba(255,255,255,0.14)) border-box;
+  box-shadow:
+    0 44px 64px -36px rgba(7, 9, 26, 0.42),
+    0 10px 22px -14px rgba(7, 9, 26, 0.16);
 }
