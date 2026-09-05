@@ -53,7 +53,11 @@
   --font-display: -apple-system, BlinkMacSystemFont, 'IBM Plex Sans', 'Inter', sans-serif;
   --font-mono: 'IBM Plex Mono', 'JetBrains Mono', monospace;
   /* One editorial note against the sans, used a word at a time. */
-  --font-serif: 'Instrument Serif', Georgia, 'Times New Roman', serif;
+  /* System serif, off the audit's own editorial list. The named foundry faces
+     (Tiempos, Sohne, Migra) each need a purchased licence; ui-serif resolves
+     to New York on Apple and Georgia elsewhere, both real text serifs with a
+     true italic, and it costs no webfont request. */
+  --font-serif: ui-serif, 'New York', Georgia, 'Times New Roman', serif;
   --max-w: 1280px;
 }
 [data-theme="dark"] {
@@ -110,8 +114,6 @@ a { color: inherit; text-decoration: none; }
 .nav {
   position: sticky; top: 0; z-index: 100;
   background: color-mix(in srgb, var(--bg) 85%, transparent);
-  backdrop-filter: saturate(180%) blur(24px);
-  -webkit-backdrop-filter: saturate(180%) blur(24px);
   border-bottom: 1px solid var(--border);
 }
 .nav-inner {
@@ -2017,7 +2019,7 @@ a { color: inherit; text-decoration: none; }
 .footer-social a:hover { color: #fff; background: var(--gradient); border-color: transparent; }
 .footer-col h4 {
   font-size: 12px; font-weight: 600; margin-bottom: 18px;
-  color: var(--text); text-transform: uppercase; letter-spacing: 0.05em;
+  color: var(--text); text-transform: none; letter-spacing: 0.005em;
 }
 .footer-col a {
   display: block; font-size: 14px; color: var(--text-muted);
@@ -2314,7 +2316,7 @@ details[open] summary { color: var(--brand-text); }
   display: flex; align-items: center; gap: 7px;
   padding: 6px 10px 8px;
   font-family: var(--font-mono); font-size: 10.5px; font-weight: 600;
-  letter-spacing: 0.06em; text-transform: uppercase; color: var(--brand-text);
+  letter-spacing: 0.005em; text-transform: none; color: var(--brand-text);
 }
 .mega-head i { font-size: 14px; }
 .mega-col:nth-child(2) .mega-head { color: var(--brand-purple); }
@@ -2323,7 +2325,7 @@ details[open] summary { color: var(--brand-text); }
 .nav-mob-head {
   padding: 14px 10px 6px;
   font-family: var(--font-mono); font-size: 10.5px; font-weight: 600;
-  letter-spacing: 0.06em; text-transform: uppercase; color: var(--brand-text);
+  letter-spacing: 0.005em; text-transform: none; color: var(--brand-text);
 }
 
 /* ============ MOBILE NAV ============ */
@@ -2460,7 +2462,7 @@ details[open] summary { color: var(--brand-text); }
   padding: 20px;
 }
 .blog-sidebar-card h4 {
-  font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em;
+  font-size: 12px; font-weight: 600; text-transform: none; letter-spacing: 0.005em;
   color: var(--brand-text); margin-bottom: 14px;
 }
 .toc-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
@@ -2753,7 +2755,7 @@ details[open] summary { color: var(--brand-text); }
   position: fixed; left: 0; right: 0; bottom: 0; z-index: 90;
   transform: translateY(110%); transition: transform .35s cubic-bezier(.2,.8,.2,1);
   background: color-mix(in srgb, var(--bg) 92%, transparent);
-  backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px);
+
   border-top: 1px solid var(--border-strong);
 }
 .stickycta.show { transform: translateY(0); }
@@ -3445,7 +3447,7 @@ a.tm-day-win:hover i { transform: translateX(2px); }
 }
 .nav-cs-head > span {
   font-family: var(--font-mono); font-size: 10px; font-weight: 600;
-  letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-faint);
+  letter-spacing: 0.005em; text-transform: none; color: var(--text-faint);
 }
 .nav-cs-head > a {
   display: inline-flex !important; align-items: center; gap: 6px;
@@ -3478,7 +3480,7 @@ a.tm-day-win:hover i { transform: translateX(2px); }
   letter-spacing: 0.05em; text-transform: uppercase; color: #fff;
   padding: 4px 8px; border-radius: 100px;
   background: rgba(5,6,14,0.62); border: 1px solid rgba(255,255,255,0.28);
-  backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+
 }
 .ncs-body { position: absolute; inset: auto 0 0 0; z-index: 2; padding: 12px 13px 13px; display: block; }
 .ncs-logo {
@@ -3650,7 +3652,7 @@ a.tm-day-win:hover i { transform: translateX(2px); }
   letter-spacing: 0.06em; text-transform: uppercase; color: #fff;
   padding: 5px 11px; border-radius: 100px;
   background: rgba(255,255,255,0.14); border: 1px solid rgba(255,255,255,0.22);
-  backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+
 }
 .csx-ext { position: absolute; top: 20px; right: 20px; z-index: 3; font-size: 15px; color: rgba(255,255,255,0.7); }
 
@@ -3674,7 +3676,7 @@ a.tm-day-win:hover i { transform: translateX(2px); }
   padding: 6px 12px; border-radius: 100px;
   font-size: 11.5px; font-weight: 600; line-height: 1.3; color: #fff;
   background: rgba(36,125,255,0.24); border: 1px solid rgba(120,175,255,0.45);
-  backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+
 }
 .csx-result i { font-size: 13px; color: #8fc0ff; flex-shrink: 0; }
 .csx-more {
@@ -4856,7 +4858,7 @@ a.tm-day-win:hover i { transform: translateX(2px); }
   letter-spacing: 0.04em; text-transform: uppercase;
   color: var(--text);
   background: color-mix(in srgb, var(--bg-elevated) 82%, transparent);
-  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+
   border: 1px solid var(--border-strong);
   padding: 8px 12px; border-radius: 8px;
   display: inline-flex; align-items: center; gap: 7px;
@@ -5158,7 +5160,7 @@ main > .hero:first-child { margin-top: -85px; padding-top: 230px; }
   background: rgba(13, 16, 32, 0.72);
   border: 1px solid rgba(255,255,255,0.12);
   border-radius: 11px;
-  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+
   padding: 18px 18px 14px;
   margin-bottom: 44px;
   box-shadow: 0 26px 26px -20px rgba(0,0,0,0.3);
@@ -5247,7 +5249,7 @@ main > .hero:first-child { margin-top: -85px; padding-top: 230px; }
   border-radius: 100px;
   background: rgba(13, 16, 32, 0.6);
   border: 1px solid rgba(255,255,255,0.13);
-  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+
   font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.04em;
   color: rgba(238,241,251,0.6);
 }
@@ -5460,8 +5462,6 @@ main > .hero:first-child { margin-top: -85px; padding-top: 230px; }
   border-radius: 12px;
   background: rgba(255,255,255,0.10);
   border: 1px solid rgba(255,255,255,0.25);
-  backdrop-filter: blur(20px) saturate(160%);
-  -webkit-backdrop-filter: blur(20px) saturate(160%);
   box-shadow: 0 26px 26px -20px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.25);
   padding: 18px 20px 14px;
   color: #ffffff;
@@ -5512,7 +5512,7 @@ main > .hero:first-child { margin-top: -85px; padding-top: 230px; }
 .nav {
   background: transparent;
   border-bottom: 1px solid transparent;
-  backdrop-filter: none; -webkit-backdrop-filter: none;
+
   transition: background 0.35s ease, border-color 0.35s ease;
 }
 .nav .nav-inner { height: 84px; }
@@ -5520,15 +5520,11 @@ main > .hero:first-child { margin-top: -85px; padding-top: 230px; }
 .nav.nav-scrolled {
   background: color-mix(in srgb, var(--bg) 82%, transparent);
   border-bottom: 1px solid var(--border);
-  backdrop-filter: saturate(180%) blur(24px);
-  -webkit-backdrop-filter: saturate(180%) blur(24px);
 }
 /* Light mode: never run the nav transparent over the dark hero photos. Keep the light bar */
 [data-theme="light"] .nav {
   background: color-mix(in srgb, var(--bg) 90%, transparent);
   border-bottom: 1px solid var(--border);
-  backdrop-filter: saturate(180%) blur(24px);
-  -webkit-backdrop-filter: saturate(180%) blur(24px);
 }
 
 /* =====================================================
@@ -5623,7 +5619,7 @@ main > .hero:first-child { margin-top: -85px; padding-top: 230px; }
   border: 1px solid var(--border-strong);
   color: var(--text); font-size: 20px;
   display: flex; align-items: center; justify-content: center;
-  cursor: pointer; backdrop-filter: blur(10px);
+  cursor: pointer;
   box-shadow: 0 14px 26px -8px rgba(0,0,0,0.3);
   transition: transform 0.2s ease, background 0.2s ease;
 }
@@ -5770,7 +5766,6 @@ main > .hero:first-child { margin-top: -85px; padding-top: 230px; }
   padding: 8px 14px; border-radius: 100px;
   background: rgba(13, 16, 32, 0.8); color: #eef1fb;
   border: 1px solid rgba(255,255,255,0.22);
-  backdrop-filter: blur(8px);
   box-shadow: 0 12px 26px -8px rgba(0,0,0,0.3);
 }
 .fan-chip .pulse-dot {
@@ -6067,8 +6062,6 @@ main > .hero:first-child { margin-top: -85px; padding-top: 230px; }
   background: transparent;
   border: none;
   border-radius: 11px;
-  backdrop-filter: blur(26px) saturate(170%);
-  -webkit-backdrop-filter: blur(26px) saturate(170%);
   transform: perspective(1300px) rotateY(-8deg) rotateX(2.5deg);
   box-shadow:
     0 26px 26px -24px rgba(0,0,0,0.3),
@@ -6763,7 +6756,7 @@ main > .hero.hpos-hero:first-child { margin-top: -85px; padding-top: 112px; }
   font-style: normal; font-size: 10.5px; font-weight: 700; letter-spacing: 0.08em;
   text-transform: uppercase; color: #eaf3ff; padding: 4px 9px; border-radius: 6px;
   background: rgba(6,12,28,0.7); border: 1px solid rgba(120,180,255,0.4);
-  backdrop-filter: blur(3px); -webkit-backdrop-filter: blur(3px);
+
 }
 .xray-tick {
   position: absolute; width: 16px; height: 16px; pointer-events: none;
@@ -7109,7 +7102,7 @@ main > .hero.hpos-hero:first-child { margin-top: -85px; padding-top: 112px; }
   padding: 8px 13px; border-radius: 100px;
   background: rgba(8,13,28,0.86); border: 1px solid var(--border-strong);
   font-size: 12px; font-weight: 600; color: var(--text);
-  backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
+
 }
 .hubx-node i { font-size: 14px; color: var(--brand-text); }
 .hubx-node-r { transform: translate(-100%, -50%); }
@@ -8100,14 +8093,14 @@ a.evc:hover .evc-media img { transform: scale(1.045); }
   letter-spacing: 0.09em; text-transform: uppercase; color: #fff;
   padding: 5px 9px; border-radius: 100px;
   background: rgba(5,6,14,0.62); border: 1px solid rgba(255,255,255,0.26);
-  backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+
 }
 .evc-go {
   position: absolute; bottom: 10px; right: 10px; z-index: 2;
   display: grid; place-items: center; width: 26px; height: 26px; border-radius: 50%;
   color: #fff; background: rgba(5,6,14,0.55); border: 1px solid rgba(255,255,255,0.24);
   font-size: 14px; opacity: 0; transition: opacity 0.2s ease;
-  backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+
 }
 a.evc:hover .evc-go { opacity: 1; }
 
@@ -8158,7 +8151,7 @@ a.evc:hover .evc-go { opacity: 1; }
   letter-spacing: 0.09em; text-transform: uppercase; color: #fff;
   padding: 5px 9px; border-radius: 100px;
   background: rgba(36,125,255,0.42); border: 1px solid rgba(255,255,255,0.3);
-  backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+
 }
 .evc-country, .cfu-country { font-weight: 600; color: var(--text-muted); }
 .cfu-country { color: var(--text); }
@@ -8314,7 +8307,7 @@ a.evc:hover .evc-go { opacity: 1; }
   color: rgba(255,255,255,0.92); background: rgba(18, 20, 34, 0.72);
   border: 1px solid rgba(255,255,255,0.18);
   box-shadow: 0 18px 26px -18px rgba(7, 9, 26, 0.6);
-  backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+
   opacity: 0; transform: translateY(8px) scale(0.94);
   transition: opacity .32s ease, transform .55s cubic-bezier(0.34, 1.5, 0.55, 1);
   pointer-events: none;
@@ -8493,7 +8486,7 @@ a.evc:hover .evc-go { opacity: 1; }
   padding: 7px 13px; border-radius: 100px;
   font-size: 12px; font-weight: 600; color: #fff;
   background: rgba(5, 6, 14, 0.62); border: 1px solid rgba(255,255,255,0.24);
-  backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+
 }
 .evhero-tag i { font-size: 14px; }
 
@@ -8580,7 +8573,7 @@ a.evc:hover .evc-go { opacity: 1; }
   font-size: 12.5px; font-weight: 600; color: #fff;
   background: rgba(14, 16, 32, 0.82); border: 1px solid rgba(255,255,255,0.2);
   box-shadow: 0 18px 30px -18px rgba(7, 9, 26, 0.7);
-  backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+
   opacity: 0; transform: translateY(10px) scale(0.94);
   transition: opacity .38s ease, transform .6s cubic-bezier(0.34, 1.5, 0.55, 1);
 }
@@ -8677,7 +8670,7 @@ a.evc:hover .evc-go { opacity: 1; }
   position: absolute; z-index: 3; bottom: 26px; left: 50%; transform: translateX(-50%);
   display: flex; gap: 5px; padding: 7px 11px; border-radius: 100px;
   background: rgba(12, 10, 30, 0.72); border: 1px solid rgba(255,255,255,0.18);
-  backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+
   opacity: 0; transition: opacity 0.35s ease;
 }
 .aix-think i { width: 5px; height: 5px; border-radius: 50%; background: #B6C7FF; display: block; }
@@ -8867,9 +8860,6 @@ a.evc:hover .evc-go { opacity: 1; }
   box-shadow: 0 34px 64px -34px rgba(2, 7, 20, 0.82), inset 0 1px 0 rgba(255, 255, 255, 0.2);
   min-width: 0;
 }
-@supports (backdrop-filter: blur(1px)) {
-  .aixb-panel { backdrop-filter: blur(22px) saturate(155%); }
-}
 .aixb-cap {
   display: flex; align-items: center; gap: 7px; margin-bottom: 14px;
   font-size: 10.5px; font-weight: 700; letter-spacing: 0.11em; text-transform: uppercase;
@@ -8885,7 +8875,6 @@ a.evc:hover .evc-go { opacity: 1; }
   box-shadow: 0 18px 34px -20px rgba(2, 7, 20, 0.8);
   font-size: 13px; font-weight: 600;
 }
-@supports (backdrop-filter: blur(1px)) { .aixb-pill { backdrop-filter: blur(16px); } }
 .aixb-pill span { padding: 7px 20px; border-radius: 100px; color: rgba(255, 255, 255, 0.66); }
 .aixb-pill span.is-on { background: #fff; color: #14152b; }
 
@@ -9912,7 +9901,7 @@ a.evc:hover .evc-go { opacity: 1; }
 .btn-ghost { border-width: 1.5px; }
 .hero .btn-ghost, .hero-photo .btn-ghost {
   color: #ffffff; border-color: rgba(255, 255, 255, 0.6);
-  background: rgba(10, 12, 26, 0.55); backdrop-filter: blur(8px);
+  background: rgba(10, 12, 26, 0.55);
 }
 .padv-card a, .mini-card a, .bento-card a, .statcard a, .pillar a,
 .evc a, .past-card a, .off-card a, .init-card a, .cpil a, .sv-card a, .rfp-card a {
@@ -10104,7 +10093,6 @@ a.evc:hover .evc-go { opacity: 1; }
   padding: 8px 16px; border-radius: 100px; white-space: nowrap;
   font-family: var(--font-mono); font-size: 11px; font-weight: 600; letter-spacing: 0.07em; color: #cdd9ff;
   background: rgba(10, 12, 26, 0.72); border: 1px solid rgba(77, 148, 255, 0.4);
-  backdrop-filter: blur(8px);
 }
 .hpos-duo i { font-size: 14px; color: #6aa6ff; }
 /* The phone cannot fit beside the iPad on a narrow screen, but the caption still
@@ -10715,8 +10703,6 @@ main[data-vertical] .tm-band-glow,
 [data-theme="light"] .nav,
 [data-theme="dark"] .nav.nav-scrolled {
   background: color-mix(in srgb, var(--bg) 66%, transparent);
-  backdrop-filter: saturate(200%) blur(30px);
-  -webkit-backdrop-filter: saturate(200%) blur(30px);
   border-bottom: 0;
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.62),
@@ -10742,10 +10728,8 @@ main[data-vertical] .tm-band-glow,
 }
 .nav-inner { position: relative; z-index: 1; }
 
-/* Without backdrop-filter, an opaque bar rather than unreadable text. */
-@supports not (backdrop-filter: blur(1px)) {
-  [data-theme="light"] .nav, [data-theme="dark"] .nav.nav-scrolled { background: var(--bg); }
-}
+/* An opaque bar, so the text over it stays readable. */
+[data-theme="light"] .nav, [data-theme="dark"] .nav.nav-scrolled { background: var(--bg); }
 
 /* Same glass on the elements that float above content: the chips over the
    hero device, and the year bar that rides the events archive. Each gets the
@@ -10754,9 +10738,7 @@ main[data-vertical] .tm-band-glow,
 .fan-bubble,
 .hpos-annot,
 .hpos-chip-pay {
-  background: color-mix(in srgb, var(--bg-elevated) 58%, transparent);
-  backdrop-filter: saturate(190%) blur(18px);
-  -webkit-backdrop-filter: saturate(190%) blur(18px);
+  background: var(--bg-elevated);
   border: 1px solid rgba(255, 255, 255, 0.20);
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.45),
@@ -10765,9 +10747,7 @@ main[data-vertical] .tm-band-glow,
 }
 
 .evy-head {
-  background: color-mix(in srgb, var(--accent, #4D94FF) 14%, transparent);
-  backdrop-filter: saturate(190%) blur(22px);
-  -webkit-backdrop-filter: saturate(190%) blur(22px);
+  background: color-mix(in srgb, var(--accent, #4D94FF) 14%, var(--bg-elevated));
   border: 1px solid rgba(255, 255, 255, 0.16);
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.34),
@@ -10801,10 +10781,8 @@ main[data-vertical] .tm-band-glow,
   box-shadow: 0 0 0 0 rgba(36, 125, 255, 0.35);
 }
 
-@supports not (backdrop-filter: blur(1px)) {
-  .fan-bubble, .hpos-annot, .hpos-chip-pay { background: var(--bg-elevated); }
-  .evy-head { background: color-mix(in srgb, var(--accent, #4D94FF) 17%, var(--bg-deep)); }
-}
+.fan-bubble, .hpos-annot, .hpos-chip-pay { background: var(--bg-elevated); }
+.evy-head { background: color-mix(in srgb, var(--accent, #4D94FF) 17%, var(--bg-deep)); }
 
 /* The accent card's paragraph was losing to a later .bento-card p rule at the
    same specificity, so dark body text was sitting on the blue gradient.
@@ -10862,8 +10840,6 @@ main[data-vertical] .tm-band-glow,
   border: 0;
   border-radius: 0;
   box-shadow: none;
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
 }
 
 /* Let the rail bleed to the viewport edge so the following card is visibly
@@ -10891,9 +10867,7 @@ main[data-vertical] .tm-band-glow,
 
 /* one glass caption, same language as the nav */
 
-@supports not (backdrop-filter: blur(1px)) {
-  .vhero-cap { background: rgba(12, 20, 44, 0.86); }
-}
+.vhero-cap { background: rgba(12, 20, 44, 0.86); }
 /* Motion is content here, not decoration, but honour the preference. */
 @media (prefers-reduced-motion: reduce) {
   .vhero-video { display: none; }
@@ -11206,8 +11180,10 @@ main[data-vertical] .tm-band-glow,
   font-family: var(--font-serif);
   font-style: italic;
   font-weight: 400;
-  font-size: 1.08em;
-  letter-spacing: -0.005em;
+  /* a text serif carries a larger x-height than the display face it replaced,
+     so it sits down against the sans rather than up */
+  font-size: 0.96em;
+  letter-spacing: -0.015em;
 }
 
 /* The device stage was lit for the dark homepage hero it used to live in: its
