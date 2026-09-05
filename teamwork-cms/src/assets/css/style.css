@@ -10588,3 +10588,7 @@ main[data-vertical] .tm-band-glow,
    inverse readout the figure sets its own colour, so let the counter inherit. */
 .rdo-fig .counter,
 [data-theme="light"] .rdo-fig .counter { color: inherit; }
+
+
+/* Header removed from the readout, so the panel tightens up at the top. */
+.statband-readout .rdo { padding-top: 34px; }
