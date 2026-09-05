@@ -52,6 +52,8 @@
   --font-body: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
   --font-display: -apple-system, BlinkMacSystemFont, 'IBM Plex Sans', 'Inter', sans-serif;
   --font-mono: 'IBM Plex Mono', 'JetBrains Mono', monospace;
+  /* One editorial note against the sans, used a word at a time. */
+  --font-serif: 'Instrument Serif', Georgia, 'Times New Roman', serif;
   --max-w: 1280px;
 }
 [data-theme="dark"] {
@@ -10791,6 +10793,22 @@ main[data-vertical] .tm-band-glow,
     0 10px 26px -16px rgba(7, 9, 26, 0.22);
 }
 
+/* The glass above swapped these three from a solid dark ground to a translucent
+   one, but their text colour was still the white that ground needed. In light
+   mode that is white on near-white, which is how the callouts over the iPad
+   went invisible. Give them the page's ink instead, and recolour the pulse dots
+   that were also picked for a dark ground. */
+[data-theme="light"] .fan-bubble,
+[data-theme="light"] .hpos-annot,
+[data-theme="light"] .hpos-chip-pay {
+  color: var(--text);
+}
+[data-theme="light"] .fan-bubble .pulse-dot,
+[data-theme="light"] .hpos-chip-pay .pulse-dot {
+  background: var(--brand-blue);
+  box-shadow: 0 0 0 0 rgba(36, 125, 255, 0.35);
+}
+
 @supports not (backdrop-filter: blur(1px)) {
   .fan-bubble, .hpos-annot, .hpos-chip-pay { background: var(--bg-elevated); }
   .evy-head { background: color-mix(in srgb, var(--accent, #4D94FF) 17%, var(--bg-deep)); }
@@ -11186,3 +11204,14 @@ main[data-vertical] .tm-band-glow,
   .pmod-panel { padding: 22px; }
 }
 
+
+/* A single word set in the contrasting serif italic. Sized up a touch because
+   a serif italic reads smaller than the sans beside it at the same font-size,
+   and the descender needs a little room in a 1.07 line-height headline. */
+.t-serif {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.08em;
+  letter-spacing: -0.005em;
+}
