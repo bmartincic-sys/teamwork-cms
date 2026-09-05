@@ -5577,7 +5577,6 @@ main > .hero:first-child { margin-top: -85px; padding-top: 230px; }
   border: 1px solid rgba(255,255,255,0.12);
   display: flex; align-items: flex-end;
 }
-.cs-more-inner { padding: 26px; }
 .cs-more-count {
   font-family: var(--font-display); font-size: 64px; font-weight: 600; letter-spacing: -0.04em;
   background: linear-gradient(90deg, #6aa8ff, #b48cff);
@@ -10806,21 +10805,6 @@ main[data-vertical] .tm-band-glow,
     url("/assets/images/homepage/hero-store.jpg") center / cover no-repeat;
   border-color: rgba(255, 255, 255, 0.20);
 }
-.cs-card-more .cs-more-inner {
-  margin: auto 12px 12px;
-  padding: 18px 18px 20px;
-  border-radius: 16px;
-  background: rgba(12, 34, 92, 0.34);
-  backdrop-filter: saturate(190%) blur(16px);
-  -webkit-backdrop-filter: saturate(190%) blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.34),
-    0 12px 28px -18px rgba(0, 0, 0, 0.7);
-}
-@supports not (backdrop-filter: blur(1px)) {
-  .cs-card-more .cs-more-inner { background: rgba(12, 34, 92, 0.82); }
-}
 
 
 /* The badge went solid blue in the gradient pass but kept dark text, which
@@ -10841,19 +10825,36 @@ main[data-vertical] .tm-band-glow,
   background: #1A6FF0;
   border-color: rgba(255, 255, 255, 0.22);
 }
+
+
+/* Back to a solid tile: no glass panel, just a very slight gradient over the
+   store photograph so the copy has something to sit on. */
+.cs-card.cs-card-more {
+  background:
+    linear-gradient(165deg, rgba(20, 48, 122, 0.62) 0%, rgba(11, 30, 84, 0.86) 100%),
+    url("/assets/images/homepage/hero-store.jpg") center / cover no-repeat;
+  border-color: rgba(255, 255, 255, 0.18);
+}
 .cs-card-more .cs-more-inner {
-  margin: auto 12px 12px;
-  padding: 18px 18px 20px;
-  border-radius: 16px;
-  background: rgba(255, 255, 255, 0.13);
-  backdrop-filter: saturate(180%) blur(14px);
-  -webkit-backdrop-filter: saturate(180%) blur(14px);
-  border: 1px solid rgba(255, 255, 255, 0.28);
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.45),
-    inset 0 -1px 0 rgba(0, 0, 0, 0.10),
-    0 12px 26px -18px rgba(0, 0, 0, 0.55);
+  margin: auto 0 0;
+  padding: 26px;
+  background: none;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
 }
-@supports not (backdrop-filter: blur(1px)) {
-  .cs-card-more .cs-more-inner { background: rgba(255, 255, 255, 0.18); }
-}
+
+/* Let the rail bleed to the viewport edge so the following card is visibly
+   cut by the page, which is what tells you it scrolls. */
+.cs-rail { padding-right: 0; scroll-padding-right: 0; }
+.cs-rail > :last-child { margin-right: max(32px, calc((100vw - var(--max-w)) / 2)); }
+
+
+/* The "next" tile as a half-width end-cap, so it reads as the tail of the
+   rail rather than a fifth story competing with the four real ones. */
+.cs-card.cs-card-more { width: min(220px, 60vw); }
+.cs-card-more .cs-more-inner { padding: 22px 20px; }
+.cs-card-more .cs-more-count.cs-more-phrase { font-size: 24px; line-height: 1.18; max-width: none; }
+.cs-card-more .cs-more-label { font-size: 13.5px; max-width: none; }
