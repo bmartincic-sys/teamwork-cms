@@ -13,10 +13,6 @@
      viewport whatever the screen. Keep them in step with .nav and .logos. */
   --nav-h: 84px;
   --logos-h: 119px;
-  /* Height of the consent bar while it is on screen, written by the CMP
-     watcher in base.njk. 0 once it is dismissed, and 0 if the CMP never
-     loads, so the hero falls back to filling the viewport on its own. */
-  --cmp-h: 0px;
   /* The accent purple, kept out of the blue rotation. The ramp is blue now,
      so this is for the few places that want a deliberate purple. */
   --brand-violet: #7C50F5;
@@ -10889,8 +10885,8 @@ main[data-vertical] .tm-band-glow,
   /* Sized so the customer logo rail clears the fold rather than sitting just
      under it: 240px is the nav plus the whole logos block (padding, label,
      marquee), so the strip is on screen the moment the page opens. */
-  min-height: max(380px, calc(100vh - var(--nav-h) - var(--logos-h) - var(--cmp-h, 0px)));
-  min-height: max(380px, calc(100dvh - var(--nav-h) - var(--logos-h) - var(--cmp-h, 0px)));
+  min-height: max(380px, calc(100vh - var(--nav-h) - var(--logos-h)));
+  min-height: max(380px, calc(100dvh - var(--nav-h) - var(--logos-h)));
   display: flex; align-items: center;
   overflow: hidden;
   background: #0b1020;
@@ -11035,80 +11031,139 @@ main[data-vertical] .tm-band-glow,
 }
 
 /* =====================================================
-   PLATFORM MODULES, the homepage capability grid
-   The core POS card carries the photograph and anchors the grid; the five
-   module cards are quiet by design so the eye lands on the POS first.
+   PLATFORM MODULES, editorial layout
+   A tall photographic plate on the left carries the POS; the right column runs
+   the argument, then splits into a pale panel holding the module list and a
+   second photographic plate carrying the reach figure.
    ===================================================== */
 .pmod-section { padding-top: 8px; }
-.pmod-grid {
-  display: grid; grid-template-columns: repeat(3, 1fr);
-  /* Explicit row floor: without it the core card's photograph sets the row
-     height and stretches the five module cards to match. */
-  grid-auto-rows: minmax(258px, auto);
-  gap: 18px; margin-top: 48px;
-}
-.pmod-card {
-  position: relative; display: flex; flex-direction: column;
-  background: var(--bg-elevated); border: 1px solid var(--border);
-  border-radius: 20px; padding: 26px 26px 24px; overflow: hidden;
-  color: inherit; text-decoration: none;
-  transition: transform 0.24s ease, border-color 0.24s ease, box-shadow 0.24s ease;
-}
-.pmod-card:hover {
-  transform: translateY(-3px); border-color: var(--brand-blue);
-  box-shadow: 0 18px 34px -20px rgba(7, 9, 26, 0.32);
-}
-.pmod-ico {
-  display: inline-flex; align-items: center; justify-content: center;
-  width: 42px; height: 42px; border-radius: 12px; margin-bottom: 16px;
-  background: var(--brand-soft); color: var(--brand-text); font-size: 21px;
-}
-.pmod-card h3 {
-  font-family: var(--font-display); font-size: 20px; font-weight: 600;
-  letter-spacing: -0.02em; margin: 0 0 8px; color: var(--text);
-}
-.pmod-card p {
-  margin: 0 0 18px; font-size: 15px; line-height: 1.55; color: var(--text-muted);
-}
-.pmod-go {
-  margin-top: auto; display: inline-flex; align-items: center; gap: 7px;
-  font-size: 14px; font-weight: 700; color: var(--brand-text);
-  transition: gap 0.2s ease;
-}
-.pmod-card:hover .pmod-go { gap: 11px; }
 
-/* The core card: photograph on top, copy beneath, spanning two by two. */
-.pmod-core {
-  grid-column: span 2; grid-row: span 2;
-  padding: 0; background: var(--bg-elevated);
+.pmod-pill {
+  display: inline-flex; align-items: center; gap: 7px;
+  font-size: 12px; font-weight: 700; letter-spacing: 0.05em;
+  text-transform: uppercase; color: var(--brand-text);
+  background: var(--brand-soft); border: 1px solid rgba(36, 125, 255, 0.26);
+  padding: 7px 15px; border-radius: 980px; margin-bottom: 22px;
 }
-/* Fixed height, not flex: the photograph carries a 4:3 intrinsic size, and
-   letting it set the core card's height blows out both spanned grid rows. */
-.pmod-shot { flex: 0 0 auto; height: 300px; overflow: hidden; }
-.pmod-shot img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.pmod-core:hover .pmod-shot img { transform: scale(1.03); }
-.pmod-shot img { transition: transform 0.5s ease; }
-.pmod-body { padding: 26px 30px 28px; display: flex; flex-direction: column; }
+.pmod-h2 {
+  font-family: var(--font-display);
+  font-size: clamp(34px, 5vw, 62px); font-weight: 600; line-height: 1.04;
+  letter-spacing: -0.035em; margin: 0 0 40px; color: var(--text); max-width: 15em;
+}
+.pmod-h2 span { color: var(--brand-blue); }
+
+.pmod-ed { display: grid; grid-template-columns: 0.86fr 1.14fr; gap: 20px; }
+
+/* --- the tall plate --- */
+.pmod-figure {
+  position: relative; display: block; overflow: hidden;
+  border-radius: 24px; min-height: 540px;
+  color: #ffffff; text-decoration: none; background: #0b1020;
+}
+.pmod-figure img {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; transition: transform 0.6s ease;
+}
+.pmod-figure::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(0deg, rgba(6, 10, 26, 0.90) 0%, rgba(6, 10, 26, 0.34) 44%, rgba(6, 10, 26, 0) 70%);
+}
+.pmod-figure:hover img { transform: scale(1.04); }
+.pmod-figure-cap { position: absolute; left: 26px; right: 26px; bottom: 26px; z-index: 2; display: block; }
+.pmod-figure-cap strong {
+  display: block; font-family: var(--font-display); font-size: 27px;
+  font-weight: 600; letter-spacing: -0.022em; margin: 12px 0 8px;
+}
+.pmod-figure-cap em {
+  display: block; font-style: normal; font-size: 15px; line-height: 1.5;
+  color: rgba(255, 255, 255, 0.80); max-width: 26em;
+}
 .pmod-tag {
-  align-self: flex-start; margin-bottom: 12px;
-  font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+  display: inline-block; font-size: 11px; font-weight: 700;
+  letter-spacing: 0.06em; text-transform: uppercase;
   color: #ffffff; background: var(--brand-blue);
   padding: 5px 11px; border-radius: 980px;
 }
-.pmod-core h3 { font-size: 26px; margin-bottom: 10px; }
-.pmod-core p { font-size: 16px; max-width: 46em; }
 
-@media (max-width: 1020px) {
-  .pmod-grid { grid-template-columns: repeat(2, 1fr); }
-  .pmod-core { grid-column: span 2; grid-row: auto; }
-  .pmod-shot { height: 280px; }
+/* --- the right column --- */
+.pmod-col { display: flex; flex-direction: column; gap: 16px; }
+.pmod-lead {
+  margin: 0; font-size: clamp(17px, 1.5vw, 21px); line-height: 1.5;
+  font-weight: 500; color: var(--text);
 }
-@media (max-width: 640px) {
-  .pmod-grid { grid-template-columns: 1fr; gap: 14px; }
-  .pmod-core { grid-column: auto; }
-  .pmod-shot { height: 210px; }
-  .pmod-body { padding: 22px 22px 24px; }
+.pmod-note {
+  margin: 0 0 6px; font-size: 14.5px; line-height: 1.6; color: var(--text-muted);
+}
+.pmod-duo { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; flex: 1 1 auto; }
+
+/* --- pale panel: the module list --- */
+.pmod-panel {
+  display: flex; flex-direction: column;
+  background: var(--bg-elevated); border: 1px solid var(--border);
+  border-radius: 24px; padding: 26px 26px 24px;
+}
+.pmod-fig {
+  font-family: var(--font-display); font-size: 40px; font-weight: 600;
+  letter-spacing: -0.03em; line-height: 1; color: var(--text);
+}
+.pmod-figcap { font-size: 14px; font-weight: 700; color: var(--text); margin-top: 9px; }
+.pmod-modgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 20px 0 22px; }
+.pmod-modgrid a {
+  display: flex; align-items: center; gap: 8px; min-width: 0;
+  font-size: 12.5px; font-weight: 600; line-height: 1.25;
+  color: var(--text-muted); text-decoration: none;
+  background: var(--bg-deep); border: 1px solid var(--border);
+  border-radius: 12px; padding: 10px 11px;
+  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+.pmod-modgrid a i { flex: 0 0 auto; font-size: 15px; color: var(--brand-text); }
+.pmod-modgrid a:hover { color: var(--text); border-color: var(--brand-blue); background: var(--bg-elevated); }
+.pmod-cta {
+  margin-top: auto; align-self: flex-start;
+  display: inline-flex; align-items: center; gap: 10px;
+  background: #0b57d0; color: #ffffff; font-weight: 700; font-size: 14.5px;
+  padding: 9px 9px 9px 20px; border-radius: 980px; text-decoration: none;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.pmod-cta i {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 30px; height: 30px; border-radius: 50%;
+  background: rgba(255, 255, 255, 0.22); font-size: 15px;
+}
+.pmod-cta:hover { background: #0a4cb8; transform: translateY(-2px); }
+
+/* --- second plate: the reach figure --- */
+.pmod-shotcard {
+  position: relative; display: block; overflow: hidden;
+  border-radius: 24px; min-height: 250px;
+  color: #ffffff; text-decoration: none; background: #0b1020;
+}
+.pmod-shotcard img {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; transition: transform 0.6s ease;
+}
+.pmod-shotcard::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(0deg, rgba(6, 10, 26, 0.92) 0%, rgba(6, 10, 26, 0.38) 48%, rgba(6, 10, 26, 0.04) 78%);
+}
+.pmod-shotcard:hover img { transform: scale(1.04); }
+.pmod-shotcap { position: absolute; left: 22px; right: 22px; bottom: 22px; z-index: 2; display: block; }
+.pmod-shotcap .pmod-fig { display: block; color: #ffffff; font-size: 36px; }
+.pmod-shotcap .pmod-figcap { color: #ffffff; }
+.pmod-shotcap em {
+  display: block; font-style: normal; font-size: 13.5px; line-height: 1.5;
+  color: rgba(255, 255, 255, 0.78); margin-top: 9px;
 }
 
-
+@media (max-width: 1080px) {
+  .pmod-ed { grid-template-columns: 1fr; }
+  .pmod-figure { min-height: 420px; }
+}
+@media (max-width: 700px) {
+  .pmod-duo { grid-template-columns: 1fr; }
+  .pmod-modgrid { grid-template-columns: 1fr; }
+  .pmod-figure { min-height: 340px; }
+  .pmod-figure-cap, .pmod-shotcap { left: 18px; right: 18px; bottom: 18px; }
+  .pmod-panel { padding: 22px; }
+}
 
