@@ -147,7 +147,7 @@
       ctx.restore();
 
       var rim = ctx.createLinearGradient(cx - R, cy - R, cx + R, cy + R);
-      rim.addColorStop(0, '#247dff'); rim.addColorStop(0.55, '#7c50f5'); rim.addColorStop(1, '#8a0add');
+      rim.addColorStop(0, '#247dff'); rim.addColorStop(0.55, '#7c50f5'); rim.addColorStop(1, '#5B2FD6');
       ctx.beginPath(); ctx.arc(cx, cy, R, 0, Math.PI * 2);
       ctx.strokeStyle = rim; ctx.lineWidth = 1.6; ctx.stroke();
     }
