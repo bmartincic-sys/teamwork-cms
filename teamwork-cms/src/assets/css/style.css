@@ -10737,3 +10737,47 @@ main[data-vertical] .tm-band-glow,
 @supports not (backdrop-filter: blur(1px)) {
   [data-theme="light"] .nav, [data-theme="dark"] .nav.nav-scrolled { background: var(--bg); }
 }
+
+
+/* Same glass on the elements that float above content: the chips over the
+   hero device, and the year bar that rides the events archive. Each gets the
+   specular top edge and a seated bottom, so they read as a layer of glass
+   rather than a flat pill dropped on top. Content cards stay solid. */
+.fan-bubble,
+.hpos-annot,
+.hpos-chip-pay {
+  background: color-mix(in srgb, var(--bg-elevated) 58%, transparent);
+  backdrop-filter: saturate(190%) blur(18px);
+  -webkit-backdrop-filter: saturate(190%) blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.20);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.45),
+    inset 0 -1px 0 rgba(7, 9, 26, 0.10),
+    0 10px 24px -14px rgba(7, 9, 26, 0.45);
+}
+
+.evy-head {
+  background: color-mix(in srgb, var(--accent, #4D94FF) 14%, transparent);
+  backdrop-filter: saturate(190%) blur(22px);
+  -webkit-backdrop-filter: saturate(190%) blur(22px);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.34),
+    inset 0 -1px 0 rgba(7, 9, 26, 0.12),
+    0 14px 30px -20px rgba(7, 9, 26, 0.5);
+}
+[data-theme="light"] .fan-bubble,
+[data-theme="light"] .hpos-annot,
+[data-theme="light"] .hpos-chip-pay,
+[data-theme="light"] .evy-head {
+  border-color: rgba(7, 9, 26, 0.10);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.85),
+    inset 0 -1px 0 rgba(7, 9, 26, 0.06),
+    0 10px 26px -16px rgba(7, 9, 26, 0.22);
+}
+
+@supports not (backdrop-filter: blur(1px)) {
+  .fan-bubble, .hpos-annot, .hpos-chip-pay { background: var(--bg-elevated); }
+  .evy-head { background: color-mix(in srgb, var(--accent, #4D94FF) 17%, var(--bg-deep)); }
+}
