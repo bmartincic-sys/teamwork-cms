@@ -11202,12 +11202,22 @@ main[data-vertical] .tm-band-glow,
    everything into one block at the bottom left. This brings them into line
    without touching a single page's markup.
    ===================================================== */
-.hero-photo-inner {
+/* Two classes, because .hero-photo-compact .hero-photo-inner sets flex-start
+   further up and would otherwise outrank a single-class rule however late it
+   sits in the file. */
+.hero-photo .hero-photo-inner,
+.hero-photo-compact .hero-photo-inner {
   justify-content: flex-end;
   padding-bottom: 80px;
+  padding-top: 40px;
 }
+/* Tall enough that the copy floats in the frame rather than filling it. The
+   homepage carries 272px of photograph above its copy block; at 520px these
+   carried 60px, which reads as vertically centred however the copy is aligned.
+   155px is the nav plus the breadcrumb bar these pages have and the homepage
+   does not. */
 .hero-photo,
-.hero-photo-compact { min-height: max(520px, 64vh); }
+.hero-photo-compact { min-height: max(600px, calc(100vh - 155px)); }
 
 /* one block, not two thrown apart */
 .hero-photo-foot { margin-top: 0; }
@@ -11255,7 +11265,7 @@ main[data-vertical] .tm-band-glow,
 }
 
 @media (max-width: 900px) {
-  .hero-photo, .hero-photo-compact { min-height: max(460px, 56vh); }
+  .hero-photo, .hero-photo-compact { min-height: max(480px, calc(100vh - 145px)); }
   .hero-photo-inner { padding-bottom: 52px; }
   .hero-photo-note { max-width: none; }
 }
