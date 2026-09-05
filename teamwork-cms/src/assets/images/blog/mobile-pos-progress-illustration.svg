@@ -2,24 +2,24 @@
   <defs>
     <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#247DFF"/>
-      <stop offset="60%" stop-color="#7C50F5"/>
-      <stop offset="100%" stop-color="#5B2FD6"/>
+      <stop offset="60%" stop-color="#5078F5"/>
+      <stop offset="100%" stop-color="#2F58D6"/>
     </linearGradient>
     <linearGradient id="barFade" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" stop-color="#247DFF"/>
-      <stop offset="100%" stop-color="#7C50F5"/>
+      <stop offset="100%" stop-color="#5078F5"/>
     </linearGradient>
     <radialGradient id="glow" cx="85%" cy="10%" r="70%">
       <stop offset="0%" stop-color="#247DFF" stop-opacity="0.18"/>
-      <stop offset="60%" stop-color="#7C50F5" stop-opacity="0.08"/>
-      <stop offset="100%" stop-color="#7C50F5" stop-opacity="0"/>
+      <stop offset="60%" stop-color="#5078F5" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#5078F5" stop-opacity="0"/>
     </radialGradient>
     <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
       <path d="M32 0H0V32" fill="none" stroke="#07091A" stroke-opacity="0.05" stroke-width="1"/>
     </pattern>
   </defs>
 
-  <rect width="800" height="450" fill="#F8F7FD"/>
+  <rect width="800" height="450" fill="#F7F9FD"/>
   <rect width="800" height="450" fill="url(#grid)"/>
   <rect width="800" height="450" fill="url(#glow)"/>
 
@@ -46,9 +46,9 @@
   <g transform="translate(596,60)">
     <rect x="0" y="0" width="112" height="150" rx="18" fill="#0B1020"/>
     <rect x="8" y="14" width="96" height="122" rx="8" fill="url(#g1)"/>
-    <rect x="20" y="30" width="72" height="10" rx="5" fill="#F8F7FD" opacity="0.85"/>
-    <rect x="20" y="50" width="50" height="8" rx="4" fill="#F8F7FD" opacity="0.55"/>
-    <rect x="20" y="66" width="60" height="8" rx="4" fill="#F8F7FD" opacity="0.55"/>
-    <rect x="20" y="98" width="72" height="26" rx="8" fill="#F8F7FD" opacity="0.9"/>
+    <rect x="20" y="30" width="72" height="10" rx="5" fill="#F7F9FD" opacity="0.85"/>
+    <rect x="20" y="50" width="50" height="8" rx="4" fill="#F7F9FD" opacity="0.55"/>
+    <rect x="20" y="66" width="60" height="8" rx="4" fill="#F7F9FD" opacity="0.55"/>
+    <rect x="20" y="98" width="72" height="26" rx="8" fill="#F7F9FD" opacity="0.9"/>
   </g>
 </svg>

@@ -2,11 +2,11 @@
   <defs>
     <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#247DFF"/>
-      <stop offset="60%" stop-color="#7C50F5"/>
-      <stop offset="100%" stop-color="#5B2FD6"/>
+      <stop offset="60%" stop-color="#5078F5"/>
+      <stop offset="100%" stop-color="#2F58D6"/>
     </linearGradient>
     <radialGradient id="glow" cx="50%" cy="50%" r="60%">
-      <stop offset="0%" stop-color="#7C50F5" stop-opacity="0.22"/>
+      <stop offset="0%" stop-color="#5078F5" stop-opacity="0.22"/>
       <stop offset="60%" stop-color="#247DFF" stop-opacity="0.08"/>
       <stop offset="100%" stop-color="#247DFF" stop-opacity="0"/>
     </radialGradient>
@@ -15,7 +15,7 @@
     </pattern>
   </defs>
 
-  <rect width="800" height="450" fill="#F8F7FD"/>
+  <rect width="800" height="450" fill="#F7F9FD"/>
   <rect width="800" height="450" fill="url(#grid)"/>
   <rect width="800" height="450" fill="url(#glow)"/>
 
@@ -62,5 +62,5 @@
   <!-- central hub -->
   <circle cx="400" cy="225" r="58" fill="url(#g1)"/>
   <circle cx="400" cy="225" r="58" fill="none" stroke="#FFFFFF" stroke-width="2" opacity="0.4"/>
-  <circle cx="400" cy="225" r="16" fill="#F8F7FD"/>
+  <circle cx="400" cy="225" r="16" fill="#F7F9FD"/>
 </svg>
