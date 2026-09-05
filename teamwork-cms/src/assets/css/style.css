@@ -10936,3 +10936,47 @@ main[data-vertical] .tm-band-glow,
 @media (max-width: 900px) {
   .vhero-inner { padding-bottom: 48px; }
 }
+
+
+/* Global Operations reads as a dark slab dropped into a light page. In light
+   mode it becomes a light band, which means flipping the type and the map
+   with it, not just the background. */
+[data-theme="light"] .scene-ink {
+  background:
+    radial-gradient(90% 70% at 15% 0%, rgba(36, 125, 255, 0.10), transparent 60%),
+    radial-gradient(80% 70% at 85% 100%, rgba(124, 80, 245, 0.09), transparent 62%),
+    var(--bg-deep);
+}
+[data-theme="light"] .scene-ink .ch-title { color: var(--text); }
+[data-theme="light"] .scene-ink .ch-para { color: var(--text-muted); }
+[data-theme="light"] .scene-ink .spec-cap { color: var(--text-faint); }
+[data-theme="light"] .scene-ink .wm-c { fill: #dbe3ee; stroke: #ffffff; }
+[data-theme="light"] .scene-ink .wm-live { stroke: rgba(7, 9, 26, 0.18); }
+[data-theme="light"] .scene-ink .hero-bg { opacity: 0.10; }
+
+/* The final CTA sits on a gradient, so its button is white with blue type.
+   The light-mode fill rule was overriding that and leaving blue on blue at
+   1.06:1, which is invisible. */
+[data-theme="light"] .final-cta .btn-primary,
+[data-theme="light"] .brandblock .btn-primary {
+  background: #ffffff;
+  color: var(--brand-text);
+}
+[data-theme="light"] .final-cta .btn-primary i,
+[data-theme="light"] .brandblock .btn-primary i { color: var(--brand-text); }
+
+/* Blog: the two secondary cards show more of their image. */
+.blog-card:not(.featured) .blog-card-img { height: 268px; }
+@media (max-width: 900px) {
+  .blog-card:not(.featured) .blog-card-img { height: 220px; }
+}
+
+
+/* Selected capability tabs carry white text on brand blue, which is 3.85:1.
+   Same treatment as the buttons: the deeper blue in light mode. */
+[data-theme="light"] .captab[aria-selected="true"],
+[data-theme="light"] .captab.is-active,
+[data-theme="light"] .captabs-nav .captab[aria-selected="true"] {
+  background: #0b57d0;
+  border-color: #0b57d0;
+}
