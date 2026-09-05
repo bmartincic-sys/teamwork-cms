@@ -10472,3 +10472,21 @@ main[data-vertical] .tm-band-glow,
 [data-theme="light"] .spec-big,
 [data-theme="light"] .vs-us { color: var(--brand-text); }
 [data-theme="light"] .padv-kicker { color: #9b30d0; }
+
+
+/* The "your stores could be next" card is an inverse tile: it carries white
+   text, so it must keep a dark surface. Flattening .cs-card turned it white
+   and the text vanished. Solid rather than the gradient it used before. */
+.cs-card.cs-card-more { background: #101430; border-color: rgba(255, 255, 255, 0.14); }
+
+/* The duo tag pills were built for a dark card. In light mode the card is
+   white, so the pill text has to darken with it. */
+[data-theme="light"] .duo-tags .t-core {
+  background: rgba(7, 9, 26, 0.06); color: #3f4759; border-color: rgba(7, 9, 26, 0.16);
+}
+[data-theme="light"] .duo-tags .t-ai {
+  background: rgba(36, 125, 255, 0.12); color: #0b57d0; border-color: rgba(36, 125, 255, 0.35);
+}
+[data-theme="light"] .duo-tags .t-plus {
+  background: rgba(138, 10, 221, 0.10); color: #7a0bc0; border-color: rgba(138, 10, 221, 0.32);
+}
