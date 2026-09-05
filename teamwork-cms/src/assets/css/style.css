@@ -657,7 +657,7 @@ a { color: inherit; text-decoration: none; }
 .feature-row.reverse .feature-visual { order: 1; }
 .feature-shot {
   width: 100%; max-width: 460px; height: auto; display: block; margin: 0 auto;
-  filter: drop-shadow(0 40px 70px rgba(30, 53, 120, 0.28));
+  filter: drop-shadow(0 40px 70px rgba(7, 9, 26, 0.28));
 }
 .feature-photo {
   position: relative; border-radius: var(--radius-lg); overflow: hidden;
@@ -938,7 +938,7 @@ a { color: inherit; text-decoration: none; }
   padding: 6px 14px; border-radius: 100px; margin-bottom: 14px;
 }
 .flagship-badge i { font-size: 13px; }
-.pos-spotlight-shot { filter: drop-shadow(0 45px 80px rgba(30, 53, 120, 0.4)); }
+.pos-spotlight-shot { filter: drop-shadow(0 45px 80px rgba(7, 9, 26, 0.3)); }
 @media (max-width: 900px) {
   .pos-spotlight-panel { padding: 36px 24px; border-radius: 12px; }
 }
@@ -1842,7 +1842,7 @@ a { color: inherit; text-decoration: none; }
 .ai-visual { display: flex; align-items: center; justify-content: center; }
 .ai-visual img {
   max-width: 100%; max-height: 500px; width: auto; object-fit: contain;
-  filter: drop-shadow(0 34px 64px rgba(30, 53, 120, 0.32));
+  filter: drop-shadow(0 34px 64px rgba(7, 9, 26, 0.3));
 }
 @media (max-width: 860px) {
   .ai-split { grid-template-columns: 1fr; gap: 32px; }
@@ -2556,9 +2556,9 @@ details[open] summary { color: var(--brand-text); }
 .wm-live {
   fill: url(#wmGrad);
   stroke: rgba(255,255,255,0.6); stroke-width: 0.6;
-  filter: drop-shadow(0 1px 2px rgba(80, 120, 245,0.30));
+  filter: drop-shadow(0 1px 2px rgba(7, 9, 26, 0.3));
 }
-.wm-dot { stroke: #fff; stroke-width: 1.2; filter: drop-shadow(0 1px 3px rgba(80, 120, 245,0.5)); }
+.wm-dot { stroke: #fff; stroke-width: 1.2; filter: drop-shadow(0 1px 3px rgba(7, 9, 26, 0.3)); }
 [data-theme="dark"] .wm-c { fill: #232a44; stroke: #0d1226; }
 [data-theme="dark"] .wm-live { stroke: rgba(255,255,255,0.25); }
 [data-theme="dark"] .wm-dot { stroke: #0d1226; }
@@ -10988,7 +10988,7 @@ main[data-vertical] .tm-band-glow,
 [data-theme="light"] .scene-ink .wm-live { stroke: rgba(11, 87, 208, 0.28); }
 [data-theme="light"] .scene-ink .wm-city { fill: #0b57d0; }
 [data-theme="light"] .scene-ink .wm-dot {
-  stroke: #ffffff; filter: drop-shadow(0 1px 3px rgba(11, 87, 208, 0.45));
+  stroke: #ffffff; filter: drop-shadow(0 1px 3px rgba(7, 9, 26, 0.3));
 }
 [data-theme="light"] .scene-ink .wm-ping { stroke: #2c6fe0; stroke-width: 1.8; }
 [data-theme="light"] .scene-ink .wm-city-g:nth-child(3n) .wm-ping { stroke: #5C83E0; }
