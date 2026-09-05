@@ -10933,10 +10933,10 @@ main[data-vertical] .tm-band-glow,
 .vhero-btn i { color: #ffffff; }
 .vhero-btn-out {
   background: transparent; color: #ffffff;
-  border: 1.5px solid var(--brand-violet); font-weight: 600;
+  border: 1.5px solid rgba(255, 255, 255, 0.62); font-weight: 600;
 }
 .vhero-btn-out:hover {
-  background: rgba(124, 80, 245, 0.20); border-color: #9679ff;
+  background: rgba(255, 255, 255, 0.12); border-color: #ffffff;
 }
 
 @media (max-width: 900px) {
