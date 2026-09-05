@@ -10843,48 +10843,11 @@ main[data-vertical] .tm-band-glow,
 /* Homepage hero built around real store footage. Light, asymmetric, and the
    film bleeds off the right edge rather than sitting in a centred box, so the
    page opens on a shop floor instead of a gradient. */
-.vhero { position: relative; padding: 56px 0 72px; overflow: hidden; }
-.vhero-title {
-  font-family: var(--font-display);
-  font-size: clamp(38px, 5.2vw, 68px); font-weight: 600; line-height: 1.04;
-  letter-spacing: -0.04em; margin: 0 0 20px; color: var(--text);
-}
-.vhero-sub {
-  font-size: clamp(16px, 1.35vw, 18.5px); line-height: 1.6;
-  color: var(--text-muted); margin: 0 0 30px; max-width: 30em;
-}
 
 /* the film, cropped by the page edge */
-.vhero-film {
-  position: relative; margin: 0;
-  border-radius: 22px 0 0 22px;
-  overflow: hidden;
-  margin-right: calc((100vw - min(100vw, var(--max-w))) / -2 - 32px);
-  box-shadow: 0 40px 80px -50px rgba(7, 9, 26, 0.55);
-}
-.vhero-video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
 
 /* one glass caption, same language as the nav */
-.vhero-cap {
-  position: absolute; left: 18px; bottom: 18px;
-  display: inline-flex; align-items: center; gap: 8px;
-  padding: 8px 14px; border-radius: 100px;
-  font-size: 12.5px; font-weight: 600; letter-spacing: -0.01em; color: #ffffff;
-  background: rgba(12, 20, 44, 0.42);
-  backdrop-filter: saturate(190%) blur(16px);
-  -webkit-backdrop-filter: saturate(190%) blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.24);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.34);
-}
-.vhero-dot {
-  width: 7px; height: 7px; border-radius: 50%; background: #4ade80;
-  box-shadow: 0 0 0 4px rgba(74, 222, 128, 0.20);
-}
 
-@media (max-width: 980px) {
-  .vhero { padding: 34px 0 46px; }
-  .vhero-film { margin-right: 0; border-radius: 18px; }
-}
 @supports not (backdrop-filter: blur(1px)) {
   .vhero-cap { background: rgba(12, 20, 44, 0.86); }
 }
@@ -10900,26 +10863,62 @@ main[data-vertical] .tm-band-glow,
 .devshow-stage .hpos-stage { position: relative; }
 .devshow-stage .hpos-device { margin-right: calc(22.5% - 26px); }
 
-
-/* Hero as a centred stack: headline, sub, calls to action, then the film
-   full width beneath, with the customer logos following it. */
-.vhero { padding: 64px 0 24px; }
-.vhero-copy { max-width: 940px; margin: 0 auto; text-align: center; }
-.vhero-title { font-size: clamp(38px, 5.4vw, 72px); margin-bottom: 22px; }
-.vhero-sub { margin: 0 auto 32px; max-width: 40em; }
-.vhero-cta { justify-content: center; }
-
-.vhero-film {
-  margin: 44px auto 0;
-  max-width: var(--max-w);
-  border-radius: 22px;
+/* Homepage hero: the store footage fills the frame and the copy sits over it,
+   left-aligned, with a veil across the left so the type stays readable
+   whatever the footage is doing behind it. */
+.vhero {
+  position: relative;
+  min-height: min(86vh, 760px);
+  display: flex; align-items: center;
   overflow: hidden;
-  box-shadow: 0 44px 90px -56px rgba(7, 9, 26, 0.55);
+  background: #0b1020;
 }
-.vhero-video { aspect-ratio: 16 / 7.2; }
+.vhero-bg {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; z-index: 0; pointer-events: none;
+}
+.vhero-veil {
+  position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(6, 10, 26, 0.88) 0%, rgba(6, 10, 26, 0.72) 34%, rgba(6, 10, 26, 0.18) 62%, rgba(6, 10, 26, 0.05) 100%),
+    linear-gradient(0deg, rgba(6, 10, 26, 0.40) 0%, rgba(6, 10, 26, 0) 45%);
+}
+.vhero-inner { position: relative; z-index: 2; width: 100%; }
+.vhero-copy { max-width: 640px; }
+.vhero-title {
+  font-family: var(--font-display);
+  font-size: clamp(38px, 4.9vw, 66px); font-weight: 600; line-height: 1.06;
+  letter-spacing: -0.04em; margin: 0 0 20px; color: #ffffff;
+}
+.vhero-title .os-grad { -webkit-text-fill-color: currentColor; color: #9dc0ff; background: none; }
+.vhero-sub {
+  font-size: clamp(16px, 1.3vw, 18.5px); line-height: 1.6;
+  color: rgba(255, 255, 255, 0.82); margin: 0 0 32px; max-width: 34em;
+}
+.vhero-cta { justify-content: flex-start; }
 
-@media (max-width: 980px) {
-  .vhero { padding: 34px 0 18px; }
-  .vhero-film { margin-top: 30px; border-radius: 16px; }
-  .vhero-video { aspect-ratio: 16 / 9; }
+/* buttons that hold up on footage: solid white, and an outlined companion */
+.vhero-btn {
+  background: #ffffff; color: #0b1020; border: 1px solid #ffffff;
+  font-weight: 700; text-shadow: none;
+}
+.vhero-btn:hover { background: #ffffff; transform: translateY(-2px); }
+.vhero-btn i { color: #0b1020; }
+.vhero-btn-out {
+  background: transparent; color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.55); font-weight: 600;
+}
+.vhero-btn-out:hover { background: rgba(255, 255, 255, 0.12); border-color: #ffffff; }
+
+@media (max-width: 900px) {
+  .vhero { min-height: 620px; }
+  .vhero-veil {
+    background:
+      linear-gradient(0deg, rgba(6, 10, 26, 0.92) 0%, rgba(6, 10, 26, 0.55) 52%, rgba(6, 10, 26, 0.28) 100%);
+  }
+  .vhero-copy { max-width: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .vhero-bg { display: none; }
+  .vhero { background: url("/assets/video/store-checkout-poster.jpg") center / cover no-repeat #0b1020; }
 }

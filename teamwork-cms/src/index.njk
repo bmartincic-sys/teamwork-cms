@@ -6,24 +6,22 @@ permalink: "/"
 ---
 <!-- ============ HERO: the Sales Receipt screen completing a sale ============ -->
 <section class="vhero">
-  <div class="container">
+  <video class="vhero-bg" autoplay muted loop playsinline
+         poster="/assets/video/store-checkout-poster.jpg"
+         aria-hidden="true" tabindex="-1">
+    <source src="/assets/video/store-checkout.mp4" type="video/mp4">
+  </video>
+  <div class="vhero-veil" aria-hidden="true"></div>
+
+  <div class="container vhero-inner">
     <div class="vhero-copy">
       <h1 class="vhero-title">The <span class="os-grad">operating system</span> for modern enterprise retail.</h1>
       <p class="vhero-sub">Point of Sale at the core: every store, every channel, every country. Built by retailers, for retailers.</p>
       <div class="hero-cta vhero-cta">
-        <a href="/demo/" class="btn btn-primary btn-lg">Book a demo <i class="ti ti-arrow-right"></i></a>
-        <a href="/platform/mobile-pos/" class="btn btn-ghost btn-lg">Explore the platform</a>
+        <a href="/demo/" class="btn btn-lg vhero-btn">Book a demo <i class="ti ti-arrow-right"></i></a>
+        <a href="/platform/mobile-pos/" class="btn btn-lg vhero-btn-out">Explore the platform</a>
       </div>
     </div>
-
-    <figure class="vhero-film">
-      <video class="vhero-video" autoplay muted loop playsinline
-             poster="/assets/video/store-checkout-poster.jpg"
-             aria-label="An associate completing a contactless sale on Teamwork Commerce at a boutique counter">
-        <source src="/assets/video/store-checkout.mp4" type="video/mp4">
-      </video>
-      <figcaption class="vhero-cap"><span class="vhero-dot" aria-hidden="true"></span> Checkout, on the floor</figcaption>
-    </figure>
   </div>
 </section>
 
