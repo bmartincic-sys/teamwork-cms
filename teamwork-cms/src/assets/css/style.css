@@ -10529,66 +10529,84 @@ main[data-vertical] .tm-band-glow,
 [class*="ac-"] .section-eyebrow::before { display: none; }
 
 
-/* Stat band as an operations readout rather than a row of marketing numbers.
-   Inverse panel against the light page, figures set in the mono face with
-   tabular figures so the digits line up like instrumentation, and hairline
-   rules between readings. No "live" wording: the numbers are not real time
-   and should not imply it. */
-.statband-readout { padding: 0; }
-.statband-readout .rdo {
-  position: relative;
-  background: var(--bg-inverse);
-  border-radius: 22px;
-  padding: 30px 40px 38px;
-  overflow: hidden;
+/* "In numbers": light card, a soft visual per column, then a hairline, the
+   figure and a two-line caption. Static by design, the calm is the point. */
+.innum { padding: 0; }
+.innum-card {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 44px 48px 46px;
+  box-shadow: 0 24px 60px -40px rgba(7, 9, 26, 0.28);
 }
-.rdo-head { display: flex; align-items: center; gap: 9px; margin-bottom: 26px; }
-.rdo-dot {
-  width: 7px; height: 7px; border-radius: 50%; background: #4ade80;
-  box-shadow: 0 0 0 4px rgba(74, 222, 128, 0.16);
+.innum-head { margin-bottom: 34px; }
+.innum-eyebrow {
+  display: inline-flex; align-items: center; gap: 7px;
+  font-family: var(--font-mono); font-size: 10.5px; font-weight: 600;
+  letter-spacing: 0.14em; text-transform: uppercase; color: var(--brand-text);
+  margin-bottom: 14px;
 }
-.rdo-label {
-  font-family: var(--font-mono); font-size: 11px; font-weight: 600;
-  letter-spacing: 0.16em; text-transform: uppercase;
-  color: rgba(238, 241, 251, 0.62);
+.innum-eyebrow i { font-size: 13px; }
+.innum-h2 {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 3.4vw, 42px); font-weight: 600; line-height: 1.14;
+  letter-spacing: -0.035em; margin: 0; color: var(--text);
 }
-.rdo-row { display: grid; grid-template-columns: repeat(5, 1fr); }
-.rdo-cell { position: relative; padding: 4px 26px; }
-.rdo-cell + .rdo-cell::before {
-  content: ""; position: absolute; left: 0; top: 2px; bottom: 2px; width: 1px;
-  background: rgba(255, 255, 255, 0.10);
-}
-.rdo-cell:first-child { padding-left: 0; }
-.rdo-fig {
-  font-family: var(--font-mono); font-variant-numeric: tabular-nums;
-  font-size: clamp(28px, 3.2vw, 46px); font-weight: 600; line-height: 1;
-  letter-spacing: -0.03em; color: #ffffff;
-}
-.rdo-cap {
-  margin-top: 11px; font-size: 12.5px; line-height: 1.45;
-  color: rgba(238, 241, 251, 0.60);
-}
-/* The lead reading carries the fleet scale, so it gets the weight. */
-.rdo-cell:first-child .rdo-fig { color: #8ab8ff; font-size: clamp(32px, 3.8vw, 54px); }
+.innum-h2 span { color: var(--text-faint); }
 
-@media (max-width: 900px) {
-  .rdo-row { grid-template-columns: repeat(2, 1fr); gap: 26px 0; }
-  .rdo-cell:nth-child(odd) { padding-left: 0; }
-  .rdo-cell:nth-child(odd)::before { display: none; }
-  .statband-readout .rdo { padding: 26px 24px 30px; }
-}
-@media (max-width: 560px) {
-  .rdo-row { grid-template-columns: 1fr; gap: 22px; }
-  .rdo-cell { padding-left: 0; }
-  .rdo-cell::before { display: none; }
+.innum-row { display: grid; grid-template-columns: repeat(3, 1fr); }
+.innum-col { position: relative; padding: 0 34px; }
+.innum-col:first-child { padding-left: 0; }
+.innum-col:last-child { padding-right: 0; }
+.innum-col + .innum-col::before {
+  content: ""; position: absolute; left: 0; top: 0; bottom: 6px; width: 1px;
+  background: var(--border);
 }
 
+/* the visual sits above a hairline, as in the reference */
+.innum-vis {
+  height: 132px; margin-bottom: 22px;
+  border-bottom: 1px solid var(--border);
+  display: flex; align-items: flex-end; justify-content: center;
+  position: relative; overflow: hidden;
+}
+.innum-vis svg { width: 100%; height: 108px; display: block; }
 
-/* The light-mode .counter colour is for figures on light surfaces. Inside the
-   inverse readout the figure sets its own colour, so let the counter inherit. */
-.rdo-fig .counter,
-[data-theme="light"] .rdo-fig .counter { color: inherit; }
+.innum-vis-ghost { align-items: center; justify-content: flex-start; gap: 4px; padding-bottom: 14px; }
+.innum-ghost-n {
+  font-family: var(--font-display); font-size: clamp(46px, 5.6vw, 74px);
+  font-weight: 600; letter-spacing: -0.05em; line-height: 1;
+  color: #8ab8ff;
+}
+.innum-ghost-w {
+  font-family: var(--font-display); font-size: clamp(24px, 2.8vw, 38px);
+  font-weight: 600; letter-spacing: -0.03em; line-height: 1;
+  color: rgba(7, 9, 26, 0.14); align-self: flex-end; margin-bottom: 4px;
+}
 
+.innum-vis-dots {
+  align-items: center; justify-content: center; gap: 9px;
+  display: grid; grid-template-columns: repeat(6, 10px); padding-bottom: 18px;
+}
+.innum-vis-dots span { width: 10px; height: 10px; border-radius: 50%; background: rgba(7, 9, 26, 0.10); }
+.innum-vis-dots span:nth-child(3),
+.innum-vis-dots span:nth-child(7),
+.innum-vis-dots span:nth-child(10),
+.innum-vis-dots span:nth-child(14),
+.innum-vis-dots span:nth-child(16),
+.innum-vis-dots span:nth-child(21) { background: #247DFF; }
 
-/* Header removed from the readout, so the panel tightens up at the top. */
-.statband-readout .rdo { padding-top: 34px; }
+.innum-fig {
+  font-family: var(--font-display); font-size: clamp(26px, 2.9vw, 36px);
+  font-weight: 600; letter-spacing: -0.035em; line-height: 1.05; color: var(--text);
+  margin-bottom: 10px;
+}
+.innum-cap { margin: 0; font-size: 13px; line-height: 1.5; color: var(--text-faint); }
+
+@media (max-width: 860px) {
+  .innum-card { padding: 32px 26px 34px; }
+  .innum-row { grid-template-columns: 1fr; gap: 30px; }
+  .innum-col { padding: 0; }
+  .innum-col + .innum-col::before { display: none; }
+  .innum-vis { height: 110px; }
+}
