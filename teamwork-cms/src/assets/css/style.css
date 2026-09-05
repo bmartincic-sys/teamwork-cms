@@ -10527,3 +10527,64 @@ main[data-vertical] .tm-band-glow,
   -webkit-text-fill-color: currentColor;
 }
 [class*="ac-"] .section-eyebrow::before { display: none; }
+
+
+/* Stat band as an operations readout rather than a row of marketing numbers.
+   Inverse panel against the light page, figures set in the mono face with
+   tabular figures so the digits line up like instrumentation, and hairline
+   rules between readings. No "live" wording: the numbers are not real time
+   and should not imply it. */
+.statband-readout { padding: 0; }
+.statband-readout .rdo {
+  position: relative;
+  background: var(--bg-inverse);
+  border-radius: 22px;
+  padding: 30px 40px 38px;
+  overflow: hidden;
+}
+.rdo-head { display: flex; align-items: center; gap: 9px; margin-bottom: 26px; }
+.rdo-dot {
+  width: 7px; height: 7px; border-radius: 50%; background: #4ade80;
+  box-shadow: 0 0 0 4px rgba(74, 222, 128, 0.16);
+}
+.rdo-label {
+  font-family: var(--font-mono); font-size: 11px; font-weight: 600;
+  letter-spacing: 0.16em; text-transform: uppercase;
+  color: rgba(238, 241, 251, 0.62);
+}
+.rdo-row { display: grid; grid-template-columns: repeat(5, 1fr); }
+.rdo-cell { position: relative; padding: 4px 26px; }
+.rdo-cell + .rdo-cell::before {
+  content: ""; position: absolute; left: 0; top: 2px; bottom: 2px; width: 1px;
+  background: rgba(255, 255, 255, 0.10);
+}
+.rdo-cell:first-child { padding-left: 0; }
+.rdo-fig {
+  font-family: var(--font-mono); font-variant-numeric: tabular-nums;
+  font-size: clamp(28px, 3.2vw, 46px); font-weight: 600; line-height: 1;
+  letter-spacing: -0.03em; color: #ffffff;
+}
+.rdo-cap {
+  margin-top: 11px; font-size: 12.5px; line-height: 1.45;
+  color: rgba(238, 241, 251, 0.60);
+}
+/* The lead reading carries the fleet scale, so it gets the weight. */
+.rdo-cell:first-child .rdo-fig { color: #8ab8ff; font-size: clamp(32px, 3.8vw, 54px); }
+
+@media (max-width: 900px) {
+  .rdo-row { grid-template-columns: repeat(2, 1fr); gap: 26px 0; }
+  .rdo-cell:nth-child(odd) { padding-left: 0; }
+  .rdo-cell:nth-child(odd)::before { display: none; }
+  .statband-readout .rdo { padding: 26px 24px 30px; }
+}
+@media (max-width: 560px) {
+  .rdo-row { grid-template-columns: 1fr; gap: 22px; }
+  .rdo-cell { padding-left: 0; }
+  .rdo-cell::before { display: none; }
+}
+
+
+/* The light-mode .counter colour is for figures on light surfaces. Inside the
+   inverse readout the figure sets its own colour, so let the counter inherit. */
+.rdo-fig .counter,
+[data-theme="light"] .rdo-fig .counter { color: inherit; }
