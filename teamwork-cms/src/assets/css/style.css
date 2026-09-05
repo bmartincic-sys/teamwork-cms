@@ -8,6 +8,11 @@
 :root {
   --bg: #f7f9fc;
   --bg-rgb: 247, 249, 252;   /* for gradients that must fade to --bg cleanly */
+  /* Measured, and identical at every breakpoint. The homepage hero is sized
+     from these so the logo rail's bottom edge lands on the bottom of the
+     viewport whatever the screen. Keep them in step with .nav and .logos. */
+  --nav-h: 84px;
+  --logos-h: 119px;
   --bg-deep: #eef2f8;
   --bg-elevated: #ffffff;
   --bg-inverse: #07091a;
@@ -10877,7 +10882,8 @@ main[data-vertical] .tm-band-glow,
   /* Sized so the customer logo rail clears the fold rather than sitting just
      under it: 240px is the nav plus the whole logos block (padding, label,
      marquee), so the strip is on screen the moment the page opens. */
-  min-height: clamp(440px, calc(100vh - 286px), 780px);
+  min-height: max(380px, calc(100vh - var(--nav-h) - var(--logos-h)));
+  min-height: max(380px, calc(100dvh - var(--nav-h) - var(--logos-h)));
   display: flex; align-items: center;
   overflow: hidden;
   background: #0b1020;
@@ -10920,7 +10926,6 @@ main[data-vertical] .tm-band-glow,
 .vhero-btn-out:hover { background: rgba(255, 255, 255, 0.12); border-color: #ffffff; }
 
 @media (max-width: 900px) {
-  .vhero { min-height: clamp(400px, calc(100vh - 276px), 600px); }
   .vhero-veil {
     background:
       linear-gradient(0deg, rgba(6, 10, 26, 0.92) 0%, rgba(6, 10, 26, 0.55) 52%, rgba(6, 10, 26, 0.28) 100%);
@@ -11092,7 +11097,3 @@ main[data-vertical] .tm-band-glow,
 }
 
 
-/* Sections carry 88px of top padding, which after the logo rail's own rule
-   left a band of empty page between the two. The section that follows the
-   rail runs tighter. */
-.logos + .section, .logos + .section-tight { padding-top: 48px; }
