@@ -10490,3 +10490,40 @@ main[data-vertical] .tm-band-glow,
 [data-theme="light"] .duo-tags .t-plus {
   background: rgba(138, 10, 221, 0.10); color: #7a0bc0; border-color: rgba(138, 10, 221, 0.32);
 }
+
+
+/* Hero and section eyebrows as plain type rather than a pill badge with a dot.
+   A badge sitting directly above the H1 is one of the more recognisable
+   template signatures; the label still does its job at the same size, in blue
+   and bolder. */
+.eyebrow,
+.innov-eyebrow {
+  padding: 0;
+  background: none;
+  border: 0;
+  border-radius: 0;
+  font-weight: 700;
+  color: var(--brand-text);
+}
+.eyebrow-dot,
+.innov-eyebrow-dot { display: none; }
+
+/* On the dark photo heroes the label needs to stay light to read. */
+.hero .eyebrow { color: #9dc0ff; background: none; border-color: transparent; }
+
+
+/* Section eyebrows lose the pill and the dot for the same reason. Each band's
+   accent colour stays, so the section colour system still reads, just as type
+   rather than as a badge. */
+[class*="ac-"] .section-header .section-eyebrow,
+[class*="ac-"] .section-eyebrow {
+  display: inline-block;
+  padding: 0;
+  background: none;
+  border: 0;
+  border-radius: 0;
+  font-weight: 700;
+  color: var(--accent, var(--brand-text));
+  -webkit-text-fill-color: currentColor;
+}
+[class*="ac-"] .section-eyebrow::before { display: none; }
