@@ -7,6 +7,7 @@
    ===================================================== */
 :root {
   --bg: #f7f9fc;
+  --bg-rgb: 247, 249, 252;   /* for gradients that must fade to --bg cleanly */
   --bg-deep: #eef2f8;
   --bg-elevated: #ffffff;
   --bg-inverse: #07091a;
@@ -47,6 +48,7 @@
 }
 [data-theme="dark"] {
   --bg: #07091a;
+  --bg-rgb: 7, 9, 26;
   --bg-deep: #050717;
   --bg-elevated: #0f1228;
   --bg-inverse: #ffffff;
@@ -420,7 +422,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* ============ LOGOS ============ */
-.logos { padding: 40px 0 48px; border-bottom: 1px solid var(--border); overflow: hidden; }
+.logos { padding: 34px 0 20px; border-bottom: 1px solid var(--border); overflow: hidden; }
 .logos-label {
   font-size: 11px; color: var(--text-faint); font-weight: 600;
   text-transform: uppercase; letter-spacing: 0.06em; text-align: center;
@@ -707,7 +709,7 @@ a { color: inherit; text-decoration: none; }
 }
 /* The Plus callout interior is dark in both themes. Re-apply dark-theme tokens in light mode */
 [data-theme="light"] .plus-callout-inner {
-  --bg: #07091a; --bg-deep: #050717; --bg-elevated: #0f1228; --panel: #0f1228;
+  --bg: #07091a; --bg-rgb: 7, 9, 26; --bg-deep: #050717; --bg-elevated: #0f1228; --panel: #0f1228;
   --text: #ffffff; --text-muted: #9ba8c0; --text-faint: #7b8599; --text-inverse: #07091a;
   --border: rgba(255, 255, 255, 0.08); --border-strong: rgba(255, 255, 255, 0.16);
   --brand-blue: #4D94FF; --brand-text: #80B0FF; --brand-soft: rgba(77, 148, 255, 0.12);
@@ -10894,7 +10896,7 @@ main[data-vertical] .tm-band-glow,
 .vhero-copy { max-width: 640px; }
 .vhero-title {
   font-family: var(--font-display);
-  font-size: clamp(38px, 4.9vw, 66px); font-weight: 600; line-height: 1.06;
+  font-size: clamp(34px, 4.2vw, 56px); font-weight: 600; line-height: 1.07;
   letter-spacing: -0.04em; margin: 0 0 20px; color: #ffffff;
 }
 .vhero-title .os-grad { -webkit-text-fill-color: currentColor; color: #9dc0ff; background: none; }
@@ -10902,7 +10904,7 @@ main[data-vertical] .tm-band-glow,
   font-size: clamp(16px, 1.3vw, 18.5px); line-height: 1.6;
   color: rgba(255, 255, 255, 0.82); margin: 0 0 32px; max-width: 34em;
 }
-.vhero-cta { justify-content: flex-start; }
+.vhero-cta { justify-content: flex-start; margin-bottom: 0; }
 
 /* buttons that hold up on footage: solid white, and an outlined companion */
 .vhero-btn {
@@ -10934,14 +10936,14 @@ main[data-vertical] .tm-band-glow,
 /* Hero copy sits bottom-left over the footage, and the whole headline is
    white rather than picking out a phrase in blue. */
 .vhero { align-items: flex-end; }
-.vhero-inner { padding-bottom: 76px; }
+.vhero-inner { padding-bottom: 80px; }
 .vhero-title .os-grad {
   color: #ffffff;
   -webkit-text-fill-color: #ffffff;
   background: none;
 }
 @media (max-width: 900px) {
-  .vhero-inner { padding-bottom: 48px; }
+  .vhero-inner { padding-bottom: 52px; }
 }
 
 
@@ -11087,4 +11089,20 @@ main[data-vertical] .tm-band-glow,
   .pmod-core { grid-column: auto; }
   .pmod-shot { height: 210px; }
   .pmod-body { padding: 22px 22px 24px; }
+}
+
+/* The footage met the logo rail on a hard edge, which read as two unrelated
+   slabs. Dissolve the last strip of the hero into the page ground so the rail
+   looks like the base of the header rather than the first section after it.
+   Kept shallow: the hero copy sits above this, and a taller wash would put a
+   pale ground behind the outlined white button. */
+.vhero::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0;
+  height: 78px; z-index: 1; pointer-events: none;
+  /* Faded through --bg's own colour, not the `transparent` keyword: fading to
+     transparent-black puts a grey haze across the middle of the ramp. */
+  background: linear-gradient(to bottom,
+    rgba(var(--bg-rgb), 0) 0%,
+    rgba(var(--bg-rgb), 0.55) 52%,
+    rgba(var(--bg-rgb), 1) 100%);
 }
