@@ -422,11 +422,11 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* ============ LOGOS ============ */
-.logos { padding: 34px 0 20px; border-bottom: 1px solid var(--border); overflow: hidden; }
+.logos { padding: 26px 0 16px; border-bottom: 1px solid var(--border); overflow: hidden; }
 .logos-label {
   font-size: 11px; color: var(--text-faint); font-weight: 600;
   text-transform: uppercase; letter-spacing: 0.06em; text-align: center;
-  margin-bottom: 24px;
+  margin-bottom: 18px;
 }
 .logos-marquee {
   position: relative;
@@ -10877,7 +10877,7 @@ main[data-vertical] .tm-band-glow,
   /* Sized so the customer logo rail clears the fold rather than sitting just
      under it: 240px is the nav plus the whole logos block (padding, label,
      marquee), so the strip is on screen the moment the page opens. */
-  min-height: clamp(420px, calc(100vh - 300px), 680px);
+  min-height: clamp(440px, calc(100vh - 286px), 780px);
   display: flex; align-items: center;
   overflow: hidden;
   background: #0b1020;
@@ -10920,7 +10920,7 @@ main[data-vertical] .tm-band-glow,
 .vhero-btn-out:hover { background: rgba(255, 255, 255, 0.12); border-color: #ffffff; }
 
 @media (max-width: 900px) {
-  .vhero { min-height: clamp(380px, calc(100vh - 290px), 540px); }
+  .vhero { min-height: clamp(400px, calc(100vh - 276px), 600px); }
   .vhero-veil {
     background:
       linear-gradient(0deg, rgba(6, 10, 26, 0.92) 0%, rgba(6, 10, 26, 0.55) 52%, rgba(6, 10, 26, 0.28) 100%);
@@ -11091,18 +11091,8 @@ main[data-vertical] .tm-band-glow,
   .pmod-body { padding: 22px 22px 24px; }
 }
 
-/* The footage met the logo rail on a hard edge, which read as two unrelated
-   slabs. Dissolve the last strip of the hero into the page ground so the rail
-   looks like the base of the header rather than the first section after it.
-   Kept shallow: the hero copy sits above this, and a taller wash would put a
-   pale ground behind the outlined white button. */
-.vhero::after {
-  content: ""; position: absolute; left: 0; right: 0; bottom: 0;
-  height: 78px; z-index: 1; pointer-events: none;
-  /* Faded through --bg's own colour, not the `transparent` keyword: fading to
-     transparent-black puts a grey haze across the middle of the ramp. */
-  background: linear-gradient(to bottom,
-    rgba(var(--bg-rgb), 0) 0%,
-    rgba(var(--bg-rgb), 0.55) 52%,
-    rgba(var(--bg-rgb), 1) 100%);
-}
+
+/* Sections carry 88px of top padding, which after the logo rail's own rule
+   left a band of empty page between the two. The section that follows the
+   rail runs tighter. */
+.logos + .section, .logos + .section-tight { padding-top: 48px; }
