@@ -10858,3 +10858,85 @@ main[data-vertical] .tm-band-glow,
 .cs-card-more .cs-more-inner { padding: 22px 20px; }
 .cs-card-more .cs-more-count.cs-more-phrase { font-size: 24px; line-height: 1.18; max-width: none; }
 .cs-card-more .cs-more-label { font-size: 13.5px; max-width: none; }
+
+
+/* Story cards narrowed so all four fit with the tail card peeking at the
+   page edge, which is what signals the rail scrolls. */
+.cs-card { width: min(272px, 74vw); }
+.cs-card.cs-card-more { width: min(200px, 58vw); }
+.cs-card-more .cs-more-count.cs-more-phrase { font-size: 21px; }
+.cs-card-more .cs-more-label { font-size: 12.5px; }
+
+/* Tail card back to brand blue rather than the store photograph. */
+.cs-card.cs-card-more {
+  background: linear-gradient(165deg, #2b7cf5 0%, #1A6FF0 55%, #1257cc 100%);
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+
+/* Homepage hero built around real store footage. Light, asymmetric, and the
+   film bleeds off the right edge rather than sitting in a centred box, so the
+   page opens on a shop floor instead of a gradient. */
+.vhero { position: relative; padding: 56px 0 72px; overflow: hidden; }
+.vhero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  gap: 56px; align-items: center;
+}
+.vhero-title {
+  font-family: var(--font-display);
+  font-size: clamp(38px, 5.2vw, 68px); font-weight: 600; line-height: 1.04;
+  letter-spacing: -0.04em; margin: 0 0 20px; color: var(--text);
+}
+.vhero-sub {
+  font-size: clamp(16px, 1.35vw, 18.5px); line-height: 1.6;
+  color: var(--text-muted); margin: 0 0 30px; max-width: 30em;
+}
+
+/* the film, cropped by the page edge */
+.vhero-film {
+  position: relative; margin: 0;
+  border-radius: 22px 0 0 22px;
+  overflow: hidden;
+  margin-right: calc((100vw - min(100vw, var(--max-w))) / -2 - 32px);
+  box-shadow: 0 40px 80px -50px rgba(7, 9, 26, 0.55);
+}
+.vhero-video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
+
+/* one glass caption, same language as the nav */
+.vhero-cap {
+  position: absolute; left: 18px; bottom: 18px;
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 8px 14px; border-radius: 100px;
+  font-size: 12.5px; font-weight: 600; letter-spacing: -0.01em; color: #ffffff;
+  background: rgba(12, 20, 44, 0.42);
+  backdrop-filter: saturate(190%) blur(16px);
+  -webkit-backdrop-filter: saturate(190%) blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.34);
+}
+.vhero-dot {
+  width: 7px; height: 7px; border-radius: 50%; background: #4ade80;
+  box-shadow: 0 0 0 4px rgba(74, 222, 128, 0.20);
+}
+
+@media (max-width: 980px) {
+  .vhero { padding: 34px 0 46px; }
+  .vhero-grid { grid-template-columns: 1fr; gap: 30px; }
+  .vhero-film { margin-right: 0; border-radius: 18px; }
+}
+@supports not (backdrop-filter: blur(1px)) {
+  .vhero-cap { background: rgba(12, 20, 44, 0.86); }
+}
+/* Motion is content here, not decoration, but honour the preference. */
+@media (prefers-reduced-motion: reduce) {
+  .vhero-video { display: none; }
+  .vhero-film { background: url("/assets/video/store-checkout-poster.jpg") center / cover no-repeat; min-height: 340px; }
+}
+
+
+/* The animated device pair, rehoused from the homepage hero. It was built
+   inside a dark hero grid, so it needs its own stage on a light section. */
+.devshow-stage { position: relative; max-width: 980px; margin: 12px auto 0; }
+.devshow-stage .hpos-stage { position: relative; }
+.devshow-stage .hpos-device { margin-right: calc(22.5% - 26px); }
