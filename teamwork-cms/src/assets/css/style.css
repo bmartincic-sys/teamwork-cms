@@ -10298,7 +10298,6 @@ a.evc:hover .evc-go { opacity: 1; }
 
 /* the rail runs at 156px so its 2px straddles 157px, where the year-column dots centre;
 
-
 /* Our Story. The year pins to the left and ticks over as entries scroll past it,
    so the reader feels the clock moving rather than reading a column of dates.
    Fails open: with no JS the first year shows and the spine sits full. */
@@ -10389,14 +10388,12 @@ a.evc:hover .evc-go { opacity: 1; }
   .hist-list::after { transition: none; }
 }
 
-
 /* The HubSpot form carries its own card, heading and footnote, so the wrapper
    drops its own chrome: otherwise the contact hero shows a card inside a card
    and the heading twice. */
 .chero-form.is-embed {
   padding: 0; background: none; border: 0; box-shadow: none; border-radius: 0;
 }
-
 
 /* Same as the contact hero: the HubSpot form brings its own card, heading and
    footnote, so the wrapper drops its chrome rather than framing it twice. */
@@ -10405,7 +10402,6 @@ a.evc:hover .evc-go { opacity: 1; }
 .demox-formwrap.is-embed {
   padding: 0; background: none; border: 0; box-shadow: none; border-radius: 0;
 }
-
 
 /* Nav CTA in the main brand blue rather than the gradient. */
 .nav-cta .btn-primary,
@@ -10416,7 +10412,6 @@ a.evc:hover .evc-go { opacity: 1; }
 }
 .nav-cta .btn-primary:hover,
 .nav-mobile-cta .btn-primary:hover { background: var(--brand-royal); }
-
 
 /* Gradient reduced to the places it earns: gradient text, AI and Plus
    surfaces, and the primary CTA. The decorative glow layer is off. */
@@ -10447,7 +10442,6 @@ main[data-vertical] .tm-band-glow,
 .hpos-aur-2,
 .hpos-bootveil { background: none; }
 
-
 /* Card and tile fills flattened to solid surfaces: the colour stays, the
    gradient goes. Gradient text is deliberately excluded here, since a solid
    background behind background-clip:text would hide the words. */
@@ -10456,7 +10450,6 @@ main[data-vertical] .tm-band-glow,
 .duo-img, .inc-visual { background: var(--bg-deep); }
 .bento-badge { background: var(--brand-blue); }
 .rollout-steps::before { background: var(--border); }
-
 
 /* Light mode contrast. #247DFF is a fine brand colour but fails WCAG AA both
    ways at body size: white on it is 3.85:1 and it is 3.85:1 on white. In light
@@ -10471,7 +10464,6 @@ main[data-vertical] .tm-band-glow,
 [data-theme="light"] .spec-big,
 [data-theme="light"] .vs-us { color: var(--brand-text); }
 [data-theme="light"] .padv-kicker { color: #9b30d0; }
-
 
 /* The "your stores could be next" card is an inverse tile: it carries white
    text, so it must keep a dark surface. Flattening .cs-card turned it white
@@ -10489,7 +10481,6 @@ main[data-vertical] .tm-band-glow,
 [data-theme="light"] .duo-tags .t-plus {
   background: rgba(138, 10, 221, 0.10); color: #7a0bc0; border-color: rgba(138, 10, 221, 0.32);
 }
-
 
 /* Hero and section eyebrows as plain type rather than a pill badge with a dot.
    A badge sitting directly above the H1 is one of the more recognisable
@@ -10510,7 +10501,6 @@ main[data-vertical] .tm-band-glow,
 /* On the dark photo heroes the label needs to stay light to read. */
 .hero .eyebrow { color: #9dc0ff; background: none; border-color: transparent; }
 
-
 /* Section eyebrows lose the pill and the dot for the same reason. Each band's
    accent colour stays, so the section colour system still reads, just as type
    rather than as a badge. */
@@ -10526,7 +10516,6 @@ main[data-vertical] .tm-band-glow,
   -webkit-text-fill-color: currentColor;
 }
 [class*="ac-"] .section-eyebrow::before { display: none; }
-
 
 /* "In numbers": light card, a soft visual per column, then a hairline, the
    figure and a two-line caption. Static by design, the calm is the point. */
@@ -10610,7 +10599,6 @@ main[data-vertical] .tm-band-glow,
   .innum-vis { height: 110px; }
 }
 
-
 /* Duo cards. The flattening pass earlier left every tile near-white, which
    drained the section; the product shots are transparent cut-outs, so a
    saturated tile reads through them. Each card takes its own colour. */
@@ -10627,7 +10615,6 @@ main[data-vertical] .tm-band-glow,
 .duo-kicker { color: var(--brand-text); }
 .duo-kicker-ai { color: #7a0bc0; }
 
-
 /* Uptime read as a run of trading days rather than a number repeated twice. */
 .innum-vis-bars {
   display: flex; align-items: flex-end; justify-content: center;
@@ -10642,7 +10629,6 @@ main[data-vertical] .tm-band-glow,
 .innum-vis-bars span:nth-child(7)    { height: 40px; opacity: 0.35; }
 .innum-vis-bars span:nth-child(13)   { height: 46px; opacity: 0.35; }
 
-
 /* Cooler, more restrained tiles: the lavender read as pastel. Blues and a
    steel grey instead, still saturated enough to carry the section. */
 .duo-card-ai .duo-img-tile      { background: #dbe7fb; }
@@ -10655,7 +10641,6 @@ main[data-vertical] .tm-band-glow,
    centred and fill edge to edge with nothing cut off. */
 .duo-card-flip .duo-img { aspect-ratio: 16 / 9; }
 .duo-card-flip .duo-img img { object-fit: contain; object-position: center; }
-
 
 /* The Proof: fourth card in brand blue rather than navy. #1A6FF0 is the
    closest step down from #247DFF that carries white body text at 4.59:1;
@@ -10670,7 +10655,6 @@ main[data-vertical] .tm-band-glow,
 [data-theme="light"] .duo-tags .t-plus {
   background: rgba(55, 48, 163, 0.09); color: #3730a3; border-color: rgba(55, 48, 163, 0.30);
 }
-
 
 /* The flip card puts the tile last, and a fixed aspect ratio left it short of
    the card's full height once the grid stretched all three to match, which is
@@ -10692,7 +10676,6 @@ main[data-vertical] .tm-band-glow,
 /* And let the standard duo cards absorb their leftover height, which was
    showing as a strip under the third card. */
 .duo-card .duo-body { flex: 1 1 auto; }
-
 
 /* Liquid glass on the nav. What makes Apple's version read as glass is not
    the blur, which everyone copies, but the edge: a specular highlight where
@@ -10737,7 +10720,6 @@ main[data-vertical] .tm-band-glow,
   [data-theme="light"] .nav, [data-theme="dark"] .nav.nav-scrolled { background: var(--bg); }
 }
 
-
 /* Same glass on the elements that float above content: the chips over the
    hero device, and the year bar that rides the events archive. Each gets the
    specular top edge and a seated bottom, so they read as a layer of glass
@@ -10781,7 +10763,6 @@ main[data-vertical] .tm-band-glow,
   .evy-head { background: color-mix(in srgb, var(--accent, #4D94FF) 17%, var(--bg-deep)); }
 }
 
-
 /* The accent card's paragraph was losing to a later .bento-card p rule at the
    same specificity, so dark body text was sitting on the blue gradient.
    Raised above it and pinned to white. */
@@ -10806,16 +10787,13 @@ main[data-vertical] .tm-band-glow,
   border-color: rgba(255, 255, 255, 0.20);
 }
 
-
 /* The badge went solid blue in the gradient pass but kept dark text, which
    left it barely readable. White on it, and the icon with it. */
 .bento-badge { color: #ffffff; }
 .bento-badge i { color: #ffffff; }
 
-
 /* Gradient stops deepened: white body text on the old blue end was 3.85:1.
    Every stop now clears 4.5 against white (5.00 at the lightest). */
-
 
 /* Back to brand blue, no photograph, but the panel keeps the glass. Over a
    flat colour a blur has nothing to refract, so the glass here has to come
@@ -10825,7 +10803,6 @@ main[data-vertical] .tm-band-glow,
   background: #1A6FF0;
   border-color: rgba(255, 255, 255, 0.22);
 }
-
 
 /* Back to a solid tile: no glass panel, just a very slight gradient over the
    store photograph so the copy has something to sit on. */
@@ -10851,21 +10828,11 @@ main[data-vertical] .tm-band-glow,
 .cs-rail { padding-right: 0; scroll-padding-right: 0; }
 .cs-rail > :last-child { margin-right: max(32px, calc((100vw - var(--max-w)) / 2)); }
 
-
 /* The "next" tile as a half-width end-cap, so it reads as the tail of the
    rail rather than a fifth story competing with the four real ones. */
-.cs-card.cs-card-more { width: min(220px, 60vw); }
-.cs-card-more .cs-more-inner { padding: 22px 20px; }
-.cs-card-more .cs-more-count.cs-more-phrase { font-size: 24px; line-height: 1.18; max-width: none; }
-.cs-card-more .cs-more-label { font-size: 13.5px; max-width: none; }
-
 
 /* Story cards narrowed so all four fit with the tail card peeking at the
    page edge, which is what signals the rail scrolls. */
-.cs-card { width: min(272px, 74vw); }
-.cs-card.cs-card-more { width: min(200px, 58vw); }
-.cs-card-more .cs-more-count.cs-more-phrase { font-size: 21px; }
-.cs-card-more .cs-more-label { font-size: 12.5px; }
 
 /* Tail card back to brand blue rather than the store photograph. */
 .cs-card.cs-card-more {
@@ -10873,16 +10840,10 @@ main[data-vertical] .tm-band-glow,
   border-color: rgba(255, 255, 255, 0.22);
 }
 
-
 /* Homepage hero built around real store footage. Light, asymmetric, and the
    film bleeds off the right edge rather than sitting in a centred box, so the
    page opens on a shop floor instead of a gradient. */
 .vhero { position: relative; padding: 56px 0 72px; overflow: hidden; }
-.vhero-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
-  gap: 56px; align-items: center;
-}
 .vhero-title {
   font-family: var(--font-display);
   font-size: clamp(38px, 5.2vw, 68px); font-weight: 600; line-height: 1.04;
@@ -10922,7 +10883,6 @@ main[data-vertical] .tm-band-glow,
 
 @media (max-width: 980px) {
   .vhero { padding: 34px 0 46px; }
-  .vhero-grid { grid-template-columns: 1fr; gap: 30px; }
   .vhero-film { margin-right: 0; border-radius: 18px; }
 }
 @supports not (backdrop-filter: blur(1px)) {
@@ -10934,9 +10894,32 @@ main[data-vertical] .tm-band-glow,
   .vhero-film { background: url("/assets/video/store-checkout-poster.jpg") center / cover no-repeat; min-height: 340px; }
 }
 
-
 /* The animated device pair, rehoused from the homepage hero. It was built
    inside a dark hero grid, so it needs its own stage on a light section. */
 .devshow-stage { position: relative; max-width: 980px; margin: 12px auto 0; }
 .devshow-stage .hpos-stage { position: relative; }
 .devshow-stage .hpos-device { margin-right: calc(22.5% - 26px); }
+
+
+/* Hero as a centred stack: headline, sub, calls to action, then the film
+   full width beneath, with the customer logos following it. */
+.vhero { padding: 64px 0 24px; }
+.vhero-copy { max-width: 940px; margin: 0 auto; text-align: center; }
+.vhero-title { font-size: clamp(38px, 5.4vw, 72px); margin-bottom: 22px; }
+.vhero-sub { margin: 0 auto 32px; max-width: 40em; }
+.vhero-cta { justify-content: center; }
+
+.vhero-film {
+  margin: 44px auto 0;
+  max-width: var(--max-w);
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 44px 90px -56px rgba(7, 9, 26, 0.55);
+}
+.vhero-video { aspect-ratio: 16 / 7.2; }
+
+@media (max-width: 980px) {
+  .vhero { padding: 34px 0 18px; }
+  .vhero-film { margin-top: 30px; border-radius: 16px; }
+  .vhero-video { aspect-ratio: 16 / 9; }
+}
