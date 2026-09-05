@@ -10922,3 +10922,17 @@ main[data-vertical] .tm-band-glow,
   .vhero-bg { display: none; }
   .vhero { background: url("/assets/video/store-checkout-poster.jpg") center / cover no-repeat #0b1020; }
 }
+
+
+/* Hero copy sits bottom-left over the footage, and the whole headline is
+   white rather than picking out a phrase in blue. */
+.vhero { align-items: flex-end; }
+.vhero-inner { padding-bottom: 76px; }
+.vhero-title .os-grad {
+  color: #ffffff;
+  -webkit-text-fill-color: #ffffff;
+  background: none;
+}
+@media (max-width: 900px) {
+  .vhero-inner { padding-bottom: 48px; }
+}
