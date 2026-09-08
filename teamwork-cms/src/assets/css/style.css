@@ -5570,8 +5570,8 @@ main > .hero:first-child { margin-top: -85px; padding-top: 230px; }
   display: flex; flex-direction: column; align-items: flex-start;
 }
 .cs-logo {
-  max-width: 46%; max-height: 40px; width: auto; height: auto;
-  margin-bottom: 12px;
+  max-width: 60%; max-height: 56px; width: auto; height: auto;
+  margin-bottom: 14px;
   filter: brightness(0) invert(1) drop-shadow(0 2px 8px rgba(0,0,0,0.4));
 }
 .cs-hover {
@@ -5584,14 +5584,15 @@ main > .hero:first-child { margin-top: -85px; padding-top: 230px; }
 .cs-hover-in { overflow: hidden; min-height: 0; }
 .cs-hover p { font-size: 14.5px; line-height: 1.5; font-weight: 400; color: rgba(255,255,255,0.95); margin: 0 0 12px; }
 .cs-result {
-  display: inline-flex; align-items: center; gap: 8px;
-  font-size: 14.5px; font-weight: 700; line-height: 1.3;
-  letter-spacing: -0.015em; text-align: left;
-  padding: 10px 15px; border-radius: 12px;
-  background: #ffffff; color: #0b1020;
+  display: inline-flex; align-items: center; gap: 7px;
+  font-size: 12.5px; font-weight: 700; line-height: 1.3;
+  letter-spacing: -0.01em; text-align: left;
+  padding: 7px 12px; border-radius: 100px;
+  /* white on #0b57d0 is 6.4:1, so it holds at this size over any photograph */
+  background: #0b57d0; color: #ffffff;
   box-shadow: 0 8px 20px -12px rgba(0, 0, 0, 0.5);
 }
-.cs-result i { font-size: 17px; color: #0b57d0; flex: 0 0 auto; }
+.cs-result i { font-size: 15px; color: #ffffff; flex: 0 0 auto; }
 .cs-person { font-size: 11.5px; display: block; color: rgba(255,255,255,0.65); margin-bottom: 4px; }
 .cs-read {
   display: inline-flex; align-items: center; gap: 7px;
