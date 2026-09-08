@@ -5860,6 +5860,7 @@ main > .hero:first-child { margin-top: -85px; padding-top: 230px; }
 .bento-note {
   margin: 22px 0 0; max-width: 760px;
   font-size: 12.5px; line-height: 1.6; color: var(--text-faint);
+  font-style: italic;
 }
 .bento-badge {
   display: inline-flex; align-items: center; gap: 8px;
@@ -11270,5 +11271,81 @@ main[data-vertical] .tm-band-glow,
   .hero-photo-note { max-width: none; }
 }
 
-/* The problem half of the pair reads a step back from the answer that follows. */
-.ch-para-problem { color: var(--text-faint); }
+
+/* =====================================================
+   PROBLEM AND SOLUTION, stated as such
+   Spacing alone did not read as a contrast, so each half is labelled and set
+   on its own ground: the problem outlined and muted, the answer solid and in
+   full text colour.
+   ===================================================== */
+.pvs {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 18px;
+  max-width: 940px; margin: 30px auto 0; text-align: left;
+}
+.pvs-col { padding: 22px 24px; border-radius: 16px; }
+.pvs-problem {
+  background: transparent;
+  border: 1px dashed var(--border-strong, var(--border));
+}
+.pvs-solution {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+}
+.pvs-lab {
+  display: block; margin-bottom: 9px;
+  font-size: 12.5px; font-weight: 700; letter-spacing: 0.005em;
+}
+.pvs-problem .pvs-lab { color: var(--text-faint); }
+.pvs-solution .pvs-lab { color: var(--brand-text); }
+.pvs-col p { margin: 0; font-size: 15.5px; line-height: 1.6; }
+.pvs-problem p { color: var(--text-muted); }
+.pvs-solution p { color: var(--text); }
+@media (max-width: 760px) {
+  .pvs { grid-template-columns: 1fr; gap: 14px; margin-top: 24px; }
+}
+
+/* =====================================================
+   HELLO IN EVERY SHIPPED LANGUAGE
+   A single window one line tall, with the greetings stacked behind it and the
+   track stepping up one line at a time. The last item repeats the first so the
+   loop closes without a rewind. No JS: with reduced motion it holds on English.
+   ===================================================== */
+.hellorot { margin: 26px 0 4px; text-align: center; }
+.hellorot-win {
+  display: inline-flex; overflow: hidden; height: 1.3em; vertical-align: baseline;
+  font-family: var(--font-display);
+  font-size: clamp(30px, 3.4vw, 46px); font-weight: 600; letter-spacing: -0.03em;
+  color: var(--brand-text);
+}
+.hellorot-track {
+  display: flex; flex-direction: column;
+  animation: hellorot 26s cubic-bezier(.76, 0, .24, 1) infinite;
+}
+.hellorot-track > span {
+  /* the window is as wide as the longest greeting, so each word centres in it */
+  display: block; height: 1.3em; line-height: 1.3; white-space: nowrap;
+  text-align: center;
+}
+.hellorot-note {
+  display: block; margin-top: 10px;
+  font-size: 13.5px; color: var(--text-faint);
+}
+@keyframes hellorot {
+  0.000%, 5.692% { transform: translateY(-0.00em); }
+  7.692%, 13.385% { transform: translateY(-1.30em); }
+  15.385%, 21.077% { transform: translateY(-2.60em); }
+  23.077%, 28.769% { transform: translateY(-3.90em); }
+  30.769%, 36.462% { transform: translateY(-5.20em); }
+  38.462%, 44.154% { transform: translateY(-6.50em); }
+  46.154%, 51.846% { transform: translateY(-7.80em); }
+  53.846%, 59.538% { transform: translateY(-9.10em); }
+  61.538%, 67.231% { transform: translateY(-10.40em); }
+  69.231%, 74.923% { transform: translateY(-11.70em); }
+  76.923%, 82.615% { transform: translateY(-13.00em); }
+  84.615%, 90.308% { transform: translateY(-14.30em); }
+  92.308%, 98.000% { transform: translateY(-15.60em); }
+  100% { transform: translateY(-16.90em); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hellorot-track { animation: none; }
+}
