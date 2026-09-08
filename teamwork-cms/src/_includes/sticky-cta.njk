@@ -14,7 +14,9 @@
   <div class="container stickycta-inner">
     <div class="stickycta-copy">{{ stickyText | default("See the platform on your own numbers.") }}</div>
     <div class="stickycta-actions">
-      <a href="{{ stickyHref | default('#get-in-touch') }}" class="btn btn-primary">{{ stickyCta | default("Request a session") }} <i class="ti ti-arrow-right"></i></a>
+      {%- set _sh = stickyHref | default('#get-in-touch') -%}
+      {#- only the demo destination opens in a new tab; the default is an in-page anchor -#}
+      <a href="{{ _sh }}"{% if '/demo/' in _sh %} target="_blank" rel="noopener"{% endif %} class="btn btn-primary">{{ stickyCta | default("Request a session") }} <i class="ti ti-arrow-right"></i></a>
       <button class="stickycta-close" type="button" aria-label="Dismiss">&times;</button>
     </div>
   </div>

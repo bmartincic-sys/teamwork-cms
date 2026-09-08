@@ -28,7 +28,7 @@ stickyHref: "/demo/?ref=events"
       <h1 class="evhero-title">Meet us on the show floor.</h1>
       <p class="evhero-sub">We're on the ground at the world's leading retail events: on the show floor, in the sessions, and ready to talk. Find us, book a meeting, and see what next-level retail looks like.</p>
       <div class="hero-cta">
-        <a href="/demo/?ref=events" class="btn btn-primary btn-lg">Book a meeting <i class="ti ti-arrow-right"></i></a>
+        <a href="/demo/?ref=events" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Book a meeting <i class="ti ti-arrow-right"></i></a>
         {% if events.upcoming.length %}
         <a href="#headed" class="btn btn-ghost btn-lg">See where we'll be</a>
         {% endif %}
@@ -81,7 +81,7 @@ stickyHref: "/demo/?ref=events"
 
           <h4 class="cfu-headline">{{ e.headline }}</h4>
           <p class="cfu-body">{{ e.body }}</p>
-          <a href="/demo/?ref={{ e.ref }}" class="btn btn-primary">{{ e.cta }} <i class="ti ti-arrow-right"></i></a>
+          <a href="/demo/?ref={{ e.ref }}" target="_blank" rel="noopener" class="btn btn-primary">{{ e.cta }} <i class="ti ti-arrow-right"></i></a>
         </div>
       </article>
       {% endfor %}
@@ -150,8 +150,8 @@ stickyHref: "/demo/?ref=events"
         <h2>Can't make it to the next show?</h2>
         <p>Our team is just as happy on a video call. Book a live demo and find out how Teamwork Commerce can empower your retail operations, wherever you are in the world.</p>
         <div class="cfu-remote-cta">
-          <a href="/demo/" class="btn btn-primary btn-lg">Book a demo <i class="ti ti-arrow-right"></i></a>
-          <a href="/demo/?ref=events-updates" class="btn btn-ghost btn-lg">Keep me posted</a>
+          <a href="/demo/" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Book a demo <i class="ti ti-arrow-right"></i></a>
+          <a href="/demo/?ref=events-updates" target="_blank" rel="noopener" class="btn btn-ghost btn-lg">Keep me posted</a>
         </div>
       </div>
       <div class="cfu-remote-side" aria-hidden="true">

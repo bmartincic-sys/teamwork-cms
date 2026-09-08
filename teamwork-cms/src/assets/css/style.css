@@ -11269,3 +11269,6 @@ main[data-vertical] .tm-band-glow,
   .hero-photo-inner { padding-bottom: 52px; }
   .hero-photo-note { max-width: none; }
 }
+
+/* The problem half of the pair reads a step back from the answer that follows. */
+.ch-para-problem { color: var(--text-faint); }
