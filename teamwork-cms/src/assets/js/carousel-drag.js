@@ -3,7 +3,7 @@
    real scroll container and drive scrollLeft ourselves. Touch and trackpad then
    work natively; mouse gets click-and-drag. */
 (function () {
-  var SPEED = 26; // px per second
+  var SPEED = 36; // px per second
 
   function setup(wrap) {
     var track = wrap.querySelector('.logos-track');

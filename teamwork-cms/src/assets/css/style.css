@@ -451,7 +451,7 @@ a { color: inherit; text-decoration: none; }
 }
 .logos-track {
   display: flex; align-items: center; gap: 64px;
-  animation: marquee 90s linear infinite;
+  animation: marquee 68s linear infinite;
   width: max-content;
 }
 .logos-track:hover { animation-play-state: paused; }
@@ -476,6 +476,10 @@ a { color: inherit; text-decoration: none; }
 .logo-slot:hover { opacity: 0.9; filter: grayscale(0%); }
 [data-theme="dark"] .logo-slot:hover { filter: grayscale(0%) brightness(1.2); }
 .logo-slot img { height: 100%; width: auto; max-width: 220px; object-fit: contain; display: block; }
+/* A mark that is nearly square renders tiny beside the wide wordmarks, since
+   every logo is sized to the same 40px slot height. This lifts it without
+   changing the slot, so the rail keeps the 84px --logos-h the hero is sized from. */
+.logo-slot.logo-tall img { height: 145%; }
 [data-theme="dark"] .dark-invert-logo { filter: invert(1); }
 [data-theme="dark"] .logo-slot.logo-mono { filter: invert(1) grayscale(100%); }
 [data-theme="dark"] .logo-slot.logo-mono:hover { filter: invert(1) grayscale(0%); }
