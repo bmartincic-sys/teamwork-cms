@@ -77,7 +77,7 @@ stickyHref: "/demo/"
     <div class="section-header caps-header">
       <div class="section-eyebrow">POS Capabilities</div>
       <h2 class="section-title">Every store workflow in one point of sale.</h2>
-      <p class="section-sub">Transactions, inventory, fulfillment, clienteling, and operations, backed by native <a href="/platform/rfid/" style="color: var(--brand-text);">RFID</a> and real-time <a href="/platform/inventory-control/" style="color: var(--brand-text);">Inventory Control</a>.</p>
+      <p class="section-sub">Transactions, inventory, fulfillment, customer data, and operations, backed by native <a href="/platform/rfid/" style="color: var(--brand-text);">RFID</a> and real-time <a href="/platform/inventory-control/" style="color: var(--brand-text);">Inventory Control</a>.</p>
     </div>
     <div class="caps-media">
       <div class="caps-media-glow"></div>
@@ -129,7 +129,7 @@ stickyHref: "/demo/"
         <div class="pillar-card pillar-card-compact">
           <div class="pillar-icon"><i class="ti ti-truck-delivery"></i></div>
           <h3 class="pillar-title">BOPIS & ship-from-store</h3>
-          <p class="pillar-desc">Highlights from 39+ omnichannel workflows: BOPIS, curbside, ship-from-store, and BORIS. Turn every location into a micro-fulfillment center with smart order routing.</p>
+          <p class="pillar-desc">Highlights from 39+ omnichannel workflows: BOPIS, ship-from-store, and BORIS. Turn every location into a micro-fulfillment center with smart order routing.</p>
         </div>
       </div>
     </div>
@@ -139,8 +139,8 @@ stickyHref: "/demo/"
       <div class="pillars-grid" style="grid-template-columns: repeat(3, 1fr); gap: 12px;">
         <div class="pillar-card pillar-card-compact">
           <div class="pillar-icon"><i class="ti ti-heart-handshake"></i></div>
-          <h3 class="pillar-title">Clienteling & CRM</h3>
-          <p class="pillar-desc">360° customer profiles (history, preferences, wishlists, notes) across every channel. Associates send lookbooks and outreach right from the POS.</p>
+          <h3 class="pillar-title">Customer profiles & CRM</h3>
+          <p class="pillar-desc">360° customer profiles (history, preferences, wishlists, notes) across every channel, on the associate's screen at the register.</p>
         </div>
         <div class="pillar-card pillar-card-compact">
           <div class="pillar-icon"><i class="ti ti-arrows-exchange"></i></div>
@@ -336,7 +336,6 @@ stickyHref: "/demo/"
           <div class="omni-chip-label">Buy &amp; collect</div>
           <div class="omni-chips">
             <span class="omni-chip"><i class="ti ti-building-store"></i> BOPIS</span>
-            <span class="omni-chip"><i class="ti ti-car"></i> Curbside pickup</span>
             <span class="omni-chip"><i class="ti ti-calendar-check"></i> Reserve in store</span>
           </div>
         </div>
@@ -397,7 +396,7 @@ stickyHref: "/demo/"
           <li>Rotating QR-code authentication, the default, and it works offline</li>
           <li>Any associate, any register, identity follows the person</li>
           <li>No shared passwords or PINs; every action attributable</li>
-          <li>Optional facial recognition (Amazon Rekognition) for retailers who want it: off by default, with consent capture and retention set by the retailer</li>
+          <li>Optional facial recognition for retailers who want it: off by default, with consent capture and retention set by the retailer</li>
         </ul>
         <p class="fine-note">Biometric sign-in is enabled at the retailer's discretion and is subject to local biometric privacy law. QR and credential sign-in deliver the same per-person audit trail without processing biometric data.</p>
       </div>
@@ -488,7 +487,7 @@ stickyHref: "/demo/"
       <ul class="aix-points aix-points-l">
         <li><b>Real-time associate guidance</b><span>Instant product info, customer insight, and AI-driven recommendations.</span></li>
         <li><b>Product Discovery</b><span>Natural-language product search.</span></li>
-        <li><b>121 Clienteling</b><span>Targeted recommendations and follow-up.</span></li>
+        <li><b>Customer context</b><span>The profile behind the sale, on screen at the register.</span></li>
       </ul>
 
       <div class="aix-stage">
@@ -549,7 +548,7 @@ stickyHref: "/demo/"
 
     <div class="aix-cta">
       <a href="/features/product-data/" class="btn btn-primary">Explore product data <i class="ti ti-arrow-right"></i></a>
-      <a href="/features/customer-data/" class="btn btn-ghost">See AI clienteling</a>
+      <a href="/features/customer-data/" class="btn btn-ghost">See customer data</a>
     </div>
   </div>
 </section>
@@ -604,8 +603,7 @@ stickyHref: "/demo/"
                 <p>The system knows when someone is returning one piece of a bundle.</p>
                 <ul class="feature-bullets">
                   <li>Detects single-item returns from a multi-product promotion</li>
-                  <li>Configure the flow to block the return, refund at standard value, or warn the associate first</li>
-                  <li>Warning text is yours to write, per scenario</li>
+                  <li>Configure the flow to block the return or warn the associate first</li>
                 </ul>
               </div>
             </div>
@@ -736,11 +734,11 @@ stickyHref: "/demo/"
     <div class="feature-row">
       <div class="feature-text">
         <span class="section-eyebrow">Extensibility &amp; APIs</span>
-        <h2>Custom workflows through open APIs, without changing the core POS.</h2>
-        <p>Custom external APIs and logic overlays streamline workflows specific to your business without altering the core POS codebase, so a bespoke process doesn't become a bespoke build.</p>
+        <h2>Custom workflows alongside the POS, without changing its core.</h2>
+        <p>Deep linking and logic overlays streamline workflows specific to your business without altering the core POS codebase, so a bespoke process doesn't become a bespoke build. The POS hands off to your service and takes the result back into the sale.</p>
         <ul class="feature-bullets">
-          <li>Custom services integrate through external APIs, leaving the core untouched</li>
-          <li>One example: a computer-vision service photographs a customized product, such as a shoe with several accessories fitted, identifies each item, looks up its price, and adds the whole set to the sale</li>
+          <li>Custom services integrate alongside the POS, leaving the core untouched</li>
+          <li>One example, handed off and returned by deep link rather than by API: a computer-vision service photographs a customized product, such as a shoe with several accessories fitted, identifies each item, looks up its price, and adds the whole set to the sale</li>
           <li>Which modules appear on screen, and in what order, is configured per retailer rather than coded</li>
           <li>Runs as a native application on both iPad and iPhone</li>
         </ul>
