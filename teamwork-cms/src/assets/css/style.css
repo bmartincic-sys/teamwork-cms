@@ -12,7 +12,7 @@
      from these so the logo rail's bottom edge lands on the bottom of the
      viewport whatever the screen. Keep them in step with .nav and .logos. */
   --nav-h: 84px;
-  --logos-h: 84px;
+  --logos-h: 100px;
   /* The accent purple, kept out of the blue rotation. The ramp is blue now,
      so this is for the few places that want a deliberate purple. */
   --brand-violet: #7C50F5;
@@ -477,9 +477,11 @@ a { color: inherit; text-decoration: none; }
 [data-theme="dark"] .logo-slot:hover { filter: grayscale(0%) brightness(1.2); }
 .logo-slot img { height: 100%; width: auto; max-width: 220px; object-fit: contain; display: block; }
 /* A mark that is nearly square renders tiny beside the wide wordmarks, since
-   every logo is sized to the same 40px slot height. This lifts it without
-   changing the slot, so the rail keeps the 84px --logos-h the hero is sized from. */
-.logo-slot.logo-tall img { height: 145%; }
+   every logo is sized to the same slot height. Give it a taller slot rather
+   than overflowing the image: .logos-marquee is a scroll container for the
+   drag behaviour, so overflow-y is hidden and anything taller than the track
+   gets clipped top and bottom. */
+.logo-slot.logo-tall { height: 56px; }
 [data-theme="dark"] .dark-invert-logo { filter: invert(1); }
 [data-theme="dark"] .logo-slot.logo-mono { filter: invert(1) grayscale(100%); }
 [data-theme="dark"] .logo-slot.logo-mono:hover { filter: invert(1) grayscale(0%); }
