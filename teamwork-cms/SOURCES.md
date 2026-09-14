@@ -53,3 +53,4 @@ where known.
 | 15 years of legacy POS replaced | case study | arrived with a named quote from Sports Basement's COO |
 | <5min associate onboarding, +26% revenue lift, 80% search-time reduction, <1% out-of-stock (was 12%) | mobile-pos, home, rfid | origin not recorded, needs sign-off |
 | 10,000+ POS transactions/day on the grounds, 26 stores, 11 Stampede locations, 1M+ visitors | Lammle's case study, home | on the record from Nicole Monte, COO, Lammle's Western Wear, in the recorded interview at youtube.com/watch?v=e99-ciWqEqQ |
+| 17,000 SKUs counted during a mid-inventory warehouse move | home rail, Hurricanes case study | on the record from Bethany Davis, Senior Director of Merchandise & Retail, Carolina Hurricanes, in the published case study |

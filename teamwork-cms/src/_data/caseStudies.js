@@ -29,7 +29,7 @@ module.exports = [
     blurb: "An NHL franchise rebuilding arena retail around mobile POS and real-time inventory.",
     sector: "Stadiums & Venues",
     url: "/blog/carolina-hurricanes-retail-transformation/",
-    photo: "/assets/images/customers/carolina-hurricanes.jpg",
+    photo: "/assets/images/customers/carolina-hurricanes.jpg", logo: "/assets/images/customers/logos/carolina-hurricanes-logo.png",
     video: "dY0HuRSd4Jw"
   },
   {
