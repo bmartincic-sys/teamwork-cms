@@ -5585,6 +5585,14 @@ main > .hero:first-child { margin-top: -85px; padding-top: 230px; }
   padding: 22px; color: #fff;
   display: flex; flex-direction: column; align-items: flex-start;
 }
+/* A mark with internal detail cannot survive brightness(0) invert(1): the
+   Hurricanes swirl flattened to a solid white oval, and left in its own colours
+   the black wordmark disappeared into the photograph. It ships as a reversed
+   asset instead, neutral darks turned white with the brand red kept, so this
+   rule only has to skip the silhouette filter and seat it with a shadow. */
+.cs-logo.cs-logo-color {
+  filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.65));
+}
 .cs-logo {
   max-width: 60%; max-height: 56px; width: auto; height: auto;
   margin-bottom: 14px;
@@ -11432,3 +11440,9 @@ main[data-vertical] .tm-band-glow,
   .cs-glance-list dd { padding: 0 0 4px; }
   .cs-glance-list dd ~ dd { border-top: 0; }
 }
+
+/* A logo that ships already reversed must skip the silhouette filter wherever
+   it appears, or brightness(0) invert(1) flattens its detail to a white shape.
+   Same reasoning as .cs-logo-color on the homepage rail. */
+.ncs-logo.is-color { filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.5)); }
+.csx-logo.is-color { filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.45)); }
