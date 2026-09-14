@@ -11446,3 +11446,10 @@ main[data-vertical] .tm-band-glow,
    Same reasoning as .cs-logo-color on the homepage rail. */
 .ncs-logo.is-color { filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.5)); }
 .csx-logo.is-color { filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.45)); }
+
+/* A square-ish lockup is capped by height while a wide wordmark is capped by
+   width, so at the same max-height the square one carries far less presence.
+   These lift the one mark that needs it, to sit closer to Lammle's weight. */
+.cs-logo.cs-logo-big { max-height: 76px; }
+.csx-logo.is-big { max-height: 46px; }
+.ncs-logo.is-big { max-height: 30px; }

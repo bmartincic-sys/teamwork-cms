@@ -80,7 +80,7 @@
               <span class="ncs-scrim"></span>
               <span class="ncs-sector">{{ cs.sector }}</span>
               <span class="ncs-body">
-                {% if cs.logo %}<img class="ncs-logo{% if cs.logoColor %} is-color{% endif %}" src="{{ cs.logo }}" alt="{{ cs.client }}">{% else %}<span class="ncs-name">{{ cs.client }}</span>{% endif %}
+                {% if cs.logo %}<img class="ncs-logo{% if cs.logoColor %} is-color{% endif %}{% if cs.logoBig %} is-big{% endif %}" src="{{ cs.logo }}" alt="{{ cs.client }}">{% else %}<span class="ncs-name">{{ cs.client }}</span>{% endif %}
                 <span class="ncs-title">{{ cs.title }}</span>
                 {% if cs.result %}<span class="ncs-result"><i class="ti {{ cs.resultIcon }}"></i> {{ cs.result }}</span>{% endif %}
               </span>
