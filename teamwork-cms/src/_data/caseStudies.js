@@ -3,6 +3,17 @@
 // published case study on teamworkcommerce.com. `external: true` opens in a new tab.
 module.exports = [
   {
+    client: "Lammle's Western Wear",
+    title: "Ten Days. Eleven Tents. One Million People.",
+    blurb: "Canada's largest western retailer runs eleven pop-up stores at the Calgary Stampede, and cut over 26 stores without downtime.",
+    sector: "Fashion & Apparel",
+    url: "/blog/lammles-western-wear-calgary-stampede/",
+    photo: "/assets/images/customers/lammles-stampede.jpg", logo: "/assets/images/customers/logos/lammles-logo.png",
+    video: "e99-ciWqEqQ",
+    resultIcon: "ti-tent",
+    result: "10,000+ transactions a day on the grounds"
+  },
+  {
     client: "One of the world's largest sporting events",
     title: "Powering High-Performance Retail at One of the World's Largest Sporting Events",
     blurb: "Event retail at the highest level of pressure: thousands of transactions in tight windows, on one platform.",
