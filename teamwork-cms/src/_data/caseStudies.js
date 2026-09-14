@@ -123,7 +123,7 @@ module.exports = [
     blurb: "118 stores and 2,000+ terminals consolidated onto POS, loyalty, and CRM in one system.",
     sector: "Pet Retail",
     url: "https://www.teamworkcommerce.com/petco-omnichannel-transformation/",
-    photo: "/assets/images/customers/petco.jpg",
+    photo: "/assets/images/customers/petco.jpg", logo: "/assets/images/customers/logos/petco-logo.png",
     external: true,
     resultIcon: "ti-percentage",
     result: "93% of transactions through Club Petco"
@@ -143,7 +143,7 @@ module.exports = [
     blurb: "Seasonal staff live on registers in minutes for the league's biggest week.",
     sector: "Stadiums & Venues",
     url: "https://www.teamworkcommerce.com/mlb-all-star-host-2021-colorado-rockies-elevate-omnichannel-experience-for-fans/",
-    photo: "/assets/images/customers/colorado-rockies.jpg",
+    photo: "/assets/images/customers/colorado-rockies.jpg", logo: "/assets/images/customers/logos/colorado-rockies-logo.png",
     external: true,
     resultIcon: "ti-bolt",
     result: "Staff on registers in under 5 minutes"
@@ -154,7 +154,7 @@ module.exports = [
     blurb: "Elevating the in-store experience on the Teamwork omnichannel platform.",
     sector: "Luxury Apparel",
     url: "https://www.teamworkcommerce.com/prada-shoes-improves-customer-experience-teamwork-commerce-omnichannel-platform/",
-    photo: "/assets/images/customers/prada-shoes.jpg",
+    photo: "/assets/images/customers/prada-shoes.jpg", logo: "/assets/images/customers/logos/prada-logo.png",
     external: true,
     resultIcon: "ti-clock",
     result: "Replaced reporting delays of up to 15 days"
@@ -165,7 +165,7 @@ module.exports = [
     blurb: "Two French fashion brands operating on one platform across their fleet.",
     sector: "Fashion & Apparel",
     url: "https://www.teamworkcommerce.com/princesse-tam-tam-and-comptoir-des-cotonniers-ptt-cdc/",
-    photo: "/assets/images/customers/ptt-cdc.jpg",
+    photo: "/assets/images/customers/ptt-cdc.jpg", logo: "/assets/images/customers/logos/princesse-tam-tam-logo.png",
     external: true,
     resultIcon: "ti-map-pin",
     result: "220+ locations across 6 countries"
@@ -195,7 +195,7 @@ module.exports = [
     blurb: "A modern newsstand concept selling anywhere its customers happen to be.",
     sector: "Specialty Retail",
     url: "https://www.teamworkcommerce.com/the-new-stand-improves-days-and-mobility/",
-    photo: "/assets/images/customers/the-new-stand.jpg",
+    photo: "/assets/images/customers/the-new-stand.jpg", logo: "/assets/images/customers/logos/the-new-stand-logo.png",
     external: true
   }
 ];
