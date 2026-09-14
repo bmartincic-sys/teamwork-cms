@@ -11375,32 +11375,60 @@ main[data-vertical] .tm-band-glow,
 
 /* =====================================================
    CASE STUDY "AT A GLANCE"
-   The facts a reader wants before deciding to read the story: a two-column
-   definition list on a quiet panel, stacking to one column on a phone.
+   The numbers first, at a size that reads before the prose does, then the
+   detail rows beneath. One level of elevation only: the figures are divided by
+   hairlines rather than made into cards inside the panel.
    ===================================================== */
 .cs-glance {
-  margin: 0 0 40px; padding: 26px 28px;
+  margin: 0 0 44px; padding: 26px 30px 22px;
   background: var(--bg-deep); border: 1px solid var(--border);
-  border-radius: 16px;
+  border-radius: 18px;
 }
 .cs-glance-h {
-  font-size: 15px; font-weight: 700; letter-spacing: -0.01em;
-  margin: 0 0 16px; color: var(--text);
+  font-size: 12.5px; font-weight: 700; letter-spacing: 0.005em;
+  margin: 0 0 20px; color: var(--brand-text);
+}
+.cs-glance-figs {
+  display: grid; grid-template-columns: repeat(3, 1fr); margin-bottom: 22px;
+}
+.cs-glance-fig { padding: 0 22px; }
+.cs-glance-fig:first-child { padding-left: 0; }
+.cs-glance-fig + .cs-glance-fig { border-left: 1px solid var(--border); }
+.cs-glance-fig strong {
+  display: block; font-family: var(--font-display);
+  font-size: clamp(30px, 3.6vw, 40px); font-weight: 600;
+  letter-spacing: -0.035em; line-height: 1; color: var(--text);
+  margin-bottom: 8px;
+}
+.cs-glance-fig span {
+  display: block; font-size: 13px; line-height: 1.45; color: var(--text-faint);
 }
 .cs-glance-list {
-  display: grid; grid-template-columns: 140px 1fr;
-  gap: 10px 22px; margin: 0;
+  /* no column gap: the row rules are drawn per cell, and a gap would break each
+     one into two segments with a notch between the term and its value */
+  display: grid; grid-template-columns: 124px 1fr; gap: 0;
+  margin: 0; border-top: 1px solid var(--border);
 }
 .cs-glance-list dt {
-  font-size: 13.5px; font-weight: 700; color: var(--text-faint);
-  margin: 0;
+  font-size: 13px; font-weight: 700; color: var(--text-faint);
+  margin: 0; padding: 13px 20px 0 0;
 }
 .cs-glance-list dd {
   font-size: 14.5px; line-height: 1.55; color: var(--text-muted);
-  margin: 0;
+  margin: 0; padding: 13px 0 13px;
 }
-@media (max-width: 620px) {
-  .cs-glance { padding: 20px 20px; }
-  .cs-glance-list { grid-template-columns: 1fr; gap: 3px 0; }
-  .cs-glance-list dd { margin-bottom: 12px; }
+.cs-glance-list dt ~ dt { border-top: 1px solid var(--border); }
+.cs-glance-list dd ~ dd { border-top: 1px solid var(--border); }
+
+@media (max-width: 720px) {
+  .cs-glance { padding: 22px 20px 16px; }
+  .cs-glance-figs { grid-template-columns: 1fr; margin-bottom: 4px; }
+  .cs-glance-fig { padding: 14px 0; }
+  .cs-glance-fig:first-child { padding-top: 0; }
+  .cs-glance-fig + .cs-glance-fig { border-left: 0; border-top: 1px solid var(--border); }
+  .cs-glance-fig strong { font-size: 30px; margin-bottom: 4px; }
+  .cs-glance-list { grid-template-columns: 1fr; }
+  .cs-glance-list dt { padding: 14px 0 2px; }
+  .cs-glance-list dd { padding: 0 0 4px; }
+  .cs-glance-list dd ~ dd { border-top: 0; }
 }
