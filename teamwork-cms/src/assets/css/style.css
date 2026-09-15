@@ -7104,7 +7104,11 @@ main > .hero.hpos-hero:first-child { margin-top: -85px; padding-top: 112px; }
 
 /* ============ INTEGRATIONS: HUB AND SPOKE ============ */
 .intg-hero-grid { display: grid; grid-template-columns: 0.92fr 1.08fr; gap: 54px; align-items: center; }
+/* The buttons sat flush on the hero's bottom edge, zero gap, because this
+   hero has no bottom padding of its own and the CTA row clears its margin. */
 .intg-hero-cta { justify-content: flex-start; margin: 28px 0 0; }
+.hero .intg-hero-grid { padding-bottom: 72px; }
+@media (max-width: 1000px) { .hero .intg-hero-grid { padding-bottom: 52px; } }
 /* The hero h1 is sized for a full-width centred hero. In this narrower column it
    broke onto six lines, so it gets its own scale here. */
 .intg-hero-copy h1 { font-size: clamp(32px, 3.5vw, 46px); line-height: 1.08; letter-spacing: -0.038em; }
@@ -11593,3 +11597,7 @@ main.v-luxury .ticker-label {
 @media (max-width: 680px) {
   .intx-grid-3, .intx-grid-2 { grid-template-columns: 1fr; row-gap: 34px; }
 }
+
+/* Blog card titles ran 26px over 41.6px, a 1.6 ratio that is body-copy spacing
+   on a heading. Tightened to 1.22 so the lines hold together as one title. */
+.blog-idx-card .pillar-title { line-height: 1.22; }
