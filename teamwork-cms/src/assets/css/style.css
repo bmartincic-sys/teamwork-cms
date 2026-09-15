@@ -11560,3 +11560,36 @@ main.v-luxury .ticker-value span {
 main.v-luxury .ticker-label {
   color: rgba(246, 244, 241, 0.62); letter-spacing: 0.06em; font-weight: 500;
 }
+
+/* =====================================================
+   INTEGRATIONS INDEX
+   The page carried ten boxed cards across two grids, which read as filler and
+   made the categories feel interchangeable. No boxes: a rule above each item,
+   a numeral, and copy trimmed to a line or two so the grid can breathe.
+   ===================================================== */
+.intx-grid { display: grid; column-gap: 46px; row-gap: 46px; }
+.intx-grid-3 { grid-template-columns: repeat(3, 1fr); }
+.intx-grid-2 { grid-template-columns: repeat(2, 1fr); column-gap: 64px; }
+.intx-item { padding-top: 20px; border-top: 1px solid var(--border-strong, var(--border)); }
+.intx-n {
+  display: block; font-family: var(--font-mono);
+  font-size: 12px; font-weight: 600; letter-spacing: 0.1em;
+  color: var(--brand-text); margin-bottom: 14px;
+}
+.intx-item h3 {
+  font-size: 18px; font-weight: 600; letter-spacing: -0.02em;
+  margin: 0 0 8px; color: var(--text);
+}
+.intx-item p {
+  margin: 0; font-size: 14.5px; line-height: 1.6; color: var(--text-muted);
+}
+.intx-item p a { color: var(--brand-text); font-weight: 600; }
+
+/* The page was cramped between header and content, and between sections. */
+.intx-grid { margin-top: 12px; }
+#finance-erp .section-header, .intx-section .section-header { margin-bottom: 48px; }
+
+@media (max-width: 1000px) { .intx-grid-3 { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 680px) {
+  .intx-grid-3, .intx-grid-2 { grid-template-columns: 1fr; row-gap: 34px; }
+}
