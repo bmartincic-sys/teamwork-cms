@@ -11453,3 +11453,87 @@ main[data-vertical] .tm-band-glow,
 .cs-logo.cs-logo-big { max-height: 76px; }
 .csx-logo.is-big { max-height: 46px; }
 .ncs-logo.is-big { max-height: 30px; }
+
+/* =====================================================
+   LUXURY VERTICAL, editorial rather than product-marketing
+   Scoped to main.v-luxury so nothing else on the site moves. The levers are
+   the ones the category actually uses: a text serif for headings, ink instead
+   of brand blue, square corners, hairlines, and more air.
+   ===================================================== */
+main.v-luxury { --v-accent: #14141a; --v-accent-2: #3a3a42; }
+main.v-luxury .section { padding: 124px 0; }
+main.v-luxury .section-header { margin-bottom: 56px; }
+
+/* Headings set in the text serif. The hero already italicises one word, so it
+   reads as roman with an italic accent rather than as a different typeface. */
+main.v-luxury .section-title,
+main.v-luxury .hero-photo-title {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  letter-spacing: -0.012em;
+  line-height: 1.14;
+}
+main.v-luxury .hero-photo-title { font-size: clamp(36px, 4.4vw, 60px); }
+main.v-luxury .section-sub { max-width: 58ch; }
+
+/* An eyebrow reads refined with air between the letters, not with capitals. */
+main.v-luxury .section-eyebrow { letter-spacing: 0.06em; }
+
+/* Ink, not brand blue, and square. A pill in saturated blue is the single most
+   mass-market thing on the page. */
+main.v-luxury .btn { border-radius: 2px; }
+main.v-luxury .btn-primary,
+main.v-luxury .hero-photo .hero-cta .btn-primary {
+  background: #14141a; border-color: #14141a; color: #ffffff;
+  box-shadow: none; font-weight: 600;
+}
+main.v-luxury .btn-primary:hover,
+main.v-luxury .hero-photo .hero-cta .btn-primary:hover {
+  background: #000000; border-color: #000000;
+}
+main.v-luxury .btn-primary i { color: #ffffff; }
+main.v-luxury .hero-photo .hero-cta .btn-ghost { border-radius: 2px; }
+
+/* Square corners and hairlines throughout. */
+main.v-luxury .mini-card, main.v-luxury .pillar-card, main.v-luxury .faq-item,
+main.v-luxury .lx-cell, main.v-luxury .tm-day-card, main.v-luxury .proof-card,
+main.v-luxury .blog-card, main.v-luxury .statcard {
+  border-radius: 2px;
+}
+
+/* The numerals in the vitrine carry the accent, so they follow the ink too. */
+main.v-luxury .lx-num { color: var(--text-faint); letter-spacing: 0.14em; }
+[data-theme="dark"] main.v-luxury .lx-num { color: var(--text-muted); }
+
+/* The hero eyebrow is a blue pill on brand-soft, the last saturated thing on
+   the page once the buttons go to ink. Ivory type on a hairline, no fill. */
+main.v-luxury .hero-photo .eyebrow {
+  background: transparent; border-color: rgba(255, 255, 255, 0.34);
+  color: rgba(255, 255, 255, 0.92); border-radius: 2px;
+  letter-spacing: 0.06em; padding: 6px 12px;
+}
+main.v-luxury .hero-photo .eyebrow-dot { background: rgba(255, 255, 255, 0.72); }
+
+/* The stat band is a navy gradient with blue numerals, which is the most
+   product-marketing thing left on the page. Ink ground, ivory figures, square,
+   with the numerals in the serif so they match the headings. */
+main.v-luxury .ticker-inner {
+  background: #14141a;
+  border-radius: 2px; padding: 62px 44px;
+}
+main.v-luxury .ticker-item { border-right-color: rgba(255, 255, 255, 0.16); }
+main.v-luxury .ticker-value {
+  font-family: var(--font-serif); font-weight: 400;
+  letter-spacing: -0.015em;
+  /* the base rule clips a gradient through the text, so colour alone loses to
+     its -webkit-text-fill-color: transparent */
+  background: none;
+  -webkit-text-fill-color: #f6f4f1; color: #f6f4f1;
+}
+main.v-luxury .ticker-value .gradient-text,
+main.v-luxury .ticker-value span {
+  background: none; -webkit-text-fill-color: #f6f4f1; color: #f6f4f1; font-weight: 400;
+}
+main.v-luxury .ticker-label {
+  color: rgba(246, 244, 241, 0.62); letter-spacing: 0.06em; font-weight: 500;
+}
