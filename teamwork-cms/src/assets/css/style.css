@@ -11656,3 +11656,76 @@ main.v-luxury .ticker-label {
   border: 1px solid rgba(255, 255, 255, 0.12);
 }
 .svnight .mini-ico { background: rgba(127, 176, 255, 0.16); color: #9dc4ff; }
+
+/* =====================================================
+   THE MATCH CLOCK
+   The section is about ninety minutes, so the layout is the ninety minutes:
+   five operations pegged to the moment they happen, on one running line.
+   Reads as a timeline on desktop, as a stacked sequence on a phone.
+   ===================================================== */
+.svclock { margin-top: 8px; }
+.svclock-track {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: repeat(5, 1fr); gap: 0;
+}
+.svclock-step { position: relative; padding: 0 18px; }
+.svclock-step:first-child { padding-left: 0; }
+.svclock-step:last-child { padding-right: 0; }
+
+.svclock-time {
+  display: block; margin-bottom: 14px;
+  font-family: var(--font-mono); font-size: 12px; font-weight: 600;
+  letter-spacing: 0.12em; color: #ffd27a;
+}
+/* the running line, drawn once per step so it breaks at the grid edges */
+.svclock-node {
+  /* pulled out past the cell padding on both sides so adjacent segments meet
+     and the clock reads as one continuous line rather than five dashes */
+  display: block; position: relative; height: 1px;
+  background: rgba(150, 190, 255, 0.28);
+  margin: 0 -18px 22px;
+}
+.svclock-step:first-child .svclock-node { margin-left: 0; }
+.svclock-step:last-child .svclock-node { margin-right: 0; }
+.svclock-node::after {
+  content: ""; position: absolute; left: 18px; top: 50%;
+  width: 9px; height: 9px; margin-top: -4.5px;
+  border-radius: 50%; background: #ffd27a;
+  box-shadow: 0 0 0 4px rgba(255, 210, 122, 0.16);
+}
+/* the clock runs out on the last step */
+.svclock-step:last-child .svclock-node { background: linear-gradient(90deg, rgba(150,190,255,0.28) 55%, transparent); }
+.svclock-step:first-child .svclock-node::after { left: 0; }
+
+.svclock-ico {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 34px; height: 34px; border-radius: 9px; margin-bottom: 12px;
+  background: rgba(127, 176, 255, 0.15); color: #9dc4ff; font-size: 17px;
+}
+.svclock-body strong {
+  display: block; font-size: 16px; font-weight: 600; letter-spacing: -0.015em;
+  color: #f3f6fc; margin-bottom: 7px;
+}
+.svclock-body em {
+  display: block; font-style: normal;
+  font-size: 13.5px; line-height: 1.55; color: rgba(238, 241, 251, 0.66);
+}
+
+@media (max-width: 960px) {
+  .svclock-track { grid-template-columns: 1fr; }
+  /* :first-child and :last-child zero the padding for the horizontal line, and
+     those still win once the track stacks, so they are restored here */
+  .svclock-step,
+  .svclock-step:first-child,
+  .svclock-step:last-child { padding: 0 0 0 30px; }
+  .svclock-step:not(:last-child) { padding-bottom: 30px; }
+  /* the line turns vertical and runs down the left */
+  .svclock-node {
+    position: absolute; left: 4px; top: 6px; bottom: -6px;
+    width: 1px; height: auto; margin: 0 !important;
+    background: rgba(150, 190, 255, 0.28);
+  }
+  .svclock-step:last-child .svclock-node { bottom: auto; height: 10px; background: rgba(150,190,255,0.28); }
+  .svclock-node::after { left: 50%; top: 4px; margin-left: -4.5px; margin-top: 0; }
+  .svclock-time { margin-bottom: 8px; }
+}
