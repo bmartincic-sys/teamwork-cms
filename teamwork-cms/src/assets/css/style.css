@@ -11557,3 +11557,102 @@ main.v-luxury .ticker-label {
   object-fit: cover; display: block;
   border-radius: 14px;
 }
+
+/* =====================================================
+   STADIUM PROOF CARDS
+   The section claimed teams by name in plain text boxes. These are the actual
+   published case studies instead: the photograph, the club's mark, the result,
+   and a link through.
+   ===================================================== */
+.svproof-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.svproof {
+  position: relative; display: block; overflow: hidden;
+  aspect-ratio: 4 / 3.4; border-radius: 14px;
+  color: #fff; text-decoration: none; background: #0b1020;
+  transition: transform .3s cubic-bezier(.2,.7,.3,1);
+}
+.svproof:hover { transform: translateY(-4px); }
+.svproof > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; }
+.svproof:hover > img { transform: scale(1.04); }
+.svproof-scrim {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(5,6,14,0.94) 0%, rgba(5,6,14,0.5) 44%, rgba(5,6,14,0.08) 74%);
+}
+.svproof-body {
+  position: absolute; inset: auto 0 0 0; z-index: 2;
+  display: flex; flex-direction: column; align-items: flex-start;
+  padding: 20px;
+}
+.svproof-logo {
+  max-width: 58%; max-height: 40px; width: auto; height: auto; margin-bottom: 12px;
+  filter: brightness(0) invert(1) drop-shadow(0 2px 8px rgba(0,0,0,0.45));
+}
+.svproof-logo.is-color { filter: drop-shadow(0 2px 8px rgba(0,0,0,0.5)); }
+.svproof-logo.is-big { max-height: 54px; }
+.svproof-name {
+  display: block; font-family: var(--font-display);
+  font-size: 17px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.25;
+  margin-bottom: 12px; max-width: 15em;
+}
+.svproof-result {
+  display: inline-flex; align-items: center; gap: 7px;
+  font-size: 12.5px; font-weight: 700; line-height: 1.3;
+  padding: 7px 12px; border-radius: 100px; margin-bottom: 12px;
+  background: #0b57d0; color: #fff;
+}
+.svproof-result i { font-size: 15px; }
+.svproof-go {
+  display: inline-flex; align-items: center; gap: 7px;
+  font-size: 13px; font-weight: 600; color: #8ab8ff;
+  transition: gap .2s ease;
+}
+.svproof:hover .svproof-go { gap: 11px; }
+@media (max-width: 900px) { .svproof-grid { grid-template-columns: 1fr; } }
+
+/* =====================================================
+   GAME DAY UNDER LIGHTS
+   No unused stadium photograph was left on the page, so the atmosphere is
+   built: a night ground, two floodlight pools raking in from the top corners,
+   the faint banding of a seating tier, and a match clock over the heading,
+   which is what "ninety minutes" is actually about.
+   ===================================================== */
+.svnight { position: relative; overflow: hidden; background: #070b18; }
+.svnight .section-title, .svnight .mini-card h3 { color: #f3f6fc; }
+.svnight .section-eyebrow { color: #7fb0ff; }
+.svnight .mini-card p { color: rgba(238, 241, 251, 0.72); }
+.svnight-lights {
+  position: absolute; inset: 0; pointer-events: none;
+  background:
+    radial-gradient(52% 44% at 14% -6%, rgba(150, 190, 255, 0.20), transparent 62%),
+    radial-gradient(52% 44% at 86% -6%, rgba(150, 190, 255, 0.17), transparent 62%);
+}
+/* the banding of a seating tier, far enough back to read as texture */
+.svnight-tiers {
+  position: absolute; inset: 0; pointer-events: none; opacity: 0.30;
+  background: repeating-linear-gradient(
+    177deg,
+    rgba(255, 255, 255, 0.045) 0 2px,
+    transparent 2px 13px
+  );
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,0.85), transparent 46%);
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0.85), transparent 46%);
+}
+.svnight-clock {
+  /* flex with a fitted width, not inline-flex: the eyebrow is inline-block and
+     was sitting on the same line as the clock */
+  display: flex; width: fit-content; align-items: baseline; gap: 10px;
+  padding: 7px 14px; margin: 0 auto 18px;
+  border: 1px solid rgba(150, 190, 255, 0.28); border-radius: 4px;
+  background: rgba(6, 10, 26, 0.6);
+  font-family: var(--font-mono); letter-spacing: 0.08em;
+}
+.svnight-clock span { font-size: 11px; color: rgba(238, 241, 251, 0.55); }
+.svnight-clock strong {
+  font-size: 19px; font-weight: 600; letter-spacing: 0.04em;
+  color: #ffd27a;                         /* the amber of a stadium clock */
+}
+.svnight .mini-card {
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+.svnight .mini-ico { background: rgba(127, 176, 255, 0.16); color: #9dc4ff; }
