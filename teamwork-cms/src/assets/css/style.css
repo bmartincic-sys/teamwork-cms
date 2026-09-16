@@ -11601,3 +11601,12 @@ main.v-luxury .ticker-label {
 /* Blog card titles ran 26px over 41.6px, a 1.6 ratio that is body-copy spacing
    on a heading. Tightened to 1.22 so the lines hold together as one title. */
 .blog-idx-card .pillar-title { line-height: 1.22; }
+
+/* Stadium photography in the feature rows. Squared off and full-bleed within
+   its column rather than the floating drop-shadowed product shot, since these
+   are photographs of a venue rather than a device. */
+.sv-shot {
+  width: 100%; height: 100%; max-height: 460px;
+  object-fit: cover; display: block;
+  border-radius: 14px;
+}
