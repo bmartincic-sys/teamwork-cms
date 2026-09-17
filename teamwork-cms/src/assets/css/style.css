@@ -6648,9 +6648,15 @@ main > .hero.hpos-hero:first-child { margin-top: -85px; padding-top: 112px; }
   display: flex; flex-direction: column;
   animation: wordrot 7.5s cubic-bezier(.76,0,.24,1) infinite;
 }
-.wordrot-w.gradient-text {
+/* Keyed to .wordrot-w alone. It used to require .gradient-text as well, so
+   swapping the accent to the serif dropped the fixed height and the words no
+   longer matched the 1.3em the keyframes step by. */
+.wordrot-w {
   display: block; height: 1.3em; line-height: 1.3; white-space: nowrap;
 }
+/* and the serif's 0.96em would resolve those ems against a smaller font than
+   the track translates by, so it keeps the family and loses the size change */
+.wordrot-w.t-serif { font-size: 1em; }
 @keyframes wordrot {
   0%,   28%  { transform: translateY(0); }
   33.3%, 61% { transform: translateY(-1.3em); }
