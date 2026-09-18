@@ -11799,3 +11799,62 @@ main.v-luxury .ticker-label {
 .svticket-body a { color: var(--brand-text); font-weight: 600; }
 
 @media (max-width: 900px) { .svticket-board { grid-template-columns: 1fr; } }
+
+/* ============ REPORT DOCUMENT (analytics) ============
+   The dashboards get a browser frame; the report library gets a sheet of
+   paper, stacked so one report reads as one of a hundred and fifty. Rows are
+   skeletons on purpose: the shape of a report, no invented numbers in it. */
+.rptdoc { position: relative; max-width: 880px; margin: 0 auto 54px; }
+.rptdoc-stack { position: absolute; inset: 0; }
+.rptdoc-stack i {
+  position: absolute; left: 50%; transform: translateX(-50%);
+  height: 100%; border: 1px solid var(--border); background: var(--panel);
+  border-radius: 12px;
+}
+.rptdoc-stack i:nth-child(1) { top: 13px; width: 97%; opacity: 0.6; }
+.rptdoc-stack i:nth-child(2) { top: 25px; width: 94%; opacity: 0.32; }
+.rptdoc-sheet {
+  position: relative; z-index: 1; overflow: hidden;
+  background: var(--panel); border: 1px solid var(--border);
+  border-radius: 12px; box-shadow: var(--shadow-lg);
+}
+.rptdoc-head {
+  display: flex; align-items: flex-end; justify-content: space-between; gap: 18px;
+  padding: 22px 26px 18px; border-bottom: 1px solid var(--border);
+}
+.rptdoc-kicker { font-family: var(--font-mono); font-size: 11px; color: var(--text-faint); margin-bottom: 7px; }
+.rptdoc-title { font-size: 20px; font-weight: 700; letter-spacing: -0.01em; color: var(--text); }
+.rptdoc-meta { display: flex; gap: 8px; flex-wrap: wrap; }
+.rptdoc-meta span {
+  font-size: 11.5px; font-weight: 600; color: var(--text-muted);
+  border: 1px solid var(--border); border-radius: 8px; padding: 5px 11px; white-space: nowrap;
+}
+.rptdoc-table { padding: 6px 26px 10px; }
+.rptdoc-row {
+  display: grid; grid-template-columns: 1.7fr 1fr 1fr 1fr; gap: 20px;
+  align-items: center; padding: 11px 0; border-bottom: 1px solid var(--border);
+}
+.rptdoc-row > :not(:first-child) { justify-self: end; }
+.rptdoc-cols { padding-top: 6px; }
+.rptdoc-cols span { font-size: 11px; font-weight: 700; color: var(--text-faint); }
+.rptdoc-row i { display: block; height: 9px; border-radius: 4px; background: var(--border-strong); opacity: 0.55; }
+.rptdoc-row > i:not(:first-child) { opacity: 0.36; }
+.rptdoc-total {
+  border-bottom: 0; border-top: 2px solid var(--border-strong);
+  margin-top: 4px; padding-top: 15px;
+}
+.rptdoc-total span { font-size: 12.5px; font-weight: 800; color: var(--text); }
+.rptdoc-total i { height: 10px; background: var(--brand-blue); opacity: 0.8; }
+.rptdoc-foot {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 13px 26px; border-top: 1px solid var(--border); background: var(--bg-deep);
+  font-family: var(--font-mono); font-size: 11px; color: var(--text-faint);
+}
+@media (max-width: 720px) {
+  .rptdoc { margin-bottom: 40px; }
+  .rptdoc-head { flex-direction: column; align-items: flex-start; gap: 14px; padding: 18px 18px 16px; }
+  .rptdoc-table { padding-left: 18px; padding-right: 18px; }
+  .rptdoc-foot { padding-left: 18px; padding-right: 18px; }
+  .rptdoc-row { grid-template-columns: 1.5fr 1fr 1fr; gap: 14px; }
+  .rptdoc-row > *:nth-child(4) { display: none; }
+}
