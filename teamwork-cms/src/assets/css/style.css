@@ -11829,6 +11829,16 @@ main.v-luxury .ticker-label {
   font-size: 11.5px; font-weight: 600; color: var(--text-muted);
   border: 1px solid var(--border); border-radius: 8px; padding: 5px 11px; white-space: nowrap;
 }
+.rptdoc-tabs {
+  display: flex; gap: 22px; padding: 0 26px; overflow-x: auto;
+  border-bottom: 1px solid var(--border);
+}
+.rptdoc-tabs span {
+  font-size: 12px; font-weight: 600; color: var(--text-faint);
+  padding: 11px 0; white-space: nowrap;
+  border-bottom: 2px solid transparent; margin-bottom: -1px;
+}
+.rptdoc-tabs span.on { color: var(--text); border-bottom-color: var(--brand-blue); }
 .rptdoc-table { padding: 6px 26px 10px; }
 .rptdoc-row {
   display: grid; grid-template-columns: 1.7fr 1fr 1fr 1fr; gap: 20px;
@@ -11853,6 +11863,7 @@ main.v-luxury .ticker-label {
 @media (max-width: 720px) {
   .rptdoc { margin-bottom: 40px; }
   .rptdoc-head { flex-direction: column; align-items: flex-start; gap: 14px; padding: 18px 18px 16px; }
+  .rptdoc-tabs { padding-left: 18px; padding-right: 18px; gap: 16px; }
   .rptdoc-table { padding-left: 18px; padding-right: 18px; }
   .rptdoc-foot { padding-left: 18px; padding-right: 18px; }
   .rptdoc-row { grid-template-columns: 1.5fr 1fr 1fr; gap: 14px; }
