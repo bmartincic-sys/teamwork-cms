@@ -11865,6 +11865,37 @@ main.v-luxury .ticker-label {
   border-bottom: 0; border-top: 2px solid var(--border-strong);
   margin-top: 4px; padding-top: 15px;
 }
+
+/* The report generates when it comes into view: label bars grow from the left,
+   figures from the right the way a right-aligned column fills, then the total
+   lands last. Motion-safe, and the resting state is the finished report, so a
+   reader who has reduced motion on simply sees it already run. */
+.rptdoc-row i { transform-origin: left; }
+.rptdoc-row > i:not(:first-child) { transform-origin: right; }
+@media (prefers-reduced-motion: no-preference) {
+  .rptdoc:not(.rpt-run) .rptdoc-row i { transform: scaleX(0); opacity: 0; }
+  .rpt-run .rptdoc-row i { animation: rptFill 0.52s cubic-bezier(0.22, 1, 0.36, 1) both; animation-delay: var(--d, 0s); }
+  .rpt-run .rptdoc-row > i:nth-child(2) { animation-delay: calc(var(--d, 0s) + 0.05s); }
+  .rpt-run .rptdoc-row > i:nth-child(3) { animation-delay: calc(var(--d, 0s) + 0.1s); }
+  .rpt-run .rptdoc-row > i:nth-child(4) { animation-delay: calc(var(--d, 0s) + 0.15s); }
+  .rpt-run .rptdoc-total i {
+    animation: rptFill 0.52s cubic-bezier(0.22, 1, 0.36, 1) both,
+               rptGlow 3.4s ease-in-out 1.4s infinite;
+  }
+  .rptdoc:not(.rpt-run) .rptdoc-title::after { transform: scaleX(1); }
+  .rpt-run .rptdoc-title::after { animation: rptScan 1.5s ease-in-out 0.1s 1 both; }
+}
+@keyframes rptFill { from { transform: scaleX(0); opacity: 0; } to { transform: scaleX(1); opacity: 1; } }
+@keyframes rptGlow { 0%, 100% { opacity: 0.8; } 50% { opacity: 0.5; } }
+@keyframes rptScan { 0% { transform: scaleX(0); opacity: 1; } 70% { transform: scaleX(1); opacity: 1; } 100% { transform: scaleX(1); opacity: 0; } }
+/* the hairline that sweeps under the report title as it runs */
+.rptdoc-title { position: relative; }
+.rptdoc-title::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: -5px; height: 2px;
+  border-radius: 2px; background: var(--brand-blue); transform: scaleX(0);
+  transform-origin: left; opacity: 0;
+}
+
 .rptdoc-total span { font-size: 12.5px; font-weight: 800; color: var(--text); }
 .rptdoc-total i { height: 10px; background: var(--brand-blue); opacity: 0.8; }
 .rptdoc-foot {
