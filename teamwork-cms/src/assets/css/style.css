@@ -11804,6 +11804,18 @@ main.v-luxury .ticker-label {
    The dashboards get a browser frame; the report library gets a sheet of
    paper, stacked so one report reads as one of a hundred and fifty. Rows are
    skeletons on purpose: the shape of a report, no invented numbers in it. */
+/* The notes sit beside the report and annotate it, rather than under it as a
+   second, unrelated list. Left column is the artifact, right column reads it. */
+.rptsplit {
+  display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  gap: 52px; align-items: center; margin-top: 8px;
+}
+.rptsplit .rptdoc { max-width: none; margin: 0; }
+.rptsplit .intx-grid { row-gap: 38px; margin-top: 0; }
+@media (max-width: 1000px) {
+  .rptsplit { grid-template-columns: 1fr; gap: 44px; }
+  .rptsplit .rptdoc { max-width: 880px; margin: 0 auto; }
+}
 .rptdoc { position: relative; max-width: 880px; margin: 0 auto 54px; }
 .rptdoc-stack { position: absolute; inset: 0; }
 .rptdoc-stack i {
