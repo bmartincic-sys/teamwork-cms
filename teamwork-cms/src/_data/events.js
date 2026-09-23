@@ -316,20 +316,6 @@ const EVENTS = [
     link: "https://www.teamworkcommerce.com/eurocis-2025/",
     body: "Europe's leading retail technology trade fair. Hall 10, Stand E24, and a steady stream of German and Benelux retailers asking hard questions about fiscal compliance. Our favorite kind.",
   },
-
-  // ---------- 2024 ----------
-  {
-    name: "Shoptalk Europe 2024",
-    start: "2024-06-03",
-    end: "2024-06-05",
-    dateLabel: "June 3–5, 2024",
-    venue: "Fira Gran Via",
-    city: "Barcelona",
-    country: "Spain",
-    region: "Europe",
-    link: "https://www.teamworkcommerce.com/shoptalk-eu-2024/",
-    body: "Barcelona, and the year the conversation shifted from whether unified commerce mattered to how quickly it could be delivered.",
-  },
 ];
 
 // Only hand a photo to the template if the file is actually on disk, so an event whose
