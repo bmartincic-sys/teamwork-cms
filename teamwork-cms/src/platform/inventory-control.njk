@@ -1,7 +1,7 @@
 ---
 layout: "solution.njk"
 title: "RFID Inventory Control for Retail"
-description: "RFID-powered inventory with 99.9% accuracy: visual allocation, real-time visibility, cycle counts in minutes, across 40+ countries."
+description: "RFID-powered inventory with 99.9% accuracy: real-time visibility, cycle counts in minutes, allocation and replenishment across 40+ countries."
 navLabel: "Inventory Control"
 tags: "platform"
 permalink: "/platform/inventory-control/"
@@ -103,11 +103,10 @@ stickyHref: "/demo/"
       <div class="feature-text">
         <span class="section-eyebrow">Intelligent Allocation</span>
         <h2>Allocation and replenishment across stores.</h2>
-        <p>Visual Allocation shows where each product is actually selling. Stock can move to the stores selling it while the trend is still live, instead of sitting out the season where it is not.</p>
+        <p>Sell-through by location sits next to the stock position, so a transfer can be raised from the same record the store is reading. The call is the merchandiser's, made on today's numbers rather than a spreadsheet exported last week.</p>
         <ul class="feature-bullets">
-          <li>See performance by location and reallocate in real time</li>
-          <li>Stock-out prevention: tag-velocity monitoring queues transfers before a SKU hits zero</li>
-          <li>Anomaly alerts: tags moving toward an exit with no sale trigger loss prevention</li>
+          <li>Performance by location, with transfers raised from the same record</li>
+          <li>Stock-out prevention: replenishment is flagged when a SKU falls to a defined threshold, not when it reaches zero</li>
           <li>Demand forecasting by SKU and location, up to 95% accuracy</li>
         </ul>
         <a href="/platform/analytics/" class="btn btn-primary">Explore analytics <i class="ti ti-arrow-right"></i></a>
@@ -134,7 +133,7 @@ stickyHref: "/demo/"
         <ul class="feature-bullets">
           <li>Receiving: scan inbound stock, auto-reconcile against the PO, flag discrepancies</li>
           <li>Transfers: initiate, track, and confirm with chain-of-custody</li>
-          <li>Adjustments &amp; write-offs: reasons, photos, and a full audit trail</li>
+          <li>Adjustments &amp; write-offs: reasons and a full audit trail</li>
           <li>Tag printing: print and encode RFID tags from the device</li>
           <li>One global catalog: launch a new location in hours, not weeks</li>
         </ul>
@@ -169,7 +168,7 @@ stickyHref: "/demo/"
     <div class="section-header">
       <div class="section-eyebrow">The Competitive Edge</div>
       <h2 class="section-title">How Teamwork Commerce compares.</h2>
-      <p class="section-sub">The difference is not a feature list. It is whether inventory, RFID and fulfillment are parts of one system or five systems agreeing to talk.</p>
+      <p class="section-sub">The difference is not a feature list. It is whether inventory, RFID and fulfillment are one system or five that have to stay in sync, because every point of sync is a place the store and head office can end up holding different numbers.</p>
     </div>
     <!-- The argument this section makes, drawn. No competitor is named: the point
          is the shape of the stack, not who sells the pieces. -->
@@ -188,7 +187,7 @@ stickyHref: "/demo/"
         </div>
         <ul class="vsx-cost">
           <li>Five vendors, five roadmaps, five support desks</li>
-          <li>Every join is a place data goes stale</li>
+          <li>Every integration is a place the numbers drift out of sync</li>
           <li>An upgrade anywhere is a regression test everywhere</li>
         </ul>
       </div>
@@ -204,7 +203,7 @@ stickyHref: "/demo/"
         </div>
         <ul class="vsx-cost vsx-cost-on">
           <li>One vendor, one roadmap, one number to call</li>
-          <li>No joins to go stale, one version of the truth</li>
+          <li>Nothing to sync, one version of the count</li>
           <li>One upgrade, tested as a whole</li>
         </ul>
       </div>
@@ -245,7 +244,7 @@ stickyHref: "/demo/"
           Can cycle counts be done without closing the store?
           <span class="faq-icon"><i class="ti ti-plus"></i></span>
         </button>
-        <div class="faq-answer"><p>Yes. Rolling RFID cycle counts run during business hours without disrupting operations. Associates scan with the mobile POS while customers shop. A typical 10-store chain recovers $150,000–$300,000 in previously "lost" stock within the first 12 months of switching to weekly RFID counts.</p></div>
+        <div class="faq-answer"><p>Yes. Rolling RFID cycle counts run during business hours, with associates scanning on the mobile POS while customers shop. Stock keeps moving while you count, so a count taken during trading will surface discrepancies that have to be reconciled. That is a logistics problem rather than a software one, and no system removes it. A typical 10-store chain recovers $150,000–$300,000 in previously "lost" stock within the first 12 months of switching to weekly RFID counts.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
@@ -279,7 +278,7 @@ stickyHref: "/demo/"
     <p>See why the world's leading brands are ditching spreadsheets and bolted-together legacy systems for Teamwork Commerce.</p>
     <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
       <a href="/demo/" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Book a demo <i class="ti ti-arrow-right"></i></a>
-      <a href="/demo/" target="_blank" rel="noopener" class="btn btn-ghost btn-lg" style="border-color: var(--border); color: var(--text-muted);">Speak with an architect</a>
+      <a href="/demo/" target="_blank" rel="noopener" class="btn btn-ghost btn-lg" style="border-color: var(--border); color: var(--text-muted);">Speak with a technical specialist</a>
     </div>
   </div>
 </section>
@@ -292,7 +291,7 @@ stickyHref: "/demo/"
   "@type": "FAQPage",
   "mainEntity": [
     { "@type": "Question", "name": "How does Teamwork Commerce achieve 99.9% inventory accuracy?", "acceptedAnswer": { "@type": "Answer", "text": "Through the industry's only native end-to-end RFID stack. RFID-powered cycle counts scan thousands of items in minutes without pulling product off racks. Real-time reconciliation updates global stock levels instantly. Combined with anomaly detection that flags suspicious inventory movement, this eliminates ghost SKUs and delivers 99.9% accuracy across all locations." } },
-    { "@type": "Question", "name": "Can cycle counts be done without closing the store?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Rolling RFID cycle counts run during business hours without disrupting operations. Associates scan with the mobile POS while customers shop. A typical 10-store chain recovers $150,000–$300,000 in previously \"lost\" stock within the first 12 months of switching to weekly RFID counts." } },
+    { "@type": "Question", "name": "Can cycle counts be done without closing the store?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Rolling RFID cycle counts run during business hours, with associates scanning on the mobile POS while customers shop. Stock keeps moving while you count, so a count taken during trading will surface discrepancies that have to be reconciled. That is a logistics problem rather than a software one, and no system removes it. A typical 10-store chain recovers $150,000–$300,000 in previously \"lost\" stock within the first 12 months of switching to weekly RFID counts." } },
     { "@type": "Question", "name": "How does stock-out prevention work?", "acceptedAnswer": { "@type": "Answer", "text": "The system monitors the velocity of RFID tags moving through the sales floor. When a SKU is approaching zero at a location, it queues a transfer from the nearest warehouse or store with surplus stock, and can trigger vendor re-orders. Demand forecasting operates at the SKU-and-location level with up to 95% accuracy." } },
     { "@type": "Question", "name": "How does this inventory compare to other unified commerce platforms?", "acceptedAnswer": { "@type": "Answer", "text": "New Black and NewStore offer unified commerce inventory but require third-party middleware for deep RFID workflows. Teamwork Commerce is the only platform with native end-to-end RFID, from receiving through checkout. This means cycle counts, receiving, loss prevention, and real-time tracking all run on one system with no integration points to break. The result: 99.9% accuracy vs. the industry average of 70–80%." } },
     { "@type": "Question", "name": "Does the system work offline?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Inventory operations keep running during network outages. Receiving, counts, adjustments, and transfers continue on the device. Data is encrypted locally and syncs automatically when connectivity returns: zero data gaps, zero downtime." } }
