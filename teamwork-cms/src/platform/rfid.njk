@@ -1,7 +1,7 @@
 ---
 layout: "solution.njk"
 title: "Native End-to-End RFID Solution"
-description: "The industry's only native end-to-end RFID stack: tag encoding at receiving through EAS gates, 99.9% accuracy, AI loss prevention."
+description: "An industry-leading native end-to-end RFID stack: tag encoding at receiving through RFID checkout and self-checkout, 99.9% item-level accuracy."
 navLabel: "RFID Solution"
 tags: "platform"
 permalink: "/platform/rfid/"
@@ -32,7 +32,7 @@ stickyHref: "/demo/"
 
     <div class="hero-photo-foot hero-foot-left fade-up" style="animation-delay: 0.25s;">
       <div class="hero-photo-note">
-        <p>The industry's only native end-to-end RFID: receiving through self-checkout. No middleware, no third parties. Just 99.9% item-level accuracy, built in.</p>
+        <p>Industry-leading native end-to-end RFID: receiving through self-checkout. No middleware layer, and hardware-agnostic, so the readers and tags are yours to choose. 99.9% item-level accuracy, built in.</p>
         <div class="hero-cta">
           <a href="/demo/" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Book a demo <i class="ti ti-arrow-right"></i></a>
         </div>
@@ -59,7 +59,7 @@ stickyHref: "/demo/"
       <div class="pillar-card">
         <div class="pillar-icon"><i class="ti ti-scan"></i></div>
         <h3 class="pillar-title">RFID self-checkout</h3>
-        <p class="pillar-desc">Items go in the bin and the cart appears on screen for the shopper to finish themselves. Confirmation logic and anti-bleed keep neighboring items off the receipt, and the EAS gates deactivate only what was paid for.</p>
+        <p class="pillar-desc">Items go in the bin and the cart appears on screen for the shopper to finish themselves. Confirmation logic and anti-bleed keep neighboring items off the receipt, so the basket on screen is the basket in the bin.</p>
       </div>
     </div>
   </div>
@@ -160,8 +160,8 @@ stickyHref: "/demo/"
         </div>
         <div class="innov-node">
           <div class="innov-node-dot"><i class="ti ti-shield-check"></i></div>
-          <div class="innov-node-title">Checkout &amp; EAS</div>
-          <div class="innov-node-sub">Sold, whitelisted, gates clear</div>
+          <div class="innov-node-title">Checkout</div>
+          <div class="innov-node-sub">Scanned in one pass, basket to receipt</div>
         </div>
       </div>
     </div>
@@ -274,67 +274,13 @@ stickyHref: "/demo/"
 
 <div class="journey-link" aria-hidden="true"><span class="journey-pulse"></span></div>
 
-<!-- ============ CHAPTER 4: AT THE GATES ============ -->
-<section class="ac-blue section" style="padding-top: 0;">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-eyebrow">At The Gates</div>
-      <h2 class="section-title">EAS gates that know what was paid for.</h2>
-      <p class="section-sub">The whitelist signal beats the customer to the door. Nothing alarms because it was tagged; it alarms because it was never sold.</p>
-    </div>
-
-    <!-- The whitelist is the differentiator and was invisible. Three states, left
-         to right: what the till publishes, the gate reading it, and the two
-         possible outcomes. -->
-    <div class="gatex" role="img" aria-label="At the till, sold EPCs are added to a whitelist. At the exit gate, whitelisted items pass silently while an item never sold is flagged.">
-      <div class="gatex-step">
-        <span class="gatex-cap">01 &middot; At the till</span>
-        <div class="gatex-panel">
-          <span class="gatex-panel-t">Sold, whitelisted</span>
-          <span class="gatex-epc"><i class="ti ti-check"></i> EPC &middot;&middot;&middot; 4C1A</span>
-          <span class="gatex-epc"><i class="ti ti-check"></i> EPC &middot;&middot;&middot; 9B07</span>
-          <span class="gatex-epc"><i class="ti ti-check"></i> EPC &middot;&middot;&middot; 2F55</span>
-        </div>
-      </div>
-
-      <div class="gatex-step gatex-gate">
-        <span class="gatex-cap">02 &middot; At the exit</span>
-        <div class="gatex-ped">
-          <span class="gatex-pillar"></span>
-          <span class="gatex-field"><b></b><b></b><b></b></span>
-          <span class="gatex-pillar"></span>
-        </div>
-        <span class="gatex-gatelabel">Gate reads every EPC</span>
-      </div>
-
-      <div class="gatex-step">
-        <span class="gatex-cap">03 &middot; Outcome</span>
-        <div class="gatex-out is-pass">
-          <i class="ti ti-volume-off"></i>
-          <div><strong>On the list</strong><span>Passes silently. No false alarm.</span></div>
-        </div>
-        <div class="gatex-out is-flag">
-          <i class="ti ti-alert-triangle"></i>
-          <div><strong>Not on the list</strong><span>Flagged, with the EPC and the time.</span></div>
-        </div>
-      </div>
-    </div>
-
-    <ul class="gatex-notes">
-          <li><i class="ti ti-check"></i> Works with Checkpoint, Sensormatic, and other gate providers via API</li>
-          <li><i class="ti ti-check"></i> Bag Check: every EPC verified against the receipt at the exit</li>
-          <li><i class="ti ti-check"></i> AI anomaly detection flags tags that move toward the door without a sale</li>
-    </ul>
-  </div>
-</section>
-
 <!-- ============ MID-PAGE CTA ============ -->
 <section class="midcta">
   <div class="midcta-glow"></div>
   <div class="container midcta-inner">
     <div>
       <div class="midcta-title">See the full RFID lifecycle live.</div>
-      <div class="midcta-sub">From receiving to the EAS gate, walk through it with a technical specialist.</div>
+      <div class="midcta-sub">From receiving to self-checkout, walk through it with a technical specialist.</div>
     </div>
     <a href="/demo/" target="_blank" rel="noopener" class="btn btn-lg midcta-btn">Book a demo <i class="ti ti-arrow-right"></i></a>
   </div>
@@ -534,21 +480,14 @@ stickyHref: "/demo/"
           What makes Teamwork Commerce RFID different from competitors?
           <span class="faq-icon"><i class="ti ti-plus"></i></span>
         </button>
-        <div class="faq-answer"><p>Teamwork Commerce offers the industry's only native end-to-end RFID stack, from tag encoding at receiving through checkout, loss prevention, and analytics. No third-party middleware required. New Black and NewStore offer unified commerce but require third-party integrations for deep RFID workflows. Our RFID is native to the core logic: every transaction (receiving, counting, transferring, selling) operates by individual EPC, not just UPC.</p></div>
+        <div class="faq-answer"><p>Teamwork Commerce offers an industry-leading native end-to-end RFID stack, from tag encoding at receiving through checkout, loss prevention, and analytics. No third-party middleware required, and the reader hardware is yours to choose. Our RFID is native to the core logic: every transaction (receiving, counting, transferring, selling) operates by individual EPC, not just UPC.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
           What is the unit control ledger?
           <span class="faq-icon"><i class="ti ti-plus"></i></span>
         </button>
-        <div class="faq-answer"><p>The unit control ledger provides a complete transactional history for every individual EPC, where it was commissioned, received, counted, transferred, sold, and whitelisted. It's the foundation for accurate Available-to-Sell data and for the blacklist/whitelist system that powers EAS gate integration. Think of it as a "license plate" tracking system for every unit in your inventory.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-          How does RFID loss prevention work with EAS gates?
-          <span class="faq-icon"><i class="ti ti-plus"></i></span>
-        </button>
-        <div class="faq-answer"><p>Every EPC in the store is blacklisted by default. When a unit is sold at POS, it's instantly whitelisted. The POS communicates with a local server in the store that holds a copy of the unit control ledger, which pushes the whitelist update to the EAS gates via API. The signal reaches the gate before the customer does. We integrate with Checkpoint, Sensormatic, and other gate providers.</p></div>
+        <div class="faq-answer"><p>The unit control ledger provides a complete transactional history for every individual EPC, where it was commissioned, received, counted, transferred and sold. It is the foundation for accurate Available-to-Sell data. Think of it as a "license plate" tracking system for every unit in your inventory.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
@@ -591,7 +530,7 @@ stickyHref: "/demo/"
       "name": "What makes Teamwork Commerce RFID different from competitors?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Teamwork Commerce offers the industry's only native end-to-end RFID stack, from tag encoding at receiving through checkout, loss prevention, and analytics. No third-party middleware required. New Black and NewStore offer unified commerce but require third-party integrations for deep RFID workflows. Our RFID is native to the core logic: every transaction (receiving, counting, transferring, selling) operates by individual EPC, not just UPC."
+        "text": "Teamwork Commerce offers an industry-leading native end-to-end RFID stack, from tag encoding at receiving through checkout, loss prevention, and analytics. No third-party middleware required, and the reader hardware is yours to choose. Our RFID is native to the core logic: every transaction (receiving, counting, transferring, selling) operates by individual EPC, not just UPC."
       }
     },
     {
@@ -599,15 +538,7 @@ stickyHref: "/demo/"
       "name": "What is the unit control ledger?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The unit control ledger provides a complete transactional history for every individual EPC, where it was commissioned, received, counted, transferred, sold, and whitelisted. It's the foundation for accurate Available-to-Sell data and for the blacklist/whitelist system that powers EAS gate integration. Think of it as a \"license plate\" tracking system for every unit in your inventory."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How does RFID loss prevention work with EAS gates?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Every EPC in the store is blacklisted by default. When a unit is sold at POS, it's instantly whitelisted. The POS communicates with a local server in the store that holds a copy of the unit control ledger, which pushes the whitelist update to the EAS gates via API. The signal reaches the gate before the customer does. We integrate with Checkpoint, Sensormatic, and other gate providers."
+        "text": "The unit control ledger provides a complete transactional history for every individual EPC, where it was commissioned, received, counted, transferred and sold. It is the foundation for accurate Available-to-Sell data. Think of it as a \"license plate\" tracking system for every unit in your inventory."
       }
     },
     {

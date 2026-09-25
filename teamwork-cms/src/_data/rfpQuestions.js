@@ -109,8 +109,7 @@ module.exports = [
       "What read accuracy is achieved in a live store, and over what tag population?",
       "How does RFID data reach inventory, and what is the latency?",
       "Can the platform consume vendor-tagged goods, and can tags be printed and encoded at receiving?",
-      "How does the system interact with EAS gates, and which gate vendors are supported?",
-      "What happens to RFID functionality if the store is offline?",
+        "What happens to RFID functionality if the store is offline?",
       "What is the cost per tag and per reader at our scale, and who supplies them?"
     ]
   },
