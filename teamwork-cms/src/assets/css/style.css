@@ -395,9 +395,13 @@ a { color: inherit; text-decoration: none; }
 /* ============ STAT TICKER ============ */
 .ticker { padding: 64px 0 72px; position: relative; }
 .ticker-inner {
+  /* Scoped so the figures can grow without moving every stat on the site. The
+     ceiling is set by the longest figures we actually run, "30,000+" on About and
+     "$300K" on RFID, which overflowed their columns even at the old 68px. */
+  --stat-size: clamp(48px, 5.4vw, 70px);
   display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr);
   position: relative; overflow: hidden;
-  padding: 56px 40px; border-radius: 26px;
+  padding: 58px 44px; border-radius: 26px;
   background:
     radial-gradient(120% 160% at 12% 0%, rgba(36,125,255,0.14), transparent 55%),
     radial-gradient(120% 160% at 88% 100%, rgba(47, 88, 214,0.12), transparent 55%),
@@ -406,7 +410,7 @@ a { color: inherit; text-decoration: none; }
   box-shadow:0 26px 26px -26px rgba(0,0,0,0.3);
 }
 .ticker-item {
-  padding: 8px 28px; text-align: left;
+  padding: 8px 20px; text-align: left;
   border-right: 1px solid var(--border); position: relative;
 }
 .ticker-item:last-child { border-right: none; }
@@ -417,8 +421,8 @@ a { color: inherit; text-decoration: none; }
 }
 .ticker-value .gradient-text { font-weight: 600; }
 .ticker-label {
-  font-size: 11px; color: var(--text-muted); font-weight: 600;
- letter-spacing: 0.01em;
+  font-size: 12px; color: var(--text-muted); font-weight: 600;
+  letter-spacing: 0.005em; line-height: 1.35;
 }
 @media (max-width: 900px) {
   .ticker-inner { grid-auto-flow: row; grid-auto-columns: auto; grid-template-columns: repeat(2, 1fr); padding: 36px 24px; gap: 20px 0; }
@@ -5112,15 +5116,26 @@ main > .hero:first-child { margin-top: -85px; padding-top: 230px; }
   -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
 }
 .ticker-label { color: rgba(238,241,251,0.6); }
-/* The ticker band is ink-dark in both themes. Keep its inner card dark in light mode too */
+/* The ticker used to be ink-dark in both themes, which put a black slab across the
+   top of every light page. In light mode the band now carries the page ground with
+   a wash behind it and the figures sit on a raised white plate, so the numbers read
+   as the loudest thing on the screen rather than the darkest. */
+[data-theme="light"] .ticker {
+  background:
+    radial-gradient(85% 150% at 50% 0%, rgba(36,125,255,0.10), transparent 64%),
+    var(--bg);
+  color: var(--text);
+}
 [data-theme="light"] .ticker-inner {
   background:
-    radial-gradient(120% 160% at 12% 0%, rgba(36,125,255,0.14), transparent 55%),
-    radial-gradient(120% 160% at 88% 100%, rgba(47, 88, 214,0.12), transparent 55%),
-    #0f1228;
-  border-color: rgba(255,255,255,0.10);
+    radial-gradient(120% 170% at 10% 0%, rgba(36,125,255,0.10), transparent 60%),
+    radial-gradient(120% 170% at 90% 100%, rgba(47, 88, 214,0.08), transparent 60%),
+    #ffffff;
+  border-color: rgba(36,125,255,0.20);
+  box-shadow: 0 34px 64px -40px rgba(9, 22, 58, 0.32);
 }
-[data-theme="light"] .ticker-item { border-right-color: rgba(255,255,255,0.10); }
+[data-theme="light"] .ticker-item { border-right-color: rgba(9, 22, 58, 0.10); }
+[data-theme="light"] .ticker-label { color: rgba(9, 22, 58, 0.62); }
 
 /* Clean gradient eyebrows for all remaining section headers */
 .section-header .section-eyebrow {
@@ -9477,13 +9492,13 @@ a.evc:hover .evc-go { opacity: 1; }
    The value now scales with the viewport, because a single fixed size cannot fit a
    nine-character word in a column that is 227px wide at 1440 and 164px at 1024. */
 .ticker-words .ticker-value {
-  font-size: clamp(30px, 3.3vw, 48px);
+  font-size: clamp(34px, 4.1vw, 60px);
   line-height: 1.1;          /* gradient text is clipped to the text box, so give it room */
   white-space: nowrap;       /* fail loudly in testing rather than silently wrapping */
 }
 @media (max-width: 900px) {
   /* two columns here, so the items are wider and the value can grow again */
-  .ticker-words .ticker-value { font-size: clamp(32px, 6vw, 46px); }
+  .ticker-words .ticker-value { font-size: clamp(34px, 6.4vw, 50px); }
 }
 @media (max-width: 600px) {
   .ticker-words .ticker-value { font-size: 40px; }
