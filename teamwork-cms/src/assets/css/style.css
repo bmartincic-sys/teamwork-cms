@@ -7108,17 +7108,17 @@ main > .hero.hpos-hero:first-child { margin-top: -85px; padding-top: 112px; }
 }
 /* Chips sit on the ellipse. Edge chips anchor inward so a long label cannot run
    off the panel, the same fix the x-ray pins needed. */
+/* The pill background is hardcoded dark because the hero band is always dark, so
+   the text and icon colours have to be fixed too. They were themed tokens, which
+   made every label invisible in light mode: dark ink on a near-black pill. */
 .hubx-node {
   position: absolute; left: var(--x); top: var(--y); transform: translate(-50%, -50%);
   z-index: 2; display: inline-flex; align-items: center; gap: 7px; white-space: nowrap;
   padding: 8px 13px; border-radius: 100px;
-  background: rgba(8,13,28,0.86); border: 1px solid var(--border-strong);
-  font-size: 12px; font-weight: 600; color: var(--text);
-
+  background: rgba(8,13,28,0.86); border: 1px solid rgba(146, 176, 255, 0.28);
+  font-size: 12px; font-weight: 600; color: #e9effd;
 }
-.hubx-node i { font-size: 14px; color: var(--brand-text); }
-.hubx-node-r { transform: translate(-100%, -50%); }
-.hubx-node-l { transform: translate(0, -50%); }
+.hubx-node i { font-size: 14px; color: #7fb0ff; }
 @media (prefers-reduced-motion: reduce) {
   .hubx-live line, .hubx-core-ring { animation: none; }
   .hubx-live line { stroke-dasharray: none; stroke-dashoffset: 0; }
