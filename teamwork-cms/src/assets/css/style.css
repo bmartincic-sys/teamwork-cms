@@ -9689,19 +9689,6 @@ a.evc:hover .evc-go { opacity: 1; }
    and the accent bleeding into the components inside a band instead of stopping at
    its shell. The brand gradient remains AI, Plus and CTAs only. */
 
-/* kicker bar under the title, in the section's colour */
-[class*="ac-"] .section-header .section-title { position: relative; padding-bottom: 18px; }
-[class*="ac-"] .section-header .section-title::after {
-  content: ''; position: absolute; left: 50%; bottom: 0; transform: translateX(-50%);
-  width: 64px; height: 4px; border-radius: 3px;
-  background: var(--accent, var(--brand-blue));
-  box-shadow:0 0 18px 1px var(--accent-glow, rgba(7, 9, 26, 0.08));
-}
-/* left-aligned headers keep the bar on their edge */
-[class*="ac-"] .feature-text .section-title::after,
-[class*="ac-"] .section-header[style*="text-align: left"] .section-title::after {
-  left: 0; transform: none;
-}
 
 /* the band glow doubles: top wash plus a low corner answer, both single-hue */
 .sunk {

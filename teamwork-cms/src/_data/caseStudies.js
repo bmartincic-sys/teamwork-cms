@@ -38,7 +38,7 @@ module.exports = [
     blurb: "Turning the checkout screen into a retail-media channel on the shopper display.",
     sector: "Retail Media",
     url: "/blog/monetizing-the-moment-how-sports-basement-and-teamwork-commerce-are-redefining-in-store-advertising/",
-    photo: "/assets/images/customers/sports-basement-advertising.jpg", logo: "/assets/images/customers/logos/sports-basement-logo.png",
+    photo: "/assets/images/customers/sports-basement-advertising.jpg", logo: "/assets/images/customers/logos/sports-basement-logo.png", logoBig: true,
     resultIcon: "ti-ad-2",
     result: "Checkout turned into a revenue channel",
     video: "prmA8mdJpUA"
@@ -49,7 +49,7 @@ module.exports = [
     blurb: "A Bay Area institution moving its stores onto iOS-native POS.",
     sector: "Sporting Goods",
     url: "/blog/from-ice-rink-to-innovation-how-sports-basement-transformed-retail-with-teamwork-commerce/",
-    photo: "/assets/images/customers/sports-basement.jpg", logo: "/assets/images/customers/logos/sports-basement-logo.png",
+    photo: "/assets/images/customers/sports-basement.jpg", logo: "/assets/images/customers/logos/sports-basement-logo.png", logoBig: true,
     resultIcon: "ti-refresh",
     result: "15 years of legacy POS replaced",
     video: "n5rzjJ8sfKA"
@@ -127,15 +127,6 @@ module.exports = [
     external: true,
     resultIcon: "ti-percentage",
     result: "93% of transactions through Club Petco"
-  },
-  {
-    client: "Royal Pets",
-    title: "Royal Pets Simplifies Their Store Operations",
-    blurb: "Retail, grooming, and veterinary services running on a single platform.",
-    sector: "Pet Retail",
-    url: "https://www.teamworkcommerce.com/royal-pets-simplifies-their-store-operations/",
-    photo: "/assets/images/customers/royal-pets.jpg",
-    external: true
   },
   {
     client: "Colorado Rockies",
