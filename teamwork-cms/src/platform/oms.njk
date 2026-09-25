@@ -74,8 +74,8 @@ stickyHref: "/demo/"
   <div class="container">
     <div class="section-header">
       <div class="section-eyebrow">Customer Results</div>
-      <h2 class="section-title">Ship from Store, fourteen weeks in.</h2>
-      <p class="section-sub">One enterprise retailer switched on Ship from Store and opened their store stock to online demand. These are their own numbers from the first fourteen weeks.</p>
+      <h2 class="section-title">What Ship from Store did in its first fourteen weeks.</h2>
+      <p class="section-sub">One enterprise retailer turned on Ship from Store, opening their store stock to online demand. These are their own numbers, measured from go-live.</p>
     </div>
 
     <div class="omsr">
@@ -122,13 +122,13 @@ stickyHref: "/demo/"
     <div class="feature-row">
       <div class="feature-text">
         <span class="section-eyebrow">Order Fill Logic</span>
-        <h2>Every order, routed for maximum margin.</h2>
-        <p>Rank your fill strategies once, and the engine routes every order accordingly, by shipping cost, stock depth, proximity, and your business rules. Not just the closest location. The most profitable. And it holds at scale: 100K+ orders a day, built for Black Friday and game-day peaks.</p>
+        <h2>Every order, routed by your rules.</h2>
+        <p>Rank your fill strategies once and the engine applies them to every order: stock depth, node capacity, and the business rules you set by store, region, channel or SKU. It holds at scale, 100K+ orders a day, built for Black Friday and game-day peaks.</p>
         <ul class="feature-bullets">
           <li>Your rules, your way: configure order-fill logic by store, region, channel, or SKU</li>
-          <li>Rank fill strategies by cost, stock depth, capacity, and proximity: your priorities, in order</li>
+          <li>Rank fill strategies by stock depth and node capacity: your priorities, in the order you set them</li>
           <li>Store pick-up, ship-to-store, and vendor drop-ship, all configurable in the rule stack</li>
-          <li>Margin protection: Order Fill Logic selects the location with the lowest shipping cost or the highest stock, so you never sell down to the last unit</li>
+          <li>Safety stock per location, so a popular line is held back for the shop floor instead of being sold out from under it online</li>
         </ul>
       </div>
       <!-- Real screenshot: Order Fill Logic configuration in the cloud back office -->
@@ -152,13 +152,13 @@ stickyHref: "/demo/"
     <div class="feature-row reverse">
       <div class="feature-text">
         <span class="section-eyebrow">RFID-Led Accuracy</span>
-        <h2>No ghost inventory, because stock is RFID-verified.</h2>
-        <p>60% of BOPIS orders fail because the item isn't really on the shelf. RFID-led 99.9% accuracy means you never sell a ghost SKU or disappoint a customer at pickup.</p>
+        <h2>Routing runs on live stock, not last night's file.</h2>
+        <p>Every fill decision reads the same stock record the store is selling from, updated as it happens rather than imported overnight. Where a retailer runs RFID, the counts behind that record are verified to 99.9% accuracy, but the OMS does not require it.</p>
         <ul class="feature-bullets">
-          <li>No ghost SKUs: every order promise backed by real, on-shelf stock</li>
-          <li>Warehouse-to-store transfers tracked by EPC, full chain of custody</li>
+          <li>Every order promise made against the live stock record, not an overnight snapshot</li>
+          <li>Warehouse-to-store transfers tracked end to end, by EPC where RFID is in use</li>
           <li>One real-time view across stores, warehouses, transit, and suppliers</li>
-          <li>RFID cycle counts in minutes, not days</li>
+          <li>RFID is optional: where it is deployed, cycle counts take minutes rather than days</li>
         </ul>
         <a href="/platform/rfid/" class="btn btn-primary">Explore RFID <i class="ti ti-arrow-right"></i></a>
       </div>
@@ -236,11 +236,11 @@ stickyHref: "/demo/"
         </div>
         <div class="capcol-item">
           <h3><i class="ti ti-shopping-bag"></i> BOPIS & Click-and-Collect</h3>
-          <p>RFID-verified pickup, so the industry's 60% failure rate isn't yours.</p>
+          <p>Pickup promised against the live stock record, so the item is there when the customer arrives.</p>
         </div>
         <div class="capcol-item">
           <h3><i class="ti ti-infinity"></i> Endless Aisle</h3>
-          <p>Out of stock? Ship from another location in 3 taps, a 15–22% revenue lift.</p>
+          <p>The size is not in this store. The associate sells it anyway, from wherever it is held, shipped straight to the customer rather than into the store and out again.</p>
         </div>
       </div>
       <div class="capcol">
@@ -254,23 +254,19 @@ stickyHref: "/demo/"
           <p>Buy online, return in store, back on the shelf and sellable instantly.</p>
         </div>
         <div class="capcol-item">
-          <h3><i class="ti ti-world"></i> Global compliance</h3>
-          <p>Multi-currency, multi-entity, automated VAT/GST. NF525 and TSE built in.</p>
+          <h3><i class="ti ti-world"></i> Multi-entity and multi-currency</h3>
+          <p>Orders across legal entities and currencies, with the data handed to the ERP that closes the books.</p>
         </div>
       </div>
       <div class="capcol">
         <div class="capcol-head"><i class="ti ti-bulb"></i> Industry Intelligence</div>
         <div class="capcol-item">
-          <h3><i class="ti ti-shoe"></i> Footwear size/width matrices</h3>
-          <p>Balances size grids fleet-wide, no Size 14 stuck while Size 6 sells out.</p>
-        </div>
-        <div class="capcol-item">
           <h3><i class="ti ti-building-bank"></i> Museums & non-profits</h3>
           <p>Gift Aid, membership tax exemptions, and multi-location gift-shop inventory.</p>
         </div>
         <div class="capcol-item">
-          <h3><i class="ti ti-chart-dots"></i> Merchandising intelligence</h3>
-          <p>Predictive allocation, the right product in the right store before it's asked for.</p>
+          <h3><i class="ti ti-chart-dots"></i> Replenishment triggers</h3>
+          <p>A location is replenished once the item sells or falls below the limit you set for it.</p>
         </div>
       </div>
     </div>
@@ -295,19 +291,19 @@ stickyHref: "/demo/"
         <span class="intg-dot"></span>
         <div class="intg-photo"><img src="/assets/images/homepage/rfid-self-checkout.jpg" alt="A shopper using Teamwork RFID self-checkout" loading="lazy"></div>
         <h3>Native RFID</h3>
-        <p>RFID-verified stock feeds every routing decision, no ghost SKUs, no failed BOPIS.</p>
+        <p>Where RFID is deployed, it keeps the stock record the router reads verified to 99.9% accuracy.</p>
       </div>
       <div class="intg-card">
         <span class="intg-dot"></span>
         <div class="intg-photo"><img src="/assets/images/homepage/integrations-tile.jpg" alt="The Teamwork Commerce platform as a hub connecting e-commerce, payments, ERP, and analytics" loading="lazy"></div>
         <h3>Open APIs &amp; carriers</h3>
-        <p>Any e-commerce (Salesforce, Adobe, BigCommerce), ERP, and WMS, plus 200+ shipping carriers via Shippy Pro for rate-shopping and labels.</p>
+        <p>Any e-commerce (Shopify, Salesforce, Adobe, BigCommerce), ERP, and WMS, plus 200+ shipping carriers via ShippyPro for tracking numbers and labels.</p>
       </div>
       <div class="intg-card">
         <span class="intg-dot"></span>
         <div class="intg-photo"><img src="/assets/images/homepage/analytics-tile.jpg" alt="Teamwork Analytics dashboard in the cloud back office on a desk monitor" loading="lazy"></div>
         <h3>150+ reports</h3>
-        <p>Fill rates, node performance, and shipping-cost analytics, live in the cloud back office.</p>
+        <p>Fill rates and node performance, live in the cloud back office.</p>
       </div>
     </div>
   </div>
@@ -389,7 +385,7 @@ stickyHref: "/demo/"
       </div>
       <div class="mini-card">
         <h3>Carrier labels on the device</h3>
-        <p>Out-of-the-box shipping integration, ShippyPro connecting to carriers such as FedEx, fetches live rates and prints the label from the device.</p>
+        <p>Out-of-the-box shipping integration, ShippyPro connecting to carriers such as FedEx, returns the tracking number and prints the label from the device.</p>
       </div>
       <div class="mini-card">
         <h3>In-store pickup</h3>
@@ -420,35 +416,28 @@ stickyHref: "/demo/"
           What makes Teamwork Commerce OMS different from standalone order management systems?
           <span class="faq-icon"><i class="ti ti-plus"></i></span>
         </button>
-        <div class="faq-answer"><p>Teamwork's OMS is natively integrated with POS, Inventory, and RFID, not bolted on through middleware. Order-fill decisions run on RFID-verified real-time stock (99.9% accuracy), not stale batch-synced data. You configure the fill logic (ranking strategies by shipping cost, stock depth, proximity, and store capacity) so every order is routed for margin, not just speed.</p></div>
+        <div class="faq-answer"><p>Teamwork's OMS is natively integrated with POS and Inventory rather than bolted on through middleware, so order-fill decisions read the same live stock record the store is selling from. You configure the fill logic yourself, ranking strategies by stock depth and node capacity and setting rules by store, region, channel or SKU, and safety stock per location holds a popular line back for the shop floor. Where a retailer runs RFID, the counts behind that record are verified to 99.9% accuracy.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
           How does Order Fill Logic decide where to fulfill an order?
           <span class="faq-icon"><i class="ti ti-plus"></i></span>
         </button>
-        <div class="faq-answer"><p>Order Fill Logic is a ranked, configurable rule stack. You set the priority (for example, fill complete from the highest-stock location, ship-to-store for pickup orders, or ship-from-vendor) and the engine applies your rules to every order using RFID-verified stock, shipping cost, and proximity. It can also split an order across nodes when a single location can't fill it.</p></div>
+        <div class="faq-answer"><p>Order Fill Logic is a ranked, configurable rule stack. You set the priority, for example fill complete from the highest-stock location, ship-to-store for pickup orders, or ship-from-vendor, and the engine applies your rules to every order against live stock. It can also split an order across nodes when a single location cannot fill it. It does not rate-shop carriers or route by distance, and it does not calculate margin.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
           Can Teamwork Commerce OMS handle ship-from-store and BOPIS?
           <span class="faq-icon"><i class="ti ti-plus"></i></span>
         </button>
-        <div class="faq-answer"><p>Yes. Ship-from-store turns every retail location into a fulfillment node with pick-and-pack tasks for store associates. BOPIS (Buy Online Pick Up In Store) is backed by RFID-verified stock, eliminating the 60% failure rate that plagues retailers relying on barcode-based inventory. Buy Online Return In Store (BORIS) is also natively supported.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-          How does this order management compare to other unified commerce platforms?
-          <span class="faq-icon"><i class="ti ti-plus"></i></span>
-        </button>
-        <div class="faq-answer"><p>New Black EVA offers scoring-based order orchestration but requires third-party middleware for RFID. NewStore focuses heavily on fulfillment but doesn't offer native RFID or merchandising intelligence. Teamwork Commerce uniquely combines configurable Order Fill Logic, the industry's only native end-to-end RFID stack (so routing runs on 99.9% accurate inventory), and 30+ years of retail expertise, all in one system, no middleware required.</p></div>
+        <div class="faq-answer"><p>Yes. Ship-from-store turns every retail location into a fulfillment node with pick-and-pack tasks for store associates. BOPIS (Buy Online Pick Up In Store) promises against the live stock record rather than an overnight file, so the item is there when the customer arrives. Buy Online Return In Store (BORIS) is also natively supported.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
           Does the OMS support multi-currency and multi-entity operations?
           <span class="faq-icon"><i class="ti ti-plus"></i></span>
         </button>
-        <div class="faq-answer"><p>Yes. The OMS operates across multiple legal entities, currencies, and tax jurisdictions. A US-based HQ can manage global operations while regional teams see dashboards in their local currency and language. Automated VAT, GST, and sales tax calculations ensure cross-border fulfillment is always compliant.</p></div>
+        <div class="faq-answer"><p>Yes. The OMS operates across multiple legal entities and currencies, and a US-based HQ can manage global operations while regional teams work in their local currency and language. Fiscal compliance itself sits with the POS and with the ERP: the OMS hands the order, tender and stock movement across so the books are closed in the system that owns them.</p></div>
       </div>
     </div>
   </div>
@@ -478,7 +467,7 @@ stickyHref: "/demo/"
       "name": "What makes Teamwork Commerce OMS different from standalone order management systems?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Teamwork's OMS is natively integrated with POS, Inventory, and RFID, not bolted on through middleware. Order-fill decisions run on RFID-verified real-time stock (99.9% accuracy), not stale batch-synced data. You configure the fill logic (ranking strategies by shipping cost, stock depth, proximity, and store capacity) so every order is routed for margin, not just speed."
+        "text": "Teamwork's OMS is natively integrated with POS and Inventory rather than bolted on through middleware, so order-fill decisions read the same live stock record the store is selling from. You configure the fill logic yourself, ranking strategies by stock depth and node capacity and setting rules by store, region, channel or SKU, and safety stock per location holds a popular line back for the shop floor. Where a retailer runs RFID, the counts behind that record are verified to 99.9% accuracy."
       }
     },
     {
@@ -486,7 +475,7 @@ stickyHref: "/demo/"
       "name": "How does Order Fill Logic decide where to fulfill an order?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Order Fill Logic is a ranked, configurable rule stack. You set the priority (for example, fill complete from the highest-stock location, ship-to-store for pickup orders, or ship-from-vendor) and the engine applies your rules to every order using RFID-verified stock, shipping cost, and proximity. It can also split an order across nodes when a single location can't fill it."
+        "text": "Order Fill Logic is a ranked, configurable rule stack. You set the priority, for example fill complete from the highest-stock location, ship-to-store for pickup orders, or ship-from-vendor, and the engine applies your rules to every order against live stock. It can also split an order across nodes when a single location cannot fill it. It does not rate-shop carriers or route by distance, and it does not calculate margin."
       }
     },
     {
@@ -494,15 +483,7 @@ stickyHref: "/demo/"
       "name": "Can Teamwork Commerce OMS handle ship-from-store and BOPIS?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. Ship-from-store turns every retail location into a fulfillment node with pick-and-pack tasks for store associates. BOPIS (Buy Online Pick Up In Store) is backed by RFID-verified stock, eliminating the 60% failure rate that plagues retailers relying on barcode-based inventory. Buy Online Return In Store (BORIS) is also natively supported."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How does this order management compare to other unified commerce platforms?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "New Black EVA offers scoring-based order orchestration but requires third-party middleware for RFID. NewStore focuses heavily on fulfillment but doesn't offer native RFID or merchandising intelligence. Teamwork Commerce uniquely combines configurable Order Fill Logic, the industry's only native end-to-end RFID stack (so routing runs on 99.9% accurate inventory), and 30+ years of retail expertise, all in one system, no middleware required."
+        "text": "Yes. Ship-from-store turns every retail location into a fulfillment node with pick-and-pack tasks for store associates. BOPIS (Buy Online Pick Up In Store) promises against the live stock record rather than an overnight file, so the item is there when the customer arrives. Buy Online Return In Store (BORIS) is also natively supported."
       }
     },
     {
@@ -510,7 +491,7 @@ stickyHref: "/demo/"
       "name": "Does the OMS support multi-currency and multi-entity operations?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. The OMS operates across multiple legal entities, currencies, and tax jurisdictions. A US-based HQ can manage global operations while regional teams see dashboards in their local currency and language. Automated VAT, GST, and sales tax calculations ensure cross-border fulfillment is always compliant."
+        "text": "Yes. The OMS operates across multiple legal entities and currencies, and a US-based HQ can manage global operations while regional teams work in their local currency and language. Fiscal compliance itself sits with the POS and with the ERP: the OMS hands the order, tender and stock movement across so the books are closed in the system that owns them."
       }
     }
   ]

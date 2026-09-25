@@ -169,21 +169,21 @@
           What makes Teamwork Commerce OMS different from standalone order management systems?
           <span class="faq-icon"><i class="ti ti-plus"></i></span>
         </button>
-        <div class="faq-answer"><p>Teamwork's OMS is natively integrated with POS, Inventory, and RFID, not bolted on through middleware. Order-fill decisions run on RFID-verified real-time stock (99.9% accuracy), not stale batch-synced data. You configure the fill logic (ranking strategies by shipping cost, stock depth, proximity, and store capacity) so every order is routed for margin, not just speed.</p></div>
+        <div class="faq-answer"><p>Teamwork's OMS is natively integrated with POS and Inventory rather than bolted on through middleware, so order-fill decisions read the same live stock record the store is selling from. You configure the fill logic yourself, ranking strategies by stock depth and node capacity and setting rules by store, region, channel or SKU, and safety stock per location holds a popular line back for the shop floor. Where a retailer runs RFID, the counts behind that record are verified to 99.9% accuracy.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
           How does Order Fill Logic decide where to fulfill an order?
           <span class="faq-icon"><i class="ti ti-plus"></i></span>
         </button>
-        <div class="faq-answer"><p>Order Fill Logic is a ranked, configurable rule stack. You set the priority (for example, fill complete from the highest-stock location, ship-to-store for pickup orders, or ship-from-vendor) and the engine applies your rules to every order using RFID-verified stock, shipping cost, and proximity. It can also split an order across nodes when a single location can't fill it.</p></div>
+        <div class="faq-answer"><p>Order Fill Logic is a ranked, configurable rule stack. You set the priority, for example fill complete from the highest-stock location, ship-to-store for pickup orders, or ship-from-vendor, and the engine applies your rules to every order against live stock. It can also split an order across nodes when a single location cannot fill it. It does not rate-shop carriers or route by distance, and it does not calculate margin.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
           Can Teamwork Commerce OMS handle ship-from-store and BOPIS?
           <span class="faq-icon"><i class="ti ti-plus"></i></span>
         </button>
-        <div class="faq-answer"><p>Yes. Ship-from-store turns every retail location into a fulfillment node with pick-and-pack tasks for store associates. BOPIS (Buy Online Pick Up In Store) is backed by RFID-verified stock, eliminating the 60% failure rate that plagues retailers relying on barcode-based inventory. Buy Online Return In Store (BORIS) is also natively supported.</p></div>
+        <div class="faq-answer"><p>Yes. Ship-from-store turns every retail location into a fulfillment node with pick-and-pack tasks for store associates. BOPIS (Buy Online Pick Up In Store) promises against the live stock record rather than an overnight file, so the item is there when the customer arrives. Buy Online Return In Store (BORIS) is also natively supported.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
@@ -197,7 +197,7 @@
           Does the OMS support multi-currency and multi-entity operations?
           <span class="faq-icon"><i class="ti ti-plus"></i></span>
         </button>
-        <div class="faq-answer"><p>Yes. The OMS operates across multiple legal entities, currencies, and tax jurisdictions. A US-based HQ can manage global operations while regional teams see dashboards in their local currency and language. Automated VAT, GST, and sales tax calculations ensure cross-border fulfillment is always compliant.</p></div>
+        <div class="faq-answer"><p>Yes. The OMS operates across multiple legal entities and currencies, and a US-based HQ can manage global operations while regional teams work in their local currency and language. Fiscal compliance itself sits with the POS and with the ERP: the OMS hands the order, tender and stock movement across so the books are closed in the system that owns them.</p></div>
       </div>
       </div>
     </div>
