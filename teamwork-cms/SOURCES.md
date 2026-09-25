@@ -43,7 +43,7 @@ where known.
 | 30,000+ terminals, 40+ countries, 100+ integrations, 99.9%, 99.99%, 30s, $300K, 20 min, 118 Petco stores, 2,000+ Petco terminals, 250 InnovaSport stores, 22% per-cap | various | in the original content drop, commit bd54a7a, 9 July 2026 |
 | 150+ reports | platform/analytics and elsewhere | in the original content drop, commit bd54a7a, 9 July 2026. Confirmed by Teamwork, September 2026 |
 | 900+ orders, 1,100+ units, +14% / +26% / +21%, 18 days | platform/oms | supplied directly by Teamwork, August 2026; retailer anonymised at their request |
-| 5,000+ store count | about | added when About was rebuilt from the live site (commit c5e69cd) |
+| 5,000+ store count | about, footer ("thousands of stores") | added when About was rebuilt from the live site (commit c5e69cd) |
 | 39+ omnichannel workflows | platform/mobile-pos | supplied directly by Teamwork, September 2026; needs sign-off |
 | 71% faster stock counts; 500+ checkout hours saved | platform/inventory-control, platform/rfid | were on the homepage stat band from the original content drop; moved to the pages that own them, September 2026. Origin not recorded, needs sign-off |
 | 32s checkout with RFID vs 85s without; 53s saved per transaction; 15 hrs per 1,000 | platform/rfid | EXO, supplied by Teamwork September 2026. The 53s and 15 hrs are arithmetic on the first two figures (85-32=53; 53x1,000=14.7h). Needs sign-off on the EXO citation |
