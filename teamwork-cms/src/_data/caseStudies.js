@@ -120,24 +120,22 @@ module.exports = [
   {
     client: "Petco",
     title: "Omnichannel Transformation: Petco's Success with Teamwork Commerce",
-    blurb: "118 stores and 2,000+ terminals consolidated onto POS, loyalty, and CRM in one system.",
+    blurb: "127 stores, an app and an online store on one customer record, with Club Petco at the centre.",
     sector: "Pet Retail",
-    url: "https://www.teamworkcommerce.com/petco-omnichannel-transformation/",
+    url: "/blog/petco-omnichannel-transformation/",
     photo: "/assets/images/customers/petco.jpg", logo: "/assets/images/customers/logos/petco-logo.png",
-    external: true,
     resultIcon: "ti-percentage",
     result: "93% of transactions through Club Petco"
   },
   {
     client: "Colorado Rockies",
     title: "MLB All-Star Host 2021: Elevating the Omnichannel Experience for Fans",
-    blurb: "Seasonal staff live on registers in minutes for the league's biggest week.",
+    blurb: "All-Star Week landed with thirteen weeks' notice. The main store went from 12 registers to 25.",
     sector: "Stadiums & Venues",
-    url: "https://www.teamworkcommerce.com/mlb-all-star-host-2021-colorado-rockies-elevate-omnichannel-experience-for-fans/",
+    url: "/blog/colorado-rockies-mlb-all-star-week/",
     photo: "/assets/images/customers/colorado-rockies.jpg", logo: "/assets/images/customers/logos/colorado-rockies-logo.png",
-    external: true,
     resultIcon: "ti-bolt",
-    result: "Staff on registers in under 5 minutes"
+    result: "12 to 25 registers in the main store"
   },
   {
     client: "Prada Shoes",
