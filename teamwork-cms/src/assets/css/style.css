@@ -7096,7 +7096,11 @@ main > .hero.hpos-hero:first-child { margin-top: -85px; padding-top: 112px; }
 .intg-hero-grid { display: grid; grid-template-columns: 0.92fr 1.08fr; gap: 54px; align-items: center; }
 /* The buttons sat flush on the hero's bottom edge, zero gap, because this
    hero has no bottom padding of its own and the CTA row clears its margin. */
+/* Same shorthand trap as .slotx-cta: "margin: 28px 0 0" zeroes the 64px bottom
+   margin .hero-cta carries, so the buttons sat on the edge of the dark band. */
 .intg-hero-cta { justify-content: flex-start; margin: 28px 0 0; }
+.intg-hero-grid { padding-bottom: 64px; }
+@media (max-width: 1000px) { .intg-hero-grid { padding-bottom: 48px; } }
 .hero .intg-hero-grid { padding-bottom: 72px; }
 @media (max-width: 1000px) { .hero .intg-hero-grid { padding-bottom: 52px; } }
 /* The hero h1 is sized for a full-width centred hero. In this narrower column it
