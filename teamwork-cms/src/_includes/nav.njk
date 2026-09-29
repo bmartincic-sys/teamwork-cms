@@ -117,6 +117,7 @@
                 ["/blog/", "ti-article", "Blog", "Insights, trends, and how retailers are operating"],
                 ["/press-room/", "ti-news", "Press Room", "Announcements and media contacts"],
                 ["/technical-evaluation/", "ti-shield-lock", "Technical Evaluation", "Architecture, security, and migration"],
+      ["/pos-evaluation/", "ti-checkup-list", "POS Evaluation", "Six tests to run on any vendor, including us"],
                 ["/events/", "ti-map-pin", "Events", "Booth numbers and dates for the shows we work"]
               ] %}
               {% for r in resRows %}
@@ -201,6 +202,7 @@
     <a href="/blog/"{% if "/blog/" in page.url %} class="is-current" aria-current="page"{% endif %}>Blog</a>
     <a href="/press-room/"{% if page.url == "/press-room/" %} class="is-current" aria-current="page"{% endif %}>Press Room</a>
     <a href="/technical-evaluation/"{% if page.url == "/technical-evaluation/" %} class="is-current" aria-current="page"{% endif %}>Technical Evaluation</a>
+    <a href="/pos-evaluation/"{% if page.url == "/pos-evaluation/" %} class="is-current" aria-current="page"{% endif %}>POS Evaluation</a>
     <a href="/events/"{% if page.url == "/events/" %} class="is-current" aria-current="page"{% endif %}>Events</a>
     <div class="nav-mob-head">Company</div>
     <a href="/about/"{% if page.url == "/about/" %} class="is-current" aria-current="page"{% endif %}>About</a>
