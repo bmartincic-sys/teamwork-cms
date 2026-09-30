@@ -32,7 +32,7 @@ stickyHref: "/demo/"
 
     <div class="hero-photo-foot hero-foot-left fade-up" style="animation-delay: 0.25s;">
       <div class="hero-photo-note">
-        <p>Industry-leading native end-to-end RFID: receiving through self-checkout. No middleware layer, and hardware-agnostic, so the readers and tags are yours to choose. 99.9% item-level accuracy, built in.</p>
+        <p>RFID hardware promises to fix inventory accuracy, but hardware on its own is data with nowhere to go. This is the software that turns every tag read into an operational decision, from the loading dock to the exit. No middleware layer, and hardware-agnostic, so the readers and tags are yours to choose.</p>
         <div class="hero-cta">
           <a href="/demo/" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Book a demo <i class="ti ti-arrow-right"></i></a>
         </div>
@@ -91,6 +91,36 @@ stickyHref: "/demo/"
   </div>
 </section>
 
+<!-- ============ HOW RFID WORKS ============
+     Straight from the approved script. The UPC-versus-EPC distinction is the
+     thing every other explanation on this page depended on and never stated. -->
+<section class="ac-blue sunk section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">The Foundation</div>
+      <h2 class="section-title">One barcode. Ten units. Ten EPCs.</h2>
+      <p class="section-sub">Hold an RFID tag up to the light and you can see it: a set of fine lines, which is the antenna, connected to a tiny chip. The chip stores a number permanently. There is no battery. It needs a burst of energy from a reader, a gun, a pad or a scanner, to wake up and transmit.</p>
+    </div>
+    <div class="intx-grid intx-grid-3">
+      <div class="intx-item">
+        <span class="intx-n">01</span>
+        <h3>A barcode identifies an item</h3>
+        <p>Ten identical shirts on a shelf share one UPC. The barcode can tell you what they are. It cannot tell you which one you are holding, or how many are really there.</p>
+      </div>
+      <div class="intx-item">
+        <span class="intx-n">02</span>
+        <h3>An EPC identifies a unit</h3>
+        <p>The number on the chip is an Electronic Product Code. Those same ten shirts carry one UPC and ten different EPCs, so each unit is individually addressable for its whole life.</p>
+      </div>
+      <div class="intx-item">
+        <span class="intx-n">03</span>
+        <h3>Read them all at once</h3>
+        <p>Scan the shelf and every tag answers together. That is a count of ten, instantly. It is the same mechanism behind self-checkout: units go in the bin, readers wake the tags, and the cart builds itself.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============ THE RFID LIFECYCLE (flow) ============ -->
 <section class="section innov-section">
   <div class="innov-bg"></div>
@@ -100,7 +130,7 @@ stickyHref: "/demo/"
     <div class="section-header">
       <div class="section-eyebrow">The RFID Story</div>
       <h2 class="section-title">One unit. One record. The whole journey.</h2>
-      <p class="section-sub">Every unit gets an EPC before it reaches the sales floor, and a ledger entry for life. Follow one unit from the warehouse to the front door.</p>
+      <p class="section-sub">A barcode identifies an item. An EPC identifies one specific unit of it. Follow a single unit from the loading dock to the front door.</p>
     </div>
     <div class="innov-track rfx-track">
       <div class="rfx-emitter">
@@ -151,12 +181,12 @@ stickyHref: "/demo/"
         <div class="innov-node">
           <div class="innov-node-dot"><i class="ti ti-package"></i></div>
           <div class="innov-node-title">Receiving</div>
-          <div class="innov-node-sub">Into the ledger in one step</div>
+          <div class="innov-node-sub">Checked against the purchase order</div>
         </div>
         <div class="innov-node">
           <div class="innov-node-dot"><i class="ti ti-building-store"></i></div>
-          <div class="innov-node-title">Store Operations</div>
-          <div class="innov-node-sub">Counted, moved, and found by unit</div>
+          <div class="innov-node-title">Transfers &amp; counts</div>
+          <div class="innov-node-sub">Verified at both ends, by unit</div>
         </div>
         <div class="innov-node">
           <div class="innov-node-dot"><i class="ti ti-shield-check"></i></div>
@@ -196,18 +226,17 @@ stickyHref: "/demo/"
   </div>
 </section>
 
-<!-- ============ CHAPTER 1: AT RECEIVING ============ -->
 <section class="section">
   <div class="container">
     <div class="feature-row reverse">
       <div class="feature-text">
-        <span class="story-chip"><span class="story-num">01</span> At receiving</span>
-        <h2>Received in one step.</h2>
-        <p>The shipment lands. Scan straight into the purchase receipt, and low-power reads capture only the boxes in front of you, never the racks behind.</p>
+        <span class="story-chip"><span class="story-num">01</span> Receiving</span>
+        <h2>Verified against the purchase order, at unit level.</h2>
+        <p>The journey starts at the loading dock. Units arrive either pre-tagged at manufacturing, or they are tagged here, a process called commissioning: the tag is printed, applied, and linked directly to the exact unit being received.</p>
         <ul class="feature-bullets">
-          <li>Vendor pre-tagged? Scan straight into the receipt</li>
-          <li>No tags from the vendor? The retailer prints and encodes them at receipt, right from the mobile POS</li>
-          <li>Every EPC auto-reconciled against the purchase order</li>
+          <li>A portable RFID scanner captures every EPC in the shipment at once</li>
+          <li>The system cross-checks what was expected against what actually arrived, at unit quantity level</li>
+          <li>No manual counts and no assumptions, just verification from the start</li>
         </ul>
       </div>
       <div class="feature-visual">
@@ -222,25 +251,18 @@ stickyHref: "/demo/"
 
 <div class="journey-link" aria-hidden="true"><span class="journey-pulse"></span></div>
 
-<!-- ============ CHAPTER 2: ON THE FLOOR ============ -->
 <section class="section" style="padding-top: 0;">
   <div class="container">
     <div class="feature-row">
       <div class="feature-text">
-        <span class="story-chip"><span class="story-num">02</span> On the floor</span>
-        <h2>Counted in minutes. Found in seconds.</h2>
-        <p>Now the unit lives in the store, and never disappears. High-power sweeps read thousands of EPCs without touching a rack; when something hides in the backroom, the handheld's locate mode reads the tag's signal and leads you straight to it.</p>
+        <span class="story-chip"><span class="story-num">02</span> Transfers</span>
+        <h2>The exact units that moved, confirmed at both ends.</h2>
+        <p>As inventory moves between locations, RFID tracks the exact units transferred. Targeted reading captures only the units involved in the transaction, so nearby stock is not accidentally swept in.</p>
         <ul class="feature-bullets">
-          <li>Full-store counts in minutes, not days. Recover $150K–$300K in "lost" stock in year one</li>
-          <li>80% less search time on "missing" items</li>
-          <li>Transfers and adjustments tracked by EPC, full chain of custody</li>
+          <li>Each EPC verified at both the source and the destination of the transfer</li>
+          <li>The full movement history recorded against the unit, not the SKU</li>
+          <li>A unit-level audit trail, and the confidence in inventory data that makes replenishment decisions across stores worth making</li>
         </ul>
-      </div>
-      <div class="feature-visual">
-        <div class="shot">
-          <div class="shot-glow"></div>
-          <img class="shot-img" src="/assets/images/homepage/rfid-scanning.jpg" alt="An associate sweeping a rack of jackets with an RFID handheld, every unit read by EPC in seconds">
-        </div>
       </div>
     </div>
   </div>
@@ -248,24 +270,23 @@ stickyHref: "/demo/"
 
 <div class="journey-link" aria-hidden="true"><span class="journey-pulse"></span></div>
 
-<!-- ============ CHAPTER 3: AT CHECKOUT ============ -->
 <section class="section" style="padding-top: 0;">
   <div class="container">
     <div class="feature-row reverse">
       <div class="feature-text">
-        <span class="story-chip"><span class="story-num">03</span> At checkout</span>
-        <h2>Sold in seconds.</h2>
-        <p>Associate-led or self-checkout: either way, the whole basket reads at once, no line-of-sight scanning. The moment the sale completes, the EPC flips to whitelisted in the ledger.</p>
+        <span class="story-chip"><span class="story-num">03</span> Sales</span>
+        <h2>Staff-led or self-checkout, the same read.</h2>
+        <p>Instead of scanning each unit's barcode one by one, everything is placed on a read zone and identified at once. In a staff-led environment the cart builds itself, so the team stays on service and recommendations rather than repetitive scanning.</p>
         <ul class="feature-bullets">
-          <li>Associate-led: the basket goes near the antenna, the receipt builds itself</li>
-          <li>Self-checkout: items go in the bin, the cart appears on screen</li>
-          <li>Confirmation logic and anti-bleed keep neighboring items off the receipt</li>
+          <li>Self-checkout: the customer places units in the read zone, the cart appears, and they are guided through</li>
+          <li>Either way the result is the same: faster checkout, accurate receipts, accurate real-time inventory</li>
+          <li>Confirmation logic and anti-bleed keep neighbouring units off the receipt</li>
         </ul>
       </div>
       <div class="feature-visual">
         <div class="shot">
           <div class="shot-glow"></div>
-          <img class="shot-img" src="/assets/images/homepage/rfid-self-checkout.jpg" alt="A shopper using Teamwork Commerce RFID self-checkout: items in the bin, cart on screen">
+          <img class="shot-img" src="/assets/images/homepage/rfid-self-checkout.jpg" alt="A shopper using Teamwork Commerce RFID self-checkout, items in the bin and the cart on screen">
         </div>
       </div>
     </div>
@@ -273,6 +294,69 @@ stickyHref: "/demo/"
 </section>
 
 <div class="journey-link" aria-hidden="true"><span class="journey-pulse"></span></div>
+
+<section class="section" style="padding-top: 0;">
+  <div class="container">
+    <div class="feature-row">
+      <div class="feature-text">
+        <span class="story-chip"><span class="story-num">04</span> Bag check</span>
+        <h2>Every EPC in the bag, against the receipt.</h2>
+        <p>In high-traffic environments, stadiums, or anywhere retail runs at volume, an RFID-powered bag check can be enabled at the exit. The customer scans their bag and the system cross-references every EPC inside it against their receipt.</p>
+        <ul class="feature-bullets">
+          <li>Matches confirmed and anything that does not belong flagged, in the moment</li>
+          <li>It can trigger a receipt printout right at the exit, freeing the checkout for the next customer</li>
+          <li>Unit-level precision instead of an alarm that cannot tell you who or what set it off</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="journey-link" aria-hidden="true"><span class="journey-pulse"></span></div>
+
+<section class="section" style="padding-top: 0;">
+  <div class="container">
+    <div class="feature-row reverse">
+      <div class="feature-text">
+        <span class="story-chip"><span class="story-num">05</span> Stock count</span>
+        <h2>Hours with a team, or minutes with one person.</h2>
+        <p>After units have been received, moved and sold, RFID stock counts verify that everything is where it should be. Counts work by capturing all visible EPCs within range of the reader, so a team can cover entire departments in seconds.</p>
+        <ul class="feature-bullets">
+          <li>What used to take hours with a large team can be completed in minutes by one person</li>
+          <li>Instead of periodic snapshots that get skipped, inventory can be verified continuously</li>
+          <li>A living, always-current picture of what is in stock</li>
+        </ul>
+      </div>
+      <div class="feature-visual">
+        <div class="shot">
+          <div class="shot-glow"></div>
+          <img class="shot-img" src="/assets/images/homepage/rfid-scanning.jpg" alt="An associate sweeping a rack of jackets with an RFID handheld">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="journey-link" aria-hidden="true"><span class="journey-pulse"></span></div>
+
+<section class="section" style="padding-top: 0;">
+  <div class="container">
+    <div class="feature-row">
+      <div class="feature-text">
+        <span class="story-chip"><span class="story-num">06</span> Unit Control Ledger</span>
+        <h2>One record of where every unit is.</h2>
+        <p>Every action, receiving, transferring, selling or counting, maintains a record of exactly where every unit is across the entire company. That is the Unit Control Ledger: a real-time database of which unit is in which location, when it moved, and where it is supposed to be.</p>
+        <ul class="feature-bullets">
+          <li>If a stock count reveals a discrepancy, the adjustment is recorded directly and logged on the ledger</li>
+          <li>A single source of truth for every unit, from the moment it enters the store to the moment it leaves</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="journey-link" aria-hidden="true"><span class="journey-pulse"></span></div>
+
 
 <!-- ============ MID-PAGE CTA ============ -->
 <section class="midcta">
@@ -507,11 +591,21 @@ stickyHref: "/demo/"
   </div>
 </section>
 
+<!-- ============ THE OBJECTIVE ============ -->
+<section class="ac-purple sunk section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Never promise what you do not have.<br>Never fail to offer what you do.</h2>
+      <p class="section-sub">Both halves of that are an inventory problem. A unit you cannot see is a sale you cannot make, and a unit you think you have is a promise you are about to break. Unit-level visibility at every step is how a retailer stops doing either.</p>
+    </div>
+  </div>
+</section>
+
 <!-- ============ FINAL CTA ============ -->
 <section class="final-cta">
   <div class="container final-cta-inner">
     <h2>See every unit. Sell every <span class="gradient-text">unit.</span></h2>
-    <p>99.9% accuracy, zero middleware, the only RFID stack that's native end to end.</p>
+    <p>Most RFID solutions give you one piece: a reader here, a count tool there, data that does not talk to itself. This is the whole journey, from the moment a unit arrives to the moment it sells.</p>
     <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
       <a href="/demo/" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Book a demo <i class="ti ti-arrow-right"></i></a>
     </div>
