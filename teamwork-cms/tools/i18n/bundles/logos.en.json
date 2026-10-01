@@ -1,0 +1,107 @@
+{
+  "file": "src/_includes/logos.njk",
+  "extractedAt": "2026-10-01",
+  "segments": 27,
+  "unique": 14,
+  "words": 46,
+  "strings": {
+    "b17672cab5": {
+      "source": "Retailers using Teamwork Commerce",
+      "kind": "attribute",
+      "context": [
+        "aria-label"
+      ]
+    },
+    "7b0dbf99a4": {
+      "source": "Uniqlo",
+      "kind": "attribute",
+      "context": [
+        "alt"
+      ]
+    },
+    "37a7446cdb": {
+      "source": "ASICS",
+      "kind": "attribute",
+      "context": [
+        "alt"
+      ]
+    },
+    "9dea9a1cda": {
+      "source": "Acne Studios",
+      "kind": "attribute",
+      "context": [
+        "alt"
+      ]
+    },
+    "ca938aaa1f": {
+      "source": "The Row",
+      "kind": "attribute",
+      "context": [
+        "alt"
+      ]
+    },
+    "8c33a75767": {
+      "source": "Lammle's",
+      "kind": "attribute",
+      "context": [
+        "alt"
+      ]
+    },
+    "ebc3d71e83": {
+      "source": "Lucchese",
+      "kind": "attribute",
+      "context": [
+        "alt"
+      ]
+    },
+    "df4bc53f64": {
+      "source": "Moose Knuckles",
+      "kind": "attribute",
+      "context": [
+        "alt"
+      ]
+    },
+    "8d4418e15a": {
+      "source": "N.Peal",
+      "kind": "attribute",
+      "context": [
+        "alt"
+      ]
+    },
+    "7e409f71a9": {
+      "source": "Tori Richard",
+      "kind": "attribute",
+      "context": [
+        "alt"
+      ]
+    },
+    "5966989c65": {
+      "source": "120% Lino",
+      "kind": "attribute",
+      "context": [
+        "alt"
+      ]
+    },
+    "08229bf079": {
+      "source": "Los Angeles Apparel",
+      "kind": "attribute",
+      "context": [
+        "alt"
+      ]
+    },
+    "694ad16207": {
+      "source": "LoveShackFancy",
+      "kind": "attribute",
+      "context": [
+        "alt"
+      ]
+    },
+    "74066189ae": {
+      "source": "Oner Active",
+      "kind": "attribute",
+      "context": [
+        "alt"
+      ]
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "defaultLocale": "en",
+  "locales": [
+    "es"
+  ],
+  "localeNames": {
+    "en": "English (US)",
+    "es": "Español"
+  },
+  "pages": {
+    "/platform/rfid/": {
+      "es": "/es/platform/rfid/"
+    }
+  }
+}

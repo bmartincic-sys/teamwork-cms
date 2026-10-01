@@ -16,7 +16,7 @@ module.exports = [
   {
     client: "One of the world's largest sporting events",
     title: "Powering High-Performance Retail at One of the World's Largest Sporting Events",
-    blurb: "Event retail at the highest level of pressure: thousands of transactions in tight windows, on one platform.",
+    blurb: "Event retail at the highest level of pressure: thousands of transactions in tight windows.",
     sector: "Stadiums & Venues",
     url: "/blog/powering-high-performance-retail-at-one-of-the-worlds-largest-sporting-events/",
     photo: "/assets/images/customers/sporting-event.jpg",
@@ -68,7 +68,7 @@ module.exports = [
   {
     client: "ASICS",
     title: "Revolutionizing Retail with Cutting-Edge POS Solutions",
-    blurb: "A global athletic brand standardizing store operations on one platform.",
+    blurb: "A global athletic brand standardizing store operations across its fleet.",
     sector: "Footwear",
     url: "/blog/asics-and-teamwork-commerce-revolutionizing-retail-with-cutting-edge-pos-solutions/",
     logo: "/assets/images/logos/asics-logo.png",
@@ -105,12 +105,12 @@ module.exports = [
     logo: "/assets/images/logos/moose-knuckles-logo.png",
     photo: "/assets/images/customers/moose-knuckles-storefront.jpg",
     resultIcon: "ti-credit-card",
-    result: "One payments stack across every market"
+    result: "A single payments stack worldwide"
   },
   {
     client: "Moose Knuckles Canada",
     title: "Moose Knuckles Canada Furthers Their Omnichannel Presence",
-    blurb: "Extending one platform across the Canadian fleet, store by store.",
+    blurb: "Extending the same setup across the Canadian fleet, store by store.",
     sector: "Luxury Apparel",
     url: "https://www.teamworkcommerce.com/moose-knuckles-canada-furthers-their-omnichannel-presence-with-teamwork-commerce/",
     photo: "/assets/images/customers/moose-knuckles.jpg",
@@ -151,7 +151,7 @@ module.exports = [
   {
     client: "Princesse Tam Tam · Comptoir des Cotonniers",
     title: "Princesse Tam Tam and Comptoir des Cotonniers",
-    blurb: "Two French fashion brands operating on one platform across their fleet.",
+    blurb: "Two French fashion brands running the same setup across their fleet.",
     sector: "Fashion & Apparel",
     url: "https://www.teamworkcommerce.com/princesse-tam-tam-and-comptoir-des-cotonniers-ptt-cdc/",
     photo: "/assets/images/customers/ptt-cdc.jpg", logo: "/assets/images/customers/logos/princesse-tam-tam-logo.png",

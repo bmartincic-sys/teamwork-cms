@@ -1,0 +1,8 @@
+{
+  "locales": ["es"],
+  "files": [
+    { "source": "src/_includes/security.njk", "out": "src/_includes/{locale}/security.njk" },
+    { "source": "src/_includes/logos.njk",    "out": "src/_includes/{locale}/logos.njk" },
+    { "source": "src/platform/rfid.njk",      "out": "src/{locale}/platform/rfid.njk" }
+  ]
+}

@@ -1,0 +1,182 @@
+[
+  {
+    "note": "luxury: client profiles bullet",
+    "old": "Unified client profiles: sizes, preferences, purchase history, wishlists, and notes, across every store and channel globally",
+    "new": "Unified client profiles: sizes, preferences, purchase history, wishlists and notes, the same record in any store or channel"
+  },
+  {
+    "note": "luxury: market heading",
+    "old": "<h3>One system across every market</h3>",
+    "new": "<h3>Fiscal compliance that travels</h3>"
+  },
+  {
+    "note": "luxury: collection drops",
+    "old": "schedule launches across every store globally, and give members pre-sale access.",
+    "new": "schedule launches store by store or worldwide, and give members pre-sale access."
+  },
+  {
+    "note": "luxury: lead subhead",
+    "old": "limited-run inventory, and running one platform across every market you operate in.",
+    "new": "limited-run inventory, and what it takes to run the same setup in each market you operate in."
+  },
+  {
+    "note": "luxury: oversell paragraph",
+    "old": "RFID-powered inventory</a> gives you 99.9% accuracy across every store and warehouse, so you never promise what you don't have.",
+    "new": "RFID-verified inventory</a> holds 99.9% accuracy, stockroom and warehouse alike, so you never promise what you don't have."
+  },
+  {
+    "note": "luxury+FAQ: oversell answer (3 places)",
+    "old": "RFID-powered inventory provides 99.9% accuracy across every store and warehouse globally.",
+    "new": "RFID-verified inventory holds 99.9% accuracy in stores and warehouses worldwide."
+  },
+  {
+    "note": "luxury+FAQ: CRM answer (3 places)",
+    "old": "The unified CRM stores sizes, style preferences, purchase history, wishlists, and associate notes across every store and channel, fully GDPR compliant",
+    "new": "The unified CRM stores sizes, style preferences, purchase history, wishlists and associate notes, so the same client record follows a shopper between stores and channels, fully GDPR compliant"
+  },
+  {
+    "note": "pet: nav blurb",
+    "old": "navBlurb: \"Retail, grooming and vet on one platform\"",
+    "new": "navBlurb: \"Retail, grooming and vet without separate systems\""
+  },
+  {
+    "note": "pet: intro",
+    "old": "unifies retail, veterinary, grooming, and loyalty on one platform.",
+    "new": "runs retail, veterinary, grooming and loyalty off the same product and customer records."
+  },
+  {
+    "note": "pet: stock heading",
+    "old": "<h3>Stock stays right across every store</h3>",
+    "new": "<h3>Stock that stays right</h3>"
+  },
+  {
+    "note": "pet: mid CTA",
+    "old": "See how 118 stores and 2,000+ terminals run on one platform.",
+    "new": "See how 118 stores and 2,000+ terminals run day to day."
+  },
+  {
+    "note": "pet: final CTA",
+    "old": "See how Teamwork Commerce powers 118 Petco Mexico stores with 2,000+ terminals on one platform.",
+    "new": "See how Teamwork Commerce powers 118 Petco Mexico stores and 2,000+ terminals."
+  },
+  {
+    "note": "pet: proof chip",
+    "old": "Retail and services in one system",
+    "new": "Retail and services, same records"
+  },
+  {
+    "note": "pet+FAQ: vet question (3 places)",
+    "old": "Can Teamwork Commerce handle retail, grooming, and veterinary on one system?",
+    "new": "Can Teamwork Commerce handle retail, grooming and veterinary together?"
+  },
+  {
+    "note": "identity: hero sub",
+    "old": "Centralized authentication, user roles, and device access across every application, running on the identity provider you already own.",
+    "new": "Centralized authentication, user roles and device access, running on the identity provider you already own."
+  },
+  {
+    "note": "identity: team management",
+    "old": "Associate records, roles, and training assignments stay synchronized across every application, onboard once, and every tool knows who they are.",
+    "new": "Associate records, roles and training assignments stay synchronized, so you onboard once and the tools pick it up."
+  },
+  {
+    "note": "identity: FAQ sync phrase (4 places)",
+    "old": "synchronize across every application, which means",
+    "new": "synchronize automatically, which means"
+  },
+  {
+    "note": "identity: permissions bullet",
+    "old": "Associate identities and permissions managed in one place, scoped per role",
+    "new": "Associate identities and permissions managed centrally, scoped per role"
+  },
+  {
+    "note": "identity: mini-card heading",
+    "old": "<h3>Everything in one place</h3>",
+    "new": "<h3>What floor staff actually open</h3>"
+  },
+  {
+    "note": "scalability: meta description",
+    "old": "description: \"Scaling retail operations on one platform: 30,000+ terminals across 40+ countries",
+    "new": "description: \"Scaling retail operations: 30,000+ terminals in 40+ countries"
+  },
+  {
+    "note": "scalability: stat label",
+    "old": "Stores on one platform at a single customer",
+    "new": "Stores at a single customer"
+  },
+  {
+    "note": "scalability: largest deployment (2 places)",
+    "old": "running more than 2,500 stores across 25-plus markets on one platform.",
+    "new": "running more than 2,500 stores in 25-plus markets."
+  },
+  {
+    "note": "scalability: final CTA",
+    "old": "Plan the next hundred stores on <span class=\"gradient-text\">one platform.</span>",
+    "new": "Plan the next <span class=\"gradient-text\">hundred stores.</span>"
+  },
+  {
+    "note": "museums: sticky",
+    "old": "stickyText: \"Consolidate on one platform.\"",
+    "new": "stickyText: \"Consolidate the retail side.\""
+  },
+  {
+    "note": "museums: hero",
+    "old": "Everything the museum <span class=\"t-serif\">sells</span>, on one platform.",
+    "new": "Everything the museum <span class=\"t-serif\">sells</span>, reconciled."
+  },
+  {
+    "note": "museums: proof client",
+    "old": "One platform for every line you sell",
+    "new": "Gift shop, membership and donations, reconciled"
+  },
+  {
+    "note": "inventory: no stitched stack",
+    "old": "POS, OMS, Inventory, and RFID on one platform, no silos, no sync lag, no integration errors.",
+    "new": "POS, OMS, Inventory and RFID share the same records, no silos, no sync lag, no integration errors."
+  },
+  {
+    "note": "mobile-pos: omnichannel heading",
+    "old": "BOPIS, ship-from-store and cross-channel returns on one system.",
+    "new": "BOPIS, ship-from-store and cross-channel returns, handled in the POS."
+  },
+  {
+    "note": "fashion: popup heading",
+    "old": "<h3>Pop-up to flagship on one platform</h3>",
+    "new": "<h3>Pop-up to flagship, same setup</h3>"
+  },
+  {
+    "note": "security band (shared, all pages)",
+    "old": "across every market we serve.",
+    "new": "in the markets we serve."
+  },
+  {
+    "note": "FAQ+inventory: one system sentence (2 places)",
+    "old": "This means cycle counts, receiving, loss prevention, and real-time tracking all run on one system with no integration points to break.",
+    "new": "This means cycle counts, receiving, loss prevention and real-time tracking share the same records, with no integration points to break."
+  },
+  {
+    "note": "FAQ+stadiums: InnovaSport sentence (2 places)",
+    "old": "Teamwork scales from the stadium to the entire retail fleet on one platform.",
+    "new": "the same deployment extends from the stadium to the entire retail fleet."
+  },
+  {
+    "note": "caseStudies: event retail blurb",
+    "old": "thousands of transactions in tight windows, on one platform.",
+    "new": "thousands of transactions in tight windows."
+  },
+  {
+    "note": "caseStudies: athletic brand blurb",
+    "old": "standardizing store operations on one platform.",
+    "new": "standardizing store operations across its fleet."
+  },
+  {
+    "note": "caseStudies: French brands blurb",
+    "old": "Two French fashion brands operating on one platform across their fleet.",
+    "new": "Two French fashion brands running the same setup across their fleet."
+  },
+  {
+    "note": "caseStudies: payments result",
+    "old": "\"One payments stack across every market\"",
+    "new": "\"A single payments stack worldwide\""
+  }
+]

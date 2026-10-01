@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="{{ locale or 'en' }}" data-theme="light">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,6 +25,19 @@
 <title>{{ pageTitle }}</title>
 <meta name="description" content="{{ description }}">
 <link rel="canonical" href="https://www.teamworkcommerce.com{{ page.url }}">
+
+{#- Translation alternates. Driven by tools/i18n/manifest.json, so a page can
+    only advertise a locale that was actually built. Canonical above stays
+    self-referencing per locale, which is what Google expects alongside these. -#}
+{%- set sourceUrl = translatedFrom or page.url %}
+{%- set alternates = i18n.pages[sourceUrl] %}
+{%- if alternates %}
+<link rel="alternate" hreflang="en" href="https://www.teamworkcommerce.com{{ sourceUrl }}">
+{%- for loc, url in alternates %}
+<link rel="alternate" hreflang="{{ loc }}" href="https://www.teamworkcommerce.com{{ url }}">
+{%- endfor %}
+<link rel="alternate" hreflang="x-default" href="https://www.teamworkcommerce.com{{ sourceUrl }}">
+{%- endif %}
 
 <!-- Favicon -->
 <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
@@ -139,6 +152,8 @@
 {% endif %}
 </head>
 <body>
+
+{% include "locale-banner.njk" %}
 
 {% include "nav.njk" %}
 

@@ -1,0 +1,32 @@
+[
+  {
+    "note": "A unified-commerce FAQ (plain)",
+    "old": "Teamwork Commerce combines iOS-native architecture, a proprietary AI agent, an industry-leading native end-to-end RFID stack, and 30+ years of retail DNA, in one system with 99.99% uptime across 40+ countries. Most platforms in this category reach RFID through a third-party integration layer; ours is native to the POS.",
+    "new": "The practical difference is where RFID lives. Most platforms in this category reach it through a third-party integration layer, so tag reads arrive as an import after the fact. Ours runs inside the POS, which is why receiving, counting, transferring and selling all operate by individual EPC. The iOS-native architecture, the AI agent and the 30+ years behind the product matter too, but RFID is the one that changes how a store actually works. Uptime is 99.99% in 40+ countries."
+  },
+  {
+    "note": "A unified-commerce FAQ (w/ link)",
+    "old": "Teamwork Commerce combines iOS-native architecture, <a href=\"#121-commerce\" style=\"color: var(--brand-text);\">AI</a> bringing product and customer intelligence to the point of sale, an industry-leading native end-to-end RFID stack, and 30+ years of retail DNA, in one system with 99.99% uptime across 40+ countries. Most platforms in this category reach RFID through a third-party integration layer; ours is native to the POS.",
+    "new": "The practical difference is where RFID lives. Most platforms in this category reach it through a third-party integration layer, so tag reads arrive as an import after the fact. Ours runs inside the POS, which is why receiving, counting, transferring and selling all operate by individual EPC. The iOS-native architecture, <a href=\"#121-commerce\" style=\"color: var(--brand-text);\">AI</a> at the point of sale and the 30+ years behind the product matter too, but RFID is the one that changes how a store actually works. Uptime is 99.99% in 40+ countries."
+  },
+  {
+    "note": "A unified-commerce FAQ (JSON-LD)",
+    "old": "Teamwork Commerce combines iOS-native architecture, AI bringing product and customer intelligence to the point of sale, an industry-leading native end-to-end RFID stack, and 30+ years of retail DNA, in one system with 99.99% uptime across 40+ countries. Most platforms in this category reach RFID through a third-party integration layer; ours is native to the POS.",
+    "new": "The practical difference is where RFID lives. Most platforms in this category reach it through a third-party integration layer, so tag reads arrive as an import after the fact. Ours runs inside the POS, which is why receiving, counting, transferring and selling all operate by individual EPC. The iOS-native architecture, AI at the point of sale and the 30+ years behind the product matter too, but RFID is the one that changes how a store actually works. Uptime is 99.99% in 40+ countries."
+  },
+  {
+    "note": "B fashion FAQ (w/ links)",
+    "old": "Teamwork Commerce combines <a href=\"/platform/rfid/\" style=\"color: var(--brand-text);\">native RFID</a> (self-checkout in 30 seconds or less, 99.9% inventory accuracy), <a href=\"/platform/oms/\" style=\"color: var(--brand-text);\">enterprise OMS with Endless Aisle</a>, global fiscal compliance in 40+ countries, and the full omnichannel stack (BOPIS, BORIS, ship-from-store) in one platform.",
+    "new": "For a fashion retailer the deciding factor is usually inventory accuracy, since both markdowns and oversells trace back to it. Stock verified by <a href=\"/platform/rfid/\" style=\"color: var(--brand-text);\">native RFID</a> to 99.9% is what lets self-checkout read a basket in 30 seconds or less, and what makes an <a href=\"/platform/oms/\" style=\"color: var(--brand-text);\">Endless Aisle</a> or ship-from-store promise hold. BOPIS, BORIS and fiscal compliance in 40+ countries come with it."
+  },
+  {
+    "note": "B fashion FAQ (plain + JSON-LD)",
+    "old": "Teamwork Commerce combines native RFID (self-checkout in 30 seconds or less, 99.9% inventory accuracy), enterprise OMS with Endless Aisle, global fiscal compliance in 40+ countries, and the full omnichannel stack (BOPIS, BORIS, ship-from-store) in one platform",
+    "new": "For a fashion retailer the deciding factor is usually inventory accuracy, since both markdowns and oversells trace back to it. Stock verified by native RFID to 99.9% is what lets self-checkout read a basket in 30 seconds or less, and what makes an Endless Aisle or ship-from-store promise hold. BOPIS, BORIS and fiscal compliance in 40+ countries come with it"
+  },
+  {
+    "note": "C luxury FAQ (plain + JSON-LD)",
+    "old": "Teamwork Commerce combines the polished iOS interface, native RFID precision, AI clienteling, consignment/deposit management, and global compliance across 40+ countries, in one platform",
+    "new": "Luxury puts weight on two things most platforms treat as secondary: knowing exactly what exists when a run is small, and knowing the client well enough to call them about it. RFID precision covers the first; clienteling, consignment and deposit handling cover the second. The iOS interface and compliance in 40+ countries are table stakes at this level"
+  }
+]

@@ -1,0 +1,571 @@
+---
+locale: "es"
+translatedFrom: "/platform/rfid/"
+layout: "solution.njk"
+title: "RFID nativo para el inventario minorista"
+description: "Un stack RFID nativo que va desde el comisionado (commissioning) de etiquetas en la recepción hasta las transferencias, los conteos y el pago. Cada unidad lleva su propio EPC, registrado en un único Unit Control Ledger."
+navLabel: "Solución RFID"
+tags: "platform-es"
+permalink: "/es/platform/rfid/"
+navOrder: 5
+stickyText: "Recorra el ciclo de vida RFID con un especialista técnico."
+stickyCta: "Solicite una demo"
+stickyHref: "/demo/"
+---
+<!-- Breadcrumb -->
+<div class="container">
+  <nav class="breadcrumb" aria-label="Ruta de navegación" style="padding: 16px 0; font-size: 12px; color: var(--text-faint);">
+    <a href="/" style="color: var(--text-muted);">Inicio</a> <span style="margin: 0 6px;">/</span>
+    <a href="/platform/mobile-pos/" style="color: var(--text-muted);">Plataforma</a> <span style="margin: 0 6px;">/</span>
+    Solución RFID
+  </nav>
+</div>
+
+<!-- ============ HERO (photo) ============ -->
+<section class="hero hero-photo hero-photo-compact">
+  <img class="hero-photo-bg" src="/assets/images/homepage/rfid-self-checkout.jpg" alt="Un cliente usando el autopago RFID de Teamwork Commerce en una tienda" style="object-position: 70% 45%;">
+  <div class="hero-photo-scrim"></div>
+
+  <div class="container hero-photo-inner">
+    <div class="hero-photo-head fade-up">
+      <span class="eyebrow"><span class="eyebrow-dot"></span> Parte de la plataforma Teamwork Commerce</span>
+      <h1 class="hero-photo-title">Cada unidad, del <span class="t-serif">muelle</span> al recibo.</h1>
+    </div>
+
+    <div class="hero-photo-foot hero-foot-left fade-up" style="animation-delay: 0.25s;">
+      <div class="hero-photo-note">
+        <p>Los minoristas pierden millones cada año por inexactitud de inventario. Stock fantasma. Merma. Unidades que deberían estar en el piso de venta, pero no están. El hardware RFID promete resolverlo, pero el hardware por sí solo es apenas datos sin a dónde ir. Lo que hace falta es el software que convierte cada lectura de etiqueta en una decisión operativa real. Sin capa de middleware y agnóstico de hardware, así que los lectores y las etiquetas los elige usted.</p>
+        <div class="hero-cta">
+          <a href="/demo/" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Solicite una demo <i class="ti ti-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- Checkout speed, measured by EXO. The third and fourth figures are the
+     arithmetic on the first two: 85 - 32 = 53s, and 53s x 1,000 = ~15 hours. -->
+<section class="pfh-band">
+  <div class="pfh-band-glow"></div>
+  <div class="container">
+    <div class="pfh-row">
+      <div class="pfh-col">
+        <div class="pfh-big">32 s</div>
+        <div class="pfh-desc">Pago con RFID, medido por EXO.</div>
+      </div>
+      <div class="pfh-col">
+        <div class="pfh-big">85 s</div>
+        <div class="pfh-desc">El mismo pago en un POS tradicional, escaneando artículo por artículo.</div>
+      </div>
+      <div class="pfh-col">
+        <div class="pfh-big">53 s</div>
+        <div class="pfh-desc">Ahorrados en cada transacción.</div>
+      </div>
+      <div class="pfh-col">
+        <div class="pfh-big">15 h</div>
+        <div class="pfh-desc">Tiempo de escaneo recuperado por cada 1.000 transacciones.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW RFID WORKS ============
+     Straight from the approved script. The UPC-versus-EPC distinction is the
+     thing every other explanation on this page depended on and never stated. -->
+<section class="ac-blue sunk section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">La base</div>
+      <h2 class="section-title">El RFID aporta la señal. Nosotros la convertimos en acción.</h2>
+      <p class="section-sub">Ponga una etiqueta RFID a contraluz. Puede verla: un conjunto de líneas finas, esa es la antena, conectada a un chip diminuto. Ese chip almacena un número, de forma permanente. No necesita batería. Solo necesita una ráfaga de energía de un lector RFID, una pistola, una base o un escáner, para despertar y transmitir su ID.</p>
+    </div>
+    <div class="intx-grid intx-grid-3">
+      <div class="intx-item">
+        <span class="intx-n">01</span>
+        <h3>Ese ID es un Electronic Product Code</h3>
+        <p>A diferencia de un código de barras, que identifica un artículo que puede tener muchas unidades, un EPC identifica una unidad específica del artículo.</p>
+      </div>
+      <div class="intx-item">
+        <span class="intx-n">02</span>
+        <h3>Un UPC, diez EPC</h3>
+        <p>Suponga que tiene diez camisas idénticas en un estante: un UPC, pero diez EPC distintos. Léalas todas a la vez y ahí está su conteo de diez, al instante.</p>
+      </div>
+      <div class="intx-item">
+        <span class="intx-n">03</span>
+        <h3>Ya lo ha visto en el autopago</h3>
+        <p>Coloque sus unidades en una bandeja y el carrito aparece en pantalla automáticamente. Los lectores dentro de la bandeja irradian energía sobre las etiquetas, capturan cada EPC y el sistema arma la transacción. Otra vez, al instante.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ THE RFID LIFECYCLE (flow) ============ -->
+<section class="section innov-section">
+  <div class="innov-bg"></div>
+  <div class="innov-glow innov-glow-1"></div>
+  <div class="innov-glow innov-glow-2"></div>
+  <div class="container" style="position: relative; z-index: 1;">
+    <div class="section-header">
+      <div class="section-eyebrow">La historia del RFID</div>
+      <h2 class="section-title">Una unidad. Un registro.</h2>
+      <p class="section-sub">Siga una sola unidad por cada paso que la toca.</p>
+    </div>
+    <div class="innov-track rfx-track">
+      <div class="rfx-emitter">
+        <div class="rfx-halo">
+          <span class="rfx-wave"></span>
+          <span class="rfx-wave"></span>
+          <span class="rfx-wave"></span>
+          <div class="rfx-reader">
+            <svg class="rfx-reader-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"
+                 role="img" aria-label="Etiqueta RFID">
+              <rect x="8.3" y="3" width="7.4" height="7" rx="1.5"/>
+              <rect x="10.5" y="5.2" width="3" height="2.6" rx="0.7"/>
+              <path d="M15.31 12.59 A 4.2 4.2 0 0 1 8.69 12.59"/>
+              <path d="M17.99 14.68 A 7.6 7.6 0 0 1 6.01 14.68"/>
+              <path d="M20.67 16.77 A 11 11 0 0 1 3.33 16.77"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <svg class="rfx-beams" viewBox="0 0 1000 116" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+        <defs>
+          <linearGradient id="rfxBeam" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="116">
+            <stop offset="0%" stop-color="#3d8bff" stop-opacity="0.4"/>
+            <stop offset="55%" stop-color="#6d9bff" stop-opacity="0.95"/>
+            <stop offset="100%" stop-color="#b48cff" stop-opacity="0.95"/>
+          </linearGradient>
+        </defs>
+        <g class="rfx-beam-track">
+          <path d="M500 2 L125 114"/>
+          <path d="M500 2 L375 114"/>
+          <path d="M500 2 L625 114"/>
+          <path d="M500 2 L875 114"/>
+        </g>
+        <g class="rfx-beam-live">
+          <path pathLength="100" d="M500 2 L125 114"/>
+          <path pathLength="100" d="M500 2 L375 114"/>
+          <path pathLength="100" d="M500 2 L625 114"/>
+          <path pathLength="100" d="M500 2 L875 114"/>
+        </g>
+      </svg>
+      <div class="innov-nodes innov-nodes-4">
+        <div class="innov-node">
+          <div class="innov-node-dot"><i class="ti ti-building-warehouse"></i></div>
+          <div class="innov-node-title">Almacén</div>
+          <div class="innov-node-sub">Se despacha etiquetada por el proveedor, o llega sin etiquetar</div>
+        </div>
+        <div class="innov-node">
+          <div class="innov-node-dot"><i class="ti ti-package"></i></div>
+          <div class="innov-node-title">Recepción</div>
+          <div class="innov-node-sub">Verificada contra la orden de compra</div>
+        </div>
+        <div class="innov-node">
+          <div class="innov-node-dot"><i class="ti ti-building-store"></i></div>
+          <div class="innov-node-title">Transferencias y conteos</div>
+          <div class="innov-node-sub">Verificadas en ambos extremos, por unidad</div>
+        </div>
+        <div class="innov-node">
+          <div class="innov-node-dot"><i class="ti ti-shield-check"></i></div>
+          <div class="innov-node-title">Pago</div>
+          <div class="innov-node-sub">Leída en una sola pasada, del carrito al recibo</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="feature-row reverse">
+      <div class="feature-text">
+        <span class="story-chip"><span class="story-num">01</span> Recepción</span>
+        <h2>Sin conteos manuales. Sin suposiciones.</h2>
+        <p>El recorrido comienza en el muelle de carga. Las unidades llegan ya etiquetadas desde fábrica, o se etiquetan aquí, un proceso llamado comisionado (commissioning). Cada etiqueta se imprime, se aplica y se vincula directamente a la unidad exacta que se está recibiendo.</p>
+        <ul class="feature-bullets">
+          <li>Un escáner RFID portátil captura todos los EPC del envío a la vez</li>
+          <li>Nuestro sistema contrasta lo que se esperaba contra lo que realmente llegó, a nivel de cantidad de unidades</li>
+          <li>Solo verificación desde el primer momento</li>
+        </ul>
+      </div>
+      <div class="feature-visual">
+        <div class="shot">
+          <div class="shot-glow"></div>
+          <img class="shot-img" src="/assets/images/homepage/rfid-sled.webp" alt="Lectores sled RFID Bluebird con iPhones ejecutando la app RFID de Teamwork Commerce">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="journey-link" aria-hidden="true"><span class="journey-pulse"></span></div>
+
+<section class="section" style="padding-top: 0;">
+  <div class="container">
+    <div class="feature-row">
+      <div class="feature-text">
+        <span class="story-chip"><span class="story-num">02</span> Transferencias</span>
+        <h2>Rastree las unidades exactas que se transfieren.</h2>
+        <p>A medida que el inventario se mueve entre ubicaciones, el RFID nos permite rastrear las unidades exactas que se transfieren. La lectura RFID dirigida captura solo las unidades directamente involucradas en la transacción, de modo que el stock cercano no se incluye por accidente.</p>
+        <ul class="feature-bullets">
+          <li>Nuestro sistema verifica cada EPC tanto en el origen como en el destino de la transferencia, registrando el historial completo del movimiento</li>
+          <li>En lugar de adivinar, los minoristas tienen una pista de auditoría clara, a nivel de unidad</li>
+          <li>El tipo de confianza en los datos de inventario que permite decisiones de reposición más inteligentes entre tiendas</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="journey-link" aria-hidden="true"><span class="journey-pulse"></span></div>
+
+<section class="section" style="padding-top: 0;">
+  <div class="container">
+    <div class="feature-row reverse">
+      <div class="feature-text">
+        <span class="story-chip"><span class="story-num">03</span> Ventas</span>
+        <h2>Ya sea que el pago lo gestione el personal o el propio cliente.</h2>
+        <p>En lugar de escanear el código de barras de cada unidad una por una, todo se coloca en una zona de lectura y se identifica con precisión al instante. En un entorno atendido por personal, las unidades se leen de una vez, el carrito se arma automáticamente y su equipo se mantiene enfocado en el servicio y las recomendaciones.</p>
+        <ul class="feature-bullets">
+          <li>En el autopago, los clientes colocan sus unidades en la zona de lectura. Todas las unidades se identifican al instante, el carrito se arma y el cliente avanza guiado sin fricción: sin filas, sin esperas</li>
+          <li>En cualquier caso, el mismo resultado: pago más rápido, recibos exactos e inventario exacto en tiempo real</li>
+        </ul>
+      </div>
+      <div class="feature-visual">
+        <div class="shot">
+          <div class="shot-glow"></div>
+          <img class="shot-img" src="/assets/images/homepage/rfid-self-checkout.jpg" alt="Un cliente usando el autopago RFID de Teamwork Commerce, los artículos en la bandeja y el carrito en pantalla">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="journey-link" aria-hidden="true"><span class="journey-pulse"></span></div>
+
+<section class="section" style="padding-top: 0;">
+  <div class="container">
+    <div class="feature-row">
+      <div class="feature-text">
+        <span class="story-chip"><span class="story-num">04</span> Revisión de bolsas</span>
+        <h2>Cada EPC en su interior, contra su recibo.</h2>
+        <p>En entornos de alto tránsito, estadios o cualquier lugar con retail de alto volumen, tenemos la capacidad de habilitar una revisión de bolsas con RFID en la salida. Cuando un cliente escanea su bolsa, el sistema contrasta al instante cada EPC en su interior contra su recibo.</p>
+        <ul class="feature-bullets">
+          <li>Confirmando coincidencias y señalando cualquier cosa que no corresponda</li>
+          <li>También puede disparar la impresión del recibo justo en la salida, liberando la caja para el siguiente cliente</li>
+          <li>En lugar de alarmas que no le dicen quién ni qué las activó, los equipos obtienen precisión a nivel de unidad y los clientes pueden seguir su camino</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="journey-link" aria-hidden="true"><span class="journey-pulse"></span></div>
+
+<section class="section" style="padding-top: 0;">
+  <div class="container">
+    <div class="feature-row reverse">
+      <div class="feature-text">
+        <span class="story-chip"><span class="story-num">05</span> Conteo de inventario</span>
+        <h2>Horas con un equipo grande, o minutos con una sola persona.</h2>
+        <p>Después de que las unidades se han recibido, movido y vendido, los conteos de inventario con RFID verifican que todo esté donde debe estar. Los conteos funcionan capturando todos los EPC visibles dentro del alcance del lector. Los equipos pueden recorrer la tienda, cubriendo departamentos enteros en segundos.</p>
+        <ul class="feature-bullets">
+          <li>Lo que antes tomaba horas con un equipo grande ahora puede completarse en minutos con una sola persona</li>
+          <li>En lugar de fotos periódicas que a menudo se omiten, el inventario puede verificarse de forma continua</li>
+          <li>Una imagen viva y siempre actual de lo que hay en stock</li>
+        </ul>
+      </div>
+      <div class="feature-visual">
+        <div class="shot">
+          <div class="shot-glow"></div>
+          <img class="shot-img" src="/assets/images/homepage/rfid-scanning.jpg" alt="Un asociado recorriendo un perchero de chaquetas con una terminal de mano RFID">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="journey-link" aria-hidden="true"><span class="journey-pulse"></span></div>
+
+<section class="section" style="padding-top: 0;">
+  <div class="container">
+    <div class="feature-row">
+      <div class="feature-text">
+        <span class="story-chip"><span class="story-num">06</span> Unit Control Ledger</span>
+        <h2>Una base de datos en tiempo real de qué unidad está dónde.</h2>
+        <p>Cada acción, recibir, transferir, vender o contar, mantiene un registro de exactamente dónde está cada unidad, en toda la compañía. Esto es el Unit Control Ledger: una base de datos en tiempo real de qué unidad está en qué ubicación, cuándo se movió y dónde se supone que debe estar.</p>
+        <ul class="feature-bullets">
+          <li>Si un conteo de inventario revela una discrepancia, el ajuste se registra directamente, y ese ajuste también queda asentado en el Unit Control Ledger</li>
+          <li>El resultado es una única fuente de verdad para cada unidad de su inventario, desde el momento en que entra a la tienda hasta el momento en que sale</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="journey-link" aria-hidden="true"><span class="journey-pulse"></span></div>
+
+
+<!-- ============ MID-PAGE CTA ============ -->
+<section class="midcta">
+  <div class="midcta-glow"></div>
+  <div class="container midcta-inner">
+    <div>
+      <div class="midcta-title">Vea el ciclo de vida RFID completo en vivo.</div>
+      <div class="midcta-sub">Traiga un envío, una transferencia y un conteo, y los ejecutaremos con los datos de sus propios productos.</div>
+    </div>
+    <a href="/demo/" target="_blank" rel="noopener" class="btn btn-lg midcta-btn">Solicite una demo <i class="ti ti-arrow-right"></i></a>
+  </div>
+</section>
+
+<!-- ============ THE E-COMMERCE MISSION ============ -->
+<!-- The copy always said there are two opposed missions. The old layout was four
+     stat cards, which expressed neither of them. Now the two failure modes face
+     each other and converge on the one number that fixes both. -->
+<section class="ac-purple sunk emx">
+  <div class="emx-glow"></div>
+  <div class="container" style="position: relative; z-index: 1;">
+    <div class="section-header">
+      <div class="section-eyebrow">La misión del e-commerce</div>
+      <h2 class="section-title">Dos misiones que tiran en direcciones opuestas.</h2>
+      <p class="section-sub">Nunca prometa lo que no tiene. Nunca deje de ofrecer lo que sí tiene. Falle en cualquiera de las dos y el costo recae sobre el mismo cliente.</p>
+    </div>
+
+    <div class="emx-pair">
+      <div class="emx-mission">
+        <span class="emx-num">Misión 01</span>
+        <h3>Cuando el sitio vende de más</h3>
+        <p class="emx-lead">El sitio vende una unidad que el estante no tiene.</p>
+        <ul class="emx-cost">
+          <li><i class="ti ti-x"></i> El pedido se cancela después de que el cliente ya pagó</li>
+          <li><i class="ti ti-x"></i> Un reembolso, una disculpa y un comprador que ahora duda de la cifra de stock</li>
+          <li><i class="ti ti-x"></i> Cada promesa posterior del sitio vale menos</li>
+        </ul>
+      </div>
+
+      <div class="emx-vs" aria-hidden="true"><span>y</span></div>
+
+      <div class="emx-mission">
+        <span class="emx-num">Misión 02</span>
+        <h3>Cuando el estante se queda sin vender</h3>
+        <p class="emx-lead">El estante tiene una unidad que el sitio no va a vender.</p>
+        <ul class="emx-cost">
+          <li><i class="ti ti-x"></i> El stock está en la trastienda mientras la página dice agotado</li>
+          <li><i class="ti ti-x"></i> La venta se va a quien sí confió en sus propios números</li>
+          <li><i class="ti ti-x"></i> El descuento de fin de temporada corre por su cuenta</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="emx-converge" aria-hidden="true">
+      <span></span><span></span>
+    </div>
+
+    <div class="emx-fix">
+      <div class="emx-fix-head">
+        <span class="emx-fix-eyebrow"><i class="ti ti-check"></i> Ambas se reducen a un solo número</span>
+        <h3>Un disponible para vender en el que su e-commerce sí puede confiar.</h3>
+        <p>El disponible para vender se calcula a partir de lo que el sistema cree que hay en existencia. Contar el piso de venta por EPC, y hacerlo seguido, es lo que vuelve cierta esa creencia, para que el número contra el que vende su sitio web coincida con el estante.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CERTIFIED HARDWARE ============ -->
+<section class="ac-magenta section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Una lista publicada de hardware certificado.</h2>
+      <p class="section-sub">Cada dispositivo que integramos se prueba, recibe un estado de certificación y se rastrea por versión y por país. La lista es deliberadamente corta: aproximadamente un dispositivo certificado por categoría, en lugar de un catálogo para elegir. Esta es la forma de una entrada.</p>
+    </div>
+
+    <!-- The credible thing about the program is the format of the record, so show
+         a record. Everything on it is a field the published list actually carries. -->
+    <div class="dossx">
+      <div class="dossx-shot">
+        <img src="/assets/images/homepage/inventory-rfid-count.jpg"
+             alt="Un asociado contando stock con una terminal de mano RFID certificada en el piso de venta"
+             width="1536" height="1024" loading="lazy">
+      </div>
+      <div class="dossx-rec">
+        <span class="dossx-cap">Registro de hardware certificado</span>
+        <h3>Terminal de mano RFID Bluebird</h3>
+        <p class="dossx-desc">Sled RFID para conteo, recepción, transferencias y localización de artículos, integrado en el flujo de trabajo de la app iOS con ambos modos de potencia.</p>
+        <dl class="dossx-fields">
+          <div><dt>Estado de certificación</dt><dd><span class="dossx-pill">Certificado</span></dd></div>
+          <div><dt>Propósito</dt><dd>Lectura RFID, conteo, localización de artículos</dd></div>
+          <div><dt>Versión de integración</dt><dd>La versión de TW POS Pro en la que se introdujo</dd></div>
+          <div><dt>Disponibilidad</dt><dd>Registrada por país</dd></div>
+          <div><dt>Última revisión completa</dt><dd>En los últimos 120 días</dd></div>
+        </dl>
+        <p class="dossx-foot">¿No está en la lista? Recomendamos hardware certificado para compatibilidad total, y su equipo de Client Success repasará primero las implicaciones de soporte. Vale decirlo con claridad: hoy no hay arcos EAS certificados en la lista, y la prevención de pérdidas no es un producto que vendamos.</p>
+        <a href="/certified-hardware/" class="btn btn-ghost">Ver la lista completa de hardware certificado <i class="ti ti-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECURITY ============ -->
+<!-- ============ RFID IN PRACTICE ============ -->
+<section class="ac-royal sunk section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">RFID en la práctica</div>
+      <h2 class="section-title">Lo que la terminal de mano realmente hace.</h2>
+    </div>
+    <div class="rfp-stage">
+      <div class="rfp-col rfp-col-left">
+        <div class="rfp-card">
+          <div class="mini-ico"><i class="ti ti-package-import"></i></div>
+          <h3>Lectores emparejados</h3>
+          <p>Dos terminales de mano pueden trabajar la misma transferencia de entrada o de salida al mismo tiempo, de modo que un pedido grande de mercancía se lee en una sola pasada en lugar de dividirse en lotes.</p>
+        </div>
+        <div class="rfp-card">
+          <div class="mini-ico"><i class="ti ti-list-check"></i></div>
+          <h3>Conteos filtrados</h3>
+          <p>Aísle un conteo a variaciones de producto específicas y los artículos no relacionados se filtran automáticamente, de modo que una sola categoría puede verificarse sin recorrer todo el piso de venta.</p>
+        </div>
+      </div>
+
+      <div class="rfp-hub">
+        <!-- spans the hub column plus both gaps, so x=0 / x=408 land exactly on the card edges -->
+        <div class="rfp-beam-layer">
+        <svg class="rfp-beams" viewBox="0 0 408 100" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+          <defs>
+            <linearGradient id="rfpL" gradientUnits="userSpaceOnUse" x1="204" y1="0" x2="0" y2="0">
+              <stop offset="0%" stop-color="#6d9bff" stop-opacity="0.1"/>
+              <stop offset="55%" stop-color="#6d9bff" stop-opacity="0.95"/>
+              <stop offset="100%" stop-color="#b48cff" stop-opacity="0.95"/>
+            </linearGradient>
+            <linearGradient id="rfpR" gradientUnits="userSpaceOnUse" x1="204" y1="0" x2="408" y2="0">
+              <stop offset="0%" stop-color="#6d9bff" stop-opacity="0.1"/>
+              <stop offset="55%" stop-color="#6d9bff" stop-opacity="0.95"/>
+              <stop offset="100%" stop-color="#b48cff" stop-opacity="0.95"/>
+            </linearGradient>
+          </defs>
+          <g class="rfp-beam-track">
+            <path d="M204 50 L0 25"/><path d="M204 50 L0 75"/>
+            <path d="M204 50 L408 25"/><path d="M204 50 L408 75"/>
+          </g>
+          <g class="rfp-beam-live">
+            <path pathLength="100" d="M204 50 L0 25"/>
+            <path pathLength="100" d="M204 50 L0 75"/>
+            <path pathLength="100" d="M204 50 L408 25"/>
+            <path pathLength="100" d="M204 50 L408 75"/>
+          </g>
+        </svg>
+        </div>
+        <span class="rfp-ring"></span>
+        <span class="rfp-ring"></span>
+        <span class="rfp-ring"></span>
+        <img class="rfp-shot" src="/assets/images/homepage/rfid-handheld.webp"
+             alt="Un lector sled RFID Bluebird con un iPhone ejecutando la pantalla de conteo diario de Teamwork Commerce"
+             width="560" height="1001" loading="lazy">
+      </div>
+
+      <div class="rfp-col rfp-col-right">
+        <div class="rfp-card">
+          <div class="mini-ico"><i class="ti ti-antenna"></i></div>
+          <h3>Potencia de antena ajustable</h3>
+          <p>Ajuste el lector de baja a alta potencia: localice un solo artículo en un perchero, o recorra una sala entera.</p>
+        </div>
+        <div class="rfp-card">
+          <div class="mini-ico"><i class="ti ti-radar-2"></i></div>
+          <h3>Buscador de proximidad</h3>
+          <p>Un medidor de proximidad indica qué tan cerca está el lector de un artículo específico, llevando al asociado hasta el stock que se había perdido en el piso de venta.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% include "es/security.njk" %}
+
+
+{% include "es/logos.njk" %}
+
+
+<!-- ============ FAQ ============ -->
+<section class="ac-blue section" style="padding-bottom: 80px;">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">Preguntas frecuentes</div>
+      <h2 class="section-title">Preguntas sobre RFID, respondidas.</h2>
+    </div>
+    <div style="max-width: 800px; margin: 0 auto;">
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          ¿Qué hace que el RFID de Teamwork Commerce sea diferente al de la competencia?
+          <span class="faq-icon"><i class="ti ti-plus"></i></span>
+        </button>
+        <div class="faq-answer"><p>Teamwork Commerce ofrece un stack RFID nativo que va desde el comisionado (commissioning) de etiquetas en la recepción hasta las transferencias, los conteos y el pago. Sin middleware de terceros, y el hardware lector lo elige usted. Nuestro RFID es nativo a la lógica central: cada transacción (recepción, conteo, transferencia, venta) opera por EPC individual, no solo por UPC.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          ¿Qué hardware soportan?
+          <span class="faq-icon"><i class="ti ti-plus"></i></span>
+        </button>
+        <div class="faq-answer"><p>Publicamos una lista de hardware certificado que cubre los dispositivos integrados y soportados con TW POS Pro, incluidas las terminales de mano RFID Bluebird. Es deliberadamente corta, aproximadamente un dispositivo certificado por categoría en lugar de un catálogo, y hoy no hay arcos EAS certificados en ella. Recomendamos hardware certificado para compatibilidad total; si desea usar algo que no está en la lista, su equipo de Client Success puede asesorarle sobre el soporte.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          ¿Los proveedores pueden pre-etiquetar los artículos, o necesitamos comisionar las etiquetas en tienda?
+          <span class="faq-icon"><i class="ti ti-plus"></i></span>
+        </button>
+        <div class="faq-answer"><p>Ambas opciones. Si su proveedor o almacén despacha mercancía ya etiquetada, se escanea directamente en el recibo de compra. Si no, Teamwork ofrece un flujo de codificación integrado dentro del documento de recibo de compra: definir cantidad, imprimir y codificar etiquetas, colocarlas, y luego escanear por RFID para poblar el recibo con los EPC individuales. Un solo paso, sin proceso aparte.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="final-cta">
+  <div class="container final-cta-inner">
+    <h2>Vea cada unidad. Venda cada <span class="gradient-text">unidad.</span></h2>
+    <p>La mayoría de las soluciones RFID le dan una sola pieza. Un lector por aquí, una herramienta de conteo por allá. Datos desconectados que no se hablan entre sí. Teamwork Commerce le da el recorrido completo, desde el momento en que una unidad llega hasta el momento en que se vende, y todo lo que hay en medio. Una plataforma. Datos conectados. Visibilidad a nivel de unidad en cada paso.</p>
+    <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+      <a href="/demo/" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Solicite una demo <i class="ti ti-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué hace que el RFID de Teamwork Commerce sea diferente al de la competencia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Teamwork Commerce ofrece un stack RFID nativo que va desde el comisionado (commissioning) de etiquetas en la recepción hasta las transferencias, los conteos y el pago. Sin middleware de terceros, y el hardware lector lo elige usted. Nuestro RFID es nativo a la lógica central: cada transacción (recepción, conteo, transferencia, venta) opera por EPC individual, no solo por UPC."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué hardware soportan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Publicamos una lista de hardware certificado que cubre los dispositivos integrados y soportados con TW POS Pro, incluidas las terminales de mano RFID Bluebird. Es deliberadamente corta, aproximadamente un dispositivo certificado por categoría en lugar de un catálogo, y hoy no hay arcos EAS certificados en ella. Recomendamos hardware certificado para compatibilidad total; si desea usar algo que no está en la lista, su equipo de Client Success puede asesorarle sobre el soporte."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Los proveedores pueden pre-etiquetar los artículos, o necesitamos comisionar las etiquetas en tienda?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ambas opciones. Si su proveedor o almacén despacha mercancía ya etiquetada, se escanea directamente en el recibo de compra. Si no, Teamwork ofrece un flujo de codificación integrado dentro del documento de recibo de compra: definir cantidad, imprimir y codificar etiquetas, colocarlas, y luego escanear por RFID para poblar el recibo con los EPC individuales. Un solo paso, sin proceso aparte."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- ============ FOOTER ============ -->
+
+{% include "sticky-cta.njk" %}

@@ -1,0 +1,32 @@
+[
+  {
+    "note": "footwear: three-part no-X list -> two",
+    "old": "no barcode scanning, no line-of-sight, no queues.",
+    "new": "no line-of-sight scanning, no queue."
+  },
+  {
+    "note": "pet: three-part no-X list -> two",
+    "old": "no card, no lookup, no delay.",
+    "new": "no card and no lookup."
+  },
+  {
+    "note": "oms: 'nobody is watching' flourish",
+    "old": "not in a back-office queue nobody is watching.",
+    "new": "not in a back-office queue."
+  },
+  {
+    "note": "analytics: invented 'two days'",
+    "old": "without filing a request and waiting two days.",
+    "new": "without filing a request."
+  },
+  {
+    "note": "scalability: 'at the size most retailers...' flourish",
+    "old": ", the system described on this page, at the size most retailers are still planning for.",
+    "new": ", the system described on this page."
+  },
+  {
+    "note": "rfid: ticker caption flourish",
+    "old": "Saved on every transaction, before you count the queue behind it.",
+    "new": "Saved on every transaction."
+  }
+]

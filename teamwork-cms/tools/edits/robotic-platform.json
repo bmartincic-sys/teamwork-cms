@@ -1,0 +1,92 @@
+[
+  {
+    "note": "inv: hero (empty antithesis)",
+    "old": "While others sync data, Teamwork orchestrates it: 99.9% RFID-verified accuracy across stores, warehouses, and transit, with full counts in minutes.",
+    "new": "Stock verified by RFID to 99.9% accuracy in stores, warehouses and transit, with full counts in minutes."
+  },
+  {
+    "note": "inv: iOS card (triad + overclaim)",
+    "old": "Built for iPad and iPhone: fast, secure, and familiar to associates. Zero training required.",
+    "new": "Built for iPad and iPhone, so the device and the gestures are ones associates already know."
+  },
+  {
+    "note": "inv: RFID card (industry-leading + competitors)",
+    "old": "An industry-leading native end-to-end RFID stack. 99.9% count accuracy in minutes. Competitors need third parties for deep RFID workflows.",
+    "new": "RFID is native to the POS rather than reached through a middleware layer, which is what gets a full count to 99.9% accuracy in minutes."
+  },
+  {
+    "note": "inv: final CTA (world's leading brands)",
+    "old": "See why the world's leading brands are ditching spreadsheets and bolted-together legacy systems for Teamwork Commerce.",
+    "new": "See what replaces the spreadsheets and the stitched-together legacy systems."
+  },
+  {
+    "note": "pos: hero (slogan)",
+    "old": "Everything else (AI, native RFID, inventory, analytics) exists to make POS stronger. One system, zero vendor sprawl.",
+    "new": "Everything else (AI, native RFID, inventory, analytics) exists to make the POS stronger rather than to be sold alongside it."
+  },
+  {
+    "note": "pos: omnichannel pillar (turn every X into Y)",
+    "old": "Turn every location into a micro-fulfillment center with smart order routing.",
+    "new": "Any location can fulfill, with routing rules you set."
+  },
+  {
+    "note": "pos: inventory bullet (Total X)",
+    "old": "Total inventory control: receiving, real-time counts, tag printing from the mobile POS",
+    "new": "Receiving, live counts and tag printing, all from the mobile POS"
+  },
+  {
+    "note": "pos: fiscal bullet (built in, not bolted on)",
+    "old": "Native fiscal compliance: VAT, GST, NF525, TSE. Built in, not bolted on",
+    "new": "Native fiscal compliance: VAT, GST, NF525, TSE, handled in the platform rather than by a local vendor"
+  },
+  {
+    "note": "pos: cross-border bullet (journey/silos)",
+    "old": "Cross-border continuity: one unified customer journey, no data silos",
+    "new": "The same customer record in each market, so a shopper is recognized wherever they buy"
+  },
+  {
+    "note": "pos: AI bullet (brand integrity at scale)",
+    "old": "<b>Brand integrity at scale</b><span>Consistent product and brand communication in every location.</span>",
+    "new": "<b>Consistent everywhere</b><span>The same product and brand wording in each location.</span>"
+  },
+  {
+    "note": "pos: AI bullet (intelligent localization)",
+    "old": "<b>Intelligent localization</b><span>Market-relevant product information served automatically.</span>",
+    "new": "<b>Localized automatically</b><span>Product information served in the market's own language and terms.</span>"
+  },
+  {
+    "note": "pos: extensibility (streamline)",
+    "old": "Deep linking and logic overlays streamline workflows specific to your business",
+    "new": "Deep linking and logic overlays handle workflows specific to your business"
+  },
+  {
+    "note": "oms: fill-logic bullet (slogan)",
+    "old": "Your rules, your way: configure order-fill logic by store, region, channel, or SKU",
+    "new": "Order-fill logic configured by store, region, channel or SKU"
+  },
+  {
+    "note": "oms: workflows subhead",
+    "old": "From click-to-ship to cross-channel returns: every order scenario your operation needs, natively integrated with POS, inventory, and RFID.",
+    "new": "Click-to-ship, cross-channel returns and the scenarios in between, running natively on the same POS, inventory and RFID."
+  },
+  {
+    "note": "oms: split order (split intelligently)",
+    "old": "One order from store, warehouse, and supplier: split intelligently, one order ID.",
+    "new": "One order drawing on store, warehouse and supplier, split across them but kept under a single order ID."
+  },
+  {
+    "note": "analytics: hero (data rich but insight poor)",
+    "old": "Most retailers are data rich but insight poor.",
+    "new": "Most retailers have the data and still wait on the answer."
+  },
+  {
+    "note": "analytics: associate card (so you can)",
+    "old": "Sales per associate, conversion, ATV and clienteling effectiveness, so you can spot the top performers and coach the rest.",
+    "new": "Sales per associate, conversion, ATV and clienteling effectiveness, which shows who is converting and who needs coaching."
+  },
+  {
+    "note": "scalability: globe caption (every/one tic)",
+    "old": "Every store, every market, on one codebase and one upgrade path, the same system described on this page,",
+    "new": "Every store and market on the same codebase and the same upgrade path, the system described on this page,"
+  }
+]

@@ -1,0 +1,70 @@
+{#- Offers a visitor the page in their own browser language.
+
+    Deliberately a banner and not a redirect. A redirect on Accept-Language
+    sends some crawlers and some users somewhere they did not ask to go, and a
+    visitor who wants the English page has no way back. The banner suggests,
+    the visitor decides, and the choice is remembered.
+
+    Deliberately client-side and not a Netlify edge function. Reading
+    Accept-Language at the edge means setting Vary: Accept-Language, which
+    splits the CDN cache across every language header variant for the sake of
+    one dismissible strip. navigator.languages is the browser's real UI
+    language, which is what we actually want, and costs the cache nothing. -#}
+
+{%- set sourceUrl = translatedFrom or page.url %}
+{%- set alternates = i18n.pages[sourceUrl] %}
+{%- if alternates %}
+<div id="locale-banner" class="locale-banner" hidden>
+  <div class="locale-banner-inner">
+    <i class="ti ti-language"></i>
+    <span class="locale-banner-text" data-en="This page is also available in your language."></span>
+    <a class="locale-banner-go" href="#"></a>
+    <button class="locale-banner-x" type="button" aria-label="Dismiss"><i class="ti ti-x"></i></button>
+  </div>
+</div>
+<script>
+(function () {
+  var MAP = {{ alternates | dump | safe }};
+  var SOURCE = {{ sourceUrl | dump | safe }};
+  var NAMES = {{ i18n.localeNames | dump | safe }};
+  var CURRENT = {{ (locale or "en") | dump | safe }};
+  // Shown once per locale decision, then remembered.
+  var KEY = "locale-prompt";
+
+  var copy = {
+    es: { text: "Esta página también está disponible en español.", go: "Ver en español" },
+    en: { text: "This page is also available in English.", go: "View in English" }
+  };
+
+  try { if (localStorage.getItem(KEY)) return; } catch (e) {}
+
+  // What does this browser actually want?
+  var wanted = null;
+  var langs = navigator.languages || [navigator.language || "en"];
+  for (var i = 0; i < langs.length; i++) {
+    var base = String(langs[i]).toLowerCase().split("-")[0];
+    if (base === CURRENT) return;            // already on the right one
+    if (MAP[base] || (base === "en" && CURRENT !== "en")) { wanted = base; break; }
+  }
+  if (!wanted) return;
+
+  var href = wanted === "en" ? SOURCE : MAP[wanted];
+  var words = copy[wanted];
+  if (!href || !words) return;
+
+  var el = document.getElementById("locale-banner");
+  el.querySelector(".locale-banner-text").textContent = words.text;
+  var go = el.querySelector(".locale-banner-go");
+  go.textContent = words.go;
+  go.href = href;
+  go.addEventListener("click", function () {
+    try { localStorage.setItem(KEY, wanted); } catch (e) {}
+  });
+  el.querySelector(".locale-banner-x").addEventListener("click", function () {
+    try { localStorage.setItem(KEY, CURRENT); } catch (e) {}
+    el.hidden = true;
+  });
+  el.hidden = false;
+})();
+</script>
+{%- endif %}

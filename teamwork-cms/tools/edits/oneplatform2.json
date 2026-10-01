@@ -1,0 +1,22 @@
+[
+  {
+    "note": "identity: FAQ trailing sync phrase (2 places)",
+    "old": "associate records, roles, and training assignments synchronize across every application.",
+    "new": "associate records, roles and training assignments synchronize automatically."
+  },
+  {
+    "note": "homepage: uptime stat caption",
+    "old": "<p class=\"innum-cap\">Uptime across every store,<br>open to close, every day</p>",
+    "new": "<p class=\"innum-cap\">Uptime, open to close,<br>store by store</p>"
+  },
+  {
+    "note": "mobile-pos: inventory pillar",
+    "old": "Item-level visibility across every store, warehouse, and channel.",
+    "new": "Item-level visibility in stores, warehouses and channels."
+  },
+  {
+    "note": "product-data: section heading",
+    "old": "<h2 class=\"section-title\">Everything about a product, in one place.</h2>",
+    "new": "<h2 class=\"section-title\">Everything about a product, on its record.</h2>"
+  }
+]

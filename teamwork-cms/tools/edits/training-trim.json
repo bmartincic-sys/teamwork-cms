@@ -1,0 +1,7 @@
+[
+  {
+    "note": "stadiums: trim training sentence (3 places)",
+    "old": "that keeps training down to what fits before a gate opens.",
+    "new": "that keeps training down."
+  }
+]

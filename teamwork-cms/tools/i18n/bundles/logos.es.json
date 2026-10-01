@@ -1,0 +1,77 @@
+{
+  "file": "src/_includes/logos.njk",
+  "locale": "es",
+  "model": "claude-opus-5",
+  "strings": {
+    "b17672cab5": {
+      "source": "Retailers using Teamwork Commerce",
+      "kind": "attribute",
+      "target": "Minoristas que usan Teamwork Commerce"
+    },
+    "7b0dbf99a4": {
+      "source": "Uniqlo",
+      "kind": "attribute",
+      "target": "Uniqlo"
+    },
+    "37a7446cdb": {
+      "source": "ASICS",
+      "kind": "attribute",
+      "target": "ASICS"
+    },
+    "9dea9a1cda": {
+      "source": "Acne Studios",
+      "kind": "attribute",
+      "target": "Acne Studios"
+    },
+    "ca938aaa1f": {
+      "source": "The Row",
+      "kind": "attribute",
+      "target": "The Row"
+    },
+    "8c33a75767": {
+      "source": "Lammle's",
+      "kind": "attribute",
+      "target": "Lammle's"
+    },
+    "ebc3d71e83": {
+      "source": "Lucchese",
+      "kind": "attribute",
+      "target": "Lucchese"
+    },
+    "df4bc53f64": {
+      "source": "Moose Knuckles",
+      "kind": "attribute",
+      "target": "Moose Knuckles"
+    },
+    "8d4418e15a": {
+      "source": "N.Peal",
+      "kind": "attribute",
+      "target": "N.Peal"
+    },
+    "7e409f71a9": {
+      "source": "Tori Richard",
+      "kind": "attribute",
+      "target": "Tori Richard"
+    },
+    "5966989c65": {
+      "source": "120% Lino",
+      "kind": "attribute",
+      "target": "120% Lino"
+    },
+    "08229bf079": {
+      "source": "Los Angeles Apparel",
+      "kind": "attribute",
+      "target": "Los Angeles Apparel"
+    },
+    "694ad16207": {
+      "source": "LoveShackFancy",
+      "kind": "attribute",
+      "target": "LoveShackFancy"
+    },
+    "74066189ae": {
+      "source": "Oner Active",
+      "kind": "attribute",
+      "target": "Oner Active"
+    }
+  }
+}

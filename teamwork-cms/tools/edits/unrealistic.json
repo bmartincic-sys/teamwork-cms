@@ -1,0 +1,27 @@
+[
+  {
+    "note": "drop the 7x identical vertical opener",
+    "old": "Retail gets more complicated as you grow. Your platform shouldn't. ",
+    "new": ""
+  },
+  {
+    "note": "overclaim: eliminates vendor sprawl (3 places)",
+    "old": "This eliminates vendor sprawl while enabling fiscal compliance in 40+ countries.",
+    "new": "That means fewer vendors to manage, with fiscal compliance handled in 40+ countries."
+  },
+  {
+    "note": "overclaim: eliminates ghost SKUs (4 places)",
+    "old": "this eliminates ghost SKUs and delivers 99.9% accuracy across all locations.",
+    "new": "this is what holds inventory at 99.9% accuracy and keeps ghost SKUs out of the count."
+  },
+  {
+    "note": "overclaim: virtually eliminates training (3 places)",
+    "old": "this virtually eliminates training overhead.",
+    "new": "that keeps training down to what fits before a gate opens."
+  },
+  {
+    "note": "overclaim: zero data gaps, zero downtime",
+    "old": "Data is encrypted locally and syncs automatically when connectivity returns: zero data gaps, zero downtime.",
+    "new": "Data is encrypted locally and syncs automatically when connectivity returns, so nothing is lost and the terminal keeps selling."
+  }
+]

@@ -1,0 +1,999 @@
+{
+  "file": "src/platform/rfid.njk",
+  "extractedAt": "2026-10-01",
+  "segments": 146,
+  "unique": 141,
+  "words": 2016,
+  "strings": {
+    "a79b64a937": {
+      "source": "Native RFID for Retail Inventory",
+      "kind": "frontmatter",
+      "context": [
+        "title"
+      ]
+    },
+    "8f6a9494a6": {
+      "source": "A native RFID stack running from tag commissioning at receiving through transfers, counts and checkout. Every unit carries its own EPC, tracked on one Unit Control Ledger.",
+      "kind": "frontmatter",
+      "context": [
+        "description"
+      ]
+    },
+    "21bdd0a657": {
+      "source": "RFID Solution",
+      "kind": "frontmatter",
+      "context": [
+        "navLabel"
+      ]
+    },
+    "b75b7447d7": {
+      "source": "Walk the RFID lifecycle with a technical specialist.",
+      "kind": "frontmatter",
+      "context": [
+        "stickyText"
+      ]
+    },
+    "a83de8a9ca": {
+      "source": "Book a demo",
+      "kind": "frontmatter",
+      "context": [
+        "stickyCta"
+      ]
+    },
+    "c766e66518": {
+      "source": "Breadcrumb",
+      "kind": "attribute",
+      "context": [
+        "aria-label"
+      ]
+    },
+    "46248f6116": {
+      "source": "<a href=\"/\" style=\"color: var(--text-muted);\">Home</a> <span style=\"margin: 0 6px;\">/</span>\n    <a href=\"/platform/mobile-pos/\" style=\"color: var(--text-muted);\">Platform</a> <span style=\"margin: 0 6px;\">/</span>\n    RFID Solution",
+      "kind": "text",
+      "context": [
+        "nav"
+      ]
+    },
+    "8c02c16398": {
+      "source": "A shopper using Teamwork Commerce RFID self-checkout in a retail store",
+      "kind": "attribute",
+      "context": [
+        "alt"
+      ]
+    },
+    "58fab695ff": {
+      "source": "<span class=\"eyebrow-dot\"></span> Part of the Teamwork Commerce platform",
+      "kind": "text",
+      "context": [
+        "span"
+      ]
+    },
+    "8e623785ff": {
+      "source": "Every unit, from the <span class=\"t-serif\">dock</span> to the receipt.",
+      "kind": "text",
+      "context": [
+        "h1"
+      ]
+    },
+    "c6b0b16eaf": {
+      "source": "Retailers lose millions every year to inventory inaccuracy. Phantom stock. Shrink. Units that should be on the floor, but aren't. RFID hardware promises to solve this, but hardware alone is just data with nowhere to go. What you need is the software that turns every tag read into a real operational decision. No middleware layer, and hardware-agnostic, so the readers and tags are yours to choose.",
+      "kind": "text",
+      "context": [
+        "p"
+      ]
+    },
+    "99a9cf1eff": {
+      "source": "Book a demo <i class=\"ti ti-arrow-right\"></i>",
+      "kind": "text",
+      "context": [
+        "a"
+      ]
+    },
+    "5adbc6a4c8": {
+      "source": "32s",
+      "kind": "text",
+      "context": [
+        "div"
+      ]
+    },
+    "26b9ebb3e3": {
+      "source": "Checkout with RFID, measured by EXO.",
+      "kind": "text",
+      "context": [
+        "div"
+      ]
+    },
+    "b2fbfb06b0": {
+      "source": "85s",
+      "kind": "text",
+      "context": [
+        "div"
+      ]
+    },
+    "0d4dbfc8c8": {
+      "source": "The same checkout on a traditional POS, scanning item by item.",
+      "kind": "text",
+      "context": [
+        "div"
+      ]
+    },
+    "eaa88c6ac2": {
+      "source": "53s",
+      "kind": "text",
+      "context": [
+        "div"
+      ]
+    },
+    "c58f9f368f": {
+      "source": "Saved on every transaction.",
+      "kind": "text",
+      "context": [
+        "div"
+      ]
+    },
+    "0442e3af9a": {
+      "source": "15 hrs",
+      "kind": "text",
+      "context": [
+        "div"
+      ]
+    },
+    "2324fc57d7": {
+      "source": "Scan time given back for every 1,000 transactions.",
+      "kind": "text",
+      "context": [
+        "div"
+      ]
+    },
+    "126c3ca31b": {
+      "source": "The Foundation",
+      "kind": "text",
+      "context": [
+        "div"
+      ]
+    },
+    "8f914884ca": {
+      "source": "RFID provides the signal. We turn it into action.",
+      "kind": "text",
+      "context": [
+        "h2"
+      ]
+    },
+    "fdbdb839cb": {
+      "source": "Hold an RFID tag up to the light. You can see it: a set of fine lines, that's the antenna, connected to a tiny chip. That chip stores a number, permanently. No battery required. It just needs a burst of energy from an RFID reader, a gun, a pad, a scanner, to wake up and transmit its ID.",
+      "kind": "text",
+      "context": [
+        "p"
+      ]
+    },
+    "39e0b490b6": {
+      "source": "That ID is an Electronic Product Code",
+      "kind": "text",
+      "context": [
+        "h3"
+      ]
+    },
+    "c6e035a7f0": {
+      "source": "Unlike a barcode, which identifies an item that can have many units, an EPC identifies a specific unit of the item.",
+      "kind": "text",
+      "context": [
+        "p"
+      ]
+    },
+    "4861a9b9b6": {
+      "source": "One UPC, ten EPCs",
+      "kind": "text",
+      "context": [
+        "h3"
+      ]
+    },
+    "b76a7fb1b5": {
+      "source": "Say you have ten identical shirts on a shelf: one UPC, but ten different EPCs. Scan them all at once, and that's your count of ten, instantly.",
+      "kind": "text",
+      "context": [
+        "p"
+      ]
+    },
+    "f1f9429cce": {
+      "source": "You've seen this at self-checkout",
+      "kind": "text",
+      "context": [
+        "h3"
+      ]
+    },
+    "6549e31adb": {
+      "source": "Place your units in a bin and the cart appears on screen automatically. Readers inside the bin blast the tags with energy, capture each EPC, and the system builds the transaction. Again, instantly.",
+      "kind": "text",
+      "context": [
+        "p"
+      ]
+    },
+    "1b43cad4ac": {
+      "source": "The RFID Story",
+      "kind": "text",
+      "context": [
+        "div"
+      ]
+    },
+    "1d91c78f91": {
+      "source": "One unit. One record.",
+      "kind": "text",
+      "context": [
+        "h2"
+      ]
+    },
+    "9115893203": {
+      "source": "Follow a single unit through every step that touches it.",
+      "kind": "text",
+      "context": [
+        "p"
+      ]
+    },
+    "f3b0e2cfa2": {
+      "source": "RFID tag",
+      "kind": "attribute",
+      "context": [
+        "aria-label"
+      ]
+    },
+    "298dff72da": {
+      "source": "Warehouse",
+      "kind": "text",
+      "context": [
+        "div"
+      ]
+    },
+    "3c6a478ee7": {
+      "source": "Ships vendor-tagged, or arrives untagged",
+      "kind": "text",
+      "context": [
+        "div"
+      ]
+    },
+    "2f8f376ad7": {
+      "source": "Receiving",
+      "kind": "text",
+      "context": [
+        "div"
+      ]
+    },
+    "6c05704d38": {
+      "source": "Checked against the purchase order",
+      "kind": "text",
+      "context": [
+        "div"
+      ]
+    },
+    "bcb0d4531c": {
+      "source": "Transfers &amp; counts",
+      "kind": "text",
+      "context": [
+        "div"
+      ]
+    },
+    "2072761e7f": {
+      "source": "Verified at both ends, by unit",
+      "kind": "text",
+      "context": [
+        "div"
+      ]
+    },
+    "3ac8e9e58c": {
+      "source": "Checkout",
+      "kind": "text",
+      "context": [
+        "div"
+      ]
+    },
+    "3b44eb63fe": {
+      "source": "Scanned in one pass, basket to receipt",
+      "kind": "text",
+      "context": [
+        "div"
+      ]
+    },
+    "0dffcc5dc2": {
+      "source": "<span class=\"story-num\">01</span> Receiving",
+      "kind": "text",
+      "context": [
+        "span"
+      ]
+    },
+    "10da0203e2": {
+      "source": "No manual counts. No assumptions.",
+      "kind": "text",
+      "context": [
+        "h2"
+      ]
+    },
+    "0133a573f0": {
+      "source": "The journey starts at the loading dock. Units arrive either pre-tagged at manufacturing, or they are tagged here, a process called commissioning. Each tag is printed, applied, and linked directly to the exact unit being received.",
+      "kind": "text",
+      "context": [
+        "p"
+      ]
+    },
+    "8ce745fc93": {
+      "source": "A portable RFID scanner captures every EPC in the shipment at once",
+      "kind": "text",
+      "context": [
+        "li"
+      ]
+    },
+    "53721b4c6d": {
+      "source": "Our system cross-checks what was expected against what actually arrived, at the unit quantity level",
+      "kind": "text",
+      "context": [
+        "li"
+      ]
+    },
+    "619c392a93": {
+      "source": "Just verification from the very start",
+      "kind": "text",
+      "context": [
+        "li"
+      ]
+    },
+    "69c9592a55": {
+      "source": "Bluebird RFID sled readers with iPhones running the Teamwork Commerce RFID app",
+      "kind": "attribute",
+      "context": [
+        "alt"
+      ]
+    },
+    "851df38fdf": {
+      "source": "<span class=\"story-num\">02</span> Transfers",
+      "kind": "text",
+      "context": [
+        "span"
+      ]
+    },
+    "3defa4504d": {
+      "source": "Track the exact units transferred.",
+      "kind": "text",
+      "context": [
+        "h2"
+      ]
+    },
+    "9c62882a46": {
+      "source": "As inventory moves between locations, RFID lets us track the exact units transferred. Targeted RFID-reading captures only the units directly involved in the transaction, so nearby stock isn't accidentally included.",
+      "kind": "text",
+      "context": [
+        "p"
+      ]
+    },
+    "34484b4105": {
+      "source": "Our system verifies each EPC at both the source and the destination of the transfer, recording the full movement history",
+      "kind": "text",
+      "context": [
+        "li"
+      ]
+    },
+    "41e2692bcf": {
+      "source": "Instead of guessing, retailers have a clear, unit-level audit trail",
+      "kind": "text",
+      "context": [
+        "li"
+      ]
+    },
+    "1e3e5bbb7d": {
+      "source": "The kind of confidence in inventory data that enables smarter replenishment decisions across stores",
+      "kind": "text",
+      "context": [
+        "li"
+      ]
+    },
+    "0d76d683e9": {
+      "source": "<span class=\"story-num\">03</span> Sales",
+      "kind": "text",
+      "context": [
+        "span"
+      ]
+    },
+    "922a9ab5c2": {
+      "source": "Whether checkout is handled by staff or by the customer.",
+      "kind": "text",
+      "context": [
+        "h2"
+      ]
+    },
+    "fa2ee842c0": {
+      "source": "Instead of scanning each unit's barcode one by one, everything is placed on a read zone and accurately identified instantly. In a staff-led environment, units are read at once, the cart is built automatically, and your team stays focused on service and recommendations.",
+      "kind": "text",
+      "context": [
+        "p"
+      ]
+    },
+    "8ebe80f174": {
+      "source": "In self-checkout, customers place their units in the read zone. All units are identified instantly, the cart is built, and the customer is guided through seamlessly: no lines, no waiting",
+      "kind": "text",
+      "context": [
+        "li"
+      ]
+    },
+    "57182e54c4": {
+      "source": "Either way, same result: faster checkout, accurate receipts, and accurate real-time inventory",
+      "kind": "text",
+      "context": [
+        "li"
+      ]
+    },
+    "4fd7466752": {
+      "source": "A shopper using Teamwork Commerce RFID self-checkout, items in the bin and the cart on screen",
+      "kind": "attribute",
+      "context": [
+        "alt"
+      ]
+    },
+    "a8c2624b55": {
+      "source": "<span class=\"story-num\">04</span> Bag check",
+      "kind": "text",
+      "context": [
+        "span"
+      ]
+    },
+    "cf5ae06543": {
+      "source": "Every EPC inside, against their receipt.",
+      "kind": "text",
+      "context": [
+        "h2"
+      ]
+    },
+    "ccec65c4a3": {
+      "source": "In high-traffic environments, stadiums, or anywhere there is high-volume retail, we have the ability to enable an RFID-powered bag check at exit. When a customer scans their bag, the system instantly cross-references every EPC inside against their receipt.",
+      "kind": "text",
+      "context": [
+        "p"
+      ]
+    },
+    "e5d26a1913": {
+      "source": "Confirming matches, and flagging anything that does not belong",
+      "kind": "text",
+      "context": [
+        "li"
+      ]
+    },
+    "55f3835247": {
+      "source": "It can also trigger a receipt printout right at the exit, freeing up the checkout for the next customer",
+      "kind": "text",
+      "context": [
+        "li"
+      ]
+    },
+    "5ffd9d87df": {
+      "source": "Instead of alarms that don't tell you who or what triggered them, teams get unit-level precision, and customers can keep moving",
+      "kind": "text",
+      "context": [
+        "li"
+      ]
+    },
+    "c6933b1bba": {
+      "source": "<span class=\"story-num\">05</span> Stock count",
+      "kind": "text",
+      "context": [
+        "span"
+      ]
+    },
+    "f8a5fa1e7b": {
+      "source": "Hours with a large team, or minutes with a single person.",
+      "kind": "text",
+      "context": [
+        "h2"
+      ]
+    },
+    "06c0657c05": {
+      "source": "After units have been received, moved, and sold, RFID stock counts verify that everything is where it should be. Counts work by capturing all visible EPCs within range of the reader. Teams can scan the store, covering entire departments in seconds.",
+      "kind": "text",
+      "context": [
+        "p"
+      ]
+    },
+    "4cbd2e5a7b": {
+      "source": "What used to take hours with a large team can now be completed in minutes with a single person",
+      "kind": "text",
+      "context": [
+        "li"
+      ]
+    },
+    "9572151026": {
+      "source": "Instead of periodic snapshots that often get skipped, inventory can be continuously verified",
+      "kind": "text",
+      "context": [
+        "li"
+      ]
+    },
+    "bd94a9f98f": {
+      "source": "A living, always-current picture of what's in stock",
+      "kind": "text",
+      "context": [
+        "li"
+      ]
+    },
+    "703aa6b1cd": {
+      "source": "An associate sweeping a rack of jackets with an RFID handheld",
+      "kind": "attribute",
+      "context": [
+        "alt"
+      ]
+    },
+    "2760c2e54d": {
+      "source": "<span class=\"story-num\">06</span> Unit Control Ledger",
+      "kind": "text",
+      "context": [
+        "span"
+      ]
+    },
+    "c5df91a261": {
+      "source": "A real-time database of which unit is where.",
+      "kind": "text",
+      "context": [
+        "h2"
+      ]
+    },
+    "7069c335fe": {
+      "source": "Every action, receiving, transferring, selling or counting, maintains a record of exactly where every unit is, across the entire company. This is the Unit Control Ledger: a real-time database of which unit is in which location, when it moved, and where it's supposed to be.",
+      "kind": "text",
+      "context": [
+        "p"
+      ]
+    },
+    "45905199d5": {
+      "source": "If a stock count reveals a discrepancy, an adjustment is recorded directly, and that adjustment is also logged on the ledger",
+      "kind": "text",
+      "context": [
+        "li"
+      ]
+    },
+    "727ac04230": {
+      "source": "The result is a single source of truth for every unit in your inventory, from the moment it enters the store to the moment it leaves",
+      "kind": "text",
+      "context": [
+        "li"
+      ]
+    },
+    "0d4471e40a": {
+      "source": "See the full RFID lifecycle live.",
+      "kind": "text",
+      "context": [
+        "div"
+      ]
+    },
+    "09d50c775c": {
+      "source": "Bring a shipment, a transfer and a count, and we will run them on your own product data.",
+      "kind": "text",
+      "context": [
+        "div"
+      ]
+    },
+    "0d7258584f": {
+      "source": "The E-Commerce Mission",
+      "kind": "text",
+      "context": [
+        "div"
+      ]
+    },
+    "e9fa4c4ac5": {
+      "source": "Two missions that pull in opposite directions.",
+      "kind": "text",
+      "context": [
+        "h2"
+      ]
+    },
+    "21080b09cd": {
+      "source": "Never promise what you do not have. Never fail to offer what you do. Miss either one and the cost lands on the same customer.",
+      "kind": "text",
+      "context": [
+        "p"
+      ]
+    },
+    "8b78159e85": {
+      "source": "Mission 01",
+      "kind": "text",
+      "context": [
+        "span"
+      ]
+    },
+    "57e6177039": {
+      "source": "When the site oversells",
+      "kind": "text",
+      "context": [
+        "h3"
+      ]
+    },
+    "d09d7161a8": {
+      "source": "The site sells a unit the shelf does not have.",
+      "kind": "text",
+      "context": [
+        "p"
+      ]
+    },
+    "e9ed8f2505": {
+      "source": "<i class=\"ti ti-x\"></i> The order is canceled after the customer has paid",
+      "kind": "text",
+      "context": [
+        "li"
+      ]
+    },
+    "1232d9dfd3": {
+      "source": "<i class=\"ti ti-x\"></i> A refund, an apology, and a shopper who now doubts the stock figure",
+      "kind": "text",
+      "context": [
+        "li"
+      ]
+    },
+    "24386ab9a2": {
+      "source": "<i class=\"ti ti-x\"></i> Every subsequent promise on the site is worth less",
+      "kind": "text",
+      "context": [
+        "li"
+      ]
+    },
+    "cffa50a32c": {
+      "source": "and",
+      "kind": "text",
+      "context": [
+        "span"
+      ]
+    },
+    "64f69856e2": {
+      "source": "Mission 02",
+      "kind": "text",
+      "context": [
+        "span"
+      ]
+    },
+    "53d4ff2d91": {
+      "source": "When the shelf goes unsold",
+      "kind": "text",
+      "context": [
+        "h3"
+      ]
+    },
+    "e233d8b62f": {
+      "source": "The shelf holds a unit the site will not sell.",
+      "kind": "text",
+      "context": [
+        "p"
+      ]
+    },
+    "f5a5c3ac5a": {
+      "source": "<i class=\"ti ti-x\"></i> Stock sits in a stockroom while the page reads sold out",
+      "kind": "text",
+      "context": [
+        "li"
+      ]
+    },
+    "c943d58d3c": {
+      "source": "<i class=\"ti ti-x\"></i> The sale goes to whoever did trust their own numbers",
+      "kind": "text",
+      "context": [
+        "li"
+      ]
+    },
+    "14cfb9e40c": {
+      "source": "<i class=\"ti ti-x\"></i> The markdown at the end of the season is yours to take",
+      "kind": "text",
+      "context": [
+        "li"
+      ]
+    },
+    "0327eedca5": {
+      "source": "<i class=\"ti ti-check\"></i> Both come down to one number",
+      "kind": "text",
+      "context": [
+        "span"
+      ]
+    },
+    "ed982aa6ba": {
+      "source": "Available-to-Sell your e-commerce can actually trust.",
+      "kind": "text",
+      "context": [
+        "h3"
+      ]
+    },
+    "a0ec96131d": {
+      "source": "Available-to-Sell is calculated from what the system believes is on hand. Counting the floor by EPC, often, is what makes that belief true, so the number your website is selling against matches the shelf.",
+      "kind": "text",
+      "context": [
+        "p"
+      ]
+    },
+    "b4d8cf003b": {
+      "source": "A published certified hardware list.",
+      "kind": "text",
+      "context": [
+        "h2"
+      ]
+    },
+    "9b02bba1a8": {
+      "source": "Every device we integrate is tested, given a certification status, and tracked by release and by country. The list is deliberately short: roughly one certified device per category, rather than a catalogue to choose from. This is the shape of an entry.",
+      "kind": "text",
+      "context": [
+        "p"
+      ]
+    },
+    "656c21b26c": {
+      "source": "An associate counting stock with a certified RFID handheld on the shop floor",
+      "kind": "attribute",
+      "context": [
+        "alt"
+      ]
+    },
+    "513f40bd05": {
+      "source": "Certified hardware record",
+      "kind": "text",
+      "context": [
+        "span"
+      ]
+    },
+    "568238de58": {
+      "source": "Bluebird RFID handheld",
+      "kind": "text",
+      "context": [
+        "h3"
+      ]
+    },
+    "aa3726e5d4": {
+      "source": "RFID sled for counting, receiving, transfers and item locate, built into the iOS app workflow with both power modes.",
+      "kind": "text",
+      "context": [
+        "p"
+      ]
+    },
+    "26dd9313a2": {
+      "source": "Certification status",
+      "kind": "text",
+      "context": [
+        "dt"
+      ]
+    },
+    "7f98f01046": {
+      "source": "Certified",
+      "kind": "text",
+      "context": [
+        "span"
+      ]
+    },
+    "a0fb821bda": {
+      "source": "Purpose",
+      "kind": "text",
+      "context": [
+        "dt"
+      ]
+    },
+    "e95a5df216": {
+      "source": "RFID reading, counting, item locate",
+      "kind": "text",
+      "context": [
+        "dd"
+      ]
+    },
+    "1abfd0ae13": {
+      "source": "Integration version",
+      "kind": "text",
+      "context": [
+        "dt"
+      ]
+    },
+    "f99fd1bc5f": {
+      "source": "The TW POS Pro release it was introduced in",
+      "kind": "text",
+      "context": [
+        "dd"
+      ]
+    },
+    "681b5b5ae1": {
+      "source": "Availability",
+      "kind": "text",
+      "context": [
+        "dt"
+      ]
+    },
+    "7e38743c0f": {
+      "source": "Recorded per country",
+      "kind": "text",
+      "context": [
+        "dd"
+      ]
+    },
+    "7c10c89f5e": {
+      "source": "Last full review",
+      "kind": "text",
+      "context": [
+        "dt"
+      ]
+    },
+    "759304f017": {
+      "source": "Within the last 120 days",
+      "kind": "text",
+      "context": [
+        "dd"
+      ]
+    },
+    "f760836490": {
+      "source": "Not on the list? We recommend certified hardware for full compatibility, and your Client Success team will talk through the support implications first. Worth stating plainly: there are no certified EAS gates on the list today, and loss prevention is not a product we sell.",
+      "kind": "text",
+      "context": [
+        "p"
+      ]
+    },
+    "73e8ef5e01": {
+      "source": "See the full certified hardware list <i class=\"ti ti-arrow-right\"></i>",
+      "kind": "text",
+      "context": [
+        "a"
+      ]
+    },
+    "2e8cdaca68": {
+      "source": "RFID in Practice",
+      "kind": "text",
+      "context": [
+        "div"
+      ]
+    },
+    "5690048e25": {
+      "source": "What the handheld actually does.",
+      "kind": "text",
+      "context": [
+        "h2"
+      ]
+    },
+    "591fb60c18": {
+      "source": "Paired readers",
+      "kind": "text",
+      "context": [
+        "h3"
+      ]
+    },
+    "a976925505": {
+      "source": "Two handhelds can work the same incoming or outgoing transfer at once, so a large merchandise order is read in one pass rather than split into batches.",
+      "kind": "text",
+      "context": [
+        "p"
+      ]
+    },
+    "8506f2ec40": {
+      "source": "Filtered counts",
+      "kind": "text",
+      "context": [
+        "h3"
+      ]
+    },
+    "7f441d8f13": {
+      "source": "Isolate a count to targeted product variations and unrelated items filter out automatically, so a single category can be verified without sweeping the whole floor.",
+      "kind": "text",
+      "context": [
+        "p"
+      ]
+    },
+    "b69181b71d": {
+      "source": "A Bluebird RFID sled reader with an iPhone running the Teamwork Commerce daily count screen",
+      "kind": "attribute",
+      "context": [
+        "alt"
+      ]
+    },
+    "fc0c82c94a": {
+      "source": "Adjustable antenna power",
+      "kind": "text",
+      "context": [
+        "h3"
+      ]
+    },
+    "06d4e4e859": {
+      "source": "Scale the reader from low to high power: pinpoint one item on a rack, or sweep an entire room.",
+      "kind": "text",
+      "context": [
+        "p"
+      ]
+    },
+    "ecfbb50546": {
+      "source": "Hot-and-cold finder",
+      "kind": "text",
+      "context": [
+        "h3"
+      ]
+    },
+    "d1d23021cc": {
+      "source": "A proximity meter tracks how close the reader is to a specific item, walking an associate to stock that has gone missing on the floor.",
+      "kind": "text",
+      "context": [
+        "p"
+      ]
+    },
+    "d790b402d7": {
+      "source": "Frequently Asked Questions",
+      "kind": "text",
+      "context": [
+        "div"
+      ]
+    },
+    "e7d17e52a6": {
+      "source": "RFID questions, answered.",
+      "kind": "text",
+      "context": [
+        "h2"
+      ]
+    },
+    "2e1bf3cfd9": {
+      "source": "What makes Teamwork Commerce RFID different from competitors?\n          <span class=\"faq-icon\"><i class=\"ti ti-plus\"></i></span>",
+      "kind": "text",
+      "context": [
+        "button"
+      ]
+    },
+    "8ea208acf4": {
+      "source": "Teamwork Commerce offers a native RFID stack that runs from tag commissioning at receiving through transfers, counts and checkout. No third-party middleware required, and the reader hardware is yours to choose. Our RFID is native to the core logic: every transaction (receiving, counting, transferring, selling) operates by individual EPC, not just UPC.",
+      "kind": "text",
+      "context": [
+        "p",
+        "text"
+      ]
+    },
+    "bceca4b350": {
+      "source": "What hardware do you support?\n          <span class=\"faq-icon\"><i class=\"ti ti-plus\"></i></span>",
+      "kind": "text",
+      "context": [
+        "button"
+      ]
+    },
+    "557d7d9259": {
+      "source": "We publish a certified hardware list covering the devices integrated and supported with TW POS Pro, including Bluebird RFID handhelds. It is deliberately short, roughly one certified device per category rather than a catalogue, and there are no certified EAS gates on it today. We recommend certified hardware for full compatibility; if you want to use something not on the list, your Client Success team can advise on support.",
+      "kind": "text",
+      "context": [
+        "p",
+        "text"
+      ]
+    },
+    "7edde18fa9": {
+      "source": "Can vendors pre-tag items, or do we need to commission tags in-store?\n          <span class=\"faq-icon\"><i class=\"ti ti-plus\"></i></span>",
+      "kind": "text",
+      "context": [
+        "button"
+      ]
+    },
+    "fbcec735e1": {
+      "source": "Both. If your vendor or warehouse ships goods already tagged, they scan straight into the purchase receipt. If not, Teamwork provides an integrated encoding workflow inside the purchase receipt document: define quantity, print and encode tags, affix them, then RFID scan to populate the receipt with individual EPCs. One step, no separate process.",
+      "kind": "text",
+      "context": [
+        "p",
+        "text"
+      ]
+    },
+    "bf97a3d79e": {
+      "source": "See every unit. Sell every <span class=\"gradient-text\">unit.</span>",
+      "kind": "text",
+      "context": [
+        "h2"
+      ]
+    },
+    "1611a1b989": {
+      "source": "Most RFID solutions give you one piece. A reader here, a count tool there. Disconnected data that doesn't talk to itself. Teamwork Commerce gives you the whole journey, from the moment a unit arrives to the moment it sells, and everything in between. One platform. Connected data. Unit-level visibility at every step.",
+      "kind": "text",
+      "context": [
+        "p"
+      ]
+    },
+    "7c672ae22b": {
+      "source": "What makes Teamwork Commerce RFID different from competitors?",
+      "kind": "jsonld",
+      "context": [
+        "name"
+      ]
+    },
+    "e91d660db9": {
+      "source": "What hardware do you support?",
+      "kind": "jsonld",
+      "context": [
+        "name"
+      ]
+    },
+    "bd1ab30d7d": {
+      "source": "Can vendors pre-tag items, or do we need to commission tags in-store?",
+      "kind": "jsonld",
+      "context": [
+        "name"
+      ]
+    }
+  }
+}

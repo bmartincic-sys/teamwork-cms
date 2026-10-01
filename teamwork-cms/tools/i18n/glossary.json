@@ -1,0 +1,102 @@
+{
+  "doNotTranslate": [
+    "Teamwork Commerce",
+    "POS Pro",
+    "TW POS Pro",
+    "Cloud Back Office",
+    "Unit Control Ledger",
+    "Order Fill Logic",
+    "Ship from Store",
+    "Endless Aisle",
+    "Shopper Display",
+    "Drawer Memo",
+    "Scheduler",
+    "Bluebird",
+    "EXO",
+    "Looker",
+    "BigQuery",
+    "ShippyPro",
+    "Givex",
+    "Adyen",
+    "EPC",
+    "UPC",
+    "RFID",
+    "POS",
+    "OMS",
+    "BOPIS",
+    "BORIS",
+    "SKU",
+    "ATS",
+    "NFC",
+    "SOC 2",
+    "SOC 1",
+    "PCI DSS",
+    "GDPR",
+    "ISO 27001",
+    "NF525",
+    "TSE",
+    "PIPL",
+    "MLPS",
+    "VAT",
+    "GST",
+    "iOS",
+    "iPad",
+    "iPhone",
+    "Apple",
+    "Tap to Pay",
+    "EAS",
+    "Client Success",
+    "Electronic Product Code"
+  ],
+  "preferredTerms": {
+    "unit": "unidad",
+    "stock count": "conteo de inventario",
+    "read zone": "zona de lectura",
+    "loading dock": "muelle de carga",
+    "commissioning": "comisionado (commissioning)",
+    "shrink": "merma",
+    "phantom stock": "stock fantasma",
+    "available-to-sell": "disponible para vender",
+    "bag check": "revisión de bolsas",
+    "self-checkout": "autopago",
+    "handheld": "terminal de mano"
+  },
+  "protectedClaims": [
+    {
+      "source": "no certified EAS gates",
+      "why": "Denial. Teamwork does not certify EAS gates; EAS was removed sitewide.",
+      "requires": {
+        "es": "no hay[^.]*EAS|sin[^.]*EAS certificad"
+      }
+    },
+    {
+      "source": "loss prevention is not a product we sell",
+      "why": "Denial. Must not read as an offering.",
+      "requires": {
+        "es": "no es un producto|no vendemos"
+      }
+    },
+    {
+      "source": "roughly one certified device per category",
+      "why": "Scope limit. The hedge must survive; 'one device per category' as a flat statement overclaims.",
+      "requires": {
+        "es": "aproximadamente|alrededor de|cerca de"
+      }
+    },
+    {
+      "source": "the reader hardware is yours to choose",
+      "why": "Hardware-agnostic claim. Must not become 'we supply the hardware'.",
+      "requires": {
+        "es": "lo elige usted|los elige usted|usted elige"
+      }
+    },
+    {
+      "source": "No third-party middleware required",
+      "why": "Denial. Must not become 'middleware is supported'.",
+      "requires": {
+        "es": "sin middleware|no (se )?requiere[^.]*middleware"
+      }
+    }
+  ],
+  "styleBrief": "Enterprise retail software. Spanish for Latin America (es-419). Use usted, not tú. Keep sentences the length of the source; do not add marketing flourish the source does not have. Never translate a term on doNotTranslate. Never soften, strengthen or negate a sentence on protectedClaims: these are deliberate statements of what the product does NOT do, and inverting one is a factual error. Prefer the plain word over the technical cognate where both exist."
+}

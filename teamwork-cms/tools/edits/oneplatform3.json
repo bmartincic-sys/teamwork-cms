@@ -1,0 +1,107 @@
+[
+  {
+    "note": "homepage: terminals headline",
+    "old": "Thirty thousand terminals.<br><span>One platform behind them.</span>",
+    "new": "Thirty thousand terminals.<br><span>The same build on all of them.</span>"
+  },
+  {
+    "note": "oms: fulfillment heading",
+    "old": "Every fulfillment workflow. One platform.",
+    "new": "Every fulfillment workflow the business runs."
+  },
+  {
+    "note": "pet: services heading",
+    "old": "Retail, grooming, vet, loyalty, one platform.",
+    "new": "Retail, grooming, vet and loyalty, not four systems."
+  },
+  {
+    "note": "pet: proof heading",
+    "old": "118 stores. 2,000+ terminals. One platform.",
+    "new": "118 stores. 2,000+ terminals. Live."
+  },
+  {
+    "note": "museums: final CTA",
+    "old": "One platform. Every <span class=\"gradient-text\">visit.</span>",
+    "new": "The shop, the membership, the <span class=\"gradient-text\">donation.</span>"
+  },
+  {
+    "note": "fashion: scalability heading",
+    "old": "One platform from pop-up to global fleet.",
+    "new": "From pop-up to global fleet, same setup."
+  },
+  {
+    "note": "fashion: City Beach blurb",
+    "old": "Expanded across Australia on Teamwork, one platform from flagship to regional store.",
+    "new": "Expanded across Australia on Teamwork, flagship to regional store."
+  },
+  {
+    "note": "luxury: proof client",
+    "old": "<div class=\"proof-client\">One platform, every market</div>",
+    "new": "<div class=\"proof-client\">Milan, London, New York, same build</div>"
+  },
+  {
+    "note": "inventory: diagram label",
+    "old": "One platform, one codebase",
+    "new": "One codebase, one support desk"
+  },
+  {
+    "note": "caseStudies: Canadian fleet blurb",
+    "old": "Extending one platform across the Canadian fleet, store by store.",
+    "new": "Extending the same setup across the Canadian fleet, store by store."
+  },
+  {
+    "note": "integrations: payments card",
+    "old": "Payments across every channel: contactless in store",
+    "new": "Payments wherever they happen: contactless in store"
+  },
+  {
+    "note": "integrations: consistent experience",
+    "old": "A consistent experience across every channel, on the systems you already run",
+    "new": "A consistent experience in store and online, on the systems you already run"
+  },
+  {
+    "note": "mobile-pos: CRM pillar",
+    "old": "360° customer profiles (history, preferences, wishlists, notes) across every channel, on the associate's screen at the register.",
+    "new": "360° customer profiles (history, preferences, wishlists, notes) on the associate's screen at the register."
+  },
+  {
+    "note": "analytics: stock card",
+    "old": "Stock on hand and movement across every channel, RFID-verified",
+    "new": "Stock on hand and movement by channel, RFID-verified"
+  },
+  {
+    "note": "customer-data: CDP intro",
+    "old": "one customer record across every channel: captured without slowing the queue",
+    "new": "one customer record whichever channel they use: captured without slowing the queue"
+  },
+  {
+    "note": "glossary: PXP entry (2 places)",
+    "old": "keeping POS accurate across every channel and market.",
+    "new": "keeping POS accurate in each channel and market."
+  },
+  {
+    "note": "museums: member value",
+    "old": "Track the lifetime value of members across every touchpoint.",
+    "new": "Track member lifetime value wherever they buy."
+  },
+  {
+    "note": "museums: consolidation body",
+    "old": "Gift shop, membership and donations reconcile in one system, alongside the ticketing you already run.",
+    "new": "Gift shop, membership and donations reconcile together, alongside the ticketing you already run."
+  },
+  {
+    "note": "FAQ+stadiums: F&B goal (2 places)",
+    "old": "Unifying food and merchandise under one platform is the long-term goal",
+    "new": "Unifying food and merchandise is the long-term goal"
+  },
+  {
+    "note": "FAQ: last 'uniquely combines'",
+    "old": "Teamwork Commerce uniquely combines configurable Order Fill Logic, an industry-leading native end-to-end RFID stack (so routing runs on 99.9% accurate inventory), and 30+ years of retail expertise, all in one system, no middleware required.",
+    "new": "What Teamwork Commerce does differently is run order routing on inventory it can actually trust: Order Fill Logic is configurable, and the RFID underneath it is native rather than middleware, so stock is accurate to 99.9% before a routing decision is made."
+  },
+  {
+    "note": "product-data: second source-of-truth mention",
+    "old": "That record is the single source of truth read by POS, e-commerce, marketplaces, and any third-party channel",
+    "new": "That record is what POS, e-commerce, marketplaces and any third-party channel read from"
+  }
+]

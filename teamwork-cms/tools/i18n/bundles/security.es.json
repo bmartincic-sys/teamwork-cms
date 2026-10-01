@@ -1,0 +1,72 @@
+{
+  "file": "src/_includes/security.njk",
+  "locale": "es",
+  "model": "claude-opus-5",
+  "strings": {
+    "b933fa510d": {
+      "source": "Security & Compliance",
+      "kind": "text",
+      "target": "Seguridad y cumplimiento"
+    },
+    "2b5c33e9c5": {
+      "source": "SOC 2, PCI DSS and <span class=\"gradient-text\">GDPR compliant.</span>",
+      "kind": "text",
+      "target": "Conforme con SOC 2, PCI DSS y <span class=\"gradient-text\">GDPR.</span>"
+    },
+    "eaf2867b7d": {
+      "source": "Independently verified against the standards your security, finance, and legal teams demand, in the markets we serve.",
+      "kind": "text",
+      "target": "Verificado de forma independiente frente a los estándares que exigen sus equipos de seguridad, finanzas y legal, en los mercados donde operamos."
+    },
+    "5f27b4af8f": {
+      "source": "Bring your security questionnaire <i class=\"ti ti-arrow-right\"></i>",
+      "kind": "text",
+      "target": "Traiga su cuestionario de seguridad <i class=\"ti ti-arrow-right\"></i>"
+    },
+    "26605ce9be": {
+      "source": "SOC 1 Type 2",
+      "kind": "attribute",
+      "target": "SOC 1 Tipo 2"
+    },
+    "ebf81d0c3a": {
+      "source": "SOC 2 Type 2",
+      "kind": "attribute",
+      "target": "SOC 2 Tipo 2"
+    },
+    "a5b7d57a85": {
+      "source": "GDPR",
+      "kind": "attribute",
+      "target": "GDPR"
+    },
+    "9487fef3fa": {
+      "source": "PCI DSS",
+      "kind": "attribute",
+      "target": "PCI DSS"
+    },
+    "ff85f856ad": {
+      "source": "NF525 / TSE",
+      "kind": "attribute",
+      "target": "NF525 / TSE"
+    },
+    "a871bde8ee": {
+      "source": "ISO 27001",
+      "kind": "attribute",
+      "target": "ISO 27001"
+    },
+    "18ff660b83": {
+      "source": "PIPL &#183; China",
+      "kind": "text",
+      "target": "PIPL &#183; China"
+    },
+    "7f808d74b6": {
+      "source": "MLPS 2.0, China Cybersecurity Compliance Standard",
+      "kind": "attribute",
+      "target": "MLPS 2.0, estándar chino de cumplimiento en ciberseguridad"
+    },
+    "f5e456cd11": {
+      "source": "MLPS 2.0 &#183; China",
+      "kind": "text",
+      "target": "MLPS 2.0 &#183; China"
+    }
+  }
+}
