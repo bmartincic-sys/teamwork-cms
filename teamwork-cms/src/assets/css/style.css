@@ -2551,7 +2551,7 @@ details[open] summary { color: var(--brand-text); }
   margin: 0; font-size: clamp(30px, 3.4vw, 40px); font-weight: 600;
   letter-spacing: -0.034em; line-height: 1.12; color: var(--text);
 }
-.blog-head-sub { margin: 12px 0 0; max-width: 660px; font-size: 15px; line-height: 1.6; color: var(--text-muted); }
+.blog-head-sub { margin: 12px 0 0; max-width: 780px; font-size: 15px; line-height: 1.6; color: var(--text-muted); }
 .blog-head-sub a { color: var(--brand-text); font-weight: 600; }
 .blog-head .blog-filter-bar { justify-content: flex-start; margin: 22px 0 0; }
 .filter-pill {
@@ -4994,7 +4994,7 @@ a.tm-day-win:hover i { transform: translateX(2px); }
   text-align: center;
   font-size: clamp(28px, 3.5vw, 44px);
   font-weight: 600; letter-spacing: -0.03em; line-height: 0.96;
-  margin: 0 auto 26px; max-width: 1000px;
+  margin: 0 auto 26px; max-width: 1120px;
   color: var(--text);
 }
 .scene-ink .ch-title { color: #ffffff; }
@@ -11484,7 +11484,7 @@ main.v-luxury .hero-photo-title {
   line-height: 1.14;
 }
 main.v-luxury .hero-photo-title { font-size: clamp(36px, 4.4vw, 60px); }
-main.v-luxury .section-sub { max-width: 58ch; }
+main.v-luxury .section-sub { max-width: 64ch; }
 
 /* An eyebrow reads refined with air between the letters, not with capitals. */
 main.v-luxury .section-eyebrow { letter-spacing: 0.06em; }
@@ -12069,4 +12069,25 @@ main.v-luxury .ticker-label {
 @media (max-width: 640px) {
   .locale-banner-inner { padding: 10px 16px; gap: 10px; font-size: 13px; }
   .locale-banner-inner > .ti-language { display: none; }
+}
+
+/* ===== Line-break orphans =====
+   Stops a sentence dropping one or two words onto a line of their own.
+
+   balance evens out the lines of a heading or a short lede, which is what
+   those want anyway. pretty leaves body copy where it is and only fixes the
+   last line, so paragraphs do not reflow wholesale. Browsers cap balance at a
+   handful of lines, which is why long text gets pretty instead.
+
+   Both fall back to normal wrapping where unsupported, so nothing breaks. */
+h1, h2, h3, h4,
+.section-title, .section-sub, .blog-head-sub,
+.pillar-title, .blog-card-title, .hero-photo-title, .hero-title,
+.statcard-label, .mini-card h3, .faq-question {
+  text-wrap: balance;
+}
+
+p, li, figcaption, blockquote,
+.pillar-desc, .blog-card-excerpt, .faq-answer p {
+  text-wrap: balance;
 }

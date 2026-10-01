@@ -1,0 +1,7 @@
+[
+  {
+    "note": "homepage module lead: trim",
+    "old": "Every module runs on the same system as the POS itself. No separate purchase, no new login, no nightly sync.",
+    "new": "Every module runs on the same system as the POS."
+  }
+]
