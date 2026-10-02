@@ -1,0 +1,7 @@
+[
+  {
+    "note": "pos identity: drop trailing clause",
+    "old": "with a clean audit trail of who did what either way.",
+    "new": "with a clean audit trail."
+  }
+]

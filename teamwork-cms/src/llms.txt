@@ -1,20 +1,24 @@
 # Teamwork Commerce
 
-> Point of sale is what Teamwork Commerce does best, everything else (OMS, Inventory, RFID, Analytics, AI) exists to make it stronger. Teamwork Commerce Services (TCS) is a connected set of applications and shared services powering 30,000+ terminals across 40+ countries with 99.99% uptime, natively integrated with AI and end-to-end RFID (99.9% accuracy). Founded 1994, SOC 2 Type 2 / GDPR / PCI DSS compliant.
+> Teamwork Commerce builds enterprise retail software. Point of sale is the core product, and order management, inventory, RFID, analytics and AI exist to make it stronger rather than to be sold beside it. The platform runs on 30,000+ terminals in 40+ countries at 99.99% uptime, with RFID native to the POS and no middleware layer. Teamwork Commerce was founded in 2009, built on retail software work going back to 1986. SOC 2 Type 2, SOC 1 Type 2, PCI DSS, GDPR and ISO 27001 compliant, with fiscal compliance including NF525, TSE, PIPL and MLPS 2.0.
 
 ## Platform
 
-- [Mobile POS](https://www.teamworkcommerce.com/platform/mobile-pos/): The core product: iOS-native enterprise POS, 40+ countries localized, 30s average transaction, 99.99% uptime.
-- [Teamwork Commerce Services (TCS)](https://www.teamworkcommerce.com/platform/tcs/): How POS runs, the connected platform of shared services and apps.
-- [CXP, Customer Experience Platform](https://www.teamworkcommerce.com/platform/cxp/): Customer data and clienteling; Plus unlocks AI at the point of sale.
-- [RFID Solution](https://www.teamworkcommerce.com/platform/rfid/): Native end-to-end RFID, source tagging through EAS loss prevention, no middleware.
-- [Inventory Control](https://www.teamworkcommerce.com/platform/inventory-control/): RFID-powered inventory with 99.9% accuracy and cycle counts in minutes.
-- [Order Management (OMS)](https://www.teamworkcommerce.com/platform/oms/): Distributed order management with AI routing.
-- [Analytics](https://www.teamworkcommerce.com/platform/analytics/): 150+ pre-configured reports and AI-powered insights.
-- [PXP (Product Experience Platform)](https://www.teamworkcommerce.com/platform/pxp/): Centralized product information that keeps POS accurate.
-- [CXP (Customer Experience Platform)](https://www.teamworkcommerce.com/platform/cxp/): Customer data and self-registration, the system of record for customer relationships.
-- [TAP (Teamwork Administration Platform)](https://www.teamworkcommerce.com/platform/tap/): Secure identity, access, and workforce management behind POS.
-- [TEAMMATE](https://www.teamworkcommerce.com/platform/teammate/): Associate-facing mobile app that extends POS to the sales floor.
+- [Mobile POS](https://www.teamworkcommerce.com/platform/mobile-pos/): The core product. Enterprise POS native to iOS, on iPad and iPhone, localized across 40+ countries. 30s average transaction, 99.99% uptime. Keeps selling through a network outage because the app and its data are on the device.
+- [RFID](https://www.teamworkcommerce.com/platform/rfid/): A native RFID stack running from tag commissioning at receiving through transfers, counts and checkout. Every transaction operates by individual EPC rather than UPC. No third-party middleware, and the reader hardware is yours to choose. There are no certified EAS gates on the hardware list today, and loss prevention is not a product Teamwork sells.
+- [Inventory Control](https://www.teamworkcommerce.com/platform/inventory-control/): Inventory verified by RFID to 99.9% accuracy, with full-store counts in minutes rather than overnight, plus allocation and replenishment.
+- [Order Management (OMS)](https://www.teamworkcommerce.com/platform/oms/): Distributed order management with configurable Order Fill Logic, Ship from Store, Endless Aisle, BOPIS and BORIS, routing against the same stock record the store is selling from.
+- [Analytics & Reporting](https://www.teamworkcommerce.com/platform/analytics/): 150+ pre-configured reports out of the box, plus Looker dashboards, both running on the same operational data via Google BigQuery.
+- [Integrations & APIs](https://www.teamworkcommerce.com/platform/integrations/): Open APIs and live integrations across ERP (SAP, Oracle, Microsoft Dynamics, NetSuite), WMS, e-commerce, payments, loyalty and RFID hardware.
+- [Reference Architecture](https://www.teamworkcommerce.com/platform/architecture/): What is native to the platform versus connected to systems a retailer already runs, with a full capability index for RFP scoring.
+- [Scaling & Global](https://www.teamworkcommerce.com/platform/scalability/): Fleet-wide configuration, fiscal compliance across 40+ countries, offline resilience at the register, and a largest single deployment of 2,500+ stores.
+
+## Features
+
+- [Product Data & Catalog](https://www.teamworkcommerce.com/features/product-data/): Retail product information management (PIM) built into the platform. One product record behind every channel, with variants, images and enrichment.
+- [Customer Data & Clienteling](https://www.teamworkcommerce.com/features/customer-data/): A retail customer data platform (CDP) with clienteling built in. Unified customer profiles and self-registration on the shop floor.
+- [Access & Identity](https://www.teamworkcommerce.com/features/access-identity/): Identity and access management (IAM) for store systems. Rotating QR store logins, Active Directory, SSO and MFA integration, optional facial recognition at the retailer's discretion.
+- [Training & Certification](https://www.teamworkcommerce.com/features/training/): A retail learning management system (LMS) built into the platform, with role-based courses synced from live product data.
 
 ## Solutions by Industry
 
@@ -22,12 +26,30 @@
 - [Footwear & Apparel](https://www.teamworkcommerce.com/solutions/footwear-apparel/)
 - [Jewelry & Watches](https://www.teamworkcommerce.com/solutions/jewelry-watches/)
 - [Luxury Apparel](https://www.teamworkcommerce.com/solutions/luxury-apparel/)
-- [Museums & Cultural Institutions](https://www.teamworkcommerce.com/solutions/museums-cultural/)
+- [Museums & Cultural Institutions](https://www.teamworkcommerce.com/solutions/museums-cultural/): Retail, membership and donations. Teamwork does not provide ticketing or food and beverage.
 - [Pet Goods](https://www.teamworkcommerce.com/solutions/pet-goods/)
-- [Stadiums & Venues](https://www.teamworkcommerce.com/solutions/stadiums-venues/)
+- [Stadiums & Venues](https://www.teamworkcommerce.com/solutions/stadiums-venues/): Merchandise retail. Food and beverage stays on your existing concession POS, integrated via open APIs.
+
+## Evaluating Teamwork Commerce
+
+- [Technical Evaluation](https://www.teamworkcommerce.com/technical-evaluation/): For architects, CISOs and CTOs. A working session on architecture, security and integrations.
+- [POS Evaluation](https://www.teamworkcommerce.com/pos-evaluation/): Six tests a retailer can run inside a demo or pilot that produce evidence rather than answers.
+- [POS RFP Template](https://www.teamworkcommerce.com/pos-rfp-template/): A free, ungated RFP question bank. 123 questions across 15 sections.
+- [Certified Hardware](https://www.teamworkcommerce.com/certified-hardware/): The devices integrated and supported with TW POS Pro. Deliberately short, roughly one certified device per category.
+- [Frequently Asked Questions](https://www.teamworkcommerce.com/frequently-asked-questions/): Answers on POS, RFID, inventory, order management, analytics and AI.
+
+## Resources
+
+- [Case Studies](https://www.teamworkcommerce.com/case-studies/): Customer stories including ASICS, Petco, FAO Schwarz, Moose Knuckles, Sports Basement, the Carolina Hurricanes and the Colorado Rockies.
+- [Blog](https://www.teamworkcommerce.com/blog/)
+- [Press Room](https://www.teamworkcommerce.com/press-room/)
+- [Events](https://www.teamworkcommerce.com/events/)
+- [Glossary](https://www.teamworkcommerce.com/glossary/): Plain-English definitions of retail technology terms, including Teamwork's own product terminology.
 
 ## Company
 
-- [About](https://www.teamworkcommerce.com/about/): Founded 1994 by Michael Mauerer, 30+ years of retail-specific expertise, offices across 4 continents.
+- [About](https://www.teamworkcommerce.com/about/): Founded 2009 by Michael Mauerer, on retail software work dating to 1986. Offices across four continents.
 - [Careers](https://www.teamworkcommerce.com/careers/)
-- [Contact / Book a Demo](https://www.teamworkcommerce.com/contact/)
+- [Teamwork Cares](https://www.teamworkcommerce.com/teamwork-cares/)
+- [Contact](https://www.teamworkcommerce.com/contact/)
+- [Book a Demo](https://www.teamworkcommerce.com/demo/)

@@ -2003,7 +2003,7 @@ a { color: inherit; text-decoration: none; }
 }
 .final-cta p {
   font-size: 19px; color: rgba(255, 255, 255, 0.85);
-  max-width: 540px; margin: 0 auto 40px; line-height: 1.5;
+  max-width: 1160px; margin: 0 auto 40px; line-height: 1.5;
 }
 /* Invert buttons so they read on the gradient, overrides inline ghost styles across all pages */
 .final-cta .btn-primary {
@@ -2825,7 +2825,7 @@ main.v-jewelry .section-title { font-weight: 600; letter-spacing: -0.025em; }
 main.v-jewelry .proof-card, main.v-jewelry .tm-day-card {
   border-radius: 4px; background: transparent; border-color: var(--border-strong);
 }
-main.v-jewelry .section-sub { max-width: 620px; }
+main.v-jewelry .section-sub { max-width: 800px; }
 
 /* Luxury: restrained and editorial: wide tracking, quiet cards */
 main.v-luxury { --v-accent: #5078F5; --v-accent-2: #2F58D6; }
@@ -2840,7 +2840,7 @@ main.v-luxury .section { padding: 96px 0; }
 /* Museum: calm, editorial, generous whitespace */
 main.v-museum { --v-accent: #4D94FF; --v-accent-2: #247DFF; }
 main.v-museum .section { padding: 96px 0; }
-main.v-museum .section-sub { max-width: 660px; font-size: 17px; line-height: 1.75; }
+main.v-museum .section-sub { max-width: 800px; font-size: 17px; line-height: 1.75; }
 main.v-museum .tm-day-card, main.v-museum .proof-card { border-radius: 8px; }
 
 /* Pet: friendly and approachable: rounder, warmer rhythm */
@@ -2953,7 +2953,7 @@ main[data-vertical] .tm-band-glow {
   text-decoration: none; cursor: pointer;
 }
 .fx-cta h3 { color: #fff; }
-.fx-cta p { color: rgba(255,255,255,0.88); max-width: 520px; }
+.fx-cta p { color: rgba(255,255,255,0.88); max-width: 600px; }
 .fx-cell.fx-cta:hover { background: var(--gradient); filter: brightness(1.07); }
 .fx-cta-btn {
   display: inline-flex; align-items: center; gap: 8px; align-self: flex-start;
@@ -4158,7 +4158,7 @@ a.tm-day-win:hover i { transform: translateX(2px); }
 .arch-int { font-size: 11.5px; fill: var(--text-muted); text-anchor: middle; }
 .arch-conn { stroke: var(--border-strong); stroke-width: 1.5; stroke-dasharray: 4 4; marker-end: none; }
 .arch-conn-t { font-size: 10.5px; fill: var(--text-faint); }
-.arch-caption { margin: 18px 0 0; font-size: 12.5px; line-height: 1.6; color: var(--text-faint); max-width: 780px; }
+.arch-caption { margin: 18px 0 0; font-size: 12.5px; line-height: 1.6; color: var(--text-faint); max-width: 880px; }
 
 .capx-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; border: 1px solid var(--border); border-radius: 12px; }
 .capx { width: 100%; min-width: 720px; border-collapse: collapse; font-size: 13.5px; }
@@ -5007,7 +5007,7 @@ a.tm-day-win:hover i { transform: translateX(2px); }
   -webkit-background-clip: text; background-clip: text;
 }
 .ch-para {
-  text-align: center; max-width: 720px; margin: 0 auto;
+  text-align: center; max-width: 1140px; margin: 0 auto;
   font-size: clamp(17px, 1.6vw, 20px); line-height: 1.55; color: var(--text-muted);
 }
 .scene-ink .ch-para { color: rgba(238,241,251,0.72); }
@@ -5898,7 +5898,7 @@ main > .hero:first-child { margin-top: -85px; padding-top: 230px; }
   padding-left: 14px; border-left: 2px solid var(--border-strong);
 }
 .bento-note {
-  margin: 22px 0 0; max-width: 760px;
+  margin: 22px 0 0; max-width: 1200px;
   font-size: 12.5px; line-height: 1.6; color: var(--text-faint);
   font-style: italic;
 }

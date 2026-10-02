@@ -1,0 +1,12 @@
+[
+  {
+    "note": "drop end-to-end before RFID",
+    "old": "end-to-end RFID",
+    "new": "RFID"
+  },
+  {
+    "note": "Bluebird before sled readers",
+    "old": "iPhone-mounted sled readers",
+    "new": "iPhone-mounted Bluebird sled readers"
+  }
+]
