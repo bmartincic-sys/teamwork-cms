@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Teamwork Commerce marketing website, built with Eleventy + Decap CMS",
   "scripts": {
-    "build": "eleventy && node tools/search-index.js && node tools/icons/check-icons.js",
+    "build": "eleventy && node tools/search-index.js && node tools/icons/check-icons.js && node tools/images/check-images.js",
     "start": "eleventy --serve",
     "i18n": "node tools/i18n/run.js"
   },

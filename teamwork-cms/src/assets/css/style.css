@@ -10831,7 +10831,7 @@ main[data-vertical] .tm-band-glow,
 .bento-card.bento-accent {
   background:
     linear-gradient(150deg, rgba(18, 63, 176, 0.95) 0%, rgba(31, 106, 224, 0.92) 35%, rgba(63, 102, 224, 0.94) 100%),
-    url("/assets/images/homepage/hero-store.jpg") center / cover no-repeat;
+    url("/assets/images/homepage/hero-store.webp") center / cover no-repeat;
 }
 
 /* "Your stores could be next" as a real store behind glass, so the fourth
@@ -10840,7 +10840,7 @@ main[data-vertical] .tm-band-glow,
 .cs-card.cs-card-more {
   background:
     linear-gradient(180deg, rgba(10, 30, 84, 0.30) 0%, rgba(10, 30, 84, 0.72) 100%),
-    url("/assets/images/homepage/hero-store.jpg") center / cover no-repeat;
+    url("/assets/images/homepage/hero-store.webp") center / cover no-repeat;
   border-color: rgba(255, 255, 255, 0.20);
 }
 
@@ -10866,7 +10866,7 @@ main[data-vertical] .tm-band-glow,
 .cs-card.cs-card-more {
   background:
     linear-gradient(165deg, rgba(20, 48, 122, 0.62) 0%, rgba(11, 30, 84, 0.86) 100%),
-    url("/assets/images/homepage/hero-store.jpg") center / cover no-repeat;
+    url("/assets/images/homepage/hero-store.webp") center / cover no-repeat;
   border-color: rgba(255, 255, 255, 0.18);
 }
 .cs-card-more .cs-more-inner {
@@ -12237,7 +12237,7 @@ p, li, figcaption, blockquote,
 /* ===== Centered mid-page CTA (opt-in) ===== */
 .midcta-center .midcta-inner { flex-direction: column; justify-content: center; text-align: center; gap: 22px; }
 
-/* ===== Jewelry story links =====
-   A plain arrow chip under each step read as "next step". These name their
+/* ===== Story links on the industry pages =====
+   A plain arrow chip under each step read as "next step". They now name their
    destination and sit bottom-right of the card, so they read as a link out. */
-main.v-jewelry a.tm-day-win { display: flex; width: fit-content; margin-left: auto; margin-top: 16px; }
+a.tm-day-win { display: flex; width: fit-content; margin-left: auto; margin-top: 16px; }

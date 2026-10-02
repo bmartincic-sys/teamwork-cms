@@ -10,6 +10,49 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.ignores.add("src/lp/**");
   eleventyConfig.addPassthroughCopy("src/llms.txt");
 
+  // Images at output time. Templates keep their readable .jpg/.png paths; here
+  // each <img> is pointed at its WebP (tools/images/manifest.json, made by
+  // tools/images/optimize.py), given a phone-sized option when one exists, and
+  // lazy-loaded unless it is in the hero. An image with no WebP is left as is.
+  const fs = require("fs");
+  const manifestPath = "tools/images/manifest.json";
+  const images = fs.existsSync(manifestPath) ? JSON.parse(fs.readFileSync(manifestPath, "utf8")) : {};
+
+  eleventyConfig.addTransform("images", function (html) {
+    if (!(this.page.outputPath || "").endsWith(".html")) return html;
+
+    // The hero is everything from <main> to the end of its first section. Images
+    // there are the largest paint, so they load eagerly; the first one is
+    // prioritised. Everything else, the nav dropdowns included, waits until near.
+    const main = html.indexOf("<main");
+    const firstSection = main > -1 ? html.indexOf("<section", main) : -1;
+    const heroEnd = firstSection > -1 ? html.indexOf("</section>", firstSection) : -1;
+    let prioritised = false;
+
+    return html.replace(/<img\b[^>]*>/gi, (tag, offset) => {
+      let out = tag;
+      const src = (tag.match(/\ssrc="([^"]+)"/) || [])[1];
+      const entry = src && images[src];
+      if (entry) {
+        out = out.replace(`src="${src}"`, `src="${entry.webp}"`);
+        if (entry.small && !/\ssrcset=/.test(out)) {
+          out = out.replace(/^<img/i, `<img srcset="${entry.small} 1200w, ${entry.webp} ${entry.w}w" sizes="100vw"`);
+        }
+      }
+      if (/\.svg(\?|$)/i.test(src || "")) return out;   // logos and icons: tiny, leave alone
+
+      const inHero = main > -1 && offset > main && heroEnd > -1 && offset < heroEnd;
+      if (inHero) {
+        out = out.replace(/\sloading="lazy"/i, "");
+        if (!prioritised) { out = out.replace(/^<img/i, '<img fetchpriority="high"'); prioritised = true; }
+      } else if (!/\sloading=/i.test(out)) {
+        out = out.replace(/^<img/i, '<img loading="lazy"');
+      }
+      if (!/\sdecoding=/i.test(out)) out = out.replace(/^<img/i, '<img decoding="async"');
+      return out;
+    });
+  });
+
   eleventyConfig.addFilter("readingTime", (html) => {
     const text = (html || "").replace(/<[^>]*>/g, " ");
     const words = (text.match(/\S+/g) || []).length;

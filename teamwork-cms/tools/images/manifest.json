@@ -1,0 +1,762 @@
+{
+ "/assets/images/apple-touch-icon.png": {
+  "w": 180,
+  "webp": "/assets/images/apple-touch-icon.webp"
+ },
+ "/assets/images/blog/real/3-reasons-why-so-many-customers-are-returning-to-bricks-and-mortar.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/3-reasons-why-so-many-customers-are-returning-to-bricks-and-mortar.webp"
+ },
+ "/assets/images/blog/real/3-strategies-for-retailers-to-deliver-hauntingly-amazing-customer-experiences-this-halloween.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/3-strategies-for-retailers-to-deliver-hauntingly-amazing-customer-experiences-this-halloween.webp"
+ },
+ "/assets/images/blog/real/3-things-to-ask-before-deploying-a-retail-solution.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/3-things-to-ask-before-deploying-a-retail-solution.webp"
+ },
+ "/assets/images/blog/real/3-top-tier-trends-to-expect-at-nrf-2025.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/3-top-tier-trends-to-expect-at-nrf-2025.webp"
+ },
+ "/assets/images/blog/real/3-ways-retailers-can-capitalize-on-holiday-sales.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/3-ways-retailers-can-capitalize-on-holiday-sales.webp"
+ },
+ "/assets/images/blog/real/3-ways-retailers-can-create-a-seamless-checkout-experience-for-customers.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/3-ways-retailers-can-create-a-seamless-checkout-experience-for-customers.webp"
+ },
+ "/assets/images/blog/real/4-key-considerations-for-retailers-in-2025.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/4-key-considerations-for-retailers-in-2025.webp"
+ },
+ "/assets/images/blog/real/4-resolutions-for-retailers-in-2025.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/4-resolutions-for-retailers-in-2025.webp"
+ },
+ "/assets/images/blog/real/ai-and-the-future-of-apparel-retail-how-to-create-seamless-omnichannel-experiences.jpg": {
+  "w": 940,
+  "webp": "/assets/images/blog/real/ai-and-the-future-of-apparel-retail-how-to-create-seamless-omnichannel-experiences.webp"
+ },
+ "/assets/images/blog/real/ai-driven-personalization-tailoring-the-customer-experience.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/ai-driven-personalization-tailoring-the-customer-experience.webp"
+ },
+ "/assets/images/blog/real/art-computers-digital-transformation-with-teamwork-commerce.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/art-computers-digital-transformation-with-teamwork-commerce.webp"
+ },
+ "/assets/images/blog/real/asics-and-teamwork-commerce-revolutionizing-retail-with-cutting-edge-pos-solutions.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/asics-and-teamwork-commerce-revolutionizing-retail-with-cutting-edge-pos-solutions.webp"
+ },
+ "/assets/images/blog/real/asics-europe-strengthens-its-global-partnership-with-teamwork-commerce.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/asics-europe-strengthens-its-global-partnership-with-teamwork-commerce.webp"
+ },
+ "/assets/images/blog/real/augmented-reality-in-retail.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/augmented-reality-in-retail.webp"
+ },
+ "/assets/images/blog/real/avoiding-promotion-fatigue-crafting-impactful-holiday-campaigns.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/avoiding-promotion-fatigue-crafting-impactful-holiday-campaigns.webp"
+ },
+ "/assets/images/blog/real/black-friday-2024-what-should-retailers-be-prepared-for.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/black-friday-2024-what-should-retailers-be-prepared-for.webp"
+ },
+ "/assets/images/blog/real/bluebird-and-teamwork-commerce-unveil-game-changing-rfid-solution.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/bluebird-and-teamwork-commerce-unveil-game-changing-rfid-solution.webp"
+ },
+ "/assets/images/blog/real/carolina-hurricanes-retail-transformation.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/carolina-hurricanes-retail-transformation.webp"
+ },
+ "/assets/images/blog/real/celebrating-global-connection-teamwork-commerce-walks-together-on-world-walking-day-2024.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/celebrating-global-connection-teamwork-commerce-walks-together-on-world-walking-day-2024.webp"
+ },
+ "/assets/images/blog/real/city-beach-boosts-global-growth-with-teamwork-commerces-unified-pos-and-omnichannel-solutions.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/city-beach-boosts-global-growth-with-teamwork-commerces-unified-pos-and-omnichannel-solutions.webp"
+ },
+ "/assets/images/blog/real/code-and-commerce-delivering-excellence-in-retail-automation.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/code-and-commerce-delivering-excellence-in-retail-automation.webp"
+ },
+ "/assets/images/blog/real/colorado-rockies-mlb-all-star-week.jpg": {
+  "w": 1400,
+  "webp": "/assets/images/blog/real/colorado-rockies-mlb-all-star-week.webp"
+ },
+ "/assets/images/blog/real/cooling-down-returns-3-ways-retailers-can-streamline-their-reverse-supply-chain-this-summer.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/cooling-down-returns-3-ways-retailers-can-streamline-their-reverse-supply-chain-this-summer.webp"
+ },
+ "/assets/images/blog/real/driving-real-time-inventory-visibility-with-item-level-rfid.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/driving-real-time-inventory-visibility-with-item-level-rfid.webp"
+ },
+ "/assets/images/blog/real/driving-retail-customer-experiences-through-collaboration-and-partnership.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/driving-retail-customer-experiences-through-collaboration-and-partnership.webp"
+ },
+ "/assets/images/blog/real/embracing-new-concepts-vs-the-return-to-brick-and-mortar.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/embracing-new-concepts-vs-the-return-to-brick-and-mortar.webp"
+ },
+ "/assets/images/blog/real/ensure-retail-consumer-data-privacy-with-the-right-technology.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/ensure-retail-consumer-data-privacy-with-the-right-technology.webp"
+ },
+ "/assets/images/blog/real/expert-retail-insights-david-mauerer-simplify-streamline-succeed.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/expert-retail-insights-david-mauerer-simplify-streamline-succeed.webp"
+ },
+ "/assets/images/blog/real/falling-into-seasonal-change-3-trends-retailers-should-be-prepared-for.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/falling-into-seasonal-change-3-trends-retailers-should-be-prepared-for.webp"
+ },
+ "/assets/images/blog/real/fao-schwarz-delivers-magical-retail-experiences-with-teamwork-commerces-mobile-pos.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/fao-schwarz-delivers-magical-retail-experiences-with-teamwork-commerces-mobile-pos.webp"
+ },
+ "/assets/images/blog/real/five-minutes-with-william-heckadon-global-sales-director.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/five-minutes-with-william-heckadon-global-sales-director.webp"
+ },
+ "/assets/images/blog/real/from-ice-rink-to-innovation-how-sports-basement-transformed-retail-with-teamwork-commerce.jpg": {
+  "w": 1000,
+  "webp": "/assets/images/blog/real/from-ice-rink-to-innovation-how-sports-basement-transformed-retail-with-teamwork-commerce.webp"
+ },
+ "/assets/images/blog/real/giving-back-in-queretaro-a-holiday-effort-that-made-a-difference.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/giving-back-in-queretaro-a-holiday-effort-that-made-a-difference.webp"
+ },
+ "/assets/images/blog/real/ho-ho-holidays-are-here-retail-in-review-november-december-uk.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/ho-ho-holidays-are-here-retail-in-review-november-december-uk.webp"
+ },
+ "/assets/images/blog/real/how-can-ai-take-the-burden-off-retail-staff.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/how-can-ai-take-the-burden-off-retail-staff.webp"
+ },
+ "/assets/images/blog/real/how-can-retailers-deliver-spook-tacular-shopping-experiences-this-halloween.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/how-can-retailers-deliver-spook-tacular-shopping-experiences-this-halloween.webp"
+ },
+ "/assets/images/blog/real/how-can-retailers-lean-on-tech-to-operate-effectively.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/how-can-retailers-lean-on-tech-to-operate-effectively.webp"
+ },
+ "/assets/images/blog/real/how-is-technology-reviving-apparel-brands.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/how-is-technology-reviving-apparel-brands.webp"
+ },
+ "/assets/images/blog/real/how-moose-knuckles-delivers-global-retail-excellence-with-adyen-teamwork-commerce.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/how-moose-knuckles-delivers-global-retail-excellence-with-adyen-teamwork-commerce.webp"
+ },
+ "/assets/images/blog/real/how-retailers-can-craft-impactful-campaigns-to-thrive-in-2025.jpg": {
+  "w": 750,
+  "webp": "/assets/images/blog/real/how-retailers-can-craft-impactful-campaigns-to-thrive-in-2025.webp"
+ },
+ "/assets/images/blog/real/in-store-retail-resurgence-is-clear-for-all-to-see.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/in-store-retail-resurgence-is-clear-for-all-to-see.webp"
+ },
+ "/assets/images/blog/real/is-rfid-powered-self-checkout-the-answer-to-in-store-transactions.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/is-rfid-powered-self-checkout-the-answer-to-in-store-transactions.webp"
+ },
+ "/assets/images/blog/real/lammles-western-wear-calgary-stampede.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/lammles-western-wear-calgary-stampede.webp"
+ },
+ "/assets/images/blog/real/look-back-at-2024-uk-retail-trends-in-review.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/look-back-at-2024-uk-retail-trends-in-review.webp"
+ },
+ "/assets/images/blog/real/lucchese-deploys-teamwork-commerce-solution-across-all-stores.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/lucchese-deploys-teamwork-commerce-solution-across-all-stores.webp"
+ },
+ "/assets/images/blog/real/monetizing-the-moment-how-sports-basement-and-teamwork-commerce-are-redefining-in-store-advertising.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/monetizing-the-moment-how-sports-basement-and-teamwork-commerce-are-redefining-in-store-advertising.webp"
+ },
+ "/assets/images/blog/real/moose-knuckles-x-teamwork-commerce-enhancing-the-customer-journey.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/moose-knuckles-x-teamwork-commerce-enhancing-the-customer-journey.webp"
+ },
+ "/assets/images/blog/real/navigating-returns-and-fraud-spikes-in-2025.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/navigating-returns-and-fraud-spikes-in-2025.webp"
+ },
+ "/assets/images/blog/real/nrf-2025-3-key-takeaways-from-retails-big-show.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/nrf-2025-3-key-takeaways-from-retails-big-show.webp"
+ },
+ "/assets/images/blog/real/oasis-reunion-are-the-90s-back-definitely-maybe.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/oasis-reunion-are-the-90s-back-definitely-maybe.webp"
+ },
+ "/assets/images/blog/real/online-physical-retail-how-can-brands-meet-customers-in-the-middle.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/online-physical-retail-how-can-brands-meet-customers-in-the-middle.webp"
+ },
+ "/assets/images/blog/real/paris-fashion-week-recap-what-can-retailers-take-away-from-a-busy-retail-season.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/paris-fashion-week-recap-what-can-retailers-take-away-from-a-busy-retail-season.webp"
+ },
+ "/assets/images/blog/real/paris-olympics-2024-seizing-retail-opportunities-in-the-fashion-capital-of-the-world.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/paris-olympics-2024-seizing-retail-opportunities-in-the-fashion-capital-of-the-world.webp"
+ },
+ "/assets/images/blog/real/petco-omnichannel-transformation.jpg": {
+  "w": 1400,
+  "webp": "/assets/images/blog/real/petco-omnichannel-transformation.webp"
+ },
+ "/assets/images/blog/real/powering-high-performance-retail-at-one-of-the-worlds-largest-sporting-events.jpg": {
+  "w": 1080,
+  "webp": "/assets/images/blog/real/powering-high-performance-retail-at-one-of-the-worlds-largest-sporting-events.webp"
+ },
+ "/assets/images/blog/real/practical-ai-in-retail-whats-hype-vs-whats-real-in-2025.jpg": {
+  "w": 1000,
+  "webp": "/assets/images/blog/real/practical-ai-in-retail-whats-hype-vs-whats-real-in-2025.webp"
+ },
+ "/assets/images/blog/real/retail-in-2025-3-predictions-for-the-industry.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/retail-in-2025-3-predictions-for-the-industry.webp"
+ },
+ "/assets/images/blog/real/retail-in-review-2025-begins-with-continued-ai-momentum-and-a-positive-outlook.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/retail-in-review-2025-begins-with-continued-ai-momentum-and-a-positive-outlook.webp"
+ },
+ "/assets/images/blog/real/retail-in-review-july-august.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/retail-in-review-july-august.webp"
+ },
+ "/assets/images/blog/real/retail-in-review-may-june-rebound-collaboration-immersive-shopping.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/retail-in-review-may-june-rebound-collaboration-immersive-shopping.webp"
+ },
+ "/assets/images/blog/real/retail-tech-moves-fast-and-so-should-you.jpg": {
+  "w": 750,
+  "webp": "/assets/images/blog/real/retail-tech-moves-fast-and-so-should-you.webp"
+ },
+ "/assets/images/blog/real/revolutionizing-inventory-management-teamwork-commerce-bluebird-rfr-901.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/revolutionizing-inventory-management-teamwork-commerce-bluebird-rfr-901.webp"
+ },
+ "/assets/images/blog/real/rfid-in-retail-creating-a-foundation-of-simplicity-for-brands.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/rfid-in-retail-creating-a-foundation-of-simplicity-for-brands.webp"
+ },
+ "/assets/images/blog/real/solutions-that-sleigh-how-availability-and-speed-can-prepare-retailers-for-last-minute-christmas-shoppers.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/solutions-that-sleigh-how-availability-and-speed-can-prepare-retailers-for-last-minute-christmas-shoppers.webp"
+ },
+ "/assets/images/blog/real/spreading-holiday-cheer-in-clearwater.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/spreading-holiday-cheer-in-clearwater.webp"
+ },
+ "/assets/images/blog/real/spreading-holiday-cheer-through-donations.jpg": {
+  "w": 1080,
+  "webp": "/assets/images/blog/real/spreading-holiday-cheer-through-donations.webp"
+ },
+ "/assets/images/blog/real/supporting-local-residents-after-hurricane-milton.jpg": {
+  "w": 1080,
+  "webp": "/assets/images/blog/real/supporting-local-residents-after-hurricane-milton.webp"
+ },
+ "/assets/images/blog/real/teamwork-cares-mexico-gives-back-to-local-animal-shelter-2.jpg": {
+  "w": 800,
+  "webp": "/assets/images/blog/real/teamwork-cares-mexico-gives-back-to-local-animal-shelter-2.webp"
+ },
+ "/assets/images/blog/real/teamwork-cares-mexico-gives-back-to-local-hospital.jpg": {
+  "w": 800,
+  "webp": "/assets/images/blog/real/teamwork-cares-mexico-gives-back-to-local-hospital.webp"
+ },
+ "/assets/images/blog/real/teamwork-cares-participated-in-another-pack-a-snack-event-at-hob-brewing-company.jpg": {
+  "w": 800,
+  "webp": "/assets/images/blog/real/teamwork-cares-participated-in-another-pack-a-snack-event-at-hob-brewing-company.webp"
+ },
+ "/assets/images/blog/real/teamwork-cares-participated-in-the-pack-a-snack-event-at-hob-brewing-company.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/teamwork-cares-participated-in-the-pack-a-snack-event-at-hob-brewing-company.webp"
+ },
+ "/assets/images/blog/real/teamwork-cares-partners-with-local-schools.jpg": {
+  "w": 800,
+  "webp": "/assets/images/blog/real/teamwork-cares-partners-with-local-schools.webp"
+ },
+ "/assets/images/blog/real/teamwork-cares-supports-empowherment-for-international-womens-day.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/teamwork-cares-supports-empowherment-for-international-womens-day.webp"
+ },
+ "/assets/images/blog/real/teamwork-cares-supports-oldsmar-cares-with-summer-donation-drive.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/teamwork-cares-supports-oldsmar-cares-with-summer-donation-drive.webp"
+ },
+ "/assets/images/blog/real/teamwork-commerce-and-hubtiger-partner-to-unlock-repair-opportunities-for-retailers.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/teamwork-commerce-and-hubtiger-partner-to-unlock-repair-opportunities-for-retailers.webp"
+ },
+ "/assets/images/blog/real/teamwork-commerce-donates-125-backpacks-to-pinellas-county-schools-for-back-to-school-support.jpg": {
+  "w": 1080,
+  "webp": "/assets/images/blog/real/teamwork-commerce-donates-125-backpacks-to-pinellas-county-schools-for-back-to-school-support.webp"
+ },
+ "/assets/images/blog/real/teamwork-commerce-partners-with-art-computer-to-power-next-generation-apple-retail-in-switzerland.jpg": {
+  "w": 500,
+  "webp": "/assets/images/blog/real/teamwork-commerce-partners-with-art-computer-to-power-next-generation-apple-retail-in-switzerland.webp"
+ },
+ "/assets/images/blog/real/teamwork-commerce-partners-with-shippypro-to-support-growth-and-strengthen-fulfilment-capabilities.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/teamwork-commerce-partners-with-shippypro-to-support-growth-and-strengthen-fulfilment-capabilities.webp"
+ },
+ "/assets/images/blog/real/teamwork-pos-offline-mode-resilience-during-crowdstrike-software-failures.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/teamwork-pos-offline-mode-resilience-during-crowdstrike-software-failures.webp"
+ },
+ "/assets/images/blog/real/teamwork-soc-2-compliant.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/teamwork-soc-2-compliant.webp"
+ },
+ "/assets/images/blog/real/tech-trends-that-have-been-heating-up-the-summer-so-far.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/tech-trends-that-have-been-heating-up-the-summer-so-far.webp"
+ },
+ "/assets/images/blog/real/the-breakthrough.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/the-breakthrough.webp"
+ },
+ "/assets/images/blog/real/the-changing-scene-for-brick-and-mortar-stores-why-modernisation-is-key-for-brands.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/the-changing-scene-for-brick-and-mortar-stores-why-modernisation-is-key-for-brands.webp"
+ },
+ "/assets/images/blog/real/the-future-of-ai-powered-retail-what-can-we-expect.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/the-future-of-ai-powered-retail-what-can-we-expect.webp"
+ },
+ "/assets/images/blog/real/the-future-of-stadium-retail-super-bowl-2025s-high-tech-shopping-experience.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/the-future-of-stadium-retail-super-bowl-2025s-high-tech-shopping-experience.webp"
+ },
+ "/assets/images/blog/real/the-growing-value-of-pop-up-retail.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/the-growing-value-of-pop-up-retail.webp"
+ },
+ "/assets/images/blog/real/the-importance-of-real-time-decision-making-in-a-busy-retail-environment.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/the-importance-of-real-time-decision-making-in-a-busy-retail-environment.webp"
+ },
+ "/assets/images/blog/real/the-importance-of-supply-chain-visibility-in-retail-decision-making.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/the-importance-of-supply-chain-visibility-in-retail-decision-making.webp"
+ },
+ "/assets/images/blog/real/the-modern-supply-chain-runs-on-rfid.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/the-modern-supply-chain-runs-on-rfid.webp"
+ },
+ "/assets/images/blog/real/the-rise-of-rental-fashion-why-borrowing-is-the-new-buying.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/the-rise-of-rental-fashion-why-borrowing-is-the-new-buying.webp"
+ },
+ "/assets/images/blog/real/vento-motorcycles-u-s-a-adopts-teamwork-commerces-omnichannel-retail-solution-to-accelerate-expansion-in-mexico.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/vento-motorcycles-u-s-a-adopts-teamwork-commerces-omnichannel-retail-solution-to-accelerate-expansion-in-mexico.webp"
+ },
+ "/assets/images/blog/real/vince-deploys-teamwork-commerce-pos-in-its-london-flagship-store.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/vince-deploys-teamwork-commerce-pos-in-its-london-flagship-store.webp"
+ },
+ "/assets/images/blog/real/warehouse-to-checkout-optimizing-retail-inventory-with-integrated-technology.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/blog/real/warehouse-to-checkout-optimizing-retail-inventory-with-integrated-technology.webp"
+ },
+ "/assets/images/company/life/team-working.jpg": {
+  "small": "/assets/images/company/life/team-working-1200.webp",
+  "w": 1600,
+  "webp": "/assets/images/company/life/team-working.webp"
+ },
+ "/assets/images/company/office-team.jpg": {
+  "w": 1052,
+  "webp": "/assets/images/company/office-team.webp"
+ },
+ "/assets/images/customers/art-computer.jpg": {
+  "w": 900,
+  "webp": "/assets/images/customers/art-computer.webp"
+ },
+ "/assets/images/customers/asics-race.jpg": {
+  "w": 1400,
+  "webp": "/assets/images/customers/asics-race.webp"
+ },
+ "/assets/images/customers/asics-wall.jpg": {
+  "w": 1400,
+  "webp": "/assets/images/customers/asics-wall.webp"
+ },
+ "/assets/images/customers/carolina-hurricanes.jpg": {
+  "w": 1400,
+  "webp": "/assets/images/customers/carolina-hurricanes.webp"
+ },
+ "/assets/images/customers/colorado-rockies.jpg": {
+  "w": 1400,
+  "webp": "/assets/images/customers/colorado-rockies.webp"
+ },
+ "/assets/images/customers/fao-schwarz.jpg": {
+  "w": 900,
+  "webp": "/assets/images/customers/fao-schwarz.webp"
+ },
+ "/assets/images/customers/jewelry-counter.jpg": {
+  "small": "/assets/images/customers/jewelry-counter-1200.webp",
+  "w": 1600,
+  "webp": "/assets/images/customers/jewelry-counter.webp"
+ },
+ "/assets/images/customers/lammles-stampede.jpg": {
+  "small": "/assets/images/customers/lammles-stampede-1200.webp",
+  "w": 1600,
+  "webp": "/assets/images/customers/lammles-stampede.webp"
+ },
+ "/assets/images/customers/logos/art-computer-logo.png": {
+  "w": 582,
+  "webp": "/assets/images/customers/logos/art-computer-logo.webp"
+ },
+ "/assets/images/customers/logos/colorado-rockies-logo.png": {
+  "w": 520,
+  "webp": "/assets/images/customers/logos/colorado-rockies-logo.webp"
+ },
+ "/assets/images/customers/logos/fao-schwarz-logo.png": {
+  "w": 600,
+  "webp": "/assets/images/customers/logos/fao-schwarz-logo.webp"
+ },
+ "/assets/images/customers/logos/lammles-logo.png": {
+  "w": 560,
+  "webp": "/assets/images/customers/logos/lammles-logo.webp"
+ },
+ "/assets/images/customers/logos/petco-logo.png": {
+  "w": 520,
+  "webp": "/assets/images/customers/logos/petco-logo.webp"
+ },
+ "/assets/images/customers/logos/prada-logo.png": {
+  "w": 520,
+  "webp": "/assets/images/customers/logos/prada-logo.webp"
+ },
+ "/assets/images/customers/logos/princesse-tam-tam-logo.png": {
+  "w": 520,
+  "webp": "/assets/images/customers/logos/princesse-tam-tam-logo.webp"
+ },
+ "/assets/images/customers/logos/the-new-stand-logo.png": {
+  "w": 520,
+  "webp": "/assets/images/customers/logos/the-new-stand-logo.webp"
+ },
+ "/assets/images/customers/moose-knuckles-store.jpg": {
+  "w": 1400,
+  "webp": "/assets/images/customers/moose-knuckles-store.webp"
+ },
+ "/assets/images/customers/moose-knuckles-storefront.jpg": {
+  "w": 1400,
+  "webp": "/assets/images/customers/moose-knuckles-storefront.webp"
+ },
+ "/assets/images/customers/moose-knuckles.jpg": {
+  "w": 1400,
+  "webp": "/assets/images/customers/moose-knuckles.webp"
+ },
+ "/assets/images/customers/petco.jpg": {
+  "w": 1400,
+  "webp": "/assets/images/customers/petco.webp"
+ },
+ "/assets/images/customers/prada-shoes.jpg": {
+  "w": 1400,
+  "webp": "/assets/images/customers/prada-shoes.webp"
+ },
+ "/assets/images/customers/ptt-cdc.jpg": {
+  "w": 1400,
+  "webp": "/assets/images/customers/ptt-cdc.webp"
+ },
+ "/assets/images/customers/sporting-event.jpg": {
+  "w": 1400,
+  "webp": "/assets/images/customers/sporting-event.webp"
+ },
+ "/assets/images/customers/sports-basement-advertising.jpg": {
+  "w": 1380,
+  "webp": "/assets/images/customers/sports-basement-advertising.webp"
+ },
+ "/assets/images/customers/sports-basement.jpg": {
+  "w": 900,
+  "webp": "/assets/images/customers/sports-basement.webp"
+ },
+ "/assets/images/customers/the-new-stand.jpg": {
+  "w": 1400,
+  "webp": "/assets/images/customers/the-new-stand.webp"
+ },
+ "/assets/images/favicon-16x16.png": {
+  "w": 16,
+  "webp": "/assets/images/favicon-16x16.webp"
+ },
+ "/assets/images/favicon-32x32.png": {
+  "w": 32,
+  "webp": "/assets/images/favicon-32x32.webp"
+ },
+ "/assets/images/homepage/121-cxp.jpg": {
+  "w": 806,
+  "webp": "/assets/images/homepage/121-cxp.webp"
+ },
+ "/assets/images/homepage/analytics-hero.jpg": {
+  "small": "/assets/images/homepage/analytics-hero-1200.webp",
+  "w": 1800,
+  "webp": "/assets/images/homepage/analytics-hero.webp"
+ },
+ "/assets/images/homepage/analytics-tile.jpg": {
+  "w": 1024,
+  "webp": "/assets/images/homepage/analytics-tile.webp"
+ },
+ "/assets/images/homepage/case-studies-hero.jpg": {
+  "small": "/assets/images/homepage/case-studies-hero-1200.webp",
+  "w": 2000,
+  "webp": "/assets/images/homepage/case-studies-hero.webp"
+ },
+ "/assets/images/homepage/cloudhq-kpis.jpg": {
+  "w": 912,
+  "webp": "/assets/images/homepage/cloudhq-kpis.webp"
+ },
+ "/assets/images/homepage/cloudhq-segments.jpg": {
+  "w": 906,
+  "webp": "/assets/images/homepage/cloudhq-segments.webp"
+ },
+ "/assets/images/homepage/cxp-admin.jpg": {
+  "small": "/assets/images/homepage/cxp-admin-1200.webp",
+  "w": 2000,
+  "webp": "/assets/images/homepage/cxp-admin.webp"
+ },
+ "/assets/images/homepage/cxp-hero.jpg": {
+  "small": "/assets/images/homepage/cxp-hero-1200.webp",
+  "w": 1536,
+  "webp": "/assets/images/homepage/cxp-hero.webp"
+ },
+ "/assets/images/homepage/extensibility.jpg": {
+  "small": "/assets/images/homepage/extensibility-1200.webp",
+  "w": 1500,
+  "webp": "/assets/images/homepage/extensibility.webp"
+ },
+ "/assets/images/homepage/hero-store.jpg": {
+  "small": "/assets/images/homepage/hero-store-1200.webp",
+  "w": 1828,
+  "webp": "/assets/images/homepage/hero-store.webp"
+ },
+ "/assets/images/homepage/integrations-tile.jpg": {
+  "w": 1024,
+  "webp": "/assets/images/homepage/integrations-tile.webp"
+ },
+ "/assets/images/homepage/inv-allocation.jpg": {
+  "small": "/assets/images/homepage/inv-allocation-1200.webp",
+  "w": 1918,
+  "webp": "/assets/images/homepage/inv-allocation.webp"
+ },
+ "/assets/images/homepage/inv-transfers.jpg": {
+  "small": "/assets/images/homepage/inv-transfers-1200.webp",
+  "w": 2000,
+  "webp": "/assets/images/homepage/inv-transfers.webp"
+ },
+ "/assets/images/homepage/inventory-hero.jpg": {
+  "small": "/assets/images/homepage/inventory-hero-1200.webp",
+  "w": 2000,
+  "webp": "/assets/images/homepage/inventory-hero.webp"
+ },
+ "/assets/images/homepage/inventory-rfid-count.jpg": {
+  "small": "/assets/images/homepage/inventory-rfid-count-1200.webp",
+  "w": 1536,
+  "webp": "/assets/images/homepage/inventory-rfid-count.webp"
+ },
+ "/assets/images/homepage/ipad-pos-counter.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/homepage/ipad-pos-counter.webp"
+ },
+ "/assets/images/homepage/mobile-pos-hero.jpg": {
+  "small": "/assets/images/homepage/mobile-pos-hero-1200.webp",
+  "w": 1800,
+  "webp": "/assets/images/homepage/mobile-pos-hero.webp"
+ },
+ "/assets/images/homepage/oms-backoffice.jpg": {
+  "small": "/assets/images/homepage/oms-backoffice-1200.webp",
+  "w": 1536,
+  "webp": "/assets/images/homepage/oms-backoffice.webp"
+ },
+ "/assets/images/homepage/oms-tile.jpg": {
+  "w": 1024,
+  "webp": "/assets/images/homepage/oms-tile.webp"
+ },
+ "/assets/images/homepage/pmod-mobile-pos.jpg": {
+  "w": 1400,
+  "webp": "/assets/images/homepage/pmod-mobile-pos.webp"
+ },
+ "/assets/images/homepage/pos-jewelry-checkout.jpg": {
+  "w": 1060,
+  "webp": "/assets/images/homepage/pos-jewelry-checkout.webp"
+ },
+ "/assets/images/homepage/pxp-catalog.jpg": {
+  "small": "/assets/images/homepage/pxp-catalog-1200.webp",
+  "w": 2000,
+  "webp": "/assets/images/homepage/pxp-catalog.webp"
+ },
+ "/assets/images/homepage/pxp-hero.jpg": {
+  "small": "/assets/images/homepage/pxp-hero-1200.webp",
+  "w": 1536,
+  "webp": "/assets/images/homepage/pxp-hero.webp"
+ },
+ "/assets/images/homepage/pxp-variants.png": {
+  "w": 1359,
+  "webp": "/assets/images/homepage/pxp-variants.webp"
+ },
+ "/assets/images/homepage/pxp-versioning.jpg": {
+  "w": 1301,
+  "webp": "/assets/images/homepage/pxp-versioning.webp"
+ },
+ "/assets/images/homepage/rfid-scanning.jpg": {
+  "small": "/assets/images/homepage/rfid-scanning-1200.webp",
+  "w": 1800,
+  "webp": "/assets/images/homepage/rfid-scanning.webp"
+ },
+ "/assets/images/homepage/rfid-self-checkout.jpg": {
+  "small": "/assets/images/homepage/rfid-self-checkout-1200.webp",
+  "w": 1747,
+  "webp": "/assets/images/homepage/rfid-self-checkout.webp"
+ },
+ "/assets/images/homepage/shopper-display.jpg": {
+  "w": 1197,
+  "webp": "/assets/images/homepage/shopper-display.webp"
+ },
+ "/assets/images/homepage/sol-fashion.jpg": {
+  "small": "/assets/images/homepage/sol-fashion-1200.webp",
+  "w": 2000,
+  "webp": "/assets/images/homepage/sol-fashion.webp"
+ },
+ "/assets/images/homepage/sol-footwear.jpg": {
+  "small": "/assets/images/homepage/sol-footwear-1200.webp",
+  "w": 2000,
+  "webp": "/assets/images/homepage/sol-footwear.webp"
+ },
+ "/assets/images/homepage/sol-jewelry.jpg": {
+  "small": "/assets/images/homepage/sol-jewelry-1200.webp",
+  "w": 2000,
+  "webp": "/assets/images/homepage/sol-jewelry.webp"
+ },
+ "/assets/images/homepage/sol-luxury.jpg": {
+  "small": "/assets/images/homepage/sol-luxury-1200.webp",
+  "w": 2000,
+  "webp": "/assets/images/homepage/sol-luxury.webp"
+ },
+ "/assets/images/homepage/sol-museum.jpg": {
+  "small": "/assets/images/homepage/sol-museum-1200.webp",
+  "w": 2000,
+  "webp": "/assets/images/homepage/sol-museum.webp"
+ },
+ "/assets/images/homepage/sol-pet.jpg": {
+  "small": "/assets/images/homepage/sol-pet-1200.webp",
+  "w": 2000,
+  "webp": "/assets/images/homepage/sol-pet.webp"
+ },
+ "/assets/images/homepage/sol-stadium.jpg": {
+  "small": "/assets/images/homepage/sol-stadium-1200.webp",
+  "w": 2000,
+  "webp": "/assets/images/homepage/sol-stadium.webp"
+ },
+ "/assets/images/homepage/tcs-hero.jpg": {
+  "small": "/assets/images/homepage/tcs-hero-1200.webp",
+  "w": 1536,
+  "webp": "/assets/images/homepage/tcs-hero.webp"
+ },
+ "/assets/images/homepage/teammate-hero.jpg": {
+  "small": "/assets/images/homepage/teammate-hero-1200.webp",
+  "w": 2000,
+  "webp": "/assets/images/homepage/teammate-hero.webp"
+ },
+ "/assets/images/homepage/unified-bopis.jpg": {
+  "w": 1200,
+  "webp": "/assets/images/homepage/unified-bopis.webp"
+ },
+ "/assets/images/logos/120-lino-logo.png": {
+  "w": 560,
+  "webp": "/assets/images/logos/120-lino-logo.webp"
+ },
+ "/assets/images/logos/Los_Angeles_Apparel_logo.png": {
+  "w": 560,
+  "webp": "/assets/images/logos/Los_Angeles_Apparel_logo.webp"
+ },
+ "/assets/images/logos/LoveShackFancy-logo.png": {
+  "w": 600,
+  "webp": "/assets/images/logos/LoveShackFancy-logo.webp"
+ },
+ "/assets/images/logos/acne-studios-logo.png": {
+  "w": 560,
+  "webp": "/assets/images/logos/acne-studios-logo.webp"
+ },
+ "/assets/images/logos/asics-logo.png": {
+  "w": 560,
+  "webp": "/assets/images/logos/asics-logo.webp"
+ },
+ "/assets/images/logos/lammles-logo.png": {
+  "w": 560,
+  "webp": "/assets/images/logos/lammles-logo.webp"
+ },
+ "/assets/images/logos/luccheselogo.png": {
+  "w": 560,
+  "webp": "/assets/images/logos/luccheselogo.webp"
+ },
+ "/assets/images/logos/moose-knuckles-logo.png": {
+  "w": 541,
+  "webp": "/assets/images/logos/moose-knuckles-logo.webp"
+ },
+ "/assets/images/logos/npeal-logo.png": {
+  "w": 560,
+  "webp": "/assets/images/logos/npeal-logo.webp"
+ },
+ "/assets/images/logos/oner-logo.png": {
+  "w": 600,
+  "webp": "/assets/images/logos/oner-logo.webp"
+ },
+ "/assets/images/logos/the-row-logo.png": {
+  "w": 560,
+  "webp": "/assets/images/logos/the-row-logo.webp"
+ },
+ "/assets/images/logos/tori-richard-logo.png": {
+  "w": 421,
+  "webp": "/assets/images/logos/tori-richard-logo.webp"
+ },
+ "/assets/images/logos/uniqlo-logo.png": {
+  "w": 326,
+  "webp": "/assets/images/logos/uniqlo-logo.webp"
+ },
+ "/assets/images/og-image.png": {
+  "w": 1200,
+  "webp": "/assets/images/og-image.webp"
+ },
+ "/assets/images/security/gdpr.png": {
+  "w": 200,
+  "webp": "/assets/images/security/gdpr.webp"
+ },
+ "/assets/images/security/iso-27001.png": {
+  "w": 200,
+  "webp": "/assets/images/security/iso-27001.webp"
+ },
+ "/assets/images/security/mlps.png": {
+  "w": 200,
+  "webp": "/assets/images/security/mlps.webp"
+ },
+ "/assets/images/security/nf525-tse.png": {
+  "w": 200,
+  "webp": "/assets/images/security/nf525-tse.webp"
+ },
+ "/assets/images/security/pci-dss.png": {
+  "w": 200,
+  "webp": "/assets/images/security/pci-dss.webp"
+ },
+ "/assets/images/security/soc-1.png": {
+  "w": 200,
+  "webp": "/assets/images/security/soc-1.webp"
+ },
+ "/assets/images/security/soc-2.png": {
+  "w": 200,
+  "webp": "/assets/images/security/soc-2.webp"
+ }
+}
