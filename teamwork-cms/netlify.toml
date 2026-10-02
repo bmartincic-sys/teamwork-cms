@@ -4,12 +4,12 @@
 
 [[redirects]]
   from = "/platform/121-commerce/"
-  to = "/platform/cxp/"
+  to = "/features/customer-data/"
   status = 301
 
 [[redirects]]
   from = "/solutions/"
-  to = "/platform/tcs/"
+  to = "/platform/mobile-pos/"
   status = 301
 
 [[redirects]]
@@ -68,3 +68,24 @@
   for = "/lp/*"
   [headers.values]
     X-Robots-Tag = "noindex, nofollow"
+
+# ---------------------------------------------------------------------------
+# Security headers, every response.
+#
+# The Content-Security-Policy ships in REPORT-ONLY mode: it is enforced by
+# nothing yet, and violations only appear in the browser console. The site has
+# a lot of inline script and style, so 'unsafe-inline' stays for now; the value
+# of this first policy is the origin allowlist, which was built from the
+# origins the live pages were observed contacting (the page itself, not the
+# YouTube, HubSpot and TikTok iframes, which carry their own policies).
+# Once the console is clean across the site, rename the header to
+# Content-Security-Policy to enforce it.
+# ---------------------------------------------------------------------------
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
+    Content-Security-Policy-Report-Only = "default-src 'self'; script-src 'self' 'unsafe-inline' https://cmp.osano.com https://js.hsforms.net https://www.tiktok.com https://*.tiktokcdn-us.com; style-src 'self' 'unsafe-inline' https://*.osano.com https://*.tiktokcdn-us.com; img-src 'self' data: https://*.osano.com https://*.hsforms.com https://*.hsforms.net; font-src 'self'; connect-src 'self' https://*.osano.com https://*.hsforms.com https://*.hsforms.net https://www.tiktok.com; frame-src https://www.youtube-nocookie.com https://www.youtube.com https://js.hsforms.net https://*.hsforms.net https://airtable.com https://www.tiktok.com; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self' https://*.hsforms.com; frame-ancestors 'self'"

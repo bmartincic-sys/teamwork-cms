@@ -9,6 +9,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/lp");
   eleventyConfig.ignores.add("src/lp/**");
   eleventyConfig.addPassthroughCopy("src/llms.txt");
+  // RFC 9116 security contact. Renew the Expires line yearly.
+  eleventyConfig.addPassthroughCopy("src/.well-known");
 
   // Images at output time. Templates keep their readable .jpg/.png paths; here
   // each <img> is pointed at its WebP (tools/images/manifest.json, made by

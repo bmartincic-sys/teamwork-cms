@@ -1,0 +1,4 @@
+Contact: https://www.teamworkcommerce.com/contact/
+Expires: 2027-10-02T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://www.teamworkcommerce.com/.well-known/security.txt
