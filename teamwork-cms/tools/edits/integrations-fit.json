@@ -1,0 +1,7 @@
+[
+  {
+    "note": "integrations: shave 11px to fit one line",
+    "old": "<h2 class=\"section-title\">What does Teamwork Commerce connect to?</h2>",
+    "new": "<h2 class=\"section-title\">What can Teamwork Commerce connect to?</h2>"
+  }
+]

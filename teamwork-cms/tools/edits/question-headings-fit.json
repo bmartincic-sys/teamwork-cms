@@ -1,0 +1,22 @@
+[
+  {
+    "note": "integrations (fit 1 line)",
+    "old": "<h2 class=\"section-title\">What systems does Teamwork Commerce integrate with?</h2>",
+    "new": "<h2 class=\"section-title\">What does Teamwork Commerce connect to?</h2>"
+  },
+  {
+    "note": "architecture: runs where (fit 1 line)",
+    "old": "<h2 class=\"section-title\">What runs in the store, and what runs in the cloud?</h2>",
+    "new": "<h2 class=\"section-title\">Store or cloud: what runs where?</h2>"
+  },
+  {
+    "note": "architecture: capability (fit 1 line)",
+    "old": "<h2 class=\"section-title\">Which capabilities are native, and which are connected?</h2>",
+    "new": "<h2 class=\"section-title\">What is native, and what is connected?</h2>"
+  },
+  {
+    "note": "oms (fit 1 line)",
+    "old": "<h2 class=\"section-title\">What does an associate do when an order lands?</h2>",
+    "new": "<h2 class=\"section-title\">What happens when an order lands?</h2>"
+  }
+]

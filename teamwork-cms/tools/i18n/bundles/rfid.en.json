@@ -3,7 +3,7 @@
   "extractedAt": "2026-10-02",
   "segments": 146,
   "unique": 141,
-  "words": 2016,
+  "words": 2018,
   "strings": {
     "a79b64a937": {
       "source": "Native RFID for Retail Inventory",
@@ -831,8 +831,8 @@
         "div"
       ]
     },
-    "5690048e25": {
-      "source": "What the handheld actually does.",
+    "784a545064": {
+      "source": "What can the RFID handheld actually do?",
       "kind": "text",
       "context": [
         "h2"

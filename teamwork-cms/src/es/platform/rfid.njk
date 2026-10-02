@@ -413,7 +413,7 @@ stickyHref: "/demo/"
   <div class="container">
     <div class="section-header">
       <div class="section-eyebrow">RFID en la práctica</div>
-      <h2 class="section-title">Lo que la terminal de mano realmente hace.</h2>
+      <h2 class="section-title">¿Qué puede hacer realmente la terminal de mano RFID?</h2>
     </div>
     <div class="rfp-stage">
       <div class="rfp-col rfp-col-left">
@@ -496,24 +496,24 @@ stickyHref: "/demo/"
     </div>
     <div style="max-width: 800px; margin: 0 auto;">
       <div class="faq-item">
-        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+        <h3 class="faq-q"><button class="faq-question" aria-expanded="false" onclick="var i=this.closest('.faq-item');i.classList.toggle('open');this.setAttribute('aria-expanded',i.classList.contains('open'))">
           ¿Qué hace que el RFID de Teamwork Commerce sea diferente al de la competencia?
           <span class="faq-icon"><i class="ti ti-plus"></i></span>
-        </button>
+        </button></h3>
         <div class="faq-answer"><p>Teamwork Commerce ofrece un stack RFID nativo que va desde el comisionado (commissioning) de etiquetas en la recepción hasta las transferencias, los conteos y el pago. Sin middleware de terceros, y el hardware lector lo elige usted. Nuestro RFID es nativo a la lógica central: cada transacción (recepción, conteo, transferencia, venta) opera por EPC individual, no solo por UPC.</p></div>
       </div>
       <div class="faq-item">
-        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+        <h3 class="faq-q"><button class="faq-question" aria-expanded="false" onclick="var i=this.closest('.faq-item');i.classList.toggle('open');this.setAttribute('aria-expanded',i.classList.contains('open'))">
           ¿Qué hardware soportan?
           <span class="faq-icon"><i class="ti ti-plus"></i></span>
-        </button>
+        </button></h3>
         <div class="faq-answer"><p>Publicamos una lista de hardware certificado que cubre los dispositivos integrados y soportados con TW POS Pro, incluidas las terminales de mano RFID Bluebird. Es deliberadamente corta, aproximadamente un dispositivo certificado por categoría en lugar de un catálogo, y hoy no hay arcos EAS certificados en ella. Recomendamos hardware certificado para compatibilidad total; si desea usar algo que no está en la lista, su equipo de Client Success puede asesorarle sobre el soporte.</p></div>
       </div>
       <div class="faq-item">
-        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+        <h3 class="faq-q"><button class="faq-question" aria-expanded="false" onclick="var i=this.closest('.faq-item');i.classList.toggle('open');this.setAttribute('aria-expanded',i.classList.contains('open'))">
           ¿Los proveedores pueden pre-etiquetar los artículos, o necesitamos comisionar las etiquetas en tienda?
           <span class="faq-icon"><i class="ti ti-plus"></i></span>
-        </button>
+        </button></h3>
         <div class="faq-answer"><p>Ambas opciones. Si su proveedor o almacén despacha mercancía ya etiquetada, se escanea directamente en el recibo de compra. Si no, Teamwork ofrece un flujo de codificación integrado dentro del documento de recibo de compra: definir cantidad, imprimir y codificar etiquetas, colocarlas, y luego escanear por RFID para poblar el recibo con los EPC individuales. Un solo paso, sin proceso aparte.</p></div>
       </div>
     </div>

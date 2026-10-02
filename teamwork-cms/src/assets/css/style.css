@@ -12091,3 +12091,52 @@ p, li, figcaption, blockquote,
 .pillar-desc, .blog-card-excerpt, .faq-answer p {
   text-wrap: balance;
 }
+
+/* ===== FAQ question headings =====
+   The 174 FAQ questions were <button> only, so they carried no heading rank
+   and answer engines could not see them as questions. The heading wraps the
+   button rather than sitting inside it: <button> takes phrasing content, so an
+   <h3> within one is invalid.
+
+   The h3 is purely structural here. It must add no box and no type of its own,
+   or every FAQ on the site resizes and gains spacing. */
+.faq-q {
+  margin: 0;
+  font: inherit;
+  letter-spacing: inherit;
+  color: inherit;
+}
+
+/* ===== Anonymous rollout quote =====
+   Sits between the rollout steps and the footnote. No brand logo and no name,
+   so it uses the quiet panel treatment rather than .quote-card, which is built
+   around an attributed logo. Solid border, no gradient: the gradient is
+   reserved for AI, Plus and CTAs. */
+.rollout-quote {
+  max-width: 760px;
+  margin: 44px auto 0;
+  padding: 26px 30px;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--brand-blue);
+  border-radius: 14px;
+  background: var(--panel);
+  text-align: left;
+}
+.rollout-quote blockquote {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--text);
+  font-style: italic;
+}
+.rollout-quote figcaption {
+  margin-top: 14px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-faint);
+  font-style: normal;
+}
+@media (max-width: 640px) {
+  .rollout-quote { padding: 20px 22px; margin-top: 32px; }
+  .rollout-quote blockquote { font-size: 15.5px; }
+}

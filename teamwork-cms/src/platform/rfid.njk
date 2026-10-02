@@ -411,7 +411,7 @@ stickyHref: "/demo/"
   <div class="container">
     <div class="section-header">
       <div class="section-eyebrow">RFID in Practice</div>
-      <h2 class="section-title">What the handheld actually does.</h2>
+      <h2 class="section-title">What can the RFID handheld actually do?</h2>
     </div>
     <div class="rfp-stage">
       <div class="rfp-col rfp-col-left">
@@ -494,24 +494,24 @@ stickyHref: "/demo/"
     </div>
     <div style="max-width: 800px; margin: 0 auto;">
       <div class="faq-item">
-        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+        <h3 class="faq-q"><button class="faq-question" aria-expanded="false" onclick="var i=this.closest('.faq-item');i.classList.toggle('open');this.setAttribute('aria-expanded',i.classList.contains('open'))">
           What makes Teamwork Commerce RFID different from competitors?
           <span class="faq-icon"><i class="ti ti-plus"></i></span>
-        </button>
+        </button></h3>
         <div class="faq-answer"><p>Teamwork Commerce offers a native RFID stack that runs from tag commissioning at receiving through transfers, counts and checkout. No third-party middleware required, and the reader hardware is yours to choose. Our RFID is native to the core logic: every transaction (receiving, counting, transferring, selling) operates by individual EPC, not just UPC.</p></div>
       </div>
       <div class="faq-item">
-        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+        <h3 class="faq-q"><button class="faq-question" aria-expanded="false" onclick="var i=this.closest('.faq-item');i.classList.toggle('open');this.setAttribute('aria-expanded',i.classList.contains('open'))">
           What hardware do you support?
           <span class="faq-icon"><i class="ti ti-plus"></i></span>
-        </button>
+        </button></h3>
         <div class="faq-answer"><p>We publish a certified hardware list covering the devices integrated and supported with TW POS Pro, including Bluebird RFID handhelds. It is deliberately short, roughly one certified device per category rather than a catalogue, and there are no certified EAS gates on it today. We recommend certified hardware for full compatibility; if you want to use something not on the list, your Client Success team can advise on support.</p></div>
       </div>
       <div class="faq-item">
-        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+        <h3 class="faq-q"><button class="faq-question" aria-expanded="false" onclick="var i=this.closest('.faq-item');i.classList.toggle('open');this.setAttribute('aria-expanded',i.classList.contains('open'))">
           Can vendors pre-tag items, or do we need to commission tags in-store?
           <span class="faq-icon"><i class="ti ti-plus"></i></span>
-        </button>
+        </button></h3>
         <div class="faq-answer"><p>Both. If your vendor or warehouse ships goods already tagged, they scan straight into the purchase receipt. If not, Teamwork provides an integrated encoding workflow inside the purchase receipt document: define quantity, print and encode tags, affix them, then RFID scan to populate the receipt with individual EPCs. One step, no separate process.</p></div>
       </div>
     </div>

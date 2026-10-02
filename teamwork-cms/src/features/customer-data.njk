@@ -352,38 +352,38 @@ stickyText: "See what your associates would know at checkout."
     </div>
     <div style="max-width: 800px; margin: 0 auto;">
       <div class="faq-item">
-        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+        <h3 class="faq-q"><button class="faq-question" aria-expanded="false" onclick="var i=this.closest('.faq-item');i.classList.toggle('open');this.setAttribute('aria-expanded',i.classList.contains('open'))">
           Is this a CDP, and how does it sit alongside our CRM?
           <span class="faq-icon"><i class="ti ti-plus"></i></span>
-        </button>
+        </button></h3>
         <div class="faq-answer"><p>It performs the role a customer data platform plays for store retail: unified customer profiles holding preferences, purchase history, and engagement data, captured through self-registration and tied to transactions at the point of sale. It is designed to sit alongside your existing CRM rather than replace it. Open customer APIs import and export customer information, so you keep the CRM workflows you already run.</p></div>
       </div>
       <div class="faq-item">
-        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+        <h3 class="faq-q"><button class="faq-question" aria-expanded="false" onclick="var i=this.closest('.faq-item');i.classList.toggle('open');this.setAttribute('aria-expanded',i.classList.contains('open'))">
           How does customer sign-up work at the register?
           <span class="faq-icon"><i class="ti ti-plus"></i></span>
-        </button>
+        </button></h3>
         <div class="faq-answer"><p>Customers register themselves by scanning a QR code on their own device, so nobody types details at the cash wrap and the queue keeps moving. A scannable barcode ties the new profile to the transaction and receipt instantly, and email or SMS marketing consent is captured during registration.</p></div>
       </div>
       <div class="faq-item">
-        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+        <h3 class="faq-q"><button class="faq-question" aria-expanded="false" onclick="var i=this.closest('.faq-item');i.classList.toggle('open');this.setAttribute('aria-expanded',i.classList.contains('open'))">
           Does this replace our CRM?
           <span class="faq-icon"><i class="ti ti-plus"></i></span>
-        </button>
+        </button></h3>
         <div class="faq-answer"><p>No. Open customer APIs import and export customer information, so it supports the CRM workflows you already run rather than requiring a full migration. Records are cleansed and deduplicated, with languages, locations, and registration templates configured per market.</p></div>
       </div>
       <div class="faq-item">
-        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+        <h3 class="faq-q"><button class="faq-question" aria-expanded="false" onclick="var i=this.closest('.faq-item');i.classList.toggle('open');this.setAttribute('aria-expanded',i.classList.contains('open'))">
           What is the AI at the point of sale?
           <span class="faq-icon"><i class="ti ti-plus"></i></span>
-        </button>
+        </button></h3>
         <div class="faq-answer"><p>Customer intelligence and product intelligence converge at the point of sale: real-time associate guidance backed by the customer's history and the live product record. AI customer sessions capture what was asked and recommended, enabling continuous AI improvement and customer insight. </p></div>
       </div>
       <div class="faq-item">
-        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+        <h3 class="faq-q"><button class="faq-question" aria-expanded="false" onclick="var i=this.closest('.faq-item');i.classList.toggle('open');this.setAttribute('aria-expanded',i.classList.contains('open'))">
           Can we collect post-purchase feedback?
           <span class="faq-icon"><i class="ti ti-plus"></i></span>
-        </button>
+        </button></h3>
         <div class="faq-answer"><p>Yes. Dynamic QR codes generated on receipts invite customers into a survey after they buy, which turns a receipt into a feedback channel without a separate email campaign.</p></div>
       </div>
     </div>

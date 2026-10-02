@@ -315,7 +315,7 @@ stickyHref: "/demo/"
   <div class="container">
     <div class="section-header">
       <div class="section-eyebrow">Fulfillment Operations</div>
-      <h2 class="section-title">What the associate does when an order lands.</h2>
+      <h2 class="section-title">What happens when an order lands?</h2>
       <p class="section-sub">Three taps on the device already in their hand, between a customer walking in and a parcel going out.</p>
     </div>
     <div class="stepx">
@@ -412,31 +412,31 @@ stickyHref: "/demo/"
     </div>
     <div style="max-width: 800px; margin: 0 auto;">
       <div class="faq-item">
-        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+        <h3 class="faq-q"><button class="faq-question" aria-expanded="false" onclick="var i=this.closest('.faq-item');i.classList.toggle('open');this.setAttribute('aria-expanded',i.classList.contains('open'))">
           What makes Teamwork Commerce OMS different from standalone order management systems?
           <span class="faq-icon"><i class="ti ti-plus"></i></span>
-        </button>
+        </button></h3>
         <div class="faq-answer"><p>Teamwork's OMS is natively integrated with POS and Inventory rather than bolted on through middleware, so order-fill decisions read the same live stock record the store is selling from. You configure the fill logic yourself, ranking strategies by stock depth and node capacity and setting rules by store, region, channel or SKU, and safety stock per location holds a popular line back for the shop floor. Where a retailer runs RFID, the counts behind that record are verified to 99.9% accuracy.</p></div>
       </div>
       <div class="faq-item">
-        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+        <h3 class="faq-q"><button class="faq-question" aria-expanded="false" onclick="var i=this.closest('.faq-item');i.classList.toggle('open');this.setAttribute('aria-expanded',i.classList.contains('open'))">
           How does Order Fill Logic decide where to fulfill an order?
           <span class="faq-icon"><i class="ti ti-plus"></i></span>
-        </button>
+        </button></h3>
         <div class="faq-answer"><p>Order Fill Logic is a ranked, configurable rule stack. You set the priority, for example fill complete from the highest-stock location, ship-to-store for pickup orders, or ship-from-vendor, and the engine applies your rules to every order against live stock. It can also split an order across nodes when a single location cannot fill it. It does not rate-shop carriers or route by distance, and it does not calculate margin.</p></div>
       </div>
       <div class="faq-item">
-        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+        <h3 class="faq-q"><button class="faq-question" aria-expanded="false" onclick="var i=this.closest('.faq-item');i.classList.toggle('open');this.setAttribute('aria-expanded',i.classList.contains('open'))">
           Can Teamwork Commerce OMS handle ship-from-store and BOPIS?
           <span class="faq-icon"><i class="ti ti-plus"></i></span>
-        </button>
+        </button></h3>
         <div class="faq-answer"><p>Yes. Ship-from-store turns every retail location into a fulfillment node with pick-and-pack tasks for store associates. BOPIS (Buy Online Pick Up In Store) promises against the live stock record rather than an overnight file, so the item is there when the customer arrives. Buy Online Return In Store (BORIS) is also natively supported.</p></div>
       </div>
       <div class="faq-item">
-        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+        <h3 class="faq-q"><button class="faq-question" aria-expanded="false" onclick="var i=this.closest('.faq-item');i.classList.toggle('open');this.setAttribute('aria-expanded',i.classList.contains('open'))">
           Does the OMS support multi-currency and multi-entity operations?
           <span class="faq-icon"><i class="ti ti-plus"></i></span>
-        </button>
+        </button></h3>
         <div class="faq-answer"><p>Yes. The OMS operates across multiple legal entities and currencies, and a US-based HQ can manage global operations while regional teams work in their local currency and language. Fiscal compliance itself sits with the POS and with the ERP: the OMS hands the order, tender and stock movement across so the books are closed in the system that owns them.</p></div>
       </div>
     </div>

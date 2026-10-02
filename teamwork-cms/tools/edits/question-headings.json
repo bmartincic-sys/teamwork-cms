@@ -1,0 +1,32 @@
+[
+  {
+    "note": "integrations",
+    "old": "<h2 class=\"section-title\">Systems we integrate with.</h2>",
+    "new": "<h2 class=\"section-title\">What systems does Teamwork Commerce integrate with?</h2>"
+  },
+  {
+    "note": "architecture: what runs where",
+    "old": "<h2 class=\"section-title\">What runs where.</h2>",
+    "new": "<h2 class=\"section-title\">What runs in the store, and what runs in the cloud?</h2>"
+  },
+  {
+    "note": "architecture: capability index",
+    "old": "<h2 class=\"section-title\">Capability index: native or connected.</h2>",
+    "new": "<h2 class=\"section-title\">Which capabilities are native, and which are connected?</h2>"
+  },
+  {
+    "note": "rfid: handheld",
+    "old": "<h2 class=\"section-title\">What the handheld actually does.</h2>",
+    "new": "<h2 class=\"section-title\">What can the RFID handheld actually do?</h2>"
+  },
+  {
+    "note": "oms: associate",
+    "old": "<h2 class=\"section-title\">What the associate does when an order lands.</h2>",
+    "new": "<h2 class=\"section-title\">What does an associate do when an order lands?</h2>"
+  },
+  {
+    "note": "analytics: who opens it",
+    "old": "<h2 class=\"section-title\">Who opens it, and what changes.</h2>",
+    "new": "<h2 class=\"section-title\">Who opens the reports, and what changes?</h2>"
+  }
+]

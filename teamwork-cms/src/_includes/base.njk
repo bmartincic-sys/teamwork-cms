@@ -86,7 +86,44 @@
   "numberOfEmployees": {
     "@type": "QuantitativeValue",
     "value": "200+"
-  }
+  },
+  "foundingDate": "2009",
+  "founder": {
+    "@type": "Person",
+    "name": "Michael Mauerer",
+    "jobTitle": "Founder & CEO"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "380 Park Place Blvd, Suite 250",
+    "addressLocality": "Clearwater",
+    "addressRegion": "FL",
+    "postalCode": "33759",
+    "addressCountry": "US"
+  },
+  "telephone": "+1-727-210-1700",
+  "email": "sales@teamworkcommerce.com",
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "contactType": "sales",
+      "telephone": "+1-877-877-8326",
+      "email": "sales@teamworkcommerce.com",
+      "areaServed": "Worldwide"
+    },
+    {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "url": "https://teamworkclients.atlassian.net/secure/Dashboard.jspa",
+      "areaServed": "Worldwide",
+      "hoursAvailable": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "00:00",
+        "closes": "23:59"
+      }
+    }
+  ]
 }
 </script>
 
@@ -98,6 +135,8 @@
   "name": "Teamwork Commerce",
   "applicationCategory": "BusinessApplication",
   "operatingSystem": "iOS, Cloud",
+  "url": "https://www.teamworkcommerce.com/platform/mobile-pos/",
+  "publisher": { "@type": "Organization", "name": "Teamwork Commerce" },
   "description": "Natively integrated enterprise POS, with OMS, Inventory Management, RFID, and AI as extras that make it stronger, for mid-market and enterprise retailers.",
   "featureList": [
     "Mobile-first enterprise POS",
