@@ -12140,3 +12140,104 @@ p, li, figcaption, blockquote,
   .rollout-quote { padding: 20px 22px; margin-top: 32px; }
   .rollout-quote blockquote { font-size: 15.5px; }
 }
+
+/* ===== Site search overlay =====
+   Opened from the nav or with Cmd/Ctrl+K. The index is fetched on first open,
+   so page load carries only this markup and a few KB of inline script. */
+.sx-overlay {
+  position: fixed; inset: 0; z-index: 2000;
+  background: rgba(7, 9, 26, 0.55);
+  backdrop-filter: blur(3px);
+  display: flex; align-items: flex-start; justify-content: center;
+  padding: 10vh 20px 20px;
+}
+.sx-overlay[hidden] { display: none; }
+.sx-panel {
+  width: 100%; max-width: 640px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: 0 30px 80px -20px rgba(7, 9, 26, 0.45);
+  overflow: hidden;
+  display: flex; flex-direction: column;
+  max-height: 72vh;
+}
+.sx-head {
+  display: flex; align-items: center; gap: 12px;
+  padding: 16px 18px; border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+.sx-head-icon { font-size: 18px; color: var(--text-faint); flex-shrink: 0; }
+.sx-input {
+  flex: 1 1 auto; border: 0; background: none; outline: none;
+  font-family: var(--font-body); font-size: 16px; color: var(--text);
+  padding: 4px 0;
+}
+.sx-input::placeholder { color: var(--text-faint); }
+.sx-input::-webkit-search-cancel-button { display: none; }
+.sx-close {
+  border: 1px solid var(--border); background: none; cursor: pointer;
+  border-radius: 6px; padding: 4px 8px; flex-shrink: 0;
+  font-family: var(--font-body); font-size: 11px; font-weight: 600;
+  color: var(--text-faint);
+}
+.sx-close:hover { color: var(--text); border-color: var(--border-strong); }
+.sx-results { overflow-y: auto; padding: 8px; flex: 1 1 auto; }
+.sx-hit {
+  display: block; padding: 11px 13px; border-radius: 10px;
+  text-decoration: none; color: inherit;
+}
+.sx-hit:hover, .sx-hit.is-active { background: var(--bg-deep); }
+.sx-hit-kind {
+  display: block; font-size: 10.5px; font-weight: 700;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--brand-blue); margin-bottom: 3px;
+}
+.sx-hit-title {
+  display: block; font-size: 15px; font-weight: 600;
+  color: var(--text); line-height: 1.35;
+}
+.sx-hit-snip {
+  display: block; font-size: 13px; color: var(--text-muted);
+  line-height: 1.5; margin-top: 3px;
+  overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+}
+.sx-hit mark { background: var(--brand-soft); color: inherit; border-radius: 3px; padding: 0 1px; }
+.sx-empty { padding: 26px 14px; text-align: center; color: var(--text-muted); font-size: 14px; }
+.sx-foot {
+  display: flex; gap: 18px; flex-shrink: 0;
+  padding: 10px 18px; border-top: 1px solid var(--border);
+  font-size: 11.5px; color: var(--text-faint);
+}
+.sx-foot kbd {
+  font-family: var(--font-body); font-size: 10.5px;
+  border: 1px solid var(--border); border-radius: 4px;
+  padding: 1px 5px; margin-right: 3px; color: var(--text-muted);
+}
+@media (max-width: 640px) {
+  .sx-overlay { padding: 0; }
+  .sx-panel { max-width: none; max-height: 100vh; height: 100%; border-radius: 0; border: 0; }
+  .sx-foot { display: none; }
+}
+
+/* ===== Small labels on phones =====
+   A mobile audit found real reading labels set at 9.5-10.5px: event chips,
+   case-study sector tags, proof tags, blog tags. Readable on a desktop, but
+   below a comfortable minimum on a phone. Raised to 11px on small screens only.
+   Device mockups (.uix-*, .dashw-*, .diffx-*) and diagram nodes keep their
+   size on purpose: they imitate a screen or fit a fixed drawing. */
+@media (max-width: 640px) {
+  .blog-tag, .cfu-away, .cfu-stand-lab, .csx-name, .csx-sector, .dossx-cap,
+  .evc-kind, .evc-region, .evy-count, .hpos-annot, .innum-eyebrow, .jw-mono,
+  .mu-tag, .proof-tag, .pt-label {
+    font-size: 11px;
+  }
+}
+
+/* ===== Centered mid-page CTA (opt-in) ===== */
+.midcta-center .midcta-inner { flex-direction: column; justify-content: center; text-align: center; gap: 22px; }
+
+/* ===== Jewelry story links =====
+   A plain arrow chip under each step read as "next step". These name their
+   destination and sit bottom-right of the card, so they read as a link out. */
+main.v-jewelry a.tm-day-win { display: flex; width: fit-content; margin-left: auto; margin-top: 16px; }

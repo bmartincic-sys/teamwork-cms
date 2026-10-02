@@ -1,0 +1,92 @@
+[
+  {
+    "note": "jw: description",
+    "old": "description: \"Enterprise POS for jewelry and watch chains: RFID serialized tracking, unit-level chain of custody, SOC 2 security, omnichannel fulfillment in 40+ countries.\"",
+    "new": "description: \"Enterprise POS for jewelry and watch chains: serialized tracking with or without RFID, special orders and layaway, a secure customer record, and omnichannel fulfillment in 40+ countries.\""
+  },
+  {
+    "note": "jw: hero",
+    "old": "Serialized pieces, high values, consignment. Teamwork Commerce delivers the omnichannel infrastructure, RFID serialization, and SOC 2 security that jewelry and watch retailers need to operate globally.",
+    "new": "Serialized pieces, high values, special orders. Teamwork Commerce delivers the omnichannel infrastructure and serialized tracking, with or without RFID, that jewelry and watch retailers need."
+  },
+  {
+    "note": "jw: ticker (all platform, all sourced)",
+    "old": "        <div class=\"ticker-value\">$398<span>B</span></div>\n        <div class=\"ticker-label\">Global jewelry market, 2026 (Grand View Research)</div>\n      </div>\n      <div class=\"ticker-item\">\n        <div class=\"ticker-value\">79<span>%</span></div>\n        <div class=\"ticker-label\">Research jewelry online first</div>\n      </div>\n      <div class=\"ticker-item\">\n        <div class=\"ticker-value\">1.68<span>%</span></div>\n        <div class=\"ticker-label\">Retail shrink, share of revenue, 2024 (NRF)</div>",
+    "new": "        <div class=\"ticker-value\">30,000<span>+</span></div>\n        <div class=\"ticker-label\">Terminals live worldwide</div>\n      </div>\n      <div class=\"ticker-item\">\n        <div class=\"ticker-value\">99.99<span>%</span></div>\n        <div class=\"ticker-label\">Uptime across the fleet</div>\n      </div>\n      <div class=\"ticker-item\">\n        <div class=\"ticker-value\">99.9<span>%</span></div>\n        <div class=\"ticker-label\">Inventory accuracy with RFID</div>"
+  },
+  {
+    "note": "jw: plate",
+    "old": "Every piece carries its own EPC, a digital passport that follows it from receiving to the client's hand.",
+    "new": "Every piece carries its own unit ID, a digital passport that follows it from receiving to the client's hand."
+  },
+  {
+    "note": "jw: ledger head",
+    "old": "<span class=\"jw-mono\">Serialized capability ledger</span>",
+    "new": "<span class=\"jw-mono\">Jewelry &amp; watch POS capabilities</span>"
+  },
+  {
+    "note": "jw: 001",
+    "old": "            <h3>RFID serialized tracking</h3>\n            <p>Count a display case without lifting a single piece. Every EPC has a full transactional history: received, counted, transferred, sold.</p>",
+    "new": "            <h3>Serialized tracking, with or without RFID</h3>\n            <p>Every piece tracked as its own unit, with a full history from received to sold. With RFID, a display case is counted without lifting a piece.</p>"
+  },
+  {
+    "note": "jw: 002 security -> secure CRM",
+    "old": "            <h3>Enterprise-grade security</h3>\n            <p>SOC 2 Type 2, PCI DSS, and GDPR, with role-based access control governing exactly who sees what, and audit trails on every transaction.</p>",
+    "new": "            <h3>A secure customer record</h3>\n            <p>Client details, purchase history and preferences protected under SOC 2 Type 2, PCI DSS and GDPR, so customer data stays where it belongs.</p>"
+  },
+  {
+    "note": "jw: 003 drop AI claim",
+    "old": "Ring sizes, metal preferences, anniversaries, and wishlists on one record, with AI-powered recommendations.",
+    "new": "Ring sizes, metal preferences, anniversaries and notes on one record."
+  },
+  {
+    "note": "jw: 005 gift/loyalty -> special orders",
+    "old": "        <a class=\"jw-row\" href=\"/platform/mobile-pos/#shopper-display\">\n          <span class=\"jw-idx\">005</span>\n          <div class=\"jw-row-body\">\n            <h3>Gift cards, loyalty &amp; VIP</h3>\n            <p>Digital and physical gift cards, omnichannel loyalty, and VIP tiers built in, no bolt-on vendor for your best clients.</p>",
+    "new": "        <a class=\"jw-row\" href=\"/platform/oms/\">\n          <span class=\"jw-idx\">005</span>\n          <div class=\"jw-row-body\">\n            <h3>Special orders, repairs and layaway</h3>\n            <p>Take special orders, custom pieces, deposits and layaway at the counter, and hand repairs to your repair system with the status coming back when the piece is ready.</p>"
+  },
+  {
+    "note": "jw: 006 global -> bespoke",
+    "old": "        <a class=\"jw-row\" href=\"/platform/mobile-pos/\">\n          <span class=\"jw-idx\">006</span>\n          <div class=\"jw-row-body\">\n            <h3>Global operations</h3>\n            <p>Live in 40+ countries with multi-currency, multi-language, and automated fiscal compliance: VAT, GST, NF525, TSE.</p>",
+    "new": "        <a class=\"jw-row\" href=\"/platform/integrations/\">\n          <span class=\"jw-idx\">006</span>\n          <div class=\"jw-row-body\">\n            <h3>Bespoke workflows</h3>\n            <p>Extend the platform with custom services alongside the POS, for the workflows that are specific to your house.</p>"
+  },
+  {
+    "note": "jw: section eyebrow",
+    "old": "<span class=\"section-eyebrow\">Consignment & Deposits</span>",
+    "new": "<span class=\"section-eyebrow\">Deposits & Layaway</span>"
+  },
+  {
+    "note": "jw: section h2",
+    "old": "<h2>Layaway, deposits and consignment at the register.</h2>",
+    "new": "<h2>Layaway, deposits and special orders at the register.</h2>"
+  },
+  {
+    "note": "jw: section p",
+    "old": "Jewelry retail involves transaction types that generic POS platforms don't support: consignment inventory, deposit collection for custom orders, layaway, and personal shopper checkout where inventory leaves the store on approval.",
+    "new": "Jewelry retail involves transaction types that generic POS platforms don't support well: deposits for custom orders, layaway, and special orders that pass through a workshop."
+  },
+  {
+    "note": "jw: drop consignment bullet",
+    "old": "          <li>Consignment support: personal shoppers can take inventory for clients to try at home, tracked by RFID with full chain-of-custody</li>\n",
+    "new": ""
+  },
+  {
+    "note": "jw: drop QuickBooks",
+    "old": "Integrated accounting: connects to QuickBooks and ERP systems, reducing manual bookkeeping errors",
+    "new": "Integrated accounting: connects to ERP systems, reducing manual bookkeeping errors"
+  },
+  {
+    "note": "jw: step 2",
+    "old": "          <h3>The client is known before they ask</h3>\n          <p>Purchase history, preferences, and prior consultations surface for the associate at the counter.</p>",
+    "new": "          <h3>Know your VIP client before they ask</h3>\n          <p>Purchase history, preferences, notes and prior consultations surface for the associate at the counter.</p>"
+  },
+  {
+    "note": "jw: step 4",
+    "old": "          <h3>Nothing walks out unaccounted for</h3>\n          <p>A unit-level ledger means every piece in the case has a known status at all times.</p>",
+    "new": "          <h3>Track every individual unit</h3>\n          <p>Follow each piece through its life cycle: received, on layaway, sold, returned.</p>"
+  },
+  {
+    "note": "jw: step 5",
+    "old": "Reporting across stores, currencies, and consignment on one governed data set.",
+    "new": "Reporting on each piece's life cycle, and verification that the unit being sold is the right one."
+  }
+]

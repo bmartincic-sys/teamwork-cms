@@ -32,9 +32,15 @@
   to = "/features/access-identity/"
   status = 301
 
+# Training & Certification was removed: the feature is not live.
+[[redirects]]
+  from = "/features/training/"
+  to = "/features/access-identity/"
+  status = 301
+
 [[redirects]]
   from = "/platform/lms/"
-  to = "/features/training/"
+  to = "/features/access-identity/"
   status = 301
 
 [[redirects]]

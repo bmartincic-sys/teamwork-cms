@@ -1,0 +1,57 @@
+[
+  {
+    "note": "pd: core heading",
+    "old": "Everything about a product, on its record.",
+    "new": "Everything about a product."
+  },
+  {
+    "note": "pd: flexible classification",
+    "old": "<li>Classifications, codes, brands, and seasons on every record",
+    "new": "<li>Flexible classification by code, brand and season"
+  },
+  {
+    "note": "pd: ERP-integrated catalog",
+    "old": "        <h3>Catalog imports</h3>\n        <p>Import and manage catalog data from external systems, so onboarding an assortment and ongoing maintenance don't become manual projects.</p>",
+    "new": "        <h3>Integrated with your ERP</h3>\n        <p>Core product data comes in from your ERP, or goes out to it, so onboarding an assortment and keeping it current are not manual projects.</p>"
+  },
+  {
+    "note": "pd: omnichannel sync (drop overclaim)",
+    "old": "Product information stays consistent across POS, e-commerce, marketplaces, and third-party channels: one record, every destination.",
+    "new": "Product information stays consistent across POS, e-commerce, marketplaces and third-party channels, all from one record."
+  },
+  {
+    "note": "pd: brand concepts (not live) -> field-level publishing",
+    "old": "        <div class=\"mini-ico\"><i class=\"ti ti-bookmarks\"></i></div>\n        <h3>Brand concepts</h3>\n        <p>A library of brand messaging, positioning, and product concepts, the guardrails AI works within so generated content stays on-brand.</p>",
+    "new": "        <div class=\"mini-ico\"><i class=\"ti ti-filter\"></i></div>\n        <h3>Choose what goes where</h3>\n        <p>Not every field has to go everywhere. Send these fields to e-commerce, these to the POS, and these to marketplaces.</p>"
+  },
+  {
+    "note": "pd: diff aria",
+    "old": "aria-label=\"A product record with three fields on the left, and the same record on the right with a generated description, translations and imagery added.\"",
+    "new": "aria-label=\"A hoodie's product record on the left, and the same record on the right with a generated description, a Japanese translation and a color family added.\""
+  },
+  {
+    "note": "pd: diff before",
+    "old": "        <span class=\"diffx-row\"><b>Style</b> TW-4471</span>\n        <span class=\"diffx-row\"><b>Color</b> Black</span>\n        <span class=\"diffx-row\"><b>Sizes</b> 6&ndash;12</span>\n        <span class=\"diffx-row is-empty\"><b>Description</b> &mdash;</span>\n        <span class=\"diffx-row is-empty\"><b>Translations</b> &mdash;</span>\n        <span class=\"diffx-row is-empty\"><b>Imagery</b> &mdash;</span>",
+    "new": "        <span class=\"diffx-row\"><b>Product</b> Hoodie</span>\n        <span class=\"diffx-row\"><b>Color</b> Heather gray</span>\n        <span class=\"diffx-row\"><b>Sizes</b> S&ndash;XL</span>\n        <span class=\"diffx-row is-empty\"><b>Description</b> &mdash;</span>\n        <span class=\"diffx-row is-empty\"><b>Japanese</b> &mdash;</span>\n        <span class=\"diffx-row is-empty\"><b>Color family</b> &mdash;</span>"
+  },
+  {
+    "note": "pd: diff after",
+    "old": "        <span class=\"diffx-row\"><b>Style</b> TW-4471</span>\n        <span class=\"diffx-row\"><b>Color</b> Black</span>\n        <span class=\"diffx-row\"><b>Sizes</b> 6&ndash;12</span>\n        <span class=\"diffx-row is-add\"><b>Description</b> Written from the record</span>\n        <span class=\"diffx-row is-add\"><b>Translations</b> Per market, same source</span>\n        <span class=\"diffx-row is-add\"><b>Imagery</b> Matched and tagged</span>",
+    "new": "        <span class=\"diffx-row\"><b>Product</b> Hoodie</span>\n        <span class=\"diffx-row\"><b>Color</b> Heather gray</span>\n        <span class=\"diffx-row\"><b>Sizes</b> S&ndash;XL</span>\n        <span class=\"diffx-row is-add\"><b>Description</b> A relaxed hoodie in heather gray, in sizes S to XL.</span>\n        <span class=\"diffx-row is-add\"><b>Japanese</b> ヘザーグレーのリラックスフーディー。S〜XL展開。</span>\n        <span class=\"diffx-row is-add\"><b>Color family</b> Gray</span>"
+  },
+  {
+    "note": "pd: cards",
+    "old": "      <div class=\"intx-item\">\n        <span class=\"intx-n\">03</span>\n        <h3>Imagery &amp; video</h3>\n        <p>Generate product imagery and video from the photos already on the record, ready for every channel.</p>\n      </div>\n      <div class=\"intx-item\">\n        <span class=\"intx-n\">04</span>\n        <h3>AI product search</h3>\n        <p>Conversational search across product information, so an associate answers a customer in seconds, in multiple languages.</p>\n      </div>\n      <div class=\"intx-item\">\n        <span class=\"intx-n\">05</span>\n        <h3>Product recommendations</h3>\n        <p>Associates build curated collections and share personalized recommendations with a customer by text or email.</p>\n      </div>\n      <div class=\"intx-item\">\n        <span class=\"intx-n\">06</span>\n        <h3>Pre-scheduled content</h3>",
+    "new": "      <div class=\"intx-item\">\n        <span class=\"intx-n\">03</span>\n        <h3>Color families</h3>\n        <p>Exact shades like slate, cement and heather grouped under one color family, so a search for gray finds them all.</p>\n      </div>\n      <div class=\"intx-item\">\n        <span class=\"intx-n\">04</span>\n        <h3>AI product search</h3>\n        <p>Conversational search across product information, so an associate answers a customer in seconds, in multiple languages.</p>\n      </div>\n      <div class=\"intx-item\">\n        <span class=\"intx-n\">05</span>\n        <h3>Pre-scheduled content</h3>"
+  },
+  {
+    "note": "pd: benefits row (training gone)",
+    "old": "          <span class=\"shiftx-from\">Training that goes stale</span>\n          <span class=\"shiftx-arrow\"><i class=\"ti ti-arrow-right\"></i></span>\n          <span class=\"shiftx-to\">Course content that follows the catalog</span>",
+    "new": "          <span class=\"shiftx-from\">Every field pushed to every channel</span>\n          <span class=\"shiftx-arrow\"><i class=\"ti ti-arrow-right\"></i></span>\n          <span class=\"shiftx-to\">Each channel gets only the fields it needs</span>"
+  },
+  {
+    "note": "pd: AI FAQ (all copies)",
+    "old": "AI generates product descriptions, translations, search terms, imagery, and video from the record you already have, working within a library of brand messaging so output stays on-brand. It also powers conversational product search for associates and personalized product recommendations they can share with a customer.",
+    "new": "AI generates product descriptions, translations and search terms from the record you already have, and powers conversational product search for associates."
+  }
+]

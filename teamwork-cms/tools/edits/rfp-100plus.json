@@ -1,0 +1,47 @@
+[
+  {
+    "note": "rfp title",
+    "old": "Enterprise POS RFP Template: 123 Questions to Ask Vendors",
+    "new": "Enterprise POS RFP Template: 100+ Questions to Ask Vendors"
+  },
+  {
+    "note": "rfp description",
+    "old": "123 questions across 15 sections covering",
+    "new": "100+ questions across 15 sections covering"
+  },
+  {
+    "note": "rfp sticky",
+    "old": "stickyText: \"123 RFP questions, no form.\"",
+    "new": "stickyText: \"100+ RFP questions, no form.\""
+  },
+  {
+    "note": "rfp h1",
+    "old": "<span class=\"t-serif\">123 questions to ask vendors.</span>",
+    "new": "<span class=\"t-serif\">100+ questions to ask vendors.</span>"
+  },
+  {
+    "note": "rfp download",
+    "old": "Download all 123 (CSV)",
+    "new": "Download all questions (CSV)"
+  },
+  {
+    "note": "rfp stat",
+    "old": "<div class=\"rfpq-stat\"><strong>123</strong><span>Questions</span></div>",
+    "new": "<div class=\"rfpq-stat\"><strong>100+</strong><span>Questions</span></div>"
+  },
+  {
+    "note": "rfp how-to",
+    "old": "<p>123 questions is a bank to choose from, not a document to post.",
+    "new": "<p>A bank of 100+ questions is for choosing from, not a document to post."
+  },
+  {
+    "note": "rfp bank heading",
+    "old": "123 questions, in 15 sections.",
+    "new": "100+ questions, in 15 sections."
+  },
+  {
+    "note": "other pages: 123 RFP questions (3)",
+    "old": "123 RFP questions",
+    "new": "100+ RFP questions"
+  }
+]

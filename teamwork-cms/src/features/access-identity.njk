@@ -1,7 +1,7 @@
 ---
 layout: "solution.njk"
 title: "Retail IAM, SSO & Mobile Device Management"
-description: "Identity and access management (IAM) for store systems: rotating QR store logins, Active Directory/SSO/MFA integration, mobile device management, and one associate app on iOS and Android that works offline."
+description: "Identity and access management (IAM) for store systems: rotating QR store logins, biometric sign-in, Active Directory and SSO integration, matrixed permissions, and mobile device management."
 navLabel: "Access & Identity (IAM)"
 tags: "features"
 featureGroup: "Team"
@@ -31,37 +31,11 @@ stickyText: "Secure every login without slowing the floor."
 
     <div class="hero-photo-foot hero-foot-left fade-up" style="animation-delay: 0.25s;">
       <div class="hero-photo-note">
-        <p>Identity and access management for store systems, on the identity provider you already run. No shared passwords, no separate user database, no extra hardware, rotating QR logins on the phones your team already carries.</p>
+        <p>Identity and access management for store systems, on the identity provider you already run. Associates sign in with a rotating QR code, biometrics or a password, and there is no separate user database to maintain.</p>
         <div class="hero-cta">
           <a href="/demo/" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Book a demo <i class="ti ti-arrow-right"></i></a>
           <a href="/platform/mobile-pos/" class="btn btn-ghost btn-lg">See the POS</a>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ WHY IT MATTERS ============ -->
-<section class="ac-blue tm-band">
-  <div class="tm-band-glow"></div>
-  <div class="container">
-    <div class="section-header" style="text-align: center;">
-      <div class="section-eyebrow">Why Identity Matters</div>
-      <h2 class="section-title">Shared logins are a shrink problem.</h2>
-      <p class="section-sub">When several associates share one credential, nothing is attributable, and internal theft is a material share of total shrink.</p>
-    </div>
-    <div class="stat-row-4" style="grid-template-columns: repeat(3, 1fr);">
-      <div class="statcard statcard-blue">
-        <div class="statcard-value"><span class="counter" data-target="29" data-suffix="%">29%</span></div>
-        <div class="statcard-label">Of retail shrink is internal theft (Appriss Retail)</div>
-      </div>
-      <div class="statcard statcard-purple">
-        <div class="statcard-value">$26<span>B</span></div>
-        <div class="statcard-label">Annual cost of employee theft to retailers (Appriss Retail)</div>
-      </div>
-      <div class="statcard statcard-blue">
-        <div class="statcard-value">$2,180</div>
-        <div class="statcard-label">Average loss per internal theft investigation (NRF)</div>
       </div>
     </div>
   </div>
@@ -72,21 +46,22 @@ stickyText: "Secure every login without slowing the floor."
   <div class="container">
     <div class="section-header">
       <div class="section-eyebrow">Identity &amp; Access</div>
-      <h2 class="section-title">Role-based permissions for every associate.</h2>
+      <h2 class="section-title">Permissions as a matrix, not a fixed hierarchy.</h2>
       <p class="section-sub">Included with every deployment, no add-on required.</p>
     </div>
 
     <div class="feature-row" style="margin-top: 16px;">
       <div class="feature-text">
         <span class="section-eyebrow">Identity Management</span>
-        <h2>Active Directory, SSO and MFA integration.</h2>
+        <h2>Active Directory and SSO integration.</h2>
         <p>Centralized authentication, user roles and device access, running on the identity provider you already own.</p>
         <ul class="feature-bullets">
-          <li>Integrates with Active Directory, SSO, and MFA, no separate user database to maintain</li>
+          <li>Integrates with Active Directory and SSO, with MFA handled through your identity provider, so there is no separate user database to maintain</li>
           <li>Associate identities and permissions managed centrally, scoped per role</li>
           <li>Matrixed security rights across hundreds of individual corporate actions, not a handful of coarse presets</li>
-          <li>Employee profile transfers tracked when someone moves between locations</li>
-          <li>Device access governed alongside user access, tied to locations</li>
+          <li>Associates assigned to one location or several, and reassigned whenever you need</li>
+          <li>Devices configured centrally in the cloud, so store staff have nothing to set up</li>
+          <li>Integrates with HR systems such as Workday</li>
         </ul>
       </div>
       <div class="feature-visual">
@@ -100,22 +75,20 @@ stickyText: "Secure every login without slowing the floor."
     <div class="feature-row reverse" style="margin-top: 56px;">
       <div class="feature-text">
         <span class="section-eyebrow">Store Logins</span>
-        <h2>Associate sign-in without shared passwords.</h2>
-        <p>Secure, rotating QR-code logins for POS terminals and every application: shared credentials gone, every action attributable to a person.</p>
+        <h2>Biometric and rotating QR sign-in.</h2>
+        <p>Secure, rotating QR-code logins for POS terminals and every application. Shared credentials, gone.</p>
         <ul class="feature-bullets">
           <li>Rotating QR-code authentication that works even offline</li>
           <li>Username and password login enforcing character complexity and expiry timelines where you need it</li>
           <li>Every transaction tied to the individual who rang it</li>
+          <li>No-sale drawer opens, voids and receipt reprints logged, and exportable to a loss-prevention platform such as Agilence</li>
           <li>Optional multi-user facial recognition on a shared device, identifying individual associates rather than a single enrolled iOS Face ID user</li>
         </ul>
         <p class="fine-note">Facial recognition is off by default and enabled at the retailer's discretion, with consent capture and retention periods configured by the retailer and subject to local biometric privacy law. QR-code and credential sign-in give you the same per-associate audit trail without processing biometric data.</p>
       </div>
       <div class="feature-visual">
-        <!-- shot-portrait: this asset is 441x800, and .shot-img alone is width: 100% with
-             no height cap, so it rendered 555x1007 here and 668x1212 at tablet width. -->
-        <div class="shot shot-portrait">
-          <div class="shot-glow"></div>
-          <img class="shot-img shot-devices" src="/assets/images/homepage/teammate-card.webp" alt="Associate sign-in on iPhone, biometric authentication prompt" width="441" height="800">
+        <div class="feature-photo">
+          <img src="/assets/images/homepage/facial-recognition.webp" alt="An associate signing in to Teamwork Commerce on iPad with facial recognition, prompted to move closer to the camera" loading="lazy" width="2360" height="1584">
         </div>
       </div>
     </div>
@@ -131,79 +104,14 @@ stickyText: "Secure every login without slowing the floor."
       <div class="mini-card">
         <div class="mini-ico"><i class="ti ti-devices"></i></div>
         <h3>Mobile device management</h3>
-        <p>Register and manage company-owned and personal devices side by side, with application access and security policies controlled per device type.</p>
+        <p>Register and manage company-owned and personal devices side by side, with application access and security policies controlled per device type. Works alongside MDM platforms such as Jamf and AirWatch.</p>
       </div>
       <div class="mini-card">
         <div class="mini-ico"><i class="ti ti-users-group"></i></div>
         <h3>Team member management</h3>
-        <p>Associate records, roles and training assignments stay synchronized, so you onboard once and the tools pick it up.</p>
+        <p>Associate records and roles managed in one place, so a new hire is set up once.</p>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- ============ THE ASSOCIATE APP ============ -->
-<section class="ac-magenta section">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-eyebrow">The Associate App</div>
-      <h2 class="section-title">One associate app on iOS and Android.</h2>
-      <p class="section-sub">One download, on the phone an associate already owns, covering everything they need on a shift. Access and policy stay governed from head office.</p>
-    </div>
-    <div class="qrx">
-      <!-- Every real capture on this page is already used above, so this is an
-           illustration on the product's own light UI rather than a repeat. -->
-      <div class="qrx-real">
-        <div class="uix uix-phone uix-home">
-          <div class="uix-nav"><span class="uix-back"></span><span class="uix-title">Teamwork</span><span class="uix-dots">&middot;&middot;&middot;</span></div>
-          <div class="uix-tiles">
-            <span class="uix-tile"><i class="ti ti-search"></i>Product<br>search</span>
-            <span class="uix-tile"><i class="ti ti-user-heart"></i>Customers</span>
-            <span class="uix-tile"><i class="ti ti-school"></i>Training</span>
-            <span class="uix-tile"><i class="ti ti-device-ipad"></i>POS<br>sign-in</span>
-          </div>
-          <span class="uix-tag">Signed in as Eric M &middot; Regent St</span>
-        </div>
-      </div>
-      <div class="qrx-copy">
-        <div class="qrx-point"><i class="ti ti-apps"></i><div><strong>One app, not several</strong><span>Product search, customer records, training and terminal sign-in behind a single icon.</span></div></div>
-        <div class="qrx-point"><i class="ti ti-device-mobile"></i><div><strong>Personal or company devices</strong><span>Runs on the phones the team already carries, with access and policy governed centrally.</span></div></div>
-        <div class="qrx-point"><i class="ti ti-wifi-off"></i><div><strong>Works offline</strong><span>An outage does not stop a shift starting or a stocktake finishing.</span></div></div>
-      </div>
-    </div>
-    <p class="stepx-note">Illustration of the app home. <a href="/demo/" target="_blank" rel="noopener">Ask for a walkthrough</a> to see it on a device.</p>
-    <div class="mini-grid" style="margin-top: 40px;">
-        <div class="mini-card"><h3>What floor staff actually open</h3><p>Product search, customer recommendations, training modules, and POS login for floor staff, in a single app.</p></div>
-        <div class="mini-card"><h3>Works offline</h3><p>Secure rotating QR login codes generate without an internet connection, an outage doesn't stop the store from opening.</p></div>
-        <div class="mini-card"><h3>Personal or company devices</h3><p>Runs on the phones your team already carries, with access and policy governed centrally.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ MOBILE ADOPTION ============ -->
-<section class="ac-royal sunk tm-band">
-  <div class="tm-band-glow"></div>
-  <div class="container">
-    <div class="section-header" style="text-align: center;">
-      <div class="section-eyebrow">Why Mobile Wins the Floor</div>
-      <h2 class="section-title">The store already runs on phones.</h2>
-      <p class="section-sub">Major retailers have already moved the work to mobile. This consolidates it into one app instead of several.</p>
-    </div>
-    <div class="stat-row-4" style="grid-template-columns: repeat(3, 1fr);">
-      <div class="statcard statcard-blue">
-        <div class="statcard-value"><span class="counter" data-target="73" data-suffix="%">73%</span></div>
-        <div class="statcard-label">Of retailers use mobile devices for payments (Toshiba / Retail Dive)</div>
-      </div>
-      <div class="statcard statcard-purple">
-        <div class="statcard-value"><span class="counter" data-target="62" data-suffix="%">62%</span></div>
-        <div class="statcard-label">Use mobile for inventory checks (Toshiba / Retail Dive)</div>
-      </div>
-      <div class="statcard statcard-blue">
-        <div class="statcard-value"><span class="counter" data-target="51" data-suffix="%">51%</span></div>
-        <div class="statcard-label">Use mobile for product information (Toshiba / Retail Dive)</div>
-      </div>
-    </div>
-    <p style="text-align: center; margin-top: 24px; font-size: 14.5px; color: var(--text-muted); max-width: 760px; margin-left: auto; margin-right: auto;">Consolidating POS logins, training, and catalog lookups into one companion app removes the need to buy and manage separate hardware or software vendors for each job.</p>
   </div>
 </section>
 
@@ -216,9 +124,9 @@ stickyText: "Secure every login without slowing the floor."
     </div>
     <div class="shiftx">
         <div class="shiftx-row">
-          <span class="shiftx-from">One shared login at the register</span>
+          <span class="shiftx-from">Suspicious actions noticed after the fact</span>
           <span class="shiftx-arrow"><i class="ti ti-arrow-right"></i></span>
-          <span class="shiftx-to">Every action tied to a named person</span>
+          <span class="shiftx-to">Voids, no-sale opens and reprints logged</span>
         </div>
         <div class="shiftx-row">
           <span class="shiftx-from">Provisioning a new hire by hand</span>
@@ -236,9 +144,9 @@ stickyText: "Secure every login without slowing the floor."
           <span class="shiftx-to">Your existing identity provider</span>
         </div>
         <div class="shiftx-row">
-          <span class="shiftx-from">Buying dedicated devices</span>
+          <span class="shiftx-from">Devices set up store by store</span>
           <span class="shiftx-arrow"><i class="ti ti-arrow-right"></i></span>
-          <span class="shiftx-to">The phones your team already carries</span>
+          <span class="shiftx-to">Configured centrally in the cloud</span>
         </div>
         <div class="shiftx-row">
           <span class="shiftx-from">Sign-in fails when the line drops</span>
@@ -263,35 +171,21 @@ stickyText: "Secure every login without slowing the floor."
           How does this fit our existing IAM and device management?
           <span class="faq-icon"><i class="ti ti-plus"></i></span>
         </button></h3>
-        <div class="faq-answer"><p>Identity management integrates with Active Directory, SSO, and MFA, so authentication continues to run on the identity provider you already own rather than in a separate user database. Device management registers company-owned and personal devices, with application access and security policies controlled per device type, and associate records, roles and training assignments synchronize automatically.</p></div>
+        <div class="faq-answer"><p>Identity management integrates with Active Directory and SSO, with MFA handled through your identity provider, so authentication continues to run on the identity provider you already own rather than in a separate user database. Device management registers company-owned and personal devices, with application access and security policies controlled per device type, and works alongside MDM platforms such as Jamf and AirWatch.</p></div>
       </div>
       <div class="faq-item">
         <h3 class="faq-q"><button class="faq-question" aria-expanded="false" onclick="var i=this.closest('.faq-item');i.classList.toggle('open');this.setAttribute('aria-expanded',i.classList.contains('open'))">
           How do associates sign in to the POS?
           <span class="faq-icon"><i class="ti ti-plus"></i></span>
         </button></h3>
-        <div class="faq-answer"><p>With secure rotating QR codes rather than shared passwords, plus biometric sign-in on supported devices. The codes generate even without an internet connection, so an outage never blocks a store from opening, and every action is attributable to the individual who signed in.</p></div>
+        <div class="faq-answer"><p>The retailer chooses. Associates can sign in with a username and password, with complexity and expiry rules where you want them, with a rotating QR code, or with biometrics. Everything except biometrics works offline, so an outage never stops a store from opening.</p></div>
       </div>
       <div class="faq-item">
         <h3 class="faq-q"><button class="faq-question" aria-expanded="false" onclick="var i=this.closest('.faq-item');i.classList.toggle('open');this.setAttribute('aria-expanded',i.classList.contains('open'))">
           Does this require a separate user database?
           <span class="faq-icon"><i class="ti ti-plus"></i></span>
         </button></h3>
-        <div class="faq-answer"><p>No. Identity management integrates with Active Directory, SSO, and MFA, so authentication runs on the enterprise identity provider you already own. Associate records, roles, and training assignments then synchronize automatically, which means a new hire is provisioned once rather than in each tool.</p></div>
-      </div>
-      <div class="faq-item">
-        <h3 class="faq-q"><button class="faq-question" aria-expanded="false" onclick="var i=this.closest('.faq-item');i.classList.toggle('open');this.setAttribute('aria-expanded',i.classList.contains('open'))">
-          Can associates use their own phones?
-          <span class="faq-icon"><i class="ti ti-plus"></i></span>
-        </button></h3>
-        <div class="faq-answer"><p>Yes. The associate app runs on personal or company phones across iOS and Android without a VPN, so there is no additional hardware to buy. Device management registers both company-owned and personal devices, with application access and security policies controlled per device type.</p></div>
-      </div>
-      <div class="faq-item">
-        <h3 class="faq-q"><button class="faq-question" aria-expanded="false" onclick="var i=this.closest('.faq-item');i.classList.toggle('open');this.setAttribute('aria-expanded',i.classList.contains('open'))">
-          What can associates do in the app?
-          <span class="faq-icon"><i class="ti ti-plus"></i></span>
-        </button></h3>
-        <div class="faq-answer"><p>Product search, customer recommendations, training modules, and POS login, consolidated into one app rather than several tools. Consolidating those jobs removes the need to buy and manage separate hardware systems or software vendors for each one.</p></div>
+        <div class="faq-answer"><p>No. Identity management integrates with Active Directory and SSO, with MFA handled through your identity provider, so authentication runs on the enterprise identity provider you already own. Associate records and roles are managed centrally, so a new hire is set up once.</p></div>
       </div>
     </div>
   </div>
@@ -303,7 +197,7 @@ stickyText: "Secure every login without slowing the floor."
 <section class="final-cta">
   <div class="container final-cta-inner">
     <h2>Secure the floor without <span class="gradient-text">slowing it down.</span></h2>
-    <p>See how rotating QR logins, role-based access, and one associate app work together.</p>
+    <p>See how rotating QR logins, biometric sign-in and matrixed permissions work together.</p>
     <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
       <a href="/demo/" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Book a demo <i class="ti ti-arrow-right"></i></a>
       <a href="/platform/mobile-pos/" class="btn btn-ghost btn-lg" style="border-color: var(--border); color: var(--text-muted);">Explore the POS</a>
@@ -321,7 +215,7 @@ stickyText: "Secure every login without slowing the floor."
       "name": "How does this fit our existing IAM and device management?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Identity management integrates with Active Directory, SSO, and MFA, so authentication continues to run on the identity provider you already own rather than in a separate user database. Device management registers company-owned and personal devices, with application access and security policies controlled per device type, and associate records, roles and training assignments synchronize automatically."
+        "text": "Identity management integrates with Active Directory and SSO, with MFA handled through your identity provider, so authentication continues to run on the identity provider you already own rather than in a separate user database. Device management registers company-owned and personal devices, with application access and security policies controlled per device type, and works alongside MDM platforms such as Jamf and AirWatch."
       }
     },
     {
@@ -329,7 +223,7 @@ stickyText: "Secure every login without slowing the floor."
       "name": "How do associates sign in to the POS?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "With secure rotating QR codes rather than shared passwords, plus biometric sign-in on supported devices. The codes generate even without an internet connection, so an outage never blocks a store from opening, and every action is attributable to the individual who signed in."
+        "text": "The retailer chooses. Associates can sign in with a username and password, with complexity and expiry rules where you want them, with a rotating QR code, or with biometrics. Everything except biometrics works offline, so an outage never stops a store from opening."
       }
     },
     {
@@ -337,25 +231,10 @@ stickyText: "Secure every login without slowing the floor."
       "name": "Does this require a separate user database?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. Identity management integrates with Active Directory, SSO, and MFA, so authentication runs on the enterprise identity provider you already own. Associate records, roles, and training assignments then synchronize automatically, which means a new hire is provisioned once rather than in each tool."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can associates use their own phones?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. The associate app runs on personal or company phones across iOS and Android without a VPN, so there is no additional hardware to buy. Device management registers both company-owned and personal devices, with application access and security policies controlled per device type."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What can associates do in the app?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Product search, customer recommendations, training modules, and POS login, consolidated into one app rather than several tools. Consolidating those jobs removes the need to buy and manage separate hardware systems or software vendors for each one."
+        "text": "No. Identity management integrates with Active Directory and SSO, with MFA handled through your identity provider, so authentication runs on the enterprise identity provider you already own. Associate records and roles are managed centrally, so a new hire is set up once."
       }
     }
   ]
 }
+
 </script>

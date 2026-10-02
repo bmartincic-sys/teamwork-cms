@@ -65,7 +65,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Sans:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.4.0/dist/tabler-icons.min.css">
+<!-- Icons: self-hosted subset of Tabler (183 of 5,300+ icons, 39KB instead of ~1MB).
+     Regenerate with tools/icons/build-subset.py; the build fails if an icon is missing. -->
+<link rel="preload" href="/assets/fonts/tabler-icons-subset.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/tabler-icons-subset.css">
 <link rel="stylesheet" href="/assets/css/style.css?v={{ buildVersion }}">
 
 <!-- Organization Schema (AEO: entity identity) -->
@@ -193,6 +196,8 @@
 <body>
 
 {% include "locale-banner.njk" %}
+
+{% include "search.njk" %}
 
 {% include "nav.njk" %}
 

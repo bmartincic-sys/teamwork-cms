@@ -16,9 +16,8 @@
 ## Features
 
 - [Product Data & Catalog](https://www.teamworkcommerce.com/features/product-data/): Retail product information management (PIM) built into the platform. One product record behind every channel, with variants, images and enrichment.
-- [Customer Data & Clienteling](https://www.teamworkcommerce.com/features/customer-data/): A retail customer data platform (CDP) with clienteling built in. Unified customer profiles and self-registration on the shop floor.
-- [Access & Identity](https://www.teamworkcommerce.com/features/access-identity/): Identity and access management (IAM) for store systems. Rotating QR store logins, Active Directory, SSO and MFA integration, optional facial recognition at the retailer's discretion.
-- [Training & Certification](https://www.teamworkcommerce.com/features/training/): A retail learning management system (LMS) built into the platform, with role-based courses synced from live product data.
+- [Customer Data & Clienteling](https://www.teamworkcommerce.com/features/customer-data/): Customer records and clienteling for store retail. Unified profiles, self-registration on the shopper's own device, marketing consent and custom fields. Not a CDP: it does not pull in website or email-platform data.
+- [Access & Identity](https://www.teamworkcommerce.com/features/access-identity/): Identity and access management (IAM) for store systems. Rotating QR logins, biometric sign-in, password login with complexity rules, Active Directory and SSO integration with MFA through your identity provider, matrixed permissions, and logging of voids, no-sale drawer opens and receipt reprints.
 
 ## Solutions by Industry
 
@@ -34,7 +33,7 @@
 
 - [Technical Evaluation](https://www.teamworkcommerce.com/technical-evaluation/): For architects, CISOs and CTOs. A working session on architecture, security and integrations.
 - [POS Evaluation](https://www.teamworkcommerce.com/pos-evaluation/): Six tests a retailer can run inside a demo or pilot that produce evidence rather than answers.
-- [POS RFP Template](https://www.teamworkcommerce.com/pos-rfp-template/): A free, ungated RFP question bank. 123 questions across 15 sections.
+- [POS RFP Template](https://www.teamworkcommerce.com/pos-rfp-template/): A free, ungated RFP question bank. 100+ questions across 15 sections.
 - [Certified Hardware](https://www.teamworkcommerce.com/certified-hardware/): The devices integrated and supported with TW POS Pro. Deliberately short, roughly one certified device per category.
 - [Frequently Asked Questions](https://www.teamworkcommerce.com/frequently-asked-questions/): Answers on POS, RFID, inventory, order management, analytics and AI.
 
