@@ -3,10 +3,21 @@ permalink: "/sitemap.xml"
 eleventyExcludeFromCollections: true
 ---
 <?xml version="1.0" encoding="UTF-8"?>
+{#- lastmod: a blog post uses its own published date, which is the date the
+    content represents and the one in its BlogPosting schema. Every other page
+    uses the last commit that touched its source file. A page git has no record
+    of simply goes without, rather than carrying a date we made up.
+
+    The loop variable is `p`, not `page`: `page` is an Eleventy global and
+    shadowing it inside the loop is asking for trouble. -#}
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-{%- for page in collections.all %}
+{%- for p in collections.all %}
   <url>
-    <loc>https://www.teamworkcommerce.com{{ page.url }}</loc>
+    <loc>https://www.teamworkcommerce.com{{ p.url }}</loc>
+{%- set lastmod = p.data.date or gitDates[p.inputPath] %}
+{%- if lastmod %}
+    <lastmod>{{ lastmod }}</lastmod>
+{%- endif %}
   </url>
 {%- endfor %}
 </urlset>

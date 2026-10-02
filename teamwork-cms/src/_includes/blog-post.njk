@@ -18,7 +18,7 @@ layout: "base.njk"
     {% if dek %}<p class="hero-sub" style="margin-top: 12px; margin-left: 0; margin-right: 0; max-width: none;">{{ dek }}</p>{% endif %}
     <div class="blog-meta-row">
       <span>Teamwork Commerce Team</span>
-      {% if date %}<span class="dot"></span><span>{{ date | formatDate }}</span>{% endif %}
+      {% if date %}<span class="dot"></span><time datetime="{{ date }}">{{ date | formatDate }}</time>{% endif %}
       <span class="dot"></span><span>{{ content | readingTime }}</span>
     </div>
   </div>
@@ -148,4 +148,40 @@ layout: "base.njk"
   });
   tocCard.style.display = "block";
 })();
+</script>
+
+{#- BlogPosting schema. The data was already in the frontmatter and on the page;
+    it just was not machine-readable, so 93 posts were invisible to answer
+    engines that rank on attribution and freshness.
+
+    author is the Organization rather than a Person because the byline is
+    "Teamwork Commerce Team" and we hold no per-post author record. No
+    dateModified: we have no reliable record of when a post was last revised,
+    and asserting one we cannot support is worse than omitting it. -#}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ title | dump | safe }},
+  {% if description %}"description": {{ description | dump | safe }},{% endif %}
+  {% if date %}"datePublished": "{{ date }}",{% endif %}
+  {% if category %}"articleSection": {{ category | dump | safe }},{% endif %}
+  {% if blogImages[page.fileSlug] %}"image": "https://www.teamworkcommerce.com/assets/images/blog/real/{{ blogImages[page.fileSlug] }}",{% endif %}
+  "inLanguage": "en-US",
+  "url": "https://www.teamworkcommerce.com{{ page.url }}",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.teamworkcommerce.com{{ page.url }}" },
+  "author": {
+    "@type": "Organization",
+    "name": "Teamwork Commerce",
+    "url": "https://www.teamworkcommerce.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Teamwork Commerce",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.teamworkcommerce.com/assets/images/teamwork-logo-color.svg"
+    }
+  }
+}
 </script>

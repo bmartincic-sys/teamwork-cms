@@ -1,0 +1,7 @@
+[
+  {
+    "note": "remove unverifiable computer-vision example (not in SOURCES.md)",
+    "old": "          <li>One example, handed off and returned by deep link rather than by API: a computer-vision service photographs a customized product, such as a shoe with several accessories fitted, identifies each item, looks up its price, and adds the whole set to the sale</li>\n",
+    "new": ""
+  }
+]
