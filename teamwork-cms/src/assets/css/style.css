@@ -9521,7 +9521,7 @@ main[data-vertical] .tm-day-time { color: color-mix(in srgb, var(--v-accent) 80%
 .sco-chip i { font-size: 15px; }
 
 .sco-card {
-  position: absolute; left: 0; bottom: 0; width: min(318px, 70%);
+  position: absolute; left: -64px; bottom: 0; width: min(318px, 70%);
   padding: 16px 16px 14px; border-radius: 16px;
   background: var(--bg-elevated); border: 1px solid var(--border);
   box-shadow: 0 28px 50px -24px rgba(7,9,26,0.55);
