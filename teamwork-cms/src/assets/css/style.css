@@ -9185,25 +9185,23 @@ main.v-luxury .ticker-label {
 }
 
 /* ===== Line-break orphans =====
-   Stops a sentence dropping one or two words onto a line of their own.
+   Lines run their full width. pretty only steps in when the last line would be
+   left with one or two words, and pulls a word down to keep company with them.
+   balance was used here before; it evened out every line of a block, which is
+   what made headings and paragraphs wrap short all over the site.
 
-   balance evens out the lines of a heading or a short lede, which is what
-   those want anyway. pretty leaves body copy where it is and only fixes the
-   last line, so paragraphs do not reflow wholesale. Browsers cap balance at a
-   handful of lines, which is why long text gets pretty instead.
-
-   Both fall back to normal wrapping where unsupported, so nothing breaks. */
+   Falls back to normal wrapping where unsupported, so nothing breaks. */
 h1, h2, h3, h4,
 .section-title, .section-sub, .blog-head-sub,
 .pillar-title, .blog-card-title, .hero-photo-title,
-.statcard-label, .mini-card h3, .faq-question {
-  text-wrap: balance;
-}
-
+.statcard-label, .mini-card h3, .faq-question,
 p, li, figcaption, blockquote,
 .pillar-desc, .blog-card-excerpt, .faq-answer p {
-  text-wrap: balance;
+  text-wrap: pretty;
 }
+/* Set by /assets/js/wrap.js on a block whose last line would hold one or two
+   words: that block alone is evened out. */
+.wrap-even { text-wrap: balance; }
 
 /* ===== FAQ question headings =====
    The 174 FAQ questions were <button> only, so they carried no heading rank
