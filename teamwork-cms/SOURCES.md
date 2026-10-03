@@ -40,19 +40,18 @@ where known.
 
 | Figure | Page | Origin |
 |---|---|---|
-| 30,000+ terminals, 40+ countries, 100+ integrations, 99.9%, 99.99%, 30s, $300K, 20 min, 118 Petco stores, 2,000+ Petco terminals, 250 InnovaSport stores, 22% per-cap | various | in the original content drop, commit bd54a7a, 9 July 2026 |
+| 30,000+ terminals, 40+ countries, 100+ integrations, 99.9%, 99.99%, 30s, $300K, 20 min, 118 Petco stores, 2,000+ Petco terminals, 250 InnovaSport stores, 22% per-cap; 80% transaction time reduction, $3.1M annual ROI, <30 min associate training, 80% search-time reduction, <1% out-of-stock (was 12%), 98%+ order fill rate | various | supplied by you in the original content drop, commit bd54a7a, 9 July 2026. Traced 3 October 2026 |
 | 150+ reports | platform/analytics and elsewhere | in the original content drop, commit bd54a7a, 9 July 2026. Confirmed by Teamwork, September 2026 |
 | 900+ orders, 1,100+ units, +14% / +26% / +21%, 18 days | platform/oms | supplied directly by Teamwork, August 2026; retailer anonymised at their request |
 | 5,000+ store count | about, footer ("thousands of stores") | added when About was rebuilt from the live site (commit c5e69cd) |
 | 39+ omnichannel workflows | platform/mobile-pos | supplied directly by Teamwork, September 2026; needs sign-off |
-| 71% faster stock counts; 500+ checkout hours saved | platform/inventory-control, platform/rfid | were on the homepage stat band from the original content drop; moved to the pages that own them, September 2026. Origin not recorded, needs sign-off |
+| Removed 3 October 2026: 71% faster stock counts (inventory-control) and +26% revenue lift (homepage results block) | n/a | neither was in anything Teamwork supplied. The 71% first appeared in a July redesign commit; the +26% was the OMS unit-volume figure relabelled as revenue lift. 500+ checkout hours is no longer on the site |
 | 32s checkout with RFID vs 85s without; 53s saved per transaction; 15 hrs per 1,000 | platform/rfid | EXO, supplied by Teamwork September 2026. The 53s and 15 hrs are arithmetic on the first two figures (85-32=53; 53x1,000=14.7h). Needs sign-off on the EXO citation |
-| 2,500+ stores / 25+ markets at a single customer | platform/scalability | commit 4c25022, origin not recorded, needs sign-off |
-| 100K+ daily / 500K+ weekly orders, 98%+ fill rate | platform/oms | commit 4e6083e, origin not recorded, needs sign-off |
-| 93% of transactions through Club Petco | solutions/pet-goods | origin not recorded, needs sign-off |
-| 60,000+ fans in a matter of hours | case study | commit 9bcf4cc, origin not recorded, needs sign-off |
+| 2,500+ stores / 25+ markets at a single customer | platform/scalability | confirmed by you on 6 August 2026: the full global fleet of that retailer runs Teamwork Commerce; numbers preferred over anonymity |
+| 100K+ daily / 500K+ weekly orders | platform/oms | from a Teamwork sales slide, commit 4e6083e, 20 July 2026. 98%+ fill rate is in the original content drop (row above) |
+| 60,000+ fans in a matter of hours | case study card, stadiums-venues | the published article "Powering High-Performance Retail at One of the World's Largest Sporting Events" (Teamwork, Adyen and Miteq), carried over from the live site |
 | 15 years of legacy POS replaced | case study | arrived with a named quote from Sports Basement's COO |
-| <5min associate onboarding, +26% revenue lift, 80% search-time reduction, <1% out-of-stock (was 12%) | mobile-pos, home, rfid | origin not recorded, needs sign-off |
+| 5 minutes to put a new associate on a register | stadiums-venues, scalability, mobile-pos | the Colorado Rockies, quoted in the original content drop and the published Rockies case study. Shown alongside the general <30 min training figure |
 | 127 Petco stores, 93% of transactions through Club Petco | Petco case study, solutions/pet-goods | Teamwork's own published case study, quoting Guillermo Prieto, CIO of Petco Mexico. Note the pet goods page says 118 stores; the case study says 127 |
 | ~50 mobile POS stations, 5 Denver-area stores, 12 to 25 registers in the main store, All-Star Week relocated 13 weeks out | Colorado Rockies case study | Teamwork's own published case study, on the record from Aaron Heinrich, Senior Director of Retail Operations, Colorado Rockies |
 | 10,000+ POS transactions/day on the grounds, 26 stores, 11 Stampede locations, 1M+ visitors | Lammle's case study, home | on the record from Nicole Monte, COO, Lammle's Western Wear, in the recorded interview at youtube.com/watch?v=e99-ciWqEqQ |

@@ -3257,6 +3257,9 @@ main[data-vertical] .tm-band-glow {
 }
 .proof-icp i { color: var(--brand-blue); font-size: 15px; }
 @media (max-width: 900px) { .proof-grid { grid-template-columns: 1fr; } }
+/* A client card that names several institutions takes two columns. */
+.proof-card-wide { grid-column: span 2; }
+@media (max-width: 900px) { .proof-card-wide { grid-column: auto; } }
 
 /* Solutions: clickable platform module cards */
 .sol-mod { display: block; text-decoration: none; color: inherit; }
@@ -5974,6 +5977,10 @@ main > .hero:first-child { margin-top: -85px; padding-top: 230px; }
   .bento-accent { grid-column: 1 / -1; grid-row: auto; min-height: 300px; }
 }
 @media (max-width: 560px) { .bento-grid { grid-template-columns: 1fr; } }
+/* Two figures beside the tall accent card: each takes a full row of the left side.
+   Uptime lives in the homepage numbers card; the other figures had no source. */
+.bento-grid > .bento-card:not(.bento-accent) { grid-column: 1 / span 2; }
+@media (max-width: 960px) { .bento-grid > .bento-card:not(.bento-accent) { grid-column: 1 / -1; } }
 
 /* --- 3-card fan variant --- */
 .fanw-3 .fanw-card { width: clamp(280px, 38vw, 540px); }
@@ -10577,7 +10584,7 @@ main[data-vertical] .tm-band-glow,
    figure and a two-line caption. Static by design, the calm is the point. */
 .innum { padding: 0; }
 .innum-card {
-  background: #ffffff;
+  background: var(--bg-elevated);
   border: 1px solid var(--border);
   border-radius: 20px;
   padding: 44px 48px 46px;
@@ -10633,6 +10640,7 @@ main[data-vertical] .tm-band-glow,
   display: grid; grid-template-columns: repeat(6, 10px); padding-bottom: 18px;
 }
 .innum-vis-dots span { width: 10px; height: 10px; border-radius: 50%; background: rgba(7, 9, 26, 0.10); }
+[data-theme="dark"] .innum-vis-dots span { background: rgba(255, 255, 255, 0.12); }
 .innum-vis-dots span:nth-child(3),
 .innum-vis-dots span:nth-child(7),
 .innum-vis-dots span:nth-child(10),
@@ -12241,3 +12249,51 @@ p, li, figcaption, blockquote,
    A plain arrow chip under each step read as "next step". They now name their
    destination and sit bottom-right of the card, so they read as a link out. */
 a.tm-day-win { display: flex; width: fit-content; margin-left: auto; margin-top: 16px; }
+
+/* ===== Contrast pass =====
+   A sitewide audit (every page, both themes) measured text against what sits behind
+   it. These were the ones under a readable ratio. Light is the base; dark overrides. */
+
+/* Industry pages: story links, proof tags and step numbers were mixed toward white,
+   which suited dark but washed out on light. Light now mixes toward ink. */
+main[data-vertical] a.tm-day-win { color: color-mix(in srgb, var(--v-accent) 62%, #07091a); }
+main[data-vertical] .proof-tag   { color: color-mix(in srgb, var(--v-accent) 62%, #07091a); }
+main[data-vertical] .tm-day-time { color: color-mix(in srgb, var(--v-accent) 80%, #07091a); }
+[data-theme="dark"] main[data-vertical] a.tm-day-win,
+[data-theme="dark"] main[data-vertical] .proof-tag { color: color-mix(in srgb, var(--v-accent) 40%, #fff); }
+[data-theme="dark"] main[data-vertical] .tm-day-time { color: color-mix(in srgb, var(--v-accent) 60%, #fff); }
+
+/* Events: the generic ".evc span" text rule outranked the chip colour, so booth and
+   region chips rendered ink on a dark chip in light mode. */
+.evc .evc-kind, .evc .evc-region { color: #fff; }
+.evc .evc-region { background: rgba(11, 60, 160, 0.78); }
+
+/* Certified hardware: the status pills were tuned for dark. */
+.chw-certified { color: #13764b; }
+.chw-pending   { color: #8a5a00; }
+[data-theme="dark"] .chw-certified { color: #34c98a; }
+[data-theme="dark"] .chw-pending   { color: #d9a441; }
+
+/* Architecture: Native / Connected labels and the selected filter chip. */
+.capx-n { color: var(--brand-text); }
+.capx-c { color: #3a55c9; }
+[data-theme="dark"] .capx-c { color: #8BA6FA; }
+.capx-chip.is-on,
+.capx-chip[data-capx="native"].is-on { background: #0B5FE0; border-color: #0B5FE0; }
+.capx-chip[data-capx="connected"].is-on { background: #4A63D8; border-color: #4A63D8; }
+.capx-chip.is-on span { background: rgba(255, 255, 255, 0.16); }
+
+/* Analytics widgets and OMS results in light mode: white text sat on a mid blue
+   mixed 78% toward white. Mixed toward ink instead, the same hues read deeper. */
+[data-theme="light"] .dashw { background: color-mix(in srgb, var(--_c) 76%, #07091a); }
+[data-theme="light"] .omsr-lead { background: color-mix(in srgb, #247DFF 76%, #07091a); }
+[data-theme="light"] .omsr-uplift { background: color-mix(in srgb, #5078F5 76%, #07091a); }
+[data-theme="light"] .omsr-stat { background: color-mix(in srgb, var(--omsr-ac, #247DFF) 76%, #07091a); }
+[data-theme="light"] .dashw p,
+[data-theme="light"] .omsr-note,
+[data-theme="light"] .omsr-stat span,
+[data-theme="light"] .omsr-bar-lab { color: rgba(255, 255, 255, 0.92); }
+
+/* Homepage, dark: the AI kicker and blog dates. */
+[data-theme="dark"] .duo-kicker-ai { color: #A7B9FF; }
+[data-theme="dark"] .blog-card-date { color: var(--text-muted); }
