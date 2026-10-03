@@ -54,12 +54,12 @@ stickyHref: "/demo/"
         <div class="ticker-label">Avg transaction</div>
       </div>
       <div class="ticker-item">
-        <div class="ticker-value">Open</div>
-        <div class="ticker-label">APIs, no lock-in</div>
+        <div class="ticker-value ticker-value-word">Open APIs</div>
+        <div class="ticker-label">Platform&#8209;agnostic. Any e&#8209;commerce, any payment processor, any ERP.</div>
       </div>
       <div class="ticker-item">
         <div class="ticker-value">150<span>+</span></div>
-        <div class="ticker-label">Pre-configured reports</div>
+        <div class="ticker-label">Out-of-the-box reports</div>
       </div>
       <div class="ticker-item">
         <div class="ticker-value">&lt;5<span>min</span></div>
@@ -312,11 +312,25 @@ stickyHref: "/demo/"
         </ul>
         <a href="/platform/rfid/" class="btn btn-primary">See RFID in action <i class="ti ti-arrow-right"></i></a>
       </div>
-      <!-- Real RFID hardware: Bluebird sled + Teamwork RFID app -->
+      <!-- RFID self-checkout: the real station, with the cart building itself beside it.
+           The basket lines are illustrative UI, like the other device mockups. -->
       <div class="feature-visual">
-        <div class="rfid-shot">
-          <img src="/assets/images/homepage/rfid-sled.webp" alt="Bluebird RFID sled readers with iPhones running the Teamwork Commerce RFID app, live scanning and Daily Count zones">
-          <div class="rfid-shot-caption">The real thing. Teamwork RFID running on iPhone-mounted Bluebird sled readers.</div>
+        <div class="sco-mock">
+          <div class="sco-photo">
+            <img src="/assets/images/homepage/rfid-self-checkout.jpg" alt="A shopper placing items into an RFID self-checkout bin, with the checkout screen beside it">
+            <span class="sco-waves" aria-hidden="true"><i></i><i></i><i></i></span>
+          </div>
+          <span class="sco-chip"><i class="ti ti-scan"></i> Every tag read at once</span>
+          <div class="sco-card" aria-hidden="true">
+            <div class="sco-card-head"><span>Self-checkout</span><span class="sco-live"><i></i>Reading</span></div>
+            <ul class="sco-lines">
+              <li><b>Bath towel, white</b><span>$38.00</span></li>
+              <li><b>Hand towel, white</b><span>$22.00</span></li>
+              <li><b>Washcloth set</b><span>$16.00</span></li>
+            </ul>
+            <div class="sco-total"><span>3 items</span><strong>$76.00</strong></div>
+            <span class="sco-pay">Tap to pay</span>
+          </div>
         </div>
       </div>
     </div>

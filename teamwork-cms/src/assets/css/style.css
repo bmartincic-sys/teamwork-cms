@@ -9465,11 +9465,11 @@ main[data-vertical] .tm-day-time { color: color-mix(in srgb, var(--v-accent) 80%
 }
 .gops-stats span { display: block; margin-top: 6px; font-size: 13px; color: rgba(255,255,255,0.62); }
 
-.gops-points { list-style: none; margin: 28px 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.gops-points { list-style: none; margin: 36px 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 .gops-points li {
-  display: flex; gap: 12px; align-items: flex-start; padding: 18px 20px; border-radius: 14px;
+  display: flex; gap: 14px; align-items: flex-start; padding: 24px 26px; border-radius: 16px;
   background: var(--bg-elevated); border: 1px solid var(--border);
-  font-size: 14.5px; line-height: 1.55; color: var(--text-muted);
+  font-size: 15px; line-height: 1.6; color: var(--text-muted);
 }
 .gops-points i { font-size: 20px; color: var(--brand-text); flex: none; margin-top: 1px; }
 
@@ -9477,7 +9477,7 @@ main[data-vertical] .tm-day-time { color: color-mix(in srgb, var(--v-accent) 80%
   .gops-stats { grid-template-columns: repeat(2, 1fr); }
   .gops-stats > div:nth-child(3) { border-left: 0; }
   .gops-stats > div:nth-child(n+3) { border-top: 1px solid rgba(140,185,255,0.18); }
-  .gops-points { grid-template-columns: 1fr; }
+  .gops-points { grid-template-columns: 1fr; gap: 14px; margin-top: 28px; }
 }
 /* On a phone the pinned tags would cover the map: they line up beneath it. */
 @media (max-width: 760px) {
@@ -9491,3 +9491,64 @@ main[data-vertical] .tm-day-time { color: color-mix(in srgb, var(--v-accent) 80%
 .gops-nowrap { white-space: nowrap; }
 @media (max-width: 420px) { .gops-stats > div { padding: 18px 16px 20px; } .gops-stats strong { font-size: 18px; } }
 @media (prefers-reduced-motion: reduce) { .gops-arcs path { animation: none; } }
+
+/* A word in a stat bar (Open APIs) sits smaller than the figures beside it, so it
+   holds one line and its baseline matches theirs. */
+.ticker-value-word + .ticker-label { text-wrap: balance; }
+.ticker-value.ticker-value-word { font-size: calc(var(--stat-size) * 0.64); line-height: 1.1; white-space: nowrap; padding-top: calc(var(--stat-size) * 0.28); }
+
+/* ===== RFID self-checkout mockup (Mobile POS) =====
+   The real station photo, read rings pulsing over the bin, and the basket card
+   building itself beside it. */
+.sco-mock { position: relative; padding: 0 0 46px 34px; }
+.sco-photo { position: relative; border-radius: 18px; overflow: hidden; box-shadow: 0 30px 60px -30px rgba(7,9,26,0.45); }
+.sco-photo img { display: block; width: 100%; height: auto; aspect-ratio: 1747 / 1404; object-fit: cover; }
+.sco-waves { position: absolute; left: 68%; top: 72%; width: 0; height: 0; }
+.sco-waves i {
+  position: absolute; left: 50%; top: 50%; width: 120px; height: 60px; margin: -30px 0 0 -60px;
+  border: 2px solid rgba(47,123,255,0.85); border-radius: 50%;
+  transform: scale(0.3); opacity: 0; animation: scoWave 2.4s ease-out infinite;
+}
+.sco-waves i:nth-child(2) { animation-delay: 0.8s; }
+.sco-waves i:nth-child(3) { animation-delay: 1.6s; }
+@keyframes scoWave { 0% { transform: scale(0.3); opacity: 0.95; } 100% { transform: scale(2.4); opacity: 0; } }
+
+.sco-chip {
+  position: absolute; top: 18px; right: 18px; display: inline-flex; align-items: center; gap: 7px;
+  padding: 8px 14px; border-radius: 100px; font-size: 12.5px; font-weight: 600; color: #fff;
+  background: #0b57d0; box-shadow: 0 10px 24px -10px rgba(11,87,208,0.7);
+}
+.sco-chip i { font-size: 15px; }
+
+.sco-card {
+  position: absolute; left: 0; bottom: 0; width: min(270px, 62%);
+  padding: 16px 16px 14px; border-radius: 16px;
+  background: var(--bg-elevated); border: 1px solid var(--border);
+  box-shadow: 0 28px 50px -24px rgba(7,9,26,0.55);
+  font-size: 12.5px; color: var(--text-muted);
+}
+.sco-card-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-weight: 600; color: var(--text); font-size: 13px; }
+.sco-live { display: inline-flex; align-items: center; gap: 6px; font-family: var(--font-mono); font-size: 10.5px; font-weight: 600; color: var(--brand-text); }
+.sco-live i { width: 7px; height: 7px; border-radius: 50%; background: #2f7bff; animation: scoBlink 1.2s ease-in-out infinite; }
+@keyframes scoBlink { 50% { opacity: 0.25; } }
+.sco-lines { list-style: none; margin: 0; padding: 0; display: grid; gap: 7px; }
+.sco-lines li { display: flex; justify-content: space-between; gap: 10px; padding-bottom: 7px; border-bottom: 1px solid var(--border);
+  opacity: 0; transform: translateY(4px); animation: scoIn .5s ease forwards; }
+.sco-lines li:nth-child(1) { animation-delay: .3s; }
+.sco-lines li:nth-child(2) { animation-delay: .7s; }
+.sco-lines li:nth-child(3) { animation-delay: 1.1s; }
+@keyframes scoIn { to { opacity: 1; transform: none; } }
+.sco-lines b { font-weight: 500; color: var(--text); }
+.sco-total { display: flex; justify-content: space-between; align-items: baseline; margin: 10px 0 12px; }
+.sco-total strong { font-size: 18px; letter-spacing: -0.02em; color: var(--text); }
+.sco-pay { display: block; text-align: center; padding: 9px 0; border-radius: 10px; background: #0b57d0; color: #fff; font-weight: 600; font-size: 13px; }
+
+@media (max-width: 760px) {
+  .sco-mock { padding: 0 0 0 0; }
+  .sco-card { position: relative; width: auto; margin: -36px 14px 0; }
+  .sco-chip { top: 12px; right: 12px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .sco-waves i, .sco-live i { animation: none; }
+  .sco-lines li { animation: none; opacity: 1; transform: none; }
+}
