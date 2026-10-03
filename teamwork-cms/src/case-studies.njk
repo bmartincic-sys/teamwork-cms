@@ -44,10 +44,15 @@ permalink: "/case-studies/"
         <span class="csx-sector">{{ cs.sector }}</span>
         {% if cs.external %}<i class="ti ti-external-link csx-ext"></i>{% endif %}
         <div class="csx-body">
-          {% if cs.logo %}<img class="csx-logo{% if cs.logoColor %} is-color{% endif %}{% if cs.logoBig %} is-big{% endif %}" src="{{ cs.logo }}" alt="{{ cs.client }}">{% else %}<span class="csx-name">{{ cs.client }}</span>{% endif %}
+          {% if cs.logo %}<img class="csx-logo{% if cs.logoColor %} is-color{% endif %}{% if cs.logoBig %} is-big{% endif %}" src="{{ cs.logo }}" alt="{{ cs.client }}">{% else %}<span class="csx-name{% if cs.metrics %} is-lead{% endif %}">{{ cs.client }}</span>{% endif %}
+          {% if cs.metrics %}
+          <h3 class="sr-only">{{ cs.title }}</h3>
+          <ul class="csx-metrics">{% for m in cs.metrics %}<li>{{ m }}</li>{% endfor %}</ul>
+          {% else %}
           <h3>{{ cs.title }}</h3>
-          {% if cs.result %}<span class="csx-result"><i class="ti {{ cs.resultIcon }}"></i> {{ cs.result }}</span>{% endif %}
+          {% endif %}
           <div class="csx-more">
+            {% if cs.metrics %}<p class="csx-story">{{ cs.title }}</p>{% endif %}
             <p>{{ cs.blurb }}</p>
             <span class="csx-read">Read the case study <i class="ti ti-arrow-right"></i></span>
           </div>

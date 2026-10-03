@@ -5,23 +5,21 @@ module.exports = [
   {
     client: "Lammle's Western Wear",
     title: "Ten Days. Eleven Tents. One Million People.",
-    blurb: "Canada's largest western retailer runs eleven pop-up stores at the Calgary Stampede, and cut over 26 stores without downtime.",
+    blurb: "Canada's largest western retailer runs eleven pop-up stores at the Calgary Stampede, on the same system as its 26 stores.",
     sector: "Fashion & Apparel",
     url: "/blog/lammles-western-wear-calgary-stampede/",
     photo: "/assets/images/customers/lammles-stampede.jpg", logo: "/assets/images/customers/logos/lammles-logo.png",
     video: "e99-ciWqEqQ",
-    resultIcon: "ti-tent",
-    result: "10,000+ transactions a day on the grounds"
+    metrics: ["10,000+ transactions a day on the grounds", "11 Stampede locations set up in 10 days", "26 stores across Western Canada"]
   },
   {
     client: "One of the world's largest sporting events",
     title: "Powering High-Performance Retail at One of the World's Largest Sporting Events",
-    blurb: "Event retail at the highest level of pressure: thousands of transactions in tight windows.",
+    blurb: "60,000+ fans in a matter of hours, with POS, RFID and payments in one checkout flow.",
     sector: "Stadiums & Venues",
     url: "/blog/powering-high-performance-retail-at-one-of-the-worlds-largest-sporting-events/",
     photo: "/assets/images/customers/sporting-event.jpg",
-    resultIcon: "ti-users",
-    result: "60,000+ fans in a matter of hours"
+    metrics: ["250+ transactions an hour at peak", "44-second average transaction", "Zero interruptions at peak demand"]
   },
   {
     client: "Carolina Hurricanes",
@@ -30,7 +28,8 @@ module.exports = [
     sector: "Stadiums & Venues",
     url: "/blog/carolina-hurricanes-retail-transformation/",
     photo: "/assets/images/customers/carolina-hurricanes.jpg", logo: "/assets/images/customers/logos/carolina-hurricanes-logo-rev.png", logoColor: true, logoBig: true,
-    video: "dY0HuRSd4Jw"
+    video: "dY0HuRSd4Jw",
+    metrics: ["17,000+ SKUs tracked on iPads", "Warehouse moved mid year-end inventory", "Inventory by store, not one bucket"]
   },
   {
     client: "Sports Basement",
@@ -39,20 +38,18 @@ module.exports = [
     sector: "Retail Media",
     url: "/blog/monetizing-the-moment-how-sports-basement-and-teamwork-commerce-are-redefining-in-store-advertising/",
     photo: "/assets/images/customers/sports-basement-advertising.jpg", logo: "/assets/images/customers/logos/sports-basement-logo.png", logoBig: true,
-    resultIcon: "ti-ad-2",
-    result: "Checkout turned into a revenue channel",
-    video: "prmA8mdJpUA"
+    video: "prmA8mdJpUA",
+    metrics: ["Ads on the customer-facing screen", "Offers and loyalty sign-up at checkout", "\"A brand-new revenue stream\" (COO)"]
   },
   {
     client: "Sports Basement",
     title: "From Ice Rink to Innovation: Transforming Retail with Teamwork Commerce",
-    blurb: "A Bay Area institution moving its stores onto iOS-native POS.",
+    blurb: "A Bay Area institution moving off a 15-year-old POS onto iOS-native POS.",
     sector: "Sporting Goods",
     url: "/blog/from-ice-rink-to-innovation-how-sports-basement-transformed-retail-with-teamwork-commerce/",
     photo: "/assets/images/customers/sports-basement.jpg", logo: "/assets/images/customers/logos/sports-basement-logo.png", logoBig: true,
-    resultIcon: "ti-refresh",
-    result: "15 years of legacy POS replaced",
-    video: "n5rzjJ8sfKA"
+    video: "n5rzjJ8sfKA",
+    metrics: ["Replaced 15 years on an aging POS", "15-year loyalty program carried over", "\"Like using a new phone app\" (COO)"]
   },
   {
     client: "FAO Schwarz",
@@ -61,9 +58,8 @@ module.exports = [
     sector: "Specialty Retail",
     url: "/blog/fao-schwarz-delivers-magical-retail-experiences-with-teamwork-commerces-mobile-pos/",
     photo: "/assets/images/customers/fao-schwarz.jpg", logo: "/assets/images/customers/logos/fao-schwarz-logo.png",
-    resultIcon: "ti-users",
-    result: "Up to 15,000 guests served daily",
-    video: "Er71IurkWHA"
+    video: "Er71IurkWHA",
+    metrics: ["10,000 to 15,000 guests a day", "Staff trained in under an hour", "Mobile checkout across 20,000 sq ft"]
   },
   {
     client: "ASICS",
@@ -82,9 +78,8 @@ module.exports = [
     sector: "Electronics",
     url: "/blog/art-computers-digital-transformation-with-teamwork-commerce/",
     photo: "/assets/images/customers/art-computer.jpg", logo: "/assets/images/customers/logos/art-computer-logo.png",
-    resultIcon: "ti-clock",
-    result: "Registration cut from 15 min to 3",
-    video: "GpLPo-c1YGI"
+    video: "GpLPo-c1YGI",
+    metrics: ["Registration: 10 to 15 min down to 2 to 3", "Invoices emailed in 5 seconds", "Stock lookup in 1 click, not 4 to 6"]
   },
   {
     client: "Moose Knuckles",
@@ -94,7 +89,8 @@ module.exports = [
     url: "/blog/moose-knuckles-x-teamwork-commerce-enhancing-the-customer-journey/",
     photo: "/assets/images/customers/moose-knuckles-store.jpg",
     logo: "/assets/images/logos/moose-knuckles-logo.png",
-    video: "YOcvFPLAiWo"
+    video: "YOcvFPLAiWo",
+    metrics: ["Send a sale from any store's stock", "Sales data validated for reporting"]
   },
   {
     client: "Moose Knuckles",
@@ -104,28 +100,27 @@ module.exports = [
     url: "/blog/how-moose-knuckles-delivers-global-retail-excellence-with-adyen-teamwork-commerce/",
     logo: "/assets/images/logos/moose-knuckles-logo.png",
     photo: "/assets/images/customers/moose-knuckles-storefront.jpg",
-    resultIcon: "ti-credit-card",
-    result: "A single payments stack worldwide"
+    metrics: ["Live in over 30 countries", "Payments and POS in one system", "Charitable giving built into checkout"]
   },
   {
     client: "Moose Knuckles Canada",
     title: "Moose Knuckles Canada Furthers Their Omnichannel Presence",
-    blurb: "Extending the same setup across the Canadian fleet, store by store.",
+    blurb: "Mobile POS and order management signed for every location across three continents.",
     sector: "Luxury Apparel",
     url: "https://www.teamworkcommerce.com/moose-knuckles-canada-furthers-their-omnichannel-presence-with-teamwork-commerce/",
     photo: "/assets/images/customers/moose-knuckles.jpg",
     logo: "/assets/images/logos/moose-knuckles-logo.png",
-    external: true
+    external: true,
+    metrics: ["POS and OMS for every location", "North America, Europe and Asia", "BOPIS, ship-from-store and BORIS"]
   },
   {
     client: "Petco",
     title: "Omnichannel Transformation: Petco's Success with Teamwork Commerce",
-    blurb: "127 stores, an app and an online store on one customer record, with Club Petco at the centre.",
+    blurb: "Petco Mexico: 127 stores, an app and an online store on one customer record, with Club Petco at the center.",
     sector: "Pet Retail",
     url: "/blog/petco-omnichannel-transformation/",
     photo: "/assets/images/customers/petco.jpg", logo: "/assets/images/customers/logos/petco-logo.png",
-    resultIcon: "ti-percentage",
-    result: "93% of transactions through Club Petco"
+    metrics: ["93% of transactions through Club Petco", "127 stores, app and online on one profile"]
   },
   {
     client: "Colorado Rockies",
@@ -134,40 +129,38 @@ module.exports = [
     sector: "Stadiums & Venues",
     url: "/blog/colorado-rockies-mlb-all-star-week/",
     photo: "/assets/images/customers/colorado-rockies.jpg", logo: "/assets/images/customers/logos/colorado-rockies-logo.png",
-    resultIcon: "ti-bolt",
-    result: "12 to 25 registers in the main store"
+    metrics: ["12 to 25 registers in the main store", "All-Star Week on 13 weeks' notice", "Around 50 mobile POS stations"]
   },
   {
     client: "Prada Shoes",
     title: "From Hassle to Dazzle: Improving Customer Experience",
-    blurb: "Elevating the in-store experience on the Teamwork omnichannel platform.",
+    blurb: "A family shoe business that replaced slow stock counts and late reports with real-time data.",
     sector: "Luxury Apparel",
     url: "https://www.teamworkcommerce.com/prada-shoes-improves-customer-experience-teamwork-commerce-omnichannel-platform/",
-    photo: "/assets/images/customers/prada-shoes.jpg", logo: "/assets/images/customers/logos/prada-logo.png",
+    photo: "/assets/images/customers/prada-shoes.jpg", logo: "/assets/images/customers/logos/prada-logo.png", logoBig: true,
     external: true,
-    resultIcon: "ti-clock",
-    result: "Replaced reporting delays of up to 15 days"
+    metrics: ["Reports that took up to 15 days, now real time", "On Teamwork for 9 years"]
   },
   {
     client: "Princesse Tam Tam · Comptoir des Cotonniers",
     title: "Princesse Tam Tam and Comptoir des Cotonniers",
-    blurb: "Two French fashion brands running the same setup across their fleet.",
+    blurb: "Two Fast Retailing fashion brands on one store app across six European countries.",
     sector: "Fashion & Apparel",
     url: "https://www.teamworkcommerce.com/princesse-tam-tam-and-comptoir-des-cotonniers-ptt-cdc/",
     photo: "/assets/images/customers/ptt-cdc.jpg", logo: "/assets/images/customers/logos/princesse-tam-tam-logo.png",
     external: true,
-    resultIcon: "ti-map-pin",
-    result: "220+ locations across 6 countries"
+    metrics: ["220+ locations across 6 countries", "Full stock count each morning, in minutes", "RFID counter pads at checkout"]
   },
   {
     client: "ASICS",
     title: "ASICS Outperforms Itself at the 36th Edition of the Father's Day Race",
-    blurb: "Pop-up event retail deployed fast, then packed down just as fast.",
+    blurb: "Associates selling across a race-day pavilion on iPads, with sales reported in real time.",
     sector: "Footwear",
     url: "https://www.teamworkcommerce.com/asics-outperforms-itself-with-teamwork-in-the-36th-edition-of-fathers-day-race/",
     photo: "/assets/images/customers/asics-race.jpg",
     logo: "/assets/images/logos/asics-logo.png",
-    external: true
+    external: true,
+    metrics: ["13,000 runners in the race", "Sales closed in three clicks"]
   },
   {
     client: "FAO Schwarz",
@@ -184,7 +177,8 @@ module.exports = [
     blurb: "A modern newsstand concept selling anywhere its customers happen to be.",
     sector: "Specialty Retail",
     url: "https://www.teamworkcommerce.com/the-new-stand-improves-days-and-mobility/",
-    photo: "/assets/images/customers/the-new-stand.jpg", logo: "/assets/images/customers/logos/the-new-stand-logo.png",
-    external: true
+    photo: "/assets/images/customers/the-new-stand.jpg", logo: "/assets/images/customers/logos/the-new-stand-logo.png", logoBig: true,
+    external: true,
+    metrics: ["New stores live from a hotspot and an iPad", "Self-checkout in the member app"]
   }
 ];
