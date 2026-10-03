@@ -9407,3 +9407,87 @@ main[data-vertical] .tm-day-time { color: color-mix(in srgb, var(--v-accent) 80%
 .demox-quote figcaption { font-size: 12.5px; color: var(--text-muted); }
 .demox-quote figcaption strong { display: block; color: var(--text); font-weight: 600; }
 .demox-quote figcaption a { color: var(--brand-text); font-weight: 600; }
+
+/* ===== Global operations (Mobile POS) =====
+   A dark operations panel in both themes: the live markets lit in brand blue,
+   store cities pulsing, light arcs between the main hubs, and the fiscal
+   regimes pinned where they apply. Solid blue throughout; no gradient fill. */
+.gops-stage {
+  position: relative; margin-top: 44px; border-radius: 22px; overflow: hidden;
+  background:
+    radial-gradient(70% 90% at 50% 0%, rgba(36,125,255,0.22), transparent 65%),
+    radial-gradient(60% 70% at 85% 100%, rgba(80,120,245,0.14), transparent 70%),
+    #060a1c;
+  border: 1px solid rgba(120,160,255,0.22);
+  box-shadow: 0 40px 80px -40px rgba(7,9,26,0.55);
+}
+.gops-stage::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(80% 80% at 50% 45%, #000 40%, transparent 100%);
+}
+.gops-map { position: relative; padding: 40px 36px 8px; }
+.gops-map .wm-svg { display: block; width: 100%; height: auto; position: relative; }
+.gops-map .wm-c { fill: #172042; stroke: #070b1f; stroke-width: 0.6; }
+.gops-map .wm-live { fill: #2f7bff; stroke: rgba(170,200,255,0.55); stroke-width: 0.5; filter: drop-shadow(0 0 5px rgba(47,123,255,0.55)); }
+.gops-map .wm-dot { fill: #2f7bff; }
+.gops-map .wm-city { fill: #ffffff; }
+.gops-map .wm-ping { stroke: #9cc3ff; }
+.gops-arcs { position: absolute; left: 36px; right: 36px; top: 40px; width: calc(100% - 72px); height: auto; pointer-events: none; overflow: visible; }
+.gops-arcs path { fill: none; stroke: rgba(140,185,255,0.55); stroke-width: 1.1; stroke-dasharray: 3 7; animation: gopsFlow 3.2s linear infinite; }
+.gops-arcs path.gops-lead { stroke: rgba(255,255,255,0.55); stroke-width: 0.9; stroke-dasharray: none; animation: none; }
+@keyframes gopsFlow { to { stroke-dashoffset: -40; } }
+
+.gops-tag {
+  position: absolute; display: grid; gap: 3px; padding: 10px 13px; min-width: 132px;
+  border-radius: 12px; font-size: 12px; line-height: 1.35; color: rgba(255,255,255,0.78);
+  background: rgba(10,16,40,0.82); border: 1px solid rgba(140,185,255,0.35);
+  box-shadow: 0 12px 28px -12px rgba(0,0,0,0.6); backdrop-filter: blur(6px);
+}
+.gops-tag b { color: #ffffff; font-weight: 600; }
+.gops-tag-h {
+  font-family: var(--font-mono); font-size: 10.5px; font-weight: 600; letter-spacing: 0.04em;
+  color: #9cc3ff; text-transform: uppercase; margin-bottom: 2px;
+}
+
+.gops-stats {
+  position: relative; display: grid; grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid rgba(140,185,255,0.18);
+}
+.gops-stats > div { padding: 22px 26px 24px; }
+.gops-stats > div + div { border-left: 1px solid rgba(140,185,255,0.18); }
+.gops-stats strong {
+  display: block; font-family: var(--font-display); font-size: clamp(20px, 2.2vw, 28px);
+  font-weight: 600; letter-spacing: -0.03em; line-height: 1.1; color: #ffffff;
+}
+.gops-stats span { display: block; margin-top: 6px; font-size: 13px; color: rgba(255,255,255,0.62); }
+
+.gops-points { list-style: none; margin: 28px 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.gops-points li {
+  display: flex; gap: 12px; align-items: flex-start; padding: 18px 20px; border-radius: 14px;
+  background: var(--bg-elevated); border: 1px solid var(--border);
+  font-size: 14.5px; line-height: 1.55; color: var(--text-muted);
+}
+.gops-points i { font-size: 20px; color: var(--brand-text); flex: none; margin-top: 1px; }
+
+@media (max-width: 900px) {
+  .gops-stats { grid-template-columns: repeat(2, 1fr); }
+  .gops-stats > div:nth-child(3) { border-left: 0; }
+  .gops-stats > div:nth-child(n+3) { border-top: 1px solid rgba(140,185,255,0.18); }
+  .gops-points { grid-template-columns: 1fr; }
+}
+/* On a phone the pinned tags would cover the map: they line up beneath it. */
+@media (max-width: 760px) {
+  .gops-map { padding: 22px 14px 0; }
+  .gops-arcs { left: 14px; right: 14px; top: 22px; width: calc(100% - 28px); }
+  .gops-arcs path.gops-lead { display: none; }
+  .gops-map { display: flex; flex-wrap: wrap; gap: 8px; padding-bottom: 18px; }
+  .gops-map .wm-svg { flex: 0 0 100%; }
+  .gops-tag { position: static; min-width: 0; flex: 1 1 140px; }
+}
+.gops-nowrap { white-space: nowrap; }
+@media (max-width: 420px) { .gops-stats > div { padding: 18px 16px 20px; } .gops-stats strong { font-size: 18px; } }
+@media (prefers-reduced-motion: reduce) { .gops-arcs path { animation: none; } }

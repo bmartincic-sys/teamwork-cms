@@ -58,8 +58,8 @@ stickyHref: "/demo/"
         <div class="ticker-label">APIs, no lock-in</div>
       </div>
       <div class="ticker-item">
-        <div class="ticker-value">40<span>+</span></div>
-        <div class="ticker-label">Countries localized</div>
+        <div class="ticker-value">150<span>+</span></div>
+        <div class="ticker-label">Pre-configured reports</div>
       </div>
       <div class="ticker-item">
         <div class="ticker-value">&lt;5<span>min</span></div>
@@ -326,23 +326,59 @@ stickyHref: "/demo/"
 <!-- ============ SECTION: GLOBAL OPERATIONS (World Map) ============ -->
 <section class="ac-royal sunk section" id="global-operations">
   <div class="container">
-    <div class="feature-row reverse">
-      <div class="feature-text">
-        <span class="section-eyebrow">Global Operations</span>
-        <h2>Fiscal compliance and multi-currency in 40+ countries.</h2>
-        <p>Expanding into a new market shouldn't mean a new POS vendor: one localized platform across the fiscal complexity of 40+ markets, including China.</p>
-        <ul class="feature-bullets">
-          <li>Native fiscal compliance: VAT, GST, NF525, TSE, handled in the platform rather than by a local vendor</li>
-          <li>Centralized multi-currency and multi-language from one dashboard</li>
-          <li>The same customer record in each market, so a shopper is recognized wherever they buy</li>
-        </ul>
-      </div>
-      <div class="feature-visual">
-        <div class="worldmap-wrap">
-          {% include "world-map-live.njk" %}
+    <div class="section-header">
+      <div class="section-eyebrow">Global Operations</div>
+      <h2 class="section-title">Fiscal compliance and <span class="gops-nowrap">multi-currency</span> in 40+ countries.</h2>
+      <p class="section-sub">Expanding into a new market shouldn't mean a new POS vendor: one localized platform across the fiscal complexity of 40+ markets.</p>
+    </div>
+
+    <!-- The map is the proof: live markets lit, store cities pulsing, and the fiscal
+         regimes handled natively pinned where they apply. Tags name only regimes
+         confirmed in product documentation. -->
+    <div class="gops-stage">
+      <div class="gops-map">
+        {% include "world-map-live.njk" %}
+        <svg class="gops-arcs" viewBox="0 0 1000 439" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
+          <path d="M315 98 Q 408 18 500 64"/>
+          <path d="M500 64 Q 680 -10 859 114"/>
+          <path d="M315 98 Q 262 120 227 172"/>
+          <path d="M500 64 Q 560 210 575 344"/>
+          <path d="M859 114 Q 900 240 893 371"/>
+          <path d="M315 98 Q 330 220 373 334"/>
+          <path d="M500 64 Q 660 120 794 240"/>
+          <path class="gops-lead" d="M505 78 L 452 150"/>
+          <path class="gops-lead" d="M227 172 L 170 228"/>
+          <path class="gops-lead" d="M859 114 L 905 158"/>
+        </svg>
+        <div class="gops-tag gops-tag-eu" style="left: 33.5%; top: 34%;">
+          <span class="gops-tag-h">Europe</span>
+          <span>France <b>NF525</b></span>
+          <span>Germany <b>TSE</b></span>
+          <span>Italy <b>RT printers</b></span>
+          <span>Spain <b>SII</b></span>
+        </div>
+        <div class="gops-tag" style="left: 6%; top: 52%;">
+          <span class="gops-tag-h">Mexico</span>
+          <span><b>CFDI</b> e-invoicing</span>
+        </div>
+        <div class="gops-tag" style="left: 85%; top: 36%;">
+          <span class="gops-tag-h">Japan</span>
+          <span><b>Official</b> receipts</span>
         </div>
       </div>
+      <div class="gops-stats">
+        <div><strong>40+</strong><span>Countries live</span></div>
+        <div><strong class="gops-nowrap">Multi-currency</strong><span>From one dashboard</span></div>
+        <div><strong class="gops-nowrap">Multi-language</strong><span>Set per market</span></div>
+        <div><strong>One platform</strong><span>The same customer record everywhere</span></div>
+      </div>
     </div>
+
+    <ul class="gops-points">
+      <li><i class="ti ti-receipt"></i><span>Native fiscal compliance: VAT, GST, NF525, TSE, handled in the platform rather than by a local vendor</span></li>
+      <li><i class="ti ti-world"></i><span>Centralized multi-currency and multi-language from one dashboard</span></li>
+      <li><i class="ti ti-user-circle"></i><span>The same customer record in each market, so a shopper is recognized wherever they buy</span></li>
+    </ul>
   </div>
 </section>
 
@@ -353,13 +389,12 @@ stickyHref: "/demo/"
       <div class="feature-text">
         <span class="section-eyebrow">Shopper Display</span>
         <h2>The screen facing the customer is also ad space you can sell.</h2>
-        <p>Every register can run a second, customer-facing shopper display. It is a mode of the same POS app rather than a separate product, so the device showing vendor-sponsored video can switch to taking a checkout when the queue needs it. What it shows is targeted using the customer profile and purchase history already on the POS, which is what makes the space worth paying for.</p>
+        <p>A second screen at every register, run by the same POS app. It targets each customer by profile and purchase history, and switches to checkout when the queue needs it.</p>
         <ul class="feature-bullets">
-          <li>Vendors pay to run targeted video, product launches and coupons at the register, reaching the customer at the moment of purchase</li>
-          <li>Placement is priced against purchase history and customer profile, so a vendor is buying an audience rather than a screen</li>
-          <li>Competing brands can bid for the same customers, and the retailer sets the rate</li>
-          <li>Customers enroll in loyalty themselves by scanning a QR code, no reading out an email address or phone number across the counter</li>
-          <li>Included with every deployment, not a separate system to maintain</li>
+          <li>Vendors pay to reach customers at the moment of purchase</li>
+          <li>Brands bid for the audience, and the retailer sets the rate</li>
+          <li>Customers join loyalty by scanning a QR code</li>
+          <li>Included with every deployment</li>
         </ul>
       </div>
 
@@ -384,47 +419,22 @@ stickyHref: "/demo/"
   </div>
 </section>
 
-<!-- ============ PLATFORM HIGHLIGHTS (horizontal, flashy) ============ -->
-<section class="pfh-band">
-  <div class="pfh-band-glow"></div>
-  <div class="container">
-    <div class="pfh-row">
-      <div class="pfh-col">
-        <div class="pfh-big">iOS Native</div>
-        <div class="pfh-desc">Not a web wrapper: 100% native iOS for speed, security, and responsiveness.</div>
-      </div>
-      <div class="pfh-col">
-        <div class="pfh-big">Open APIs</div>
-        <div class="pfh-desc">Platform-agnostic. Any e-commerce, any payment processor, any ERP. No lock-in.</div>
-      </div>
-      <div class="pfh-col">
-        <div class="pfh-big">&lt;30 min</div>
-        <div class="pfh-desc">Associate training on the iOS patterns your team already knows. The Colorado Rockies have new associates on registers in five minutes.</div>
-      </div>
-      <div class="pfh-col">
-        <div class="pfh-big">150+</div>
-        <div class="pfh-desc">Pre-configured reports in <a href="/platform/analytics/">Analytics</a>. Live multi-store monitoring, custom KPIs, and unified inventory health.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 121 COMMERCE: AI ON THE SALES FLOOR ============ -->
-<section class="section aix aix-band" id="121-commerce">
+<!-- ============ AI ON THE SALES FLOOR ============ -->
+<section class="section aix aix-band" id="ai-assistant">
   <div class="container">
     <div class="aix-head">
       <span class="aix-badge">AI on the Sales Floor</span>
-      <h2 class="section-title">AI product and customer guidance at the <span class="callout">point of sale.</span></h2>
-      <p>AI brings product and customer intelligence together at the point of sale, not as a separate product. It layers onto the same POS your team already uses, so there is nothing new to install and nothing new to learn.</p>
+      <h2 class="section-title">The most knowledgeable coworker on <span class="callout">your floor.</span></h2>
+      <p>An AI assistant built into the associate's handheld. It has read every product tag, knows every care label, and never tires of "do we have this in a different color?" Associates ask it the way they would ask a colleague and get an answer, with pictures, in seconds.</p>
     </div>
 
         <!-- The device sits between the two bullet columns, so the capabilities read as
          things happening on the screen in the middle rather than as a list beside it. -->
     <div class="aix-split">
       <ul class="aix-points aix-points-l">
-        <li><b>Real-time associate guidance</b><span>Instant product info, customer insight, and AI-driven recommendations.</span></li>
-        <li><b>Product Discovery</b><span>Natural-language product search.</span></li>
-        <li><b>Customer context</b><span>The profile behind the sale, on screen at the register.</span></li>
+        <li><b>Ask in plain language</b><span>"Something warm for a weekend in the mountains" brings back the products that fit.</span></li>
+        <li><b>Scan a tag</b><span>Pull up the product information for the item in hand.</span></li>
+        <li><b>Browse by category</b><span>See what is new without walking away from the customer.</span></li>
       </ul>
 
       <div class="aix-stage">
@@ -477,9 +487,9 @@ stickyHref: "/demo/"
       </div>
 
       <ul class="aix-points aix-points-r">
-        <li><b>Automated content orchestration</b><span>Global campaigns with Auto Pre-Scheduling and Versioning.</span></li>
-        <li><b>Consistent everywhere</b><span>The same product and brand wording in each location.</span></li>
-        <li><b>Localized automatically</b><span>Product information served in the market's own language and terms.</span></li>
+        <li><b>Answers with pictures</b><span>Products shown, not just named, so the customer sees them too.</span></li>
+        <li><b>Save and share</b><span>Keep products for later and share them with the customer.</span></li>
+        <li><b>Less searching, more selling</b><span>Customers leave with exactly what they came for, or something even better.</span></li>
       </ul>
     </div>
 
@@ -665,33 +675,6 @@ stickyHref: "/demo/"
   </div>
 </section>
 
-<!-- ============ EXTENSIBILITY ============ -->
-<section class="ac-royal sunk section">
-  <div class="container">
-    <div class="feature-row">
-      <div class="feature-text">
-        <span class="section-eyebrow">Extensibility &amp; APIs</span>
-        <h2>Custom workflows alongside the POS, without changing its core.</h2>
-        <p>Deep linking and logic overlays handle workflows specific to your business without altering the core POS codebase, so a bespoke process doesn't become a bespoke build. The POS hands off to your service and takes the result back into the sale.</p>
-        <ul class="feature-bullets">
-          <li>Custom services integrate alongside the POS, leaving the core untouched</li>
-          <li>Which modules appear on screen, and in what order, is configured per retailer rather than coded</li>
-          <li>Runs as a native application on both iPad and iPhone</li>
-        </ul>
-        <a href="/platform/integrations/" class="btn btn-primary">Integrations &amp; APIs <i class="ti ti-arrow-right"></i></a>
-      </div>
-
-      <div class="feature-visual">
-        <div class="shot">
-          <div class="shot-glow"></div>
-          <img class="shot-img" src="/assets/images/homepage/extensibility.jpg" alt="A developer building a custom service against the Teamwork Commerce APIs" loading="lazy">
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
 <!-- ============ IMPLEMENTATION & ROLLOUT (moved from the homepage) ============ -->
 <section class="ac-purple sunk section" style="padding-top: 48px;">
   <div class="container">
@@ -741,7 +724,9 @@ stickyHref: "/demo/"
 <!-- ============ CASE STUDIES ============ -->
 <section class="section cs-section">
   <div class="container">
-    <h2 class="ch-title ch-title-sm">Retailers using Teamwork Commerce today.</h2>
+    <div class="section-header">
+      <h2 class="section-title">Retailers using Teamwork Commerce today.</h2>
+    </div>
   </div>
 
   {% include "case-study-rail.njk" %}
@@ -799,7 +784,7 @@ stickyHref: "/demo/"
           How does this compare to other unified commerce POS platforms?
           <span class="faq-icon"><i class="ti ti-plus"></i></span>
         </button></h3>
-        <div class="faq-answer"><p>The practical difference is where RFID lives. Most platforms in this category reach it through a third-party integration layer, so tag reads arrive as an import after the fact. Ours runs inside the POS, which is why receiving, counting, transferring and selling all operate by individual EPC. The iOS-native architecture, <a href="#121-commerce" style="color: var(--brand-text);">AI</a> at the point of sale and the 30+ years behind the product matter too, but RFID is the one that changes how a store actually works.</p></div>
+        <div class="faq-answer"><p>The practical difference is where RFID lives. Most platforms in this category reach it through a third-party integration layer, so tag reads arrive as an import after the fact. Ours runs inside the POS, which is why receiving, counting, transferring and selling all operate by individual EPC. The iOS-native architecture, <a href="#ai-assistant" style="color: var(--brand-text);">AI</a> at the point of sale and the 30+ years behind the product matter too, but RFID is the one that changes how a store actually works.</p></div>
       </div>
       <div class="faq-item">
         <h3 class="faq-q"><button class="faq-question" aria-expanded="false" onclick="var i=this.closest('.faq-item');i.classList.toggle('open');this.setAttribute('aria-expanded',i.classList.contains('open'))">
