@@ -214,21 +214,25 @@ stickyHref: "/demo/"
         </ul>
       </div>
       <div class="feature-visual">
-        <div class="rfx-card" aria-hidden="true">
-          <div class="rfx-head"><span>Transfer</span><span class="rfx-pill">In transit</span></div>
-          <div class="rfx-route">
-            <div class="rfx-node"><i class="ti ti-building-warehouse"></i><b>Distribution center</b><em>Source</em></div>
-            <div class="rfx-line"><span class="rfx-dot"></span></div>
-            <div class="rfx-node"><i class="ti ti-building-store"></i><b>Flagship store</b><em>Destination</em></div>
+        <div class="tfx" aria-hidden="true">
+          <div class="tfx-phone">
+            <div class="tfx-top"><span class="tfx-round"><i class="ti ti-x"></i></span><b>Transfer Order</b><span class="tfx-round"><svg viewBox="0 0 24 24"><path d="M7 9V4h10v5M7 17H5a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2M7 14h10v6H7z"/></svg></span></div>
+            <div class="tfx-tabs"><span><i class="ti ti-file-description"></i></span><span class="is-on"><svg viewBox="0 0 24 24"><path d="M5 6h9v12H5zM8 10h3M8 13h3M17 8a5 5 0 0 1 0 8M19.5 5.5a9 9 0 0 1 0 13"/></svg></span><span><i class="ti ti-truck-delivery"></i></span><span><svg viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2M9 5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2zM12 11v6M9 14h6"/></svg></span><span><svg viewBox="0 0 24 24"><path d="M12 9v4M12 17h.01M10.3 3.9 2.6 17.3A2 2 0 0 0 4.3 20h15.4a2 2 0 0 0 1.7-2.7L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg></span></div>
+            <div class="tfx-label">Power Level</div>
+            <div class="tfx-box tfx-power"><div class="tfx-slider"><i></i></div><span class="tfx-range"><em>Short-Range</em><em>Long-Range</em></span><strong>5</strong></div>
+            <div class="tfx-label">Quantities</div>
+            <div class="tfx-box">
+              <div class="tfx-row"><span class="tfx-ico"><i class="ti ti-truck-delivery"></i></span><span><b>Items Scanned</b><em>All Items</em></span><strong class="tfx-up">642</strong></div>
+              <div class="tfx-row"><span class="tfx-ico"><svg viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2M9 5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2zM12 11v6M9 14h6"/></svg></span><span><b>Order Items</b><em>Not Scanned</em></span><strong>358</strong></div>
+              <div class="tfx-row"><span class="tfx-ico"><svg viewBox="0 0 24 24"><path d="M12 9v4M12 17h.01M10.3 3.9 2.6 17.3A2 2 0 0 0 4.3 20h15.4a2 2 0 0 0 1.7-2.7L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg></span><span><b>Items Not in Document</b><em>Scanned</em></span><strong>0</strong></div>
+            </div>
+            <div class="tfx-box tfx-row tfx-solo"><span><b>Unrecognized EPCs</b></span><strong>0</strong></div>
+            <div class="tfx-cta"><span class="tfx-pulse"></span>Scanning</div>
+            <div class="tfx-foot"><span class="tfx-count">642</span><span class="tfx-final">Finalize</span></div>
           </div>
-          <ul class="rfx-units">
-            <li><img src="/assets/images/homepage/ai/coat-belted.webp" alt="" width="440" height="440" loading="lazy"><span><b>Belted wool coat</b><code>E280 6894 0000 5012 3A41</code></span><span class="rfx-checks"><i class="ti ti-circle-check-filled"></i><i class="ti ti-circle-check-filled"></i></span></li>
-            <li><img src="/assets/images/homepage/ai/coat-peacoat.webp" alt="" width="440" height="440" loading="lazy"><span><b>Double-breasted wool coat</b><code>E280 6894 0000 5012 3A57</code></span><span class="rfx-checks"><i class="ti ti-circle-check-filled"></i><i class="ti ti-circle-check-filled"></i></span></li>
-            <li><img src="/assets/images/homepage/ai/coat-cocoon.webp" alt="" width="440" height="440" loading="lazy"><span><b>Shearling aviator jacket</b><code>E280 6894 0000 5012 3A62</code></span><span class="rfx-checks"><i class="ti ti-circle-check-filled"></i><i class="ti ti-clock rfx-wait"></i></span></li>
-          </ul>
-          <div class="rfx-foot"><span><i class="ti ti-circle-check-filled"></i> Source</span><span><i class="ti ti-circle-check-filled"></i> Destination</span><strong>2 of 3 received</strong></div>
+          <span class="tfx-float tfx-float-a"><i class="ti ti-scan"></i> Only the units in this transfer</span>
+          <span class="tfx-float tfx-float-b"><svg viewBox="0 0 24 24"><path d="M5 6h9v12H5zM8 10h3M8 13h3M17 8a5 5 0 0 1 0 8M19.5 5.5a9 9 0 0 1 0 13"/></svg> Checked again at the destination</span>
         </div>
-          <p class="mock-note"><i class="ti ti-info-circle"></i> Illustration, not a screenshot of the product</p>
       </div>
     </div>
   </div>
@@ -298,20 +302,21 @@ stickyHref: "/demo/"
         </ul>
       </div>
       <div class="feature-visual">
-        <div class="rfx-card" aria-hidden="true">
-          <div class="rfx-head"><span>Unit Control Ledger</span><span class="rfx-pill rfx-pill-ok">Full history</span></div>
-          <div class="rfx-unit">
-            <img src="/assets/images/homepage/ai/coat-belted.webp" alt="" width="440" height="440" loading="lazy">
-            <span><b>Belted wool coat</b><em>Camel &middot; Size 38</em><code>EPC E280 6894 0000 5012 3A41</code></span>
+        <div class="tfx">
+          <div class="rfx-card" aria-hidden="true">
+            <div class="rfx-head"><span>Unit Control Ledger</span><span class="rfx-pill rfx-pill-ok">Full history</span></div>
+            <div class="rfx-unit">
+              <img src="/assets/images/homepage/ai/coat-belted.webp" alt="" width="440" height="440" loading="lazy">
+              <span><b>Belted wool coat</b><em>Camel &middot; Size 38</em><code>EPC E280 6894 0000 5012 3A41</code></span>
+            </div>
+            <ol class="rfx-timeline">
+              <li><i class="ti ti-package-import"></i><span><b>Received</b><em>Distribution center</em></span><time>Mon 08:42</time></li>
+              <li><i class="ti ti-arrows-exchange"></i><span><b>Transferred</b><em>Distribution center to Flagship store</em></span><time>Tue 14:05</time></li>
+              <li><i class="ti ti-scan"></i><span><b>Counted</b><em>Flagship store, sales floor</em></span><time>Wed 09:30</time></li>
+              <li class="is-now"><i class="ti ti-receipt"></i><span><b>Sold</b><em>Flagship store, register 2</em></span><time>Wed 16:18</time></li>
+            </ol>
           </div>
-          <ol class="rfx-timeline">
-            <li><i class="ti ti-package-import"></i><span><b>Received</b><em>Distribution center</em></span><time>Mon 08:42</time></li>
-            <li><i class="ti ti-arrows-exchange"></i><span><b>Transferred</b><em>Distribution center to Flagship store</em></span><time>Tue 14:05</time></li>
-            <li><i class="ti ti-scan"></i><span><b>Counted</b><em>Flagship store, sales floor</em></span><time>Wed 09:30</time></li>
-            <li class="is-now"><i class="ti ti-receipt"></i><span><b>Sold</b><em>Flagship store, register 2</em></span><time>Wed 16:18</time></li>
-          </ol>
         </div>
-          <p class="mock-note"><i class="ti ti-info-circle"></i> Illustration, not a screenshot of the product</p>
       </div>
     </div>
   </div>

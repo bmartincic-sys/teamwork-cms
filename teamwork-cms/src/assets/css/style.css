@@ -9623,3 +9623,78 @@ main[data-vertical] .tm-day-time { color: color-mix(in srgb, var(--v-accent) 80%
 .mock-note i { font-size: 14px; }
 .mock-note-right { position: absolute; right: 0; bottom: 12px; margin: 0; }
 @media (max-width: 760px) { .mock-note-right { position: static; margin-top: 12px; } }
+
+/* ===== RFID transfer screen, drawn (RFID page) =====
+   The real Transfer Order layout, redrawn flat and set at a slight angle on a
+   tinted panel so it reads as an illustration rather than a screenshot. */
+.tfx {
+  position: relative; padding: 34px 0 30px; border-radius: 26px;
+  background: radial-gradient(70% 70% at 50% 40%, rgba(47,123,255,0.18), transparent 70%), var(--brand-soft);
+  perspective: 1400px; display: grid; place-items: center;
+}
+.tfx-phone {
+  width: 268px; padding: 16px 14px 14px; border-radius: 34px;
+  background: #e9edf4; border: 7px solid #10142a;
+  box-shadow: 0 40px 70px -30px rgba(7,9,26,0.55);
+  transform: rotateY(-10deg) rotateX(4deg) rotateZ(1deg);
+  font-family: var(--font-body); color: #10142a;
+}
+[data-theme="dark"] .tfx-phone { border-color: #2a3150; }
+.tfx-top { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+.tfx-top b { flex: 1; font-size: 15px; font-weight: 700; letter-spacing: -0.01em; }
+.tfx-round { display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; background: #fff; font-size: 15px; }
+.tfx svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.tfx-tabs { display: flex; justify-content: space-between; padding: 4px; border-radius: 12px; background: #d9dfe9; margin-bottom: 12px; }
+.tfx-tabs span { display: grid; place-items: center; width: 40px; height: 26px; border-radius: 9px; color: #8a93a6; font-size: 15px; }
+.tfx-tabs span.is-on { background: #fff; color: #10142a; }
+.tfx-label { font-size: 11.5px; font-weight: 700; margin: 0 2px 6px; }
+.tfx-box { background: #fff; border-radius: 13px; padding: 4px 10px; margin-bottom: 10px; }
+.tfx-power { display: grid; grid-template-columns: 1fr auto; grid-template-rows: auto auto; column-gap: 10px; padding: 10px 10px 8px; }
+.tfx-slider { position: relative; height: 3px; border-radius: 2px; background: #dfe3ea; margin-top: 6px; }
+.tfx-slider::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 46%; border-radius: 2px; background: #3b86f7; }
+.tfx-slider i { position: absolute; left: 46%; top: 50%; width: 14px; height: 14px; margin: -7px 0 0 -7px; border-radius: 50%; background: #fff; box-shadow: 0 1px 4px rgba(0,0,0,0.25); }
+.tfx-range { display: flex; justify-content: space-between; margin-top: 7px; }
+.tfx-range em { font-style: normal; font-size: 9.5px; color: #8a93a6; }
+.tfx-power strong { grid-row: 1 / span 2; grid-column: 2; align-self: center; padding-left: 10px; border-left: 1px solid #e3e7ee; font-size: 17px; }
+.tfx-row { display: flex; align-items: center; gap: 10px; padding: 7px 0; }
+.tfx-row + .tfx-row { border-top: 1px solid #edf0f4; }
+.tfx-ico { display: grid; place-items: center; width: 22px; color: #9aa3b5; font-size: 16px; }
+.tfx-row > span:nth-last-child(2) { flex: 1; display: grid; }
+.tfx-row b { font-size: 11.5px; font-weight: 500; }
+.tfx-row em { font-style: normal; font-size: 9.5px; color: #8a93a6; }
+.tfx-row strong { font-size: 13px; font-weight: 600; }
+.tfx-row strong.tfx-up { color: #2f7bff; }
+.tfx-solo { padding: 9px 10px; }
+.tfx-cta {
+  position: relative; display: flex; align-items: center; justify-content: center; gap: 8px; margin: 4px 0 12px;
+  padding: 10px 0; border-radius: 100px; background: #3b86f7; color: #fff; font-size: 11.5px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase;
+}
+.tfx-pulse { width: 8px; height: 8px; border-radius: 50%; background: #fff; animation: scoBlink 1.1s ease-in-out infinite; }
+.tfx-foot { display: flex; align-items: center; justify-content: space-between; padding: 5px 5px 5px 14px; border-radius: 100px; background: #fff; }
+.tfx-count { font-size: 15px; font-weight: 700; color: #2f7bff; }
+.tfx-final { padding: 6px 14px; border-radius: 100px; background: #c9ced8; color: #fff; font-size: 11px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; }
+
+.tfx-float {
+  position: absolute; display: inline-flex; align-items: center; gap: 7px; padding: 8px 13px; border-radius: 100px;
+  font-size: 12px; font-weight: 600; color: var(--text); background: var(--bg-elevated); border: 1px solid var(--border);
+  box-shadow: 0 14px 30px -16px rgba(7,9,26,0.45);
+}
+.tfx-float i, .tfx-float svg { color: var(--brand-text); font-size: 15px; }
+.tfx-float-a { top: 20%; left: -9%; }
+.tfx-float-b { bottom: 20%; left: -9%; }
+@media (max-width: 1200px) {
+  .tfx { gap: 10px; }
+  .tfx-float { position: static; }
+}
+@media (max-width: 760px) {
+  .tfx-phone { transform: none; }
+  .tfx-float { position: static; margin-top: 10px; }
+  .tfx { padding: 24px 12px 18px; }
+}
+@media (prefers-reduced-motion: reduce) { .tfx-pulse { animation: none; } }
+
+/* The ledger card gets the same drawn treatment: tinted panel, slight angle. */
+.tfx .rfx-card { transform: rotateY(10deg) rotateX(4deg) rotateZ(-1deg); box-shadow: 0 40px 70px -30px rgba(7,9,26,0.5); }
+/* Self-checkout card on Mobile POS: tilted a touch, so it reads as a drawn overlay. */
+.sco-card { transform: rotate(-2deg); }
+@media (max-width: 760px) { .tfx .rfx-card, .sco-card { transform: none; } }
