@@ -9552,7 +9552,7 @@ main[data-vertical] .tm-day-time { color: color-mix(in srgb, var(--v-accent) 80%
 
 @media (max-width: 760px) {
   .sco-mock { padding: 0 0 0 0; }
-  .sco-card { position: relative; width: auto; margin: -36px 14px 0; }
+  .sco-card { position: relative; left: auto; width: auto; margin: -36px 14px 0; }
   .sco-chip { top: 12px; right: 12px; }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -9613,3 +9613,13 @@ main[data-vertical] .tm-day-time { color: color-mix(in srgb, var(--v-accent) 80%
 .rfx-timeline time { font-family: var(--font-mono); font-size: 11px; color: var(--text-faint); }
 
 @media (prefers-reduced-motion: reduce) { .rfx-dot { animation: none; left: 50%; } }
+
+/* Mockups built for the site are labelled as such, so nobody takes them for
+   product screenshots. */
+.mock-note {
+  display: flex; align-items: center; justify-content: center; gap: 6px;
+  margin: 14px 0 0; font-size: 11.5px; line-height: 1.4; color: var(--text-faint);
+}
+.mock-note i { font-size: 14px; }
+.mock-note-right { position: absolute; right: 0; bottom: 12px; margin: 0; }
+@media (max-width: 760px) { .mock-note-right { position: static; margin-top: 12px; } }
