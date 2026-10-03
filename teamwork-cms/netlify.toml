@@ -64,6 +64,12 @@
   to = "/events/"
   status = 301
 
+# Client-only page: reachable by URL, never indexed.
+[[headers]]
+  for = "/certified-hardware/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
 [[headers]]
   for = "/lp/*"
   [headers.values]

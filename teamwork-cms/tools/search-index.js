@@ -70,6 +70,8 @@ for (const file of files) {
   if (url === '/thanks/') continue;
 
   const html = fs.readFileSync(file, 'utf8');
+  // Pages marked noindex (client-only pages) stay out of site search too.
+  if (/<meta name="robots" content="[^"]*noindex/i.test(html)) continue;
 
   const title = clean((html.match(/<title>([\s\S]*?)<\/title>/i) || [, ''])[1])
     .replace(/\s*\|\s*Teamwork Commerce$/, '');

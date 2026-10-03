@@ -1,10 +1,10 @@
 # Teamwork Commerce
 
-> Teamwork Commerce builds enterprise retail software. Point of sale is the core product, and order management, inventory, RFID, analytics and AI exist to make it stronger rather than to be sold beside it. The platform runs on 30,000+ terminals in 40+ countries at 99.99% uptime, with RFID native to the POS and no middleware layer. Teamwork Commerce was founded in 2009, built on retail software work going back to 1986. SOC 2 Type 2, SOC 1 Type 2, PCI DSS, GDPR and ISO 27001 compliant, with fiscal compliance including NF525, TSE, PIPL and MLPS 2.0.
+> Teamwork Commerce builds enterprise retail software. Point of sale is the core product, and order management, inventory, RFID, analytics and AI exist to make it stronger rather than to be sold beside it. The platform runs on 30,000+ terminals in 40+ countries, with open APIs and RFID native to the POS and no middleware layer. Teamwork Commerce was founded in 2009. SOC 2 Type 2, SOC 1 Type 2, PCI DSS, GDPR and ISO 27001 compliant, with fiscal compliance including NF525, TSE, PIPL and MLPS 2.0.
 
 ## Platform
 
-- [Mobile POS](https://www.teamworkcommerce.com/platform/mobile-pos/): The core product. Enterprise POS native to iOS, on iPad and iPhone, localized across 40+ countries. 30s average transaction, 99.99% uptime. Keeps selling through a network outage because the app and its data are on the device.
+- [Mobile POS](https://www.teamworkcommerce.com/platform/mobile-pos/): The core product. Enterprise POS native to iOS, on iPad and iPhone, localized across 40+ countries. 30s average transaction, open APIs. Keeps selling through a network outage because the app and its data are on the device.
 - [RFID](https://www.teamworkcommerce.com/platform/rfid/): A native RFID stack running from tag commissioning at receiving through transfers, counts and checkout. Every transaction operates by individual EPC rather than UPC. No third-party middleware, and the reader hardware is yours to choose. There are no certified EAS gates on the hardware list today, and loss prevention is not a product Teamwork sells.
 - [Inventory Control](https://www.teamworkcommerce.com/platform/inventory-control/): Inventory verified by RFID to 99.9% accuracy, with full-store counts in minutes rather than overnight, plus allocation and replenishment.
 - [Order Management (OMS)](https://www.teamworkcommerce.com/platform/oms/): Distributed order management with configurable Order Fill Logic, Ship from Store, Endless Aisle, BOPIS and BORIS, routing against the same stock record the store is selling from.
@@ -34,7 +34,6 @@
 - [Technical Evaluation](https://www.teamworkcommerce.com/technical-evaluation/): For architects, CISOs and CTOs. A working session on architecture, security and integrations.
 - [POS Evaluation](https://www.teamworkcommerce.com/pos-evaluation/): Six tests a retailer can run inside a demo or pilot that produce evidence rather than answers.
 - [POS RFP Template](https://www.teamworkcommerce.com/pos-rfp-template/): A free, ungated RFP question bank. 100+ questions across 15 sections.
-- [Certified Hardware](https://www.teamworkcommerce.com/certified-hardware/): The devices integrated and supported with TW POS Pro. Deliberately short, roughly one certified device per category.
 - [Frequently Asked Questions](https://www.teamworkcommerce.com/frequently-asked-questions/): Answers on POS, RFID, inventory, order management, analytics and AI.
 
 ## Resources
@@ -47,7 +46,7 @@
 
 ## Company
 
-- [About](https://www.teamworkcommerce.com/about/): Founded 2009 by Michael Mauerer, on retail software work dating to 1986. Offices across four continents.
+- [About](https://www.teamworkcommerce.com/about/): Founded 2009 by Michael Mauerer. Offices across four continents.
 - [Careers](https://www.teamworkcommerce.com/careers/)
 - [Teamwork Cares](https://www.teamworkcommerce.com/teamwork-cares/)
 - [Contact](https://www.teamworkcommerce.com/contact/)

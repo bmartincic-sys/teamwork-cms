@@ -25,6 +25,7 @@
 <title>{{ pageTitle }}</title>
 <meta name="description" content="{{ description }}">
 <link rel="canonical" href="https://www.teamworkcommerce.com{{ page.url }}">
+{% if noindex %}<meta name="robots" content="noindex, nofollow">{% endif %}
 
 {#- Translation alternates. Driven by tools/i18n/manifest.json, so a page can
     only advertise a locale that was actually built. Canonical above stays
@@ -89,7 +90,7 @@
   "name": "Teamwork Commerce",
   "url": "https://www.teamworkcommerce.com",
   "logo": "https://www.teamworkcommerce.com/assets/images/teamwork-logo-color.svg",
-  "description": "Teamwork Commerce is a global, AI-enabled retail platform providing enterprise POS, OMS, Inventory Management, and RFID solutions. One natively integrated system powering 30,000+ terminals across 40+ countries with 99.99% uptime.",
+  "description": "Teamwork Commerce is a global, AI-enabled retail platform providing enterprise POS, OMS, Inventory Management, and RFID solutions. One natively integrated system powering 30,000+ terminals across 40+ countries with open APIs.",
   "sameAs": [
     "https://www.linkedin.com/company/teamwork-commerce/",
     "https://www.youtube.com/@teamworkcommerce6746",
