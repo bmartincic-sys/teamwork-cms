@@ -8519,7 +8519,8 @@ main[data-vertical] .tm-band-glow,
   margin: 0 0 20px; color: var(--brand-text);
 }
 .cs-glance-figs {
-  display: grid; grid-template-columns: repeat(3, 1fr); margin-bottom: 22px;
+  /* one to three figures share the width evenly */
+  display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); margin-bottom: 22px;
 }
 .cs-glance-fig { padding: 0 22px; }
 .cs-glance-fig:first-child { padding-left: 0; }
@@ -8552,7 +8553,7 @@ main[data-vertical] .tm-band-glow,
 
 @media (max-width: 720px) {
   .cs-glance { padding: 22px 20px 16px; }
-  .cs-glance-figs { grid-template-columns: 1fr; margin-bottom: 4px; }
+  .cs-glance-figs { grid-auto-flow: row; grid-template-columns: 1fr; margin-bottom: 4px; }
   .cs-glance-fig { padding: 14px 0; }
   .cs-glance-fig:first-child { padding-top: 0; }
   .cs-glance-fig + .cs-glance-fig { border-left: 0; border-top: 1px solid var(--border); }
