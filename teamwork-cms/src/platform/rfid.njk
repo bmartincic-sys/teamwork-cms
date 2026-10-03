@@ -213,6 +213,22 @@ stickyHref: "/demo/"
           <li>The kind of confidence in inventory data that enables smarter replenishment decisions across stores</li>
         </ul>
       </div>
+      <div class="feature-visual">
+        <div class="rfx-card" aria-hidden="true">
+          <div class="rfx-head"><span>Transfer</span><span class="rfx-pill">In transit</span></div>
+          <div class="rfx-route">
+            <div class="rfx-node"><i class="ti ti-building-warehouse"></i><b>Distribution center</b><em>Source</em></div>
+            <div class="rfx-line"><span class="rfx-dot"></span></div>
+            <div class="rfx-node"><i class="ti ti-building-store"></i><b>Flagship store</b><em>Destination</em></div>
+          </div>
+          <ul class="rfx-units">
+            <li><img src="/assets/images/homepage/ai/coat-belted.webp" alt="" width="440" height="440" loading="lazy"><span><b>Belted wool coat</b><code>E280 6894 0000 5012 3A41</code></span><span class="rfx-checks"><i class="ti ti-circle-check-filled"></i><i class="ti ti-circle-check-filled"></i></span></li>
+            <li><img src="/assets/images/homepage/ai/coat-peacoat.webp" alt="" width="440" height="440" loading="lazy"><span><b>Double-breasted wool coat</b><code>E280 6894 0000 5012 3A57</code></span><span class="rfx-checks"><i class="ti ti-circle-check-filled"></i><i class="ti ti-circle-check-filled"></i></span></li>
+            <li><img src="/assets/images/homepage/ai/coat-cocoon.webp" alt="" width="440" height="440" loading="lazy"><span><b>Shearling aviator jacket</b><code>E280 6894 0000 5012 3A62</code></span><span class="rfx-checks"><i class="ti ti-circle-check-filled"></i><i class="ti ti-clock rfx-wait"></i></span></li>
+          </ul>
+          <div class="rfx-foot"><span><i class="ti ti-circle-check-filled"></i> Source</span><span><i class="ti ti-circle-check-filled"></i> Destination</span><strong>2 of 3 received</strong></div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -243,13 +259,11 @@ stickyHref: "/demo/"
 
 <div class="journey-link" aria-hidden="true"><span class="journey-pulse"></span></div>
 
-<div class="journey-link" aria-hidden="true"><span class="journey-pulse"></span></div>
-
 <section class="section" style="padding-top: 0;">
   <div class="container">
     <div class="feature-row reverse">
       <div class="feature-text">
-        <span class="story-chip"><span class="story-num">05</span> Stock count</span>
+        <span class="story-chip"><span class="story-num">04</span> Stock count</span>
         <h2>Hours with a large team, or minutes with a single person.</h2>
         <p>After units have been received, moved, and sold, RFID stock counts verify that everything is where it should be. Counts work by capturing all visible EPCs within range of the reader. Teams can scan the store, covering entire departments in seconds.</p>
         <ul class="feature-bullets">
@@ -274,13 +288,28 @@ stickyHref: "/demo/"
   <div class="container">
     <div class="feature-row">
       <div class="feature-text">
-        <span class="story-chip"><span class="story-num">06</span> Unit Control Ledger</span>
+        <span class="story-chip"><span class="story-num">05</span> Unit Control Ledger</span>
         <h2>A real-time database of which unit is where.</h2>
         <p>Every action, receiving, transferring, selling or counting, maintains a record of exactly where every unit is, across the entire company. This is the Unit Control Ledger: a real-time database of which unit is in which location, when it moved, and where it's supposed to be.</p>
         <ul class="feature-bullets">
           <li>If a stock count reveals a discrepancy, an adjustment is recorded directly, and that adjustment is also logged on the ledger</li>
           <li>The result is a single source of truth for every unit in your inventory, from the moment it enters the store to the moment it leaves</li>
         </ul>
+      </div>
+      <div class="feature-visual">
+        <div class="rfx-card" aria-hidden="true">
+          <div class="rfx-head"><span>Unit Control Ledger</span><span class="rfx-pill rfx-pill-ok">Full history</span></div>
+          <div class="rfx-unit">
+            <img src="/assets/images/homepage/ai/coat-belted.webp" alt="" width="440" height="440" loading="lazy">
+            <span><b>Belted wool coat</b><em>Camel &middot; Size 38</em><code>EPC E280 6894 0000 5012 3A41</code></span>
+          </div>
+          <ol class="rfx-timeline">
+            <li><i class="ti ti-package-import"></i><span><b>Received</b><em>Distribution center</em></span><time>Mon 08:42</time></li>
+            <li><i class="ti ti-arrows-exchange"></i><span><b>Transferred</b><em>Distribution center to Flagship store</em></span><time>Tue 14:05</time></li>
+            <li><i class="ti ti-scan"></i><span><b>Counted</b><em>Flagship store, sales floor</em></span><time>Wed 09:30</time></li>
+            <li class="is-now"><i class="ti ti-receipt"></i><span><b>Sold</b><em>Flagship store, register 2</em></span><time>Wed 16:18</time></li>
+          </ol>
+        </div>
       </div>
     </div>
   </div>
@@ -464,7 +493,6 @@ stickyHref: "/demo/"
 {% include "security.njk" %}
 
 
-{% include "logos.njk" %}
 
 
 <!-- ============ FAQ ============ -->
