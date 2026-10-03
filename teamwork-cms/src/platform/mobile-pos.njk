@@ -86,13 +86,12 @@ stickyHref: "/demo/"
    </div><!-- /caps-top -->
 
     <div class="captabs-nav" role="tablist" aria-label="POS capability groups">
-      <button class="captab active" role="tab" aria-selected="true" data-captab="cap-selling"><i class="ti ti-credit-card"></i> Selling &amp; Transactions</button>
-      <button class="captab" role="tab" aria-selected="false" data-captab="cap-inventory"><i class="ti ti-package"></i> Inventory &amp; Fulfillment</button>
-      <button class="captab" role="tab" aria-selected="false" data-captab="cap-customer"><i class="ti ti-heart-handshake"></i> Customer &amp; Operations</button>
-      <button class="captab" role="tab" aria-selected="false" data-captab="cap-identity"><i class="ti ti-scan-eye"></i> Identity &amp; Loyalty</button>
+      <button class="captab active" role="tab" aria-selected="true" data-captab="cap-selling"><i class="ti ti-credit-card"></i> Selling &amp; Fulfillment</button>
+      <button class="captab" role="tab" aria-selected="false" data-captab="cap-inventory"><i class="ti ti-package"></i> Inventory &amp; Returns</button>
+      <button class="captab" role="tab" aria-selected="false" data-captab="cap-identity"><i class="ti ti-scan-eye"></i> Customers &amp; Identity</button>
     </div>
 
-    <!-- Panel 1: Selling & Transactions -->
+    <!-- Panel 1: Selling & Fulfillment -->
     <div class="captab-panel active" id="cap-selling" role="tabpanel">
       <div class="pillars-grid" style="grid-template-columns: repeat(3, 1fr); gap: 12px;">
         <div class="pillar-card pillar-card-compact">
@@ -101,19 +100,19 @@ stickyHref: "/demo/"
           <p class="pillar-desc">Full-featured POS on iPhone or iPad. Sell from the fitting room, stockroom, or floor, untethered from the cash wrap.</p>
         </div>
         <div class="pillar-card pillar-card-compact">
-          <div class="pillar-icon"><i class="ti ti-credit-card"></i></div>
-          <h3 class="pillar-title">Flexible payments</h3>
-          <p class="pillar-desc">Tap to Pay, Apple Pay, contactless, chip, and swipe, plus split tenders, gift cards, and BNPL. Processor-agnostic, with integrations such as Adyen, Stripe, PayPal, and Clover.</p>
+          <div class="pillar-icon"><i class="ti ti-shopping-bag"></i></div>
+          <h3 class="pillar-title">Endless Aisle &amp; Save the Sale</h3>
+          <p class="pillar-desc">Out of stock? Ship from another store or warehouse in 3 taps. Footwear brands see a 15–22% revenue lift from Endless Aisle.</p>
         </div>
         <div class="pillar-card pillar-card-compact">
-          <div class="pillar-icon"><i class="ti ti-calculator"></i></div>
-          <h3 class="pillar-title">Promotions & loyalty</h3>
-          <p class="pillar-desc">Discounts, promotions, loyalty, coupon stacking and tax exemptions are configured in the POS. Carrying the same rules across to e-commerce and mobile is an integration, delivered through real-time connectors.</p>
+          <div class="pillar-icon"><i class="ti ti-truck-delivery"></i></div>
+          <h3 class="pillar-title">BOPIS &amp; ship-from-store</h3>
+          <p class="pillar-desc">Highlights from 39+ omnichannel workflows: BOPIS, ship-from-store, and BORIS. Any location can fulfill, with routing rules you set.</p>
         </div>
       </div>
     </div>
 
-    <!-- Panel 2: Inventory & Fulfillment -->
+    <!-- Panel 2: Inventory & Returns -->
     <div class="captab-panel" id="cap-inventory" role="tabpanel">
       <div class="pillars-grid" style="grid-template-columns: repeat(3, 1fr); gap: 12px;">
         <div class="pillar-card pillar-card-compact">
@@ -122,42 +121,26 @@ stickyHref: "/demo/"
           <p class="pillar-desc">Item-level visibility in stores, warehouses and channels. Receiving, transfers, and RFID cycle counts, from the mobile POS, in minutes.</p>
         </div>
         <div class="pillar-card pillar-card-compact">
-          <div class="pillar-icon"><i class="ti ti-shopping-bag"></i></div>
-          <h3 class="pillar-title">Endless Aisle & Save the Sale</h3>
-          <p class="pillar-desc">Out of stock? Ship from another store or warehouse in 3 taps. Footwear brands see a 15–22% revenue lift from Endless Aisle.</p>
-        </div>
-        <div class="pillar-card pillar-card-compact">
-          <div class="pillar-icon"><i class="ti ti-truck-delivery"></i></div>
-          <h3 class="pillar-title">BOPIS & ship-from-store</h3>
-          <p class="pillar-desc">Highlights from 39+ omnichannel workflows: BOPIS, ship-from-store, and BORIS. Any location can fulfill, with routing rules you set.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Panel 3: Customer & Operations -->
-    <div class="captab-panel" id="cap-customer" role="tabpanel">
-      <div class="pillars-grid" style="grid-template-columns: repeat(3, 1fr); gap: 12px;">
-        <div class="pillar-card pillar-card-compact">
-          <div class="pillar-icon"><i class="ti ti-heart-handshake"></i></div>
-          <h3 class="pillar-title">Customer profiles & CRM</h3>
-          <p class="pillar-desc">360° customer profiles (history, preferences, wishlists, notes) on the associate's screen at the register.</p>
-        </div>
-        <div class="pillar-card pillar-card-compact">
           <div class="pillar-icon"><i class="ti ti-arrows-exchange"></i></div>
-          <h3 class="pillar-title">Returns & exchanges</h3>
+          <h3 class="pillar-title">Returns &amp; exchanges</h3>
           <p class="pillar-desc">Cross-channel returns and exchanges with no sync lag. Return an online order in-store; that inventory is instantly resellable.</p>
         </div>
         <div class="pillar-card pillar-card-compact">
           <div class="pillar-icon"><i class="ti ti-lock-access"></i></div>
-          <h3 class="pillar-title">Cash & operations</h3>
+          <h3 class="pillar-title">Cash &amp; operations</h3>
           <p class="pillar-desc">Drawer memos, blind counts, variance alerts, and safe checklists. Pre-flight routines keep cash consistent at open and close.</p>
         </div>
       </div>
     </div>
 
-    <!-- Panel 4: Identity & Loyalty -->
+    <!-- Panel 3: Customers & Identity -->
     <div class="captab-panel" id="cap-identity" role="tabpanel">
       <div class="pillars-grid" style="grid-template-columns: repeat(3, 1fr); gap: 12px;">
+        <div class="pillar-card pillar-card-compact">
+          <div class="pillar-icon"><i class="ti ti-user-circle"></i></div>
+          <h3 class="pillar-title">Universal customer profiles</h3>
+          <p class="pillar-desc">One profile per customer, not one per store. Purchase history, preferences, wishlists, notes and loyalty status on the associate's screen at the register.</p>
+        </div>
         <div class="pillar-card pillar-card-compact">
           <div class="pillar-icon"><i class="ti ti-qrcode"></i></div>
           <h3 class="pillar-title">QR loyalty sign-up</h3>
@@ -166,12 +149,7 @@ stickyHref: "/demo/"
         <div class="pillar-card pillar-card-compact">
           <div class="pillar-icon"><i class="ti ti-login"></i></div>
           <h3 class="pillar-title">QR associate login</h3>
-          <p class="pillar-desc">Rotating QR-code sign-in for associates: fast, secure authentication at the register with nothing to type.</p>
-        </div>
-        <div class="pillar-card pillar-card-compact">
-          <div class="pillar-icon"><i class="ti ti-user-circle"></i></div>
-          <h3 class="pillar-title">Universal customer profiles</h3>
-          <p class="pillar-desc">One profile per customer, not one per store. Purchase history, wishlists, and loyalty status resolve to the same person wherever they shop.</p>
+          <p class="pillar-desc">Rotating QR-code sign-in at the register with nothing to type, plus optional facial recognition. See <a href="/features/access-identity/">Access &amp; Identity</a>.</p>
         </div>
       </div>
     </div>
@@ -345,49 +323,6 @@ stickyHref: "/demo/"
   </div>
 </section>
 
-<!-- ============ OMNICHANNEL OPERATIONS ============ -->
-<section class="ac-magenta section-tight">
-  <div class="container">
-    <div class="omni-split">
-      <div class="omni-photo">
-        <div class="feature-photo">
-          <img src="/assets/images/homepage/unified-bopis.jpg" alt="A shopper collecting a BOPIS order in store, showing a QR pickup code on their phone as an associate hands over the box at the Pick Up In Store counter">
-        </div>
-      </div>
-      <div class="omni-ops">
-        <div class="section-eyebrow">Omnichannel Operations</div>
-        <h2 class="section-title" style="font-size: clamp(28px, 3.4vw, 40px); margin-bottom: 12px;">BOPIS, ship-from-store and cross-channel returns, handled in the POS.</h2>
-        <p style="font-size: 15px; color: var(--text-muted); line-height: 1.55; margin-bottom: 22px;">Start online, finish in-store, return anywhere. The plays below are highlights from 39+ omnichannel workflows, all running natively on the same POS, on one inventory count and one customer record.</p>
-
-        <div class="omni-chip-group">
-          <div class="omni-chip-label">Buy &amp; collect</div>
-          <div class="omni-chips">
-            <span class="omni-chip"><i class="ti ti-building-store"></i> BOPIS</span>
-            <span class="omni-chip"><i class="ti ti-calendar-check"></i> Reserve in store</span>
-          </div>
-        </div>
-        <div class="omni-chip-group">
-          <div class="omni-chip-label">Fulfill from anywhere</div>
-          <div class="omni-chips">
-            <span class="omni-chip"><i class="ti ti-building-warehouse"></i> Ship-from-store</span>
-            <span class="omni-chip"><i class="ti ti-infinity"></i> Endless Aisle</span>
-            <span class="omni-chip"><i class="ti ti-basket"></i> Save the Sale</span>
-            <span class="omni-chip"><i class="ti ti-arrows-split"></i> Order routing</span>
-          </div>
-        </div>
-        <div class="omni-chip-group">
-          <div class="omni-chip-label">Return &amp; exchange</div>
-          <div class="omni-chips">
-            <span class="omni-chip"><i class="ti ti-arrow-back-up"></i> BORIS</span>
-            <span class="omni-chip"><i class="ti ti-arrows-exchange"></i> Cross-channel exchanges</span>
-            <span class="omni-chip"><i class="ti ti-map-pin"></i> Any store, any order</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ============ SECTION: GLOBAL OPERATIONS (World Map) ============ -->
 <section class="ac-royal sunk section" id="global-operations">
   <div class="container">
@@ -406,33 +341,6 @@ stickyHref: "/demo/"
         <div class="worldmap-wrap">
           {% include "world-map-live.njk" %}
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ SECTION: FACIAL RECOGNITION LOGIN ============ -->
-<section class="ac-blue section">
-  <div class="container">
-    <div class="feature-row">
-      <div class="feature-text">
-        <span class="section-eyebrow">Associate Identity</span>
-        <h2>Rotating QR and biometric sign-in.</h2>
-        <p>Identity follows the person, not the device. Rotating QR-code sign-in gets an associate onto any iPad or iPhone in seconds, and where a retailer wants it, optional facial recognition does the same, with a clean audit trail.</p>
-        <ul class="feature-bullets">
-          <li>Rotating QR-code authentication, the default, and it works offline</li>
-          <li>Any associate, any register, identity follows the person</li>
-          <li>Every action attributed to the associate who took it</li>
-          <li>Optional facial recognition for retailers who want it: off by default, with consent capture and retention set by the retailer</li>
-          <li>A photograph or a video of an associate will not sign them in. The check is for a live person in front of the device, not for an image of one</li>
-          <li>Credential sign-in against the identity provider you already run, SSO and MFA included</li>
-        </ul>
-      </div>
-      <div class="feature-visual">
-        <div class="feature-photo">
-          <img src="/assets/images/homepage/facial-recognition.webp" alt="Teamwork Commerce associate login on iPad using facial recognition, an associate mid-login with the prompt to move closer to the camera">
-        </div>
-        <p class="fine-note">Biometric sign-in is enabled at the retailer's discretion and is subject to local biometric privacy law. QR and credential sign-in deliver the same per-person audit trail without processing biometric data.</p>
       </div>
     </div>
   </div>
@@ -783,47 +691,6 @@ stickyHref: "/demo/"
   </div>
 </section>
 
-
-<!-- ============ PARTNER ADVANTAGE ============ -->
-<section class="padv-showcase">
-  <div class="padv-glow padv-glow-1"></div>
-  <div class="padv-glow padv-glow-2"></div>
-  <div class="container">
-    <div class="padv-header">
-      <span class="ch-eyebrow">The Partner Advantage</span>
-      <h2 class="padv-h2">Implementation and support from <span class="padv-accent">the team that built it.</span></h2>
-      <p class="padv-sub">No hand-offs between vendors. The retail team behind the software, worldwide: working with your partners, not around them.</p>
-    </div>
-
-    <div class="padv-cards">
-      <div class="padv-card">
-        <div class="padv-badge"><i class="ti ti-history"></i></div>
-        <div class="padv-kicker">01 · Experience</div>
-        <h3>30+ years of retail DNA</h3>
-        <p>Decades of retail operational expertise, not a startup learning your industry on your dime.</p>
-      </div>
-      <div class="padv-card">
-        <div class="padv-badge"><i class="ti ti-rocket"></i></div>
-        <div class="padv-kicker">02 · Rollout</div>
-        <h3>White-glove implementation</h3>
-        <p>Onsite and remote support for international rollouts, at your pace.</p>
-      </div>
-      <div class="padv-card">
-        <div class="padv-badge"><i class="ti ti-headset"></i></div>
-        <div class="padv-kicker">03 · Support</div>
-        <h3>Support from people who know retail</h3>
-        <p>Retail technology professionals who know your setup and your business logic, with every request tracked from the first call through to the fix.</p>
-      </div>
-    </div>
-
-    <div class="padv-proof">
-      <span><i class="ti ti-point-filled"></i> Retail software experience since 1986</span>
-      <span><i class="ti ti-point-filled"></i> Retail specialists, not generalists</span>
-      <span><i class="ti ti-point-filled"></i> Support worldwide</span>
-      <span><i class="ti ti-point-filled"></i> One team, end to end</span>
-    </div>
-  </div>
-</section>
 
 <!-- ============ IMPLEMENTATION & ROLLOUT (moved from the homepage) ============ -->
 <section class="ac-purple sunk section" style="padding-top: 48px;">
