@@ -6313,46 +6313,9 @@ a.evc:hover .evc-go { opacity: 1; }
   .aixb-tile img { height: 128px; }
 }
 
-/* ---- Customer record (.crec) -------------------------------------------------
-   The five customer-data capabilities laid out as a record: an identity rail on
-   the left naming what one profile holds, then the capabilities as numbered
-   fields separated by hairlines, the way a record's fields read. Values are
-   product statements, never invented customer data. */
-.crec {
-  display: grid; grid-template-columns: 0.72fr 1.28fr; gap: 0;
-  border: 1px solid var(--border); border-radius: 16px;
-  background: var(--bg-elevated); overflow: hidden;
-}
-
-/* identity rail */
-.crec-id {
-  /* The rail holds far less than the field list beside it, so its content is centred
-     as one profile block. Pinning the chips to the foot instead just moved the empty
-     space into the middle of the rail, which looked worse than the gap it fixed. */
-  display: flex; flex-direction: column; justify-content: center;
-  padding: 30px 28px; border-right: 1px solid var(--border);
-  background:
-    radial-gradient(120% 90% at 0% 0%, rgba(80, 120, 245, 0.14), transparent 60%),
-    linear-gradient(180deg, rgba(36, 125, 255, 0.06), transparent 55%);
-}
-.crec-avatar {
-  width: 52px; height: 52px; border-radius: 50%; display: flex;
-  align-items: center; justify-content: center; margin-bottom: 18px;
-  font-size: 25px; color: #fff; background: var(--gradient);
-  box-shadow:0 12px 26px -12px rgba(7, 9, 26, 0.3);
-}
-.crec-id b {
-  display: block; font-size: 18px; font-weight: 600; letter-spacing: -0.02em;
-  color: var(--text); margin-bottom: 7px;
-}
-.crec-id p { margin: 0 0 24px; font-size: 13.5px; line-height: 1.6; color: var(--text-muted); }
-.crec-holds { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 7px; }
-.crec-holds li {
-  font-size: 11.5px; font-weight: 600; letter-spacing: 0.02em;
-  padding: 5px 11px; border-radius: 100px;
-  color: var(--text); background: var(--bg-deep); border: 1px solid var(--border);
-}
-
+/* ---- Customer record rows (.crec-*) -------------------------------------------
+   The five customer-data capabilities as numbered fields separated by hairlines,
+   the way a record's fields read. Sits beside the drawn profile card (.crx). */
 /* the fields */
 .crec-fields { display: flex; flex-direction: column; }
 .crec-row {
@@ -6375,8 +6338,6 @@ a.evc:hover .evc-go { opacity: 1; }
 .crec-text p { margin: 0; font-size: 13.5px; line-height: 1.6; color: var(--text-muted); }
 
 @media (max-width: 900px) {
-  .crec { grid-template-columns: 1fr; }
-  .crec-id { border-right: none; border-bottom: 1px solid var(--border); padding: 26px 22px; }
   .crec-row { padding: 17px 22px; gap: 12px; }
 }
 @media (max-width: 560px) {
@@ -9781,7 +9742,15 @@ main[data-vertical] .tm-day-time { color: color-mix(in srgb, var(--v-accent) 80%
 .rgx-box i { color: #fff; font-size: 10px; }
 .rgx-btn { margin-top: 6px; padding: 9px 0; border-radius: 8px; background: #10142a; color: #fff; text-align: center; font-size: 10.5px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
 
-.rgx-admin { max-width: 420px; padding: 18px 20px 16px; }
+/* Settings piece: just the required-fields block, drawn a size up. */
+.rgx-req { max-width: 440px; padding: 24px 26px 20px; display: grid; }
+.rgx-req-h { font-size: 17px; font-weight: 700; letter-spacing: -0.01em; }
+.rgx-req-sub { margin: 4px 0 16px; font-size: 12px; color: #8a93a6; }
+.rgx-req .rgx-opt { gap: 10px; margin: 0 0 12px; font-size: 14px; color: #10142a; }
+.rgx-req .rgx-box { width: 18px; height: 18px; border-radius: 5px; }
+.rgx-req .rgx-box i { font-size: 13px; }
+.rgx-req .rgx-qr { margin-top: 6px; padding-top: 14px; font-size: 12.5px; gap: 8px; }
+.rgx-req .rgx-qr i { font-size: 18px; }
 .rgx-main { min-width: 0; }
 .rgx-main .pdx-head b { font-size: 15px; }
 .rgx-main .pdx-label { margin-left: 0; }
@@ -9812,3 +9781,98 @@ main[data-vertical] .tm-day-time { color: color-mix(in srgb, var(--v-accent) 80%
   .rgx-phone { width: 220px; }
 }
 @media (prefers-reduced-motion: reduce) { .rgx-caret { animation: none; } }
+
+/* ===== Customer record, drawn (Customer Data page) =====
+   A deep band in both themes, so the record reads as the centrepiece after the
+   stats. The theme tokens are re-pointed inside it, which lets the header and the
+   capability rows (.crec-*) restyle themselves for the dark ground. */
+.crx {
+  position: relative; overflow: hidden;
+  --text: #ffffff; --text-muted: rgba(226, 232, 255, 0.74); --text-faint: rgba(226, 232, 255, 0.5);
+  --border: rgba(255, 255, 255, 0.1); --brand-text: #80B0FF; --brand-blue: #80B0FF; --brand-soft: rgba(80, 140, 255, 0.16);
+  color: var(--text);
+  background:
+    radial-gradient(46% 60% at 24% 62%, rgba(36, 125, 255, 0.34), transparent 70%),
+    radial-gradient(40% 50% at 86% 10%, rgba(80, 120, 245, 0.22), transparent 72%),
+    linear-gradient(180deg, #080b1f 0%, #0b1130 55%, #080a1c 100%);
+}
+.crx::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none; opacity: 0.5;
+  background-image: linear-gradient(rgba(255,255,255,0.045) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.045) 1px, transparent 1px);
+  background-size: 48px 48px;
+  -webkit-mask-image: radial-gradient(70% 70% at 30% 55%, #000, transparent 75%); mask-image: radial-gradient(70% 70% at 30% 55%, #000, transparent 75%);
+}
+.crx .container { position: relative; }
+.crx-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; margin-top: 8px; }
+
+/* the profile card */
+.crx-stage { position: relative; padding: 48px 40px; }
+.crx-card {
+  position: relative; max-width: 440px; margin: 0 auto; padding: 22px; border-radius: 22px;
+  background: #fff; color: #10142a; font-family: var(--font-body);
+  box-shadow: 0 50px 90px -30px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.06);
+  transform: rotate(-1.5deg);
+}
+.crx-who { display: flex; align-items: center; gap: 14px; padding-bottom: 18px; margin-bottom: 16px; border-bottom: 1px solid #edf0f4; }
+.crx-photo {
+  position: relative; flex: none; width: 68px; height: 68px; border-radius: 50%; padding: 3px;
+  background: #2f7bff; box-shadow: 0 10px 24px -10px rgba(47, 123, 255, 0.8);
+}
+.crx-photo img { display: block; width: 100%; height: 100%; border-radius: 50%; object-fit: cover; border: 2px solid #fff; }
+.crx-photo::after { content: ""; position: absolute; right: 2px; bottom: 3px; width: 13px; height: 13px; border-radius: 50%; background: #22c55e; border: 2px solid #fff; }
+.crx-name { flex: 1; display: grid; gap: 3px; min-width: 0; }
+.crx-name b { font-size: 17px; font-weight: 700; letter-spacing: -0.01em; }
+.crx-name em { font-style: normal; font-size: 11.5px; color: #8a93a6; }
+.crx-scan { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 11px; background: #f1f4f9; font-size: 20px; color: #10142a; }
+.crx-tiles { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.crx-tile { display: grid; align-content: start; gap: 7px; padding: 12px 13px; border-radius: 13px; background: #f5f7fb; }
+.crx-wide { grid-column: 1 / -1; }
+.crx-cap { font-size: 9.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #8a93a6; }
+.crx-chips { display: flex; flex-wrap: wrap; gap: 5px; }
+.crx-chips em { font-style: normal; padding: 3px 8px; border-radius: 100px; background: #fff; border: 1px solid #e3e7ee; font-size: 10.5px; font-weight: 600; }
+.crx-tog { display: flex; align-items: center; justify-content: space-between; font-size: 11.5px; font-weight: 500; }
+.crx-tog i { position: relative; width: 26px; height: 15px; border-radius: 100px; background: #c9ced8; }
+.crx-tog i::after { content: ""; position: absolute; top: 2px; left: 2px; width: 11px; height: 11px; border-radius: 50%; background: #fff; }
+.crx-tog i.is-on { background: #2f7bff; }
+.crx-tog i.is-on::after { left: 13px; }
+.crx-buy { display: flex; align-items: center; gap: 8px; font-size: 11.5px; font-weight: 500; }
+.crx-buy + .crx-buy { padding-top: 7px; border-top: 1px solid #e8ebf1; }
+.crx-buy i { display: grid; place-items: center; width: 22px; height: 22px; border-radius: 7px; background: #e8f0ff; color: #2f6fe0; font-size: 13px; }
+.crx-buy small { margin-left: auto; font-size: 10px; color: #8a93a6; }
+.crx-bars { display: flex; align-items: flex-end; gap: 6px; height: 40px; }
+.crx-bars i { flex: 1; height: var(--h); border-radius: 4px 4px 2px 2px; background: #cfe0ff; }
+.crx-bars i:last-child { background: #2f7bff; }
+
+/* the channels that read it */
+.crx-chan {
+  position: absolute; z-index: 1; display: inline-flex; align-items: center; gap: 7px; padding: 8px 14px; border-radius: 100px;
+  font-size: 12px; font-weight: 600; color: #fff;
+  background: rgba(20, 28, 64, 0.82); border: 1px solid rgba(128, 176, 255, 0.35);
+  -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
+  box-shadow: 0 16px 34px -14px rgba(0, 0, 0, 0.7);
+  animation: crxFloat 6s ease-in-out infinite;
+}
+.crx-chan i { font-size: 15px; color: #80B0FF; }
+.crx-chan::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: #22c55e; box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.2); }
+.crx-chan-a { top: 14px; left: 0; }
+.crx-chan-b { top: 44%; right: -6px; animation-delay: -2s; }
+.crx-chan-c { bottom: 10px; left: 8%; animation-delay: -4s; }
+@keyframes crxFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+
+/* the capabilities beside it */
+.crx-fields .crec-row { padding: 18px 4px; }
+.crx-fields .crec-ico { border: 1px solid rgba(128, 176, 255, 0.22); }
+.crx-fields .crec-row:nth-child(even) .crec-ico { color: #a9b8ff; background: rgba(80, 120, 245, 0.18); }
+
+@media (max-width: 1000px) {
+  .crx-grid { grid-template-columns: 1fr; gap: 24px; }
+  .crx-stage { width: 100%; max-width: 560px; margin: 0 auto; }
+}
+@media (max-width: 560px) {
+  .crx-stage { padding: 0; display: flex; flex-direction: column; align-items: center; }
+  .crx-card { transform: none; padding: 16px; }
+  .crx-chan { position: static; animation: none; margin-top: 10px; }
+  .crx-stage { flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 0 8px; }
+  .crx-card { flex: 1 1 100%; }
+}
+@media (prefers-reduced-motion: reduce) { .crx-chan { animation: none; } }
