@@ -9843,22 +9843,6 @@ main[data-vertical] .tm-day-time { color: color-mix(in srgb, var(--v-accent) 80%
 .crx-bars i { flex: 1; height: var(--h); border-radius: 4px 4px 2px 2px; background: #cfe0ff; }
 .crx-bars i:last-child { background: #2f7bff; }
 
-/* the channels that read it */
-.crx-chan {
-  position: absolute; z-index: 1; display: inline-flex; align-items: center; gap: 7px; padding: 8px 14px; border-radius: 100px;
-  font-size: 12px; font-weight: 600; color: #fff;
-  background: rgba(20, 28, 64, 0.82); border: 1px solid rgba(128, 176, 255, 0.35);
-  -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
-  box-shadow: 0 16px 34px -14px rgba(0, 0, 0, 0.7);
-  animation: crxFloat 6s ease-in-out infinite;
-}
-.crx-chan i { font-size: 15px; color: #80B0FF; }
-.crx-chan::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: #22c55e; box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.2); }
-.crx-chan-a { top: 14px; left: 0; }
-.crx-chan-b { top: 44%; right: -6px; animation-delay: -2s; }
-.crx-chan-c { bottom: 10px; left: 8%; animation-delay: -4s; }
-@keyframes crxFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
-
 /* the capabilities beside it */
 .crx-fields .crec-row { padding: 18px 4px; }
 .crx-fields .crec-ico { border: 1px solid rgba(128, 176, 255, 0.22); }
@@ -9869,10 +9853,6 @@ main[data-vertical] .tm-day-time { color: color-mix(in srgb, var(--v-accent) 80%
   .crx-stage { width: 100%; max-width: 560px; margin: 0 auto; }
 }
 @media (max-width: 560px) {
-  .crx-stage { padding: 0; display: flex; flex-direction: column; align-items: center; }
+  .crx-stage { padding: 0; }
   .crx-card { transform: none; padding: 16px; }
-  .crx-chan { position: static; animation: none; margin-top: 10px; }
-  .crx-stage { flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 0 8px; }
-  .crx-card { flex: 1 1 100%; }
 }
-@media (prefers-reduced-motion: reduce) { .crx-chan { animation: none; } }
