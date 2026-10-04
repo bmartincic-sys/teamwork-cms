@@ -9781,11 +9781,7 @@ main[data-vertical] .tm-day-time { color: color-mix(in srgb, var(--v-accent) 80%
 .rgx-box i { color: #fff; font-size: 10px; }
 .rgx-btn { margin-top: 6px; padding: 9px 0; border-radius: 8px; background: #10142a; color: #fff; text-align: center; font-size: 10.5px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
 
-.rgx-admin { display: grid; grid-template-columns: auto 1fr; gap: 18px; padding: 16px; }
-.rgx-nav { list-style: none; margin: 0; padding: 0 14px 0 0; border-right: 1px solid #edf0f4; display: grid; align-content: start; gap: 4px; }
-.rgx-nav li { display: flex; align-items: center; gap: 7px; padding: 7px 9px; border-radius: 8px; font-size: 11px; color: #4b5266; white-space: nowrap; }
-.rgx-nav li.is-on { background: #eef1f6; color: #10142a; font-weight: 600; }
-.rgx-nav i { font-size: 14px; color: #8a93a6; }
+.rgx-admin { max-width: 420px; padding: 18px 20px 16px; }
 .rgx-main { min-width: 0; }
 .rgx-main .pdx-head b { font-size: 15px; }
 .rgx-main .pdx-label { margin-left: 0; }
@@ -9796,8 +9792,23 @@ main[data-vertical] .tm-day-time { color: color-mix(in srgb, var(--v-accent) 80%
 .rgx-qr { display: flex; align-items: center; gap: 6px; margin-top: 8px; padding-top: 10px; border-top: 1px solid #edf0f4; font-size: 10.5px; color: #4b5266; }
 .rgx-qr i { font-size: 15px; color: #10142a; }
 .rgx-qr b { color: #2f7bff; font-weight: 600; }
+/* The store's QR code sits beside the phone, the way it stands on the counter. */
+.rgx-stage { grid-template-columns: auto auto; justify-content: center; align-items: center; gap: 34px; }
+.rgx-qrcard {
+  display: grid; justify-items: center; gap: 2px; padding: 14px 14px 12px; border-radius: 16px;
+  background: #fff; border: 1px solid #e3e7ee; color: #10142a; font-family: var(--font-body); text-align: center;
+  box-shadow: 0 30px 50px -26px rgba(7,9,26,0.5); transform: rotate(-4deg) translateY(36px);
+}
+.tfx .rgx-qrcode { width: 116px; height: 116px; margin-bottom: 8px; fill: #10142a; stroke: none; }
+.rgx-qrcard b { font-size: 13px; font-weight: 700; letter-spacing: -0.01em; }
+.rgx-qrcard span { font-size: 10px; color: #8a93a6; }
 @media (max-width: 760px) {
-  .rgx-admin { grid-template-columns: 1fr; gap: 12px; }
-  .rgx-nav { display: flex; flex-wrap: wrap; padding: 0 0 10px; border-right: 0; border-bottom: 1px solid #edf0f4; }
+  .rgx-stage { gap: 14px; }
+  .rgx-qrcard { transform: none; padding: 10px 10px 9px; }
+  .tfx .rgx-qrcode { width: 72px; height: 72px; margin-bottom: 4px; }
+  .rgx-hero b { font-size: 14px; }
+  .rgx-qrcard b { font-size: 11px; }
+  .rgx-qrcard span { display: none; }
+  .rgx-phone { width: 220px; }
 }
 @media (prefers-reduced-motion: reduce) { .rgx-caret { animation: none; } }
