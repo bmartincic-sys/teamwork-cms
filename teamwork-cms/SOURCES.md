@@ -40,7 +40,7 @@ where known.
 
 | Figure | Page | Origin |
 |---|---|---|
-| 30,000+ terminals, 40+ countries, 100+ integrations, 99.9%, 99.99%, 30s, $300K, 20 min, 118 Petco stores, 2,000+ Petco terminals, 250 InnovaSport stores, 22% per-cap; 80% transaction time reduction, $3.1M annual ROI, <30 min associate training, 80% search-time reduction, <1% out-of-stock (was 12%), 98%+ order fill rate | various | supplied by you in the original content drop, commit bd54a7a, 9 July 2026. Traced 3 October 2026 |
+| 30,000+ terminals, 40+ countries, 100+ integrations, 99.9%, 99.99%, 30s, $300K, 20 min, 2,000+ Petco terminals, 250 InnovaSport stores, 22% per-cap; 80% transaction time reduction, $3.1M annual ROI, <30 min associate training, 80% search-time reduction, <1% out-of-stock (was 12%), 98%+ order fill rate | various | supplied by you in the original content drop, commit bd54a7a, 9 July 2026. Traced 3 October 2026 |
 | 150+ reports | platform/analytics and elsewhere | in the original content drop, commit bd54a7a, 9 July 2026. Confirmed by Teamwork, September 2026 |
 | 900+ orders, 1,100+ units, +14% / +26% / +21%, 18 days | platform/oms | supplied directly by Teamwork, August 2026; retailer anonymised at their request |
 | 5,000+ store count | about, footer ("thousands of stores") | added when About was rebuilt from the live site (commit c5e69cd) |

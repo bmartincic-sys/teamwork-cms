@@ -92,13 +92,13 @@ navOrder: 4
       <div class="jw-ledger">
         <div class="jw-ledger-head">
           <span class="jw-mono">Jewelry &amp; watch POS capabilities</span>
-          <span class="jw-mono jw-dim">006 entries</span>
+          <span class="jw-mono jw-dim">007 entries</span>
         </div>
         <a class="jw-row" href="/platform/rfid/">
           <span class="jw-idx">001</span>
           <div class="jw-row-body">
             <h3>Serialized tracking, with or without RFID</h3>
-            <p>Every piece tracked as its own unit. With RFID, a display case is counted without lifting a piece.</p>
+            <p>Every piece tracked as its own unit. With RFID, each tag carries an SGTIN, a GS1 serial number that belongs to that one piece, and a display case is counted without lifting a piece.</p>
           </div>
           <i class="ti ti-arrow-up-right jw-arrow"></i>
         </a>
@@ -126,16 +126,24 @@ navOrder: 4
           </div>
           <i class="ti ti-arrow-up-right jw-arrow"></i>
         </a>
-        <a class="jw-row" href="/platform/oms/">
+        <a class="jw-row" href="/platform/mobile-pos/">
           <span class="jw-idx">005</span>
           <div class="jw-row-body">
+            <h3>One cash drawer, kept back of house</h3>
+            <p>No cash wrap on the floor. Each associate sells from their own device, and every cash in and out posts to one central drawer kept in the back.</p>
+          </div>
+          <i class="ti ti-arrow-up-right jw-arrow"></i>
+        </a>
+        <a class="jw-row" href="/platform/oms/">
+          <span class="jw-idx">006</span>
+          <div class="jw-row-body">
             <h3>Special orders, repairs and layaway</h3>
-            <p>Take special orders, custom pieces, deposits and layaway at the counter, and hand repairs to your repair system with the status coming back when the piece is ready.</p>
+            <p>Take special orders, custom wedding bands as review orders, deposits and layaway at the counter, and hand repairs to your repair system with the status coming back when the piece is ready.</p>
           </div>
           <i class="ti ti-arrow-up-right jw-arrow"></i>
         </a>
         <a class="jw-row" href="/platform/integrations/">
-          <span class="jw-idx">006</span>
+          <span class="jw-idx">007</span>
           <div class="jw-row-body">
             <h3>Bespoke workflows</h3>
             <p>Extend the platform with custom services alongside the POS, for the workflows that are specific to your house.</p>
@@ -156,6 +164,7 @@ navOrder: 4
         <h2>Layaway, deposits and special orders at the register.</h2>
         <p>Jewelry retail involves transaction types that generic POS platforms don't support well: deposits for custom orders, layaway, and special orders that pass through a workshop.</p>
         <ul class="feature-bullets">
+          <li>Custom pieces: wedding bands and other custom work start as review orders, tracked from the client's request to collection</li>
           <li>Deposits and layaway: collect partial payments for custom orders, engraving, or special requests, tracked and reconciled automatically</li>
           <li>Integrated payments: Adyen, Stripe, and platform-agnostic processing. Simplifies bookkeeping and supports cross-border transactions</li>
           <li>Integrated accounting: connects to ERP systems, reducing manual bookkeeping errors</li>
@@ -207,7 +216,7 @@ navOrder: 4
         <div class="tm-day-card">
           <div class="tm-day-ico"><i class="ti ti-file-invoice"></i></div>
           <h3>Custom orders and deposits stay straight</h3>
-          <p>Special orders tracked through the order lifecycle so nothing is lost between the workshop and the client.</p>
+          <p>A custom wedding band starts as a review order and is tracked through its lifecycle, so nothing is lost between the workshop and the client.</p>
           <a class="tm-day-win" href="/platform/oms/"><i class="ti ti-arrow-up-right"></i> See order management</a>
         </div>
       </div>
@@ -323,21 +332,6 @@ navOrder: 4
   </div>
 </section>
 
-<!-- ============ TRUSTED BY (real logos) ============ -->
-<section class="logos">
-  <div class="container">
-    <div class="logos-label">Trusted by retailers worldwide</div>
-    <div style="display: flex; justify-content: center; align-items: center; gap: 56px; flex-wrap: wrap;">
-      <div class="logo-slot logo-mono"><img src="/assets/images/logos/the-row-logo.png" alt="The Row"></div>
-      <div class="logo-slot logo-mono"><img src="/assets/images/logos/npeal-logo.png" alt="N.Peal"></div>
-      <div class="logo-slot logo-mono"><img src="/assets/images/logos/120-lino-logo.png" alt="120% Lino"></div>
-      <div class="logo-slot logo-mono"><img src="/assets/images/logos/acne-studios-logo.png" alt="Acne Studios"></div>
-      <div class="logo-slot logo-mono"><img src="/assets/images/logos/luccheselogo.png" alt="Lucchese"></div>
-      <div class="logo-slot logo-mono"><img src="/assets/images/logos/moose-knuckles-logo.png" alt="Moose Knuckles"></div>
-    </div>
-</div>
-</section>
-
 <!-- ============ FAQ ============ -->
 <section class="ac-blue section" style="padding-bottom: 80px;">
   <div class="container">
@@ -351,7 +345,7 @@ navOrder: 4
           How does Teamwork Commerce track individual jewelry pieces?
           <span class="faq-icon"><i class="ti ti-plus"></i></span>
         </button></h3>
-        <div class="faq-answer"><p>Every piece is serialized as its own unit, with or without RFID. With RFID, the piece carries an EPC; without it, it carries its own unit ID. With RFID, a handheld counts a display case without handling a piece.</p></div>
+        <div class="faq-answer"><p>Every piece is serialized as its own unit, with or without RFID. With RFID, the piece carries an EPC encoded as an SGTIN, a GS1 serial number that belongs to that one piece; without RFID, it carries its own unit ID. With RFID, a handheld counts a display case without handling a piece.</p></div>
       </div>
       <div class="faq-item">
         <h3 class="faq-q"><button class="faq-question" aria-expanded="false" onclick="var i=this.closest('.faq-item');i.classList.toggle('open');this.setAttribute('aria-expanded',i.classList.contains('open'))">
@@ -365,7 +359,14 @@ navOrder: 4
           Can Teamwork handle deposits, layaway and special orders?
           <span class="faq-icon"><i class="ti ti-plus"></i></span>
         </button></h3>
-        <div class="faq-answer"><p>Yes. The platform supports deposits for custom and special orders and layaway, with automatic balance tracking and customer notifications.</p></div>
+        <div class="faq-answer"><p>Yes. The platform supports deposits for custom and special orders and layaway, with automatic balance tracking and customer notifications. Custom pieces such as wedding bands start as review orders, tracked from the client's request to collection.</p></div>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-q"><button class="faq-question" aria-expanded="false" onclick="var i=this.closest('.faq-item');i.classList.toggle('open');this.setAttribute('aria-expanded',i.classList.contains('open'))">
+          How does cash work without a cash wrap?
+          <span class="faq-icon"><i class="ti ti-plus"></i></span>
+        </button></h3>
+        <div class="faq-answer"><p>Each associate sells from their own iPhone or iPad, so there is no cash wrap on the floor. Normally every POS needs its own cash drawer. Here, every device posts its cash in and out to one centralized drawer record, and the physical drawer stays back of house, so every cash movement across every device is tracked in one place.</p></div>
       </div>
       <div class="faq-item">
         <h3 class="faq-q"><button class="faq-question" aria-expanded="false" onclick="var i=this.closest('.faq-item');i.classList.toggle('open');this.setAttribute('aria-expanded',i.classList.contains('open'))">
@@ -399,9 +400,9 @@ navOrder: 4
         <p>Expected totals stay masked from the employee counting, and any discrepancy forces a second management login to audit it.</p>
       </div>
       <div class="mini-card">
-        <div class="mini-ico"><i class="ti ti-arrows-split-2"></i></div>
-        <h3>Split billing and installments</h3>
-        <p>Unlimited split payments across methods, plus digital installment programs for high-ticket pieces.</p>
+        <div class="mini-ico"><i class="ti ti-cash-register"></i></div>
+        <h3>One drawer for every device</h3>
+        <p>Associates sell from their own devices while cash in and out posts to one central drawer record, so every cash movement is accounted for in one place.</p>
       </div>
       <div class="mini-card">
         <div class="mini-ico"><i class="ti ti-signature"></i></div>
@@ -438,9 +439,10 @@ navOrder: 4
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    { "@type": "Question", "name": "How does Teamwork Commerce track individual jewelry pieces?", "acceptedAnswer": { "@type": "Answer", "text": "Every piece is serialized as its own unit, with or without RFID. With RFID, the piece carries an EPC; without it, it carries its own unit ID. With RFID, a handheld counts a display case without handling a piece." } },
+    { "@type": "Question", "name": "How does Teamwork Commerce track individual jewelry pieces?", "acceptedAnswer": { "@type": "Answer", "text": "Every piece is serialized as its own unit, with or without RFID. With RFID, the piece carries an EPC encoded as an SGTIN, a GS1 serial number that belongs to that one piece; without RFID, it carries its own unit ID. With RFID, a handheld counts a display case without handling a piece." } },
     { "@type": "Question", "name": "Does Teamwork Commerce handle repairs and appraisals?", "acceptedAnswer": { "@type": "Answer", "text": "Teamwork Commerce is not a repair or appraisal system, and it does not handle trade-ins. It integrates tightly with the systems that do. The associate takes the deposit in Teamwork Commerce, the repair goes to your repair system, and its status comes back so the customer can be told the piece is ready to collect." } },
-    { "@type": "Question", "name": "Can Teamwork handle deposits, layaway and special orders?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The platform supports deposits for custom and special orders and layaway, with automatic balance tracking and customer notifications." } },
+    { "@type": "Question", "name": "Can Teamwork handle deposits, layaway and special orders?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The platform supports deposits for custom and special orders and layaway, with automatic balance tracking and customer notifications. Custom pieces such as wedding bands start as review orders, tracked from the client's request to collection." } },
+    { "@type": "Question", "name": "How does cash work without a cash wrap?", "acceptedAnswer": { "@type": "Answer", "text": "Each associate sells from their own iPhone or iPad, so there is no cash wrap on the floor. Normally every POS needs its own cash drawer. Here, every device posts its cash in and out to one centralized drawer record, and the physical drawer stays back of house, so every cash movement across every device is tracked in one place." } },
     { "@type": "Question", "name": "How is customer data protected?", "acceptedAnswer": { "@type": "Answer", "text": "Teamwork Commerce is SOC 2 Type 2 certified, GDPR compliant and PCI DSS compliant. Those controls exist so client details, purchase history and payment data stay protected, and they apply to every retailer on the platform, whatever the value of the merchandise. Role-based permissions control who can view customer data and process transactions." } },
     { "@type": "Question", "name": "Is Teamwork Commerce built for multi-location jewelry chains?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Teamwork Commerce is enterprise retail infrastructure for jewelry and watch chains, with experience across leading global jewelry brands. Capabilities include serialized tracking of each piece as its own unit, with or without RFID, integrated OMS for omnichannel fulfillment, SOC 2 Type 2, PCI DSS and GDPR compliance, and localization in 40+ countries with multi-currency support, so expanding into a new market is not a re-platform." } }
   ]
