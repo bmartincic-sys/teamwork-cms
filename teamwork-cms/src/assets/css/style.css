@@ -9698,3 +9698,57 @@ main[data-vertical] .tm-day-time { color: color-mix(in srgb, var(--v-accent) 80%
 /* Self-checkout card on Mobile POS: tilted a touch, so it reads as a drawn overlay. */
 .sco-card { transform: rotate(-2deg); }
 @media (max-width: 760px) { .tfx .rfx-card, .sco-card { transform: none; } }
+
+/* ===== Product record pieces, drawn (Product Data page) =====
+   Just the relevant piece of each screen, redrawn flat on the same tinted panel
+   as the transfer screen. The catalog and variants fade out at the bottom, so
+   they read as a crop of a longer list. */
+.pdx { padding: 40px 28px; }
+.pdx-card {
+  width: 100%; max-width: 540px; padding: 18px 18px 14px; border-radius: 18px;
+  background: #fff; border: 1px solid #e3e7ee; color: #10142a; font-family: var(--font-body);
+  box-shadow: 0 40px 70px -30px rgba(7,9,26,0.5);
+  transform: rotateY(-10deg) rotateX(4deg) rotateZ(1deg);
+}
+.pdx-flip .pdx-card { transform: rotateY(10deg) rotateX(4deg) rotateZ(-1deg); }
+.pdx-narrow { max-width: 400px; }
+.pdx-fade { -webkit-mask-image: linear-gradient(to bottom, #000 72%, transparent); mask-image: linear-gradient(to bottom, #000 72%, transparent); padding-bottom: 0; }
+.pdx-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
+.pdx-head b { font-size: 16px; font-weight: 700; letter-spacing: -0.01em; }
+.pdx-search { display: inline-flex; align-items: center; gap: 6px; padding: 5px 12px; border: 1px solid #e3e7ee; border-radius: 9px; font-size: 11px; color: #8a93a6; }
+.pdx-search i { color: #3b86f7; font-size: 13px; }
+.pdx-table { display: grid; font-size: 11.5px; }
+.pdx-th, .pdx-tr { display: grid; align-items: center; column-gap: 12px; padding: 9px 6px; }
+.pdx-th { font-weight: 700; font-size: 11px; color: #10142a; padding-top: 4px; }
+.pdx-tr { border-top: 1px solid #edf0f4; color: #3a4154; }
+.pdx-tr.is-on { background: #eef4ff; border-radius: 8px; border-top-color: transparent; }
+.pdx-tr.is-on + .pdx-tr { border-top-color: transparent; }
+.pdx-tr > span, .pdx-th > span { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.pdx-cat .pdx-th, .pdx-cat .pdx-tr { grid-template-columns: 2.3fr 1fr 0.95fr 0.7fr 0.55fr; }
+.pdx-cat .pdx-tr > span:first-child { font-weight: 600; color: #10142a; }
+.pdx-cat em { font-style: normal; display: inline-block; margin-right: 8px; padding: 2px 6px; border-radius: 6px; background: #e8f0ff; color: #2f6fe0; font-size: 9.5px; font-weight: 600; vertical-align: 1px; }
+.pdx-var .pdx-th, .pdx-var .pdx-tr { grid-template-columns: 1.3fr 1.2fr 0.4fr; }
+.pdx-var .pdx-tr > span:first-child { font-variant-numeric: tabular-nums; }
+.pdx-var .pdx-tr i { display: inline-block; width: 10px; height: 10px; margin-right: 7px; border-radius: 50%; background: var(--sw); vertical-align: -1px; }
+.pdx-label { margin: 4px 2px 8px; font-size: 11.5px; font-weight: 700; color: #4b5266; }
+.pdx-ver { display: flex; align-items: center; gap: 18px; margin-bottom: 14px; padding: 14px 16px; border: 1px solid #e3e7ee; border-radius: 13px; }
+.pdx-ver.is-live { background: #eef4ff; border-color: #dbe6fb; }
+.pdx-ver > span:first-child { display: grid; gap: 5px; min-width: 76px; }
+.pdx-ver > span:first-child b { font-size: 14px; font-weight: 500; }
+.pdx-ver em { font-style: normal; justify-self: start; padding: 2px 8px; border-radius: 100px; background: #e3e7ee; color: #8a93a6; font-size: 9.5px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; }
+.pdx-ver em.is-sched { background: #fff1db; color: #b26a00; }
+.pdx-ver strong { font-size: 14px; font-weight: 700; color: #2f7bff; }
+.pdx-when { flex: 1; display: grid; gap: 4px; min-width: 0; }
+.pdx-when small { display: inline-flex; align-items: center; gap: 4px; font-size: 10.5px; color: #4b5266; }
+.pdx-open { padding: 6px 12px; border: 1px solid #e3e7ee; border-radius: 9px; color: #2f7bff; font-size: 11px; font-weight: 600; }
+@media (max-width: 760px) {
+  .pdx { padding: 24px 12px; }
+  .pdx-card, .pdx-flip .pdx-card { transform: none; }
+  .pdx-cat .pdx-th > span:nth-child(2), .pdx-cat .pdx-tr > span:nth-child(2) { display: none; }
+  .pdx-cat .pdx-th, .pdx-cat .pdx-tr { grid-template-columns: 1.8fr 1fr 0.8fr 0.55fr; column-gap: 10px; }
+  .pdx-cat em { display: none; }
+  .pdx-cat { font-size: 10.5px; }
+  .pdx-cat .pdx-th > span, .pdx-cat .pdx-tr > span:first-child { white-space: normal; overflow: visible; }
+  .pdx-ver { gap: 12px; padding: 12px; }
+  .pdx-ver > span:first-child { min-width: 0; }
+}
