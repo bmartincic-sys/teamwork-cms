@@ -1199,7 +1199,12 @@ details[open] summary { color: var(--brand-text); }
 /* The first group has the longest name; the last holds one link, so it gives up width. */
 .mega-cols { display: grid; grid-template-columns: 1.3fr 1.1fr 1.1fr 0.8fr; gap: 10px; }
 /* Solutions by industry: each one distinct, with its own mark and focus */
-.mega-ind { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 4px 14px; }
+.mega-ind { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 4px 10px; }
+/* Five industries on one line: names only, the blurbs would truncate at this width. */
+.mega-ind .mega-ind-item { align-items: center; }
+.mega-ind .mega-ind-text em { display: none; }
+.mega-ind .mega-ind-text strong { white-space: nowrap; }
+@media (max-width: 1240px) { .mega-ind .mega-ind-text strong { white-space: normal; } }
 .mega-ind-item {
   display: flex; align-items: flex-start; gap: 10px;
   min-width: 0; padding: 9px 10px; border-radius: 8px;
