@@ -142,15 +142,22 @@ stickyHref: "/demo/"
           <li>Safety stock per location, so a popular line is held back for the shop floor instead of being sold out from under it online</li>
         </ul>
       </div>
-      <!-- Real screenshot: Order Fill Logic configuration in the cloud back office -->
+      <!-- Order fill logic: the top of the ranked rule stack, drawn -->
       <div class="feature-visual">
-        <div class="mockup-panel" style="padding: 20px 20px 16px;">
-          <div style="display: flex; align-items: center; justify-content: space-between; padding-bottom: 14px; margin-bottom: 14px; border-bottom: 1px solid var(--border);">
-            <span style="display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 700; color: #fff; padding: 5px 11px; background: var(--gradient); border-radius: 100px;"><i class="ti ti-route" style="font-size:11px"></i> Order Fill Logic</span>
-            <span style="font-size: 11px; color: var(--text-faint); font-family: var(--font-mono);">Back office · Live</span>
+        <div class="tfx pdx" role="img" aria-label="A piece of the order fill logic screen: a ranked stack of fulfillment rules with move up and move down controls, the top four active.">
+          <div class="pdx-card pdx-fade ofx" aria-hidden="true">
+            <div class="pdx-head"><b>Order fill logic</b><span class="ofx-move"><span><svg viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></svg> Move up</span><span class="is-on"><svg viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6"/></svg> Move down</span></span></div>
+            <div class="ofx-th"><span>Create ship memos or set order line status as follows</span><span>Active</span></div>
+            <div class="ofx-list">
+              <span class="ofx-row is-sel"><svg class="ofx-grip" viewBox="0 0 24 24"><path d="M9 6h.01M15 6h.01M9 12h.01M15 12h.01M9 18h.01M15 18h.01"/></svg><em>01</em><span>Fill Complete from Greatest Quantity Locations</span><i class="ofx-box is-on"><i class="ti ti-check"></i></i></span>
+              <span class="ofx-row"><svg class="ofx-grip" viewBox="0 0 24 24"><path d="M9 6h.01M15 6h.01M9 12h.01M15 12h.01M9 18h.01M15 18h.01"/></svg><em>02</em><span>Fill Complete from Order Fill Location</span><i class="ofx-box is-on"><i class="ti ti-check"></i></i></span>
+              <span class="ofx-row"><svg class="ofx-grip" viewBox="0 0 24 24"><path d="M9 6h.01M15 6h.01M9 12h.01M15 12h.01M9 18h.01M15 18h.01"/></svg><em>03</em><span>Ship To Store for Ship To Store Order</span><i class="ofx-box is-on"><i class="ti ti-check"></i></i></span>
+              <span class="ofx-row"><svg class="ofx-grip" viewBox="0 0 24 24"><path d="M9 6h.01M15 6h.01M9 12h.01M15 12h.01M9 18h.01M15 18h.01"/></svg><em>04</em><span>Ship To Store for Store Pick Up Order</span><i class="ofx-box is-on"><i class="ti ti-check"></i></i></span>
+              <span class="ofx-row is-off"><svg class="ofx-grip" viewBox="0 0 24 24"><path d="M9 6h.01M15 6h.01M9 12h.01M15 12h.01M9 18h.01M15 18h.01"/></svg><em>05</em><span>Fill Complete from Primary Locations based on Rank</span><i class="ofx-box"></i></span>
+              <span class="ofx-row is-off"><svg class="ofx-grip" viewBox="0 0 24 24"><path d="M9 6h.01M15 6h.01M9 12h.01M15 12h.01M9 18h.01M15 18h.01"/></svg><em>06</em><span>Fill Partial from Order Fill Location</span><i class="ofx-box"></i></span>
+              <span class="ofx-row is-off"><svg class="ofx-grip" viewBox="0 0 24 24"><path d="M9 6h.01M15 6h.01M9 12h.01M15 12h.01M9 18h.01M15 18h.01"/></svg><em>07</em><span>Store Pick Up, if ATS for selected location</span><i class="ofx-box"></i></span>
+            </div>
           </div>
-          <img src="/assets/images/homepage/order-fill-logic.webp" alt="The Order Fill Logic configuration screen in the cloud back office, a ranked, toggleable stack of fulfillment rules like Fill Complete from Greatest Quantity Locations and Ship To Store for Store Pick Up Order" style="width: 100%; height: auto; display: block; border-radius: 10px; border: 1px solid var(--border);">
-          <div style="margin-top: 12px; font-size: 12.5px; color: var(--text-faint); text-align: center; font-weight: 600;">The actual rule stack: rank the fill strategies, and the engine routes every order accordingly.</div>
         </div>
       </div>
     </div>
@@ -288,7 +295,6 @@ stickyHref: "/demo/"
 <section class="ac-blue intg">
   <div class="container">
     <div class="intg-head">
-      <h2 class="intg-title">Natively connected to POS, inventory and RFID.</h2>
       <p class="section-sub">Order management bolted alongside a POS spends its life trying to agree with it. Here the order, the stock it draws on and the customer it belongs to are the same records the store is already working from, so there is nothing to keep in sync.</p>
     </div>
     <div class="intg-grid">

@@ -9980,3 +9980,28 @@ main[data-vertical] .tm-day-time { color: color-mix(in srgb, var(--v-accent) 80%
   .ivx-ship .pdx-th > span:nth-child(2), .ivx-ship .pdx-tr > span:nth-child(2) { display: none; }
   .ivx-ship .pdx-th, .ivx-ship .pdx-tr { grid-template-columns: 0.8fr 1.3fr 1.4fr 0.35fr; column-gap: 8px; }
 }
+
+/* ===== Order fill logic, drawn (OMS page) =====
+   The top of the ranked rule stack: active rules first, the rest fading out below. */
+.ofx { max-width: 480px; }
+.ofx-move { display: inline-flex; gap: 6px; }
+.ofx-move > span { display: inline-flex; align-items: center; gap: 4px; padding: 5px 10px; border-radius: 8px; border: 1px solid #e3e7ee; font-size: 10.5px; font-weight: 600; color: #b3bac8; }
+.ofx-move > span.is-on { color: #2f7bff; border-color: #cfe0ff; }
+.ofx-move svg { width: 12px; height: 12px; }
+.ofx-th { display: flex; justify-content: space-between; gap: 12px; padding: 8px 10px; border-radius: 8px 8px 0 0; background: #eef1f6; font-size: 10.5px; font-weight: 600; color: #4b5266; }
+.ofx-list { display: grid; }
+.ofx-row { display: flex; align-items: center; gap: 8px; padding: 9px 10px; border-bottom: 1px solid #edf0f4; font-size: 11.5px; color: #10142a; }
+.ofx-row > span { flex: 1; min-width: 0; }
+.ofx-row em { font-style: normal; font-family: var(--font-mono, monospace); font-size: 10px; color: #8a93a6; }
+.ofx-row.is-sel { background: #e8f0ff; border-radius: 6px; border-bottom-color: transparent; font-weight: 600; }
+.ofx-row.is-off { color: #9aa3b5; }
+.ofx-grip { width: 14px; height: 14px; flex: none; color: #b3bac8; stroke-width: 3 !important; }
+.ofx-box { display: grid; place-items: center; flex: none; width: 16px; height: 16px; border-radius: 4px; border: 1px solid #c9ced8; background: #fff; }
+.ofx-box.is-on { background: #2f7bff; border-color: #2f7bff; }
+.ofx-box i { font-size: 11px; color: #fff; font-style: normal; }
+.ofx-move > span, .ofx .pdx-head b { white-space: nowrap; }
+@media (max-width: 760px) {
+  .ofx .pdx-head { flex-wrap: wrap; row-gap: 10px; }
+  .ofx-row { font-size: 10.5px; gap: 6px; }
+  .ofx-th span:first-child { max-width: 75%; }
+}
