@@ -18,6 +18,16 @@
   status = 301
 
 [[redirects]]
+  from = "/solutions/jewelry-watches/"
+  to = "/solutions/luxury-apparel/#jewelry-watches"
+  status = 301
+
+[[redirects]]
+  from = "/solutions/jewelry-watches"
+  to = "/solutions/luxury-apparel/#jewelry-watches"
+  status = 301
+
+[[redirects]]
   from = "/solutions/"
   to = "/platform/mobile-pos/"
   status = 301

@@ -22,8 +22,7 @@
 ## Solutions by Industry
 
 - [Fashion & Footwear](https://www.teamworkcommerce.com/solutions/fashion-apparel/)
-- [Jewelry & Watches](https://www.teamworkcommerce.com/solutions/jewelry-watches/)
-- [Luxury Apparel](https://www.teamworkcommerce.com/solutions/luxury-apparel/)
+- [Luxury, Jewelry & Watches](https://www.teamworkcommerce.com/solutions/luxury-apparel/)
 - [Museums & Cultural Institutions](https://www.teamworkcommerce.com/solutions/museums-cultural/): Retail, membership and donations. Teamwork does not provide ticketing or food and beverage.
 - [Pet Goods](https://www.teamworkcommerce.com/solutions/pet-goods/)
 - [Stadiums & Venues](https://www.teamworkcommerce.com/solutions/stadiums-venues/): Merchandise retail. Food and beverage stays on your existing concession POS, integrated via open APIs.
