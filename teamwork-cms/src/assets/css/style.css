@@ -10006,39 +10006,80 @@ main[data-vertical] .tm-day-time { color: color-mix(in srgb, var(--v-accent) 80%
   .ofx-th span:first-child { max-width: 75%; }
 }
 
-/* ===== Analytics pieces, drawn (Analytics page) =====
-   A KPI row with two charts, and the segment share with purchase value by week.
-   Values are illustrative; the shapes follow the real dashboards. */
-.anx { max-width: 500px; display: grid; gap: 12px; }
-.anx-kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
-.anx-kpis > span { display: grid; gap: 3px; padding: 10px 8px; border-radius: 10px; background: #f5f7fb; text-align: center; }
-.anx-kpis b { font-size: 17px; font-weight: 700; letter-spacing: -0.02em; color: #1a2a6c; }
-.anx-kpis small { font-size: 9.5px; color: #6b7386; }
-.anx-kpis em { display: block; font-style: normal; font-weight: 600; }
-.anx-kpis em.is-up { color: #1f8a4c; }
-.anx-kpis em.is-down { color: #c2410c; }
-.anx-two { display: grid; grid-template-columns: 1.15fr 1fr; gap: 10px; }
-.anx-panel { display: grid; align-content: start; gap: 8px; padding: 11px 12px; border-radius: 12px; border: 1px solid #edf0f4; }
-.anx-cap { font-size: 10.5px; font-weight: 700; color: #10142a; }
-.anx-bars { display: flex; align-items: flex-end; gap: 4px; height: 64px; border-bottom: 1px solid #e3e7ee; }
-.anx-bars > span { flex: 1; display: flex; align-items: flex-end; gap: 1px; }
-.anx-bars i { flex: 1; height: var(--h); border-radius: 2px 2px 0 0; background: #2f7bff; }
-.anx-bars i.is-prev { background: #d6dbe5; }
-.anx-key { display: flex; align-items: center; gap: 5px; font-size: 9px; color: #8a93a6; }
-.anx-key i { width: 8px; height: 8px; border-radius: 2px; background: #2f7bff; margin-left: 4px; }
-.anx-key i.is-prev { background: #d6dbe5; margin-left: 8px; }
-.anx-locs { display: grid; gap: 7px; }
-.anx-loc { display: grid; grid-template-columns: 56px 1fr; align-items: center; gap: 8px; font-size: 10px; color: #4b5266; }
-.anx-loc b { font-weight: 500; }
-.anx-loc i { height: 10px; width: var(--w); border-radius: 3px; background: #7c5cf5; }
-.anx-share .anx-donut { display: grid; grid-template-columns: 96px 1fr; align-items: center; gap: 14px; }
-.tfx .anx-donut svg { width: 96px; height: 96px; }
-.anx-legend { display: grid; gap: 7px; }
-.anx-legend span { display: flex; align-items: center; gap: 7px; font-size: 11px; color: #3a4154; }
-.anx-legend i { width: 9px; height: 9px; border-radius: 50%; background: var(--c); }
-.anx-legend b { margin-left: auto; font-weight: 700; color: #10142a; }
-.tfx .anx-lines { width: 100%; height: 104px; }
+/* ===== Cloud back office dashboards, drawn (Analytics page) =====
+   Mirrors the real Looker dashboards: colored KPI tiles with period deltas, white
+   chart cards with titles, axis labels and the two-period legend, and the segment
+   page's purple / green / blue series. Values are illustrative. */
+.ahq { max-width: 560px; padding: 14px; background: #f3f4f8; display: grid; gap: 10px; }
+.ahq-kpis { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; }
+.ahq-kpi { display: grid; gap: 4px; padding: 10px 6px 8px; border-radius: 8px; background: #fff; box-shadow: 0 1px 3px rgba(7,9,26,0.08); text-align: center; }
+.ahq-kpi b { font-size: 14px; font-weight: 500; color: var(--c); letter-spacing: -0.01em; white-space: nowrap; }
+.ahq-kpi small { font-size: 7.5px; color: var(--c); font-weight: 600; white-space: nowrap; }
+.ahq-kpi em { font-style: normal; font-weight: 600; }
+.ahq-kpi em.is-up { color: #2e9e4f; }
+.ahq-kpi em.is-down { color: #d23b3b; }
+.ahq-charts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.ahq-charts-2 { grid-template-columns: 1fr 1fr; }
+.ahq-chart { position: relative; display: grid; align-content: start; gap: 5px; padding: 10px 10px 8px 18px; border-radius: 8px; background: #fff; box-shadow: 0 1px 3px rgba(7,9,26,0.08); min-width: 0; }
+.ahq-chart > b { font-size: 9.5px; font-weight: 600; text-align: center; color: #10142a; line-height: 1.25; }
+.ahq-y { position: absolute; left: 3px; top: 50%; transform: rotate(-90deg) translateX(-50%); transform-origin: left top; font-size: 5.5px; color: #6b7386; white-space: nowrap; }
+.ahq-x { font-size: 6px; color: #6b7386; text-align: center; }
+.ahq-key { display: flex; justify-content: center; align-items: center; gap: 3px; font-size: 5.5px; color: #4b5266; white-space: nowrap; }
+.ahq-key i { width: 5px; height: 5px; border-radius: 50%; background: #4b3ab5; margin-left: 3px; }
+.ahq-key i.is-blue { background: #5aa9e6; }
+.ahq-key i.is-prev { background: #c9ced8; }
+.ahq-key-seg i { background: var(--c); }
+.ahq-bars { display: flex; align-items: flex-end; gap: 2px; height: 56px; border-bottom: 1px solid #e3e7ee; border-left: 1px solid #e3e7ee; padding-left: 2px; }
+.ahq-bars > span { flex: 1; display: flex; align-items: flex-end; gap: 1px; height: 100%; }
+.ahq-bars i { flex: 1; height: var(--h); background: #5aa9e6; }
+.ahq-bars i.is-prev { background: #dde1e8; }
+.tfx .ahq-line { width: 100%; height: 56px; }
+.tfx .ahq-line-tall { height: 72px; }
+.ahq-locs { display: grid; gap: 4px; margin-top: 4px; }
+.ahq-loc { display: grid; grid-template-columns: 44px 1fr; align-items: center; gap: 4px; }
+.ahq-loc b { font-size: 5.5px; font-weight: 400; color: #4b5266; text-align: right; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.ahq-loc > span { display: grid; gap: 1px; }
+.ahq-loc i { display: block; height: 5px; width: var(--w); background: #5aa9e6; }
+.ahq-loc i.is-prev { background: #dde1e8; height: 3px; }
+.ahq-pie { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 6px; }
+.tfx .ahq-pie svg { width: 64px; height: 64px; justify-self: center; }
+.ahq-legend { display: grid; gap: 3px; }
+.ahq-legend span { display: flex; align-items: center; gap: 3px; font-size: 5.5px; color: #4b5266; white-space: nowrap; }
+.ahq-legend i { width: 5px; height: 5px; border-radius: 50%; background: var(--c); }
+.ahq-legend b { font-weight: 400; }
+.ahq-dist { display: flex; align-items: flex-end; justify-content: space-around; height: 64px; padding: 0 6px; border-bottom: 1px solid #e3e7ee; border-left: 1px solid #e3e7ee; }
+.ahq-dist > span { position: relative; width: 22%; height: 100%; display: flex; align-items: flex-end; }
+.ahq-dist i { display: block; width: 100%; height: var(--h); background: var(--c); }
+.ahq-dist small { position: absolute; left: 0; right: 0; bottom: calc(var(--h) + 2px); text-align: center; font-size: 5.5px; font-weight: 600; color: #10142a; }
+.ahq-boxes { display: flex; justify-content: space-around; align-items: flex-end; height: 64px; padding: 0 4px; border-bottom: 1px solid #e3e7ee; border-left: 1px solid #e3e7ee; }
+.ahq-box { position: relative; width: 24%; height: 100%; }
+.ahq-box i { position: absolute; left: 50%; display: block; }
+.ahq-box .w { width: 1px; margin-left: -0.5px; bottom: var(--lo); top: calc(100% - var(--hi)); background: #5aa9e6; }
+.ahq-box .b { width: 70%; margin-left: -35%; bottom: var(--q1); top: calc(100% - var(--q3)); border: 1px solid #5aa9e6; background: #fff; }
+.ahq-box .m { width: 70%; margin-left: -35%; bottom: var(--md); height: 1px; background: #5aa9e6; }
+.ahq-box small { position: absolute; left: 0; right: 0; bottom: -9px; text-align: center; font-size: 5.5px; color: #6b7386; }
+.ahq-seg .ahq-charts-3 .ahq-chart:last-child { padding-bottom: 14px; }
 @media (max-width: 760px) {
-  .anx-kpis { grid-template-columns: repeat(2, 1fr); }
-  .anx-two { grid-template-columns: 1fr; }
+  .ahq { padding: 10px; }
+  .ahq-kpis { grid-template-columns: repeat(3, 1fr); }
+  .ahq-kpi:nth-child(n+4) { display: none; }
+  .ahq-charts { grid-template-columns: 1fr 1fr; }
+  .ahq-charts .ahq-chart:nth-child(3) { grid-column: 1 / -1; }
+  .ahq-charts-2 .ahq-chart:nth-child(3) { grid-column: auto; }
 }
+
+/* ===== Device record, drawn (Access & Identity page) =====
+   The record panel of the back office device screen: details, device info, status. */
+.dvx { max-width: 440px; display: grid; }
+.dvx .pdx-head b { display: inline-flex; align-items: center; gap: 8px; }
+.dvx .pdx-head i { display: grid; place-items: center; width: 22px; height: 22px; border-radius: 6px; border: 1px solid #e3e7ee; font-size: 12px; color: #4b5266; }
+.dvx .pdx-label { margin-top: 2px; }
+.dvx-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 14px; margin-bottom: 14px; }
+.dvx-wide { grid-column: 1 / -1; }
+.dvx-f { display: grid; gap: 4px; }
+.dvx-f small, .dvx-info small { font-size: 9.5px; color: #6b7386; }
+.dvx-in { padding: 7px 10px; border: 1px solid #e3e7ee; border-radius: 7px; font-size: 11.5px; color: #10142a; }
+.dvx-in.is-ph { color: #9aa3b5; }
+.dvx-info > span { display: grid; gap: 3px; font-size: 11.5px; color: #4b5266; }
+.dvx-status { font-size: 11.5px; font-weight: 600; color: #10142a; }
+@media (max-width: 760px) { .dvx-grid { gap: 8px 10px; } }

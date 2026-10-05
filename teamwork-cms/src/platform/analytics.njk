@@ -252,26 +252,8 @@ stickyHref: "/demo/"
         </ul>
       </div>
       <div class="feature-visual">
-        <div class="tfx pdx" role="img" aria-label="A piece of the sales dashboard: UPT, ATV, net sales and margin with change against the previous period, receipts by retail week against the previous period, and gross sales ranked across the top five locations. Values are illustrative.">
-          <div class="pdx-card anx" aria-hidden="true">
-            <div class="anx-kpis">
-              <span><b>2.4</b><small>UPT <em class="is-up">▲ 4.1%</em></small></span>
-              <span><b>$187</b><small>ATV <em class="is-up">▲ 6.3%</em></small></span>
-              <span><b>$428K</b><small>Net sales <em class="is-up">▲ 12.0%</em></small></span>
-              <span><b>58%</b><small>Margin <em class="is-down">▼ 0.8 pts</em></small></span>
-            </div>
-            <div class="anx-two">
-              <div class="anx-panel">
-                <span class="anx-cap">Receipts by retail week</span>
-                <span class="anx-bars"><span><i style="--h:22px"></i><i class="is-prev" style="--h:18px"></i></span><span><i style="--h:28px"></i><i class="is-prev" style="--h:24px"></i></span><span><i style="--h:20px"></i><i class="is-prev" style="--h:22px"></i></span><span><i style="--h:34px"></i><i class="is-prev" style="--h:26px"></i></span><span><i style="--h:30px"></i><i class="is-prev" style="--h:28px"></i></span><span><i style="--h:38px"></i><i class="is-prev" style="--h:30px"></i></span><span><i style="--h:36px"></i><i class="is-prev" style="--h:33px"></i></span><span><i style="--h:46px"></i><i class="is-prev" style="--h:34px"></i></span><span><i style="--h:42px"></i><i class="is-prev" style="--h:38px"></i></span><span><i style="--h:52px"></i><i class="is-prev" style="--h:40px"></i></span><span><i style="--h:48px"></i><i class="is-prev" style="--h:44px"></i></span><span><i style="--h:60px"></i><i class="is-prev" style="--h:46px"></i></span></span>
-                <span class="anx-key"><i></i>This period <i class="is-prev"></i>Previous</span>
-              </div>
-              <div class="anx-panel">
-                <span class="anx-cap">Gross sales, top 5 locations</span>
-                <span class="anx-locs"><span class="anx-loc"><b>Paris</b><i style="--w:100%"></i></span><span class="anx-loc"><b>London</b><i style="--w:88%"></i></span><span class="anx-loc"><b>New York</b><i style="--w:81%"></i></span><span class="anx-loc"><b>Milan</b><i style="--w:67%"></i></span><span class="anx-loc"><b>Tokyo</b><i style="--w:54%"></i></span></span>
-              </div>
-            </div>
-          </div>
+        <div class="tfx pdx" role="img" aria-label="A piece of the cloud back office sales dashboard: KPI tiles for UPT, ATV, net sales, gross sales and margin with change against the previous period, then receipts and sales charted by retail week against the previous period, and gross sales compared across the top five locations. Values are illustrative.">
+          {% include "dash-sales.njk" %}
         </div>
       </div>
     </div>
@@ -287,17 +269,8 @@ stickyHref: "/demo/"
         </ul>
       </div>
       <div class="feature-visual">
-        <div class="tfx pdx pdx-flip" role="img" aria-label="A piece of the customer segment dashboard: share of customers by spend tier, and average purchase value by week for each tier. Values are illustrative.">
-          <div class="pdx-card anx anx-seg" aria-hidden="true">
-            <div class="anx-panel anx-share">
-              <span class="anx-cap">Customers by segment</span>
-              <div class="anx-donut"><svg viewBox="0 0 100 100"><circle r="34" cx="50" cy="50" fill="none" stroke="#2f7bff" stroke-width="16" stroke-dasharray="38.5 175.2" stroke-dashoffset="0.0" transform="rotate(-90 50 50)"/><circle r="34" cx="50" cy="50" fill="none" stroke="#7c5cf5" stroke-width="16" stroke-dasharray="100.4 113.2" stroke-dashoffset="-38.5" transform="rotate(-90 50 50)"/><circle r="34" cx="50" cy="50" fill="none" stroke="#9cc3ff" stroke-width="16" stroke-dasharray="74.8 138.9" stroke-dashoffset="-138.9" transform="rotate(-90 50 50)"/></svg><span class="anx-legend"><span><i style="--c:#2f7bff"></i>Top spenders<b>18%</b></span><span><i style="--c:#7c5cf5"></i>Regulars<b>47%</b></span><span><i style="--c:#9cc3ff"></i>Occasional<b>35%</b></span></span></div>
-            </div>
-            <div class="anx-panel">
-              <span class="anx-cap">Average purchase value by week</span>
-              <svg class="anx-lines" viewBox="0 0 300 104" preserveAspectRatio="none"><path d="M10 100H290M10 70H290M10 40H290M10 10H290" stroke="#edf0f4" stroke-width="1"/><polyline points="10,48 41,40 72,45 103,30 134,36 166,22 197,28 228,16 259,20 290,10" fill="none" stroke="#2f7bff" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/><polyline points="10,70 41,66 72,69 103,62 134,64 166,60 197,61 228,56 259,58 290,53" fill="none" stroke="#7c5cf5" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/><polyline points="10,86 41,84 72,87 103,82 134,83 166,80 197,82 228,79 259,78 290,76" fill="none" stroke="#9cc3ff" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/></svg>
-            </div>
-          </div>
+        <div class="tfx pdx pdx-flip" role="img" aria-label="A piece of the customer segment dashboard: segment share, receipt distribution and margin by segment, customer gender and age, and average purchase value and frequency by week for each segment. Values are illustrative.">
+          {% include "dash-segments.njk" %}
         </div>
       </div>
     </div>
