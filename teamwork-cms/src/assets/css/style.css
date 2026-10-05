@@ -9947,3 +9947,36 @@ main[data-vertical] .tm-day-time { color: color-mix(in srgb, var(--v-accent) 80%
 .cq figcaption a { display: inline-flex; align-items: center; gap: 5px; font-weight: 600; color: var(--brand-text); }
 .cq figcaption a i { font-size: 14px; }
 @media (max-width: 760px) { .cq-band { padding: 40px 0; } .cq blockquote { padding-left: 18px; } .cq figcaption { padding-left: 21px; } }
+
+/* ===== Inventory pieces, drawn (Inventory Control page) =====
+   The ship-to block of a purchase order and the outgoing shipments list, on the
+   same card as the product and customer pieces. */
+.ivx-pill { padding: 3px 10px; border-radius: 100px; background: #eef1f6; color: #4b5266; font-size: 10px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; }
+.ivx-po { max-width: 420px; display: grid; }
+.ivx-field { display: grid; grid-template-columns: 128px 1fr; align-items: center; gap: 12px; margin-bottom: 9px; }
+.ivx-field small { font-size: 11px; color: #8a93a6; text-align: right; }
+.ivx-in { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 7px 10px; border: 1px solid #e3e7ee; border-radius: 8px; font-size: 11.5px; color: #10142a; }
+.ivx-in i { font-size: 12px; color: #8a93a6; }
+.ivx-in.is-set { border-color: #3b86f7; box-shadow: 0 0 0 3px rgba(59,134,247,0.14); font-weight: 600; }
+.ivx-in.ivx-dim { background: #f5f7fb; color: #6b7386; }
+.ivx-in b { color: #2f7bff; font-weight: 600; }
+.ivx-btns { display: flex; justify-content: flex-end; gap: 8px; margin-top: 8px; padding-top: 12px; border-top: 1px solid #edf0f4; }
+.ivx-btns span { padding: 6px 16px; border-radius: 8px; border: 1px solid #e3e7ee; font-size: 11px; font-weight: 600; color: #2f7bff; }
+.ivx-btns span.is-main { background: #2f7bff; border-color: #2f7bff; color: #fff; }
+.ivx-tabs { display: flex; gap: 4px; padding: 4px; margin-bottom: 12px; border-radius: 10px; background: #eef1f6; }
+.ivx-tabs span { flex: 1; text-align: center; padding: 6px 0; border-radius: 7px; font-size: 11px; font-weight: 500; color: #4b5266; }
+.ivx-tabs span.is-on { background: #fff; color: #10142a; font-weight: 600; box-shadow: 0 1px 2px rgba(7,9,26,0.08); }
+.ivx-tabs em { font-style: normal; color: #8a93a6; }
+.ivx-ship .pdx-th, .ivx-ship .pdx-tr { grid-template-columns: 0.75fr 0.5fr 1.35fr 1.35fr 0.4fr; }
+.ivx-ship .pdx-tr > span:last-child, .ivx-ship .pdx-th > span:last-child { text-align: right; }
+.ivx-st { font-style: normal; display: inline-block; padding: 2px 8px; border-radius: 100px; font-size: 9.5px; font-weight: 600; }
+.ivx-st.is-prep { background: #fdeee3; color: #a2501a; }
+.ivx-st.is-ship { background: #fff4d6; color: #8a6400; }
+.ivx-st.is-ready { background: #e2f3fb; color: #0f6a8f; }
+.ivx-st.is-sent { background: #e6f6ec; color: #1f7a45; }
+@media (max-width: 760px) {
+  .ivx-field { grid-template-columns: 1fr; gap: 4px; }
+  .ivx-field small { text-align: left; }
+  .ivx-ship .pdx-th > span:nth-child(2), .ivx-ship .pdx-tr > span:nth-child(2) { display: none; }
+  .ivx-ship .pdx-th, .ivx-ship .pdx-tr { grid-template-columns: 0.8fr 1.3fr 1.4fr 0.35fr; column-gap: 8px; }
+}
