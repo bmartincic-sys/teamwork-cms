@@ -10154,3 +10154,7 @@ main[data-vertical] .tm-day-time { color: color-mix(in srgb, var(--v-accent) 80%
 .role-apply { display: inline-flex; align-items: center; gap: 5px; margin-top: 12px; font-size: 13.5px; font-weight: 600; color: var(--brand-text); }
 .role-apply i { font-size: 14px; transition: transform .18s ease; }
 .role-apply:hover i { transform: translateX(3px); }
+
+/* Careers: the application form, embedded */
+.apply-formwrap { max-width: 760px; margin: 8px auto 0; padding: 28px; border-radius: 18px; background: var(--bg-elevated); border: 1px solid var(--border); }
+@media (max-width: 600px) { .apply-formwrap { padding: 18px 14px; } }
