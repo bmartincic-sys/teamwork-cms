@@ -1201,12 +1201,17 @@ details[open] summary { color: var(--brand-text); }
 /* The first group has the longest name; the last holds one link, so it gives up width. */
 .mega-cols { display: grid; grid-template-columns: 1.3fr 1.1fr 1.1fr 0.8fr; gap: 10px; }
 /* Solutions by industry: each one distinct, with its own mark and focus */
-.mega-ind { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 4px 10px; }
+/* Five industries on one line, each tile as wide as its name, with even gaps between them. */
+.mega-ind { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 12px; }
 /* Five industries on one line: names only, the blurbs would truncate at this width. */
-.mega-ind .mega-ind-item { align-items: center; }
+.mega-ind .mega-ind-item { align-items: center; padding: 8px 10px; flex: 0 1 auto; }
 .mega-ind .mega-ind-text em { display: none; }
 .mega-ind .mega-ind-text strong { white-space: nowrap; }
-@media (max-width: 1240px) { .mega-ind .mega-ind-text strong { white-space: normal; } }
+@media (max-width: 1240px) {
+  .mega-ind { flex-wrap: nowrap; }
+  .mega-ind .mega-ind-item { flex: 1 1 0; min-width: 0; }
+  .mega-ind .mega-ind-text strong { white-space: normal; }
+}
 .mega-ind-item {
   display: flex; align-items: flex-start; gap: 10px;
   min-width: 0; padding: 9px 10px; border-radius: 8px;
@@ -10202,3 +10207,8 @@ main[data-vertical] .tm-day-time { color: color-mix(in srgb, var(--v-accent) 80%
 @media (max-width: 760px) {
   .mdx-totals { grid-template-columns: repeat(2, 1fr); }
 }
+
+/* Inline figures in migrated blog posts */
+.blog-figure { margin: 8px 0 24px; }
+.blog-figure img { display: block; width: 100%; height: auto; border-radius: var(--radius-lg); border: 1px solid var(--border); }
+.blog-figure figcaption { margin-top: 8px; font-size: 13px; color: var(--text-faint); }

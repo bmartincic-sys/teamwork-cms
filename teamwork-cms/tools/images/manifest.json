@@ -3,6 +3,71 @@
   "w": 180,
   "webp": "/assets/images/apple-touch-icon.webp"
  },
+ "/assets/images/blog/posts/5-ecommerce-trends-shaping-retail-businesses-in-2022/3.png": {
+  "w": 768,
+  "webp": "/assets/images/blog/posts/5-ecommerce-trends-shaping-retail-businesses-in-2022/3.webp"
+ },
+ "/assets/images/blog/posts/6-exciting-2022-retail-trends-to-watch/Screen-Shot-2022-01-24-at-2.23.09-PM.png": {
+  "w": 1244,
+  "webp": "/assets/images/blog/posts/6-exciting-2022-retail-trends-to-watch/Screen-Shot-2022-01-24-at-2.23.09-PM.webp"
+ },
+ "/assets/images/blog/posts/6-exciting-2022-retail-trends-to-watch/Screen-Shot-2022-01-24-at-2.25.06-PM.png": {
+  "w": 1242,
+  "webp": "/assets/images/blog/posts/6-exciting-2022-retail-trends-to-watch/Screen-Shot-2022-01-24-at-2.25.06-PM.webp"
+ },
+ "/assets/images/blog/posts/airtag/the-row.png": {
+  "w": 300,
+  "webp": "/assets/images/blog/posts/airtag/the-row.webp"
+ },
+ "/assets/images/blog/posts/enhance-data-operational-reporting/Infographics-3.png": {
+  "w": 800,
+  "webp": "/assets/images/blog/posts/enhance-data-operational-reporting/Infographics-3.webp"
+ },
+ "/assets/images/blog/posts/exceptional-customer-service/Infographics-15.png": {
+  "w": 800,
+  "webp": "/assets/images/blog/posts/exceptional-customer-service/Infographics-15.webp"
+ },
+ "/assets/images/blog/posts/how-retailers-can-succeed-in-the-era-of-covid-2022/Beige-Benefits-of-Reading-Infographic-Graph-1.png": {
+  "w": 1024,
+  "webp": "/assets/images/blog/posts/how-retailers-can-succeed-in-the-era-of-covid-2022/Beige-Benefits-of-Reading-Infographic-Graph-1.webp"
+ },
+ "/assets/images/blog/posts/keys-to-a-customer-centric-approach-that-retains-retail-customers/In-fact-customer-service-interactions-are-actually-more-likely-to-lead-to-disloyalty-than-loyalty..png": {
+  "w": 940,
+  "webp": "/assets/images/blog/posts/keys-to-a-customer-centric-approach-that-retains-retail-customers/In-fact-customer-service-interactions-are-actually-more-likely-to-lead-to-disloyalty-than-loyalty..webp"
+ },
+ "/assets/images/blog/posts/mobile-pos-vs-rfid-self-checkout/Banners-Blogs-11.png": {
+  "small": "/assets/images/blog/posts/mobile-pos-vs-rfid-self-checkout/Banners-Blogs-11-1200.webp",
+  "w": 1800,
+  "webp": "/assets/images/blog/posts/mobile-pos-vs-rfid-self-checkout/Banners-Blogs-11.webp"
+ },
+ "/assets/images/blog/posts/nrf/Adyen_Corporate_Logo.svg-1.png": {
+  "w": 600,
+  "webp": "/assets/images/blog/posts/nrf/Adyen_Corporate_Logo.svg-1.webp"
+ },
+ "/assets/images/blog/posts/shoptalk-cocktail-hour/ai-004.png": {
+  "w": 800,
+  "webp": "/assets/images/blog/posts/shoptalk-cocktail-hour/ai-004.webp"
+ },
+ "/assets/images/blog/posts/smarter-stores-with-ai-enabled-video-intelligence/Screen-Shot-2021-12-16-at-10.26.40-AM.png": {
+  "w": 258,
+  "webp": "/assets/images/blog/posts/smarter-stores-with-ai-enabled-video-intelligence/Screen-Shot-2021-12-16-at-10.26.40-AM.webp"
+ },
+ "/assets/images/blog/posts/smarter-stores-with-ai-enabled-video-intelligence/Screen-Shot-2021-12-16-at-10.29.22-AM.png": {
+  "w": 222,
+  "webp": "/assets/images/blog/posts/smarter-stores-with-ai-enabled-video-intelligence/Screen-Shot-2021-12-16-at-10.29.22-AM.webp"
+ },
+ "/assets/images/blog/posts/teamwork-named-top-retail-technology-company-in-florida/BOS.png": {
+  "w": 1000,
+  "webp": "/assets/images/blog/posts/teamwork-named-top-retail-technology-company-in-florida/BOS.webp"
+ },
+ "/assets/images/blog/posts/technology-drive-scalability/Infographics.png": {
+  "w": 768,
+  "webp": "/assets/images/blog/posts/technology-drive-scalability/Infographics.webp"
+ },
+ "/assets/images/blog/posts/utilizing-effective-order-management-to-minimize-returns/Infographics-2.png": {
+  "w": 800,
+  "webp": "/assets/images/blog/posts/utilizing-effective-order-management-to-minimize-returns/Infographics-2.webp"
+ },
  "/assets/images/blog/real/3-reasons-why-so-many-customers-are-returning-to-bricks-and-mortar.jpg": {
   "w": 1200,
   "webp": "/assets/images/blog/real/3-reasons-why-so-many-customers-are-returning-to-bricks-and-mortar.webp"
@@ -408,11 +473,6 @@
   "w": 900,
   "webp": "/assets/images/customers/fao-schwarz.webp"
  },
- "/assets/images/customers/jewelry-counter.jpg": {
-  "small": "/assets/images/customers/jewelry-counter-1200.webp",
-  "w": 1600,
-  "webp": "/assets/images/customers/jewelry-counter.webp"
- },
  "/assets/images/customers/lammles-stampede.jpg": {
   "small": "/assets/images/customers/lammles-stampede-1200.webp",
   "w": 1600,
@@ -498,36 +558,15 @@
   "w": 32,
   "webp": "/assets/images/favicon-32x32.webp"
  },
- "/assets/images/homepage/121-cxp.jpg": {
-  "w": 806,
-  "webp": "/assets/images/homepage/121-cxp.webp"
- },
  "/assets/images/homepage/analytics-hero.jpg": {
   "small": "/assets/images/homepage/analytics-hero-1200.webp",
   "w": 1800,
   "webp": "/assets/images/homepage/analytics-hero.webp"
  },
- "/assets/images/homepage/analytics-tile.jpg": {
-  "w": 1024,
-  "webp": "/assets/images/homepage/analytics-tile.webp"
- },
  "/assets/images/homepage/case-studies-hero.jpg": {
   "small": "/assets/images/homepage/case-studies-hero-1200.webp",
   "w": 2000,
   "webp": "/assets/images/homepage/case-studies-hero.webp"
- },
- "/assets/images/homepage/cloudhq-kpis.jpg": {
-  "w": 912,
-  "webp": "/assets/images/homepage/cloudhq-kpis.webp"
- },
- "/assets/images/homepage/cloudhq-segments.jpg": {
-  "w": 906,
-  "webp": "/assets/images/homepage/cloudhq-segments.webp"
- },
- "/assets/images/homepage/cxp-admin.jpg": {
-  "small": "/assets/images/homepage/cxp-admin-1200.webp",
-  "w": 2000,
-  "webp": "/assets/images/homepage/cxp-admin.webp"
  },
  "/assets/images/homepage/cxp-hero.jpg": {
   "small": "/assets/images/homepage/cxp-hero-1200.webp",
@@ -539,25 +578,6 @@
   "w": 1500,
   "webp": "/assets/images/homepage/extensibility.webp"
  },
- "/assets/images/homepage/hero-store.jpg": {
-  "small": "/assets/images/homepage/hero-store-1200.webp",
-  "w": 1828,
-  "webp": "/assets/images/homepage/hero-store.webp"
- },
- "/assets/images/homepage/integrations-tile.jpg": {
-  "w": 1024,
-  "webp": "/assets/images/homepage/integrations-tile.webp"
- },
- "/assets/images/homepage/inv-allocation.jpg": {
-  "small": "/assets/images/homepage/inv-allocation-1200.webp",
-  "w": 1918,
-  "webp": "/assets/images/homepage/inv-allocation.webp"
- },
- "/assets/images/homepage/inv-transfers.jpg": {
-  "small": "/assets/images/homepage/inv-transfers-1200.webp",
-  "w": 2000,
-  "webp": "/assets/images/homepage/inv-transfers.webp"
- },
  "/assets/images/homepage/inventory-hero.jpg": {
   "small": "/assets/images/homepage/inventory-hero-1200.webp",
   "w": 2000,
@@ -567,10 +587,6 @@
   "small": "/assets/images/homepage/inventory-rfid-count-1200.webp",
   "w": 1536,
   "webp": "/assets/images/homepage/inventory-rfid-count.webp"
- },
- "/assets/images/homepage/ipad-pos-counter.jpg": {
-  "w": 1200,
-  "webp": "/assets/images/homepage/ipad-pos-counter.webp"
  },
  "/assets/images/homepage/mobile-pos-hero.jpg": {
   "small": "/assets/images/homepage/mobile-pos-hero-1200.webp",
@@ -594,23 +610,10 @@
   "w": 1060,
   "webp": "/assets/images/homepage/pos-jewelry-checkout.webp"
  },
- "/assets/images/homepage/pxp-catalog.jpg": {
-  "small": "/assets/images/homepage/pxp-catalog-1200.webp",
-  "w": 2000,
-  "webp": "/assets/images/homepage/pxp-catalog.webp"
- },
  "/assets/images/homepage/pxp-hero.jpg": {
   "small": "/assets/images/homepage/pxp-hero-1200.webp",
   "w": 1536,
   "webp": "/assets/images/homepage/pxp-hero.webp"
- },
- "/assets/images/homepage/pxp-variants.png": {
-  "w": 1359,
-  "webp": "/assets/images/homepage/pxp-variants.webp"
- },
- "/assets/images/homepage/pxp-versioning.jpg": {
-  "w": 1301,
-  "webp": "/assets/images/homepage/pxp-versioning.webp"
  },
  "/assets/images/homepage/rfid-scanning.jpg": {
   "small": "/assets/images/homepage/rfid-scanning-1200.webp",
@@ -635,11 +638,6 @@
   "small": "/assets/images/homepage/sol-footwear-1200.webp",
   "w": 2000,
   "webp": "/assets/images/homepage/sol-footwear.webp"
- },
- "/assets/images/homepage/sol-jewelry.jpg": {
-  "small": "/assets/images/homepage/sol-jewelry-1200.webp",
-  "w": 2000,
-  "webp": "/assets/images/homepage/sol-jewelry.webp"
  },
  "/assets/images/homepage/sol-luxury.jpg": {
   "small": "/assets/images/homepage/sol-luxury-1200.webp",
@@ -670,10 +668,6 @@
   "small": "/assets/images/homepage/teammate-hero-1200.webp",
   "w": 2000,
   "webp": "/assets/images/homepage/teammate-hero.webp"
- },
- "/assets/images/homepage/unified-bopis.jpg": {
-  "w": 1200,
-  "webp": "/assets/images/homepage/unified-bopis.webp"
  },
  "/assets/images/logos/120-lino-logo.png": {
   "w": 560,

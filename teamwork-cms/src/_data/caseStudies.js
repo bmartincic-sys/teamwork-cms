@@ -107,10 +107,9 @@ module.exports = [
     title: "Moose Knuckles Canada Furthers Their Omnichannel Presence",
     blurb: "Mobile POS and order management signed for every location across three continents.",
     sector: "Luxury Apparel",
-    url: "https://www.teamworkcommerce.com/moose-knuckles-canada-furthers-their-omnichannel-presence-with-teamwork-commerce/",
+    url: "/blog/moose-knuckles-canada-furthers-their-omnichannel-presence-with-teamwork-commerce/",
     photo: "/assets/images/customers/moose-knuckles.jpg",
     logo: "/assets/images/logos/moose-knuckles-logo.png",
-    external: true,
     metrics: ["POS and OMS for every location", "North America, Europe and Asia", "BOPIS, ship-from-store and BORIS"]
   },
   {
@@ -136,9 +135,8 @@ module.exports = [
     title: "From Hassle to Dazzle: Improving Customer Experience",
     blurb: "A family shoe business that replaced slow stock counts and late reports with real-time data.",
     sector: "Luxury Apparel",
-    url: "https://www.teamworkcommerce.com/prada-shoes-improves-customer-experience-teamwork-commerce-omnichannel-platform/",
+    url: "/blog/prada-shoes-improves-customer-experience-teamwork-commerce-omnichannel-platform/",
     photo: "/assets/images/customers/prada-shoes.jpg", logo: "/assets/images/customers/logos/prada-logo.png", logoBig: true,
-    external: true,
     metrics: ["Reports that took up to 15 days, now real time", "On Teamwork for 9 years"]
   },
   {
@@ -146,9 +144,8 @@ module.exports = [
     title: "Princesse Tam Tam and Comptoir des Cotonniers",
     blurb: "Two Fast Retailing fashion brands on one store app across six European countries.",
     sector: "Fashion & Apparel",
-    url: "https://www.teamworkcommerce.com/princesse-tam-tam-and-comptoir-des-cotonniers-ptt-cdc/",
+    url: "/blog/princesse-tam-tam-and-comptoir-des-cotonniers-ptt-cdc/",
     photo: "/assets/images/customers/ptt-cdc.jpg", logo: "/assets/images/customers/logos/princesse-tam-tam-logo.png",
-    external: true,
     metrics: ["220+ locations across 6 countries", "Full stock count each morning, in minutes", "RFID counter pads at checkout"]
   },
   {
@@ -156,10 +153,9 @@ module.exports = [
     title: "ASICS Outperforms Itself at the 36th Edition of the Father's Day Race",
     blurb: "Associates selling across a race-day pavilion on iPads, with sales reported in real time.",
     sector: "Footwear",
-    url: "https://www.teamworkcommerce.com/asics-outperforms-itself-with-teamwork-in-the-36th-edition-of-fathers-day-race/",
+    url: "/blog/asics-outperforms-itself-with-teamwork-in-the-36th-edition-of-fathers-day-race/",
     photo: "/assets/images/customers/asics-race.jpg",
     logo: "/assets/images/logos/asics-logo.png",
-    external: true,
     metrics: ["13,000 runners in the race", "Sales closed in three clicks"]
   },
   {
@@ -167,18 +163,16 @@ module.exports = [
     title: "FAO Schwarz Reopens with the Help of Cutting-Edge Retail Technology",
     blurb: "Reopening the world's most famous toy store with a modern POS foundation.",
     sector: "Specialty Retail",
-    url: "https://www.teamworkcommerce.com/fao-schwarz-reopens-with-the-help-of-cutting-edge-retail-technology/",
+    url: "/blog/fao-schwarz-reopens-with-the-help-of-cutting-edge-retail-technology/",
     photo: "/assets/images/customers/fao-schwarz.jpg", logo: "/assets/images/customers/logos/fao-schwarz-logo.png",
-    external: true
   },
   {
     client: "The New Stand",
     title: "The New Stand Improves Days and Mobility",
     blurb: "A modern newsstand concept selling anywhere its customers happen to be.",
     sector: "Specialty Retail",
-    url: "https://www.teamworkcommerce.com/the-new-stand-improves-days-and-mobility/",
+    url: "/blog/the-new-stand-improves-days-and-mobility/",
     photo: "/assets/images/customers/the-new-stand.jpg", logo: "/assets/images/customers/logos/the-new-stand-logo.png", logoBig: true,
-    external: true,
     metrics: ["New stores live from a hotspot and an iPad", "Self-checkout in the member app"]
   }
 ];

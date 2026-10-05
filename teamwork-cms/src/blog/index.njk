@@ -36,7 +36,7 @@ permalink: "/blog/"
 <section class="section" style="padding-top: 26px;">
   <div class="container">
     <div class="pillars-grid" id="blogGrid" style="grid-template-columns: repeat(3, 1fr);">
-      {% for post in collections.blogpost %}
+      {% for post in collections.blogpost | reverse %}
       <a href="{{ post.url }}" class="pillar-card blog-idx-card" data-category="{{ (post.data.category or 'Blog') | slugify }}" style="display: block; text-decoration: none;">
         <div class="blog-idx-img"><img src="/assets/images/blog/real/{{ post.fileSlug }}.jpg" alt="{{ post.data.title }}" loading="lazy"></div>
         <div class="blog-idx-body">
