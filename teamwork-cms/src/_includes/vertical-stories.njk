@@ -1,0 +1,39 @@
+{#- Customer stories for a solutions page, rendered from _data/caseStudies.js with the
+    same card the /case-studies/ page uses. Set before including:
+      storyUrls     the case-study urls to show, in order
+      storyEyebrow  section eyebrow
+      storyTitle    section heading
+      storySub      optional section sub -#}
+<section class="section vstories">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">{{ storyEyebrow }}</div>
+      <h2 class="section-title">{{ storyTitle }}</h2>
+      {% if storySub %}<p class="section-sub">{{ storySub }}</p>{% endif %}
+    </div>
+    <div class="csx-grid">
+      {%- for url in storyUrls %}{% for cs in caseStudies %}{% if cs.url == url %}
+      <a class="csx-card{% if cs.photo %} has-photo{% else %} is-ink tone-{{ loop.index0 % 3 }}{% endif %}" href="{{ cs.url }}"{% if cs.external %} target="_blank" rel="noopener"{% endif %}>
+        {% if cs.photo %}<img class="csx-photo" src="{{ cs.photo }}" alt="{{ cs.client }}" loading="lazy">{% endif %}
+        <div class="csx-scrim"></div>
+        <span class="csx-sector">{{ cs.sector }}</span>
+        {% if cs.external %}<i class="ti ti-external-link csx-ext"></i>{% endif %}
+        <div class="csx-body">
+          {% if cs.logo %}<img class="csx-logo{% if cs.logoColor %} is-color{% endif %}{% if cs.logoBig %} is-big{% endif %}" src="{{ cs.logo }}" alt="{{ cs.client }}">{% else %}<span class="csx-name{% if cs.metrics %} is-lead{% endif %}">{{ cs.client }}</span>{% endif %}
+          {% if cs.metrics %}
+          <h3 class="sr-only">{{ cs.title }}</h3>
+          <ul class="csx-metrics">{% for m in cs.metrics %}<li>{{ m }}</li>{% endfor %}</ul>
+          {% else %}
+          <h3>{{ cs.title }}</h3>
+          {% endif %}
+          <div class="csx-more">
+            {% if cs.metrics %}<p class="csx-story">{{ cs.title }}</p>{% endif %}
+            <p>{{ cs.blurb }}</p>
+            <span class="csx-read">Read the case study <i class="ti ti-arrow-right"></i></span>
+          </div>
+        </div>
+      </a>
+      {%- endif %}{% endfor %}{% endfor %}
+    </div>
+  </div>
+</section>

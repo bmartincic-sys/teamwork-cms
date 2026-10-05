@@ -8,6 +8,16 @@
   status = 301
 
 [[redirects]]
+  from = "/solutions/footwear-apparel/"
+  to = "/solutions/fashion-apparel/"
+  status = 301
+
+[[redirects]]
+  from = "/solutions/footwear-apparel"
+  to = "/solutions/fashion-apparel/"
+  status = 301
+
+[[redirects]]
   from = "/solutions/"
   to = "/platform/mobile-pos/"
   status = 301
