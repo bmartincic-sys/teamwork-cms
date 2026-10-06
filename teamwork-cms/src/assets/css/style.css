@@ -10226,9 +10226,15 @@ main[data-vertical] .tm-day-time { color: color-mix(in srgb, var(--v-accent) 80%
 .lx-mono { font-family: var(--font-mono); font-size: 11px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; }
 
 /* hero */
-.lx-hero { position: relative; overflow: hidden; background: var(--lx-sand); padding: 88px 0 72px; min-height: 86vh; display: flex; align-items: center; }
+.lx-hero { position: relative; overflow: hidden; background: var(--lx-sand); padding: 88px 0 170px; min-height: 86vh; display: flex; align-items: center; }
 .lx-sun { position: absolute; right: -8vw; top: -14vw; width: 44vw; height: 44vw; min-width: 420px; min-height: 420px; border-radius: 50%; background: var(--lx-peach); }
 .lx-sun::after { content: ''; position: absolute; inset: 26px; border-radius: 50%; border: 1px solid var(--lx-peach-2); }
+/* warm halo around the sun, and a shoreline along the bottom of the hero */
+.lx-sun::before { content: ''; position: absolute; inset: -22%; border-radius: 50%; background: radial-gradient(circle, rgba(223,154,135,0.42) 0%, rgba(223,154,135,0.18) 42%, rgba(223,154,135,0) 68%); }
+.lx-sea { position: absolute; left: 0; right: 0; bottom: 0; height: 120px; pointer-events: none; }
+.lx-sea svg { position: absolute; left: 0; bottom: 0; width: 100%; height: 100%; display: block; }
+.lx-sea .sea-back { fill: var(--lx-blush); opacity: 0.45; }
+.lx-sea .sea-front { fill: var(--lx-blush); }
 .lx-bands { position: absolute; left: 0; right: 0; bottom: 0; height: 34%; pointer-events: none; }
 .lx-bands span { position: absolute; left: 0; right: 0; height: 1px; background: var(--lx-ink); opacity: 0.12; }
 .lx-bands span:nth-child(1){ bottom: 76%; } .lx-bands span:nth-child(2){ bottom: 62%; } .lx-bands span:nth-child(3){ bottom: 50%; } .lx-bands span:nth-child(4){ bottom: 40%; } .lx-bands span:nth-child(5){ bottom: 32%; } .lx-bands span:nth-child(6){ bottom: 26%; }
@@ -10308,7 +10314,8 @@ main[data-vertical] .tm-day-time { color: color-mix(in srgb, var(--v-accent) 80%
 .lx-fact small { display: block; color: var(--lx-ink-soft); margin-top: 8px; font-size: 14px; }
 
 @media (max-width: 900px) {
-  .lx-hero { padding: 64px 0 56px; min-height: 0; }
+  .lx-hero { padding: 64px 0 120px; min-height: 0; }
+  .lx-sea { height: 72px; }
   .lx-eyebrow { gap: 0; }
   .lx-eyebrow::before, .lx-eyebrow::after { display: none; }
   .lx-sun { width: 70vw; height: 70vw; right: -24vw; top: -20vw; min-width: 0; min-height: 0; }

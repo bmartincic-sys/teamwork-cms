@@ -58,11 +58,18 @@ revealAt: "2027-01-10T00:00:00-05:00"
     <path d="M588 82 Q644 132 741 168 Q660 104 588 82Z"/>
   </svg>
 
+  <div class="lx-sea" aria-hidden="true">
+    <svg viewBox="0 0 1440 120" preserveAspectRatio="none" focusable="false">
+      <path class="sea-back" d="M0 58 C180 30 300 30 480 56 C660 82 780 82 960 54 C1140 26 1260 28 1440 52 L1440 120 L0 120 Z"/>
+      <path class="sea-front" d="M0 78 C200 54 320 54 520 76 C720 98 840 98 1040 74 C1240 50 1340 52 1440 70 L1440 120 L0 120 Z"/>
+    </svg>
+  </div>
+
   <div class="container">
     <div class="lx-hero-inner">
       <div class="lx-eyebrow lx-mono">NRF 2027 &middot; New York &middot; Booth #6156</div>
       <h1 class="lx-h1 lx-serif" id="lx-title">Something new is coming to the <em>show floor.</em></h1>
-      <p class="lx-sub">A brand-new booth, revealed when the doors open on January 10. The 2026 booth filled an avenue. This one has somewhere else to take you.</p>
+      <p class="lx-sub">A brand-new booth, revealed when the doors open on January 10. New York in January is cold. Booth #6156 won't be.</p>
 
       <div class="lx-count" id="lxCount" data-reveal="{{ revealAt }}" aria-live="polite">
         <div><b data-d>--</b><span class="lx-mono">Days</span></div>
@@ -70,7 +77,7 @@ revealAt: "2027-01-10T00:00:00-05:00"
         <div><b data-m>--</b><span class="lx-mono">Minutes</span></div>
         <div><b data-s>--</b><span class="lx-mono">Seconds</span></div>
       </div>
-      <p class="lx-count-note lx-mono" id="lxCountNote">Until the reveal</p>
+      <p class="lx-count-note lx-mono" id="lxCountNote">Until sunrise at Booth #6156</p>
 
       <div class="hero-cta">
         <a href="#list" class="lx-btn lx-btn-ink">Get on the list <i class="ti ti-arrow-right"></i></a>
@@ -83,8 +90,8 @@ revealAt: "2027-01-10T00:00:00-05:00"
 <!-- ============ MARQUEE ============ -->
 <div class="lx-marquee lx-mono" aria-hidden="true">
   <div class="lx-marquee-track">
-    <span>A brand-new booth <i></i> Revealed January 10 <i></i> NRF 2027 <i></i> Javits Center, New York <i></i> Booth #6156 <i></i></span>
-    <span>A brand-new booth <i></i> Revealed January 10 <i></i> NRF 2027 <i></i> Javits Center, New York <i></i> Booth #6156 <i></i></span>
+    <span>A brand-new booth <i></i> Revealed January 10 <i></i> Forecast at Booth #6156: warm <i></i> NRF 2027 <i></i> Javits Center, New York <i></i></span>
+    <span>A brand-new booth <i></i> Revealed January 10 <i></i> Forecast at Booth #6156: warm <i></i> NRF 2027 <i></i> Javits Center, New York <i></i></span>
   </div>
 </div>
 
@@ -95,7 +102,7 @@ revealAt: "2027-01-10T00:00:00-05:00"
       <div>
         <div class="lx-mono">Last season</div>
         <h2 class="lx-serif">The 2026 booth filled an avenue. The 2027 booth has somewhere new to take you.</h2>
-        <p>Point of Sale Avenue put a subway platform in the middle of the Javits Center: AI solutions down one side, self-checkout doors down the other, and a queue of retailers under the arch all week. We're not repeating it. We're following it. What comes next stays under wraps until the doors open, and the people on the list see it first.</p>
+        <p>Point of Sale Avenue put a subway platform in the middle of the Javits Center: AI solutions down one side, self-checkout doors down the other, and a queue of retailers under the arch all week. We're not repeating it. We're following it, somewhere a lot warmer. What comes next stays under wraps until the doors open, and the people on the list see it first.</p>
       </div>
       <figure>
         <img src="/assets/images/company/life/nrf-booth-team.webp" alt="The Teamwork Commerce team in front of the 2026 booth, under the Point of Sale Avenue arch with the AI Solutions and self-checkout displays behind them" width="1800" height="1350" loading="lazy">
@@ -206,7 +213,7 @@ revealAt: "2027-01-10T00:00:00-05:00"
     var left = target - Date.now();
     if (left <= 0) {
       f.d.textContent = '00'; f.h.textContent = '00'; f.m.textContent = '00'; f.s.textContent = '00';
-      if (note) note.textContent = 'The doors are open. Booth #6156.';
+      if (note) note.textContent = 'The sun is up. Booth #6156 is open.';
       return;
     }
     var s = Math.floor(left / 1000);
