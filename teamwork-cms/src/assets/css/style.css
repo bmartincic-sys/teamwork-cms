@@ -10240,7 +10240,7 @@ main[data-vertical] .tm-day-time { color: color-mix(in srgb, var(--v-accent) 80%
 .lx-bands span:nth-child(1){ bottom: 76%; } .lx-bands span:nth-child(2){ bottom: 62%; } .lx-bands span:nth-child(3){ bottom: 50%; } .lx-bands span:nth-child(4){ bottom: 40%; } .lx-bands span:nth-child(5){ bottom: 32%; } .lx-bands span:nth-child(6){ bottom: 26%; }
 /* the client's palm-and-mark wallpaper: faded in the hero with a clean centre for the copy,
    full strength behind the facts card */
-.lx-pattern { position: absolute; inset: 0; background: url(/assets/images/company/events/nrf-2027-pattern.webp) center / cover no-repeat; opacity: 0.5; pointer-events: none; }
+.lx-pattern { position: absolute; inset: 0; background: url(/assets/images/company/events/nrf-2027-pattern.webp) top left / 784px auto repeat; opacity: 0.6; pointer-events: none; }
 .lx-pattern::after { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 62% 70% at 50% 46%, var(--lx-sand) 0%, rgba(253,238,219,0.94) 40%, rgba(253,238,219,0.55) 72%, rgba(253,238,219,0.1) 100%); }
 .lx-hero-inner { max-width: 960px; margin: 0 auto; text-align: center; }
 .lx-eyebrow { display: inline-flex; align-items: center; gap: 14px; color: var(--lx-ink-soft); margin-bottom: 30px; }
@@ -10309,7 +10309,7 @@ main[data-vertical] .tm-day-time { color: color-mix(in srgb, var(--v-accent) 80%
 .lx-list-perks i { font-size: 16px; }
 
 /* facts */
-.lx-facts { background: var(--lx-sand) url(/assets/images/company/events/nrf-2027-pattern.webp) center / cover no-repeat; padding: 70px 0; }
+.lx-facts { background: var(--lx-sand) url(/assets/images/company/events/nrf-2027-pattern.webp) top left / 784px auto repeat; padding: 70px 0; }
 .lx-facts-card { background: var(--lx-sand); padding: 44px 40px; border-radius: 4px; box-shadow: 0 20px 40px -30px rgba(28,54,38,0.35); }
 .lx-facts-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 30px; }
 .lx-fact { border-left: 1px solid var(--lx-line); padding-left: 22px; }
