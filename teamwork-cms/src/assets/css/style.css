@@ -10219,15 +10219,16 @@ main[data-vertical] .tm-day-time { color: color-mix(in srgb, var(--v-accent) 80%
    One-off landing page styled as a product reveal: warm sand, blush, aqua and peach,
    editorial serif, a countdown. Page-scoped; nothing here leaks to the rest of the site.
    Colors are fixed so the page reads the same in both themes. */
-.lx { --lx-sand: #F4ECE0; --lx-sand-2: #EDE2D1; --lx-blush: #F1C8C0; --lx-aqua: #93D2CC; --lx-aqua-2: #6FBFB8; --lx-peach: #F3B48A; --lx-ink: #1C1A1F; --lx-ink-soft: rgba(28,26,31,0.66); --lx-line: rgba(28,26,31,0.14); color: var(--lx-ink); }
+/* palette supplied by the client: cream, dark green, coral, sky blue */
+.lx { --lx-sand: #FDEEDB; --lx-sand-2: #F8E3CA; --lx-blush: #95DAF7; --lx-aqua: #2E5340; --lx-aqua-2: #1C3626; --lx-peach: #DF9A87; --lx-peach-2: #D47C78; --lx-ink: #1C3626; --lx-ink-soft: rgba(28,54,38,0.7); --lx-line: rgba(28,54,38,0.16); color: var(--lx-ink); }
 .lx .container { position: relative; z-index: 1; }
 .lx-serif { font-family: var(--font-serif); font-weight: 400; letter-spacing: -0.015em; }
 .lx-mono { font-family: var(--font-mono); font-size: 11px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; }
 
 /* hero */
 .lx-hero { position: relative; overflow: hidden; background: var(--lx-sand); padding: 88px 0 72px; min-height: 86vh; display: flex; align-items: center; }
-.lx-sun { position: absolute; right: -8vw; top: -14vw; width: 44vw; height: 44vw; min-width: 420px; min-height: 420px; border-radius: 50%; background: var(--lx-peach); opacity: 0.9; }
-.lx-sun::after { content: ''; position: absolute; inset: 26px; border-radius: 50%; border: 1px solid rgba(28,26,31,0.12); }
+.lx-sun { position: absolute; right: -8vw; top: -14vw; width: 44vw; height: 44vw; min-width: 420px; min-height: 420px; border-radius: 50%; background: var(--lx-peach); }
+.lx-sun::after { content: ''; position: absolute; inset: 26px; border-radius: 50%; border: 1px solid var(--lx-peach-2); }
 .lx-bands { position: absolute; left: 0; right: 0; bottom: 0; height: 34%; pointer-events: none; }
 .lx-bands span { position: absolute; left: 0; right: 0; height: 1px; background: var(--lx-ink); opacity: 0.12; }
 .lx-bands span:nth-child(1){ bottom: 76%; } .lx-bands span:nth-child(2){ bottom: 62%; } .lx-bands span:nth-child(3){ bottom: 50%; } .lx-bands span:nth-child(4){ bottom: 40%; } .lx-bands span:nth-child(5){ bottom: 32%; } .lx-bands span:nth-child(6){ bottom: 26%; }
@@ -10250,15 +10251,17 @@ main[data-vertical] .tm-day-time { color: color-mix(in srgb, var(--v-accent) 80%
 .lx-hero .hero-cta { justify-content: center; margin: 0; gap: 12px; }
 .lx-btn { display: inline-flex; align-items: center; gap: 10px; padding: 16px 28px; border-radius: 100px; font-weight: 600; font-size: 15px; text-decoration: none; transition: transform .2s ease, background .2s ease; }
 .lx-btn-ink { background: var(--lx-ink); color: #fff; }
-.lx-btn-ink:hover { transform: translateY(-2px); background: #000; }
+.lx-btn-ink:hover { transform: translateY(-2px); background: #142A1D; }
 .lx-btn-line { border: 1px solid var(--lx-ink); color: var(--lx-ink); }
-.lx-btn-line:hover { background: rgba(28,26,31,0.06); }
+.lx-btn-line:hover { background: rgba(28,54,38,0.07); }
+.lx-btn-cream { background: var(--lx-sand); color: var(--lx-ink); }
+.lx-btn-cream:hover { transform: translateY(-2px); background: #fff; }
 
 /* marquee */
 .lx-marquee { background: var(--lx-ink); color: var(--lx-sand); overflow: hidden; padding: 14px 0; white-space: nowrap; }
 .lx-marquee-track { display: inline-flex; gap: 48px; animation: lx-scroll 38s linear infinite; will-change: transform; }
 .lx-marquee-track span { display: inline-flex; align-items: center; gap: 48px; }
-.lx-marquee-track i { display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--lx-aqua); }
+.lx-marquee-track i { display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--lx-blush); }
 @keyframes lx-scroll { to { transform: translateX(-50%); } }
 @media (prefers-reduced-motion: reduce) { .lx-marquee-track { animation: none; } }
 
@@ -10270,7 +10273,7 @@ main[data-vertical] .tm-day-time { color: color-mix(in srgb, var(--v-accent) 80%
 .lx-drop figure { margin: 0; position: relative; }
 .lx-drop figure img { display: block; width: 100%; height: auto; border-radius: 4px; }
 .lx-drop figcaption { margin-top: 12px; color: var(--lx-ink-soft); display: flex; justify-content: space-between; }
-.lx-drop figure::before { content: ''; position: absolute; inset: 14px -14px -14px 14px; border: 1px solid rgba(28,26,31,0.25); border-radius: 4px; pointer-events: none; }
+.lx-drop figure::before { content: ''; position: absolute; inset: 14px -14px -14px 14px; border: 1px solid rgba(28,54,38,0.35); border-radius: 4px; pointer-events: none; }
 
 /* the collection */
 .lx-coll { background: var(--lx-sand); padding: 110px 0; }
@@ -10287,13 +10290,13 @@ main[data-vertical] .tm-day-time { color: color-mix(in srgb, var(--v-accent) 80%
 .lx-item:hover .lx-go { background: var(--lx-ink); color: #fff; }
 
 /* the list */
-.lx-list { background: var(--lx-aqua); padding: 110px 0; }
+.lx-list { background: var(--lx-aqua); color: var(--lx-sand); padding: 110px 0; }
 .lx-list-inner { max-width: 760px; margin: 0 auto; text-align: center; }
 .lx-list h2 { font-size: clamp(40px, 5.6vw, 76px); line-height: 1; margin: 14px 0 20px; }
-.lx-list p { font-size: 17px; line-height: 1.65; color: rgba(28,26,31,0.72); margin: 0 auto 36px; max-width: 560px; }
-.lx-list .apply-formwrap { background: var(--lx-sand); border-color: rgba(28,26,31,0.15); text-align: left; }
+.lx-list p { font-size: 17px; line-height: 1.65; color: rgba(253,238,219,0.78); margin: 0 auto 36px; max-width: 560px; }
+.lx-list .apply-formwrap { background: var(--lx-sand); border-color: rgba(253,238,219,0.25); text-align: left; color: var(--lx-ink); }
 .lx-list .hero-cta { justify-content: center; margin: 0; }
-.lx-list-perks { display: flex; justify-content: center; gap: 28px; flex-wrap: wrap; margin-top: 28px; color: rgba(28,26,31,0.72); }
+.lx-list-perks { display: flex; justify-content: center; gap: 28px; flex-wrap: wrap; margin-top: 28px; color: rgba(253,238,219,0.78); }
 .lx-list-perks span { display: inline-flex; align-items: center; gap: 8px; font-size: 13.5px; }
 .lx-list-perks i { font-size: 16px; }
 
