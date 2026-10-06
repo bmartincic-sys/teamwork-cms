@@ -21,6 +21,17 @@
      Note it only intercepts scripts. Stylesheets (<link>) and iframes are not covered,
      so third-party CSS and video embeds still have to be handled in the markup. -->
 <script src="https://cmp.osano.com/169lWRSfbjfGi1iTF/bd7c56a3-144c-425f-9298-235bf64c29eb/osano.js"></script>
+
+<!-- Tracking carried over from the old site, declared after Osano so the CMP gates them.
+     The ZoomInfo pixel is not here yet: its ID lives in the ZoomInfo WebSights settings and
+     could not be read from the old page. Add it below the HubSpot loader when supplied. -->
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NG5K5G2');</script>
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BW8J2SFG0J"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-BW8J2SFG0J');</script>
+<!-- HubSpot tracking -->
+<script async defer id="hs-script-loader" src="https://js.hs-scripts.com/50295934.js"></script>
 {% if "Teamwork Commerce" in title %}{% set pageTitle = title %}{% else %}{% set pageTitle = title + " | Teamwork Commerce" %}{% endif %}
 <title>{{ pageTitle }}</title>
 <meta name="description" content="{{ description }}">
@@ -205,6 +216,8 @@
 {% endif %}
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NG5K5G2" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 {% include "locale-banner.njk" %}
 
