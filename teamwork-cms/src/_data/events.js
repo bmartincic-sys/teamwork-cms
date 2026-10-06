@@ -61,7 +61,6 @@ const EVENTS = [
     photo: "nrf-europe-2026.webp",
     photoPosition: "50% 30%", // portrait photo; keep the faces in the 4:3 crop
     ref: "nrf-europe-2026",
-    link: "https://www.teamworkcommerce.com/nrf-europe-2026/",
   },
 
   // ---------- 2026 ----------
@@ -119,7 +118,6 @@ const EVENTS = [
     standLabel: "Booth",
     stand: "#2370",
     photo: "shoptalk-2026.webp",
-    link: "https://www.teamworkcommerce.com/shoptalk-2026/",
     body: "Booth #2370 was busy, and for good reason. We showcased the full Teamwork Commerce stack and came away with one clear takeaway: unified commerce isn't the future. It's the expectation.",
   },
   {
@@ -146,7 +144,6 @@ const EVENTS = [
     country: "UAE",
     region: "Middle East",
     photo: "shoptalk-luxe-2026.webp",
-    link: "https://www.teamworkcommerce.com/shoptalk-luxe-2026/",
     body: "Luxury retail's own gathering, at the Emirates Palace in Abu Dhabi. Clienteling, RFID accuracy and the kind of service standards luxury houses hold themselves to were the whole conversation.",
   },
   {
@@ -161,7 +158,6 @@ const EVENTS = [
     standLabel: "Booth",
     stand: "#5957",
     photo: "nrf-2026.webp",
-    link: "https://www.teamworkcommerce.com/nrf-2026/",
     body: "Retail's biggest stage delivered. Booth #5957 was where enterprise POS, RFID, AI, and omnichannel OMS came to life in front of retail leaders from across the globe. If you were there, you know. If you missed us, we're back at Booth #6156 in January 2027.",
   },
 
@@ -178,7 +174,6 @@ const EVENTS = [
     standLabel: "Stand",
     stand: "D95",
     photo: "tech-for-retail-2025.webp",
-    link: "https://www.teamworkcommerce.com/tech-for-retail-2025/",
     body: "The European retail exhibition, spanning fashion, luxury, e-commerce and consumer goods. We took Stand D95 in Hall 4 and ran guided walkthroughs of the platform across all of it.",
   },
   {
@@ -191,7 +186,6 @@ const EVENTS = [
     country: "Italy",
     region: "Europe",
     photo: "forum-retail-2025.webp",
-    link: "https://www.teamworkcommerce.com/forum-retail/",
     body: "The 25th edition of Italy's largest retail innovation and networking event, organized by iKN. Two days of keynotes, panels and hubs with the CEOs and innovators shaping Italian retail.",
   },
   {
@@ -218,7 +212,6 @@ const EVENTS = [
     country: "USA",
     region: "North America",
     photo: "shoptalk-fall-2025.webp",
-    link: "https://www.teamworkcommerce.com/shoptalk-fall-2025/",
     body: "Shoptalk's autumn edition, in Chicago. Three days on how retailers are actually operating rather than how they plan to, which is the conversation we came for.",
   },
   {
@@ -231,7 +224,6 @@ const EVENTS = [
     country: "France",
     region: "Europe",
     photo: "viva-technology-2025.webp",
-    link: "https://www.teamworkcommerce.com/viva-technology-2025/",
     body: "Europe's largest technology event, well beyond retail. A useful place to talk about where AI in the store is real and where it is still a demo.",
   },
   {
@@ -243,7 +235,6 @@ const EVENTS = [
     country: "USA",
     region: "North America",
     photo: "future-stores-2025.webp",
-    link: "https://www.teamworkcommerce.com/future-stores-2025/",
     body: "Two days on the store as a launchpad for community engagement, and on staffing it for interactions that actually matter. Exactly the ground our associate tooling is built for.",
   },
   {
@@ -256,7 +247,6 @@ const EVENTS = [
     country: "Spain",
     region: "Europe",
     photo: "shoptalk-europe-2025.webp",
-    link: "https://www.teamworkcommerce.com/shoptalk-eu-2025/",
     body: "Our first Shoptalk Europe at the Fira Gran Via, showing enterprise POS and OMS alongside RFID-powered self-checkout to European retailers rethinking their stacks.",
   },
   {
@@ -271,7 +261,6 @@ const EVENTS = [
     standLabel: "Booth",
     stand: "#D46",
     photo: "netcomm-forum-2025.webp",
-    link: "https://www.teamworkcommerce.com/netcomm-forum-2025/",
     body: "Italy's leading digital commerce forum, at Booth #D46. We ran the platform in Italian on the stand, which tends to end the localization conversation quickly.",
   },
   {
@@ -286,7 +275,6 @@ const EVENTS = [
     standLabel: "Booth",
     stand: "#R20",
     photo: "retail-technology-show-2025.webp",
-    link: "https://www.teamworkcommerce.com/retail-technology-show-2025/",
     body: "Connecting retail's change-makers in London. We were at Booth #R20 with our full cloud-based tech stack: POS, OMS, Clienteling, Inventory Control, and Reporting, built for retailers who need a platform that keeps up with them.",
   },
   {
@@ -301,7 +289,6 @@ const EVENTS = [
     standLabel: "Booth",
     stand: "#1151",
     photo: "shoptalk-2025.webp",
-    link: "https://www.teamworkcommerce.com/shoptalk-2025/",
     body: "Booth #1151, three days, and a lot of conversations about replacing systems that no longer fit. Shoptalk remains the fastest way to read where US retail is heading.",
   },
   {
@@ -316,7 +303,6 @@ const EVENTS = [
     standLabel: "Stand",
     stand: "Hall 10 / E24",
     photo: "eurocis-2025.webp",
-    link: "https://www.teamworkcommerce.com/eurocis-2025/",
     body: "Europe's leading retail technology trade fair. Hall 10, Stand E24, and a steady stream of German and Benelux retailers asking hard questions about fiscal compliance. Our favorite kind.",
   },
 ];

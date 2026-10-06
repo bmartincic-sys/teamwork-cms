@@ -1,0 +1,42 @@
+---
+layout: "solution.njk"
+title: "Page not found"
+description: "That page isn't here. Try the platform, the industry solutions, or the blog."
+permalink: "/404.html"
+eleventyExcludeFromCollections: true
+---
+{#- Netlify serves /404.html for any path that has no page and no redirect. The old
+    WordPress URLs are covered by src/_redirects, so this is for genuinely dead links. -#}
+<section class="section" style="padding: 96px 0 72px;">
+  <div class="container" style="max-width: 760px; text-align: center;">
+    <span class="eyebrow"><span class="eyebrow-dot"></span> 404</span>
+    <h1 style="font-size: clamp(36px, 5vw, 58px); font-weight: 600; letter-spacing: -0.04em; line-height: 1.04; margin: 18px 0 16px;">That page isn't here.</h1>
+    <p style="font-size: 17px; line-height: 1.7; color: var(--text-muted); margin: 0 auto 32px; max-width: 520px;">The link may be out of date, or the page has moved. The platform, the industry solutions and the blog are all one click away.</p>
+    <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+      <a href="/" class="btn btn-primary btn-lg">Go to the homepage <i class="ti ti-arrow-right"></i></a>
+      <a href="/blog/" class="btn btn-ghost btn-lg">Browse the blog</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top: 0;">
+  <div class="container">
+    <div class="mini-grid">
+      <a class="mini-card" href="/platform/mobile-pos/">
+        <div class="mini-ico"><i class="ti ti-device-mobile"></i></div>
+        <h3>The platform</h3>
+        <p>Point of sale, order management, inventory, RFID and the data underneath them.</p>
+      </a>
+      <a class="mini-card" href="/solutions/fashion-apparel/">
+        <div class="mini-ico"><i class="ti ti-building-store"></i></div>
+        <h3>By industry</h3>
+        <p>Fashion and footwear, luxury and jewelry, museums, pet goods, stadiums and venues.</p>
+      </a>
+      <a class="mini-card" href="/contact/">
+        <div class="mini-ico"><i class="ti ti-mail-fast"></i></div>
+        <h3>Talk to us</h3>
+        <p>Looking for something specific? Tell us what you were after and we'll point you to it.</p>
+      </a>
+    </div>
+  </div>
+</section>

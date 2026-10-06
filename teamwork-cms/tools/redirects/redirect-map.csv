@@ -524,3 +524,9 @@ old_path,new_path,rule,note
 /partner-retail-safari-event/,/events/,page mapped,
 /treet-event-follow-up/,/events/,page mapped,
 /one-unified-tech-stack/,/platform/integrations/,page mapped,
+/ecommerce/,/,page mapped,linked from old posts; the old site itself redirected it to the homepage
+/rfid-solutions/,/platform/rfid/,page mapped,linked from old posts; old site redirected it to /rfid-solutions-self-checkout/
+/crm-suite/,/features/customer-data/,page mapped,linked from old posts; old site redirected it to /secure-crm/
+/reques-a-demo/,/demo/,page mapped,misspelled demo link in old posts
+/nrf-2024/,/blog/nrf-2024-key-trends-to-keep-an-eye-on/,page mapped,linked from old posts; old site redirected it to the NRF 2024 trends post
+/nrf-2022/,/events/,page mapped,linked from old posts; old site redirected it to /nrf/
