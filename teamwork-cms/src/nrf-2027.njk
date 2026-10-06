@@ -1,0 +1,142 @@
+---
+layout: "solution.njk"
+title: "NRF 2027: Meet Teamwork Commerce at Booth #6156"
+description: "Teamwork Commerce at NRF 2027, Retail's Big Show, January 10 to 12 at the Javits Center in New York. Booth #6156, a brand-new booth, and live demos of RFID self-checkout, mobile POS with Tap to Pay on iPhone, and the AI assistant on the associate's handheld. Book a meeting before the floor opens."
+navLabel: "NRF 2027"
+permalink: "/nrf-2027/"
+stickyText: "Booth meeting slots go fast once the floor opens."
+stickyCta: "Book a meeting"
+stickyHref: "#meet"
+# HubSpot form for this page. Leave empty and the meeting section shows a button to
+# the demo form instead; paste the form ID here and the live embed takes over.
+nrfFormId: ""
+---
+{% set ev = false %}
+{% for e in events.upcoming %}{% if e.ref == "nrf-2027" %}{% set ev = e %}{% endif %}{% endfor %}
+
+<!-- Breadcrumb -->
+<div class="container">
+  <nav class="breadcrumb" aria-label="Breadcrumb" style="padding: 16px 0; font-size: 12px; color: var(--text-faint);">
+    <a href="/" style="color: var(--text-muted);">Home</a> <span style="margin: 0 6px;">/</span>
+    <a href="/events/" style="color: var(--text-muted);">Events</a> <span style="margin: 0 6px;">/</span>
+    NRF 2027
+  </nav>
+</div>
+
+<!-- ============ HERO: same split as /events/, last year's booth as the picture ============ -->
+<section class="hero evhero">
+  <div class="hero-bg"></div>
+  <div class="hero-glow"></div>
+
+  <div class="container evhero-grid">
+    <div class="evhero-copy fade-up">
+      <span class="eyebrow"><span class="eyebrow-dot"></span> NRF 2027 · Retail's Big Show</span>
+      <h1 class="evhero-title">New York in January. Booth #6156.</h1>
+      <p class="evhero-sub">We're back at the Javits Center January 10 to 12 with a brand-new booth. The subway concept that filled Point of Sale Avenue in 2026 has a successor, and it stays under wraps until the doors open. What's inside it doesn't: RFID self-checkout, mobile POS with Tap to Pay on iPhone, and the AI assistant on the associate's handheld, all running live.</p>
+      <div class="hero-cta">
+        <a href="#meet" class="btn btn-primary btn-lg">Book a meeting at the booth <i class="ti ti-arrow-right"></i></a>
+        <a href="#show" class="btn btn-ghost btn-lg">What's on show</a>
+      </div>
+    </div>
+
+    <div class="evhero-media fade-up" style="animation-delay: 0.15s;">
+      <img src="/assets/images/company/life/nrf-booth-team.webp" alt="The Teamwork Commerce team in front of the 2026 booth, with the Point of Sale Avenue arch, AI Solutions and self-checkout displays behind them" width="1800" height="1350">
+      <span class="evhero-tag"><i class="ti ti-map-pin"></i> NRF 2026 · The booth we're following up</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AT A GLANCE ============ -->
+<section class="ac-blue section" id="details">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">The Details</div>
+      <h2 class="section-title">Where and when to find us.</h2>
+    </div>
+
+    <div class="cfu-next">
+      <article class="cfu-card">
+        <div class="cfu-rail">
+          <div class="cfu-cal" aria-hidden="true">
+            <span class="cfu-cal-mon">{{ ev.monthShort if ev else "Jan" }}</span>
+            <span class="cfu-cal-day">{{ ev.dayRange if ev else "10–12" }}</span>
+            <span class="cfu-cal-yr">{{ ev.year if ev else "2027" }}</span>
+          </div>
+          <div class="cfu-stand">
+            <span class="cfu-stand-lab">Booth</span>
+            <span class="cfu-stand-no">{{ ev.stand if ev else "#6156" }}</span>
+          </div>
+        </div>
+
+        <div class="cfu-main">
+          <div class="cfu-top">
+            <h3 class="cfu-name">NRF 2027: Retail's Big Show</h3>
+            <div class="cfu-facts">
+              <span class="cfu-fact"><i class="ti ti-calendar-event"></i> {{ ev.dateLabel if ev else "January 10–12, 2027" }}</span>
+              <span class="cfu-fact"><i class="ti ti-map-pin"></i> <span>Jacob K. Javits Convention Center &middot; New York City, <b class="cfu-country">USA</b></span></span>
+              <span class="cfu-fact"><i class="ti ti-world"></i> North America</span>
+            </div>
+          </div>
+
+          <h4 class="cfu-headline">A brand-new booth, and the team that runs the platform.</h4>
+          <p class="cfu-body">Booth #6156 is where you'll find us for all three days. Product specialists, the people who run implementations, and the engineers behind the platform are on the stand, so the conversation you start on the floor can go as deep as you need it to. Meeting slots are held in advance; walk-ups are welcome whenever the stand is free.</p>
+          <a href="#meet" class="btn btn-primary">Hold a time at the booth <i class="ti ti-arrow-right"></i></a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHAT'S ON SHOW ============ -->
+<section class="section" id="show">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">On the Stand</div>
+      <h2 class="section-title">Three things you can put your hands on.</h2>
+      <p class="section-sub">Everything on the booth runs on the live platform, not a demo build. Bring the questions you'd ask on your own floor.</p>
+    </div>
+
+    <div class="pillars-grid" style="grid-template-columns: repeat(3, 1fr);">
+      <a href="/platform/rfid/" class="pillar-card" style="text-decoration: none;">
+        <div class="pillar-ico"><i class="ti ti-scan"></i></div>
+        <h3 class="pillar-title">RFID self-checkout</h3>
+        <p class="pillar-desc">Drop a basket, every tag reads at once, pay and go. The same doors from the 2026 booth, with the counting and inventory side you don't see from the front.</p>
+        <span class="pillar-link">See the RFID solution <i class="ti ti-arrow-right"></i></span>
+      </a>
+      <a href="/platform/mobile-pos/" class="pillar-card" style="text-decoration: none;">
+        <div class="pillar-ico"><i class="ti ti-device-mobile"></i></div>
+        <h3 class="pillar-title">Mobile POS with Tap to Pay on iPhone</h3>
+        <p class="pillar-desc">A full register on the associate's handheld, taking contactless payment on the device itself. Sell anywhere on the floor, the line never forms.</p>
+        <span class="pillar-link">See mobile POS <i class="ti ti-arrow-right"></i></span>
+      </a>
+      <a href="/features/customer-data/" class="pillar-card" style="text-decoration: none;">
+        <div class="pillar-ico"><i class="ti ti-sparkles"></i></div>
+        <h3 class="pillar-title">The AI assistant on the handheld</h3>
+        <p class="pillar-desc">Describe what the customer wants in plain language, or scan a tag, and get an answer with pictures in seconds, on the same device the associate sells from. Try it on the stand.</p>
+        <span class="pillar-link">See clienteling <i class="ti ti-arrow-right"></i></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BOOK A MEETING ============ -->
+<section class="ac-purple sunk section" id="meet">
+  <div class="container">
+    <div class="section-header" style="text-align: center;">
+      <div class="section-eyebrow">Book a Meeting</div>
+      <h2 class="section-title">Hold a time at Booth #6156.</h2>
+      <p class="section-sub">Leave your details and we'll hold a slot with the right people for what you want to see. We'll also keep you in the loop as the booth details drop, and nothing else: no list sharing, no third parties.</p>
+    </div>
+    {% if nrfFormId %}
+    <div class="apply-formwrap is-embed">
+      <script src="https://js.hsforms.net/forms/embed/50295934.js" defer></script>
+      <div class="hs-form-frame" data-region="na1" data-form-id="{{ nrfFormId }}" data-portal-id="50295934"></div>
+    </div>
+    {% else %}
+    <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+      <a href="/demo/?ref=nrf-2027" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Book a meeting at the booth <i class="ti ti-arrow-right"></i></a>
+      <a href="/events/" class="btn btn-ghost btn-lg">All upcoming events</a>
+    </div>
+    {% endif %}
+  </div>
+</section>

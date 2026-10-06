@@ -36,9 +36,10 @@ const EVENTS = [
     standLabel: "Booth",
     stand: "#6156",
     headline: "New York in January. We wouldn't miss it.",
-    body: "We're heading back to the Javits Center for NRF 2027. Find us at Booth #6156. More details on what we'll be showcasing are coming soon. Drop us your details and we'll keep you in the loop.",
-    cta: "Save my spot",
+    body: "We're heading back to the Javits Center for NRF 2027 with a brand-new booth. Find us at Booth #6156 for RFID self-checkout, mobile POS with Tap to Pay on iPhone, and the AI assistant on the associate's handheld, all running live. Hold a time before the floor opens.",
+    cta: "See the booth plan",
     ref: "nrf-2027",
+    page: "/nrf-2027/", // event landing page on this site; the card links here instead of /demo/
   },
   {
     name: "NRF 2026: Retail's Big Show Europe",
