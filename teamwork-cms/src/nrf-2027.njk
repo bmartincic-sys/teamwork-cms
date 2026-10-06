@@ -1,142 +1,221 @@
 ---
 layout: "solution.njk"
-title: "NRF 2027: Meet Teamwork Commerce at Booth #6156"
-description: "Teamwork Commerce at NRF 2027, Retail's Big Show, January 10 to 12 at the Javits Center in New York. Booth #6156, a brand-new booth, and live demos of RFID self-checkout, mobile POS with Tap to Pay on iPhone, and the AI assistant on the associate's handheld. Book a meeting before the floor opens."
+title: "NRF 2027: Something New at Booth #6156"
+description: "Teamwork Commerce is revealing a brand-new booth at NRF 2027, Retail's Big Show, January 10 to 12 at the Javits Center in New York. Get on the list for a first look, a held meeting slot at Booth #6156, and live demos of RFID self-checkout, mobile POS with Tap to Pay on iPhone, and the AI assistant on the associate's handheld."
 navLabel: "NRF 2027"
 permalink: "/nrf-2027/"
-stickyText: "Booth meeting slots go fast once the floor opens."
-stickyCta: "Book a meeting"
-stickyHref: "#meet"
-# HubSpot form for this page. Leave empty and the meeting section shows a button to
-# the demo form instead; paste the form ID here and the live embed takes over.
+stickyText: "The list closes when the doors open. Booth #6156."
+stickyCta: "Get on the list"
+stickyHref: "#list"
+# HubSpot form for this page. Leave empty and the list section shows a button to the
+# demo form instead; paste the form ID here and the live embed takes over.
 nrfFormId: ""
+# The countdown counts to the first day of the show, Eastern time.
+revealAt: "2027-01-10T00:00:00-05:00"
 ---
-{% set ev = false %}
-{% for e in events.upcoming %}{% if e.ref == "nrf-2027" %}{% set ev = e %}{% endif %}{% endfor %}
+<div class="lx">
 
-<!-- Breadcrumb -->
-<div class="container">
-  <nav class="breadcrumb" aria-label="Breadcrumb" style="padding: 16px 0; font-size: 12px; color: var(--text-faint);">
-    <a href="/" style="color: var(--text-muted);">Home</a> <span style="margin: 0 6px;">/</span>
-    <a href="/events/" style="color: var(--text-muted);">Events</a> <span style="margin: 0 6px;">/</span>
-    NRF 2027
-  </nav>
-</div>
+<!-- ============ HERO: the reveal ============ -->
+<section class="lx-hero" aria-labelledby="lx-title">
+  <div class="lx-sun" aria-hidden="true"></div>
+  <svg class="lx-palm" viewBox="-120 -120 900 760" aria-hidden="true" focusable="false">
+    <path d="M40 520 L66 496 L93 472 L119 448 L146 425 L174 401 L201 378 L229 354 L258 331 L286 308 L315 285 L344 262 L374 239 L403 216 L433 194 L464 171 L494 149 L525 126 L557 104 L588 82 L620 60" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round"/>
+    <path d="M93 472 Q91 396 51 300 Q60 404 93 472Z"/>
+    <path d="M93 472 Q154 507 249 518 Q163 476 93 472Z"/>
+    <path d="M119 448 Q108 368 57 269 Q78 378 119 448Z"/>
+    <path d="M119 448 Q181 492 280 516 Q193 462 119 448Z"/>
+    <path d="M146 425 Q143 338 102 227 Q112 345 146 425Z"/>
+    <path d="M146 425 Q216 463 324 480 Q226 433 146 425Z"/>
+    <path d="M174 401 Q161 310 106 197 Q130 321 174 401Z"/>
+    <path d="M174 401 Q243 449 355 481 Q256 420 174 401Z"/>
+    <path d="M201 378 Q197 281 155 155 Q166 288 201 378Z"/>
+    <path d="M201 378 Q280 420 400 443 Q290 390 201 378Z"/>
+    <path d="M229 354 Q214 253 157 126 Q184 263 229 354Z"/>
+    <path d="M229 354 Q307 408 430 446 Q320 378 229 354Z"/>
+    <path d="M258 331 Q253 224 209 83 Q222 230 258 331Z"/>
+    <path d="M258 331 Q345 378 477 407 Q355 348 258 331Z"/>
+    <path d="M286 308 Q270 197 210 54 Q239 206 286 308Z"/>
+    <path d="M286 308 Q372 366 506 413 Q386 337 286 308Z"/>
+    <path d="M315 285 Q310 167 266 12 Q279 173 315 285Z"/>
+    <path d="M315 285 Q410 336 555 371 Q421 306 315 285Z"/>
+    <path d="M344 262 Q326 140 265 -17 Q296 149 344 262Z"/>
+    <path d="M344 262 Q438 326 584 380 Q452 297 344 262Z"/>
+    <path d="M374 239 Q370 122 328 -35 Q339 127 374 239Z"/>
+    <path d="M374 239 Q468 292 613 329 Q480 262 374 239Z"/>
+    <path d="M403 216 Q390 105 335 -40 Q359 113 403 216Z"/>
+    <path d="M403 216 Q487 277 621 327 Q502 249 403 216Z"/>
+    <path d="M433 194 Q433 87 396 -56 Q402 91 433 194Z"/>
+    <path d="M433 194 Q518 244 650 279 Q530 214 433 194Z"/>
+    <path d="M464 171 Q454 70 405 -61 Q423 77 464 171Z"/>
+    <path d="M464 171 Q538 229 659 274 Q553 200 464 171Z"/>
+    <path d="M494 149 Q497 52 463 -77 Q466 56 494 149Z"/>
+    <path d="M494 149 Q570 197 688 228 Q582 167 494 149Z"/>
+    <path d="M525 126 Q520 35 475 -83 Q489 42 525 126Z"/>
+    <path d="M525 126 Q591 180 699 221 Q606 152 525 126Z"/>
+    <path d="M557 104 Q562 18 532 -97 Q530 22 557 104Z"/>
+    <path d="M557 104 Q622 149 728 177 Q635 120 557 104Z"/>
+    <path d="M588 82 Q586 1 546 -103 Q555 8 588 82Z"/>
+    <path d="M588 82 Q644 132 741 168 Q660 104 588 82Z"/>
+  </svg>
 
-<!-- ============ HERO: same split as /events/, last year's booth as the picture ============ -->
-<section class="hero evhero">
-  <div class="hero-bg"></div>
-  <div class="hero-glow"></div>
+  <div class="container">
+    <div class="lx-hero-inner">
+      <div class="lx-eyebrow lx-mono">NRF 2027 &middot; New York &middot; Booth #6156</div>
+      <h1 class="lx-h1 lx-serif" id="lx-title">Something new is coming to the <em>show floor.</em></h1>
+      <p class="lx-sub">A brand-new booth, revealed when the doors open on January 10. The 2026 booth filled an avenue. This one has somewhere else to take you.</p>
 
-  <div class="container evhero-grid">
-    <div class="evhero-copy fade-up">
-      <span class="eyebrow"><span class="eyebrow-dot"></span> NRF 2027 · Retail's Big Show</span>
-      <h1 class="evhero-title">New York in January. Booth #6156.</h1>
-      <p class="evhero-sub">We're back at the Javits Center January 10 to 12 with a brand-new booth. The subway concept that filled Point of Sale Avenue in 2026 has a successor, and it stays under wraps until the doors open. What's inside it doesn't: RFID self-checkout, mobile POS with Tap to Pay on iPhone, and the AI assistant on the associate's handheld, all running live.</p>
+      <div class="lx-count" id="lxCount" data-reveal="{{ revealAt }}" aria-live="polite">
+        <div><b data-d>--</b><span class="lx-mono">Days</span></div>
+        <div><b data-h>--</b><span class="lx-mono">Hours</span></div>
+        <div><b data-m>--</b><span class="lx-mono">Minutes</span></div>
+        <div><b data-s>--</b><span class="lx-mono">Seconds</span></div>
+      </div>
+      <p class="lx-count-note lx-mono" id="lxCountNote">Until the reveal</p>
+
       <div class="hero-cta">
-        <a href="#meet" class="btn btn-primary btn-lg">Book a meeting at the booth <i class="ti ti-arrow-right"></i></a>
-        <a href="#show" class="btn btn-ghost btn-lg">What's on show</a>
+        <a href="#list" class="lx-btn lx-btn-ink">Get on the list <i class="ti ti-arrow-right"></i></a>
+        <a href="#collection" class="lx-btn lx-btn-line">What's dropping</a>
       </div>
     </div>
-
-    <div class="evhero-media fade-up" style="animation-delay: 0.15s;">
-      <img src="/assets/images/company/life/nrf-booth-team.webp" alt="The Teamwork Commerce team in front of the 2026 booth, with the Point of Sale Avenue arch, AI Solutions and self-checkout displays behind them" width="1800" height="1350">
-      <span class="evhero-tag"><i class="ti ti-map-pin"></i> NRF 2026 · The booth we're following up</span>
-    </div>
   </div>
 </section>
 
-<!-- ============ AT A GLANCE ============ -->
-<section class="ac-blue section" id="details">
+<!-- ============ MARQUEE ============ -->
+<div class="lx-marquee lx-mono" aria-hidden="true">
+  <div class="lx-marquee-track">
+    <span>A brand-new booth <i></i> Revealed January 10 <i></i> NRF 2027 <i></i> Javits Center, New York <i></i> Booth #6156 <i></i></span>
+    <span>A brand-new booth <i></i> Revealed January 10 <i></i> NRF 2027 <i></i> Javits Center, New York <i></i> Booth #6156 <i></i></span>
+  </div>
+</div>
+
+<!-- ============ THE TEASE ============ -->
+<section class="lx-drop">
   <div class="container">
-    <div class="section-header">
-      <div class="section-eyebrow">The Details</div>
-      <h2 class="section-title">Where and when to find us.</h2>
-    </div>
-
-    <div class="cfu-next">
-      <article class="cfu-card">
-        <div class="cfu-rail">
-          <div class="cfu-cal" aria-hidden="true">
-            <span class="cfu-cal-mon">{{ ev.monthShort if ev else "Jan" }}</span>
-            <span class="cfu-cal-day">{{ ev.dayRange if ev else "10–12" }}</span>
-            <span class="cfu-cal-yr">{{ ev.year if ev else "2027" }}</span>
-          </div>
-          <div class="cfu-stand">
-            <span class="cfu-stand-lab">Booth</span>
-            <span class="cfu-stand-no">{{ ev.stand if ev else "#6156" }}</span>
-          </div>
-        </div>
-
-        <div class="cfu-main">
-          <div class="cfu-top">
-            <h3 class="cfu-name">NRF 2027: Retail's Big Show</h3>
-            <div class="cfu-facts">
-              <span class="cfu-fact"><i class="ti ti-calendar-event"></i> {{ ev.dateLabel if ev else "January 10–12, 2027" }}</span>
-              <span class="cfu-fact"><i class="ti ti-map-pin"></i> <span>Jacob K. Javits Convention Center &middot; New York City, <b class="cfu-country">USA</b></span></span>
-              <span class="cfu-fact"><i class="ti ti-world"></i> North America</span>
-            </div>
-          </div>
-
-          <h4 class="cfu-headline">A brand-new booth, and the team that runs the platform.</h4>
-          <p class="cfu-body">Booth #6156 is where you'll find us for all three days. Product specialists, the people who run implementations, and the engineers behind the platform are on the stand, so the conversation you start on the floor can go as deep as you need it to. Meeting slots are held in advance; walk-ups are welcome whenever the stand is free.</p>
-          <a href="#meet" class="btn btn-primary">Hold a time at the booth <i class="ti ti-arrow-right"></i></a>
-        </div>
-      </article>
+    <div class="lx-drop-grid">
+      <div>
+        <div class="lx-mono">Last season</div>
+        <h2 class="lx-serif">The 2026 booth filled an avenue. The 2027 booth has somewhere new to take you.</h2>
+        <p>Point of Sale Avenue put a subway platform in the middle of the Javits Center: AI solutions down one side, self-checkout doors down the other, and a queue of retailers under the arch all week. We're not repeating it. We're following it. What comes next stays under wraps until the doors open, and the people on the list see it first.</p>
+      </div>
+      <figure>
+        <img src="/assets/images/company/life/nrf-booth-team.webp" alt="The Teamwork Commerce team in front of the 2026 booth, under the Point of Sale Avenue arch with the AI Solutions and self-checkout displays behind them" width="1800" height="1350" loading="lazy">
+        <figcaption class="lx-mono"><span>NRF 2026</span><span>Point of Sale Avenue</span></figcaption>
+      </figure>
     </div>
   </div>
 </section>
 
-<!-- ============ WHAT'S ON SHOW ============ -->
-<section class="section" id="show">
+<!-- ============ THE COLLECTION ============ -->
+<section class="lx-coll" id="collection">
   <div class="container">
-    <div class="section-header">
-      <div class="section-eyebrow">On the Stand</div>
-      <h2 class="section-title">Three things you can put your hands on.</h2>
-      <p class="section-sub">Everything on the booth runs on the live platform, not a demo build. Bring the questions you'd ask on your own floor.</p>
+    <div class="lx-coll-head">
+      <div>
+        <div class="lx-mono">In the collection</div>
+        <h2 class="lx-serif">Three things you'll put your hands on.</h2>
+      </div>
+      <p>Everything on the booth runs on the live platform. Bring the questions you'd ask on your own floor.</p>
     </div>
 
-    <div class="pillars-grid" style="grid-template-columns: repeat(3, 1fr);">
-      <a href="/platform/rfid/" class="pillar-card" style="text-decoration: none;">
-        <div class="pillar-ico"><i class="ti ti-scan"></i></div>
-        <h3 class="pillar-title">RFID self-checkout</h3>
-        <p class="pillar-desc">Drop a basket, every tag reads at once, pay and go. The same doors from the 2026 booth, with the counting and inventory side you don't see from the front.</p>
-        <span class="pillar-link">See the RFID solution <i class="ti ti-arrow-right"></i></span>
-      </a>
-      <a href="/platform/mobile-pos/" class="pillar-card" style="text-decoration: none;">
-        <div class="pillar-ico"><i class="ti ti-device-mobile"></i></div>
-        <h3 class="pillar-title">Mobile POS with Tap to Pay on iPhone</h3>
-        <p class="pillar-desc">A full register on the associate's handheld, taking contactless payment on the device itself. Sell anywhere on the floor, the line never forms.</p>
-        <span class="pillar-link">See mobile POS <i class="ti ti-arrow-right"></i></span>
-      </a>
-      <a href="/features/customer-data/" class="pillar-card" style="text-decoration: none;">
-        <div class="pillar-ico"><i class="ti ti-sparkles"></i></div>
-        <h3 class="pillar-title">The AI assistant on the handheld</h3>
-        <p class="pillar-desc">Describe what the customer wants in plain language, or scan a tag, and get an answer with pictures in seconds, on the same device the associate sells from. Try it on the stand.</p>
-        <span class="pillar-link">See clienteling <i class="ti ti-arrow-right"></i></span>
-      </a>
-    </div>
+    <a class="lx-item" href="/platform/rfid/">
+      <span class="lx-no">01</span>
+      <div>
+        <h3 class="lx-serif">RFID self-checkout</h3>
+        <p>Drop the basket, every tag reads at once, pay and go. The doors from the 2026 booth, with the counting and inventory side you don't see from the front.</p>
+      </div>
+      <span class="lx-go" aria-hidden="true"><i class="ti ti-arrow-up-right"></i></span>
+    </a>
+    <a class="lx-item" href="/platform/mobile-pos/">
+      <span class="lx-no">02</span>
+      <div>
+        <h3 class="lx-serif">Mobile POS with Tap to Pay on iPhone</h3>
+        <p>A full register on the associate's handheld, taking contactless payment on the device itself. Sell anywhere on the floor, and the line never forms.</p>
+      </div>
+      <span class="lx-go" aria-hidden="true"><i class="ti ti-arrow-up-right"></i></span>
+    </a>
+    <a class="lx-item" href="/features/customer-data/">
+      <span class="lx-no">03</span>
+      <div>
+        <h3 class="lx-serif">The AI assistant on the handheld</h3>
+        <p>Describe what the customer wants in plain language, or scan a tag, and get an answer with pictures in seconds, on the same device the associate sells from.</p>
+      </div>
+      <span class="lx-go" aria-hidden="true"><i class="ti ti-arrow-up-right"></i></span>
+    </a>
   </div>
 </section>
 
-<!-- ============ BOOK A MEETING ============ -->
-<section class="ac-purple sunk section" id="meet">
+<!-- ============ THE LIST ============ -->
+<section class="lx-list" id="list">
   <div class="container">
-    <div class="section-header" style="text-align: center;">
-      <div class="section-eyebrow">Book a Meeting</div>
-      <h2 class="section-title">Hold a time at Booth #6156.</h2>
-      <p class="section-sub">Leave your details and we'll hold a slot with the right people for what you want to see. We'll also keep you in the loop as the booth details drop, and nothing else: no list sharing, no third parties.</p>
+    <div class="lx-list-inner">
+      <div class="lx-mono">The list</div>
+      <h2 class="lx-serif">Get on the list.</h2>
+      <p>A first look at the booth before it opens, a meeting slot held at Booth #6156 with the right people for what you want to see, and the reveal in your inbox the morning of. Nothing else: no list sharing, no third parties.</p>
+      {% if nrfFormId %}
+      <div class="apply-formwrap is-embed">
+        <script src="https://js.hsforms.net/forms/embed/50295934.js" defer></script>
+        <div class="hs-form-frame" data-region="na1" data-form-id="{{ nrfFormId }}" data-portal-id="50295934"></div>
+      </div>
+      {% else %}
+      <div class="hero-cta">
+        <a href="/demo/?ref=nrf-2027" target="_blank" rel="noopener" class="lx-btn lx-btn-ink">Get on the list <i class="ti ti-arrow-right"></i></a>
+      </div>
+      {% endif %}
+      <div class="lx-list-perks">
+        <span><i class="ti ti-eye"></i> First look</span>
+        <span><i class="ti ti-calendar-event"></i> Held meeting slot</span>
+        <span><i class="ti ti-mail-fast"></i> The reveal, the morning of</span>
+      </div>
     </div>
-    {% if nrfFormId %}
-    <div class="apply-formwrap is-embed">
-      <script src="https://js.hsforms.net/forms/embed/50295934.js" defer></script>
-      <div class="hs-form-frame" data-region="na1" data-form-id="{{ nrfFormId }}" data-portal-id="50295934"></div>
-    </div>
-    {% else %}
-    <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
-      <a href="/demo/?ref=nrf-2027" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Book a meeting at the booth <i class="ti ti-arrow-right"></i></a>
-      <a href="/events/" class="btn btn-ghost btn-lg">All upcoming events</a>
-    </div>
-    {% endif %}
   </div>
 </section>
+
+<!-- ============ FACTS ============ -->
+<section class="lx-facts">
+  <div class="container">
+    <div class="lx-facts-grid">
+      <div class="lx-fact">
+        <div class="lx-mono">When</div>
+        <b>January 10–12, 2027</b>
+        <small>Retail's Big Show, three days</small>
+      </div>
+      <div class="lx-fact">
+        <div class="lx-mono">Where</div>
+        <b>Booth #6156</b>
+        <small>Jacob K. Javits Convention Center, New York City</small>
+      </div>
+      <div class="lx-fact">
+        <div class="lx-mono">Can't make it</div>
+        <b><a href="/events/" style="color: inherit; text-decoration: none; border-bottom: 1px solid var(--lx-line);">Every show we're at</a></b>
+        <small>Europe, North America and beyond, all year</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<script>
+(function () {
+  var box = document.getElementById('lxCount');
+  if (!box) return;
+  var note = document.getElementById('lxCountNote');
+  var target = new Date(box.getAttribute('data-reveal')).getTime();
+  var f = { d: box.querySelector('[data-d]'), h: box.querySelector('[data-h]'), m: box.querySelector('[data-m]'), s: box.querySelector('[data-s]') };
+  var pad = function (n) { return n < 10 ? '0' + n : String(n); };
+  function tick() {
+    var left = target - Date.now();
+    if (left <= 0) {
+      f.d.textContent = '00'; f.h.textContent = '00'; f.m.textContent = '00'; f.s.textContent = '00';
+      if (note) note.textContent = 'The doors are open. Booth #6156.';
+      return;
+    }
+    var s = Math.floor(left / 1000);
+    f.d.textContent = String(Math.floor(s / 86400));
+    f.h.textContent = pad(Math.floor((s % 86400) / 3600));
+    f.m.textContent = pad(Math.floor((s % 3600) / 60));
+    f.s.textContent = pad(s % 60);
+    setTimeout(tick, 1000 - (Date.now() % 1000));
+  }
+  tick();
+})();
+</script>
