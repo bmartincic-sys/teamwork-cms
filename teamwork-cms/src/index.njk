@@ -267,7 +267,7 @@ permalink: "/"
       {% for post in collections.blogpost | recentPosts(3) %}
       <a href="{{ post.url }}" class="blog-card{% if loop.first %} featured{% endif %}" style="text-decoration: none;">
         <div class="blog-card-img">
-          <img src="/assets/images/blog/real/{{ post.fileSlug }}.jpg" alt="{{ post.data.title }}" loading="lazy">
+          {% if blogImages[post.fileSlug] %}<img src="/assets/images/blog/real/{{ blogImages[post.fileSlug] }}" alt="{{ post.data.title }}" loading="lazy">{% else %}<i class="ti ti-article" aria-hidden="true"></i>{% endif %}
         </div>
         <div class="blog-card-body">
           <div class="blog-card-meta">

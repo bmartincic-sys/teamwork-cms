@@ -38,7 +38,8 @@ permalink: "/blog/"
     <div class="pillars-grid" id="blogGrid" style="grid-template-columns: repeat(3, 1fr);">
       {% for post in collections.blogpost | reverse %}
       <a href="{{ post.url }}" class="pillar-card blog-idx-card" data-category="{{ (post.data.category or 'Blog') | slugify }}" style="display: block; text-decoration: none;">
-        <div class="blog-idx-img"><img src="/assets/images/blog/real/{{ post.fileSlug }}.jpg" alt="{{ post.data.title }}" loading="lazy"></div>
+        {# hero path comes from the blogImages map so the real extension is used; a post without a hero gets a tinted panel instead of a broken image #}
+        <div class="blog-idx-img{% if not blogImages[post.fileSlug] %} blog-idx-img-none{% endif %}">{% if blogImages[post.fileSlug] %}<img src="/assets/images/blog/real/{{ blogImages[post.fileSlug] }}" alt="{{ post.data.title }}" loading="lazy">{% else %}<i class="ti ti-article" aria-hidden="true"></i>{% endif %}</div>
         <div class="blog-idx-body">
           <div style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--brand-text); margin-bottom: 10px;">{{ post.data.category or "Blog" }}</div>
           <h3 class="pillar-title">{{ post.data.title }}</h3>

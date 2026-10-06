@@ -43,7 +43,10 @@ const outIdx = args.indexOf('--out');           // write posts somewhere else to
 const OUT = outIdx >= 0 ? args[outIdx + 1] : BLOG;
 
 // Not articles: job postings, flipbook/PDF shells, an empty draft.
-const SKIP = new Set(['marketing-specialist', 'job-application', 'moma-design-store-to-reopen-next-month', 'french-pos-flipbook', 'spanish-pos-flipbook', '245862-2']);
+// not articles: landing pages, forms, and job postings that the JOB regex missed
+const SKIP = new Set(['marketing-specialist', 'job-application', 'moma-design-store-to-reopen-next-month', 'french-pos-flipbook', 'spanish-pos-flipbook', '245862-2',
+  'airtag', 'nrf', 'client-sign-up',
+  'account-executive', 'application-specialist-clearwater', 'application-specialist-dublin', 'application-specialist-ukraine', 'branding-and-events-manager', 'business-development-executive', 'communications-manager', 'l2-support-engineer', 'partner-manager-north-america', 'partner-marketing-specialist', 'presales-engineer', 'project-manager-ireland', 'sales-director-eu', 'senior-design-team-technical-product-and-ux-writer']);
 const SKIP_CATEGORIES = new Set(['Careers']);
 // most specific first: a post tagged Blog and Case Study is a case study
 const CATEGORY_ORDER = [['Case Study', 'Case Study'], ['TeamworkCares', 'Teamwork Cares'], ['Podcast', 'Podcast'], ['Partner', 'Partner'], ['News', 'News'], ['Blog', 'Blog'], ['Uncategorized', 'Blog']];

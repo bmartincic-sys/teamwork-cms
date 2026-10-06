@@ -102,7 +102,7 @@
           <div class="nav-split">
             {% for post in collections.blogpost | recentPosts(1) %}
             <a class="ncs-card ncs-card-wide" href="{{ post.url }}">
-              <img class="ncs-photo" src="/assets/images/blog/real/{{ post.fileSlug }}.jpg" alt="{{ post.data.title }}" loading="lazy">
+              {% if blogImages[post.fileSlug] %}<img class="ncs-photo" src="/assets/images/blog/real/{{ blogImages[post.fileSlug] }}" alt="{{ post.data.title }}" loading="lazy">{% endif %}
               <span class="ncs-scrim"></span>
               {% if post.data.category %}<span class="ncs-sector">{{ post.data.category }}</span>{% endif %}
               <span class="ncs-body">
