@@ -4,6 +4,9 @@ module.exports = function (eleventyConfig) {
   // Footer copyright: derived at build time so it cannot go stale in January.
   eleventyConfig.addGlobalData("buildYear", String(new Date().getFullYear()));
   eleventyConfig.addPassthroughCopy("src/robots.txt");
+  // Netlify redirects for the old WordPress URLs. Generated from
+  // tools/redirects/redirect-map.csv at the start of `npm run build`; never hand-edited.
+  eleventyConfig.addPassthroughCopy("src/_redirects");
   // Standalone landing pages: copied verbatim, never templated, and invisible to
   // collections, so nothing under src/lp can ever appear in the nav or the sitemap.
   eleventyConfig.addPassthroughCopy("src/lp");
