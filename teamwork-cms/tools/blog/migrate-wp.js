@@ -156,7 +156,9 @@ function cleanNodes(nodes, ctx) {
     if (name === 'img') {
       const src = n.attribs['data-src'] || n.attribs.src || '';
       if (!/^https?:/.test(src) || !SITE.test(src) && !/wp-content\/uploads/.test(src)) continue;
-      const base = path.basename(src.split('?')[0]).replace(/-\d+x\d+(\.\w+)$/, '$1');
+      // ASCII-only local name: accented letters differ between Unicode spellings and only resolve on macOS
+      const base = decodeURIComponent(path.basename(src.split('?')[0])).replace(/-\d+x\d+(\.\w+)$/, '$1')
+        .normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^\w.-]+/g, '-');
       const local = '/assets/images/blog/posts/' + ctx.slug + '/' + base;
       queueImage(src, path.join(INLINE_DIR, ctx.slug, base));
       out.push({ type: 'tag', name: 'figure', attribs: { class: 'blog-figure' }, children: [{ type: 'tag', name: 'img', attribs: { src: local, alt: n.attribs.alt || '', loading: 'lazy' }, children: [] }] });

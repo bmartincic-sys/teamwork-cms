@@ -28,6 +28,9 @@ for (const f of walk(SITE)) {
     refs++;
     const u = m[1];
     if (!fs.existsSync(path.join(SITE, u))) { if (!broken.has(u)) broken.set(u, path.relative(SITE, f)); continue; }
+    // macOS matches either Unicode spelling of an accented letter against the same file; Netlify's
+    // Linux build does not, so a name that only works here is treated as broken here too.
+    if (/[^\x00-\x7F]/.test(u)) { if (!broken.has(u)) broken.set(u + '  [non-ASCII filename, rename it]', path.relative(SITE, f)); continue; }
     if (/\.(jpe?g|png)$/i.test(u) && /<img|url\(/.test(s.slice(Math.max(0, m.index - 300), m.index))) {
       if (!fs.existsSync(path.join(SITE, u.replace(/\.(jpe?g|png)$/i, '.webp')))) noWebp.add(u);
     }
