@@ -57,6 +57,8 @@ const EVENTS = [
     headline: "Let's meet at NRF Europe 2026.",
     body: "Europe's premier gathering for retail leaders, and we'll be right in the middle of it at Stand I-050. Come see live demos across RFID, POS, OMS, and AI-powered retail workflows, and find out how connected retail technology is helping brands across Europe move faster, sell smarter, and unify every channel.",
     cta: "Book a meeting at our stand",
+    photo: "nrf-europe-2026.webp",
+    photoPosition: "50% 30%", // portrait photo; keep the faces in the 4:3 crop
     ref: "nrf-europe-2026",
     link: "https://www.teamworkcommerce.com/nrf-europe-2026/",
   },

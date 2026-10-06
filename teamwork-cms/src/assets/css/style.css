@@ -6099,13 +6099,15 @@ a.evc:hover .evc-go { opacity: 1; }
 .evhero { position: relative; overflow: hidden; padding: 40px 0 64px; }
 .evhero-grid {
   position: relative; z-index: 1;
-  display: grid; grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  display: grid; grid-template-columns: minmax(0, 0.84fr) minmax(0, 1.16fr);
   gap: 56px; align-items: center;
 }
-.evhero-title {
+/* .hero .evhero-title outranks the generic .hero h1 rule, which was winning and rendering
+   this at 96px / 0.94 line-height. Sized to match the careers split hero. */
+.hero .evhero-title {
   margin: 18px 0 16px;
-  font-size: clamp(36px, 4.2vw, 58px); font-weight: 600;
-  letter-spacing: -0.035em; line-height: 1.05; color: var(--text);
+  font-size: clamp(38px, 5.4vw, 62px); font-weight: 600;
+  letter-spacing: -0.04em; line-height: 1.04; color: #ffffff;
 }
 .evhero-sub { margin: 0 0 26px; max-width: 520px; font-size: 16px; line-height: 1.7; color: var(--text-muted); }
 .evhero .hero-cta { justify-content: flex-start; margin: 0; }

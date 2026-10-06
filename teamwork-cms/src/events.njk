@@ -113,7 +113,7 @@ stickyHref: "/demo/?ref=events"
         <{{ tag }} class="evc{% if e.photoUrl %} has-photo{% else %} is-ink tone-{{ loop.index0 % 3 }}{% endif %}"{% if e.link %} href="{{ e.link }}" target="_blank" rel="noopener"{% endif %}>
           <span class="evc-media">
             {% if e.photoUrl %}
-            <img src="{{ e.photoUrl }}" alt="Teamwork Commerce at {{ e.name }}, {{ e.city }}" loading="lazy" decoding="async" width="880" height="660">
+            <img src="{{ e.photoUrl }}" alt="Teamwork Commerce at {{ e.name }}, {{ e.city }}" loading="lazy" decoding="async" width="880" height="660"{% if e.photoPosition %} style="object-position: {{ e.photoPosition }};"{% endif %}>
             {% else %}
             <span class="evc-fallback" aria-hidden="true">{{ e.name | replace(":", "") | truncate(26, true, "") }}</span>
             {% endif %}
