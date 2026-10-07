@@ -3964,12 +3964,12 @@ main > .hero:first-child { margin-top: -85px; padding-top: 230px; }
   /* iPad Pro: flat aluminium band around a uniform black bezel, no home button */
   position: relative; z-index: 2; border-radius: 30px; padding: 13px;
   aspect-ratio: 4 / 3;   /* a real iPad, landscape */
-  background: linear-gradient(#0a0a0d, #0a0a0d) padding-box, linear-gradient(135deg, #cfd2d8 0%, #6f737b 20%, #c3c6cc 44%, #595d65 68%, #c9ccd1 88%, #7a7e86 100%) border-box;
+  background: linear-gradient(#0a0a0d, #0a0a0d) padding-box, linear-gradient(160deg, #a3a7ae 0%, #7c8088 18%, #9ea1a8 40%, #6b6f77 62%, #a0a3aa 84%, #80848c 100%) border-box;
   border: 2px solid transparent;
-  box-shadow:0 26px 26px -18px rgba(7, 9, 26, 0.30), 0 0 0 0.5px rgba(0,0,0,0.55), inset 0 0 0 1px rgba(255,255,255,0.05);
+  box-shadow:0 26px 26px -18px rgba(7, 9, 26, 0.30), 0 0 0 1px rgba(30,33,40,0.55), inset 0 0 0 1px rgba(255,255,255,0.05);
 }
 .hpos-screen {
-  border-radius: 16px; padding: 15px 16px 16px; background: var(--bg-elevated);
+  border-radius: 15px; padding: 15px 16px 16px; background: var(--bg-elevated);
   border: 0;
 }
 [data-theme="light"] .hpos-screen { background: #fff; }
@@ -6296,8 +6296,8 @@ a.evc:hover .evc-go { opacity: 1; }
   border: 4px solid transparent;
   background:
     linear-gradient(#0a0a0d, #0a0a0d) padding-box,
-    linear-gradient(135deg, #cfd2d8 0%, #6f737b 20%, #c3c6cc 44%, #595d65 68%, #c9ccd1 88%, #7a7e86 100%) border-box;
-  box-shadow:0 46px 70px -34px rgba(7, 9, 26, 0.3), 0 0 0 0.5px rgba(0,0,0,0.55), inset 0 0 0 1px rgba(255,255,255,0.06);
+    linear-gradient(160deg, #a3a7ae 0%, #7c8088 18%, #9ea1a8 40%, #6b6f77 62%, #a0a3aa 84%, #80848c 100%) border-box;
+  box-shadow:0 46px 70px -34px rgba(7, 9, 26, 0.3), 0 0 0 1px rgba(30,33,40,0.55), inset 0 0 0 1px rgba(255,255,255,0.06);
 }
 .aiq-phone::before {
   /* side buttons, painted as bars just outside the band: left = Action, volume up, volume down;
@@ -6311,7 +6311,7 @@ a.evc:hover .evc-go { opacity: 1; }
     linear-gradient(270deg, #9a9ea6, #4e525a) 100% 470px / 4px 46px no-repeat;
 }
 .aiq-screen {
-  position: relative; border-radius: 46px; overflow: hidden;
+  position: relative; border-radius: 44px; overflow: hidden;
   background: #fff; color: #111; 
   display: flex; flex-direction: column;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", var(--font-body), sans-serif;
@@ -7455,8 +7455,8 @@ a.evc:hover .evc-go { opacity: 1; }
   border-radius: 34px; padding: 5px;
   /* Pro Max: polished band around a black bezel; buttons drawn by ::before */
   border: 2.5px solid transparent;
-  background: linear-gradient(#0a0a0d, #0a0a0d) padding-box, linear-gradient(135deg, #cfd2d8 0%, #6f737b 20%, #c3c6cc 44%, #595d65 68%, #c9ccd1 88%, #7a7e86 100%) border-box;
-  box-shadow:0 40px 60px -26px rgba(2, 2, 14, 0.9), 0 0 0 0.5px rgba(0,0,0,0.55), inset 0 0 0 1px rgba(255,255,255,0.06);
+  background: linear-gradient(#0a0a0d, #0a0a0d) padding-box, linear-gradient(160deg, #a3a7ae 0%, #7c8088 18%, #9ea1a8 40%, #6b6f77 62%, #a0a3aa 84%, #80848c 100%) border-box;
+  box-shadow:0 40px 60px -26px rgba(2, 2, 14, 0.9), 0 0 0 1px rgba(30,33,40,0.55), inset 0 0 0 1px rgba(255,255,255,0.06);
 }
 .hph::before {
   content: ''; position: absolute; inset: -2.5px -5px; pointer-events: none;
@@ -7468,7 +7468,7 @@ a.evc:hover .evc-go { opacity: 1; }
     linear-gradient(270deg, #9a9ea6, #4e525a) 100% 226px / 2.5px 22px no-repeat;
 }
 .hph-screen {
-  position: relative; height: 100%; border-radius: 28px; overflow: hidden;
+  position: relative; height: 100%; border-radius: 26px; overflow: hidden;
   background: #eef0f5; color: #0b0c12;
   font-family: -apple-system, BlinkMacSystemFont, var(--font-body), sans-serif;
   display: flex; flex-direction: column;
@@ -7478,10 +7478,21 @@ a.evc:hover .evc-go { opacity: 1; }
 .hph-status { display: flex; justify-content: space-between; align-items: center;
   font-weight: 700; }
 .hph-status-r { display: inline-flex; align-items: center; gap: 3px; }
-.hph-sig, .hph-wifi, .hph-batt { display: block; background: #0b0c12; border-radius: 1px; }
-.hph-sig { width: 8px; height: 6px; }
-.hph-wifi { width: 7px; height: 6px; border-radius: 50% 50% 0 0; }
-.hph-batt { width: 13px; height: 6px; border-radius: 2px; }
+/* real status glyphs, scaled from the AI phone's: four signal bars, the wifi icon, a battery with its level */
+.hph-bars { display: inline-flex; align-items: flex-end; gap: 1px; height: 6px; }
+.hph-bars i { width: 1.5px; background: #0b0c12; border-radius: 0.5px; display: block; }
+.hph-bars i:nth-child(1) { height: 2px; } .hph-bars i:nth-child(2) { height: 3.5px; }
+.hph-bars i:nth-child(3) { height: 4.5px; } .hph-bars i:nth-child(4) { height: 6px; }
+.hph-wifi { font-size: 8px; line-height: 1; color: #0b0c12; margin: 0 1px; }
+.hph-batt {
+  position: relative; display: inline-flex; align-items: center; justify-content: center;
+  min-width: 15px; height: 8px; padding: 0 2px; border-radius: 2.5px;
+  background: #0b0c12; color: #fff; font-size: 5.5px; font-weight: 700; letter-spacing: 0; line-height: 1;
+}
+.hph-batt::after {
+  content: ''; position: absolute; right: -2px; top: 50%; transform: translateY(-50%);
+  width: 1.2px; height: 3px; border-radius: 0 1px 1px 0; background: rgba(11,12,18,0.4);
+}
 .hph-body { flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column; }
 .hph-chip { align-self: flex-start; font-weight: 600; 
   border-radius: 100px; background: #fff; color: #3c3c43; }
