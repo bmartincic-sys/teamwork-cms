@@ -6288,12 +6288,29 @@ a.evc:hover .evc-go { opacity: 1; }
 
 .aiq { position: relative; width: 100%; margin: 0 auto; }
 .aiq-phone {
-  position: relative; border-radius: 42px; padding: 11px;
-  background: linear-gradient(160deg, #2c2f3a, #14161f 60%, #23262f);
-  box-shadow:0 46px 70px -34px rgba(7, 9, 26, 0.3), 0 0 0 1px rgba(255,255,255,0.09);
+  /* Pro Max form factor: flat polished-metal band around a near-black bezel, thin
+     uniform bezels, large corner radii, Action and volume buttons left, side button
+     and Camera Control right (drawn by the ::before below). */
+  position: relative; border-radius: 56px; padding: 8px;
+  border: 4px solid transparent;
+  background:
+    linear-gradient(#0a0a0d, #0a0a0d) padding-box,
+    linear-gradient(135deg, #cfd2d8 0%, #6f737b 20%, #c3c6cc 44%, #595d65 68%, #c9ccd1 88%, #7a7e86 100%) border-box;
+  box-shadow:0 46px 70px -34px rgba(7, 9, 26, 0.3), 0 0 0 0.5px rgba(0,0,0,0.55), inset 0 0 0 1px rgba(255,255,255,0.06);
+}
+.aiq-phone::before {
+  /* side buttons, painted as bars just outside the band: left = Action, volume up, volume down;
+     right = side button, Camera Control */
+  content: ''; position: absolute; inset: -4px -8px; pointer-events: none;
+  background:
+    linear-gradient(90deg, #9a9ea6, #4e525a) 0 122px / 4px 26px no-repeat,
+    linear-gradient(90deg, #9a9ea6, #4e525a) 0 174px / 4px 54px no-repeat,
+    linear-gradient(90deg, #9a9ea6, #4e525a) 0 240px / 4px 54px no-repeat,
+    linear-gradient(270deg, #9a9ea6, #4e525a) 100% 200px / 4px 92px no-repeat,
+    linear-gradient(270deg, #9a9ea6, #4e525a) 100% 470px / 4px 46px no-repeat;
 }
 .aiq-screen {
-  position: relative; border-radius: 32px; overflow: hidden;
+  position: relative; border-radius: 46px; overflow: hidden;
   background: #fff; color: #111; 
   display: flex; flex-direction: column;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", var(--font-body), sans-serif;
@@ -6447,7 +6464,7 @@ a.evc:hover .evc-go { opacity: 1; }
 
 /* Rim light along the top of the device, so the light above it is believable. */
 .aix-split .aiq-phone::after {
-  content: ''; position: absolute; inset: 0; border-radius: 42px;
+  content: ''; position: absolute; inset: -3px; border-radius: 56px;
   pointer-events: none;
   background: linear-gradient(174deg, rgba(255, 255, 255, 0.3), transparent 16%);
   -webkit-mask: linear-gradient(#000, #000) content-box, linear-gradient(#000, #000);
@@ -6656,7 +6673,7 @@ a.evc:hover .evc-go { opacity: 1; }
 .aiq-status { padding: 14px 20px 4px; font-size: 15px; font-weight: 600; }
 .apx-time { display: inline-flex; align-items: center; gap: 5px; }
 .apx-time i { font-size: 13px; }
-.aiq-notch { width: 108px; height: 30px; top: 15px; }
+.aiq-notch { width: 104px; height: 30px; top: 16px; }
 .aiq-notch::after {
   content: ''; position: absolute; right: 15px; top: 50%; transform: translateY(-50%);
   width: 8px; height: 8px; border-radius: 50%; background: #ff7a1a;
