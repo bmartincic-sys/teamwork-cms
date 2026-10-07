@@ -3961,16 +3961,16 @@ main > .hero:first-child { margin-top: -85px; padding-top: 230px; }
     radial-gradient(72% 66% at 50% 50%, rgba(4, 6, 20, 0.55), transparent 78%);
 }
 .hpos-device {
-  position: relative; z-index: 2; border-radius: 26px; padding: 12px;
+  /* iPad Pro: flat aluminium band around a uniform black bezel, no home button */
+  position: relative; z-index: 2; border-radius: 30px; padding: 13px;
   aspect-ratio: 4 / 3;   /* a real iPad, landscape */
-  background: linear-gradient(160deg, rgba(255,255,255,0.13), rgba(255,255,255,0.04)) padding-box,
-              linear-gradient(160deg, rgba(255,255,255,0.34), rgba(255,255,255,0.07) 45%, rgba(255,255,255,0.16)) border-box;
-  border: 1px solid transparent;
-  box-shadow:0 26px 26px -18px rgba(7, 9, 26, 0.30);
+  background: linear-gradient(#0a0a0d, #0a0a0d) padding-box, linear-gradient(135deg, #cfd2d8 0%, #6f737b 20%, #c3c6cc 44%, #595d65 68%, #c9ccd1 88%, #7a7e86 100%) border-box;
+  border: 2px solid transparent;
+  box-shadow:0 26px 26px -18px rgba(7, 9, 26, 0.30), 0 0 0 0.5px rgba(0,0,0,0.55), inset 0 0 0 1px rgba(255,255,255,0.05);
 }
 .hpos-screen {
-  border-radius: 17px; padding: 15px 16px 16px; background: var(--bg-elevated);
-  border: 1px solid var(--border); 
+  border-radius: 16px; padding: 15px 16px 16px; background: var(--bg-elevated);
+  border: 0;
 }
 [data-theme="light"] .hpos-screen { background: #fff; }
 .hpos-shadow {
@@ -5300,10 +5300,11 @@ main > .hero.hpos-hero:first-child { margin-top: -85px; padding-top: 112px; }
 .cvx-vis svg { display: block; fill: #10142a; }
 .cvx-qr svg { width: 64px; height: 64px; }
 .cvx-phone {
-  display: grid; align-content: start; gap: 6px; width: 72px; height: 132px; padding: 16px 8px 8px; border-radius: 16px;
-  background: #fff; border: 4px solid #10142a; box-shadow: 0 24px 40px -20px rgba(7,9,26,0.55); transform: rotate(4deg);
+  position: relative;
+  display: grid; align-content: start; gap: 6px; width: 72px; height: 132px; padding: 18px 8px 8px; border-radius: 17px;
+  background: #fff; border: 0; box-shadow: 0 0 0 3px #0a0a0d, 0 0 0 4.5px #8f939b, 0 24px 40px -20px rgba(7,9,26,0.55); transform: rotate(4deg);
 }
-[data-theme="dark"] .cvx-phone { border-color: #2a3150; }
+.cvx-phone::before { content: ''; position: absolute; top: 5px; left: 50%; transform: translateX(-50%); width: 22px; height: 6px; border-radius: 100px; background: #0a0a0d; }
 .cvx-phone b { font-size: 9px; font-weight: 700; }
 .cvx-phone i { height: 12px; border: 1px solid #e3e7ee; border-radius: 4px; }
 .cvx-phone em { margin-top: 2px; height: 13px; border-radius: 4px; background: #2f7bff; }
@@ -5997,7 +5998,7 @@ a.evc:hover .evc-go { opacity: 1; }
    property; browsers without @property keep the static gradient border they had. */
 @property --beam { syntax: '<angle>'; inherits: false; initial-value: 0deg; }
 .hpos-device::before {
-  content: ''; position: absolute; inset: -1px; border-radius: 27px; z-index: 1;
+  content: ''; position: absolute; inset: -2px; border-radius: 30px; z-index: 1;
   pointer-events: none; padding: 1.5px;
   background: conic-gradient(from var(--beam),
     transparent 0 74%,
@@ -7451,12 +7452,23 @@ a.evc:hover .evc-go { opacity: 1; }
      and the device ceding 22.5%S - 26, the ratio stays 0.29 and the overlap stays a
      constant 34px, instead of needing a hand-tuned pair per breakpoint. */
   width: calc(22.5% + 8px); aspect-ratio: 9 / 19.5;
-  border-radius: 30px; padding: 7px;
-  background: linear-gradient(160deg, #2b2f3c, #12141d 60%, #23262f);
-  box-shadow:0 40px 60px -26px rgba(2, 2, 14, 0.9), 0 0 0 1px rgba(255,255,255,0.1);
+  border-radius: 34px; padding: 5px;
+  /* Pro Max: polished band around a black bezel; buttons drawn by ::before */
+  border: 2.5px solid transparent;
+  background: linear-gradient(#0a0a0d, #0a0a0d) padding-box, linear-gradient(135deg, #cfd2d8 0%, #6f737b 20%, #c3c6cc 44%, #595d65 68%, #c9ccd1 88%, #7a7e86 100%) border-box;
+  box-shadow:0 40px 60px -26px rgba(2, 2, 14, 0.9), 0 0 0 0.5px rgba(0,0,0,0.55), inset 0 0 0 1px rgba(255,255,255,0.06);
+}
+.hph::before {
+  content: ''; position: absolute; inset: -2.5px -5px; pointer-events: none;
+  background:
+    linear-gradient(90deg, #9a9ea6, #4e525a) 0 58px / 2.5px 13px no-repeat,
+    linear-gradient(90deg, #9a9ea6, #4e525a) 0 84px / 2.5px 26px no-repeat,
+    linear-gradient(90deg, #9a9ea6, #4e525a) 0 116px / 2.5px 26px no-repeat,
+    linear-gradient(270deg, #9a9ea6, #4e525a) 100% 96px / 2.5px 44px no-repeat,
+    linear-gradient(270deg, #9a9ea6, #4e525a) 100% 226px / 2.5px 22px no-repeat;
 }
 .hph-screen {
-  position: relative; height: 100%; border-radius: 24px; overflow: hidden;
+  position: relative; height: 100%; border-radius: 28px; overflow: hidden;
   background: #eef0f5; color: #0b0c12;
   font-family: -apple-system, BlinkMacSystemFont, var(--font-body), sans-serif;
   display: flex; flex-direction: column;
@@ -9683,13 +9695,28 @@ main[data-vertical] .tm-day-time { color: color-mix(in srgb, var(--v-accent) 80%
   perspective: 1400px; display: grid; place-items: center;
 }
 .tfx-phone {
-  width: 268px; padding: 16px 14px 14px; border-radius: 34px;
-  background: #e9edf4; border: 7px solid #10142a;
-  box-shadow: 0 40px 70px -30px rgba(7,9,26,0.55);
+  /* Pro Max: screen, then a black bezel ring and a polished band drawn as shadows so the
+     radius follows; Dynamic Island by ::after, side buttons by ::before */
+  position: relative;
+  width: 268px; padding: 40px 14px 14px; border-radius: 42px;
+  background: #e9edf4; border: 0;
+  box-shadow: 0 0 0 7px #0a0a0d, 0 0 0 10px #8f939b, 0 40px 70px -30px rgba(7,9,26,0.55);
   transform: rotateY(-10deg) rotateX(4deg) rotateZ(1deg);
   font-family: var(--font-body); color: #10142a;
 }
-[data-theme="dark"] .tfx-phone { border-color: #2a3150; }
+.tfx-phone::after {
+  content: ''; position: absolute; top: 11px; left: 50%; transform: translateX(-50%);
+  width: 82px; height: 24px; border-radius: 100px; background: #0a0a0d; z-index: 6;
+}
+.tfx-phone::before {
+  content: ''; position: absolute; inset: -7px -13px; pointer-events: none; z-index: 6;
+  background:
+    linear-gradient(90deg, #9a9ea6, #4e525a) 0 86px / 3px 20px no-repeat,
+    linear-gradient(90deg, #9a9ea6, #4e525a) 0 124px / 3px 40px no-repeat,
+    linear-gradient(90deg, #9a9ea6, #4e525a) 0 172px / 3px 40px no-repeat,
+    linear-gradient(270deg, #9a9ea6, #4e525a) 100% 140px / 3px 68px no-repeat,
+    linear-gradient(270deg, #9a9ea6, #4e525a) 100% 330px / 3px 34px no-repeat;
+}
 .tfx-top { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
 .tfx-top b { flex: 1; font-size: 15px; font-weight: 700; letter-spacing: -0.01em; }
 .tfx-round { display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; background: #fff; font-size: 15px; }
@@ -9806,7 +9833,9 @@ main[data-vertical] .tm-day-time { color: color-mix(in srgb, var(--v-accent) 80%
 /* ===== Customer registration, drawn (Customer Data page) =====
    The shopper's sign-up form on the drawn phone, and the settings piece on the
    same card as the product record pieces. */
-.rgx-phone { width: 262px; padding: 0; overflow: hidden; background: #fff; }
+.rgx-phone { width: 262px; padding: 0; overflow: visible; background: #fff; }
+.rgx-phone > :first-child { border-radius: 42px 42px 0 0; }
+.rgx-phone > :last-child { border-radius: 0 0 42px 42px; overflow: hidden; }
 .rgx-hero {
   display: flex; align-items: flex-end; height: 92px; padding: 0 16px 12px;
   background: linear-gradient(160deg, #c9d6ea 0%, #8fa3c4 55%, #5b6f93 100%);
