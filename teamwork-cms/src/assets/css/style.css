@@ -10391,3 +10391,39 @@ main[data-vertical] .tm-day-time { color: color-mix(in srgb, var(--v-accent) 80%
   .lx-facts-grid { grid-template-columns: 1fr; }
   .lx-facts-card { padding: 28px 22px; }
 }
+
+/* ============ CAREERS SPLITS ============
+   Two-column rows that were inline styles, which no media query could override: they
+   stayed two columns on phones. */
+.split2 { display: grid; align-items: center; }
+.split2-hero { grid-template-columns: 1.15fr 1fr; gap: 56px; }
+.split2-words { grid-template-columns: 1fr 1.15fr; gap: 48px; }
+@media (max-width: 900px) {
+  .split2-hero, .split2-words { grid-template-columns: 1fr; gap: 32px; }
+  .split2-words > div:first-child { order: 2; }
+}
+/* a logo wider than the phone screen was overflowing its slot in the one-line strip */
+.logos-oneline .logo-slot { max-width: 100%; }
+
+/* the two floating labels over the fanned POS screens overlap each other on phones */
+@media (max-width: 640px) { .fan-bubble { display: none; } }
+
+/* ============ PHONE FIXES ============ */
+/* mobile POS hero stats: the nth-child divider rule outranked the one-column reset, so a
+   stray vertical line showed left of the second stat */
+@media (max-width: 520px) { .pfh-col:nth-child(n)::before { display: none; } }
+/* home: the fanned POS screens were spilling past the phone edges; pull them in and shrink */
+@media (max-width: 640px) {
+  .pos-fan-section { overflow: hidden; }
+  .fanw-3 .fanw-card { width: 72vw; }
+  .fanw-3 .fanw-card:nth-child(1), .fanw-stage:hover .fanw-3 .fanw-card:nth-child(1) { transform: translateX(-50%) translateX(-34%) translateY(9%) rotate(-8deg) scale(0.86); }
+  .fanw-3 .fanw-card:nth-child(3), .fanw-stage:hover .fanw-3 .fanw-card:nth-child(3) { transform: translateX(-50%) translateX(34%) translateY(9%) rotate(8deg) scale(0.86); }
+  .fanw { height: 52vw; }
+}
+/* mobile POS "the app itself": a landscape iPad at phone width leaves a 198px-tall screen and
+   the receipt clips. Turn the iPad portrait on phones and scale the receipt to fit. */
+@media (max-width: 640px) {
+  .hpos-device { aspect-ratio: 3 / 4; }
+  .hpos-screen .srx-fit { width: 154%; height: 154%; transform: scale(0.65); }
+  .hpos-screen .srx-body { grid-template-columns: 1.5fr 1fr; }
+}
