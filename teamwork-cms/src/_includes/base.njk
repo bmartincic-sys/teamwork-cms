@@ -252,8 +252,10 @@
   // only upgrades to the Osano drawer when Osano is actually present. If the CMP is
   // blocked by an extension or its CDN fails, the visitor still gets somewhere useful
   // instead of a dead control. showDrawer is the current API; Osano.cm.emit is deprecated.
-  var prefs = document.getElementById("cookiePrefs");
-  if (prefs) {
+  // The same control also appears in the body of the terms page.
+  ["cookiePrefs", "cookiePrefsTerms"].forEach(function (id) {
+    var prefs = document.getElementById(id);
+    if (!prefs) return;
     prefs.addEventListener("click", function (e) {
       var cm = window.Osano && window.Osano.cm;
       if (cm && typeof cm.showDrawer === "function") {
@@ -261,7 +263,7 @@
         cm.showDrawer("osano-cm-dom-info-dialog-open");
       }
     });
-  }
+  });
 })();
 </script>
 
