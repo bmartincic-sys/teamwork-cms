@@ -67,9 +67,18 @@ def cwebp(src, dst, width, quality, alpha=False):
 def main():
     if not os.path.isdir(SITE):
         sys.exit("run `npm run build` first; this reads the built site")
+    # Start from the existing manifest. The built site already serves every recorded
+    # image as WebP, so a fresh scan cannot see those originals; a rewrite from scratch
+    # silently dropped them all (which is how the case-study photos went back to JPG).
     manifest = {}
+    if os.path.exists(MANIFEST):
+        with open(MANIFEST) as fh:
+            manifest = json.load(fh)
+        manifest = {u: e for u, e in manifest.items() if os.path.exists(SRC + u) and os.path.exists(SRC + e["webp"])}
     saved = 0
     for url in referenced():
+        if url in manifest:
+            continue
         path = SRC + url
         if not os.path.exists(path):
             continue

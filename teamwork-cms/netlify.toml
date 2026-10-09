@@ -93,6 +93,35 @@
   status = 301
 
 # Client-only page: reachable by URL, never indexed.
+# Long-lived caching for static assets. CSS and JS carry a per-build ?v= query, so they
+# can be immutable; fonts never change under the same name; images and video are
+# cached for a week (replacing one under the same name takes up to a week to reach
+# returning visitors; new visitors always get the current file).
+[[headers]]
+  for = "/assets/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/assets/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/assets/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/assets/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/assets/video/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
 [[headers]]
   for = "/certified-hardware/*"
   [headers.values]

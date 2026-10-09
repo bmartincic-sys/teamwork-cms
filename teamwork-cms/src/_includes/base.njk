@@ -33,6 +33,9 @@
      would run before the CMP exists and set its cookies ungated.
      Note it only intercepts scripts. Stylesheets (<link>) and iframes are not covered,
      so third-party CSS and video embeds still have to be handled in the markup. -->
+<link rel="preconnect" href="https://cmp.osano.com" crossorigin>
+<link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+<link rel="preconnect" href="https://js.hs-scripts.com" crossorigin>
 <script src="https://cmp.osano.com/169lWRSfbjfGi1iTF/bd7c56a3-144c-425f-9298-235bf64c29eb/osano.js"></script>
 
 <!-- Tracking carried over from the old site, declared after Osano so the CMP gates them.
@@ -700,10 +703,10 @@
   window.addEventListener("resize", onScroll);
 })();
 </script>
-<script src="/assets/js/carousel-drag.js" defer></script>
-<script src="/assets/js/ai-showcase.js" defer></script>
-<script src="/assets/js/capability-filter.js" defer></script>
-<script src="/assets/js/timeline.js" defer></script>
-<script src="/assets/js/wrap.js" defer></script>
+<script src="/assets/js/carousel-drag.js?v={{ buildVersion }}" defer></script>
+<script src="/assets/js/ai-showcase.js?v={{ buildVersion }}" defer></script>
+<script src="/assets/js/capability-filter.js?v={{ buildVersion }}" defer></script>
+<script src="/assets/js/timeline.js?v={{ buildVersion }}" defer></script>
+<script src="/assets/js/wrap.js?v={{ buildVersion }}" defer></script>
 </body>
 </html>

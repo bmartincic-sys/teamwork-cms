@@ -6,11 +6,22 @@ permalink: "/"
 ---
 <!-- ============ HERO: the Sales Receipt screen completing a sale ============ -->
 <section class="vhero">
-  <video class="vhero-bg" autoplay muted loop playsinline
+  <!-- The source is attached by the script below only on wide screens, when motion is
+       allowed and data saver is off; phones get the poster alone and skip the download. -->
+  <video class="vhero-bg" autoplay muted loop playsinline preload="none"
          poster="/assets/video/store-checkout-poster.jpg"
-         aria-hidden="true" tabindex="-1">
-    <source src="/assets/video/store-checkout.mp4" type="video/mp4">
-  </video>
+         data-src="/assets/video/store-checkout.mp4"
+         aria-hidden="true" tabindex="-1"></video>
+  <script>
+  (function () {
+    var v = document.querySelector(".vhero-bg");
+    if (!v) return;
+    var c = navigator.connection || {};
+    if (window.innerWidth < 760 || c.saveData || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    var s = document.createElement("source"); s.src = v.getAttribute("data-src"); s.type = "video/mp4";
+    v.appendChild(s); v.preload = "auto"; v.load(); var p = v.play(); if (p && p.catch) p.catch(function () {});
+  })();
+  </script>
   <div class="vhero-veil" aria-hidden="true"></div>
 
   <div class="container vhero-inner">
