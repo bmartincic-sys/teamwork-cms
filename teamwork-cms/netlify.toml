@@ -2,6 +2,14 @@
   command = "npm run build"
   publish = "_site"
 
+# The Netlify subdomain keeps working for previews but sends visitors (and crawlers) to the
+# real domain. force = true so it applies even though the files exist.
+[[redirects]]
+  from = "https://harmonious-kulfi-7ba3c2.netlify.app/*"
+  to = "https://www.teamworkcommerce.com/:splat"
+  status = 301
+  force = true
+
 [[redirects]]
   from = "/platform/121-commerce/"
   to = "/features/customer-data/"
