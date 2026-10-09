@@ -580,7 +580,8 @@
     var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
     function render(el, value, decimals, suffix) {
-      el.textContent = value.toFixed(decimals) + suffix;
+      // thousands separators, so 30000 renders as 30,000
+      el.textContent = value.toLocaleString("en-US", { minimumFractionDigits: decimals, maximumFractionDigits: decimals }) + suffix;
     }
 
     function animate(el) {
