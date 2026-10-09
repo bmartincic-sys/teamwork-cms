@@ -24,3 +24,7 @@ by `netlify.toml` are left to that file. Edit the CSV, never `_redirects`.
 
 Netlify matches `/old/` and `/old` with one rule, and a rule never shadows a
 page that actually exists at the old path.
+
+## Cutover
+
+DNS moved to Netlify on 9 October 2026 (www CNAME to the Netlify site, apex A 75.2.60.5). www.teamworkcommerce.com is the primary domain; the bare domain and the netlify.app subdomain redirect to it.
