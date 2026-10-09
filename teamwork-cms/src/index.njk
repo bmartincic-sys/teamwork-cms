@@ -6,8 +6,8 @@ permalink: "/"
 ---
 <!-- ============ HERO: the Sales Receipt screen completing a sale ============ -->
 <section class="vhero">
-  <!-- The source is attached by the script below only on wide screens, when motion is
-       allowed and data saver is off; phones get the poster alone and skip the download. -->
+  <!-- The source is attached by the script below unless the visitor asks for reduced
+       motion or has data saver on; everyone else, phones included, gets the video. -->
   <video class="vhero-bg" autoplay muted loop playsinline preload="none"
          poster="/assets/video/store-checkout-poster.jpg"
          data-src="/assets/video/store-checkout.mp4"
@@ -17,7 +17,7 @@ permalink: "/"
     var v = document.querySelector(".vhero-bg");
     if (!v) return;
     var c = navigator.connection || {};
-    if (window.innerWidth < 760 || c.saveData || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    if (c.saveData || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     var s = document.createElement("source"); s.src = v.getAttribute("data-src"); s.type = "video/mp4";
     v.appendChild(s); v.preload = "auto"; v.load(); var p = v.play(); if (p && p.catch) p.catch(function () {});
   })();
