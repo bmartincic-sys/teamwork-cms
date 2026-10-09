@@ -10427,3 +10427,9 @@ main[data-vertical] .tm-day-time { color: color-mix(in srgb, var(--v-accent) 80%
   .hpos-screen .srx-fit { width: 154%; height: 154%; transform: scale(0.65); }
   .hpos-screen .srx-body { grid-template-columns: 1.5fr 1fr; }
 }
+
+/* ============ LEGAL PAGES ============ */
+.legal-body h2 { font-size: 19px; font-weight: 700; color: var(--text); margin: 34px 0 12px; letter-spacing: -0.015em; }
+.legal-body ol { margin: 0 0 16px; padding-left: 26px; }
+.legal-body ol li { margin-bottom: 8px; }
+.legal-body a { color: var(--brand-text); }
