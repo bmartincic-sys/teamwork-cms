@@ -10534,3 +10534,8 @@ main[data-vertical] .tm-day-time { color: color-mix(in srgb, var(--v-accent) 80%
   .stk-chip-an b { font-size: 17px; }
   .stk-tiles .stk-flag { font-size: 9.5px; padding: 5px 10px; }
 }
+
+/* ============ ENTERPRISE POS GUIDE ============ */
+.eps-table { min-width: 860px; }
+.eps-table thead th.eps-us-h, .eps-table td.eps-us { background: color-mix(in srgb, var(--brand-blue) 8%, var(--bg-elevated)); }
+.eps-table td.eps-us { color: var(--text); font-weight: 500; }

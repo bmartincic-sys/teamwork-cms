@@ -29,6 +29,7 @@
 
 ## Evaluating Teamwork Commerce
 
+- [Enterprise POS Systems: a buyer's guide](https://www.teamworkcommerce.com/enterprise-pos-system/): How small-business cloud POS, legacy enterprise POS and unified commerce platforms compare on devices, offline selling, multi-country fiscal compliance, RFID, order management, integrations and rollout, and where Teamwork Commerce fits. Includes direct answers on the best POS for enterprise, apparel, luxury and iPad/iPhone retail.
 - [Technical Evaluation](https://www.teamworkcommerce.com/technical-evaluation/): For architects, CISOs and CTOs. A working session on architecture, security and integrations.
 - [POS Evaluation](https://www.teamworkcommerce.com/pos-evaluation/): Six tests a retailer can run inside a demo or pilot that produce evidence rather than answers.
 - [POS RFP Template](https://www.teamworkcommerce.com/pos-rfp-template/): A free, ungated RFP question bank. 100+ questions across 15 sections.
