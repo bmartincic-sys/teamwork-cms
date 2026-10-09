@@ -54,6 +54,12 @@ module.exports = function (eleventyConfig) {
         out = out.replace(/^<img/i, '<img loading="lazy"');
       }
       if (!/\sdecoding=/i.test(out)) out = out.replace(/^<img/i, '<img decoding="async"');
+      // Photos inside the closed nav dropdowns sit near the top of the page, so lazy
+      // loading still fetches them on every visit. Hold them until a menu is opened
+      // (the script in base.njk swaps data-src back); the logos stay eager.
+      if (main > -1 && offset < main && !/\.svg(\?|$)/i.test(src || "") && !/class="[^"]*\blogo-/.test(out)) {
+        out = out.replace(/\ssrc="/, ' data-src="').replace(/\ssrcset="/, ' data-srcset="');
+      }
       return out;
     });
   });

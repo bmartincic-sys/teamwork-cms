@@ -242,6 +242,24 @@
 {% include "search.njk" %}
 
 {% include "nav.njk" %}
+<script>
+(function () {
+  // Nav dropdown photos are held as data-src by the build; load them the first time a
+  // visitor reaches for a menu (pointer, keyboard focus, touch, or the mobile toggle).
+  var nav = document.querySelector("nav, header");
+  if (!nav) return;
+  var done = false;
+  function load() {
+    if (done) return; done = true;
+    nav.querySelectorAll("img[data-src]").forEach(function (img) {
+      img.src = img.getAttribute("data-src"); img.removeAttribute("data-src");
+      var ss = img.getAttribute("data-srcset"); if (ss) { img.srcset = ss; img.removeAttribute("data-srcset"); }
+    });
+    ["mouseenter", "focusin", "touchstart", "click"].forEach(function (ev) { nav.removeEventListener(ev, load, true); });
+  }
+  ["mouseenter", "focusin", "touchstart", "click"].forEach(function (ev) { nav.addEventListener(ev, load, true); });
+})();
+</script>
 
 <main{% if vertical %} class="v-{{ vertical }}" data-vertical="{{ vertical }}"{% endif %}>
 {{ content | safe }}
