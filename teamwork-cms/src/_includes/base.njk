@@ -9,9 +9,22 @@
      key in localStorage, so it is not something Osano would gate. -->
 <script>
 (function () {
-  var saved = localStorage.getItem("theme");
-  var theme = saved || "light";
-  document.documentElement.setAttribute("data-theme", theme);
+  // Follow the device's light/dark setting unless the visitor has picked a theme with the
+  // toggle, which is saved. If the device setting changes while the page is open and no
+  // choice is saved, follow it live.
+  var mq = window.matchMedia("(prefers-color-scheme: dark)");
+  function system() { return mq.matches ? "dark" : "light"; }
+  var saved = null;
+  try { saved = localStorage.getItem("theme"); } catch (e) {}
+  document.documentElement.setAttribute("data-theme", saved || system());
+  if (mq.addEventListener) mq.addEventListener("change", function () {
+    var pick = null;
+    try { pick = localStorage.getItem("theme"); } catch (e) {}
+    if (!pick) {
+      document.documentElement.setAttribute("data-theme", system());
+      document.dispatchEvent(new Event("themechange"));
+    }
+  });
 })();
 </script>
 
@@ -272,6 +285,10 @@
     themeIconMob.classList.toggle("ti-moon", theme === "dark");
   }
   setIconMob(document.documentElement.getAttribute("data-theme"));
+  document.addEventListener("themechange", function () {
+    var t = document.documentElement.getAttribute("data-theme");
+    setIcon(t); setIconMob(t);
+  });
   function flipTheme() {
     var current = document.documentElement.getAttribute("data-theme");
     var next = current === "dark" ? "light" : "dark";
