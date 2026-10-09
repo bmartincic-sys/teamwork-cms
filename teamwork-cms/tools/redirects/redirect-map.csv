@@ -530,3 +530,4 @@ old_path,new_path,rule,note
 /reques-a-demo/,/demo/,page mapped,misspelled demo link in old posts
 /nrf-2024/,/blog/nrf-2024-key-trends-to-keep-an-eye-on/,page mapped,linked from old posts; old site redirected it to the NRF 2024 trends post
 /nrf-2022/,/events/,page mapped,linked from old posts; old site redirected it to /nrf/
+/hardware/,/certified-hardware/,page mapped,short link requested 9 October 2026
