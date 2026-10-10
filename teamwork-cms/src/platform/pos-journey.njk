@@ -1,0 +1,454 @@
+---
+layout: "solution.njk"
+title: "Mobile POS: One Shopper's Visit, Screen by Screen"
+navLabel: "POS Journey"
+description: "The POS built for enterprise retail, shown the way a day in a store actually runs: the associate signs in, a shopper walks in, asks a question, tries something on, pays on the floor, and the store closes. The same point of sale on every screen."
+permalink: "/platform/pos-journey/"
+noindex: true
+stickyText: "See the POS running in your stores."
+stickyCta: "Book a demo"
+stickyHref: "/demo/"
+stickyRest: ".final-cta, .footer"
+---
+{#- Trial page, 10 October 2026: the mobile POS page's own copy, re-sequenced as one
+    shopper's visit with the POS screen advancing beside it. noindex while it is a trial,
+    since it repeats the copy of /platform/mobile-pos/. -#}
+<!-- Breadcrumb -->
+<div class="container">
+  <nav class="breadcrumb" aria-label="Breadcrumb" style="padding: 16px 0; font-size: 12px; color: var(--text-faint);">
+    <a href="/" style="color: var(--text-muted);">Home</a> <span style="margin: 0 6px;">/</span>
+    <a href="/platform/mobile-pos/" style="color: var(--text-muted);">Mobile POS</a> <span style="margin: 0 6px;">/</span>
+    A visit, screen by screen
+  </nav>
+</div>
+
+<!-- ============ HERO ============ -->
+<section class="section jx-hero">
+  <div class="container">
+    <div style="max-width: 760px;">
+      <span class="eyebrow"><span class="eyebrow-dot"></span> The Best POS in Retail</span>
+      <h1 class="jx-h1">The POS built for enterprise retail.</h1>
+      <p class="jx-sub">Localized across 40+ countries with automated fiscal compliance. Everything else (AI, native RFID, inventory, analytics) exists to make the POS stronger. Here it is the way a store actually runs it: one Saturday, one shopper, one associate with an iPhone, from the doors opening to the drawer closing.</p>
+      <div class="hero-cta" style="justify-content: flex-start; margin: 0;">
+        <a href="#journey" class="jx-btn-ink btn btn-primary btn-lg">Walk the floor <i class="ti ti-arrow-right"></i></a>
+        <a href="/demo/" target="_blank" rel="noopener" class="btn btn-ghost btn-lg">Book a demo</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ THE JOURNEY ============ -->
+<section class="jx" id="journey" data-jx>
+  <div class="container jx-grid">
+
+    <!-- rail: where we are in the store -->
+    <aside class="jx-rail" aria-hidden="true">
+      <span class="jx-rail-dot" data-zone="open">Opening</span>
+      <span class="jx-rail-dot" data-zone="floor">The floor</span>
+      <span class="jx-rail-dot" data-zone="fitting">Fitting room</span>
+      <span class="jx-rail-dot" data-zone="pay">Checkout</span>
+      <span class="jx-rail-dot" data-zone="back">Back of house</span>
+      <span class="jx-rail-dot" data-zone="close">Close</span>
+    </aside>
+
+    <!-- the narrative -->
+    <div class="jx-steps">
+
+      <article class="jx-step" data-stage="1" data-zone="open" data-time="9:52">
+        <div class="jx-when"><i class="ti ti-clock"></i> 9:52 AM &middot; Before the doors open</div>
+        <h2>The associate signs in. Nothing to type.</h2>
+        <p>Rotating QR-code sign-in at the register with nothing to type, plus optional facial recognition. One code per associate, every sign-in logged. Check a price, see active promotions, or read current stock counts before anyone signs into the terminal.</p>
+        <ul class="jx-list">
+          <li>QR associate login, or face, or a password where you want one</li>
+          <li>Pre-login price check</li>
+        </ul>
+        <a class="jx-more" href="/features/access-identity/">See Access &amp; Identity <i class="ti ti-arrow-right"></i></a>
+      </article>
+
+      <article class="jx-step" data-stage="2" data-zone="open" data-time="9:58">
+        <div class="jx-when"><i class="ti ti-clock"></i> 9:58 AM &middot; The drawer, the sync, the day</div>
+        <h2>Cash is consistent before the first sale.</h2>
+        <p>Drawer memos, blind counts, variance alerts, and safe checklists. Pre-flight routines keep cash consistent at open and close. Drawer memos linked to a single device, or several registers tracking one shared cash drawer simultaneously.</p>
+        <ul class="jx-list">
+          <li>Flexible drawer architecture</li>
+          <li>The app and its data are on the device, so a network outage does not stop the register</li>
+        </ul>
+      </article>
+
+      <article class="jx-step" data-stage="3" data-zone="floor" data-time="10:41">
+        <div class="jx-when"><i class="ti ti-clock"></i> 10:41 AM &middot; She walks in</div>
+        <h2>The register is in the associate's hand, not at the back.</h2>
+        <p>Full-featured POS on iPhone or iPad. Sell from the fitting room, stockroom, or floor, untethered from the cash wrap. The same point of sale on iPad at the counter and iPhone in an associate's hand, working from one cart, one customer and one inventory count.</p>
+        <ul class="jx-list">
+          <li>Mobile-first POS, native to iOS</li>
+          <li>Training to be on register: under 5 minutes</li>
+        </ul>
+      </article>
+
+      <article class="jx-step" data-stage="4" data-zone="floor" data-time="10:44">
+        <div class="jx-when"><i class="ti ti-clock"></i> 10:44 AM &middot; "Something warm for the weekend"</div>
+        <h2>The most knowledgeable coworker on your floor.</h2>
+        <p>An AI assistant built into the associate's handheld. It has read every product tag, knows every care label, and never tires of "do we have this in a different color?" Associates ask it the way they would ask a colleague and get an answer, with pictures, in seconds.</p>
+        <ul class="jx-list">
+          <li>Ask in plain language: "Something warm for a weekend in the mountains" brings back the products that fit</li>
+          <li>Answers with pictures, so the customer sees them too</li>
+          <li>Save and share: keep products for later and share them with the customer</li>
+        </ul>
+        <a class="jx-more" href="/features/product-data/">Explore product data <i class="ti ti-arrow-right"></i></a>
+      </article>
+
+      <article class="jx-step" data-stage="5" data-zone="fitting" data-time="10:52">
+        <div class="jx-when"><i class="ti ti-clock"></i> 10:52 AM &middot; Fitting room, wrong size on the rack</div>
+        <h2>Out of stock? Ship from another store in 3 taps.</h2>
+        <p>Item-level visibility in stores, warehouses and channels. Receiving, transfers, and RFID cycle counts, from the mobile POS, in minutes. Highlights from 39+ omnichannel workflows: BOPIS, ship-from-store, and BORIS. Any location can fulfill, with routing rules you set.</p>
+        <ul class="jx-list">
+          <li>Scan a tag: pull up the product information for the item in hand</li>
+          <li>Endless aisle and save the sale</li>
+        </ul>
+        <a class="jx-more" href="/platform/oms/">See order management <i class="ti ti-arrow-right"></i></a>
+      </article>
+
+      <article class="jx-step" data-stage="6" data-zone="fitting" data-time="10:58">
+        <div class="jx-when"><i class="ti ti-clock"></i> 10:58 AM &middot; She has been here before</div>
+        <h2>One profile per customer, not one per store.</h2>
+        <p>Purchase history, preferences, wishlists, notes and loyalty status on the associate's screen at the register. The same customer record in each market, so a shopper is recognized wherever they buy. New customers scan a QR code to enroll in loyalty themselves, no manual entry, no errors, and a real lift in sign-ups.</p>
+        <a class="jx-more" href="/features/customer-data/">See customer data <i class="ti ti-arrow-right"></i></a>
+      </article>
+
+      <article class="jx-step" data-stage="7" data-zone="pay" data-time="11:05">
+        <div class="jx-when"><i class="ti ti-clock"></i> 11:05 AM &middot; Rung up right there</div>
+        <h2>The line at the register is six deep. She never joins it.</h2>
+        <p>An associate walks to the fitting room with an iPhone and rings the shopper up right there. Every line in the transaction can be adjusted on its own: split associate attribution, custom text notes, gift messaging, and tax exemptions per line. Manual percentage or dollar-off discounts, coupon overrides, and direct price overrides for online price-matching, all logged and permission-controlled.</p>
+        <ul class="jx-list">
+          <li>Promotions calculate inside the cart with no associate intervention: spend-more-get-more thresholds and multi-item BOGO applied automatically</li>
+          <li>Stackable coupons, generic or customer-specific such as birthday rewards, set to stack or stand alone</li>
+        </ul>
+      </article>
+
+      <article class="jx-step" data-stage="8" data-zone="pay" data-time="11:08">
+        <div class="jx-when"><i class="ti ti-clock"></i> 11:08 AM &middot; She pays on the associate's iPhone</div>
+        <h2>Tap to Pay on iPhone. No separate card reader.</h2>
+        <p>Native NFC on the iPhone processes contactless cards directly on the device, no separate card reader hardware. Integrated merchant platforms including Adyen and Razorpay, plus cash, credit memos, foreign-currency cash conversion, and digital installment programs. Unlimited split payments across methods: store credit and cash together on one ticket, in any combination.</p>
+        <ul class="jx-list">
+          <li>Dynamic checkout QR codes on screen for regional mobile wallets, such as Aplazo in Mexico</li>
+          <li>Card data is encrypted at capture and never stored on the POS</li>
+        </ul>
+      </article>
+
+      <article class="jx-step" data-stage="9" data-zone="pay" data-time="11:09">
+        <div class="jx-when"><i class="ti ti-clock"></i> 11:09 AM &middot; The receipt, and the screen facing her</div>
+        <h2>Print, email, or preview. Split one ticket into gift receipts.</h2>
+        <p>Segmented receipts: print, email, or preview, and split one large ticket into multiple gift receipts assigned item by item. At the counter, a second screen at every register, run by the same POS app, targets each customer by profile and purchase history, and switches to checkout when the queue needs it. Customers join loyalty by scanning a QR code.</p>
+        <ul class="jx-list">
+          <li>Vendors pay to reach customers at the moment of purchase</li>
+          <li>Shopper display included with every deployment</li>
+        </ul>
+      </article>
+
+      <article class="jx-step" data-stage="10" data-zone="back" data-time="2:15">
+        <div class="jx-when"><i class="ti ti-clock"></i> 2:15 PM &middot; Stockroom, mid-afternoon count</div>
+        <h2>End-to-end RFID built into the POS, with no middleware.</h2>
+        <p>The RFID logic is native to the POS and runs on the reader hardware you choose, for 99.9% inventory accuracy and one-tap checkout. Receiving, live counts and tag printing, all from the mobile POS. Every unit tracked by EPC from receiving through to the sale, so sold and unsold are distinguishable at any point.</p>
+        <ul class="jx-list">
+          <li>Native RFID tracks stock item by item, at 99.9% accuracy</li>
+          <li>Self-checkout: drop items in a bin, every tag reads at once, and the cart builds itself</li>
+        </ul>
+        <a class="jx-more" href="/platform/rfid/">See RFID in action <i class="ti ti-arrow-right"></i></a>
+      </article>
+
+      <article class="jx-step" data-stage="11" data-zone="back" data-time="4:30">
+        <div class="jx-when"><i class="ti ti-clock"></i> 4:30 PM &middot; An online order, filled from this store</div>
+        <h2>Cross-channel returns and exchanges with no sync lag.</h2>
+        <p>Return an online order in-store; that inventory is instantly resellable. The system knows when someone is returning one piece of a bundle: it detects single-item returns from a multi-product promotion, and you configure the flow to block the return or warn the associate first.</p>
+        <ul class="jx-list">
+          <li>Returns &amp; exchanges, promotion-aware</li>
+          <li>Transactions suspended with configurable pause reason codes, then retrieved from any device in the store</li>
+        </ul>
+      </article>
+
+      <article class="jx-step" data-stage="12" data-zone="close" data-time="9:04">
+        <div class="jx-when"><i class="ti ti-clock"></i> 9:04 PM &middot; Close</div>
+        <h2>A cash drawer that reconciles.</h2>
+        <p>Expected totals stay masked from the counting employee, and discrepancies force a secondary management login to sign off on the shortage or overage. Automated reconciliation with standard deposit logs, plus locally required fiscal summaries such as Zeta reports. Native fiscal compliance: VAT, GST, NF525, TSE, handled in the platform rather than by a local vendor, in 40+ countries.</p>
+        <ul class="jx-list">
+          <li>Blind count &amp; audit controls</li>
+          <li>Paid-in / paid-out recorded natively, the mid-day cash pulled for store supplies included</li>
+        </ul>
+        <a class="jx-more" href="/platform/scalability/">See global operations <i class="ti ti-arrow-right"></i></a>
+      </article>
+
+    </div>
+
+    <!-- the device -->
+    <div class="jx-device-col">
+      <div class="jx-device">
+        <div class="aiq-phone jx-phone">
+          <div class="aiq-notch" aria-hidden="true"></div>
+          <div class="aiq-screen jx-screen-wrap">
+            <div class="jx-status"><span class="jx-time">9:52</span><span class="aiq-status-r"><span class="aiq-bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span><i class="ti ti-wifi apx-wifi" aria-hidden="true"></i><span class="apx-batt">82</span></span></div>
+
+            <!-- 1 login -->
+            <div class="jx-screen is-on" data-stage="1" aria-label="Log in screen: face frame, rotating QR code, password option">
+              <div class="jx-topbar"><span class="jx-link">Cancel</span><b>Log In</b><span></span></div>
+              <div class="jx-cam"><span class="jx-cam-banner">Move face closer to the camera. 20 sec</span><i class="jx-oval"><svg viewBox="0 0 100 130"><ellipse cx="50" cy="62" rx="44" ry="58"/><circle cx="50" cy="48" r="16"/><path d="M22 112c6-18 50-18 56 0"/></svg></i></div>
+              <div class="jx-alt"><i class="ti ti-qrcode"></i><span><b>Or scan your rotating QR code</b><em>One code per associate. Every sign-in logged.</em></span></div>
+              <div class="jx-pw"><i class="ti ti-lock"></i> Use password</div>
+              <div class="jx-pricecheck"><i class="ti ti-tag"></i> Price check <em>No sign-in needed</em></div>
+            </div>
+
+            <!-- 2 home / drawer -->
+            <div class="jx-screen" data-stage="2" aria-label="Home screen: sync status, drawer memo, new sale">
+              <div class="jx-home-top"><span class="jx-chip">Eric</span><span class="jx-brand">TEAMWORK<em>COMMERCE</em></span></div>
+              <div class="jx-greet">Good Morning,<br>Eric!</div>
+              <div class="jx-card"><span class="jx-k">Status</span><span class="jx-a">Sync</span><span class="jx-v"><i class="jx-tick"></i>100% Synchronized</span></div>
+              <div class="jx-card"><span class="jx-k">Drawer Memo</span><span class="jx-a">View</span><span class="jx-v"><i class="jx-tick"></i>Opening float $300.00 &middot; Counted blind</span></div>
+              <div class="jx-card"><span class="jx-k">Safe checklist</span><span class="jx-a">3 of 3</span><span class="jx-v"><i class="jx-tick"></i>Complete</span></div>
+              <div class="jx-sect">Message</div>
+              <div class="jx-msg">Reminder: Send Weekly Reports by EOD</div>
+              <button class="jx-cta" type="button" tabindex="-1" aria-hidden="true">NEW SALE</button>
+              <div class="jx-tabs"><span class="is-on"><i class="ti ti-home"></i>Home</span><span><i class="ti ti-truck-delivery"></i>Ship</span><span><i class="ti ti-scan"></i>Count</span><span><i class="ti ti-receipt"></i>Receipts</span></div>
+            </div>
+
+            <!-- 3 new sale, empty cart on the floor -->
+            <div class="jx-screen" data-stage="3" aria-label="New sale started on the floor, empty cart">
+              <div class="jx-topbar"><span class="jx-round"><i class="ti ti-x"></i></span><b>Sales Receipt</b><span class="jx-pill">Cart (0)</span></div>
+              <div class="jx-seg"><span><i class="ti ti-user"></i></span><span class="is-on"><i class="ti ti-receipt"></i></span></div>
+              <div class="jx-search"><i class="ti ti-search"></i> Item Search <span class="jx-scanbtn"><i class="ti ti-scan"></i></span></div>
+              <div class="jx-empty"><i class="ti ti-device-mobile"></i><b>Sell from anywhere on the floor</b><em>Scan a tag, search an item, or look up the customer. The counter can stay where it is.</em></div>
+              <div class="jx-tabs"><span><i class="ti ti-home"></i>Home</span><span class="is-on"><i class="ti ti-receipt"></i>Sale</span><span><i class="ti ti-scan"></i>Count</span><span><i class="ti ti-user"></i>Customers</span></div>
+            </div>
+
+            <!-- 4 AI assistant -->
+            <div class="jx-screen" data-stage="4" aria-label="AI assistant: a plain-language question and products with pictures">
+              <div class="jx-topbar"><span class="jx-round"><i class="ti ti-x"></i></span><b>Assistant</b><span></span></div>
+              <div class="jx-ask">warm coat for women</div>
+              <div class="jx-answer"><i class="ti ti-sparkles"></i> I found 7 warm coats for women. Would you like to narrow down the selection by color or size?</div>
+              <div class="jx-prods">
+                <div class="jx-prod"><span class="jx-swatch" style="--c:#8a7a6a"></span><b>Reversible Cocoon Coat</b><em>Designed to be worn either way.</em></div>
+                <div class="jx-prod"><span class="jx-swatch" style="--c:#c2a87a"></span><b>Belted Coat in Double-Faced Wool</b><em>A timeless outer layer, cut for warmth.</em></div>
+                <div class="jx-prod"><span class="jx-swatch" style="--c:#2f3545"></span><b>Double-Breasted Peacoat</b><em>A cold-weather staple.</em></div>
+                <div class="jx-prod"><span class="jx-swatch" style="--c:#6b5a4a"></span><b>Shearling Aviator Jacket</b><em>A heavier shell with a shearling collar.</em></div>
+              </div>
+              <div class="jx-inputbar"><span class="jx-wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="jx-send"><i class="ti ti-arrow-right"></i></span></div>
+              <div class="jx-tabs"><span><i class="ti ti-home"></i>Menu</span><span class="is-on"><i class="ti ti-search"></i>Search</span><span><i class="ti ti-sparkles"></i>Ideas</span><span><i class="ti ti-receipt"></i>Cart</span></div>
+            </div>
+
+            <!-- 5 product detail: stock elsewhere, ship from store -->
+            <div class="jx-screen" data-stage="5" aria-label="Product detail: sizes, stock at nearby stores, ship from store">
+              <div class="jx-topbar"><span class="jx-round"><i class="ti ti-x"></i></span><b>Item</b><span class="jx-pill">Scanned</span></div>
+              <div class="jx-item"><span class="jx-swatch jx-swatch-lg" style="--c:#c2a87a"></span><div><b>Belted Coat in Double-Faced Wool</b><em>Camel &middot; 197222564240</em><strong>$1,890.00</strong></div></div>
+              <div class="jx-sizes"><span>34</span><span>36</span><span class="is-out">38</span><span>40</span><span>42</span></div>
+              <div class="jx-stockrow is-out"><b>Size 38, this store</b><em>0 on hand</em></div>
+              <div class="jx-stockrow"><b>Size 38, nearby</b><em><i class="jx-dot"></i>In stock at 3 nearby stores</em></div>
+              <div class="jx-stockrow"><b>Warehouse</b><em><i class="jx-dot"></i>12 available</em></div>
+              <div class="jx-actions"><span class="jx-btn-blue"><i class="ti ti-truck-delivery"></i> Ship from store</span><span class="jx-btn-line">Hold at store</span></div>
+              <div class="jx-foot-note">Any location can fulfill, with routing rules you set.</div>
+            </div>
+
+            <!-- 6 customer profile -->
+            <div class="jx-screen" data-stage="6" aria-label="Customer profile: loyalty status, purchase history, notes">
+              <div class="jx-topbar"><span class="jx-round"><i class="ti ti-x"></i></span><b>Customer</b><span class="jx-pill is-gold">Gold</span></div>
+              <div class="jx-cust"><span class="jx-avatar">ML</span><div><b>Maya Laurent</b><em>Member since 2023 &middot; Paris, Lyon, New York</em></div></div>
+              <div class="jx-kv"><span>Loyalty</span><b>2,340 pts</b></div>
+              <div class="jx-kv"><span>Preferred sizes</span><b>38 &middot; EU 39</b></div>
+              <div class="jx-kv"><span>Notes</span><b>Prefers camel, no wool next to skin</b></div>
+              <div class="jx-sect">Purchase history</div>
+              <div class="jx-hist"><span>Silk twill scarf</span><em>Lyon &middot; Mar 2026</em></div>
+              <div class="jx-hist"><span>Merino knit</span><em>New York &middot; Nov 2025</em></div>
+              <div class="jx-hist"><span>Chelsea boot</span><em>Paris &middot; Oct 2025</em></div>
+              <div class="jx-actions"><span class="jx-btn-blue"><i class="ti ti-receipt"></i> Add to sale</span><span class="jx-btn-line"><i class="ti ti-qrcode"></i> QR sign-up</span></div>
+            </div>
+
+            <!-- 7 cart with discount -->
+            <div class="jx-screen" data-stage="7" aria-label="Sales receipt with four items, a line discount and a promotion applied">
+              <div class="jx-topbar"><span class="jx-round"><i class="ti ti-x"></i></span><b>Sales Receipt</b><span class="jx-pill">Cart (4)</span></div>
+              <div class="jx-custbar"><span class="jx-avatar sm">ML</span> Maya Laurent <em>Gold</em></div>
+              <div class="jx-line"><span class="jx-swatch" style="--c:#3a3a3f"></span><div><b>Cashmere coat</b><em>Charcoal &middot; 40</em></div><strong>$1,290.00</strong></div>
+              <div class="jx-line"><span class="jx-swatch" style="--c:#efe8d8"></span><div><b>Silk twill scarf</b><em>Ivory &middot; Disc 10%</em></div><strong><s>$395.00</s> $355.50</strong></div>
+              <div class="jx-line"><span class="jx-swatch" style="--c:#1d1d20"></span><div><b>Chelsea boot</b><em>Black &middot; 10</em></div><strong>$850.00</strong></div>
+              <div class="jx-line"><span class="jx-swatch" style="--c:#c9a97d"></span><div><b>Merino knit</b><em>Camel &middot; M</em></div><strong>$420.00</strong></div>
+              <div class="jx-promo"><i class="ti ti-check"></i> Discount &ndash; Courtesy 10% <strong>&minus;$39.50</strong></div>
+              <div class="jx-sum"><span>Sale Items (4)</span><b>$2,955.00</b></div>
+              <div class="jx-sum"><span>Item Discounts</span><b class="is-red">&minus;$39.50</b></div>
+              <div class="jx-sum"><span>Taxes</span><b>$233.24</b></div>
+              <div class="jx-total"><span>Total</span><b>$3,148.74</b></div>
+              <button class="jx-pay" type="button" tabindex="-1" aria-hidden="true">PAY</button>
+            </div>
+
+            <!-- 8 tap to pay -->
+            <div class="jx-screen" data-stage="8" aria-label="Tap to Pay on iPhone: amount due, tap, insert or scan">
+              <div class="jx-topbar"><span class="jx-round"><i class="ti ti-x"></i></span><b>Payment</b><span></span></div>
+              <div class="jx-amount"><em>Amount due</em><b>$3,148.74</b></div>
+              <div class="jx-tap"><span class="jx-tap-ring"></span><span class="jx-tap-ring"></span><i class="ti ti-credit-card"></i></div>
+              <div class="jx-tap-text">Tap, insert, or scan to pay</div>
+              <div class="jx-tenders"><span class="is-on">NFC</span><span>Chip</span><span>QR</span><span>Cash</span><span>Split</span></div>
+              <div class="jx-foot-note"><i class="ti ti-lock"></i> Encrypted at capture. Never stored on the POS.</div>
+            </div>
+
+            <!-- 9 receipt + shopper display -->
+            <div class="jx-screen" data-stage="9" aria-label="Receipt options and the shopper display">
+              <div class="jx-topbar"><span></span><b>Approved</b><span></span></div>
+              <div class="jx-approved"><i class="ti ti-check"></i></div>
+              <div class="jx-approved-amt">$3,148.74 <em>Contactless &middot; Visa &bull;&bull;&bull;&bull; 4421</em></div>
+              <div class="jx-sect">Receipt</div>
+              <div class="jx-receipt-opts"><span class="is-on"><i class="ti ti-mail"></i> Email</span><span><i class="ti ti-receipt"></i> Print</span><span><i class="ti ti-gift"></i> Gift receipts (2)</span></div>
+              <div class="jx-sect">Shopper display</div>
+              <div class="jx-display"><span class="jx-display-ad"><b>Cashmere care, 20% off this week</b><em>Shown to Maya at the counter</em></span><span class="jx-display-qr"><i class="ti ti-qrcode"></i><em>Join loyalty</em></span></div>
+              <button class="jx-cta" type="button" tabindex="-1" aria-hidden="true">DONE</button>
+            </div>
+
+            <!-- 10 RFID count -->
+            <div class="jx-screen" data-stage="10" aria-label="RFID daily count by zone">
+              <div class="jx-topbar"><span class="jx-link">Close</span><b>Daily Count <em>GJDGXT</em></b><span class="jx-rfid-on" title="Reader connected"></span></div>
+              <div class="jx-search"><i class="ti ti-search"></i> Find a zone <span class="jx-scanbtn"><i class="ti ti-scan"></i></span></div>
+              <div class="jx-zonehead"><span>Zone</span><span>Status</span></div>
+              <div class="jx-zone"><div><b>Zone 1 &middot; Sales floor</b><em>5,587 read &middot; 5,587 expected</em></div><span class="jx-badge is-green">Complete</span></div>
+              <div class="jx-zone is-live"><div><b>Zone 3 &middot; Stockroom</b><em>2,114 read &middot; 2,130 expected</em></div><span class="jx-badge is-amber">In progress</span></div>
+              <div class="jx-zone"><div><b>Zone 4 &middot; Backstock</b><em>Not started</em></div><span class="jx-badge">Open</span></div>
+              <div class="jx-power"><span>Power level</span><span class="jx-slider"><i></i></span><b>30</b></div>
+              <div class="jx-foot-note">Every unit tracked by EPC. Sold and unsold distinguishable at any point.</div>
+            </div>
+
+            <!-- 11 online return in store -->
+            <div class="jx-screen" data-stage="11" aria-label="Return of an online order in store, promotion-aware">
+              <div class="jx-topbar"><span class="jx-round"><i class="ti ti-x"></i></span><b>Return</b><span class="jx-pill">Online order</span></div>
+              <div class="jx-kv"><span>Order</span><b>#W-284117 &middot; teamwork.com</b></div>
+              <div class="jx-line"><span class="jx-swatch" style="--c:#2f3545"></span><div><b>Double-Breasted Peacoat</b><em>Navy &middot; 40 &middot; Part of a 2-for bundle</em></div><strong>$1,650.00</strong></div>
+              <div class="jx-warn"><i class="ti ti-shield-check"></i> This item was sold as one piece of a multi-product promotion. Continue, or return the bundle together?</div>
+              <div class="jx-actions"><span class="jx-btn-blue">Return item</span><span class="jx-btn-line">Return bundle</span></div>
+              <div class="jx-kv"><span>Refund to</span><b>Original card &middot; Visa 4421</b></div>
+              <div class="jx-kv"><span>Inventory</span><b><i class="jx-dot"></i>Resellable the moment it is scanned in</b></div>
+            </div>
+
+            <!-- 12 end of day -->
+            <div class="jx-screen" data-stage="12" aria-label="End of day: blind count, reconciliation, fiscal summary">
+              <div class="jx-topbar"><span class="jx-link">Back</span><b>End of Day</b><span></span></div>
+              <div class="jx-kv"><span>Drawer 1 &middot; Eric M.</span><b>Blind count</b></div>
+              <div class="jx-blind"><span>Counted</span><b>$4,912.40</b><span>Expected</span><b class="is-masked">&bull;&bull;&bull;&bull;&bull;&bull;</b></div>
+              <div class="jx-warn is-red"><i class="ti ti-lock"></i> Variance detected. Manager sign-off required.</div>
+              <div class="jx-kv"><span>Paid-out</span><b>$42.18 &middot; Store supplies</b></div>
+              <div class="jx-kv"><span>Deposit log</span><b>Generated</b></div>
+              <div class="jx-kv"><span>Fiscal summary</span><b>Zeta report &middot; sent</b></div>
+              <button class="jx-cta" type="button" tabindex="-1" aria-hidden="true">CLOSE REGISTER</button>
+            </div>
+
+          </div>
+        </div>
+        <div class="jx-caption" aria-hidden="true"><span class="jx-caption-zone">Opening</span><span class="jx-caption-step">1 / 12</span></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ STATS ============ -->
+<section class="pfh-band">
+  <div class="pfh-band-glow"></div>
+  <div class="container">
+    <div class="pfh-row">
+      <div class="pfh-col"><div class="pfh-big">30s</div><p class="pfh-desc">Average transaction.</p></div>
+      <div class="pfh-col"><div class="pfh-big">Open APIs</div><p class="pfh-desc">Platform-agnostic. Any e&#8209;commerce, any payment processor, any ERP.</p></div>
+      <div class="pfh-col"><div class="pfh-big">150+</div><p class="pfh-desc">Out-of-the-box reports.</p></div>
+      <div class="pfh-col"><div class="pfh-big">&lt;5 min</div><p class="pfh-desc">Training to be on register.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ QUOTE ============ -->
+<section class="cq-band">
+  <div class="container">
+    <figure class="cq">
+      <blockquote>We've eliminated the long lines that used to break the experience. With mobile POS, we can pick people off the queue, engage them on the floor, and speed up service, without losing the joy.</blockquote>
+      <figcaption><b>Doran Finneran</b><span>General Manager of Global Retail, FAO Schwarz</span><a href="/blog/fao-schwarz-delivers-magical-retail-experiences-with-teamwork-commerces-mobile-pos/">Read the case study <i class="ti ti-arrow-right"></i></a></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ HARDWARE + ROLLOUT ============ -->
+<section class="ac-purple sunk section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">Offline, Shrink, Hardware</div>
+      <h2 class="section-title">Built for enterprise store operations.</h2>
+    </div>
+    <div class="mini-grid">
+      <div class="mini-card"><div class="mini-ico"><i class="ti ti-wifi-off"></i></div><h3>Keeps selling offline</h3><p>The app and its data are on the device, so a network outage does not stop the register. Sales queue locally and sync to the back office when the connection returns. Card data is encrypted at capture and never stored on the POS; offline card acceptance depends on your payment provider.</p></div>
+      <div class="mini-card"><div class="mini-ico"><i class="ti ti-shield-check"></i></div><h3>Controls that cut shrink</h3><p>Price overrides, coupon overrides and manual discounts are permission-controlled, and every sale and override is logged to the associate. Native RFID tracks stock item by item, at 99.9% accuracy.</p></div>
+      <div class="mini-card"><div class="mini-ico"><i class="ti ti-device-mobile"></i></div><h3>Certified hardware</h3><p>iPhone and iPad; Adyen and Verifone payment terminals; Epson receipt printers; Zebra label and RFID tag printers; Socket Mobile scanners; Nedap, Impinj and Bluebird RFID readers.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">Implementation &amp; Rollout</div>
+      <h2 class="section-title">How a Teamwork Commerce rollout works.</h2>
+      <p class="section-sub">A guided path from first conversation to go-live. Run by the retail team that built the software, and is still with you long after launch.</p>
+    </div>
+    <div class="mini-grid">
+      <div class="mini-card"><div class="mini-ico"><b>1</b></div><h3>Scope</h3><p>We map your stores, channels, and compliance needs with a team that's been rolling out retail systems for 30+ years.</p></div>
+      <div class="mini-card"><div class="mini-ico"><b>2</b></div><h3>Configure</h3><p>POS, integrations, and fiscal rules configured per market: NF525, TSE, VAT, and GST built in.</p></div>
+      <div class="mini-card"><div class="mini-ico"><b>3</b></div><h3>Train</h3><p>Instructor-led sessions with your team, so associates are prepared before the doors open.</p></div>
+      <div class="mini-card"><div class="mini-ico"><b>4</b></div><h3>Go live</h3><p>White-glove launch support, onsite or remote: single store, global fleet, or pop-up, at your pace.</p></div>
+      <div class="mini-card"><div class="mini-ico"><b>5</b></div><h3>Stay supported</h3><p>A support team that knows retail and your configuration, with every request tracked so nothing is lost between your team and ours.</p></div>
+      <a class="mini-card" href="/frequently-asked-questions/#mobile-pos"><div class="mini-ico"><i class="ti ti-message-2"></i></div><h3>Mobile POS questions, answered</h3><p>Offline transactions, SOC 2, training time, RFID checkout and how this compares to other platforms.</p><span class="pillar-link">Read the FAQ <i class="ti ti-arrow-right"></i></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="final-cta">
+  <div class="container final-cta-inner">
+    <h2>See the POS running in <span class="gradient-text">your stores.</span></h2>
+    <p>Schedule a technical demo or speak with a global technical specialist about your stores.</p>
+    <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+      <a href="/demo/" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Book a demo <i class="ti ti-arrow-right"></i></a>
+      <a href="/technical-evaluation/" class="btn btn-ghost btn-lg" style="color: #fff; border-color: rgba(255,255,255,0.6);">Speak with a technical specialist</a>
+    </div>
+  </div>
+</section>
+
+<script>
+(function () {
+  var root = document.querySelector("[data-jx]");
+  if (!root) return;
+  var steps = [].slice.call(root.querySelectorAll(".jx-step"));
+  var screens = [].slice.call(root.querySelectorAll(".jx-screen"));
+  var dots = [].slice.call(root.querySelectorAll(".jx-rail-dot"));
+  var time = root.querySelector(".jx-time");
+  var capZone = root.querySelector(".jx-caption-zone");
+  var capStep = root.querySelector(".jx-caption-step");
+  var zoneNames = { open: "Opening", floor: "The floor", fitting: "Fitting room", pay: "Checkout", back: "Back of house", close: "Close" };
+  var current = null;
+  function show(step) {
+    if (step === current) return; current = step;
+    var stage = step.getAttribute("data-stage"), zone = step.getAttribute("data-zone");
+    screens.forEach(function (s) { s.classList.toggle("is-on", s.getAttribute("data-stage") === stage); });
+    steps.forEach(function (s) { s.classList.toggle("is-on", s === step); });
+    dots.forEach(function (d) { d.classList.toggle("is-on", d.getAttribute("data-zone") === zone); });
+    if (time) time.textContent = step.getAttribute("data-time");
+    if (capZone) capZone.textContent = zoneNames[zone] || "";
+    if (capStep) capStep.textContent = stage + " / " + steps.length;
+  }
+  show(steps[0]);
+  if (!("IntersectionObserver" in window)) return;
+  // the step whose centre is nearest the middle of the viewport wins
+  var io = new IntersectionObserver(function () {
+    var mid = window.innerHeight * 0.5, best = null, bestD = Infinity;
+    steps.forEach(function (s) {
+      var r = s.getBoundingClientRect(); var c = r.top + r.height / 2; var d = Math.abs(c - mid);
+      if (r.bottom > 0 && r.top < window.innerHeight && d < bestD) { bestD = d; best = s; }
+    });
+    if (best) show(best);
+  }, { threshold: [0, 0.25, 0.5, 0.75, 1] });
+  steps.forEach(function (s) { io.observe(s); });
+  var ticking = false;
+  window.addEventListener("scroll", function () {
+    if (ticking) return; ticking = true;
+    requestAnimationFrame(function () { ticking = false; io.takeRecords(); var mid = window.innerHeight * 0.5, best = null, bestD = Infinity;
+      steps.forEach(function (s) { var r = s.getBoundingClientRect(); var c = r.top + r.height / 2; var d = Math.abs(c - mid); if (r.bottom > 0 && r.top < window.innerHeight && d < bestD) { bestD = d; best = s; } });
+      if (best) show(best); });
+  }, { passive: true });
+})();
+</script>
